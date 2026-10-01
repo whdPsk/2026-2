@@ -1,0 +1,24 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(b) 먼저 퍼텐셜.</b> 지연 벡터퍼텐셜에서 평면을 반지름 \(s\)의 고리로 쪼개면 \(\mathcal R=\sqrt{x^2+s^2}\), \(da'=2\pi s\,ds\), \(\mathcal R\,d\mathcal R=s\,ds\):</p>
+\[ \mathbf A=\frac{\mu_0}{4\pi}\hat{\mathbf z}\int_0^\infty\frac{K(t-\mathcal R/c)}{\mathcal R}2\pi s\,ds
+=\frac{\mu_0}{2}\hat{\mathbf z}\int_{x}^{\infty}K\!\left(t-\frac{\mathcal R}{c}\right)d\mathcal R . \]
+<p>\(\mathcal R=x+cu\)로 치환하면 \(\boxed{\mathbf A=\frac{\mu_0c}{2}\hat{\mathbf z}\int_0^\infty K\!\left(t-\frac xc-u\right)du}\) ✓.</p>
+<p>\(\partial_tK(t-x/c-u)=-\partial_uK(\cdots)\)이므로 \(\int_0^\infty\partial_tK\,du=K(t-x/c)\), 따라서</p>
+\[ \boxed{\;\mathbf E=-\frac{\partial\mathbf A}{\partial t}=-\frac{\mu_0c}{2}K\!\left(t-\frac{|x|}{c}\right)\hat{\mathbf z},\qquad
+\mathbf B=\nabla\times\mathbf A=\frac{\mu_0}{2}K\!\left(t-\frac{|x|}{c}\right)\hat{\mathbf y}\;(x&gt;0)\;} \]
+<p>(\(x&lt;0\)에서는 \(\mathbf B\)의 부호가 반대. 정적 극한에서 \(\mathbf B=\frac{\mu_0}{2}(\mathbf K\times\hat{\mathbf n})\)와 일치 ✓.)</p>
+<p><b>(a)(i)</b> \(K=K_0\theta(t)\):</p>
+\[ \boxed{\;t&lt;\frac{|x|}{c}:\ \mathbf E=\mathbf B=0;\qquad t&gt;\frac{|x|}{c}:\ \mathbf E=-\frac{\mu_0cK_0}{2}\hat{\mathbf z},\ \ \mathbf B=\pm\frac{\mu_0K_0}{2}\hat{\mathbf y}\;} \]
+<p>즉 정보가 \(c\)로 퍼지는 계단 파면.</p>
+<p><b>(a)(ii)</b> \(K=\alpha t\ (t&gt;0)\):</p>
+\[ \boxed{\;t&gt;\frac{|x|}{c}:\ \mathbf E=-\frac{\mu_0c\alpha}{2}\Big(t-\frac{|x|}{c}\Big)\hat{\mathbf z},\quad
+\mathbf B=\pm\frac{\mu_0\alpha}{2}\Big(t-\frac{|x|}{c}\Big)\hat{\mathbf y};\quad \text{그 전엔 0}\;} \]
+<p><b>(c)</b> \(x&gt;0\)에서</p>
+\[ \mathbf S=\frac1{\mu_0}\mathbf E\times\mathbf B=\frac1{\mu_0}\Big(-\frac{\mu_0cK}{2}\Big)\Big(\frac{\mu_0K}{2}\Big)(\hat{\mathbf z}\times\hat{\mathbf y})
+=\frac{\mu_0cK^2}{4}\hat{\mathbf x}. \]
+<p>양쪽으로 나가므로 단위면적당 총합</p>
+\[ \boxed{\;P/\text{면적}=2\cdot\frac{\mu_0cK^2}{4}=\frac{\mu_0c}{2}[K(t)]^2\;} \]
+<p><b>"복사"의 의미</b>: 원천이 국소화되어 있지 않으므로 "무한대의 구면"을 잡을 수 없다. 하지만 장의 크기가 거리와 무관하고, 에너지가 \(x\to\pm\infty\)로 흘러가 <b>결코 되돌아오지 않는다</b>. 이 비가역적 유출이 곧 복사다. (평면파는 퍼지지 않으므로 \(1/r^2\) 감쇠 대신 세기가 일정하다.)</p>
+<div class="alabel">감점 포인트</div>
+<p>지연시간을 \(t-x/c\)가 아니라 \(t-\mathcal R/c\)로 두고 적분을 포기하는 것. 고리 적분 후 \(\mathcal R\)이 적분변수가 되면 아주 간단해진다. 또 양쪽(±\(x\)) 합산을 잊어 인수 2를 빠뜨리는 실수.</p></div><!--/sol-->

@@ -1,0 +1,16 @@
+<div class="exq"><b>상황.</b> 외력 없는 대칭 팽이. 길쭉한 물체(prolate, \(I_1&gt;I_3\))에서는 그림 11-13처럼 공간 원뿔이 물체 원뿔 바깥에 있고, 납작한 물체(oblate, \(I_3&gt;I_1\))에서는 안쪽에 있음을 보인다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>한 순간 \(\uv e_2\)를 \(\vb L,\boldsymbol\omega,\uv e_3\) 평면에 둔다.</div>
+<ol>
+<li>\(\vb L\)을 고정 \(x'_3\)으로: Euler 각 \(\theta\) = \(\vb L\)과 \(\uv e_3\) 사이 각. \(\vb L=(0,L\sin\theta,L\cos\theta)\).</li>
+<li>\(\alpha\) = \(\boldsymbol\omega\)와 \(\uv e_3\) 사이: \(\boldsymbol\omega=(0,\omega\sin\alpha,\omega\cos\alpha)\) → \(\vb L=(0,I_1\omega\sin\alpha,I_3\omega\cos\alpha)\).</li>
+<li>비교: \(\tan\theta=\dfrac{I_1}{I_3}\tan\alpha\).
+<ul><li>prolate \(I_1&gt;I_3\): \(\theta&gt;\alpha\) — \(\boldsymbol\omega\)가 \(\vb L\)과 \(\uv e_3\) 사이에 있다.</li>
+<li>oblate \(I_3&gt;I_1\): \(\alpha&gt;\theta\) — \(\vb L\)이 \(\boldsymbol\omega\)와 \(\uv e_3\) 사이에 있다.</li></ul></li>
+<li>U23: \(\Omega=\frac{I_3-I_1}{I_1}\omega_3\) — prolate이면 \(\Omega\)와 \(\omega_3\)가 반대 부호, oblate이면 같은 부호.</li>
+<li>물체 원뿔(축 \(\uv e_3\), 반각 \(\alpha\))과 공간 원뿔(축 \(\vb L\), 반각 \(|\theta-\alpha|\))은 \(\boldsymbol\omega\)를 따라 접한다. prolate: 두 원뿔이 서로 바깥에서 접하며 굴러감. oblate: 물체 원뿔이 공간 원뿔을 감싸며 굴러감.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \tan\theta=\frac{I_1}{I_3}\tan\alpha:\quad I_1&gt;I_3\Rightarrow\theta&gt;\alpha\ (\text{바깥}),\quad I_3&gt;I_1\Rightarrow\alpha&gt;\theta\ (\text{안쪽})\ } \]
+<p class="note">접선(\(\boldsymbol\omega\))은 순간 회전축 — 그 위의 점은 순간 정지 → 미끄러짐 없는 굴림. 공간 원뿔은 두 경우 모두 정지(\(\vb L\) 고정).</p></div>
+<div class="qz" data-q="ex11.11-a"><div class="qq"><b>+α</b> 구형 팽이(\(I_1=I_3\))에서는 무슨 일이 일어나는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\theta=\alpha\): \(\vb L\parallel\boldsymbol\omega\), \(\Omega=0\) — 세차 없음. 모든 축이 주축이라 어느 방향으로 돌려도 그대로 돈다.</p></div></div>
+<div class="qz" data-q="ex11.11-b"><div class="qq"><b>+α</b> 막대(\(I_3\approx0\))를 대칭축과 약간 기울어진 \(\boldsymbol\omega\)로 던지면 \(\theta\)와 \(\alpha\)는? 극한에서 무슨 운동이 되는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\tan\theta=\frac{I_1}{I_3}\tan\alpha\to\infty\) → \(\theta\to90°\): \(\vb L\)이 막대에 수직. 막대는 \(\vb L\)에 수직한 평면에서 뱅글뱅글 도는 운동(Example 11.10의 아령과 같은 상황), 대칭축 둘레 스핀은 운동에너지·각운동량에 거의 기여하지 않는다.</p></div></div>

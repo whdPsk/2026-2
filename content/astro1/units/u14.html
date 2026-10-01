@@ -1,0 +1,92 @@
+<div class="predict"><b>◈ 학습 목표.</b> ① 자유전자가 입사 전자기파에 흔들려 라모 공식대로 재복사하는 과정(<b>톰슨 산란</b>)을 운동방정식부터 따라가고, ② "나간 파워 ÷ 들어온 플럭스 = 단면적"으로 \(d\sigma/d\Omega=r_e^2\sin^2\Theta\), \(\sigma_T=\tfrac{8\pi}{3}r_e^2=0.665\times10^{-24}\,\mathrm{cm^2}\)를 얻으며, ③ 무편광 입사를 두 선편광으로 쪼개 \(\tfrac12r_e^2(1+\cos^2\theta)\)와 전후방 대칭을 설명하고, ④ 편광도 \(\Pi=(1-\cos^2\theta)/(1+\cos^2\theta)\)와 <b>중심별 둘레 동심원 편광 패턴</b>(수업 문제)을 그림으로 설명한다. <span class="star">강조</span> 교수님: 톰슨 산란은 "굉장히 중요한 것", 천문학에서 많이 쓰인다.</div>
+
+<h4>1. 자유전자의 운동방정식 <span class="en">For a Free Electron</span></h4>
+<div class="slide"><div class="sh">L06 · 슬라이드 6 <span class="st">For a Free Electron</span></div>
+<ul>
+<li>We apply the dipole formula to the radiation from a free charge in response to an incident electromagnetic wave.</li>
+<li>Consider a free electron exposed to EM radiation.<br>[그림: 왼쪽에서 \(\hat{\mathbf k}\) 방향으로 들어오는 선편광파 \(\mathbf E=\hat{\mathbf x}E_0\cos\omega_0t\) ("for polarized E field"), 전하 \(q\)가 \(\hat{\mathbf x}\)(위아래)로 진동, 진동축과 각 \(\Theta\)를 이루는 \(\hat{\mathbf n}\) 방향으로 나가는 "scattered E field (polarized)"]</li>
+<li>EOM under the Lorenz force (non-relativistic case)
+\[ \mathbf F=m_e\ddot{\mathbf x}=e\left(\mathbf E+\frac{\mathbf v}{c}\times\mathbf B\right)\approx e\mathbf E=eE_0\cos(\omega_0t)\ \Rightarrow\ \ddot{\mathbf x}=\frac{eE_0}{m_e}\cos(\omega_0t) \]</li>
+<li>Angular distribution of the radiated power is \(\dfrac{dP}{d\Omega}=\dfrac{e^2|\ddot{\mathbf x}|^2\sin^2\Theta}{4\pi c^3}\)</li>
+</ul> [[L06.s6]]</div>
+<div class="explain"><b>부가설명</b> <span class="star">강조</span> "이제 굉장히 중요한 건데 톰슨 산란이라는 문제." 자유전자가 복사를 받았을 때 <b>어느 방향으로 얼마만큼의 에너지를 산란시키느냐</b>의 문제다. 선편광파(진폭 \(E_0\), 진동수 \(\omega_0\), 전기장이 위아래 \(x\) 방향)가 들어오면 전하는 그 전기장 때문에 진동한다. <span class="hl">진동 = 가속 운동 → 라모 공식처럼 복사를 방출</span>. 관측자 입장에서는 \(\hat{\mathbf k}\)로 오던 빛이 \(\hat{\mathbf n}\) 방향으로 "바뀐" 것 = 산란. 파워를 계산하려면 가속도가 필요하니 운동방정식을 세운다: 로렌츠 힘. 평면파에서 \(|E|=|B|\)이지만 비상대론이면 \(\frac{v}{c}\times B\)는 \(v/c\)배로 작아 무시, 전기장 힘만 고려 → \(\ddot x=(eE_0/m_e)\cos\omega_0t\). 각분포는 앞 단원 식에서 \(\ddot{\mathbf p}=e\ddot{\mathbf x}\)를 그대로 쓴다. [[S0917.16]]</div>
+<div class="trap"><b>STT 교정</b>"혼살란"·"Tomson" = 톰슨 산란(Thomson scattering), "아모로폼뮬란"·"Lamoro Formula" = 라모 공식, "플로라이즈" = polarized, "논 몰레트릭스" = non-relativistic. 슬라이드의 "Lorenz force"는 철자 그대로 전사(로렌츠 힘, Lorentz). [[S0917.16, L06.s6]]</div>
+
+<h4>2. 톰슨 산란 단면적 <span class="en">Thomson Scattering Cross Section</span></h4>
+<div class="slide"><div class="sh">L06 · 슬라이드 7 <span class="st">Thomson Scattering Cross Section</span></div>
+<ul>
+<li>Time-averaged angular distribution of power
+\[ \left\langle\frac{dP}{d\Omega}\right\rangle=\frac{e^2}{4\pi c^3}\sin^2\Theta\,\frac{e^2E_0^2}{m_e^2}\langle\cos^2(\omega_0t)\rangle=\frac{e^4E_0^2}{8\pi m_e^2c^3}\sin^2\Theta \]</li>
+<li>Total radiated power is \(\langle P\rangle=\dfrac{e^4E_0^2}{3m_e^2c^3}\)</li>
+<li>The incident flux is \(\langle S\rangle=\dfrac{c}{4\pi}\langle E^2\rangle=\dfrac{cE_0^2}{4\pi}\langle\cos^2(\omega_0t)\rangle=\dfrac{cE_0^2}{8\pi}\)</li>
+<li>The differential scattering cross section is given by
+\[ \frac{d\sigma_{\rm sca}}{d\Omega}=\frac{\langle dP/d\Omega\rangle}{\langle S\rangle}=\frac{e^4}{m_e^2c^4}\sin^2\Theta=r_e^2\sin^2\Theta,\qquad r_e\equiv\frac{e^2}{m_ec^2}\ \text{classical electron radius} \]</li>
+<li>Thomson scattering cross section \(\sigma_T=\displaystyle\int\frac{d\sigma_{\rm sca}}{d\Omega}d\Omega=\frac{8\pi}{3}r_e^2=\frac{8\pi}{3}\left(\frac{e^2}{m_ec^2}\right)^2=0.665\times10^{-24}\,\mathrm{cm^2}\)
+<ul><li>Independent of frequency</li></ul></li>
+</ul> [[L06.s7]]</div>
+<div class="explain"><b>부가설명 · 단계별</b>
+<ol>
+<li>가속도를 대입하면 각분포가 시간에 따라 진동 → 보통 <b>한 주기 시간평균</b>을 계산. \(\langle\cos^2\rangle=\tfrac12\)이라 \(4\pi\)가 \(8\pi\)로 바뀐다. [[S0917.17]]</li>
+<li>\(\sin^2\Theta\) 의존성을 입체각으로 적분 → 총파워(\(8\pi/3\) 인자 → 분모 \(8\pi\)가 3으로). 이것이 전자가 진동하며 방출한 총 복사. [[S0917.17]]</li>
+<li>단면적은 "들어온 것 대비 나간 것". 입사 플럭스 = 포인팅 플럭스 \(\frac{c}{4\pi}E\times B\), \(|E|=|B|\)이라 \(E^2\), 시간평균 \(\tfrac12\) → \(cE_0^2/8\pi\). [[S0917.17]]</li>
+<li>파워(에너지/시간) = 단면적 × 플럭스(에너지/시간/면적) → <span class="hl">단면적 = 파워 ÷ 플럭스</span>. 각도별로 보려면 \(\langle dP/d\Omega\rangle\)를 나눔 → \(\frac{c}{8\pi}E_0^2\)이 소거되어 \(r_e^2\sin^2\Theta\). [[S0917.18]]</li>
+<li>\(r_e\)를 <b>고전 전자 반지름</b>이라 한다. 우리는 아직 전자의 크기를 모른다(크기가 있는지조차). 양자역학적으로는 퍼진(fuzzy) 분포라고 생각할 수도 있다. 고전적으로는 점으로 보되, <span class="hl">반지름 \(r\)인 구 표면의 정전 에너지 \(e^2/r\)가 정지 에너지 \(m_ec^2\)와 같아지는 반경</span>으로 정의 → \(r_e=e^2/m_ec^2\approx2.8\times10^{-13}\) cm. "작죠?" [[S0917.18, S0917.19]]</li>
+<li>전체 입체각으로 적분하면 \(\sin^2\Theta\)가 \(8\pi/3\)을 줘서 \(\sigma_T=\tfrac{8\pi}{3}r_e^2\approx0.665\times10^{-24}\,\mathrm{cm^2}\). <span class="hl">자유전자가 빛을 산란시키는 단면적, 천문학에서 많이 사용</span>. 주파수에 무관. [[S0917.19]]</li>
+</ol></div>
+<div class="trap"><b>수치 확인 · 녹음 vs 표준값</b>녹음 "대략 3 곱하기 10의 −13승, 정확히 2.8" → \(r_e=2.818\times10^{-13}\) cm (python 재계산). \(\sigma_T\)는 녹음 "0.6 … 14승 제곱센티미터"로 지수가 STT상 불명확 — PPT·재계산 모두 \(\sigma_T=6.652\times10^{-25}=0.665\times10^{-24}\,\mathrm{cm^2}\). "3분의 설탕"은 \(8\pi/3\) 인자. [[S0917.17, S0917.19, L06.s7]]</div>
+<div class="intuit"><b>직관 · 단면적은 "유효 과녁 넓이"</b>전자가 실제로 \(6.65\times10^{-25}\,\mathrm{cm^2}\)짜리 판이라는 뜻이 아니다. 입사 플럭스에 이 넓이를 곱하면 전자가 사방으로 뿌리는 총 파워가 된다는 장부상의 넓이. 그리고 \(m_e\)가 분모에 제곱으로 있어서 <b>양성자의 톰슨 단면적은 \((m_e/m_p)^2\approx3\times10^{-7}\)배</b> — 산란은 거의 전자가 담당. [[L06.s7, S0917.18]]</div>
+<div class="apply"><b>천체 적용 · 평균자유경로</b>\(\ell=1/(n_e\sigma_T)\). 태양 중심 \(n_e\sim10^{26}\,\mathrm{cm^{-3}}\)이면 \(\ell\approx0.015\) cm — 광자가 몇 mm도 못 가고 산란(복사 확산). 성간 HII 영역 \(n_e\sim10^3\)이면 \(\ell\approx1.5\times10^{21}\) cm ≈ 0.5 kpc. 주파수 무관이라 "회색" 불투명도의 대표 예(전자 산란 불투명도). [[L06.s7]]</div>
+<div class="trap"><b>함정 · 주파수 무관의 범위</b>"Independent of frequency"는 광자 에너지 \(h\nu\ll m_ec^2\)(전자 반동 무시)이고 전자 운동이 비상대론일 때만. 고에너지에선 클라인–니시나(컴프턴)로 단면적이 줄어든다. 또 속박전자는 \(\omega\gg\omega_0\)일 때만 톰슨과 같다(U13). [[L06.s7, L06.s19]]</div>
+
+<h4>3. 무편광 입사광 <span class="en">For Unpolarized Incident Light</span></h4>
+<div class="slide"><div class="sh">L06 · 슬라이드 8 <span class="st">For Unpolarized Incident Light</span></div>
+<ul>
+<li>An unpolarized beam can be regarded as the independent superposition of two linear-polarized beams with perpendicular axes.</li>
+<li>Choose one such beam along \(\mathbf E_1\), which is in the plane of the incident (\(\hat{\mathbf k}\)) and scattered (\(\hat{\mathbf n}\)) directions, and the second along \(\mathbf E_2\), perpendicular to this plane.</li>
+<li>Then, \[ \left(\frac{d\sigma}{d\Omega}\right)_{\rm unpol}=\frac12\left[\left(\frac{d\sigma(\Theta)}{d\Omega}\right)_{\rm pol}+\left(\frac{d\sigma(\pi/2)}{d\Omega}\right)_{\rm pol}\right]=\frac12r_e^2(1+\sin^2\Theta)=\frac12r_e^2(1+\cos^2\theta) \]
+<ul><li>Forward-backward symmetry: • Unchanged by \(\theta\to-\theta\)</li>
+<li>Total cross section: \(\sigma_{\rm unpol}=\displaystyle\int\left(\frac{d\sigma}{d\Omega}\right)_{\rm unpol}d\Omega=\frac{8\pi}{3}r_e^2=\sigma_T\)</li></ul></li>
+<li>[그림: \(\mathbf E_1\) 위쪽, \(\hat{\mathbf k}\) 오른쪽, \(\hat{\mathbf n}\)은 \(\hat{\mathbf k}\)와 각 \(\theta\); \(\mathbf E_1\)과 \(\hat{\mathbf n}\) 사이 \(\Theta=\pi/2-\theta\); 앞쪽(지면 밖)으로 \(\mathbf E_2\), \(\mathbf E_2\)와 \(\hat{\mathbf n}\) 사이 \(\Theta=\pi/2\)]</li>
+</ul> [[L06.s8]]</div>
+<div class="explain"><b>부가설명 · 좌표 잡는 법</b> 무편광 빔 = 서로 수직인 두 <b>독립</b> 선편광 빔(\(\mathbf E_1,\mathbf E_2\))의 합. 관측자 \(\hat{\mathbf n}\)이 \(\mathbf E_1\)과 \(\hat{\mathbf k}\)가 만드는 평면 위에 있도록 <span class="hl">언제나 좌표를 잡을 수 있다</span>(관측자가 어디 있든 그 평면을 그렇게 고르면 됨). 그러면 \(\mathbf E_1\) 성분은 쌍극자–관측자 각이 \(\Theta\), \(\mathbf E_2\) 성분은 관측자 방향과 항상 수직이라 \(\Theta=\pi/2\). 대문자 \(\Theta\) = 전기 쌍극자(진동) 방향과 관측 방향의 각, 소문자 \(\theta\) = 빛의 진행 방향과 관측 방향의 각(산란각). 두 경우의 평균을 취한다. [[S0917.20]]</div>
+<div class="explain"><b>부가설명 · 대입과 대칭성</b> 대입하면 \(\sin^2\Theta\)와 \(1\)의 평균. 무편광 빛은 \(\mathbf E_1\) 방향을 미리 알 수 없으니 산란각 \(\theta\)로 쓰는 게 편하다: \(\Theta=\pi/2-\theta\) → \(\sin^2\Theta=\cos^2\theta\) → \(\tfrac12r_e^2(1+\cos^2\theta)\) = 무편광 빛의 일반적 표현. <span class="hl">전후방 대칭(forward-backward symmetry)</span>: \(\cos^2\)이므로 \(\theta\)와 \(\pi-\theta\)(또 \(-\theta\))가 같다 — 앞으로 가는 산란과 입사 반대 방향으로 되돌아가는 산란이 완전히 같은 양. \(\theta=0\)(과 \(\pi\))에서 최대, 수직(\(\theta=\pi/2\))은 최대의 절반. 그려 보면 입사축 방향으로 늘어난 회전 타원체 같은 패턴. [[S0917.21]]</div>
+<div class="explain"><b>부가설명 · 총 단면적</b> \(\int\cos^2\theta\,d\Omega=4\pi/3\)이므로 \(\tfrac12r_e^2\left(4\pi+\tfrac{4\pi}{3}\right)=\tfrac{8\pi}{3}r_e^2=\sigma_T\) — 편광 입사와 <b>같다</b>. 하지만 산란 세기가 방향에 따라 다르기 때문에 <span class="hl">무편광 빛이 들어와도 전자 산란을 거치면 편광된 빛으로 바뀐다</span>. [[S0917.22]]</div>
+<div class="trap"><b>함정 · 두 각도 혼동</b>\(\Theta\)(쌍극자 축 기준)와 \(\theta\)(입사 방향 기준)를 섞으면 \(\sin^2\)과 \(\cos^2\)이 뒤바뀐다. 편광 입사 \(r_e^2\sin^2\Theta\)는 \(\Theta=0\)에서 0, 무편광 \(\tfrac12r_e^2(1+\cos^2\theta)\)는 \(\theta=0\)에서 최대 \(r_e^2\). STT "시멘트릭" = symmetric, "Onpolar light" = unpolarized light. [[S0917.21, L06.s8]]</div>
+
+<h4>4. 편광도 <span class="en">Degree of Polarization</span></h4>
+<div class="slide"><div class="sh">L06 · 슬라이드 9 <span class="st">Degree of Polarization</span></div>
+<ul>
+<li>Depend on the viewing angle with respect to the incident direction. \(\left(\dfrac{d\sigma}{d\Omega}\right)_{\rm unpol}=\dfrac12r_e^2(1+\cos^2\theta)\)</li>
+<li>[그림: 왼쪽 — 앞 슬라이드의 \(\mathbf E_1\)·\(\hat{\mathbf k}\)·\(\hat{\mathbf n}\)·\(\mathbf E_2\) 좌표, \(\hat{\mathbf n}\)에 수직으로 빨간 'North' 화살표. 오른쪽 — "Observer's plane of the sky": 위쪽(North) 화살표 길이 \(\cos^2\theta\), 오른쪽(\(\mathbf E_2\)) 화살표 길이 1]</li>
+<li>\(\dfrac{I_{\min}}{I_{\max}}=\cos^2\theta\ \ ➔\ \ \Pi=\dfrac{I_{\max}-I_{\min}}{I_{\max}+I_{\min}}=\dfrac{1-\cos^2\theta}{1+\cos^2\theta}\)
+<ul><li>No polarization along the incident direction (\(\theta=0\))</li>
+<li><b>100%</b> polarization in the perpendicular direction (\(\theta=\pi/2\))</li></ul></li>
+</ul> [[L06.s9]]</div>
+<div class="explain"><b>부가설명 · plane of the sky에서 보기</b> 관측자가 \(\hat{\mathbf n}\)의 반대 방향으로 소스(전자)를 내려다본다고 하자. 그 하늘 평면(observer's plane of the sky)에서 North는 \(\mathbf E_1\)을 투영한 방향, 다른 축은 \(\mathbf E_2\). 관측되는 세기는 타원 모양: \(\mathbf E_2\) 방향 진동에 의한 산란은 언제나 최대(상대 세기 1), \(\mathbf E_1\) 진동에 의한 산란은 투영되어 North 방향 성분이 \(\cos^2\theta\). 특히 \(\theta\)가 직각이면 \(\mathbf E_1\) 진동은 시선과 나란해 관측이 안 된다. 두 성분의 합이 전체 세기. [[S0917.23]]</div>
+<div class="explain"><b>부가설명 · 극한</b> \(I_{\min}/I_{\max}=\cos^2\theta\) → 지난 시간에 정의한 편광도(degree of polarization) \(\Pi=(I_{\max}-I_{\min})/(I_{\max}+I_{\min})\)에 넣으면 위 식. \(\theta=0\)(입사 방향을 정면으로): 두 진동이 같은 조건 → <b>편광 0</b>. \(\theta=\pi/2\): 한 방향 진동만 보임 → <b>100% 편광</b>(\(\cos^2=0\)이라 \(\Pi=1\)). "그래서 이 산란된 빛은 대개 편광돼요." 중심 광원이 무편광이어도 주변에 자유전자가 있으면 산란광은 편광된다 → 문제로 확인. [[S0917.24]]</div>
+<div class="apply"><b>수치</b>(python 재계산) \(\Pi(30^\circ)=0.143\), \(\Pi(45^\circ)=1/3\), \(\Pi(60^\circ)=0.6\), \(\Pi(90^\circ)=1\). 상대 세기 \(\tfrac12(1+\cos^2\theta)\): 1, 0.875, 0.75, 0.625, 0.5 (θ=0,30,45,60,90°). 90°에서 세기는 최대의 절반이지 0이 아니다. [[L06.s9]]</div>
+<div class="trap"><b>STT 교정</b>"fluoride"·"플로리제이션"·"콜라라이제이션" = polarization, "IMX/IMIN" = \(I_{\max}/I_{\min}\), "degree polarization은 10" = 1(100%). [[S0917.24]]</div>
+
+<h4>5. 수업 문제 — 중심별 주위 산란광의 편광 <span class="en">9/17 in-class problem</span></h4>
+<div class="prof"><b>수업 문제 (9/17)</b>중심에 별이 있고 UV 복사를 사방으로 방출한다. 주변 대기에 자유전자가 많이 분포한다. 관측자가 별 근처 전자에 의해 산란되어 오는 빛을 볼 때, <b>편광 벡터(= 전기장 방향)</b>는 어떻게 되겠는가? 보기 1–4번, 다수결 — 1번에 3명. 풀이 방법: 입사 빛의 편광을 두 성분으로 나눠 본다. [[S0917.25]]</div>
+<div class="explain"><b>부가설명 · 풀이</b>
+<ol>
+<li>별→산란 전자 방향으로 진행하는 빛의 전기장을 두 성분으로 나눈다: (가) 관측자 시선 방향(스크린 안팎)으로 진동, (나) 하늘 평면 안에서 진행 방향에 수직으로 진동. [[S0917.26]]</li>
+<li>(가)는 전자를 시선 방향으로 흔든다 → \(\sin^2\Theta=0\) 방향이 바로 관측자 → <span class="hl">관측되지 않는다</span>(최대는 스크린 방향으로 감). [[S0917.26]]</li>
+<li>(나)는 전자를 하늘 평면 안에서 흔들고 시선과 수직 → 관측자에게 최대로 도달. 따라서 편광 벡터는 <b>별–전자를 잇는 선에 수직</b>. [[S0917.26]]</li>
+<li>위·아래·45° 어느 위치의 전자든 마찬가지 → 편광 벡터가 <span class="hl">소스 둘레로 동심원을 그리는(접선 방향) 패턴</span>. 실제 관측에서도 이런 패턴이 보이고, 이를 보면 "이것은 산란광이다"라고 알 수 있다. [[S0917.26]]</li>
+</ol></div>
+<div class="apply"><b>천체 적용</b>반사 성운, 별 주위 먼지/전자 원반, 태양 코로나(K-corona)의 편광 벡터가 광원 둘레 접선 방향으로 늘어서는 것이 산란의 지문. 한 시선 위에서도 별과 같은 하늘 평면에 있는 전자(산란각 90°)의 기여가 편광도가 가장 높고, 시선 앞뒤의 전자는 산란각이 90°에서 벗어나 편광도를 낮춘다. [[S0917.26, L06.s9]]</div>
+<div class="explain"><b>다음으로</b> 여기까지는 자유전자. 다음은 원자핵에 묶인(속박된) 전자 → 로렌츠 진동자(U13). [[S0917.26]]</div>
+
+<div class="formula"><div class="ftitle">암기 — 톰슨 산란과 편광</div><p><b>편광 입사 · 총 단면적</b></p>\[ {d\sigma\over d\Omega}=r_e^2\sin^2\Theta,\quad \sigma_T={8\pi\over3}r_e^2,\quad r_e={e^2\over m_ec^2}=2.82\times10^{-13}\,\mathrm{cm},\quad\sigma_T=0.665\times10^{-24}\,\mathrm{cm^2} \]<p class="note">단면적 = ⟨나간 파워⟩/⟨입사 플럭스 \(cE_0^2/8\pi\)⟩. 주파수 무관. <i>조건: 자유전자, \(h\nu\ll m_ec^2\), 비상대론</i></p><p><b>무편광 입사 · 편광도</b></p>\[ \left({d\sigma\over d\Omega}\right)_{\rm unpol}={r_e^2\over2}(1+\cos^2\theta),\quad \Pi={1-\cos^2\theta\over1+\cos^2\theta}={\sin^2\theta\over1+\cos^2\theta} \]<p class="note">θ = 입사와 산란 방향 사이 각. 전후방 대칭, 총 단면적은 σ_T 그대로. θ=0 무편광, θ=90° 100%. 편광 벡터는 광원–산란점 선에 수직(동심원 패턴). <i>조건: 단일 산란</i></p></div>
+
+<h4>체크포인트</h4>
+<div class="qz" data-q="u14-1"><div class="qq">90° 산란이 어두워서 편광도100%인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. \(\mathbf E_1\) 성분의 진동이 시선과 나란해져 그 성분 하나가 사라지고 \(\mathbf E_2\) 성분은 그대로 남기 때문에 100%이다. 총세기는 최대의 1/2로 0이 아니다. [[L06.s9, S0917.24]]</p></div></div>
+<div class="qz" data-q="u14-2"><div class="qq">전방 산란은 왜 무편광으로 남는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>θ=0이면 두 수직 입사 성분이 모두 시선에 수직이라 같은 세기로 기여한다(\(I_{\min}/I_{\max}=\cos^20=1\)). [[S0917.24]]</p></div></div>
+<div class="qz" data-q="u14-3"><div class="qq">σT가 주파수에 무관하다는 말을 임의의 고에너지 광자에 적용하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. \(h\nu\)가 \(m_ec^2\)에 가까워져 전자 반동·상대론 효과가 중요하면 톰슨 근사를 벗어난다(컴프턴/클라인–니시나). 속박전자라면 \(\omega\gg\omega_0\)여야 한다. [[L06.s7]]</p></div></div>
+<div class="qz" data-q="u14-4"><div class="qq">\(r_e\)의 정의를 "에너지" 언어로 말하고 값을 써라. 그것이 전자의 실제 크기인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>표면 정전 에너지 \(e^2/r\)가 정지 에너지 \(m_ec^2\)와 같아지는 반경, \(r_e=e^2/m_ec^2=2.82\times10^{-13}\) cm. 실제 크기가 아니다 — 전자의 크기는 모르고(양자역학적으로 퍼진 분포일 수도), 고전 이론의 길이 척도일 뿐. [[S0917.18, S0917.19]]</p></div></div>
+<div class="qz" data-q="u14-5"><div class="qq">무편광 입사의 총 단면적이 편광 입사와 같은 \(\sigma_T\)임을 적분으로 보여라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\int d\Omega=4\pi\), \(\int\cos^2\theta\,d\Omega=4\pi/3\) → \(\tfrac12r_e^2(4\pi+4\pi/3)=\tfrac{8\pi}{3}r_e^2=\sigma_T\). [[S0917.22, L06.s8]]</p></div></div>
+<div class="qz" data-q="u14-6"><div class="qq">중심별을 둘러싼 자유전자 구름의 산란광, 편광 벡터는 하늘에서 어떤 패턴을 그리는가? 이유는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>별 둘레 동심원(접선) 패턴 — 각 점에서 별–산란점 선에 수직. 시선 방향으로 진동하는 입사 성분은 \(\sin^2\Theta=0\)이라 관측자에게 오지 않고, 하늘 평면 안에서 진행 방향에 수직인 성분만 보이기 때문. [[S0917.25, S0917.26]]</p></div></div>
+
+<p class="note">출처: Lecture06 슬라이드 6(For a Free Electron)·7(Thomson Cross Section)·8(Unpolarized)·9(Degree of Polarization) · 9/17 속기 28:01–50:54(수업 문제 포함) · 상태: PPT·속기 장부 기준 전수 반영</p>

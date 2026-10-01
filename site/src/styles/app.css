@@ -1,0 +1,9 @@
+/* 독립 사이트 전용 보정 (Artifact 래퍼가 해주던 것 + 새 UI 요소) */
+html,body{margin:0}
+.boot{font:15px/1.6 var(--sans,system-ui);color:#888;text-align:center;margin:30vh 0 0}
+.boot.err{color:#a63535}
+.mark a.home{color:inherit;text-decoration:none;display:flex;align-items:center;gap:10px}
+.backup{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:22px}
+.backup .msg{font:12.5px/1.4 var(--sans);color:var(--ink3)}
+.backup .msg.ok{color:var(--ok)}
+.backup .msg.bad{color:var(--bad)}

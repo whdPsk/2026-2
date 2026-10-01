@@ -1,0 +1,62 @@
+<div class="exq"><b>상황.</b> 반지름 \(R\)인 구 전체에 전하 \(Q\)가 균일하게 <em>부피</em> 분포해 있고 정지해 있다. 이 구의 북반구(\(0\le\theta\le\pi/2\))가 남반구로부터 받는 알짜 전기력을 구한다. 정적(static)이므로 \(\vb{F}=\oint_{\mathcal S}\overleftrightarrow{\vb{T}}\cdot \dd\vb{a}\)를 쓸 수 있다. 여기서 \(\mathcal S\)는 <b>북반구를 감싸는 닫힌 면</b>이며, 자연스러운 선택은 (i) 반지름 \(R\)의 반구 껍질("사발")과 (ii) 적도면의 원판이다. 자기장은 없으므로 \(T_{ij}=\eps\!\left(E_iE_j-\tfrac12\delta_{ij}E^{2}\right)\).</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>대칭상 알짜힘은 \(\hat{\vb{z}}\) 방향뿐 → \((\overleftrightarrow{\vb{T}}\cdot \dd\vb{a})_z\)만 계산하면 된다.</div>
+<ol>
+<li><b>편리한 항등식.</b> 성분 계산을 일일이 하는 대신, \(\vb{B}=0\)일 때
+\[ (\overleftrightarrow{\vb{T}}\cdot \dd\vb{a})_z=\eps\Big[E_z(\vb{E}\cdot \dd\vb{a})-\tfrac12E^{2}\,\dd a_z\Big] \]
+를 쓰면 계산이 훨씬 짧아진다. (정의를 \(j\)에 대해 합한 것뿐이다.)</li>
+
+<li><b>사발(bowl), \(r=R\).</b> 구 바깥/표면에서 \(\vb{E}=\dfrac{1}{4\pi\eps}\dfrac{Q}{R^{2}}\hat{\vb{r}}\), \(\dd\vb{a}=R^{2}\sin\theta\,\dd\theta\,\dd\varphi\,\hat{\vb{r}}\). 그러면 \(\vb{E}\parallel \dd\vb{a}\)이므로 \(\vb{E}\cdot \dd\vb{a}=E\,\dd a\), \(E_z=E\cos\theta\), \(\dd a_z=\dd a\cos\theta\):
+\[ (\overleftrightarrow{\vb{T}}\cdot \dd\vb{a})_z=\eps\Big[E^{2}\cos\theta-\tfrac12E^{2}\cos\theta\Big]\dd a=\tfrac12\eps E^{2}\cos\theta\,\dd a. \]</li>
+
+<li>대입하고 적분한다(\(\theta:0\to\pi/2\), \(\varphi:0\to2\pi\)):
+\[ F_{\rm bowl}=\tfrac12\eps\left(\frac{Q}{4\pi\eps R^{2}}\right)^{2}R^{2}(2\pi)\int_0^{\pi/2}\!\sin\theta\cos\theta\,\dd\theta =\frac{1}{4\pi\eps}\frac{Q^{2}}{8R^{2}}. \]
+(\(\int_0^{\pi/2}\sin\theta\cos\theta\,\dd\theta=\tfrac12\).)</li>
+
+<li><b>원판(disk), \(\theta=\pi/2\), \(0\le s\le R\).</b> 북반구 부피의 <em>바깥쪽</em> 법선은 아래를 향하므로 \(\dd\vb{a}=-s\,\dd s\,\dd\varphi\,\hat{\vb{z}}\). 구 <b>내부</b>이므로 Gauss 법칙에서
+\[ \vb{E}=\frac{1}{4\pi\eps}\frac{Q}{R^{3}}\,\vb{r}=\frac{1}{4\pi\eps}\frac{Q s}{R^{3}}\hat{\vb{s}}\quad(\text{적도면 위에서는 순수 반지름 방향, }E_z=0). \]</li>
+
+<li>\(E_z=0\)이므로 첫 항이 죽고 \(\dd a_z=-s\,\dd s\,\dd\varphi\):
+\[ (\overleftrightarrow{\vb{T}}\cdot \dd\vb{a})_z=-\tfrac12\eps E^{2}(-s\,\dd s\,\dd\varphi)=+\tfrac12\eps\!\left(\frac{Q}{4\pi\eps R^{3}}\right)^{2}\!s^{3}\,\dd s\,\dd\varphi. \]
+\[ F_{\rm disk}=\tfrac12\eps\!\left(\frac{Q}{4\pi\eps R^{3}}\right)^{2}(2\pi)\frac{R^{4}}{4}=\frac{1}{4\pi\eps}\frac{Q^{2}}{16R^{2}}. \]
+부호가 <b>양(+\(\hat{\vb{z}}\))</b>인 점에 주목 — 원판을 통해 위쪽으로 밀어내는 응력이다.</li>
+
+<li>둘을 더한다: \(\dfrac{1}{4\pi\eps}\left(\dfrac{Q^{2}}{8R^{2}}+\dfrac{Q^{2}}{16R^{2}}\right)\).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \vb{F}=\frac{1}{4\pi\eps}\frac{3Q^{2}}{16R^{2}}\,\hat{\vb{z}}\ } \]
+<p class="note">전하를 하나하나 짝지어 Coulomb 힘을 이중적분하는 대신, 경계면의 응력만 읽어서 답을 얻었다. \(T_{ij}\)의 대각 성분은 압력, 비대각 성분은 전단이며 — 장선(field line)이 <em>세로로는 당기고 가로로는 민다</em>는 Faraday의 직관이 수식이 된 것. <b>검산</b> ① 차원: \(\frac{1}{4\pi\eps}\frac{Q^2}{R^2}\)는 Coulomb 힘의 차원 ✓. ② 크기: 두 반구가 각각 \(Q/2\)씩 갖고 중심 거리가 \(\sim R\) 정도라면 \(\sim\frac{1}{4\pi\eps}\frac{(Q/2)^2}{R^2}=\frac{1}{4\pi\eps}\frac{Q^2}{4R^2}\) — 실제 \(3Q^2/16R^2\)와 같은 자릿수 ✓. ③ 부호: 양전하끼리는 밀어내야 하므로 북반구는 \(+\hat{\vb{z}}\)로 밀린다 ✓. ④ 껍질 전하일 때(아래 +α)와 비교하면 부피 분포 쪽이 \(3/2\)배 크다 — 부피 분포는 전하가 더 가까이 몰려 있으므로 타당 ✓.</p></div>
+
+<div class="qz" data-q="ex8.2-a"><div class="qq"><b>+α</b> 기하 바꾸기: 같은 전하 \(Q\), 같은 반지름 \(R\)이지만 이번엔 <b>구 껍질</b>(표면전하 \(\sigma=Q/4\pi R^{2}\))이다. 북반구가 받는 힘을 구하고, 정전기적 표면압력 \(\sigma^{2}/2\eps\)로 얻은 값과 비교하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 사발 부분은 그대로.</b> \(r=R\) 바로 <em>바깥</em>에서 장은 껍질이든 균일 구든 똑같이 \(\vb{E}=\frac{1}{4\pi\eps}\frac{Q}{R^{2}}\hat{\vb{r}}\)이다. 따라서
+\[ F_{\rm bowl}=\frac{1}{4\pi\eps}\frac{Q^{2}}{8R^{2}}. \]</p>
+<p><b>2) 원판 부분은 사라진다.</b> 껍질 <b>내부</b>는 \(\vb{E}=0\) (Gauss). 그러므로 적도 원판 위에서 \(\overleftrightarrow{\vb{T}}=0\), \(F_{\rm disk}=0\).</p>
+<p><b>3) 결과.</b>
+\[ \boxed{\ F_{\rm shell}=\frac{1}{4\pi\eps}\frac{Q^{2}}{8R^{2}}=\frac{Q^{2}}{32\pi\eps R^{2}}\ } \]</p>
+<p><b>4) 표면압력으로 교차검증.</b> 도체/균일 껍질의 표면에 작용하는 바깥 방향 정전압력은 \(P=\dfrac{\sigma^{2}}{2\eps}\). 이 압력이 북반구 전체에 작용할 때 \(\hat{\vb{z}}\) 성분만 남으므로 <em>투영 넓이</em> \(\pi R^{2}\)를 곱하면 된다:
+\[ F=\frac{\sigma^{2}}{2\eps}\pi R^{2}=\frac{1}{2\eps}\left(\frac{Q}{4\pi R^{2}}\right)^{2}\pi R^{2}=\frac{Q^{2}}{32\pi\eps R^{2}}\ \checkmark \]
+완전히 일치한다.</p>
+<p><b>검산</b>: 부피 분포 결과(\(3Q^2/16R^2\))와의 비는 \(\dfrac{3/16}{1/8}=\dfrac32\) — 부피 분포는 전하 일부가 중심 쪽에 있어 반구 간 평균 거리가 짧으므로 힘이 더 커야 한다 ✓. 두 경우 모두 사발 기여는 같고 차이는 오직 원판(내부 장)에서 온다는 구조적 이해가 핵심 ✓.</p>
+</div></div>
+
+<div class="qz" data-q="ex8.2-b"><div class="qq"><b>+α</b> "경계면은 아무거나 써도 된다"를 실제로 검증하기: 사발의 반지름을 \(R\)이 아니라 \(r&gt;R\)로 잡고(원판도 \(0\le s\le r\)로 늘려서) 같은 계산을 하라. 답이 \(r\)에 무관하게 \(\frac{1}{4\pi\eps}\frac{3Q^{2}}{16R^{2}}\)임을 보여라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>왜 성립해야 하나.</b> \(\vb{f}=\divg\overleftrightarrow{\vb{T}}\)(정적)이고 \(R&lt;r'&lt;r\) 영역에는 전하가 없으므로 그 껍질층에는 힘밀도가 없다. 따라서 감싸는 면을 부풀려도 총합은 불변이어야 한다. 이제 직접 확인한다.</p>
+<p><b>1) 반지름 \(r\)의 사발.</b> 계산 구조는 본문과 동일하고 \(R\to r\)만 바뀐다:
+\[ F_{\rm bowl}(r)=\frac{1}{4\pi\eps}\frac{Q^{2}}{8r^{2}}=\frac{Q^{2}}{32\pi\eps r^{2}}. \]
+\(r\)가 커지면 이 항은 \(1/r^{2}\)로 줄어든다.</p>
+<p><b>2) 넓어진 원판 \(0\le s\le r\).</b> 적도면에서 \(E_z=0\)이므로 앞서와 같이
+\[ (\overleftrightarrow{\vb{T}}\cdot \dd\vb{a})_z=\tfrac12\eps E^{2}\,s\,\dd s\,\dd\varphi, \]
+단 이번엔 \(E(s)\)가 두 구간으로 나뉜다:
+\[ E=\frac{1}{4\pi\eps}\frac{Qs}{R^{3}}\ (s&lt;R),\qquad E=\frac{1}{4\pi\eps}\frac{Q}{s^{2}}\ (R&lt;s&lt;r). \]
+따라서
+\[ F_{\rm disk}(r)=\pi\eps\left(\frac{Q}{4\pi\eps}\right)^{2}\left[\frac{1}{R^{6}}\int_0^{R}\!s^{3}\dd s+\int_R^{r}\!\frac{\dd s}{s^{3}}\right] =\frac{Q^{2}}{16\pi\eps}\left[\frac{1}{4R^{2}}+\frac12\left(\frac{1}{R^{2}}-\frac{1}{r^{2}}\right)\right]. \]</p>
+<p><b>3) 합.</b>
+\[ F_{\rm bowl}+F_{\rm disk}=\frac{Q^{2}}{16\pi\eps}\left[\frac{1}{2r^{2}}+\frac{3}{4R^{2}}-\frac{1}{2r^{2}}\right] =\frac{3Q^{2}}{64\pi\eps R^{2}}=\frac{1}{4\pi\eps}\frac{3Q^{2}}{16R^{2}}. \]
+\(r\)-의존 항 \(-\dfrac{1}{2r^{2}}\)가 사발 기여 \(+\dfrac{1}{2r^{2}}\)와 정확히 상쇄된다 ✓.</p>
+<p><b>검산</b>: \(r\to R\)로 되돌리면 원판의 둘째 적분이 사라져 본문 계산으로 환원 ✓. \(r\to\infty\)이면 사발 기여가 0이 되고 원판만으로 전체 힘을 준다 — "무한 평면 위의 응력만으로도 답이 나온다"는 재미있는 극한 ✓. 차원 ✓.</p>
+</div></div>

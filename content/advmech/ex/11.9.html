@@ -1,0 +1,13 @@
+<div class="exq"><b>상황.</b> Euler 각으로, 원래 \(x'_3\)축을 \(x'_2x'_3\) 평면 안에서 45° 기울이고 나머지 축을 교재 그림 11-10처럼 배치하는 변환을 구한다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>물체 \(x_3\)을 움직이는 것은 \(\theta\)뿐 → 교선을 \(x'_1\)에 두어야 한다.</div>
+<ol>
+<li>\(x_3\)이 \(x'_2x'_3\) 평면 안에서 기울려면 \(x'_1\) 둘레 회전이어야 하므로 첫 회전 \(\phi=0\) (교선 = \(x'_1\)).</li>
+<li>\(\theta=45°\): \(\lambda_\theta=\begin{pmatrix}1&0&0\0&\frac1{\sqrt2}&\frac1{\sqrt2}\0&-\frac1{\sqrt2}&\frac1{\sqrt2}\end{pmatrix}\).</li>
+<li>마지막 \(\psi=90°\)로 물체 \(x_1\)을 원하는 위치로: \(\lambda_\psi=\begin{pmatrix}0&1&0\-1&0&0\0&0&1\end{pmatrix}\).</li>
+<li>\(\lambda=\lambda_\psi\lambda_\theta=\begin{pmatrix}0&\frac1{\sqrt2}&\frac1{\sqrt2}\-1&0&0\0&-\frac1{\sqrt2}&\frac1{\sqrt2}\end{pmatrix}\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \phi=0,\ \theta=45°,\ \psi=90°\ } \]
+<p class="note"><b>읽는 법</b>: \(\lambda\)의 \(i\)행 = 물체 \(x_i\)의 고정계 방향. \(x_3\to(0,-\tfrac1{\sqrt2},\tfrac1{\sqrt2})\), \(x_1\to(0,\tfrac1{\sqrt2},\tfrac1{\sqrt2})\), \(x_2\to(-1,0,0)\). 이 변환은 사실 한 축 둘레의 단일 회전으로도 쓸 수 있다(모든 회전은 한 축 둘레 회전 — Euler 정리).</p></div>
+<div class="qz" data-q="ex11.9-a"><div class="qq"><b>+α</b> 이 \(\lambda\)가 나타내는 단일 회전의 회전각을 대각합으로 구하라 (\(\mathrm{tr}\lambda=1+2\cos\Phi\)).</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\mathrm{tr}\lambda=0+0+\tfrac1{\sqrt2}\) → \(\cos\Phi=\frac{1/\sqrt2-1}{2}\approx-0.146\) → \(\Phi\approx98.4°\).</p></div></div>
+<div class="qz" data-q="ex11.9-b"><div class="qq"><b>+α</b> \(\phi=90°\), \(\theta=90°\), \(\psi=0\)이면 물체 \(x_3\)축은 고정계의 어디를 가리키는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\lambda\)의 3행 \((\sin\theta\sin\phi,\ -\sin\theta\cos\phi,\ \cos\theta)=(1,0,0)\) → \(+x'_1\) 방향. (교선이 \(x'_2\)가 되고 \(x_3\)이 그 둘레로 90° 넘어가 \(x'_1\)로 눕는다.)</p></div></div>

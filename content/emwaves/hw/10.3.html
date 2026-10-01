@@ -1,0 +1,12 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+(a) \(\vb{E}=-\nabla V-\partial\vb{A}/\partial t=\dfrac{1}{4\pi\eps}\dfrac{q}{r^2}\hat{\vb{r}}\). \(\vb{A}\)가 \(r\)만의 함수인 방사형이므로 \(\vb{B}=\curl\vb{A}=0\).
+\[ \rho=\eps\divg\vb{E}=\frac{q}{4\pi}\,\divg\!\left(\frac{\hat{\vb{r}}}{r^2}\right)=q\,\delta^3(\vb{r}),\qquad
+\vb{J}=\frac{1}{\muz}\curl\vb{B}-\eps\frac{\partial\vb{E}}{\partial t}=0 . \]
+즉 \(\boxed{\rho=q\delta^3(\vb{r}),\ \vb{J}=0}\) — 그냥 원점에 정지한 점전하다. 겉보기에 "시간 의존" 퍼텐셜이지만 물리는 정전기.
+
+(b) \(\nabla\lambda=-\frac{qt}{4\pi\eps}\nabla\frac1r=+\frac{qt}{4\pi\eps}\frac{\hat{\vb{r}}}{r^2}\) 이므로
+\[ \vb{A}'=\vb{A}+\nabla\lambda=0,\qquad V'=V-\frac{\partial\lambda}{\partial t}=\frac{1}{4\pi\eps}\frac{q}{r}. \]
+\(\boxed{V'=q/4\pi\eps r,\ \vb{A}'=0}\) — 익숙한 정전 퍼텐셜. 같은 \(\vb{E},\vb{B}\)를 주는 두 퍼텐셜 집합이며, 퍼텐셜 자체는 물리량이 아님을 보여주는 표준 예제.
+<div class="alabel">감점 포인트</div>
+\(\divg(\hat{\vb{r}}/r^2)=4\pi\delta^3(\vb{r})\)를 놓치고 \(\rho=0\)이라고 쓰는 실수.</div><!--/sol-->

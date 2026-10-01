@@ -1,0 +1,18 @@
+<div class="exq"><b>상황.</b> 반지름 \(R_1\)인 분자들이 같은 속도로 오른쪽으로 날아와, 정지한 반지름 \(R_2\)의 먼지 입자에 산란된다. 둘 다 강체구로 보고 미분 단면적과 전단면적을 구한다. (오타표: 먼지는 분자보다 훨씬 무거워 <b>산란 과정 내내 정지</b> — 그래서 LAB 계산으로 충분.)</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>반사 법칙 → \(b(\psi)\) → \(\sigma(\psi)=\frac{b}{\sin\psi}|\frac{\dd b}{\dd\psi}|\).</div>
+<ol>
+<li>접촉 시 두 중심 사이 거리 \(R_1+R_2\). 두 중심을 잇는 선(법선)과 입사 방향 사이의 입사각을 \(\alpha\)라 하면 \(b=(R_1+R_2)\sin\alpha\).</li>
+<li>매끄러운 강체 → 법선 성분만 뒤집힘(입사각 = 반사각). 진행 방향이 \(\pi-2\alpha\) 꺾임: \(\psi=\pi-2\alpha\).</li>
+<li>\(b=(R_1+R_2)\cos(\psi/2)\), \(\left|\dfrac{\dd b}{\dd\psi}\right|=\dfrac{R_1+R_2}{2}\sin\dfrac\psi2\).</li>
+<li>\[ \sigma(\psi)=\frac{(R_1+R_2)\cos(\psi/2)}{2\sin(\psi/2)\cos(\psi/2)}\cdot\frac{(R_1+R_2)\sin(\psi/2)}{2}=\frac{(R_1+R_2)^2}{4}. \]</li>
+<li>전단면적: \(\sigma_t=\int_0^\pi\sigma\cdot2\pi\sin\psi\,\dd\psi=\dfrac{(R_1+R_2)^2}{4}\cdot4\pi=\pi(R_1+R_2)^2\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \sigma(\psi)=\frac{(R_1+R_2)^2}{4}\ (\text{등방}),\qquad \sigma_t=\pi(R_1+R_2)^2\ } \]
+<p class="note"><b>검산</b> ① \(\sigma_t\)는 분자 중심이 먼지 중심에서 \(R_1+R_2\) 안쪽을 지나면 반드시 충돌 → 원판 넓이 \(\pi(R_1+R_2)^2\) ✓ (기하학). ② \(b=0\) → \(\psi=\pi\) (정면 되튐) ✓, \(b=R_1+R_2\) → \(\psi=0\) (스침) ✓. ③ 등방성은 3차원 강체구 고유의 성질 — 2차원(원판)에서는 등방이 아니다(아래 +α).</p></div>
+<div class="qz" data-q="ex9.11-a"><div class="qq"><b>+α</b> 차원 바꾸기: 2차원(평면 위의 원판)에서 점입자가 반지름 \(a\)인 고정 원판에 산란된다. 2차원 미분 단면적 \(\sigma(\psi)=|\dd b/\dd\psi|\) (길이 차원)을 구하고 등방인지 판단하라. 전단면적(길이)은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>같은 반사 기하: \(b=a\cos(\psi/2)\), \(\sigma(\psi)=\tfrac a2\sin(\psi/2)\) — <b>등방이 아니다</b>. 뒤쪽(\(\psi=\pi\))으로 가장 많이 간다.</p>
+<p>전단면적: \(\int_{-\pi}^{\pi}\tfrac a2\sin(|\psi|/2)\,\dd\psi=2\cdot\tfrac a2\cdot2=2a\) — 원판의 지름 ✓.</p></div></div>
+<div class="qz" data-q="ex9.11-b"><div class="qq"><b>+α</b> 질량비 복원: 만약 먼지가 분자와 같은 질량이라면(둘 다 강체구, 먼지 초기 정지), CM 단면적은 여전히 등방이다. LAB에서 분자의 \(\sigma(\psi)\)를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>CM계에서 강체구 산란은 고정 구 산란과 같은 기하(상대좌표) → \(\sigma(\theta)=(R_1+R_2)^2/4\). 등질량 변환(U8 유도 4): \(\sigma(\psi)=4\cos\psi\cdot\dfrac{(R_1+R_2)^2}{4}=(R_1+R_2)^2\cos\psi\), \(0\le\psi\le\pi/2\).</p>
+<p>검산: \(\int_0^{\pi/2}(R_1+R_2)^2\cos\psi\,2\pi\sin\psi\,\dd\psi=\pi(R_1+R_2)^2\) ✓ — 전단면적은 좌표계와 무관.</p></div></div>

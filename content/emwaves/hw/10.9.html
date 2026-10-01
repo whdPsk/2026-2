@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+Lorentz 힘에 \(\vb{v}\)를 내적한다.
+\[ \vb{v}\cdot\frac{d\vb{p}}{dt}=m\vb{v}\cdot\frac{d\vb{v}}{dt}=\frac{d}{dt}\left(\tfrac12mv^2\right)=\frac{dT}{dt}. \]
+\[ \vb{v}\cdot\vb{F}=q\,\vb{v}\cdot(\vb{E}+\vb{v}\times\vb{B})=q\,\vb{v}\cdot\vb{E}
+=q\,\vb{v}\cdot\!\left(-\nabla V-\frac{\partial\vb{A}}{\partial t}\right)=-q(\vb{v}\cdot\nabla)V-q\,\vb{v}\cdot\frac{\partial\vb{A}}{\partial t}. \]
+입자가 움직이므로 \(V\)의 <b>전미분</b>은 \(\dfrac{dV}{dt}=\dfrac{\partial V}{\partial t}+(\vb{v}\cdot\nabla)V\), 즉 \((\vb{v}\cdot\nabla)V=\dfrac{dV}{dt}-\dfrac{\partial V}{\partial t}\). 대입하면
+\[ \frac{dT}{dt}=-q\frac{dV}{dt}+q\frac{\partial V}{\partial t}-q\,\vb{v}\cdot\frac{\partial\vb{A}}{\partial t}. \]
+\(\vb{v}\)는 위치의 함수가 아니므로 \(\partial(\vb{v}\cdot\vb{A})/\partial t=\vb{v}\cdot\partial\vb{A}/\partial t\). 따라서
+\[ \boxed{\frac{d}{dt}(T+qV)=\frac{\partial}{\partial t}\big[q(V-\vb{v}\cdot\vb{A})\big]} \]
+Eq. 10.20과 같은 \(U_{\rm vel}=q(V-\vb{v}\cdot\vb{A})\)가 우변에 등장한다는 것이 이 문제의 핵심.
+<div class="alabel">감점 포인트</div>
+전미분 \(dV/dt\)와 편미분 \(\partial V/\partial t\)를 구분하지 않는 것 — 이 문제의 유일한 함정.</div><!--/sol-->

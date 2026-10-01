@@ -1,0 +1,222 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> \(\vb{E}\)와 \(\vb{B}\)를 합치면 성분이 6개다. 4-vector는 성분이 4개니 안 맞는다. 4차원에서 <b>정확히 6개</b>의 독립 성분을 갖는 대상은 무엇일까? 그리고 그 대상을 찾았을 때, Maxwell 방정식 네 개는 몇 줄로 줄어들까?</div>
+
+<h4>12.3.3 장 텐서 <span class="en">the field tensor</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>반대칭 2계 텐서에서 \(F^{\mu\nu}\)를 구성하기</div>
+<ol>
+<li><b>왜 4-vector가 아닌가.</b> U28의 변환 규칙에서 \(\bar E_y=\gamma(E_y-vB_z)\)처럼 \(\vb{E}\)와 \(\vb{B}\)의 성분이 <b>서로 섞인다</b>. 4-vector의 변환은 자기 성분끼리만 섞이므로, \(\vb{E}\)와 \(\vb{B}\)가 각각 별개 4-vector의 공간 부분일 수 없다.</li>
+<li><b>성분 세기.</b> 2계 텐서 \(t^{\mu\nu}\)는 \(4\times4=16\)개 성분을 갖는다. <b>반대칭</b>(\(t^{\mu\nu}=-t^{\nu\mu}\))이면 대각선 4개가 0이고 나머지 12개가 6쌍으로 묶여, 독립 성분이 정확히 <b>6개</b>다. \(\vb{E},\vb{B}\)의 성분 수와 일치한다. 강력한 힌트다.</li>
+<li><b>변환 규칙.</b> 2계 텐서는 \(\Lambda\)를 지표마다 하나씩, 두 번 곱해 변환한다:
+\[ \bar t^{\mu\nu}=\Lambda^{\mu}{}_{\lambda}\Lambda^{\nu}{}_{\sigma}\,t^{\lambda\sigma}. \]</li>
+<li><b>표본 계산 \(\bar t^{01}\).</b> \(x\)-부스트에서 \(\Lambda^{0}{}_{\lambda}\)는 \(\lambda=0,1\)에서만, \(\Lambda^{1}{}_{\sigma}\)는 \(\sigma=0,1\)에서만 0이 아니다. 네 항이 살아남는다:
+\[ \bar t^{01}=\Lambda^{0}{}_{0}\Lambda^{1}{}_{0}t^{00}+\Lambda^{0}{}_{0}\Lambda^{1}{}_{1}t^{01}+\Lambda^{0}{}_{1}\Lambda^{1}{}_{0}t^{10}+\Lambda^{0}{}_{1}\Lambda^{1}{}_{1}t^{11}. \]</li>
+<li><b>반대칭성 투입.</b> \(t^{00}=t^{11}=0\), \(t^{10}=-t^{01}\)이므로
+\[ \bar t^{01}=\big(\Lambda^{0}{}_{0}\Lambda^{1}{}_{1}-\Lambda^{0}{}_{1}\Lambda^{1}{}_{0}\big)t^{01} =\big(\gamma^{2}-\gamma^{2}\beta^{2}\big)t^{01}=t^{01}. \]
+<b>불변!</b> 부스트 방향 성분이 안 변한다는 \(\bar E_x=E_x\)와 정확히 같은 구조다.</li>
+<li><b>나머지 다섯.</b> 같은 방식으로
+\[ \bar t^{02}=\gamma(t^{02}-\beta t^{12}),\quad \bar t^{03}=\gamma(t^{03}+\beta t^{31}),\quad \bar t^{23}=t^{23}, \]
+\[ \bar t^{31}=\gamma(t^{31}+\beta t^{03}),\quad \bar t^{12}=\gamma(t^{12}-\beta t^{02}). \]</li>
+<li><b>항별 대조.</b> 이제 U28의 장 변환 규칙과 <b>한 줄씩 비교</b>한다:
+<ul>
+<li>\(\bar E_x=E_x\ \leftrightarrow\ \bar t^{01}=t^{01}\) ⇒ \(F^{01}=E_x/c\)</li>
+<li>\(\bar E_y=\gamma(E_y-vB_z)\ \leftrightarrow\ \bar t^{02}=\gamma(t^{02}-\beta t^{12})\) ⇒ \(F^{02}=E_y/c,\ F^{12}=B_z\)</li>
+<li>\(\bar E_z=\gamma(E_z+vB_y)\ \leftrightarrow\ \bar t^{03}=\gamma(t^{03}+\beta t^{31})\) ⇒ \(F^{03}=E_z/c,\ F^{31}=B_y\)</li>
+<li>\(\bar B_x=B_x\ \leftrightarrow\ \bar t^{23}=t^{23}\) ⇒ \(F^{23}=B_x\)</li>
+</ul>
+(\(v=\beta c\)이므로 \(E/c\)로 맞춰야 계수가 떨어진다. 나머지 두 줄도 자동으로 정합적이다.)</li>
+<li><b>완성.</b>
+\[ F^{\mu\nu}=\begin{pmatrix}
+0 & E_x/c & E_y/c & E_z/c\\
+-E_x/c & 0 & B_z & -B_y\\
+-E_y/c & -B_z & 0 & B_x\\
+-E_z/c & B_y & -B_x & 0
+\end{pmatrix} \]</li>
+<li><b>의미.</b> Oersted가 시작한 통합이 여기서 완결된다. \(\vb{E}\)와 \(\vb{B}\)는 <b>별개의 두 장이 아니라</b> 하나의 기하학적 대상 \(F^{\mu\nu}\)를 특정 관성계에서 잘라 본 두 조각이다. "무엇이 전기이고 무엇이 자기인가"는 관측자가 정하는 문제다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>쌍대 텐서 \(G^{\mu\nu}\)</div>
+<ol>
+<li><b>놓친 가능성.</b> 유도 1의 7단계에서 우리는 장 변환 첫 줄을 텐서 변환 첫 줄과 짝지었다. 그런데 <b>첫 줄을 둘째 줄과, 둘째 줄을 첫 줄과</b> 짝지어도 똑같이 성립한다. 다른 배치가 하나 더 있는 것이다.</li>
+<li><b>그 결과.</b>
+\[ G^{\mu\nu}=\begin{pmatrix}
+0 & B_x & B_y & B_z\\
+-B_x & 0 & -E_z/c & E_y/c\\
+-B_y & E_z/c & 0 & -E_x/c\\
+-B_z & -E_y/c & E_x/c & 0
+\end{pmatrix} \]</li>
+<li><b>간단한 생성 규칙.</b> \(F^{\mu\nu}\)에서
+\[ \frac{\vb{E}}{c}\ \to\ \vb{B},\qquad \vb{B}\ \to\ -\frac{\vb{E}}{c} \]
+로 치환하면 \(G^{\mu\nu}\)가 나온다. 이 치환은 장 변환 규칙 자체를 불변으로 남기므로, 두 텐서 모두 올바른 변환을 재현한다.</li>
+<li><b>형식적 정의.</b> \(G^{\mu\nu}=\tfrac12\epsilon^{\mu\nu\lambda\sigma}F_{\lambda\sigma}\) (\(\epsilon\)은 4차원 Levi-Civita 기호). 그래서 \(G\)를 <b>쌍대(dual) 텐서</b>라 부른다.</li>
+<li><b>왜 필요한가.</b> \(F\)만으로는 Maxwell의 <b>비동차</b> 방정식 두 개(Gauss, Ampère–Maxwell)밖에 못 쓴다. 나머지 두 개(\(\divg\vb{B}=0\), Faraday)를 같은 형식으로 쓰려면 \(G\)가 있어야 한다. 자기 홀극이 없다는 사실이 \(G\)의 발산이 0이라는 형태로 나타난다.</li>
+</ol></div>
+
+<h4>12.3.4 텐서 표기의 전기동역학 <span class="en">electrodynamics in tensor notation</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>원천 4-vector \(J^{\mu}\)와 전하 보존</div>
+<ol>
+<li><b>고유 전하밀도.</b> 부피 \(V\) 안에 전하 \(Q\)가 속도 \(\vb{u}\)로 움직인다. \(\rho=Q/V\). 전하 뭉치의 정지계에서 \(\rho_0=Q/V_0\).</li>
+<li><b>부피 수축.</b> 운동 방향 한 차원만 수축하므로
+\[ V=\sqrt{1-u^{2}/c^{2}}\;V_0=\frac{V_0}{\gamma_u}. \]</li>
+<li><b>따라서.</b>
+\[ \rho=\gamma_u\rho_0,\qquad \vb{J}=\rho\vb{u}=\rho_0\,\gamma_u\vb{u}. \]</li>
+<li><b>정체 확인.</b> \(\gamma_u c=\eta^{0}\), \(\gamma_u\vb{u}=\boldsymbol{\eta}\)이므로
+\[ \boxed{\;J^{\mu}=\rho_0\,\eta^{\mu}=(c\rho,\ J_x,\ J_y,\ J_z)\;} \]
+불변 스칼라 \(\rho_0\) × 4-vector \(\eta^{\mu}\) = <b>4-vector</b>. (전하 불변이 \(\rho_0\)의 불변성을 보장한다.)</li>
+<li><b>연속 방정식.</b> \(\divg\vb{J}=\sum_i\partial J^{i}/\partial x^{i}\)이고 \(\dfrac{\partial\rho}{\partial t}=\dfrac{1}{c}\dfrac{\partial J^{0}}{\partial t}=\dfrac{\partial J^{0}}{\partial x^{0}}\)이므로, \(\divg\vb{J}=-\partial\rho/\partial t\)는
+\[ \boxed{\;\partial_{\mu}J^{\mu}=0\;}\qquad \Big(\partial_\mu\equiv\frac{\partial}{\partial x^{\mu}}\Big) \]
+<b>전하 보존 = 4-발산이 0</b>. 지표가 위아래로 하나씩 짝지어져 있으므로 이 식은 보기만 해도 Lorentz 불변임이 명백하다.</li>
+<li><b>부수 결과 — U28 재확인.</b> \(J^\mu\)의 변환에서 \(\bar\rho=\gamma(\rho-vJ_x/c^{2})\). 중성 도선(\(\rho=0,\ J_x\ne0\))이 다른 계에서 대전되는 현상이 한 줄로 나온다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>Maxwell 방정식 넷 → 두 줄</div>
+<ol>
+<li><b>주장.</b>
+\[ \boxed{\;\partial_{\nu}F^{\mu\nu}=\muz J^{\mu},\qquad \partial_{\nu}G^{\mu\nu}=0\;} \]
+각각이 \(\mu=0,1,2,3\)에 대해 네 개의 식을 담고 있으니, 합쳐서 여덟 개 — Maxwell 방정식 넷(그중 둘은 벡터식이라 실제로 여덟 성분)이 전부 들어간다.</li>
+<li><b>첫 식, \(\mu=0\).</b>
+\[ \partial_\nu F^{0\nu}=\frac{\partial F^{00}}{\partial x^{0}}+\frac{\partial F^{01}}{\partial x^{1}}+\frac{\partial F^{02}}{\partial x^{2}}+\frac{\partial F^{03}}{\partial x^{3}} =\frac{1}{c}\Big(\frac{\partial E_x}{\partial x}+\frac{\partial E_y}{\partial y}+\frac{\partial E_z}{\partial z}\Big)=\frac{1}{c}\divg\vb{E}. \]
+우변은 \(\muz J^{0}=\muz c\rho\). 따라서
+\[ \divg\vb{E}=\muz c^{2}\rho=\frac{\rho}{\eps}\qquad\textbf{(Gauss 법칙)} \]</li>
+<li><b>첫 식, \(\mu=1\).</b>
+\[ \partial_\nu F^{1\nu}=\frac{\partial F^{10}}{\partial x^{0}}+\frac{\partial F^{12}}{\partial x^{2}}+\frac{\partial F^{13}}{\partial x^{3}} =-\frac{1}{c^{2}}\frac{\partial E_x}{\partial t}+\frac{\partial B_z}{\partial y}-\frac{\partial B_y}{\partial z} =\Big(-\frac{1}{c^{2}}\frac{\partial\vb{E}}{\partial t}+\curl\vb{B}\Big)_x . \]
+우변 \(\muz J_x\). \(\mu=2,3\)과 합치면
+\[ \curl\vb{B}=\muz\vb{J}+\muz\eps\frac{\partial\vb{E}}{\partial t}\qquad\textbf{(Ampère–Maxwell)} \]</li>
+<li><b>둘째 식, \(\mu=0\).</b>
+\[ \partial_\nu G^{0\nu}=\frac{\partial B_x}{\partial x}+\frac{\partial B_y}{\partial y}+\frac{\partial B_z}{\partial z}=\divg\vb{B}=0 \qquad\textbf{(자기 홀극 부재)} \]</li>
+<li><b>둘째 식, \(\mu=1\).</b>
+\[ \partial_\nu G^{1\nu}=-\frac{1}{c}\frac{\partial B_x}{\partial t}-\frac{1}{c}\frac{\partial E_z}{\partial y}+\frac{1}{c}\frac{\partial E_y}{\partial z} =-\frac{1}{c}\Big(\frac{\partial\vb{B}}{\partial t}+\curl\vb{E}\Big)_x=0 . \]
+\(\mu=2,3\)과 합치면
+\[ \curl\vb{E}=-\frac{\partial\vb{B}}{\partial t}\qquad\textbf{(Faraday 법칙)} \]</li>
+<li><b>동차 방정식의 다른 얼굴.</b> \(\partial_\nu G^{\mu\nu}=0\)은 \(F\)만으로도 쓸 수 있다:
+\[ \partial_{\lambda}F^{\mu\nu}+\partial^{\mu}F^{\nu\lambda}+\partial^{\nu}F^{\lambda\mu}=0 \]
+(순환 지표 항등식, Bianchi 항등식). \(F^{\mu\nu}=\partial^\mu A^\nu-\partial^\nu A^\mu\)로 쓰면 <b>자동으로</b> 만족된다(U30).</li>
+<li><b>전하 보존은 공짜.</b> \(\partial_\mu\partial_\nu\)는 \(\mu\nu\)에 대해 <b>대칭</b>이고 \(F^{\mu\nu}\)는 <b>반대칭</b>이므로
+\[ \partial_\mu\partial_\nu F^{\mu\nu}=0 . \]
+따라서 \(\partial_\mu(\muz J^\mu)=0\), 즉 \(\partial_\mu J^\mu=0\). <b>전하 보존이 Maxwell 방정식에서 따라 나온다</b> — 별도 가정이 아니다. 이 논증이 반대칭성의 첫 번째 배당금이다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 5</span>공변 Lorentz 힘과 \(F\)가 반드시 반대칭인 이유</div>
+<ol>
+<li><b>주장.</b>
+\[ \boxed{\;K^{\mu}=q\,F^{\mu\nu}\eta_{\nu}\;} \]
+좌변은 Minkowski 힘 \(K^{\mu}=\dd p^{\mu}/\dd\tau\)(4-vector), 우변도 텐서와 4-vector의 축약이므로 4-vector. 형식적으로 완벽하다.</li>
+<li><b>\(\mu=1\) 검증.</b> \(\eta_0=-\eta^{0}=-\gamma_u c\), \(\eta_i=\gamma_u u_i\)임에 주의:
+\[ K^{1}=q\big(F^{10}\eta_0+F^{12}\eta_2+F^{13}\eta_3\big) =q\gamma_u\Big[\Big(-\frac{E_x}{c}\Big)(-c)+B_z u_y+(-B_y)u_z\Big] \]
+\[ =q\gamma_u\big[E_x+(u_yB_z-u_zB_y)\big]=q\gamma_u\big[\vb{E}+\vb{u}\times\vb{B}\big]_x . \]</li>
+<li><b>보통 힘으로 환산.</b> \(\vb{K}=\gamma_u\vb{F}\)이므로
+\[ \vb{F}=q\big(\vb{E}+\vb{u}\times\vb{B}\big). \]
+<b>Lorentz 힘 법칙이 정확히 재현된다.</b> 동시에 U27에서 미뤄 뒀던 질문에 답이 나온다 — Lorentz 힘의 익숙한 표현은 <b>보통 힘</b>이지 Minkowski 힘이 아니다.</li>
+<li><b>\(\mu=0\)의 의미.</b>
+\[ K^{0}=qF^{0\nu}\eta_\nu=q\gamma_u\frac{\vb{E}\cdot\vb{u}}{c},\qquad K^{0}=\frac{1}{c}\frac{\dd E}{\dd\tau}=\frac{\gamma_u}{c}\frac{\dd E}{\dd t}. \]
+따라서
+\[ \frac{\dd E}{\dd t}=q\,\vb{E}\cdot\vb{u} \]
+— 단위시간당 입자에 전달되는 에너지. \(\vb{B}\)가 <b>전혀 등장하지 않는다</b>: 자기력은 일을 하지 않는다. 이 유명한 사실이 0성분에 통째로 들어 있다.</li>
+<li><b>왜 \(F\)는 반드시 반대칭인가 (핵심 논증).</b> 모든 입자의 4-속도는
+\[ \eta^{\mu}\eta_{\mu}=-c^{2}=\text{상수} \]
+를 만족한다(U26 유도 1). 이는 정지질량이 변하지 않는다는 것과 같은 말이다.</li>
+<li><b>고유시간으로 미분.</b>
+\[ \frac{\dd}{\dd\tau}\big(\eta^{\mu}\eta_{\mu}\big)=2\eta_{\mu}\frac{\dd\eta^{\mu}}{\dd\tau}=0 \;\Longrightarrow\; \eta_{\mu}K^{\mu}=0 \]
+(\(K^\mu=m\,\dd\eta^\mu/\dd\tau\)). <b>어떤 4-힘이든 4-속도에 "직교"해야 한다.</b></li>
+<li><b>조건 부과.</b> \(K^{\mu}=qF^{\mu\nu}\eta_\nu\)를 넣으면
+\[ q\,F^{\mu\nu}\eta_{\nu}\eta_{\mu}=0 \qquad\text{(모든 허용된 }\eta^\mu\text{에 대해)}. \]</li>
+<li><b>결론.</b> \(\eta_\mu\eta_\nu\)는 두 지표에 대해 <b>대칭</b>이다. 대칭 텐서와 축약해서 0이 되려면 \(F^{\mu\nu}\)의 <b>대칭 부분이 0</b>이어야 한다. 즉
+\[ F^{\mu\nu}=-F^{\nu\mu}. \qquad\blacksquare \]</li>
+<li><b>물리적 번역.</b> "장이 입자의 정지질량을 바꾸지 않는다"는 요구가 곧 "장 텐서가 반대칭이다"이다. 그리고 반대칭이면 독립 성분이 6개이고, 그것이 \(\vb{E}\) 셋과 \(\vb{B}\) 셋이다. <b>자기장이 존재해야 하는 이유가 여기 있다</b> — 만약 \(F\)가 전기장 셋만 담을 수 있었다면 반대칭 텐서가 될 수 없었을 것이다.</li>
+</ol></div>
+
+<div class="callout"><b class="head">부호·지표 규약 경고 (감점 1순위).</b> 이 절은 책마다 규약이 달라 부호가 요동친다. Griffiths는 계량 \((-,+,+,+)\), \(F^{01}=E_x/c\), 그리고 Maxwell을 <b>\(\partial_\nu F^{\mu\nu}=\muz J^{\mu}\)</b>로 쓴다. \(F\)가 반대칭이므로 지표 순서를 바꾸면 부호가 뒤집혀 \(\partial_\mu F^{\mu\nu}=-\muz J^{\nu}\)가 된다. 많은 책(Jackson 등)은 계량 \((+,-,-,-)\)를 써서 \(\partial_\mu F^{\mu\nu}=\muz J^{\nu}\), \(\Box A^\mu=\muz J^\mu\)로 쓴다. <b>물리는 같고 부호 규약만 다르다.</b> 대응책: 시험지 첫 줄에 "\(g_{\mu\nu}=\mathrm{diag}(-1,1,1,1)\), \(F^{01}=E_x/c\), \(\partial_\nu F^{\mu\nu}=\muz J^\mu\)"를 명시하고 끝까지 그 안에서만 계산할 것. 규약을 밝히고 일관되면 감점 없고, 섞으면 전부 틀린다.</div>
+
+<div class="formula"><div class="ftitle">암기 — 장 텐서와 쌍대 텐서</div>
+\[ F^{\mu\nu}=\begin{pmatrix}
+0 & E_x/c & E_y/c & E_z/c\\
+-E_x/c & 0 & B_z & -B_y\\
+-E_y/c & -B_z & 0 & B_x\\
+-E_z/c & B_y & -B_x & 0
+\end{pmatrix},\qquad
+G^{\mu\nu}=\begin{pmatrix}
+0 & B_x & B_y & B_z\\
+-B_x & 0 & -E_z/c & E_y/c\\
+-B_y & E_z/c & 0 & -E_x/c\\
+-B_z & -E_y/c & E_x/c & 0
+\end{pmatrix} \]
+<p class="note">암기 요령: 첫 <b>행</b>이 \(\vb{E}/c\)(\(F\)) 또는 \(\vb{B}\)(\(G\)), 나머지 \(3\times3\) 블록이 다른 장의 반대칭 배열이며 \(t^{12}=B_z,\ t^{23}=B_x,\ t^{31}=B_y\)라는 <b>순환 순서</b>를 따른다(\(F^{13}=-B_y\)에 주의). \(G\)는 \(F\)에서 \(\vb{E}/c\to\vb{B},\ \vb{B}\to-\vb{E}/c\).</p></div>
+
+<div class="formula"><div class="ftitle">암기 — 전기동역학 전체를 세 줄로</div>
+\[ \boxed{\;\partial_{\nu}F^{\mu\nu}=\muz J^{\mu}\;}\qquad \boxed{\;\partial_{\nu}G^{\mu\nu}=0\;}\qquad \boxed{\;K^{\mu}=q\,F^{\mu\nu}\eta_{\nu}\;} \]
+\[ J^{\mu}=(c\rho,\ \vb{J}),\qquad \partial_{\mu}J^{\mu}=0\ \ (\text{첫 식에서 자동으로 따라 나옴}) \]
+<p class="note">Maxwell 방정식 4개 + Lorentz 힘 법칙 = 세 줄. 게다가 각 줄이 위·아래 지표 짝맞춤만으로 <b>보기만 해도</b> Lorentz 공변임이 드러난다. 이것이 텐서 표기의 진짜 값어치다 — 계산이 짧아지는 게 아니라, 상대론적 정합성이 <b>시각적으로 명백</b>해진다.</p></div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u29-1"><div class="qq">[계산·기출] 텐서 불변량 \(F^{\mu\nu}F_{\mu\nu}\), \(G^{\mu\nu}G_{\mu\nu}\), \(F^{\mu\nu}G_{\mu\nu}\)를 \(\vb{E}\), \(\vb{B}\)로 나타내라. U28의 두 불변량과 비교하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>지표 내리기 규칙.</b> 0 지표를 내릴 때마다 부호가 뒤집힌다. 따라서 \(F_{0i}=-F^{0i}\), \(F_{ij}=F^{ij}\).</p>
+<p><b>(1) \(F^{\mu\nu}F_{\mu\nu}\).</b></p>
+<p>0을 하나 포함하는 항: \(\mu=0,\nu=i\)와 \(\mu=i,\nu=0\) 두 벌이므로
+\[ 2\sum_i F^{0i}F_{0i}=2\sum_i F^{0i}\big(-F^{0i}\big)=-2\frac{E^{2}}{c^{2}} . \]</p>
+<p>순공간 항: \((F^{12})^2,(F^{23})^2,(F^{31})^2\)이 각각 두 번씩 나오므로
+\[ \sum_{i\ne j}F^{ij}F_{ij}=2\big(B_x^2+B_y^2+B_z^2\big)=2B^{2}. \]</p>
+<p>\[ \boxed{\;F^{\mu\nu}F_{\mu\nu}=2\Big(B^{2}-\frac{E^{2}}{c^{2}}\Big)=-\frac{2}{c^{2}}\big(E^{2}-c^{2}B^{2}\big)\;} \]</p>
+<p><b>(2) \(G^{\mu\nu}G_{\mu\nu}\).</b> \(G\)는 \(\vb{E}/c\leftrightarrow\vb{B}\)를 (부호와 함께) 맞바꾼 것이므로 같은 계산에서 역할이 뒤바뀐다:
+\[ \boxed{\;G^{\mu\nu}G_{\mu\nu}=-2\Big(B^{2}-\frac{E^{2}}{c^{2}}\Big)=-F^{\mu\nu}F_{\mu\nu}\;} \]
+새 불변량이 아니다.</p>
+<p><b>(3) \(F^{\mu\nu}G_{\mu\nu}\).</b></p>
+<p>0 포함 항: \(2\sum_i F^{0i}G_{0i}=2\sum_i (E_i/c)(-B_i)=-\dfrac{2}{c}\vb{E}\cdot\vb{B}\).</p>
+<p>순공간 항: \(2\big(B_z(-E_z/c)+B_y(-E_y/c)+B_x(-E_x/c)\big)=-\dfrac{2}{c}\vb{E}\cdot\vb{B}\).</p>
+<p>\[ \boxed{\;F^{\mu\nu}G_{\mu\nu}=-\frac{4}{c}\,\vb{E}\cdot\vb{B}\;} \]</p>
+<p><b>비교 및 해석.</b> U28에서 <b>직접 계산으로</b> 확인했던 두 불변량 \(E^{2}-c^{2}B^{2}\)와 \(\vb{E}\cdot\vb{B}\)가, 여기서는 텐서 축약의 결과로 <b>즉시</b> 나온다. 위·아래 지표가 모두 짝지어져 있으므로 Lorentz 불변임은 계산 없이도 자명하다. 그리고 \(G\cdot G\)가 새로운 것을 주지 않으므로, <b>이 둘이 \(F^{\mu\nu}\)의 독립 불변량 전부</b>임도 알 수 있다. U28의 다소 지루했던 대수 검증이 왜 그런 결과를 낳았는지, 그 구조적 이유를 텐서 언어가 설명해 준다.</p>
+</div></div>
+
+<div class="qz" data-q="u29-2"><div class="qq">[참/거짓 + 증명] "\(F^{\mu\nu}\)의 반대칭성은 표기상의 편의일 뿐이며, 대칭 부분을 조금 넣어도 물리적으로 문제될 것이 없다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>거짓.</b> 반대칭성은 편의가 아니라 <b>물리적 필연</b>이며, 위반하면 즉시 모순이 생긴다.</p>
+<p><b>증명 1 — 정지질량이 변한다.</b> 모든 4-속도는 \(\eta^{\mu}\eta_{\mu}=-c^{2}\)를 만족한다(정지질량 불변의 기하적 표현). 미분하면
+\[ \eta_{\mu}K^{\mu}=0 \]
+이 모든 입자·모든 운동 상태에 대해 성립해야 한다. \(K^{\mu}=qF^{\mu\nu}\eta_\nu\)를 넣으면
+\[ F^{\mu\nu}\eta_{\mu}\eta_{\nu}=0\quad\text{(모든 }\eta\text{에 대해)}. \]
+\(\eta_\mu\eta_\nu\)는 대칭이므로 \(F^{\mu\nu}\)의 대칭 부분만 살아남는다. 이것이 0이 되려면 대칭 부분이 0, 즉 \(F^{\mu\nu}=-F^{\nu\mu}\). 대칭 부분 \(S^{\mu\nu}\ne0\)을 넣으면 \(\eta_\mu K^\mu\ne0\)이 되어 <b>입자의 정지질량이 장에 의해 변하게 된다</b> — 전자기장이 전자를 다른 입자로 바꿔 버린다는 뜻이다. 물리적으로 불가능.</p>
+<p><b>증명 2 — 전하 보존이 깨진다.</b> \(\partial_\nu F^{\mu\nu}=\muz J^{\mu}\)에 \(\partial_\mu\)를 걸면
+\[ \partial_\mu\partial_\nu F^{\mu\nu}=\muz\,\partial_\mu J^{\mu}. \]
+좌변은 "대칭 연산자 \(\partial_\mu\partial_\nu\) × 반대칭 텐서"이므로 0이고, 따라서 \(\partial_\mu J^\mu=0\)(전하 보존)이 따라 나온다. 만약 \(F\)에 대칭 부분이 있으면 좌변이 0이 아니게 되고, <b>전하 보존이 방정식과 충돌</b>한다.</p>
+<p><b>증명 3 — 성분 수가 안 맞는다.</b> 대칭 부분을 허용하면 독립 성분이 6개에서 최대 16개로 늘어난다. 그러나 실험적으로 전자기장을 완전히 결정하는 데는 \(\vb{E},\vb{B}\) 여섯 수로 충분하며, U28의 변환 규칙은 정확히 6성분 반대칭 텐서의 변환 규칙과 일치한다. 추가 성분은 관측된 적이 없다.</p>
+<p><b>한 문장 요약.</b> "장은 입자의 <b>운동</b>을 바꾸되 <b>정체</b>는 바꾸지 않는다"는 요구가 \(F^{\mu\nu}=-F^{\nu\mu}\)이고, 그 반대칭성이 독립 성분을 6개로 못 박아 <b>자기장의 존재를 강제</b>한다.</p>
+</div></div>
+
+<div class="qz" data-q="u29-3"><div class="qq">[계산] \(z\)축을 따라 놓인 직선 도선이 선전하밀도 \(\lambda\)를 가지고 \(+z\)로 속력 \(v\)로 움직인다. 점 \((x,0,0)\)에서 \(F^{\mu\nu}\)와 \(G^{\mu\nu}\)를 구성하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>1단계 — 장 구하기.</b></p>
+<p>전기장(무한 선전하):
+\[ \vb{E}=\frac{\lambda}{2\pi\eps x}\,\hat{\vb{x}}\;\Longrightarrow\; E_x=\frac{\lambda}{2\pi\eps x},\quad E_y=E_z=0 . \]</p>
+<p>자기장: 전류 \(I=\lambda v\)가 \(+z\)로 흐르므로 \(\vb{B}=\dfrac{\muz I}{2\pi x}\hat{\boldsymbol\varphi}\). 점 \((x,0,0)\)에서 \(\hat{\boldsymbol\varphi}=\hat{\vb{z}}\times\hat{\vb{x}}=\hat{\vb{y}}\):
+\[ B_y=\frac{\muz\lambda v}{2\pi x},\qquad B_x=B_z=0 . \]</p>
+<p><b>2단계 — 텐서 채우기.</b> 0이 아닌 성분은 \(F^{01}=E_x/c\)와 \(F^{31}=B_y\)(그리고 반대칭 짝):
+\[ F^{\mu\nu}=\begin{pmatrix}
+0 & \dfrac{\lambda}{2\pi\eps cx} & 0 & 0\\[2mm]
+-\dfrac{\lambda}{2\pi\eps cx} & 0 & 0 & -\dfrac{\muz\lambda v}{2\pi x}\\[2mm]
+0&0&0&0\\[1mm]
+0 & \dfrac{\muz\lambda v}{2\pi x} & 0 & 0
+\end{pmatrix} \]</p>
+<p><b>3단계 — 쌍대.</b> \(\vb{E}/c\to\vb{B}\), \(\vb{B}\to-\vb{E}/c\)를 적용하면 \(G^{01}=B_x=0\), \(G^{02}=B_y=\dfrac{\muz\lambda v}{2\pi x}\), \(G^{13}=-E_y/c=0\), \(G^{12}=-E_z/c=0\), \(G^{23}=-E_x/c=-\dfrac{\lambda}{2\pi\eps cx}\):
+\[ G^{\mu\nu}=\begin{pmatrix}
+0&0&\dfrac{\muz\lambda v}{2\pi x}&0\\[2mm]
+0&0&0&0\\[1mm]
+-\dfrac{\muz\lambda v}{2\pi x}&0&0&-\dfrac{\lambda}{2\pi\eps cx}\\[2mm]
+0&0&\dfrac{\lambda}{2\pi\eps cx}&0
+\end{pmatrix} \]</p>
+<p><b>4단계 — 검산 (불변량).</b>
+\[ \vb{E}\cdot\vb{B}=E_xB_y\cdot(\hat{\vb{x}}\cdot\hat{\vb{y}})=0\ \checkmark\ \text{(직교)} \]
+\[ E^{2}-c^{2}B^{2}=\Big(\frac{\lambda}{2\pi\eps x}\Big)^{2}\Big[1-c^{2}\big(\muz\eps v\big)^{2}\Big] =\Big(\frac{\lambda}{2\pi\eps x}\Big)^{2}\Big(1-\frac{v^{2}}{c^{2}}\Big)&gt;0 \]
+(\(\muz\eps=1/c^2\) 사용). <b>양수</b>이므로 전기 우세 — \(\vb{B}\)를 없앨 수 있는 계가 존재한다. 실제로 그 계는 <b>전하와 함께 \(+z\)로 \(v\)로 달리는 계</b>이며, 거기서는 정지한 선전하의 순수 Coulomb 장만 남는다 ✓ 물리적으로 완벽히 정합적이다.</p>
+</div></div>
+
+<div class="qz" data-q="u29-4"><div class="qq">[개념·서술] Maxwell 방정식을 \(\partial_\nu F^{\mu\nu}=\muz J^{\mu}\), \(\partial_\nu G^{\mu\nu}=0\) 두 줄로 쓰는 것이 단순한 표기 절약 이상인 이유를 세 가지 들라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>1. Lorentz 공변성이 "시각적으로 명백"해진다.</b> 3차원 표기로 Maxwell 방정식이 모든 관성계에서 같은 꼴임을 증명하려면, 장 변환 규칙 6개와 미분 연산자의 연쇄법칙을 동원한 지루한 계산이 필요하다(Griffiths Prob. 12.59). 텐서 표기에서는 양변이 <b>같은 방식으로 변환하는 4-vector</b>이므로 증명할 것이 없다. \(\bar\partial_\nu\bar F^{\mu\nu}=\Lambda^\mu{}_\lambda(\partial_\nu F^{\lambda\nu})=\Lambda^\mu{}_\lambda(\muz J^\lambda)=\muz\bar J^\mu\). 끝. <b>보는 것이 곧 증명</b>이다.</p>
+<p><b>2. 구조적 사실이 자동으로 드러난다.</b>
+<ul>
+<li>전하 보존 \(\partial_\mu J^\mu=0\)이 첫 방정식의 <b>따름정리</b>임이 한 줄로 보인다(\(\partial_\mu\partial_\nu\) 대칭 × \(F\) 반대칭 = 0). 3차원 표기에서는 Ampère–Maxwell의 발산을 취하고 Gauss 법칙을 대입하는 과정을 거쳐야 한다.</li>
+<li>동차 방정식이 \(F^{\mu\nu}=\partial^\mu A^\nu-\partial^\nu A^\mu\)에 의해 <b>항등적으로</b> 만족됨이 명백해진다(U30).</li>
+<li>불변량이 정확히 두 개뿐이라는 사실이 \(F\cdot F\), \(F\cdot G\), \(G\cdot G=-F\cdot F\)에서 즉시 나온다.</li>
+</ul></p>
+<p><b>3. \(\vb{E}\)와 \(\vb{B}\)의 분리가 관측자 의존적임을 드러낸다.</b> 3차원 표기는 "전기 법칙 둘, 자기 법칙 둘"이라는 인위적 분할을 강요한다. 텐서 표기는 실체가 <b>하나의 장 \(F^{\mu\nu}\)</b>이고, "전기적/자기적"이라는 구분은 관성계를 고르는 순간 생기는 <b>좌표 의존적 분해</b>임을 보여 준다. U28에서 도선 문제의 힘이 한 계에서는 전기적이고 다른 계에서는 자기적이었던 이유가 여기 있다. 이것은 표기의 문제가 아니라 <b>물리적 실체가 무엇인가</b>에 대한 답이다.</p>
+<p><b>덤 — 확장성.</b> 이 언어로 쓰면 매질 속 전기동역학(\(D^{\mu\nu}\) 도입), 일반상대론으로의 이행(\(\partial_\mu\to\nabla_\mu\)), 게이지 이론으로의 일반화가 전부 자연스럽게 이어진다. 3차원 벡터 표기로는 그 어느 것도 매끄럽지 않다.</p>
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> \(F^{\mu\nu}\)와 \(G^{\mu\nu}\)를 백지에 적고, 두 텐서 방정식에서 Maxwell 4식을 성분별로 복원하며, \(\eta^\mu\eta_\mu=-c^2\)에서 반대칭성을 논증할 수 있다.</div>

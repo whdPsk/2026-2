@@ -1,0 +1,18 @@
+<div class="exq"><b>상황.</b> 선밀도 \(\rho\), 길이 \(a\)인 밧줄을 탁자 바로 위에 윗끝을 잡고 늘어뜨렸다가 놓는다. 길이 \(x\)만큼 탁자에 떨어져 쌓였을 때 탁자가 받는 힘 \(F\)는?</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>정적인 무게 + 매 순간 멈추는 조각의 충격력.</div>
+<ol>
+<li><b>이미 쌓인 부분</b>: \(F_g=\rho xg\).</li>
+<li><b>충격력</b>: \(F=\dd p/\dd t\). 시간 \(\dd t\) 동안 탁자에 닿아 멈추는 질량은 \(\rho v\,\dd t\), 잃는 운동량 \((\rho v\,\dd t)v\). 따라서
+\[ F_{\rm impulse}=\rho v^2 . \]</li>
+<li><b>속력</b>: 아직 떨어지는 부분은 장력 없이 자유낙하(밧줄 전체가 같이 \(g\)로 가속)하므로 \(x\)만큼 떨어진 뒤 \(v^2=2gx\).</li>
+<li>\(F_{\rm impulse}=2\rho xg\), 합하면 \(F=3\rho xg\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ F=3\rho gx\ }\quad(0\le x&lt;a) \]
+<p class="note"><b>검산</b> ① 계 전체 방법(Example 9.2 +α b): 공중 부분 운동량 \(P=\rho(a-x)v\), \(\dot P=\rho g(a-3x)\), \(F=\rho ag-\dot P=3\rho xg\) ✓. ② 마지막 순간 \(3Mg\), 다 떨어진 직후 \(Mg\) — 저울 눈금이 3배까지 올라갔다 떨어진다 ✓. ③ 차원: \(\rho gx\)는 힘 ✓.</p></div>
+<div class="qz" data-q="ex9.10-a"><div class="qq"><b>+α</b> 시간 함수로: 탁자가 받는 힘을 시간 \(t\)의 함수로 쓰고, \(0\le t\le t_f\) 동안 탁자가 받은 총충격량이 \(\rho a\sqrt{2ga}+\)(쌓인 무게의 충격량)과 맞는지 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(x=\tfrac12gt^2\), \(F(t)=\tfrac32\rho g^2t^2\), \(t_f=\sqrt{2a/g}\). \(\int_0^{t_f}F\,\dd t=\tfrac12\rho g^2t_f^3=\rho g a t_f\).</p>
+<p>해석: 운동량 원리로 \(\int F\,\dd t=\int(\text{중력})\dd t-\Delta P\). 중력 충격량 \(\rho ag\,t_f\), 시작·끝 모두 \(P=0\)... 끝 순간(마지막 조각이 닿는 순간) 운동량 0 ✓ → \(\int F\dd t=\rho ag\,t_f\) ✓. 총 운동량 전달 \(\rho a\sqrt{2ga}=\rho ag\,t_f\)와도 같다(두 표현이 일치 — \(\sqrt{2ga}=gt_f\)).</p></div></div>
+<div class="qz" data-q="ex9.10-b"><div class="qq"><b>+α</b> 조건 바꾸기: 같은 밧줄을 이번엔 탁자 위에 쌓아 두고, 한 끝을 잡고 일정한 속력 \(v_0\)로 수직으로 끌어올린다. 들어 올린 길이 \(y\)일 때 필요한 힘은? 손이 한 일과 밧줄의 역학적 에너지 증가를 비교하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>공중 부분 운동량 \(P=\rho yv_0\), \(\dot P=\rho v_0^2\). \(F-\rho yg=\rho v_0^2\) → \(F=\rho(yg+v_0^2)\).</p>
+<p>손의 일(\(y\): 0→\(L\)): \(\int F\,\dd y=\tfrac12\rho gL^2+\rho v_0^2L\). 역학적 에너지 증가: \(\tfrac12\rho gL^2+\tfrac12\rho Lv_0^2\). <b>차이 \(\tfrac12\rho Lv_0^2\)은 열로 사라진다</b> — 정지한 조각이 순간적으로 \(v_0\)로 끌려 올라가는 완전 비탄성 "충돌"(U7 유도 1과 같은 절반 손실).</p></div></div>

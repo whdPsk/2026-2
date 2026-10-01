@@ -1,0 +1,11 @@
+<div class="exq"><span class="examtag">PPT Review Q② · 9/15 수업 문제</span><br>What are the four Stokes parameters, and what is the physical meaning of each?<br>(번역) 네 Stokes 변수는 무엇이고 각각의 물리적 의미는? — 대표적인 편광 상태 6가지의 (I, Q, U, V)를 써서 확인하라. [[L05.s3b]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>정의 → 필터 측정 → 대표 상태</div><ol>
+<li>정의: \(I=\langle|E_x|^2\rangle+\langle|E_y|^2\rangle\), \(Q=\langle|E_x|^2\rangle-\langle|E_y|^2\rangle\), \(U=2{\rm Re}\langle E_xE_y^*\rangle\), \(V=-2{\rm Im}\langle E_xE_y^*\rangle\). [[L05.s9, S0915.27]]</li>
+<li>측정: \(I=I_{0^\circ}+I_{90^\circ}\)(총세기), \(Q=I_{0^\circ}-I_{90^\circ}\), \(U=I_{45^\circ}-I_{135^\circ}\)(선형 필터), \(V=I_{\rm RCP}-I_{\rm LCP}\)(원편광 필터 2개). [[L05.s10, S0915.04, S0915.05]]</li>
+<li>대표 상태(세기 I): x(0°) 선편광 (I, I, 0, 0); y(90°) 선편광 (I, −I, 0, 0); 45° 선편광(ε₁ = ε₂, φ = 0) (I, 0, I, 0); RCP (I, 0, 0, I); LCP (I, 0, 0, −I); 무편광 (I, 0, 0, 0). [[L05.s9, S0915.06]]</li>
+<li>앞 다섯은 완전편광이라 \(I^2=Q^2+U^2+V^2\), 무편광은 Q = U = V = 0. [[F12.13, S0915.29]]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>I = 편광과 무관한 총세기(에너지 ∝ E²), Q·U = 선편광의 세기와 방향(Q:U 비 → 편광각), V = 원편광 세기와 손잡이(V &gt; 0 RCP). 3개 변수(ε₀, β, χ)에 Stokes 4개 → 완전편광이면 \(I^2=Q^2+U^2+V^2\).</p></div>
+<div class="intuit"><b>직관</b>Q와 U가 둘 다 필요한 이유: Q 하나는 "세로냐 가로냐"만 알려준다. 대각선 방향까지 알아야 편광 방향이 정해진다 — 두 축 성분으로 방향을 정하는 것과 같다. [[S0915.05]]</div>
+<div class="qz" data-q="ex3.11-a"><div class="qq"><b>+α</b> I = 10, Q = 0, U = −3, V = 0이면?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>선편광도 30%, U &lt; 0 → −45°(135°) 방향 선편광 성분. 나머지 70%는 무편광.</p></div></div>
+<div class="qz" data-q="ex3.11-b"><div class="qq"><b>+α</b> 왜 V = 0인 빛이 "대부분"인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>천체 빛은 대개 무편광 + 약한 선편광. 원편광은 특수한 경우(예: 강한 자기장 속 싱크로트론·사이클로트론)에만 두드러진다.</p></div></div>

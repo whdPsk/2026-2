@@ -1,0 +1,14 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\[n-1=\frac{Nq^2}{2m\epsilon_0}\frac{\omega_0^2-\omega^2}{(\omega_0^2-\omega^2)^2+\gamma^2\omega^2},\qquad \alpha=\frac{Nq^2\omega^2}{m\epsilon_0 c}\frac{\gamma}{(\omega_0^2-\omega^2)^2+\gamma^2\omega^2}.\]
+\(X\equiv\omega_0^2-\omega^2\)로 두고, 공명 근방(\(\omega\approx\omega_0\))에서 \(\gamma^2\omega^2\approx\gamma^2\omega_0^2\)로 근사하면
+\[n-1\propto f(X)=\frac{X}{X^2+\gamma^2\omega_0^2},\qquad \frac{df}{dX}=\frac{\gamma^2\omega_0^2-X^2}{(X^2+\gamma^2\omega_0^2)^2}=0\ \Rightarrow\ X=\pm\gamma\omega_0 .\]
+\(X=\omega_0^2-\omega^2\approx2\omega_0(\omega_0-\omega)\)이므로 \(2\omega_0(\omega_0-\omega)=\pm\gamma\omega_0\):
+\[\omega=\omega_0\mp\frac{\gamma}{2}\ \Rightarrow\ \boxed{\text{이상분산 영역}\ \omega_0-\tfrac\gamma2&lt;\omega&lt;\omega_0+\tfrac\gamma2,\quad \Delta\omega=\gamma}\]
+(이 구간 안에서만 \(dn/d\omega&lt;0\).)<br>
+<b>반치점 확인.</b> \(\omega=\omega_0\)에서 \(\alpha_{\max}=\dfrac{Nq^2\omega_0^2\gamma}{m\epsilon_0c\,\gamma^2\omega_0^2}=\dfrac{Nq^2}{m\epsilon_0c\gamma}\).<br>
+\(\omega=\omega_0\pm\gamma/2\)에서는 \(X^2=\gamma^2\omega_0^2\), \(\gamma^2\omega^2\approx\gamma^2\omega_0^2\)이므로 분모 \(=2\gamma^2\omega_0^2\):
+\[\alpha=\frac{Nq^2\omega_0^2\gamma}{m\epsilon_0c\cdot2\gamma^2\omega_0^2}=\frac{Nq^2}{2m\epsilon_0c\gamma}=\boxed{\frac{\alpha_{\max}}{2}}\]
+즉 굴절률의 극대·극소는 정확히 흡수선의 <b>반치폭 지점</b>에서 일어나고, 이상분산 폭 = 흡수선의 FWHM = \(\gamma\).
+<div class="alabel">감점 포인트</div>
+\(\gamma\ll\omega_0\) 근사를 쓰지 않고 정확히 풀려 하면 4차식이 되어 지저분해진다. \(\omega\approx\omega_0\)를 어디에 적용했는지 명시할 것.</div><!--/sol-->

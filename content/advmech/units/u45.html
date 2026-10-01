@@ -1,0 +1,40 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 비상대론에서 \(L=T-U\)이고 \(\partial L/\partial\dot x=p\)이다. 상대론에서도 \(\partial L/\partial u\)가 \(\gamma mu\)가 되어야 한다면, \(L\)의 속도 부분은 상대론적 운동에너지 \((\gamma-1)mc^2\)일까? 한번 미분해 보고 추측해 보라.</div>
+
+<h4>14.10 특수상대론의 Lagrangian <span class="en">relativistic Lagrangian</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>\(L=-mc^2\sqrt{1-\beta^2}-U\) — 교재 식 (14.107)–(14.113) <b>(필수)</b></div>
+<ol>
+<li>요구 조건: \(\pd{L}{u_j}=p_j=\dfrac{mu_j}{\sqrt{1-\beta^2}}\), \(\beta^2=u^2/c^2\).</li>
+<li>퍼텐셜은 속도와 무관하니 그대로: \(L=T^*(u)-U(\vb x)\), 여기서 \(\pd{T^*}{u_j}=\gamma mu_j\).</li>
+<li>시도: \(T^*=-mc^2\sqrt{1-u^2/c^2}\) → \(\pd{T^*}{u_j}=-mc^2\cdot\frac{-u_j/c^2}{\sqrt{1-u^2/c^2}}=\gamma mu_j\) ✓.
+\[ \boxed{\ L=-mc^2\sqrt{1-\beta^2}-U=-\frac{mc^2}{\gamma}-U\ } \]</li>
+<li>\(T^*\neq T\): 상대론적 운동에너지는 \((\gamma-1)mc^2\)인데 \(L\)의 속도 부분은 \(-mc^2/\gamma\). 저속에서 \(-mc^2/\gamma\approx-mc^2+\tfrac12mu^2\) — 상수 차이를 빼면 \(T\)로 돌아온다.</li>
+<li>작용 관점: 자유 입자 \(S=\int L\,\dd t=-mc^2\int\dd\tau\). 고유 시간이 최대인 세계선 = 관성 운동(U42 유도 3). \(L\)이 Lorentz 불변인 \(\dd\tau\)에서 나오므로 자연스럽다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>Hamiltonian \(H=E+U\) — 교재 식 (14.115)</div>
+<ol>
+<li>\(H=\sum_ju_jp_j-L=\gamma mu^2+\frac{mc^2}\gamma+U\).</li>
+<li>\(\gamma mu^2+mc^2/\gamma=\gamma mc^2\) (U43 유도 3과 같은 대수) → \(H=\gamma mc^2+U=E+U=T+U+mc^2\).</li>
+<li>\(p\)로 쓰면 \(H=\sqrt{p^2c^2+m^2c^4}+U(\vb x)\). Hamilton 방정식: \(\dot{\vb x}=\pd H{\vb p}=\frac{\vb pc^2}{E}\) (\(=\vb u\) ✓), \(\dot{\vb p}=-\nabla U\).</li>
+<li>7장의 \(H\)와 비교하면 <b>정지 에너지</b> \(mc^2\)만큼 상수가 더해진 것 — 운동방정식엔 영향 없음.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>예제: 일정한 힘 → 쌍곡선 운동 (+α)</div>
+<ol>
+<li>\(U=-Fx\). Euler–Lagrange: \(\od{}{t}(\gamma mu)=F\) → \(\gamma u=Ft/m\) (\(u(0)=0\)).</li>
+<li>풀면 \(u=\dfrac{Ft/m}{\sqrt{1+(Ft/mc)^2}}\to c\) (\(t\to\infty\)). Newton이면 \(u=Ft/m\)로 무한정 증가.</li>
+<li>적분: \(x=\dfrac{mc^2}F\left[\sqrt{1+\left(\frac{Ft}{mc}\right)^2}-1\right]\). \((x+mc^2/F)^2-c^2t^2=(mc^2/F)^2\) — 시공간의 <b>쌍곡선</b>. 저속에서 \(x\approx\tfrac12(F/m)t^2\) ✓.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 상대론적 Lagrangian</div>
+\[ L=-\frac{mc^2}\gamma-U,\qquad H=\sqrt{p^2c^2+m^2c^4}+U=E+U,\qquad S_{\rm free}=-mc^2\!\int\!\dd\tau \]
+<p class="note">\(L\ne T-U\), \(H\)는 정지 에너지 포함. 검산 습관: \(\partial L/\partial\vb u=\gamma m\vb u\)인가?</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u45-1"><div class="qq">(시험형) 상대론적 Lagrangian을 구성하고, 그로부터 Hamiltonian이 \(E+U\)임을 보여라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 1(요구 조건 \(\partial L/\partial u_j=\gamma mu_j\) → \(T^*=-mc^2/\gamma\))과 유도 2(\(H=\gamma mu^2+mc^2/\gamma+U=\gamma mc^2+U\)).</p></div></div>
+
+<div class="qz" data-q="u45-2"><div class="qq">\(L=-mc^2/\gamma-U\)가 \(v\ll c\)에서 비상대론 \(L\)과 같은 운동방정식을 주는 이유는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(-mc^2/\gamma=-mc^2+\tfrac12mu^2+\tfrac18mu^4/c^2+\cdots\). 상수 \(-mc^2\)은 Lagrange 방정식에 기여하지 않고, 고차항은 무시할 만하다 → \(L\approx\tfrac12mu^2-U\).</p></div></div>
+
+<div class="qz" data-q="u45-3"><div class="qq">상대론적 1차원 조화진동자 \(U=\tfrac12kx^2\). 에너지 보존식을 쓰고, 진폭이 매우 클 때 운동이 어떻게 되는지(주기 경향)를 말하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\gamma mc^2+\tfrac12kx^2=mc^2+\tfrac12kA^2\). 진폭이 크면 대부분 구간에서 \(u\approx c\)로 이동 → 한 주기 \(\approx4A/c\), 진폭에 비례해 길어진다(비상대론 조화진동자의 등시성이 깨진다).</p></div></div>

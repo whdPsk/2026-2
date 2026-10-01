@@ -1,0 +1,14 @@
+<div class="exq"><span class="examtag">PPT Q2 · 9/3 수업 문제</span><br>Assuming that the only important source of light is the Sun, compute the (frequency-integrated) <b>mean intensity</b> and <b>the energy density</b> at the distance of Mars. \(I_\odot=2\times10^{10}\ {\rm erg\ s^{-1}\,cm^{-2}\,sr^{-1}}\), \(R_\odot=7\times10^{10}\) cm, and \(r_{\rm Mars}=2.28\times10^{13}\) cm.<br>
+(번역) 빛의 중요한 원천이 태양뿐이라고 할 때, 화성 거리에서 (진동수 적분한) 평균세기와 에너지밀도를 구하라. [[L02.s11a]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>I는 그대로, 입체각만 줄어든다</div><ol>
+<li>specific intensity는 거리에 무관 — 화성에서 봐도 태양 원반 방향의 세기는 \(I_\odot\). 문제는 mean intensity가 얼마인가. [[S0903.31]]</li>
+<li>태양이 차지하는 입체각 안에서만 복사가 오고, 그 밖은 0: \(J=\dfrac1{4\pi}\displaystyle\int I\,d\Omega=\dfrac{I_\odot\,\Delta\Omega_\odot}{4\pi}\). [[S0903.31]]</li>
+<li>수업 방식: 각지름 \(\theta_s=2R_\odot/r_{\rm Mars}=6.14\times10^{-3}\) rad → 원 면적처럼 \(\Delta\Omega=\dfrac{\pi}{4}\theta_s^2=2.96\times10^{-5}\) sr. (반각으로 쓰면 \(\pi(R/r)^2\) — 같은 값, 슬라이드 5.) [[S0903.31, L02.s5c]]</li>
+<li>\(J=I_\odot\dfrac{(R_\odot/r)^2}{4}=2\times10^{10}\times\dfrac{(7\times10^{10}/2.28\times10^{13})^2}{4}=4.7\times10^4\ {\rm erg\ s^{-1}\,cm^{-2}\,sr^{-1}}\). [[L02.s11b]]</li>
+<li>\(u=\dfrac{4\pi}{c}J=\dfrac{4\pi\times4.71\times10^4}{3.0\times10^{10}}=1.98\times10^{-5}\ {\rm erg\ cm^{-3}}\). [[L02.s11b, S0903.31]]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과 (PPT 답과 대조)</div><p>PPT: \(J=4.6\times10^4\) erg s⁻¹ cm⁻² sr⁻¹, \(u=(4\pi/c)J=2\times10^{-5}\). 재계산: J=4.71×10⁴, u=1.98×10⁻⁵ erg cm⁻³. [[L02.s11b]]</p></div>
+<div class="intuit"><b>수업 포인트</b> 값이 "굉장히 작죠" — 태양 세기 2×10¹⁰보다 훨씬 작다. \(J/I=\Delta\Omega/4\pi=2.4\times10^{-6}\): 하늘 전체 중 태양 원반이 차지하는 비율만큼만 평균에 기여하기 때문. [[S0903.31]]</div>
+<div class="trap"><b>수치·단위 의심</b> 녹음상 "86, 110의 4승 정도" — 오인식. 슬라이드 4.6×10⁴, 주어진 반올림 값(R=7×10¹⁰)으로 재계산하면 4.7×10⁴ (R=6.96×10¹⁰을 쓰면 4.66×10⁴ → 슬라이드 값). 또 슬라이드의 u 단위 "erg s⁻¹ cm⁻³"의 s⁻¹은 오타 — 에너지밀도는 <b>erg cm⁻³</b>. [[S0903.31, L02.s11b]]</div>
+<div class="qz" data-q="ex1.21-a"><div class="qq"><b>+α</b> 같은 조건으로 지구(r=1.496×10¹³ cm)에서 J와 u는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>J=2×10¹⁰×(7×10¹⁰/1.496×10¹³)²/4≈1.09×10⁵, u=4πJ/c≈4.6×10⁻⁵ erg cm⁻³. 화성보다 (2.28/1.496)²≈2.3배.</p></div></div>
+<div class="qz" data-q="ex1.21-b"><div class="qq"><b>+α</b> 화성 거리에서 태양 방향 flux와 J의 관계를 식으로 쓰라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>F=IΔΩ(cosθ≈1), J=IΔΩ/4π → F=4πJ (한 방향에서만 오는 복사일 때). 등방이면 F=0인 것과 대조.</p></div></div>

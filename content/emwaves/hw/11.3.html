@@ -1,0 +1,12 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>평균 복사출력 (Eq. 11.22)과 저항에서의 평균 소비전력 \(\tfrac12 I_0^2R\)을 같다고 놓는다. 여기서 \(I_0=q_0\omega\), \(p_0=q_0d\).</p>
+\[ \langle P\rangle=\frac{\mu_0 p_0^2\omega^4}{12\pi c}=\frac{\mu_0 q_0^2 d^2\omega^4}{12\pi c}=\frac12 I_0^2 R
+\;\Rightarrow\; R=\frac{2\langle P\rangle}{q_0^2\omega^2}=\frac{\mu_0 d^2\omega^2}{6\pi c}. \]
+<p>\(\omega=2\pi c/\lambda\)를 대입하면</p>
+\[ R=\frac{\mu_0 d^2}{6\pi c}\cdot\frac{4\pi^2c^2}{\lambda^2}=\frac{2\pi}{3}\,\mu_0 c\left(\frac{d}{\lambda}\right)^2 . \]
+<p>\(\mu_0c=377\,\Omega\) (자유공간 임피던스)이므로</p>
+\[ \boxed{\;R=\frac{2\pi}{3}(377)\left(\frac d\lambda\right)^2\Omega\simeq 790\left(\frac{d}{\lambda}\right)^2\Omega\;} \]
+<p>라디오: \(f\sim1\)MHz \(\Rightarrow\lambda\sim300\) m, \(d/\lambda\simeq1.7\times10^{-4}\), \(R\simeq790\times2.8\times10^{-8}\approx2\times10^{-5}\,\Omega\). 도선의 옴 저항(\(\sim10^{-2}\Omega\) 이상)에 비해 무시 가능 → <b>걱정할 필요 없다</b>.</p>
+<div class="alabel">감점 포인트</div>
+<p>\(P=I_0^2R\)로 놓아 인수 2를 놓치는 것(평균이므로 \(\tfrac12 I_0^2R\)), 그리고 \(I_0=q_0\omega\) 관계를 빠뜨려 \(R\)에 \(q_0\)가 남는 실수.</p></div><!--/sol-->

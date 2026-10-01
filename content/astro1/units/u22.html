@@ -1,0 +1,22 @@
+<div class="predict"><b>◈ 학습 목표.</b> 12.1 · 12.2 · 12.3 · 12.4의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.</div>
+
+<h4>기말 <span class="en">약 45분</span></h4>
+
+<p>유체는 많은 입자의 평균을 작은 부피요소의 밀도·속도·압력으로 기술하는 연속체 모형이다. 평균을 낼 만큼 입자가 많아야 하면서, 관심 있는 거시 길이에 비해서는 부피요소가 작아야 한다. 충돌이 적은 플라즈마도 집단효과로 유체 기술이 가능할 수 있지만 등방 압력·국소평형이 자동으로 보장되는 것은 아니다.</p><p>Euler 기술은 고정 위치에서 값을 보고, Lagrange 기술은 움직이는 유체입자를 따라간다. 한 입자가 경험하는 변화율은 시간 변화와 공간을 이동하면서 생기는 변화의 합인 물질미분이다. 정상유동∂/∂t=0이어도 입자가 공간구배를 따라 이동하면 가속된다.</p><p>압력은 입자의 무작위 운동이 만드는 운동량 흐름이다. 벌크 속도v와 열운동을 나누지 않으면 운동에너지와 내부에너지를 중복 계산하게 된다. 이상기체의 평균분자량μ는 단순한 원자 질량뿐 아니라 이온화로 늘어난 자유 입자 수도 반영한다.</p><p>유선은 한 시각의 속도에 접하고, 입자경로는 한 입자의 시간 궤적이다. 정상유동에서 둘이 일치하지만 일반 비정상 유동에서는 다르다. 유체입자는 항상 같은 분자들의 딱딱한 작은 공이 아니라 연속체의 물질요소라는 점도 기억하자.</p>
+
+<div class="callout"><b class="head">강의·교재 강조점.</b> 목차 대응 · 본문 전수 대조 전 / 후속 강의·HW 강조점은 아직 미반영.</div>
+
+<div class="formula"><div class="ftitle">암기 — 유체의 개념·미분·열역학</div><p><b>물질미분</b></p>\[ {D\over Dt}={\partial\over\partial t}+\mathbf v\cdot\nabla \]<p class="note">고정 위치의 시간변화+입자가 공간구배를 지나는 효과. <i>조건: 연속체 속도장이 정의되어 있을 때</i></p><p><b>이상기체</b></p>\[ P={\rho kT\over\mu m_H},\quad e={P\over(\gamma-1)\rho},\quad h=e+{P\over\rho} \]<p class="note">e는단위질량당내부에너지, h는비엔탈피. <i>조건: 고정 조성·일정 비열비 γ; 이온화/분자자유도 변화는 별도</i></p><p><b>단열과 등온 음속</b></p>\[ c_s^2=\left({\partial P\over\partial\rho}\right)_s={\gamma P\over\rho},\quad c_T^2={P\over\rho} \]<p class="note">빠른 변화로 열교환이 없으면단열, 열이빠르게 조절되면등온. <i>조건: 이상기체, 각각 지정한 열역학 경로</i></p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u22-1"><div class="qq">정상유동이면 가속도0인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. v·∇v가 남는다. 좁아지는 관 속 유동처럼 속도가 공간적으로 변할 수 있다.</p></div></div>
+
+
+<div class="qz" data-q="u22-2"><div class="qq">완전 이온화 수소의μ는약1인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>전자와 양성자가 각각입자로압력에기여하므로전자질량을무시하면μ≈0.5이다.</p></div></div>
+
+
+<div class="qz" data-q="u22-3"><div class="qq">단열과등온을동시에쓸수있는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>일반적으로다르다. 열교환시간과동역학시간을비교해서닫힘관계를선택해야한다.</p></div></div>
+
+
+<p class="note">출처: 교재 p.287–293 · 상태: 교재 선행 · 목차 대응 · 본문 전수 대조 전</p>

@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<b>(a)</b> 입사파 \(E_0\cos(kz-\omega t)\hat x\)(\(+z\) 진행) → \(\mathbf B_I=\frac{E_0}{c}\cos(kz-\omega t)\hat y\).<br>
+반사파 \(-E_0\cos(kz+\omega t)\hat x\)(\(-z\) 진행) → \(\mathbf B_R=\frac1c(-\hat z)\times\left[-E_0\cos(kz+\omega t)\hat x\right]=\frac{E_0}{c}\cos(kz+\omega t)\hat y\).
+\[\boxed{\mathbf B=\frac{E_0}{c}\left[\cos(kz-\omega t)+\cos(kz+\omega t)\right]\hat y=\frac{2E_0}{c}\cos kz\cos\omega t\,\hat y}\]
+검산: \(z=0\)에서 \(\mathbf E=0\ \checkmark\)(완전도체 표면), \(\mathbf B\)는 최대.<br>
+<b>(b)</b> 경계조건 \(\mathbf B^{\parallel}_{\text{above}}-\mathbf B^{\parallel}_{\text{inside}}=\mu_0\mathbf K\times\hat n\), \(\hat n=-\hat z\)(도체→매질 1). \(\mathbf B(0^+)=0\), \(\mathbf B(0^-)=\frac{2E_0}{c}\cos\omega t\,\hat y\). \(\mathbf K=K\hat x\)로 놓으면 \(K\hat x\times(-\hat z)=K\hat y\):
+\[\boxed{\mathbf K=\frac{2E_0}{\mu_0 c}\cos(\omega t)\,\hat x}\]
+<b>(c)</b> 표면전류에 작용하는 단위면적당 힘은 <b>평균</b> 자기장을 써야 한다: \(\mathbf B_{\text{avg}}=\tfrac12[\mathbf B(0^-)+\mathbf B(0^+)]=\frac{E_0}{c}\cos\omega t\,\hat y\).
+\[\mathbf f=\mathbf K\times\mathbf B_{\text{avg}}=\frac{2E_0}{\mu_0c}\cos\omega t\cdot\frac{E_0}{c}\cos\omega t\,(\hat x\times\hat y) =\boxed{2\epsilon_0E_0^2\cos^2(\omega t)\,\hat z}\]
+\[\boxed{\langle f\rangle=\epsilon_0E_0^2}\]
+Eq. 9.65의 완전반사체 복사압은 \(2\times\tfrac12\epsilon_0E_0^2=\epsilon_0E_0^2\) — 정확히 일치 \(\checkmark\)<br>
+이 유도는 "장이 표면전류를 밀어낸다"는 명확한 자기력 그림을 주므로 Prob. 9.11의 난점(속도가 \(90^\circ\) 위상차)을 피해 간다.
+<div class="alabel">감점 포인트</div>
+표면전류에 걸리는 힘 계산에서 \(\mathbf B(0^-)\) 전체가 아니라 <b>평균</b> \(\tfrac12[\mathbf B_{\text{in}}+\mathbf B_{\text{out}}]\)을 써야 한다(자기 자신이 만든 장은 자기 자신을 밀지 못함). 이걸 놓치면 답이 2배가 된다.</div><!--/sol-->

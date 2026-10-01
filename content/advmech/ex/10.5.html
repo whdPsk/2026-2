@@ -1,0 +1,15 @@
+<div class="exq"><b>상황.</b> 북위 \(\lambda\)의 긴 진자(길이 \(l\)), 작은 진폭. Coriolis 힘이 진동면을 어떻게 회전시키는지 기술한다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>수평 두 성분의 결합 방정식 → \(q=x+iy\) 한 방정식 → 회전 행렬.</div>
+<ol>
+<li>\(\vb a_r=\vb g+\vb T/m-2\boldsymbol\omega\times\vb v_r\), \(\dot z\approx0\), \(T\approx mg\), \(T_x/m=-gx/l\), \(T_y/m=-gy/l\).</li>
+<li>\((\boldsymbol\omega\times\vb v)_x=-\dot y\,\omega\sin\lambda\), \((\boldsymbol\omega\times\vb v)_y=\dot x\,\omega\sin\lambda\).</li>
+<li>\(\ddot x+\alpha^2x=2\omega_z\dot y\), \(\ddot y+\alpha^2y=-2\omega_z\dot x\) (\(\alpha^2=g/l\), \(\omega_z=\omega\sin\lambda\)).</li>
+<li>\(q=x+iy\): \(\ddot q+2i\omega_z\dot q+\alpha^2q=0\). 특성근 \(p=-i\omega_z\pm i\sqrt{\alpha^2+\omega_z^2}\approx-i\omega_z\pm i\alpha\).</li>
+<li>\(q(t)=e^{-i\omega_zt}q'(t)\), \(q'\)는 회전 없는 진자의 해. 실수·허수부 → 회전 행렬(각 \(\omega_zt\)).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}\cos\omega_zt&\sin\omega_zt\\-\sin\omega_zt&\cos\omega_zt\end{pmatrix}\begin{pmatrix}x'\\y'\end{pmatrix},\qquad \omega_z=\omega\sin\lambda\ } \]
+<p class="note"><b>검산</b> ① \(\omega=0\)이면 보통 진자 ✓. ② 극에서 하루 한 바퀴, 적도에서 0 ✓. ③ 방향: \(x\)남·\(y\)동·\(z\)위에서 \(e^{-i\omega_zt}\)는 위에서 볼 때 시계방향 — 북반구 Foucault 진자의 관측 방향 ✓. ④ 역사: Viviani(1650경)가 느린 회전을 봤지만 해석하지 못함, Foucault(1851) 판테온 시연.</p></div>
+<div class="qz" data-q="ex10.5-a"><div class="qq"><b>+α</b> 초기조건 해석: 진자를 \(x=A\)(남쪽)로 당겼다가 회전계에서 정지 상태로 놓았다. \(t\)가 작을 때 \(y(t)\)를 \(\omega_z\)의 1차까지 구하고, 궤적이 직선이 아니라 가느다란 "장미꽃"(꼭짓점에서 뾰족)임을 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>0차: \(x\approx A\cos\alpha t\), \(\dot x=-A\alpha\sin\alpha t\). \(\ddot y+\alpha^2y=-2\omega_z\dot x=2\omega_zA\alpha\sin\alpha t\) — 공명 구동! 해(초기 \(y=\dot y=0\)): \(y=\omega_zA\left(\frac{\sin\alpha t}{\alpha}-t\cos\alpha t\right)\). 꼭짓점(\(\alpha t=n\pi\), \(\sin=0\))에서 \(y=\mp\omega_zAt\) — 진동면이 \(-\omega_zt\)만큼 돌아간 위치 ✓, 그리고 거기서 \(\dot y=0\) (정지 출발 조건이 매 꼭짓점에서 재현) → 뾰족한 꼭짓점. 중심을 지날 때 오른쪽으로 살짝 휘는 궤적.</p></div></div>
+<div class="qz" data-q="ex10.5-b"><div class="qq"><b>+α</b> 비교: 매단 점을 회전목마(각속도 \(\Omega\), 연직축) 위에 두고 진자를 흔들면 회전목마 위 관찰자는 진동면이 어떻게 돈다고 보는가? 원심력 효과는 무시할 수 있는 조건은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\lambda=90°\)와 같은 상황: 진동면은 관성 공간에 고정, 회전목마 관찰자는 \(-\Omega\)로 돈다고 본다. 원심력 \(\Omega^2\rho\)는 복원력 \(g\rho/l\)에 더해져 진동수를 \(\sqrt{\alpha^2-\Omega^2}\)로 바꾼다 — 무시하려면 \(\Omega\ll\alpha\). (지구에서는 원심 효과가 이미 유효 \(g\)에 흡수되어 있다.)</p></div></div>

@@ -1,0 +1,20 @@
+<div class="exq"><b>상황.</b> \(m_1\)이 정지한 \(m_2\)에 탄성 산란한다. (a) 운동량의 1/3을 잃은(\(m_1v_1=\tfrac23m_1u_1\)) 입자를 잡으려면 자기 분광기를 LAB 몇 도에 두어야 하는가? (b) 그것이 가능한 \(m_1/m_2\)의 범위는? (c) \(m_1/m_2=1\)일 때 각도는?</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(T_1/T_0=4/9\) → \(\cos\theta\) → \(\tan\psi\). 실수 조건이 질량비를 제한.</div>
+<ol>
+<li>\(v_1=\tfrac23u_1\) → \(T_1/T_0=4/9\). U6 유도 2:
+\[ \frac49=1-\frac{2m_1m_2}{(m_1+m_2)^2}(1-\cos\theta)\ \Rightarrow\ \cos\theta=1-y,\qquad y\equiv\frac{5(m_1+m_2)^2}{18m_1m_2}. \]</li>
+<li>\(\sin\theta=\sqrt{1-(1-y)^2}=\sqrt{2y-y^2}\). U5 유도 2:
+\[ \tan\psi=\frac{\sqrt{2y-y^2}}{1-y+m_1/m_2}. \]</li>
+<li><b>(b)</b> \(\tan\psi\)가 실수이려면 \(2y-y^2\ge0\iff y\le2\):
+\[ 5(m_1+m_2)^2\le36m_1m_2\ \iff\ 5x^2-26x+5\le0,\quad x=\frac{m_1}{m_2}\ \iff\ \frac15\le x\le5 . \]</li>
+<li><b>(c)</b> \(x=1\): \(y=\frac{5\cdot4}{18}=\frac{10}{9}\), \(\cos\theta=-\frac19\), \(\sin\theta=\frac{\sqrt{80}}{9}\). \(\tan\psi=\dfrac{\sqrt{80}/9}{-1/9+1}=\dfrac{\sqrt{80}}{8}=1.118\) → \(\psi\approx48.2°\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \frac15\le\frac{m_1}{m_2}\le5,\qquad m_1=m_2:\ \psi=\cos^{-1}\tfrac23\approx48°\ } \]
+<p class="note"><b>검산</b> ① 등질량 지름길: \(T_1/T_0=\cos^2\psi=4/9\) → \(\cos\psi=2/3\) → \(48.19°\) ✓. ② 범위의 의미: 최대 손실 \(4x/(1+x)^2\)이 \(1-4/9=5/9\) 이상이어야 함 → \(4x/(1+x)^2\ge5/9\iff5x^2-26x+5\le0\) ✓ (같은 부등식). ③ 경계 \(x=5\) 또는 \(1/5\)에서는 \(\theta=\pi\) (정면 되튐)만 가능.</p></div>
+<div class="qz" data-q="ex9.8-a"><div class="qq"><b>+α</b> 숫자 바꾸기: 운동량의 절반을 잃는(\(v_1=u_1/2\)) 경우 가능한 \(m_1/m_2\) 범위와, \(m_1=m_2\)일 때의 \(\psi\)를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(T_1/T_0=1/4\), 필요 손실 \(3/4\le4x/(1+x)^2\iff3x^2-10x+3\le0\iff\frac13\le x\le3\).</p>
+<p>\(x=1\): \(\cos^2\psi=1/4\) → \(\psi=60°\).</p></div></div>
+<div class="qz" data-q="ex9.8-b"><div class="qq"><b>+α</b> 이중값: \(m_1/m_2=2\)일 때 운동량의 1/3을 잃는 산란의 LAB 각을 구하라. 같은 각에 다른 에너지의 산란 입자도 들어오는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(y=\frac{5\cdot9m_2^2}{18\cdot2m_2^2}=\frac54\), \(\cos\theta=-\frac14\), \(\sin\theta=\frac{\sqrt{15}}{4}\). \(\tan\psi=\dfrac{\sqrt{15}/4}{-1/4+2}=\dfrac{\sqrt{15}}{7}\approx0.553\) → \(\psi\approx29.0°\) (\(\psi_{\max}=30°\) 바로 아래).</p>
+<p>\(m_1&gt;m_2\)이므로 같은 \(\psi\)에 두 해(전방/후방)가 있다: \(\dfrac{T_1}{T_0}=\dfrac49\left[\cos\psi\pm\sqrt{\tfrac14-\sin^2\psi}\right]^2\). \(\psi=29.0°\): \(\cos\psi=0.8746\), \(\sqrt{0.25-0.2350}=0.1225\) → \(+\): \(\frac49(0.997)^2=0.442\approx4/9\) ✓, \(-\): \(\frac49(0.752)^2=0.251\). 분광기는 운동량(에너지)으로 둘을 구별한다.</p></div></div>

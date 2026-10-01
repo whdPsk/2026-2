@@ -1,0 +1,19 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>Maxwell 응력 텐서로 힘을 구하는 대표 예제.</b> 회전 대전 구껍질:
+\(\vb{B}_{\rm in}=\tfrac{2}{3}\muz\sigma\omega R\,\hat{\vb{z}}\) (균일), 밖은 \(m=\tfrac{4}{3}\pi\sigma\omega R^{4}\) 인 쌍극자.</p>
+<p>북반구를 감싸는 폐곡면 = 적도면 원판(무한대까지) + 무한 반구.
+무한 반구에서 \(B\sim r^{-3}\Rightarrow T\sim r^{-6}\), 면적 \(\sim r^{2}\) 이므로 기여 0.</p>
+<p>적도면에서는 대칭에 의해 \(\vb{B}\parallel\hat{\vb{z}}\) 이므로
+\[T_{zz}=\frac{1}{\muz}\Big(B_z^{2}-\tfrac12 B^{2}\Big)=\frac{B^{2}}{2\muz}.\]
+북반구 부피의 바깥 법선은 \(-\hat{\vb{z}}\) 이므로
+\[F_z=-\int \frac{B^{2}}{2\muz}\,da .\]</p>
+<p>안쪽 \((s&lt;R)\): \(B=\tfrac23\muz\sigma\omega R\),
+\[\int_0^R\frac{B^{2}}{2\muz}2\pi s\,ds=\frac{2\pi}{9}\muz\sigma^{2}\omega^{2}R^{4}.\]
+바깥 \((s&gt;R)\): 적도에서 \(B=\muz m/4\pi s^{3}\),
+\[\int_R^\infty\frac{B^{2}}{2\muz}2\pi s\,ds=\frac{\muz m^{2}}{64\pi R^{4}}=\frac{\pi}{36}\muz\sigma^{2}\omega^{2}R^{4}.\]
+합: \(\big(\tfrac{2\pi}{9}+\tfrac{\pi}{36}\big)=\tfrac{\pi}{4}\).</p>
+<p>\[\boxed{\;F=\frac{\pi}{4}\muz\sigma^{2}\omega^{2}R^{4}\;(\text{인력, }-\hat{\vb{z}})\;}\]
+Prob. 5.47의 답과 일치.</p>
+<div class="alabel">감점 포인트</div>
+적도면 적분을 \(s&lt;R\)까지만 하고 바깥 쌍극자 영역(전체의 \(1/9\))을 빼먹는 것.</div><!--/sol-->

@@ -1,0 +1,69 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 높은 탑에서 공을 떨어뜨리면 지구가 도는 동안 공은 탑 바로 아래보다 동쪽에 떨어질까, 서쪽에 떨어질까? (탑 꼭대기와 바닥 중 어느 쪽이 더 빨리 동쪽으로 움직이고 있는지 생각해 보라.) 그리고 추를 늘어뜨린 연직선은 정확히 지구 중심을 가리킬까? 적도와 극에서는?</div>
+
+<h4>10.4 지구에 대한 운동 <span class="en">motion relative to the Earth</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>지구 표면계의 운동방정식과 유효 중력 \(\vb g\) — 교재 식 (10.30)–(10.34)</div>
+<ol>
+<li>관성계 원점을 지구 중심, 회전계 원점을 지표면 한 점(지구 중심에서 \(\vb R\))에 둔다. 실제 힘 \(\vb F=\vb S+m\vb g_0\) (\(\vb S\): 중력 외의 힘, \(\vb g_0=-GM_E\uv e_R/R^2\)).</li>
+<li>\(\omega=7.3\times10^{-5}\) rad/s는 사실상 일정 → \(\dot{\boldsymbol\omega}\times\vb r\) 항 무시. 원점은 지구와 함께 돌므로 \(\ddot{\vb R}_f=\boldsymbol\omega\times(\boldsymbol\omega\times\vb R)\).</li>
+<li>U12의 유효 운동방정식:
+\[ \vb F_{\rm eff}=\vb S+m\vb g_0-m\boldsymbol\omega\times[\boldsymbol\omega\times(\vb R+\vb r)]-2m\boldsymbol\omega\times\vb v_r . \]</li>
+<li>중력과 원심항을 묶어 우리가 실제로 재는 <b>유효 중력</b>으로 정의:
+\[ \vb g\equiv\vb g_0-\boldsymbol\omega\times[\boldsymbol\omega\times(\vb R+\vb r)]\approx\vb g_0-\boldsymbol\omega\times(\boldsymbol\omega\times\vb R)\quad(r\ll R). \]</li>
+<li>따라서 지표 근처의 기본식:
+\[ \boxed{\ \vb F_{\rm eff}=\vb S+m\vb g-2m\boldsymbol\omega\times\vb v_r\ } \]
+진자 주기가 \(|\vb g|\)를, 연직선(다림추)이 \(\vb g\)의 방향을 정한다. 잔잔한 바다 표면은 \(\vb g_0\)가 아니라 \(\vb g\)에 수직.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>연직선의 기울기 (Problem 10-12)</div>
+<ol>
+<li>원심 가속도 크기 \(\omega^2R\cos\lambda\) (\(\lambda\): 위도), 방향은 자전축에서 바깥(수평면에서 적도 쪽 성분 \(\omega^2R\cos\lambda\sin\lambda\), 연직 위 성분 \(\omega^2R\cos^2\lambda\)).</li>
+<li>연직선이 참연직(지구 중심 방향)에서 기운 작은 각:
+\[ \varepsilon\approx\frac{\omega^2R\sin\lambda\cos\lambda}{g_0-\omega^2R\cos^2\lambda}. \]
+분모 전체가 곧 유효 \(g\). 최대는 \(\lambda=45°\): \(\varepsilon_{\max}\approx\frac{\omega^2R}{2g}\approx\frac{0.034}{19.6}\approx1.7\times10^{-3}\) rad \(\approx6'\) (약 0.1°).</li>
+<li>\(\omega^2R=0.034\ \mathrm{m/s^2}\) — \(g\)의 0.35%. 지구가 적도에서 21 km 부푼 것, 극과 적도의 \(g\) 차 0.052 m/s²도 이 원심력의 결과.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>낙하체의 동쪽 편향 \(d=\tfrac13\omega g t^3\cos\lambda\) — Example 10.3 <b>(필수)</b></div>
+<ol>
+<li><b>좌표</b>(교재 그림 10-9): \(\uv e_z\) 연직 위(\(-\vb g\) 방향), \(\uv e_x\) 남쪽, \(\uv e_y\) 동쪽. 북반구 위도 \(\lambda\)에서
+\[ \omega_x=-\omega\cos\lambda,\quad\omega_y=0,\quad\omega_z=\omega\sin\lambda . \]
+(\(\boldsymbol\omega\)는 북쪽·위쪽 사이를 가리킨다.)</li>
+<li><b>0차 근사</b>: 수평 속도 무시, \(\dot z=-gt\).
+\[ \boldsymbol\omega\times\vb v_r=\begin{vmatrix}\uv e_x&\uv e_y&\uv e_z\\-\omega\cos\lambda&0&\omega\sin\lambda\\0&0&-gt\end{vmatrix}=-(\omega gt\cos\lambda)\,\uv e_y . \]</li>
+<li>\(\vb a_r=\vb g-2\boldsymbol\omega\times\vb v_r\) → \(\ddot y=2\omega gt\cos\lambda\) (<b>동쪽</b>), \(\ddot x=0\), \(\ddot z=-g\). (\(\omega^2\) 항은 무시.)</li>
+<li>두 번 적분: \(y(t)=\tfrac13\omega gt^3\cos\lambda\). 낙하 시간 \(t=\sqrt{2h/g}\):
+\[ \boxed{\ d=\frac13\,\omega\cos\lambda\sqrt{\frac{8h^3}{g}}\ } \]
+100 m, 45° → 약 1.55 cm (공기저항 무시).</li>
+<li><b>물리적 그림 (Example 10.4)</b>: 탑 꼭대기는 바닥보다 축에서 \(h\cos\lambda\)만큼 멀어 동쪽 속도가 \(\omega h\cos\lambda\)만큼 더 빠르다. 공은 그 여분의 동쪽 속도(각운동량 보존)를 가지고 떨어진다. 관성계에서 중심력 궤도(거의 연직인 타원)로 풀어도 같은 답 — 교재가 "Coriolis 방법의 힘"을 보여주려 일부러 계산한 것.</li>
+<li>남쪽 편향은 \(\omega^2\) 차수: \(\frac{4h^2\omega^2}{g}\sin\lambda\cos\lambda\) (Problem 10-13) — 동쪽 편향보다 수백만 배 작다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>수평 운동의 편향 — 북반구는 오른쪽</div>
+<ol>
+<li>수평 속도 \(\vb v_r\)에 대해 Coriolis 힘의 <b>수평</b> 성분은 \(\boldsymbol\omega\)의 <b>연직</b> 성분 \(\omega_z=\omega\sin\lambda\)만 기여: 크기 \(2m\omega\sin\lambda\,v_r\), 방향 = 진행 방향의 오른쪽(북반구), 왼쪽(남반구). 적도에서 0, 극에서 최대.</li>
+<li>\(\boldsymbol\omega\)의 수평 성분(\(\omega\cos\lambda\), 북쪽)은 연직 방향 힘을 만든다 — 동쪽으로 가는 물체는 가벼워지고(Eötvös 효과), 서쪽은 무거워진다.</li>
+<li>응용: 저기압 둘레의 반시계 회전(북반구), 무역풍(북반구 북동풍), 강의 오른쪽 둑 침식. 욕조 배수의 회전 방향은 Coriolis보다 잔여 각운동량이 지배한다(교재: 과장된 이야기).</li>
+<li>1차 대전 포클랜드 해전(50°S): 50°N 기준으로 보정된 조준기 → 편향이 반대라 포탄이 목표에서 편향의 2배만큼 왼쪽에 떨어짐(교재 각주).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 지표 근처</div>
+\[ m\vb a_r=\vb S+m\vb g-2m\boldsymbol\omega\times\vb v_r,\qquad \vb g=\vb g_0-\boldsymbol\omega\times(\boldsymbol\omega\times\vb R) \]
+\[ (\uv x,\uv y,\uv z)=(\text{남},\text{동},\text{위}):\ \boldsymbol\omega=(-\omega\cos\lambda,0,\omega\sin\lambda),\qquad d_{\rm east}=\tfrac13\omega\cos\lambda\sqrt{8h^3/g} \]
+<p class="note">수평 Coriolis \(2m\omega\sin\lambda\,v\) — 북반구 오른쪽. 연직선 기울기 최대 ≈ 0.1° (λ=45°).</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u13-1"><div class="qq">(시험형) 높이 \(h\)에서 정지 상태로 떨어뜨린 입자의 동쪽 편향을 Coriolis 힘으로 유도하라. 좌표계와 \(\boldsymbol\omega\) 성분부터 명시할 것.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 3의 1–4단계. 흔한 실수: \(\boldsymbol\omega\)의 \(x\) 성분 부호(남쪽이 \(+x\)이므로 북쪽을 향하는 \(\boldsymbol\omega\)의 수평 성분은 \(-\omega\cos\lambda\)).</p></div></div>
+
+<div class="qz" data-q="u13-2"><div class="qq">위도 \(\lambda\)에서 입자를 연직 위로 쏘아 높이 \(h\)까지 올라갔다 떨어지게 했다. 발사점에서 얼마나, 어느 쪽에 떨어지는가? (Problem 10-8)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(v_z=v_0-gt\), \(v_0=\sqrt{2gh}\). \(\ddot y=-2(\boldsymbol\omega\times\vb v)_y=-2\omega\cos\lambda\,v_z\)... 정확히: \((\boldsymbol\omega\times\vb v)_y=\omega_zv_x-\omega_xv_z=\omega\cos\lambda\,v_z\), 따라서 \(\ddot y=-2\omega\cos\lambda(v_0-gt)\).</p>
+<p>\(y(t)=-\omega\cos\lambda\left(v_0t^2-\tfrac13gt^3\right)\). 비행시간 \(T=2v_0/g\): \(y(T)=-\omega\cos\lambda\cdot\frac{4v_0^3}{3g^2}=-\frac43\omega\cos\lambda\sqrt{\frac{8h^3}{g}}\).</p>
+<p><b>서쪽</b>으로 \(\frac43\omega\cos\lambda\sqrt{8h^3/g}\) — 떨어뜨리기만 한 경우의 <b>4배</b>, 방향 반대. (올라갈 때 서쪽으로 휘고 내려올 때 동쪽 가속을 받지만 이미 생긴 서쪽 속도를 다 없애지 못함.)</p></div></div>
+
+<div class="qz" data-q="u13-3"><div class="qq">질량 1300 kg 자동차가 북위 65°(Fairbanks)에서 북쪽으로 100 km/h로 달린다. Coriolis 힘의 수평 성분 크기와 방향은? (Problem 10-19)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(F=2m\omega\sin\lambda\,v=2(1300)(7.29\times10^{-5})(0.906)(27.8)\approx4.8\) N, <b>동쪽</b>(북쪽으로 갈 때 오른쪽). 무게의 약 \(4\times10^{-4}\) — 느낄 수 없지만 수백 km를 흐르는 공기·해류에는 결정적.</p></div></div>
+
+<div class="qz" data-q="u13-4"><div class="qq">(개념) 적도에서 동쪽으로 수평으로 쏜 포탄은 Coriolis 힘을 받는가? 받는다면 어느 방향인가? 북쪽으로 쏜 경우는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>적도: \(\boldsymbol\omega\)는 수평(북쪽). 동쪽 속도: \(\boldsymbol\omega\times\vb v=\omega v(\uv N\times\uv E)=-\omega v\,\uv{up}\) → Coriolis \(-2m\boldsymbol\omega\times\vb v\)는 <b>위쪽</b> (Eötvös: 동쪽으로 가면 가벼워짐). 수평 편향 없음.</p>
+<p>북쪽 속도: \(\vb v\parallel\boldsymbol\omega\) → Coriolis 0.</p></div></div>

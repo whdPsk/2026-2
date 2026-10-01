@@ -1,0 +1,14 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>핵심:</b> Minkowski 힘은 <b>고유시간</b>에 대한 미분이다. \(K^{1}=\dd p^{1}/\dd\tau=K\)(상수)이므로</p>
+\[ p=K\tau\quad(\tau=0\text{에서 정지}). \]
+<p>이제 모든 것을 \(\tau\)의 함수로 얻는다:</p>
+\[ \gamma=\sqrt{1+\frac{p^{2}}{m^{2}c^{2}}}=\sqrt{1+\frac{K^{2}\tau^{2}}{m^{2}c^{2}}},\qquad \frac{\dd x}{\dd\tau}=\gamma u=\frac{p}{m}=\frac{K\tau}{m},\qquad \frac{\dd t}{\dd\tau}=\gamma. \]
+<p>위치는 놀랍도록 간단하다(고유시간으로 보면 "고전적"):</p>
+\[ x=\frac{K\tau^{2}}{2m}\quad\Longrightarrow\quad z\equiv\frac{K\tau}{mc}=\sqrt{\frac{2Kx}{mc^{2}}}. \]
+<p>시간은</p>
+\[ t=\int_0^{\tau}\!\sqrt{1+\frac{K^{2}\tau'^{2}}{m^{2}c^{2}}}\,\dd\tau'=\frac{mc}{K}\int_0^{z}\!\sqrt{1+z'^{2}}\,\dd z'=\frac{mc}{2K}\Big[z\sqrt{1+z^{2}}+\ln\big(z+\sqrt{1+z^{2}}\big)\Big]. \]
+\[ \boxed{\ \frac{2Kt}{mc}=z\sqrt{1+z^{2}}+\ln\big(z+\sqrt{1+z^{2}}\big),\qquad z\equiv\sqrt{\frac{2Kx}{mc^{2}}}\ } \]
+<p><b>극한:</b> \(z\ll1\)이면 \(2Kt/mc\approx2z\) → \(x\approx Kt^{2}/(2m)\)(고전 포물선). \(z\gg1\)이면 \(2Kt/mc\approx z^{2}=2Kx/mc^{2}\) → \(x\approx ct\)(광속 접근). 일정한 <b>보통</b> 힘(Ex. 12.10)과 달리 여기선 고유가속도가 아니라 \(\dd p/\dd\tau\)가 일정하다는 점이 차이다.</p>
+<div class="alabel">감점 포인트</div>
+\(K\)를 보통 힘으로 착각해 \(p=Kt\)로 쓰는 것 — 이 문제의 전부는 \(\dd/\dd\tau\)와 \(\dd/\dd t\)의 구별이다.</div><!--/sol-->

@@ -1,0 +1,45 @@
+<div class="exq"><b>상황.</b> 전하 \(Q\)인 입자가 균일 자기장 \(B\) 속에서 반지름 \(R\)의 원운동을 한다. 자기력 \(F=QuB\)가 구심력 역할을 한다. 상대론적으로 운동량 \(p\)와 \(B,R\)의 관계를 구하라. 주의할 점은 상대론에서 구심력이 고전 공식 \(mu^2/R\)로 주어지지 않는다는 것이다 — 왜 그런지, 그리고 대신 무엇이 오는지가 핵심이다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>등속 원운동에서는 \(|\vb p|\)가 일정하고 <b>방향만</b> 돌아간다 → \(|d\vb p|=p\,d\theta\).</div>
+<ol>
+<li><b>운동량 벡터의 변화율을 기하로 읽는다.</b> 원운동이므로 속력 \(u\)와 \(\gamma\)가 일정하고 따라서 \(p=\gamma mu\)의 크기도 일정하다. 시간 \(dt\) 동안 방향이 \(d\theta\)만큼 돌면 운동량 벡터 삼각형에서
+\[ |d\vb p|=p\,d\theta. \]</li>
+<li><b>뉴턴 법칙을 적용한다.</b> \(\vb F=d\vb p/dt\)는 상대론에서도 유효하므로
+\[ F=\frac{|d\vb p|}{dt}=p\frac{d\theta}{dt}=p\,\omega=\frac{p\,u}{R}\qquad(u=\omega R). \]
+고전적으로는 \(p=mu\)라 \(F=mu^2/R\)이 되지만, 상대론에서는 \(p=\gamma mu\)이므로 \(F=\gamma mu^2/R\)이다.</li>
+<li><b>자기력과 같다고 놓는다.</b>
+\[ QuB=\frac{pu}{R}. \]
+양변에서 \(u\)가 소거된다 — 이것이 결과가 이토록 단순한 이유다.</li>
+<li>따라서 \(p=QBR\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ p=\gamma m u=QBR\qquad\Longleftrightarrow\qquad R=\frac{p}{QB}\ } \]
+<p class="note">형태는 비상대론 공식(Eq. 5.3)과 <b>완전히 동일</b>하다. 유일한 차이는 \(p\)가 상대론적 운동량 \(\gamma mu\)라는 것뿐이다. 그래서 입자 검출기에서 궤적의 곡률반지름을 재면 곧바로 운동량을 얻는다 — 속도나 질량을 몰라도 된다. 실무 공식: \(p[\mathrm{GeV}/c]=0.3\,B[\mathrm T]\,R[\mathrm m]\) (단위 전하). <b>검산</b>: (i) \(u\ll c\)이면 \(\gamma\to1\)이라 \(mu=QBR\), 즉 \(R=mu/QB\) — 익숙한 고전 결과 ✓. (ii) 차원: \(QBR=\mathrm{C\cdot T\cdot m}=\mathrm{C}\cdot\dfrac{\mathrm{kg}}{\mathrm{C\cdot s}}\cdot\mathrm m=\mathrm{kg\,m/s}\) ✓ 운동량. (iii) \(B\)가 세거나 \(R\)이 크면 \(p\)가 크다 — 물리적 직관과 일치 ✓.</p></div>
+<div class="qz" data-q="ex12.11-a"><div class="qq"><b>+α</b> 사이클로트론 각진동수 \(\omega\)를 구하라. 왜 고전적 사이클로트론은 고에너지에서 작동하지 않으며, 싱크로사이클로트론/싱크로트론은 무엇을 바꾸는가?</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p>\(u=\omega R\)와 \(p=\gamma mu=QBR\)을 결합한다:</p>
+\[ \gamma m(\omega R)=QBR\ \Longrightarrow\ \boxed{\ \omega=\frac{QB}{\gamma m}=\frac{QBc^2}{E}\ } \]
+<p>(마지막 등식은 \(E=\gamma mc^2\).) 주기는 \(T=2\pi\gamma m/(QB)\).</p>
+<p><b>왜 고전 사이클로트론이 실패하는가.</b> 고전적으로 \(\omega_0=QB/m\)은 <b>속도에 무관</b>하다 — 이것이 사이클로트론의 원리로, 고정 주파수의 RF 전압으로 계속 가속할 수 있다. 그러나 상대론적으로는 에너지가 커질수록 \(\gamma\)가 커져 \(\omega\)가 <b>감소</b>한다. 입자가 점점 늦게 도착하므로 RF와 위상이 어긋나고(phase slip), 결국 가속되지 않고 감속되기 시작한다. 이것이 고전 사이클로트론의 에너지 한계(양성자 기준 ~20 MeV)다.</p>
+<p><b>해결책 두 가지.</b></p>
+<ul>
+<li><b>싱크로사이클로트론</b>: \(B\)는 고정하고 RF 주파수를 \(\omega(t)=QB/\gamma(t)m\)에 맞춰 <em>내린다</em>. \(R\)은 계속 커진다.</li>
+<li><b>싱크로트론</b>: \(R\)을 고정(링 형태)하고 \(B\)를 \(p\)에 비례해 <em>올린다</em>(\(B=p/QR\)). 동시에 RF 주파수도 맞춘다. LHC 등 현대 가속기가 이 방식이다.</li>
+</ul>
+<p><b>검산</b>: (i) \(\gamma\to1\)이면 \(\omega\to QB/m\) — 고전 사이클로트론 진동수 회복 ✓. (ii) 초상대론적 극한 \(E\gg mc^2\)에서 \(\omega\to QBc^2/E\to QBc/p\)이고 \(u\to c\)이므로 \(R=u/\omega\to p/QB\) ✓ 자기일관적. (iii) 차원: \(QB/m=\dfrac{\mathrm{C\cdot kg/(C\,s)}}{\mathrm{kg}}=\mathrm{s^{-1}}\) ✓.</p></div></div>
+<div class="qz" data-q="ex12.11-b"><div class="qq"><b>+α</b> (역방향, 수치) \(B=1.5\) T인 싱크로트론에서 양성자(\(mc^2=938\) MeV)가 반지름 \(R=10\) m 궤도를 돈다. 이 양성자의 운동량, 총 에너지, \(\gamma\), 속력을 구하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>운동량.</b></p>
+\[ p=QBR=(1.602\times10^{-19})(1.5)(10)=2.40\times10^{-18}\ \mathrm{kg\,m/s}. \]
+<p>에너지 단위로 바꾸면(\(pc\)를 eV로):</p>
+\[ pc=(2.40\times10^{-18})(3\times10^{8})=7.21\times10^{-10}\ \mathrm{J}=\frac{7.21\times10^{-10}}{1.602\times10^{-19}}\ \mathrm{eV}=4.50\times10^{9}\ \mathrm{eV}, \]
+\[ \boxed{\ pc=4.50\ \mathrm{GeV}\ } \]
+<p>(실무 공식 \(pc[\mathrm{GeV}]=0.3BR=0.3\times1.5\times10=4.5\) ✓ 일치.)</p>
+<p><b>총 에너지.</b> \(E=\sqrt{(pc)^2+(mc^2)^2}\):</p>
+\[ E=\sqrt{4.50^2+0.938^2}=\sqrt{20.25+0.880}=\sqrt{21.13}=\boxed{4.60\ \mathrm{GeV}} \]
+<p><b>\(\gamma\)와 속력.</b></p>
+\[ \gamma=\frac{E}{mc^2}=\frac{4.60}{0.938}=4.90,\qquad \beta=\frac{pc}{E}=\frac{4.50}{4.60}=0.978, \]
+\[ \boxed{\ \gamma=4.90,\quad u=0.978c\ } \]
+<p>운동에너지는 \(E-mc^2=4.60-0.94=3.66\) GeV.</p>
+<p><b>검산</b>: (i) \(\beta=\sqrt{1-1/\gamma^2}=\sqrt{1-1/24.0}=\sqrt{0.958}=0.979\) ✓ 위와 일치. (ii) 비상대론적으로 계산했다면 \(u=p/m=2.40\times10^{-18}/1.67\times10^{-27}=1.44\times10^{9}\,\mathrm{m/s}=4.8c\) — 광속을 넘는 말도 안 되는 답이 나온다. 상대론적 처리가 필수임을 보여준다 ✓. (iii) 사이클로트론 진동수는 \(\omega=QB/\gamma m=(1.602\times10^{-19})(1.5)/(4.90\times1.67\times10^{-27})=2.94\times10^{7}\ \mathrm{s^{-1}}\), 즉 \(f=4.7\) MHz. 검산: \(u/R=0.978\times3\times10^8/10=2.93\times10^{7}\ \mathrm{s^{-1}}\) ✓.</p></div></div>

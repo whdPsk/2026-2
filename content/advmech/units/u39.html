@@ -1,0 +1,45 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 기차(속도 \(v\)) 안에서 앞쪽으로 공을 속도 \(u'\)로 던지면, 지면에서 본 속도는 \(u'+v\)이다 — 너무 당연하다. 그런데 공 대신 빛을 쏘면? 지면에서 \(c+v\)로 보인다면 Maxwell 방정식은 "기차 안"과 "지면"에서 모양이 달라야 한다. 어느 쪽을 버려야 할까: 속도 합의 규칙, 아니면 "물리 법칙은 모든 관성계에서 같다"?</div>
+
+<h4>14.1 두 가정 <span class="en">the two postulates</span></h4>
+
+<div class="callout"><b class="head">Einstein의 두 가정 (요지).</b>
+<ol>
+<li><b>상대성 원리</b>: 모든 관성계에서 물리 법칙은 같은 꼴이다. 관성계 사이의 <i>상대</i> 운동만 측정 가능하고 "절대 정지"는 의미가 없다.</li>
+<li><b>광속 불변</b>: 진공 중 광속은 광원·관측자의 상대 운동과 무관한 보편 상수 \(c\)이다.</li>
+</ol>
+Maxwell 방정식이 기본 법칙이라고 받아들이면 가정 II는 가정 I에서 따라 나온다(Maxwell 방정식이 진공 중 파동 속도 \(c=1/\sqrt{\mu_0\epsilon_0}\)를 주므로). 이 장은 <b>특수</b> 상대론 — 서로 등속으로 움직이는 관성계만 — 을 다룬다. 가속계는 일반 상대론의 몫.</div>
+
+<p class="note">역사 메모: 변환식 자체는 Voigt(1887)·Larmor(1900)·Lorentz(1904)·Poincaré가 먼저 얻었다. Einstein(1905)의 기여는 여러 임시 가정을 <b>두 가정</b>으로 대체해 모든 결과를 연역한 것. 그의 1921년 노벨상은 광전 효과로 받았다.</p>
+
+<h4>14.2 Galilei 불변성 <span class="en">Galilean invariance</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>Galilei 변환과 Newton 법칙의 공변성 — 교재 식 (14.1)–(14.3)</div>
+<ol>
+<li>\(K'\)이 \(K\)에 대해 \(x_1\) 방향으로 속도 \(v\)로 움직이고 \(t=0\)에 두 원점이 겹친다:
+\[ x_1'=x_1-vt,\quad x_2'=x_2,\quad x_3'=x_3,\quad t'=t . \]</li>
+<li>길이 요소는 같다: \(\dd s^2=\sum\dd x_j^2=\sum\dd x_j'^2\) (같은 \(t\)에서 잰 거리).</li>
+<li>두 번 미분하면 \(\ddot x_j'=\ddot x_j\) (\(v\) 일정). 힘이 위치 차이에만 의존하면 \(F_j'=F_j\) → \(F_j=m\ddot x_j\iff F_j'=m\ddot x_j'\). 법칙의 <b>꼴</b>이 같다.</li>
+<li>용어: 각 항(\(\vb x\), \(\dot{\vb x}\))은 변하지만 같은 규칙으로 함께 변해서 식이 유지되는 것을 <b>공변(covariant)</b>, 값 자체가 변하지 않는 것(\(\ddot{\vb x}\), \(\dd s\))을 <b>불변(invariant)</b>이라 한다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>Galilei 변환은 가정 II와 모순 <b>(필수)</b></div>
+<ol>
+<li>속도 변환: \(\dot x_1'=\dot x_1-v\). \(K'\)에서 빛이 \(+x_1'\) 방향으로 \(c\)로 가면 \(K\)에서는 \(c+v\) — 가정 II 위반.</li>
+<li>더 근본적으로 <b>파동방정식</b>이 불변이 아니다. 연쇄법칙: \(\pd{}{x}=\pd{}{x'}\), \(\pd{}{t}=\pd{}{t'}-v\pd{}{x'}\). 그러면
+\[ \pd{^2\Psi}{x^2}-\frac1{c^2}\pd{^2\Psi}{t^2}
+=\left(1-\frac{v^2}{c^2}\right)\pd{^2\Psi}{x'^2}+\frac{2v}{c^2}\frac{\partial^2\Psi}{\partial x'\partial t'}-\frac1{c^2}\pd{^2\Psi}{t'^2} . \]
+교차항과 계수 변화 → \(K'\)에서는 다른 방정식. 광원이 정지한 "매질계"가 특별해진다(에테르).</li>
+<li>Michelson–Morley 실험(1881–1887) 등은 그런 특별한 계를 찾지 못했다. → 가정을 유지하고 <b>Galilei 변환을 버린다</b>. Galilei 변환은 \(v\ll c\) 극한의 근사로 살아남는다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — Galilei</div>
+\[ x'=x-vt,\quad t'=t,\qquad u'=u-v,\qquad \ddot x'=\ddot x \]
+<p class="note">Newton 역학은 공변, Maxwell/파동방정식은 공변이 아니다 → 새 변환(U40) 필요.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u39-1"><div class="qq">Galilei 변환에서 불변인 양 세 가지와 불변이 아닌 양 두 가지를 들어라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>불변: 가속도 \(\ddot{\vb x}\), 동시각 거리 \(\dd s\), 시간 간격 \(\dd t\) (그리고 질량, 두 입자 사이 힘). 불변 아님: 위치 \(\vb x\), 속도 \(\dot{\vb x}\), 운동에너지·운동량(값이 계마다 다름 — 다만 보존 법칙의 꼴은 유지).</p></div></div>
+
+<div class="qz" data-q="u39-2"><div class="qq">(시험형) \(\Psi(x,t)\)가 \(\partial_x^2\Psi=c^{-2}\partial_t^2\Psi\)를 만족할 때, Galilei 변환으로 바꾼 식이 원래 꼴이 아님을 보여라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 2의 연쇄법칙: \(\partial_t=\partial_{t'}-v\partial_{x'}\)이므로 \(\partial_t^2=\partial_{t'}^2-2v\partial_{x'}\partial_{t'}+v^2\partial_{x'}^2\). 대입하면 \((1-v^2/c^2)\partial_{x'}^2\Psi+\frac{2v}{c^2}\partial_{x'}\partial_{t'}\Psi-\frac1{c^2}\partial_{t'}^2\Psi=0\) — 교차항이 남는다. (Lorentz 변환에서는 이 항들이 정확히 상쇄된다: 문제 14-3.)</p></div></div>
+
+<div class="qz" data-q="u39-3"><div class="qq">소리의 Doppler 효과는 "음원이 움직일 때"와 "관측자가 움직일 때" 공식이 다르다. 이것은 상대성 원리 위반인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 소리에는 <b>매질(공기)</b>이라는 물리적으로 특별한 계가 있어서, 음원/관측자의 운동은 매질에 대한 운동으로 구별된다. 빛에는 매질이 없으므로 상대 속도만 의미가 있고, 상대론적 Doppler 공식은 하나다(U41).</p></div></div>

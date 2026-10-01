@@ -1,0 +1,14 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>\(\alpha=90^\circ\) 쌍대변환: \(\mathbf E'=c\mathbf B\), \(\mathbf B'=-\mathbf E/c\), \(q_m'=-c\,q_e\) (즉 전기전하 \(q\)의 쌍대는 \(q_m=-cq\), 뒤집어 \(q=-q_m/c\)).</p>
+<p>점전하의 장 (Eqs. 11.62–11.63)에 \(q\to-q_m/c\)를 넣고 변환하면</p>
+\[ \boxed{\;\mathbf B(\mathbf r,t)=\frac{\mu_0q_m}{4\pi}\frac{\mathcal R}{(\boldsymbol{\mathcal R}\cdot\mathbf u)^3}\Big[(c^2-v^2)\mathbf u+\boldsymbol{\mathcal R}\times(\mathbf u\times\mathbf a)\Big],\qquad
+\mathbf E=-c\,\hat{\boldsymbol{\mathcal R}}\times\mathbf B\;} \]
+<p>(\(\mathbf u=c\hat{\boldsymbol{\mathcal R}}-\mathbf v\)). 정지·등속 극한에서 \(\mathbf B=\frac{\mu_0q_m}{4\pi}\frac{\hat{\mathbf r}}{r^2}\) — 자기 Coulomb 법칙 ✓.</p>
+<p>Poynting 벡터는 쌍대변환에 대해 불변이다:</p>
+\[ \frac1{\mu_0}\mathbf E'\times\mathbf B'=\frac1{\mu_0}(c\mathbf B)\times\Big(-\frac{\mathbf E}{c}\Big)=\frac1{\mu_0}\mathbf E\times\mathbf B . \]
+<p>따라서 복사출력 공식도 형태가 그대로이고, \(q^2\to q_m^2/c^2\) 치환만 하면 된다:</p>
+\[ P=\frac{\mu_0q^2a^2}{6\pi c}\;\longrightarrow\;\boxed{\;P=\frac{\mu_0q_m^2a^2}{6\pi c^3}\;} \]
+<p>(상대론적 일반화도 같은 치환으로 \(P=\frac{\mu_0q_m^2\gamma^6}{6\pi c^3}(a^2-|\mathbf v\times\mathbf a|^2/c^2)\).) 전기전하보다 \(c^2\)만큼 약한 구조는 자기쌍극자 복사(\(\mu_0\ddot m^2/6\pi c^3\))와 정확히 같은 패턴이다.</p>
+<div class="alabel">감점 포인트</div>
+<p>쌍대변환에서 \(q_m=-cq\)인지 \(q_m=-q/c\)인지 헷갈리는 것. 단위로 확인하라: \(q_m\)은 Wb 단위이므로 \(q_m/c\)가 아니라 \(cq\)와 같은 차원이다.</p></div><!--/sol-->

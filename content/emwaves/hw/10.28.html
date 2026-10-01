@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(V=K D^{-1/2}\), \(\vb{A}=\dfrac{\vb{v}}{c^2}V\) (\(K=qc/4\pi\eps\)), \(D=(c^2t-\vb{r}\cdot\vb{v})^2+(c^2-v^2)(r^2-c^2t^2)\).
+\(\vb{v}\)가 상수이므로
+\[ \divg\vb{A}+\muz\eps\frac{\partial V}{\partial t}=\frac{1}{c^2}\Big[\vb{v}\cdot\nabla V+\frac{\partial V}{\partial t}\Big] \]
+즉 \(\vb{v}\cdot\nabla D+\partial D/\partial t=0\)만 보이면 된다 (\(V\propto D^{-1/2}\)이므로 공통인자 \(-\frac12KD^{-3/2}\)로 묶임).
+\[ \nabla D=-2(c^2t-\vb{r}\cdot\vb{v})\vb{v}+2(c^2-v^2)\vb{r}
+\ \Rightarrow\ \vb{v}\cdot\nabla D=-2v^2(c^2t-\vb{r}\cdot\vb{v})+2(c^2-v^2)(\vb{r}\cdot\vb{v}), \]
+\[ \frac{\partial D}{\partial t}=2c^2(c^2t-\vb{r}\cdot\vb{v})-2c^2t(c^2-v^2). \]
+더하면
+\[ 2(c^2-v^2)(c^2t-\vb{r}\cdot\vb{v})+2(c^2-v^2)(\vb{r}\cdot\vb{v})-2c^2t(c^2-v^2)=2(c^2-v^2)\big[c^2t-\vb{r}\cdot\vb{v}+\vb{r}\cdot\vb{v}-c^2t\big]=0 . \]
+\[ \boxed{\divg\vb{A}+\muz\eps\frac{\partial V}{\partial t}=0\ \ \text{✓ Lorenz 게이지}} \]
+(당연한 결과: 지연 퍼텐셜은 항상 Lorenz 게이지에 있다 — Prob. 10.10.)
+<div class="alabel">감점 포인트</div>
+\(\divg(\vb{v}V)=\vb{v}\cdot\nabla V\) (\(\vb{v}\)가 위치의 함수가 아님)를 못 쓰고 헤매는 것.</div><!--/sol-->

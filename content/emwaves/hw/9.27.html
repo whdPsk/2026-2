@@ -1,0 +1,19 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(k=n\omega/c\)이므로
+\[v_g=\frac{d\omega}{dk}=\frac{c}{n+\omega\,dn/d\omega}\ \Rightarrow\ y\equiv\frac{v_g}{c}=\frac{1}{n+\omega\dfrac{dn}{d\omega}} .\]
+\(A\equiv\dfrac{Nq^2}{2m\epsilon_0\omega_0^2}=0.003\), \(g\equiv\gamma/\omega_0\), \(x=(\omega/\omega_0)^2\)로 두면 Eq. 9.172(단일 공명)는
+\[n=1+A\,\frac{1-x}{(1-x)^2+g^2x}\equiv 1+A\frac{1-x}{D},\qquad D=(1-x)^2+g^2x .\]
+\(\omega\dfrac{d}{d\omega}=2x\dfrac{d}{dx}\)이고
+\[\frac{dn}{dx}=A\,\frac{(1-x)^2-g^2}{D^2}\ \Rightarrow\ \boxed{\,y=\left[1+A\frac{1-x}{D}+2Ax\frac{(1-x)^2-g^2}{D^2}\right]^{-1}}\]
+<b>(a) \(\gamma=0\)</b> (\(g=0\), \(D=(1-x)^2\)):
+\[y=\left[1+\frac{A}{1-x}+\frac{2Ax}{(1-x)^2}\right]^{-1}=\left[1+\frac{A(1+x)}{(1-x)^2}\right]^{-1}\]
+분모의 보정항이 항상 양수이므로 \(y&lt;1\) — \(x=1\)에서 \(y\to0\)(발산하는 분모), 그 밖에서는 1에 가깝게(\(x=0\)에서 \(0.997\)) 완만한 곡선.<br>
+<b>(b) \(\gamma=0.1\omega_0\)</b> (\(g=0.1\)): 분모의 보정항을 정리하면
+\[A\frac{(1-x)D+2x[(1-x)^2-g^2]}{D^2}=\frac{A(1+x)\big[(1-x)^2-g^2\big]}{D^2}.\]
+따라서
+\[\boxed{y&gt;1\iff (1-x)^2&lt;g^2\iff 0.9&lt;x&lt;1.1}\]
+즉 공명 부근 좁은 띠(이상분산 영역)에서 \(v_g&gt;c\)가 되고, 그 바깥에서는 \(y\lesssim1\). \(x=1\)에서 최댓값 \(y=[1-2A/g^2]^{-1}=[1-0.6]^{-1}=2.5\), 즉 \(v_g=2.5c\).<br>
+<b>해석:</b> 이 영역은 흡수가 가장 강한 곳이라 "신호"가 이 속도로 전달되지 않는다. 상대성이론과 모순 없음 (정보는 front velocity \(=c\)로 전달).
+<div class="alabel">감점 포인트</div>
+\(\gamma=0\)일 때는 \(v_g&gt;c\)가 되지 않는다는 점. "\(v_g&gt;c\)니까 상대론 위반"이라고 결론짓는 것도 감점 — 군속도는 강한 흡수 영역에서 신호속도가 아니다.</div><!--/sol-->

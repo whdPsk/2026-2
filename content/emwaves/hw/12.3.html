@@ -1,0 +1,23 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+아인슈타인 속도 덧셈:
+\[ v_{AC}=\frac{v_{AB}+v_{BC}}{1+v_{AB}v_{BC}/c^2}. \]
+
+<p>(a) 상대오차는 분모 때문에 생기며
+\[ \frac{v_\text{Gal}-v_\text{Ein}}{v_\text{Ein}}=\frac{v_{AB}v_{BC}}{c^2}. \]
+\(c=3.00\times10^8\,\text{m/s}=6.71\times10^{8}\,\text{mi/h}\)이므로
+\[ \frac{5\times 60}{(6.71\times10^{8})^2}=\frac{300}{4.50\times10^{17}}=6.7\times10^{-16}. \]
+\[ \boxed{\text{오차}\approx 6.7\times10^{-14}\,\%} \]
+사실상 측정 불가능 — 일상 속도에서 갈릴레이 규칙이 잘 통하는 이유.</p>
+
+<p>(b) \(v_{AB}=\frac12 c,\ v_{BC}=\frac34 c\):
+\[ v_{AC}=\frac{\frac12+\frac34}{1+\frac38}c=\frac{5/4}{11/8}c=\boxed{\tfrac{10}{11}c\approx 0.909c} \]</p>
+
+<p>(c)
+\[ c-v_{AC}=\frac{c+ v_{AB}v_{BC}/c-v_{AB}-v_{BC}}{1+v_{AB}v_{BC}/c^2}=\frac{(c-v_{AB})(c-v_{BC})/c}{1+v_{AB}v_{BC}/c^2}. \]
+분자는 두 양수의 곱, 분모도 양수이므로
+\[ \boxed{c-v_{AC}\gt 0 \Rightarrow v_{AC}\lt c} \]
+해석: 아무리 "빠른 것 위에 빠른 것"을 쌓아도 \(c\)를 넘길 수 없다. \(c\)는 속도의 <b>덧셈에 대해 닫힌 상한</b>이며, 이는 라피디티(문제 12.19)로 보면 \(\theta_{AC}=\theta_{AB}+\theta_{BC}\)에서 \(\tanh\)가 항상 1보다 작다는 사실과 같다.</p>
+
+<div class="alabel">감점 포인트</div>
+(c)를 "극한을 취해보니 \(c\)더라"로 때우면 안 된다. \((c-v_{AB})(c-v_{BC})\) 인수분해를 보여야 엄밀한 증명이다.</div><!--/sol-->

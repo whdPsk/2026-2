@@ -1,0 +1,206 @@
+<div class="predict"><b>◈ 학습 목표.</b> ① 평면파의 선편광 → 일반 타원편광을 \((\varepsilon_1,\phi_1,\varepsilon_2,\phi_2)\)와 \((\varepsilon_0,\beta,\chi)\) 두 방식으로 기술하고, <b>β에 따라 편광이 어떻게 바뀌는지</b>(선·원·타원, LCP/RCP)를 말한다(Review Q①, 교수님 "중요"). ② Stokes 변수 I, Q, U, V의 정의와 <b>물리적 의미</b>, 편광 필터로 측정하는 법(Review Q②). ③ 준단색파에서 \(I^2\ge Q^2+U^2+V^2\), 편광도 \(\Pi\)와 \(\Pi=(I_{\max}-I_{\min})/(I_{\max}+I_{\min})\). ④ 정렬된 먼지의 소광 편광(\(\mathbf E\parallel\mathbf B\))과 열방출 편광(\(\mathbf E\perp\mathbf B\))으로 성간 자기장을 재는 원리. — 9/15 PPT 슬라이드 3①②, 9–15 + 플립 11·12.</div>
+
+<h4>평면파의 그림과 선편광 <span class="en">Flip 11 · linear polarization</span></h4>
+<div class="slide flip"><div class="sh">플립 11 · 0:01–2:41 <span class="st">평면파 해의 그림</span></div>
+<ol>
+<li>전자기파가 z(\(\hat{\mathbf k}\)) 방향으로 전파. 전기장은 x축 방향으로, 자기장은 y축에 평행하게 진동(서로 수직). 오른손으로 확인: \(\hat y\times\hat z=\hat x\), \(\hat z\times\hat x=\hat y\). [[F11.01]]</li>
+<li>오른손 네 손가락을 전기장(x)에서 자기장(y) 방향으로 감으면 엄지가 빛이 전파하는 \(\hat{\mathbf k}\) 방향 (\(\mathbf S\propto\mathbf E\times\mathbf B\)). [[F11.02]]</li>
+<li>지수함수를 넣었다는 건 복소수를 썼다는 것. 실제로 측정하는 물리량은 실수이므로 <b>실수부</b>를 택한다: \(e^{i\theta}=\cos\theta+i\sin\theta\) → \(\mathbf E=E_0\hat x\cos(kz-\omega t)\), \(\mathbf B=E_0\hat y\cos(kz-\omega t)\). [[F11.02, F11.03]]</li>
+<li>전기장이 한 방향(x)으로만 변하지 않고 진동 → <b>선형 편광(linearly polarized)</b> 파. 자기장은 자동으로 y 방향으로만 진동. [[F11.03]]</li>
+</ol></div>
+
+<h4>일반적인 편광 — 타원 <span class="en">Flip 11 · elliptical polarization</span></h4>
+<div class="slide flip"><div class="sh">플립 11 · 2:41–9:40 <span class="st">타원편광과 β, χ</span></div>
+<ol>
+<li>z 방향 전파 평면파를 일반적으로: \(\mathbf E=(\hat xE_{x0}+\hat yE_{y0})e^{i(kz-\omega t)}\). 앞의 경우는 \(E_{y0}=0\)인 특수한 경우. \(E_{x0},E_{y0}\)는 각각 x, y 방향 세기를 나타내는 <b>복소수</b> → 실수부·허수부 두 변수씩 → 편의상 \(E_{x0}=\varepsilon_1e^{i\phi_1}\), \(E_{y0}=\varepsilon_2e^{i\phi_2}\) (ε = 진폭, φ = 위상). [[F11.04, F11.05]]</li>
+<li>실수부: \(E_x=\varepsilon_1\cos(kz-\omega t+\phi_1)\), \(E_y=\varepsilon_2\cos(kz-\omega t+\phi_2)\). \(\varepsilon_1\ne\varepsilon_2\)이고 위상이 다르면 일반적으로 <b>타원</b>을 기술 — z = 0인 xy 평면에서 보면 전기장 끝점이 원점을 중심으로 회전하는 타원을 그린다. [[F11.05, F11.06]]</li>
+<li>그림: 전자기파는 화면에서 <b>나오는</b> 방향(+z)으로 전파. 타원의 장축 = x′, 단축 = y′(principal axes), x′축은 x축에 대해 각 χ만큼 기울어짐. [[F11.06, F11.07]]</li>
+<li>주축 좌표에서: \(E_x'=\varepsilon_0\cos\beta\cos(kz-\omega t)\), \(E_y'=\varepsilon_0\sin\beta\sin(kz-\omega t)\). ε₀ = 진폭의 최댓값, cosβ·sinβ = x′·y′ 방향 비율, <b>\(-\pi/2\le\beta\le\pi/2\)</b>로 정의. [[F11.07, F11.08]]</li>
+<li>z = 0에서: cos는 우함수라 \(E_x'=\varepsilon_0\cos\beta\cos\omega t\), sin은 기함수라 \(E_y'=-\varepsilon_0\sin\beta\sin\omega t\) (마이너스가 앞으로). [[F11.08]]</li>
+<li>\(\Big(\dfrac{E_x'}{\varepsilon_0\cos\beta}\Big)^2+\Big(\dfrac{E_y'}{\varepsilon_0\sin\beta}\Big)^2=\cos^2+\sin^2=1\) → 장축 \(\varepsilon_0|\cos\beta|\), 단축 \(\varepsilon_0|\sin\beta|\)인 타원의 방정식. β는 ellipticity와 회전 방향을 나타낸다. [[F11.09]]</li>
+<li><b>β &gt; 0</b>: t = 0이면 \(E_y'=0\), 끝점은 x′축 위(최대). t가 늘면 cos은 1에서 감소, sin은 0에서 증가하는데 앞에 음수 → y′의 음의 방향으로 내려감 → <b>시계 방향</b> 회전. [[F11.09, F11.10]]</li>
+<li><b>β &lt; 0</b>: sinβ &lt; 0, cosβ &gt; 0 → \(E_y'\)가 양수로 증가 → <b>반시계 방향</b>. <b>β = 0</b>: \(E_y'=0\) → x′ 선 위에서만 진동(선편광). <b>β = ±π/2</b>: cosβ = 0 → y′ 방향으로만 진동(선편광). <b>β = ±45°</b>: |cosβ| = |sinβ| → 장축 = 단축 → 원. [[F11.11]]</li>
+</ol></div>
+
+<h4>Review Q① — β에 따른 편광 <span class="en">L05 slide 3 ①</span> <span class="star">중요</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 3 ① <span class="st">Review Questions</span></div>
+<ul><li>For the EM waves with \(E_x'=\epsilon_0\cos\beta\cos(kz-\omega t)\), \(E_y'=\epsilon_0\sin\beta\sin(kz-\omega t)\), discuss how the polarization of the waves changes as \(|\beta|\le\pi/2\) varies.</li></ul> [[L05.s3a]]</div>
+<div class="explain"><b>부가설명 (수업 풀이)</b>
+<p>교수님: "중요하니까." 각 성분을 \(\varepsilon_0\cos\beta\), \(\varepsilon_0\sin\beta\)로 나눠 제곱해 더하면 1 → 타원(elliptical polarization)의 방정식. [[S0915.02, S0915.03]]</p>
+<ul>
+<li><b>β = 0</b>: sinβ = 0 → x′ 방향 <b>선편광</b>.</li>
+<li><b>β = ±90°</b>: y′ 방향 <b>선편광</b>.</li>
+<li><b>β = ±45°</b>: 두 진폭이 같음 → <b>원편광</b>.</li>
+<li>그 밖의 β: <b>타원편광</b>; |β|가 0 → 45°로 갈수록 납작한 타원 → 원.</li>
+<li><span class="hl">중요한 것은 β의 부호로 Left-handed인지 Right-handed인지 구별하는 것.</span> xy축을 그리고 β &gt; 0, 관측자 평면 z = 0으로 잡으면 t = 0에서 E는 x′축 방향(cos 0 = 1). 시간이 지나면 sin이 0에서 증가하는데 −sin 때문에 <b>아래로</b> 돈다(시계 방향). 빛이 스크린에서 나와 여러분 쪽으로 오니까, 엄지를 여러분 쪽(전파 방향)으로 놓고 네 손가락으로 이 회전을 감으면 <b>왼손</b> → <b>LCP</b>. β &lt; 0이면 위로(반시계) 돌고 <b>RCP</b>. "Left-handed, Right-handed circular polarization — 그거 구별할 수 있어야 하고." [[S0915.03]]</li>
+</ul></div>
+<div class="formula"><div class="ftitle">암기 — β 표 (z = 0 고정, 관측자가 다가오는 빛을 마주 볼 때)</div><table><tr><th>β</th><th>모양</th><th>회전</th><th>V (PPT 정의)</th></tr><tr><td>0</td><td>x′ 선편광</td><td>—</td><td>0</td></tr><tr><td>0 &lt; β &lt; 90° (≠ 45°)</td><td>타원</td><td>시계 · LCP</td><td>&lt; 0</td></tr><tr><td>−90° &lt; β &lt; 0 (≠ −45°)</td><td>타원</td><td>반시계 · RCP</td><td>&gt; 0</td></tr><tr><td>+45°</td><td>원</td><td>시계 · LCP</td><td>−I</td></tr><tr><td>−45°</td><td>원</td><td>반시계 · RCP</td><td>+I</td></tr><tr><td>±90°</td><td>y′ 선편광</td><td>—</td><td>0</td></tr></table><p class="note">\(V=-\varepsilon_0^2\sin2\beta\)(PPT의 \(V=-2\varepsilon_1\varepsilon_2\sin\phi\), V &gt; 0 = RCP 정의와 일치) — python으로 회전 방향·부호 재확인. [[L05.s3a, F11.11, F12.06, S0915.03]]</p></div>
+<div class="trap"><b>함정 · 손잡이 convention</b>① "fixed time"에서 공간에 그린 나선의 감긴 방향과 "fixed space(z = 0)"에서 시간에 따른 회전 방향은 \(kz-\omega t\)의 마이너스 때문에 <b>반대로 보인다</b> — 플립 12에서 "혼동하지 말기를" 강조. 손잡이는 <b>fixed space</b> 기준. ② LCP/RCP의 정의는 분야(광학 vs 전파천문 IEEE)마다 반대인 경우가 있다. 이 과목은 강의 정의(β &gt; 0 = LCP, V &gt; 0 = RCP)를 따른다. [[F12.09, F12.10, S0915.03]]</div>
+
+<h4>두 표현의 관계와 Stokes 변수 <span class="en">Flip 11–12 · (ε₁,ε₂,φ₁,φ₂) ↔ (ε₀,β,χ)</span></h4>
+<div class="slide flip"><div class="sh">플립 11 9:40 – 플립 12 · 0:00–4:11 <span class="st">변환관계 유도</span></div>
+<ol>
+<li>앞에서는 \(\varepsilon_1,\varepsilon_2,\phi_1,\phi_2\)(진폭 2 + 위상 2), 지금은 \(\varepsilon_0,\beta,\chi\). 둘 사이의 변환관계를 수학적으로 구한다. [[F11.12, F12.01]]</li>
+<li>프라임 없는 좌표와 프라임 좌표는 χ만큼 회전: \(E_x=E_x'\cos\chi-E_y'\sin\chi\), \(E_y=E_x'\sin\chi+E_y'\cos\chi\). z = 0에서 \(E_x=\varepsilon_1\cos(\omega t-\phi_1)\), \(E_y=\varepsilon_2\cos(\omega t-\phi_2)\). [[F12.01]]</li>
+<li>좌변은 코사인 차 공식으로 \(\varepsilon_1(\cos\phi_1\cos\omega t+\sin\phi_1\sin\omega t)\), 우변은 \(\varepsilon_0(\cos\beta\cos\chi\cos\omega t+\sin\beta\sin\chi\sin\omega t)\). 시간에 무관하게 성립하려면 \(\cos\omega t\), \(\sin\omega t\) 계수가 각각 같아야 → 4개의 식(변수 4개라 4개 필요):
+\[ \varepsilon_1\cos\phi_1=\varepsilon_0\cos\beta\cos\chi,\quad\varepsilon_1\sin\phi_1=\varepsilon_0\sin\beta\sin\chi,\quad\varepsilon_2\cos\phi_2=\varepsilon_0\cos\beta\sin\chi,\quad\varepsilon_2\sin\phi_2=-\varepsilon_0\sin\beta\cos\chi \] [[F12.02]]</li>
+<li>네 식을 모두 제곱해 더하면 좌변 \(\varepsilon_1^2+\varepsilon_2^2\), 우변 \(\varepsilon_0^2(\cos^2\beta+\sin^2\beta)=\varepsilon_0^2\). 제곱 차, 서로 곱해서 더하고 빼면 나머지 셋: [[F12.03, F12.04]]
+\[ \varepsilon_1^2+\varepsilon_2^2=\varepsilon_0^2,\quad\varepsilon_1^2-\varepsilon_2^2=\varepsilon_0^2\cos2\beta\cos2\chi,\quad2\varepsilon_1\varepsilon_2\cos(\phi_1-\phi_2)=\varepsilon_0^2\cos2\beta\sin2\chi,\quad2\varepsilon_1\varepsilon_2\sin(\phi_1-\phi_2)=\varepsilon_0^2\sin2\beta \]</li>
+<li><span class="hl">φ₁, φ₂ 각각이 아니라 그 <b>차이</b> \(\phi=\phi_1-\phi_2\)만 등장</span> — 위상은 절댓값이 아니라 상대값이 중요. 그래서 변수 4개가 실제로는 3개(ε₀, β, χ)로 줄어든다. 어느 세트를 쓰든 3개의 파라미터가 전기장(자기장)의 궤적과 편광을 기술한다. [[F12.04, F12.05]]</li>
+</ol></div>
+<div class="slide flip"><div class="sh">플립 12 · 4:11–8:12 <span class="st">β별 궤적, fixed time vs fixed space, LCP</span></div>
+<ol>
+<li>β = 0 → 한 축으로만 진동, β = ±90° → 다른 축으로 진동: 두 가지 <b>선편광</b>. β = ±45° → |cosβ| = |sinβ| → <b>원편광</b>. β &gt; 0이면 시계, β &lt; 0이면 반시계 회전. [[F12.06]]</li>
+<li>0°, ±45°, ±90°가 아닌 모든 β → 타원. 회전 방향은 β의 부호에 따라. [[F12.07]]</li>
+<li>그림(전기장만): 원통 모양 그림 = 시간을 고정(fixed time, t = 0)했을 때 z 방향으로 전파하며 끝점이 돌아가는 나선. 뒤의 그림 = z = 0 평면(fixed space)에서 시간에 따라 도는 모습. 지금 그림은 β &gt; 0. [[F12.07, F12.08]]</li>
+<li>β &gt; 0(90° 미만): t = 0에서 \(E_x'\) 최대, 시간이 지나며 y′의 음의 방향으로 → 화살표 방향 회전. 두 그림의 회전 sense가 달라 보이는 건 \(kz-\omega t\)의 <b>마이너스</b> 때문 — 혼동 금지. β &lt; 0이면 반대. [[F12.09]]</li>
+<li>왼손/오른손은 <b>fixed space(z = 0)</b> 기준: 엄지를 빛이 전파하는 방향으로, 네 손가락을 전기장 회전 방향으로 감았을 때 왼손이 맞으면 <b>Left-handed circularly (elliptically) polarized wave</b>. [[F12.10]]</li>
+</ol></div>
+<div class="slide flip"><div class="sh">플립 12 · 8:12–10:32 <span class="st">Stokes 변수의 도입</span></div>
+<ol>
+<li>위 4개의 변환관계식에서 맨 마지막 식에만 부호 마이너스를 붙여 정의한 네 양이 \(I,Q,U,V\) — 처음 정한 물리학자 Stokes의 이름을 따 <b>Stokes parameters</b>. [[F12.11]]
+\[ I=\varepsilon_1^2+\varepsilon_2^2=\varepsilon_0^2,\quad Q=\varepsilon_1^2-\varepsilon_2^2=\varepsilon_0^2\cos2\beta\cos2\chi,\quad U=2\varepsilon_1\varepsilon_2\cos\phi=\varepsilon_0^2\cos2\beta\sin2\chi,\quad V=-2\varepsilon_1\varepsilon_2\sin\phi=-\varepsilon_0^2\sin2\beta \]</li>
+<li>I = x축 세기 + y축 세기 = 총 세기, Q = x와 y 방향의 차이, U = 각도(위상)까지 포함한 양. 관측 기기는 I, Q, U, V 값을 준다. [[F12.12]]</li>
+<li>변수는 3개(ε₀, β, χ)인데 Stokes는 4개 → 서로 독립이 아니고 관계식 \(I^2=Q^2+U^2+V^2\)(완전편광)이 성립 — 위 식으로 어렵지 않게 보일 수 있다. I = 빛의 intensity, 총 에너지 플럭스에 비례. [[F12.13, F12.14]]</li>
+<li>Q, U = 타원의 방향(얼마나 기울어져 있나), V = circularity parameter. 관측으로 IQUV를 알면 \(\varepsilon_0=\sqrt I\), \(\sin2\beta=-V/I\), \(\tan2\chi=U/Q\)로 편광을 특정. [[F12.14]]</li>
+<li><b>V = 0 → 선편광, Q = U = 0 → 원편광. V &gt; 0 → RHC(right-handed circular), V &lt; 0 → LHC.</b> [[F12.15]]</li>
+</ol></div>
+<div class="trap"><b>STT·표기 의심</b>플립 12 녹음 "베타는 마이너스 i분의 v" = \(\sin2\beta=-V/I\), "탄젠트 이카파는 q분의 u" = \(\tan2\chi=U/Q\), "ISQ2" = \(\sqrt I\). 플립 12 6:11 녹음 "β가 0이면 … y축으로 평행하게 진동"은 문맥상 x(′)축(β = ±90°일 때가 y′). 교재·R&amp;L 계열은 \(V=+\varepsilon_0^2\sin2\beta\)로 쓰기도 하니 <b>강의 정의</b>(\(V=-2\varepsilon_1\varepsilon_2\sin\phi\))로 통일. [[F12.06, F12.14, F12.11]]</div>
+
+<h4>Review Q② — Stokes 변수의 물리적 의미 <span class="en">L05 slide 3 ②</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 3 ② <span class="st">Review Questions</span></div>
+<ul><li>What are the four Stokes parameters, and what is the physical meaning of each?</li></ul> [[L05.s3b]]</div>
+<div class="explain"><b>부가설명 (수업 풀이)</b>
+<p><b>I</b> = 그야말로 intensity. 전기장 제곱이 에너지 밀도(자기장도 있지만 가우스 단위에선 E = B라 하나만 보면 됨) → 장 자체가 아니라 <b>제곱</b>에 비례. 에너지 밀도는 E²/8π, intensity로 바꾸려면 c(길이/시간)와 단위 입체각 등을 고려해야 하지만 어쨌든 \(E_x^2+E_y^2\)에 비례하는 <b>총 에너지(세기)</b>. [[S0915.04]]</p>
+<p><b>Q</b> = x 방향 세기 − y 방향 세기. 정확히는 \(I_{0^\circ}-I_{90^\circ}\): 0° 필터 = 수평 방향 진동만 통과시키는 필터를 끼고 관측(위아래 진동은 못 들어옴), 필터를 90° 돌려 다시 관측. <b>U</b> = 45° 방향 세기 − 135°(= −45°) 방향 세기. Q와 U는 <b>선편광</b>을 잰다. Q 하나만 재서는 어느 방향으로 진동하는지 알 수 없으니 두 개가 필요 — <span class="hl">Q와 U의 비가 편광각(polarization angle)을 준다.</span> [[S0915.04, S0915.05]]</p>
+<p><b>V</b> = \(I_{\rm RCP}-I_{\rm LCP}\)(정의 나름): 한쪽으로 도는 원편광만 통과시키는 필터(circular polarizer)로 찍고, 반대 방향 필터로 찍어 차이 → <b>원편광</b> 정도. V = 0이면 선편광 또는 무편광 — 대개 많은 경우가 그렇다. [[S0915.05]]</p>
+<p><b>무편광(unpolarized)</b>: 단일 파동(광자)은 항상 어떤 편광을 갖지만, 다발(bundle)의 진동 방향이 무작위로 섞이면 모든 방향 세기가 같아 Q = U = V = 0, I만 남는다. [[S0915.06]]</p></div>
+
+<h4>Stokes 변수의 정의 <span class="en">L05 slide 9 · Definitions</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 9 <span class="st">Definitions of the Stokes Parameters</span></div>
+<ul>
+<li>\(I=\langle|E_x|^2\rangle+\langle|E_y|^2\rangle,\ Q=\langle|E_x|^2\rangle-\langle|E_y|^2\rangle,\ U=2\,{\rm Re}\langle E_xE_y^*\rangle,\ V=-2\,{\rm Im}\langle E_xE_y^*\rangle\) \(\;\xrightarrow{\ E_x=\epsilon_1e^{i\phi_1}e^{i(kz-\omega t)},\ E_y=\epsilon_2e^{i\phi_2}e^{i(kz-\omega t)}\ }\;\) \(I=\epsilon_1^2+\epsilon_2^2,\ Q=\epsilon_1^2-\epsilon_2^2,\ U=2\epsilon_1\epsilon_2\cos\phi,\ V=-2\epsilon_1\epsilon_2\sin\phi\), with \(\phi\equiv\phi_1-\phi_2\)</li>
+<li>[그림: 하늘 좌표 — x축 위쪽 '북', y축 왼쪽 '동'; 세로선 +Q, 가로선 −Q, 왼쪽 위 대각선 +U, 왼쪽 아래 대각선 −U]</li>
+<li>\(I=I_{0^\circ}+I_{90^\circ}\): Total brightness of the wave, independent of polarization.</li>
+<li>\(Q=I_{0^\circ}-I_{90^\circ}\): Difference in intensity between horizontal and vertical linear polarizations</li>
+<li>\(U=I_{45^\circ}-I_{-45^\circ}\): Difference in intensity between polarization at ±45°</li>
+<li>\(V=I_{\rm RCP}-I_{\rm LCP}\): Difference in intensity between right- and left-circular polarizations<ul><li>V &gt; 0: for RCP and V &lt; 0 for LCP</li></ul></li>
+</ul> [[L05.s9]]</div>
+<div class="explain"><b>부가설명</b>
+<p>상수 계수는 다 빼고 에너지에 비례하는 양으로 정의. ⟨ ⟩ = 한 주기 시간평균. U, V는 \(E_xE_y^*\)의 실수부·허수부. 일반 편광(진폭 ε₁, 위상 φ₁ / ε₂, φ₂)을 대입하면 \(|E_x|^2=E_xE_x^*\)에서 위상 인자가 다 떨어져 나가 \(\varepsilon_1^2\)만 남고, \(E_xE_y^*\)에서는 켤레 때문에 φ₂의 부호가 바뀌어 \(\phi=\phi_1-\phi_2\)가 등장. 동영상·교재의 ε₀, β, χ 표현과 <b>같은 정의</b>다(교재는 다른 순서로 왔을 뿐). [[S0915.27]]</p>
+<p>I = I₀ + I₉₀ = 편광과 무관한 총밝기. Q(0°−90°)와 U(45°−(−45°))는 선편광 정보, 상대 크기로 편광 방향. V = RCP − LCP는 원편광, 부호로 손잡이(V &gt; 0이면 RCP로 정의). 일반적으로는 섞여 있다: 예컨대 한 방향(y) 세기가 다른 방향보다 크게 오면, 공통 부분은 <b>무편광 성분</b>이고 나머지가 y 방향 <b>선편광 성분</b>. [[S0915.28]]</p></div>
+<div class="trap"><b>함정 · 각도 기준과 Q 순서</b>그림은 천구 좌표: 위 = 북(x), 왼쪽 = 동(y). +Q = 북–남(세로), −Q = 동–서(가로), +U = 북동–남서 대각선. 편광각(북에서 동쪽으로) \(\chi=\frac12\arctan(U/Q)\)는 180° 주기라 사분면은 atan2로. 녹음 8:32에 "Q는 90도 방향과 0도 방향 intensity의 차이"라고 순서가 뒤집혀 들리나 PPT 정의는 \(Q=I_{0^\circ}-I_{90^\circ}\). Q = 0이어도 U·V가 있으면 편광이다. [[L05.s9, S0915.05]]</div>
+
+<h4>Stokes 변수의 측정 <span class="en">L05 slide 10 · Measurements</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 10 <span class="st">Measurements of Stokes Parameters</span></div>
+<ul>
+<li>Define [박스: \(E_x=\epsilon_1\cos(kz-\omega t+\phi_1)\), \(E_y=\epsilon_2\cos(kz-\omega t+\phi_2)\)]
+\[ I_{0^\circ}\equiv2\langle E_x^2\rangle=2\epsilon_1^2\langle\cos^2(\omega t-\phi_1)\rangle=\epsilon_1^2,\qquad I_{90^\circ}\equiv2\langle E_y^2\rangle=\epsilon_2^2 \]
+\[ I_{45^\circ}\equiv2\Big\langle\Big({E_x+E_y\over\sqrt2}\Big)^2\Big\rangle={1\over2}(\epsilon_1^2+\epsilon_2^2)+2\epsilon_1\epsilon_2\langle\cos(\omega t-\phi_1)\cos(\omega t-\phi_2)\rangle={1\over2}(\epsilon_1^2+\epsilon_2^2+2\epsilon_1\epsilon_2\cos\phi) \]
+where \(2\cos(\omega t-\phi_1)\cos(\omega t-\phi_2)=\cos(\phi_2-\phi_1)+\cos(2\omega t-\phi_1-\phi_2)\) is used.
+\[ I_{135^\circ}\equiv2\Big\langle\Big({-E_x+E_y\over\sqrt2}\Big)^2\Big\rangle={1\over2}(\epsilon_1^2+\epsilon_2^2-2\epsilon_1\epsilon_2\cos\phi) \]</li>
+<li>Then, <i>I</i>, <i>Q</i>, and <i>U</i> can be obtained by \(I=I_{0^\circ}+I_{90^\circ}=\) ⇕ + ⇔; \(Q=I_{0^\circ}-I_{90^\circ}=\) ⇕ − ⇔; \(U=I_{45^\circ}-I_{135^\circ}=\) ⤡ − ⤢ [그림: 편광필터 투과축 화살표]</li>
+</ul> [[L05.s10]]</div>
+<div class="explain"><b>부가설명</b>
+<p>선형 편광 필터는 투과축 방향 성분만 통과: 0° 필터 → \(E_x\), 45° 필터 → \((E_x+E_y)/\sqrt2\). 앞의 2는 ⟨cos²⟩ = 1/2을 상쇄해 \(I_{0^\circ}=\varepsilon_1^2\)로 맞추는 규격화. 45°와 135°의 차이에서 교차항 \(2\varepsilon_1\varepsilon_2\cos\phi\)만 남아 \(U=I_{45^\circ}-I_{135^\circ}=2\varepsilon_1\varepsilon_2\cos\phi\) — 정의와 일치(곱의 시간평균에서 \(\cos(2\omega t-\dots)\) 항은 0). 수업: 필터를 대고 찍고, 90° 돌려 또 찍는다. V는 선형 필터만으로는 안 되고 원편광 필터 두 개(RCP, LCP)가 필요. [[L05.s10, S0915.05]]</p></div>
+
+<h4>준단색파 <span class="en">L05 slide 11 · Quasi-monochromatic Waves</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 11 <span class="st">Quasi-monochromatic Waves</span></div>
+<ul>
+<li>The monochromatic waves just treated are said to be completely or 100% polarized, since the electric vector displays a simple, nonrandom directional behavior in time.</li>
+<li>In practice we never see a single monochromatic component but rather a superposition of many components, each with its own polarization.</li>
+<li>For quasi-monochromatic waves with bandwidth \(\Delta\omega\ll\omega\), we define
+\[ I\equiv\langle E_{x0}E_{x0}^*\rangle+\langle E_{y0}E_{y0}^*\rangle=\langle\epsilon_1^2+\epsilon_2^2\rangle,\quad Q\equiv\langle E_{x0}E_{x0}^*\rangle-\langle E_{y0}E_{y0}^*\rangle=\langle\epsilon_1^2-\epsilon_2^2\rangle, \]
+\[ U\equiv\langle E_{x0}E_{y0}^*\rangle+\langle E_{y0}E_{x0}^*\rangle=2\langle\epsilon_1\epsilon_2\cos\phi\rangle,\quad V\equiv i\big(\langle E_{x0}E_{y0}^*\rangle-\langle E_{y0}E_{x0}^*\rangle\big)=-2\langle\epsilon_1\epsilon_2\sin\phi\rangle \]</li>
+<li>Using the Schwartz inequality, \(\langle E_{x0}E_{x0}^*\rangle\langle E_{y0}E_{y0}^*\rangle\ge\langle E_{x0}E_{y0}^*\rangle\langle E_{y0}E_{x0}^*\rangle\), one can show \(I^2\ge Q^2+U^2+V^2\).</li>
+</ul> [[L05.s11]]</div>
+<div class="explain"><b>부가설명</b>
+<p><b>완전편광(단색파)이면 등호</b>: \(Q^2+U^2+V^2=(\varepsilon_1^2-\varepsilon_2^2)^2+4\varepsilon_1^2\varepsilon_2^2(\cos^2\phi+\sin^2\phi)=(\varepsilon_1^2+\varepsilon_2^2)^2=I^2\) — 교수님 "증명은 안 하는데 보일 수 있어요": 두 개 제곱해 더하면 cos²+sin² = 1로 사라짐. 실제 빛은 여러 성분의 중첩이라 평균을 취하면 Q, U, V가 부분적으로 상쇄 → 부등호. [[L05.s11, S0915.29]]</p></div>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>Schwarz 부등식 → \(I^2\ge Q^2+U^2+V^2\)</div><ol>
+<li>\(a=\langle|E_{x0}|^2\rangle,\ b=\langle|E_{y0}|^2\rangle,\ c=\langle E_{x0}E_{y0}^*\rangle\)라 두면 \(\langle E_{y0}E_{x0}^*\rangle=c^*\). Schwarz: \(ab\ge|c|^2\).</li>
+<li>\(I=a+b,\ Q=a-b,\ U=2{\rm Re}\,c,\ V=-2{\rm Im}\,c\) → \(U^2+V^2=4|c|^2\).</li>
+<li>\(I^2-Q^2=4ab\ge4|c|^2=U^2+V^2\) → \(I^2\ge Q^2+U^2+V^2\). ∎ [[L05.s11]]</li>
+</ol></div>
+
+<h4>편광도 <span class="en">L05 slide 12 · Degree of Polarization</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 12 <span class="st">Degree of Polarization</span></div>
+<ul>
+<li>In general, EM waves are partially polarized:
+\[ \begin{pmatrix}I\\Q\\U\\V\end{pmatrix}=\underbrace{\begin{pmatrix}I-\sqrt{Q^2+U^2+V^2}\\0\\0\\0\end{pmatrix}}_{\text{completely unpolarized component}}+\underbrace{\begin{pmatrix}\sqrt{Q^2+U^2+V^2}\\Q\\U\\V\end{pmatrix}}_{\text{completely (elliptically) polarized component}} \]</li>
+<li>Degree of Polarization: \(\displaystyle\Pi\equiv{I_{\rm pol}\over I}={\sqrt{Q^2+U^2+V^2}\over I}\)</li>
+<li>For partially linearly polarized waves (V = 0),<ul>
+<li>The maximum intensity, \(I_{\max}\), will occur when the filter is aligned with the plane of polarization.</li>
+<li>Unpolarized light has equal intensity in every direction. On average, <b>only half of it</b> passes through any linear polarizer.</li>
+<li>\(I_{\max}=0.5I_{\rm unpol}+I_{\rm pol}\)</li>
+<li>\(I_{\min}=0.5I_{\rm unpol}\) \(\;\Rightarrow\;\) \(\displaystyle\Pi={I_{\rm pol}\over I}={I_{\rm pol}\over I_{\rm pol}+I_{\rm unpol}}={I_{\max}-I_{\min}\over I_{\max}+I_{\min}}\)</li></ul></li>
+</ul> [[L05.s12]]</div>
+<div class="explain"><b>부가설명</b>
+<p>Q, U, V는 편광된 성분을 나타내므로 \(\sqrt{Q^2+U^2+V^2}\) = 편광된 빛의 세기 \(I_{\rm pol}\). 총세기에서 이것을 빼면 Q = U = V = 0인 <b>완전 무편광 성분</b>. 일반 빛 = 무편광 + 편광의 선형합. [[S0915.29]]</p>
+<p><span class="hl">편광된 빛은 대부분 약하다</span> — 녹음상 "대부분 5% 정도", 편광도 Π는 대개 몇 %, 강하면 ~10%, 아주 드물게 30–40%. 그래서 관측이 어렵고 기기 만들기도 비싸지만 <b>그만큼 좋은 정보를 준다</b>. [[S0915.29, S0915.30]]</p>
+<p>부분 선편광(V = 0): 필터를 돌려가며 측정. 편광면에 맞추면 최대 — 무편광 빛은 x, y 방향이 섞여 있어 절반만 통과하므로 \(I_{\max}=\frac12I_{\rm unpol}+I_{\rm pol}\); 수직 방향에서 최소 \(I_{\min}=\frac12I_{\rm unpol}\). 그러면 \(I_{\max}-I_{\min}=I_{\rm pol}\), \(I_{\max}+I_{\min}=I_{\rm unpol}+I_{\rm pol}=I\) → "여러분들 쉽게 확인할 수 있어요." [[S0915.30]]</p></div>
+<div class="apply"><b>수치 감각</b>Π = 1.5%(별빛) → \(I_{\max}/I_{\min}=(1+\Pi)/(1-\Pi)\approx1.030\): 필터를 돌려도 세기가 3%밖에 안 변한다. Π = 10% → 1.22. → 예제 3.18. [[L05.s12, S0915.30]]</div>
+
+<h4>먼지에 의한 편광 <span class="en">L05 slide 13 · Polarization by Dust</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 13 <span class="st">Polarization by Dust</span></div>
+<ul>
+<li><b>Aligned, non-spherical dust grains</b><ul>
+<li>Interstellar dust grains are generally non-spherical.</li>
+<li>Their short axes tend to align with the magnetic field <b>B</b>.</li>
+<li>The absorption and emission efficiencies depend on the direction of the electric field <b>E</b> relative to the grain axes.</li></ul>
+[그림: 길쭉한 타원 먼지 알갱이, 짧은 축 방향으로 화살표]</li>
+<li><b>Polarization by Dust Extinction</b><ul>
+<li>A dust grain absorbs light more efficiently when <b>E</b> ∥ long axis.</li>
+<li>The transmitted light is therefore polarized along the <b>short axis</b> of the grains.</li>
+<li>Since the short axes tend to align with the magnetic field, <b>E</b><sub>extinction</sub> ∥ <b>B</b>.</li></ul>
+[그림: 'Background Star Emits Unpolarized Radiation' → 세로 자기장 B 선들 사이에 'Most Likely Grain Orientation'(장축 ⊥ B)으로 놓인 먼지들 → 'Polarized Light Transmitted', 관측자 쪽 E가 B와 평행]</li>
+</ul> [[L05.s13]]</div>
+<div class="explain"><b>부가설명</b>
+<p><b>왜 길쭉한가·왜 정렬하나.</b> 성간 먼지는 꽤 길쭉하다 — 완벽한 구가 오히려 부자연스럽다. 직접 채집한 게 아니라 여러 관측을 설명하려면 길쭉(non-spherical)해야 한다고 추정. 먼지는 가만히 있지 않고 빙글빙글 돈다: 지나가는 수소 원자가 중심축에서 벗어나 치면 토크, 그리고 복사가 각운동량을 주는 <b>복사 토크(radiative torque)</b> — 성간에는 마찰이 없어 계속 돈다. 대략 초당 ~10⁴번. 이론에 따르면 결국 평형에서 <b>짧은 축이 자기장에 평행</b>하게(긴 축은 B에 수직인 면에서 돌며) 정렬. [[S0915.30, S0915.31]]</p>
+<p><b>소광(extinction) 편광.</b> 파장이 먼지 크기 정도면 흡수·재방출 상호작용이 복잡해 재미있는 현상이 생긴다. 별빛은 본래 무편광(광자 하나는 편광돼 있지만 다발의 방향은 무작위). 시선에 수직인 성간 자기장에 먼지가 정렬해 있으면, 진동을 두 방향으로 나눠 생각한다: <span class="hl">짧은 축 방향(= B 방향)으로 진동하는 빛이 더 잘 통과</span>(긴 축 방향 진동은 잘 흡수됨). "짧으니까 쉽게 넘어간다" — 실제론 더 복잡하지만 그렇게 이해하면 된다. → 투과광의 편광 E ∥ B → <b>편광을 보면 하늘면(plane of the sky)에 투영된 자기장 방향을 잴 수 있다</b>. 편광도는 크지 않다. [[S0915.32]]</p></div>
+
+<h4>별빛의 편광 <span class="en">L05 slide 14 · Polarization of Starlight</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 14 <span class="st">Polarization of Starlight</span></div>
+<ul>
+<li>Due to extinction by dust grains aligned in the presence of a magnetic field.<ul><li>Degree of polarization is of the order of 1.5%.</li></ul></li>
+<li>[그림: 은하 좌표(galactic longitude 180→0→180, latitude −50~50) 위 별빛 편광 벡터 지도(축척 막대 5%); 대부분 은하면에 나란한 막대, Ophiuchus·Taurus·Perseus·CrA·Orion 표시]</li>
+</ul> [[L05.s14]]</div>
+<div class="explain"><b>부가설명</b>
+<p>예전에 많이 하던 관측(요즘은 잘 안 함). 짧은 막대 = 편광 벡터 방향 = 별과 관측자 사이에서 정렬된 먼지로부터 추정한 자기장 방향. 은하 중심 방향 등 일부 예외가 있지만 <span class="hl">대부분의 자기장은 은하면에 평행</span> — 우리 은하 자기장이 은하면에 평행하다는 것을 보여주는 결과. [[S0915.32, S0915.33]]</p></div>
+<div class="trap"><b>수치 의심</b>PPT: 별빛 편광도 ~1.5%. 녹음(53:57 근처)의 "대부분 5% 정도"는 편광 일반에 대한 말이고, 지도의 막대 축척이 5%. 별빛 소광 편광은 <b>~1.5%</b>로 기억. [[L05.s14, S0915.29]]</div>
+
+<h4>먼지 열방출에 의한 편광 <span class="en">L05 slide 15 · Thermal Dust Emission</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 15 <span class="st">Polarization by Thermal Dust Emission</span></div>
+<ul>
+<li>By Kirchhoff's law, the direction with stronger absorption also has stronger thermal emission.<ul>
+<li>Dust grains emit more strongly with <b>E</b> ∥ long axis.</li>
+<li>This leads to <b>E</b><sub>emission</sub> ⊥ <b>B</b>.</li></ul></li>
+<li>[그림: 왼쪽 — 'Aligned grains'가 세로 B를 따라 정렬, 'Polarization of thermal radiation', 'Polarized radiation' E ⊥ B / 오른쪽 — 'Magnetic field and column density measured by Planck towards the Taurus molecular cloud.' 색 = 기둥밀도(주황 높음, 파랑 낮음), 무늬 = 자기장 방향]</li>
+</ul> [[L05.s15]]</div>
+<div class="explain"><b>부가설명</b>
+<p>별빛을 흡수해 데워진 먼지(20–30 K)는 열복사로 다시 방출. 키르히호프 법칙: 흡수한 만큼 방출(열복사). 어느 진동 방향이 더 강할까? 쌍극자 모멘트 = 전하 × 거리 → <b>긴 축 방향</b>으로 전자가 더 멀리 움직일 수 있어 쌍극자 모멘트가 크고, 그 방향 전기장을 잘 흡수 → 그 방향으로 더 많이 방출. 흡수는 뜨거운 별빛(수천~만 K)을, 방출은 20–30 K의 차가운 온도로 하지만 방향성은 같다. 결과적으로 <span class="hl">방출 편광은 E ⊥ B — 소광 편광과 정반대</span>. [[S0915.33]]</p>
+<p>Planck 위성(우주망원경)이 많이 관측: 황소자리(Taurus) 분자운 — 먼지 방출 편광으로 측정한 편광 방향을 90° 돌린 것이 자기장 방향. <span class="hl">길쭉한 구름의 장축과 자기장 방향이 서로 수직</span>인 것을 보여주는 기막힌 관측 — 지상에서는 할 수 없다. [[S0915.33, S0915.34]]</p></div>
+<div class="prof"><b>수업 중 질문</b>Q. 구름 모양이 편광과 관련 있나?<br>A. 편광 방향은 자기장 때문. 왜 구름 장축이 자기장에 수직이냐는 굉장히 깊은 질문 — MHD를 배워야 한다. 물질이 자기장을 <b>거슬러</b> 움직이기는 대단히 어렵다: 자기장을 고무줄처럼 생각하면, 거슬러 움직이면 고무줄이 끌려가 장력이 생기고 되돌리려 한다. 자기장을 <b>따라</b> 움직일 때는 아무 노력이 필요 없다. 그래서 원래 구형 구름이 중력으로 수축하면 B 방향으로 수축 → 납작해져 장축이 B에 수직. 꼭 그렇다는 건 아니고(이런 큰 스케일에서 중력이 중요한지 따져봐야 함), 유체 운동과 자기장의 관련은 연구적으로 매우 흥미로운 주제. [[S0915.34]]</div>
+<div class="formula"><div class="ftitle">암기 — 먼지 편광과 자기장 <span class="star">강조</span></div><table><tr><th></th><th>소광(별빛 투과, 광학)</th><th>열방출(원적외선·submm)</th></tr><tr><td>잘 일어나는 E 방향</td><td>흡수: E ∥ 장축</td><td>방출: E ∥ 장축</td></tr><tr><td>관측되는 편광</td><td>E ∥ 단축 ∥ <b>B</b></td><td>E ∥ 장축 ⊥ <b>B</b></td></tr><tr><td>B 방향 읽기</td><td>편광 방향 그대로</td><td>편광 방향을 90° 회전</td></tr></table><p class="note">전제: 짧은 축 ∥ B 정렬(복사 토크 등), 하늘면에 투영된 B만 알 수 있음. → 예제 3.19. [[L05.s13, L05.s15, S0915.32, S0915.33]]</p></div>
+
+<h4>Review Questions ①② 말로 답하기</h4>
+<div class="explain"><b>모범답 (30초 버전)</b>
+<p>① 타원 \((E_x'/\varepsilon_0\cos\beta)^2+(E_y'/\varepsilon_0\sin\beta)^2=1\). β = 0, ±90° → 선편광(x′, y′), β = ±45° → 원편광, 그 외 → 타원. z = 0에서 β &gt; 0이면 시계 방향(마주 보는 관측자 기준) → 왼손 → LCP(V &lt; 0), β &lt; 0이면 RCP(V &gt; 0).</p>
+<p>② I = 총세기(편광 무관, \(I_{0}+I_{90}\)), Q = 0°와 90° 선편광 세기 차, U = ±45° 선편광 세기 차(Q, U의 비 → 편광각), V = RCP − LCP 원편광 세기 차. 무편광 Q = U = V = 0, 완전편광 \(I^2=Q^2+U^2+V^2\), 편광도 \(\Pi=\sqrt{Q^2+U^2+V^2}/I\). [[L05.s3a, L05.s3b]]</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u10-1"><div class="qq">Q=0이면 무편광인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. U 또는 V가 0이 아닐 수 있다. 예를 들어 45° 선편광은 Q=0, U≠0.</p></div></div>
+
+<div class="qz" data-q="u10-2"><div class="qq">V≠0이면 순수 원편광인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 원편광 성분이 있다는 뜻이다. 타원편광은 Q/U와 V를 동시에 가질 수 있다(순수 원편광은 Q = U = 0).</p></div></div>
+
+<div class="qz" data-q="u10-3"><div class="qq">먼지 방출 지도의 편광 막대가 자기장 방향인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>강의의 정렬 먼지 모형에서 열방출 E벡터는 투영 자기장에 수직이므로 90° 회전해 해석한다. 소광 편광(E ∥ B)과 혼동하지 않는다.</p></div></div>
+
+<div class="qz" data-q="u10-4"><div class="qq">β = −30°인 파의 모양·회전 방향·V의 부호는? (ε₀ = 1, χ = 0)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>타원(장축:단축 = cos30°:sin30° = 1.73:1), z = 0에서 반시계 → RCP. I = 1, Q = cos60° = 0.5, U = 0, V = −sin(−60°) = +0.866 &gt; 0. 검산: Q² + V² = 1 = I².</p></div></div>
+
+<div class="qz" data-q="u10-5"><div class="qq">I_max와 I_min만으로 편광도를 구하는 식을 유도하라 (V = 0).</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>무편광은 필터를 반만 통과: I_max = ½I_unpol + I_pol, I_min = ½I_unpol → I_max − I_min = I_pol, I_max + I_min = I → Π = (I_max − I_min)/(I_max + I_min).</p></div></div>
+
+<div class="qz" data-q="u10-6"><div class="qq">성간 먼지는 왜 정렬하며, 소광 편광이 E ∥ B가 되는 이유는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>길쭉한 먼지가 원자 충돌·복사 토크로 빠르게(~10⁴ s⁻¹) 돌며 짧은 축이 B에 평행하게 정렬. 긴 축 방향 E를 더 잘 흡수하므로 투과광에는 짧은 축(= B) 방향 E가 남는다.</p></div></div>
+
+<div class="qz" data-q="u10-7"><div class="qq">완전편광 단색파에서 I² = Q² + U² + V²를 보이고, 실제 빛에서 부등호가 되는 이유는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>(ε₁² − ε₂²)² + 4ε₁²ε₂²(cos²φ + sin²φ) = (ε₁² + ε₂²)². 실제 빛은 편광이 제각각인 여러 성분의 중첩(준단색파)이라 평균하면 Q, U, V가 부분 상쇄 → Schwarz 부등식으로 I² ≥ Q² + U² + V².</p></div></div>
+
+<p class="note">출처: Lecture05 EMWaves 슬라이드 3①②, 9–15 · 플립 11(평면파·타원편광) · 플립 12(변환관계·손잡이·Stokes) · 9/15 강의 속기(Review Q①②, Stokes 정의~먼지 편광·질문) · 상태: PPT·플립·속기 전수 반영 / 교재 세부 대조 전</p>

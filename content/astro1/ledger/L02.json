@@ -1,0 +1,215 @@
+[
+{
+"id": "L02.s1",
+"loc": "슬라이드 1",
+"raw": "Chapter 1 Radiation Basics — Introduction to Astrophysics I, 2026 Fall, Woong-Tae Kim (PDF 날짜 2026-09-04)",
+"note": "",
+"skip": "표지"
+},
+{
+"id": "L02.s2",
+"loc": "슬라이드 2",
+"raw": "Questions? • Feel free to ask any questions you had while watching the flipped-learning animations.",
+"note": "",
+"skip": "질문 안내(내용 없음)"
+},
+{
+"id": "L02.s3a",
+"loc": "슬라이드 3 ①",
+"raw": "Review Questions • What is the flux?",
+"note": ""
+},
+{
+"id": "L02.s3b",
+"loc": "슬라이드 3 ②",
+"raw": "Review Questions • What is the radiation energy density?",
+"note": ""
+},
+{
+"id": "L02.s3c",
+"loc": "슬라이드 3 ③",
+"raw": "Review Questions • What is the radiation pressure?",
+"note": ""
+},
+{
+"id": "L02.s3d",
+"loc": "슬라이드 3 ④",
+"raw": "Review Questions • What is the emission coefficient (units)?",
+"note": ""
+},
+{
+"id": "L02.s3e",
+"loc": "슬라이드 3 ⑤",
+"raw": "Review Questions • What is the absorption coefficient (units)?",
+"note": ""
+},
+{
+"id": "L02.s3f",
+"loc": "슬라이드 3 ⑥",
+"raw": "Review Questions • What is the optical depth (units)?",
+"note": ""
+},
+{
+"id": "L02.s3g",
+"loc": "슬라이드 3 ⑦",
+"raw": "Review Questions • What is the source function?",
+"note": ""
+},
+{
+"id": "L02.s3h",
+"loc": "슬라이드 3 ⑧",
+"raw": "Review Questions • What is the solution of the RT equation for the medium with optical depth τν?",
+"note": ""
+},
+{
+"id": "L02.s4a",
+"loc": "슬라이드 4 ①",
+"raw": "Flux of Isotropic Radiation • Total flux: Fν = Fν⁺ − Fν⁻;  Fν = ∫ Iν cosθ dΩ = Iν ∫ cosθ sinθ dθ dφ = 2πIν ∫ sinθ cosθ dθ = 2πIν ∫_{−1}^{1} μ dμ = 0,  μ = cosθ",
+"note": ""
+},
+{
+"id": "L02.s4b",
+"loc": "슬라이드 4 ②",
+"raw": "Flux of Isotropic Radiation • Outward flux: Fν⁺ = ∫_0^{2π} ∫_0^{π/2} Iν cosθ sinθ dθ dφ = 2πIν ∫_0^1 μ dμ = πIν",
+"note": ""
+},
+{
+"id": "L02.s4c",
+"loc": "슬라이드 4 ③",
+"raw": "Flux of Isotropic Radiation • Inward flux: Fν⁻ = −∫_0^{2π} ∫_{π/2}^{π} Iν cosθ sinθ dθ dφ = 2πIν ∫_0^{−1} μ dμ = πIν",
+"note": ""
+},
+{
+"id": "L02.s5a",
+"loc": "슬라이드 5 ①",
+"raw": "Black-body Flux at Distance d • At the surface of a star: Fν,surf = πBν – Bν is the Planck function. [그림: 반지름 R인 구(별)와 거리 d 떨어진 점에서 별 가장자리에 접하는 원뿔, 반각 θs, 입체각 Ωs]",
+"note": ""
+},
+{
+"id": "L02.s5b",
+"loc": "슬라이드 5 ②",
+"raw": "• At a distance d from the star: Fν,d = ∫_0^{2π} ∫_0^{θs} Bν cosθ sinθ dθ dφ = 2πBν ∫_{μs}^1 μ dμ = πBν(1 − μs²) = πBν sin²θs = πBν (R/d)² ≈ Bν ΔΩs",
+"note": ""
+},
+{
+"id": "L02.s5c",
+"loc": "슬라이드 5 ③",
+"raw": "where ΔΩs is the solid angle subtended by the source: ΔΩs = ∫_0^{2π} ∫_0^{θs} dΩ = 2π(1 − cosθs) ≈ πθs² = π(R/d)²",
+"note": ""
+},
+{
+"id": "L02.s5d",
+"loc": "슬라이드 5 ④",
+"raw": "• Luminosity: Lν = 4πR²Fν,surf = 4πR²πBν = 4πd²Fν,d",
+"note": ""
+},
+{
+"id": "L02.s6a",
+"loc": "슬라이드 6 ①",
+"raw": "Radiation Pressure: Pν = (1/c) ∫ Iν cos²θ dΩ",
+"note": ""
+},
+{
+"id": "L02.s6b",
+"loc": "슬라이드 6 ②",
+"raw": "• At a distance d from a star, Pν = (2π/c)Bν ∫_0^{θs} cos²θ sinθ dθ = (2π/c)Bν ∫_{μs}^1 μ² dμ = (2π/3c)Bν(1 − cos³θs) = (2π/3c)Bν·(3/2)θs² = (π/c)Bν(R/d)² = (1/c)Fν,d [그림: 슬라이드 5와 같은 별–원뿔 그림]",
+"note": ""
+},
+{
+"id": "L02.s7a",
+"loc": "슬라이드 7 ①",
+"raw": "Radiation Force by Absorption • Define the flux vector of radiation propagating in the k̂-direction: 𝐅ν ≡ ∫ Iν k̂ dΩ – κν𝐅ν = absorbed flux per unit length (per unit frequency) = energy absorbed per unit volume per unit time (per unit frequency)",
+"note": ""
+},
+{
+"id": "L02.s7b",
+"loc": "슬라이드 7 ②",
+"raw": "• Since p = E/c for photons, κν𝐅ν/c = the momentum absorbed per unit volume per unit time (per unit frequency) = the radiation force per unit volume (per unit frequency)",
+"note": ""
+},
+{
+"id": "L02.s7c",
+"loc": "슬라이드 7 ③",
+"raw": "• Therefore, the total radiation force per unit volume is 𝐅rad = (1/c) ∫ κν𝐅ν dν",
+"note": ""
+},
+{
+"id": "L02.s7d",
+"loc": "슬라이드 7 ④",
+"raw": "• Or, the total radiation force per unit mass is 𝐟 = (1/cρ) ∫ κν𝐅ν dν = (1/c) ∬ κ′ν Iν k̂ dν dΩ,  κ′ν = κν/ρ : opacity",
+"note": ""
+},
+{
+"id": "L02.s8a",
+"loc": "슬라이드 8 ①",
+"raw": "Radiation Force vs. Pressure: dPrad/ds = Frad ⇒ Prad = ∫ Frad ds • Consider a slab with optical depth τν. • When Fν(0) is incident on the slab, Fν(s) = Fν(0)e^{−τ′ν} [그림: 초록색 슬랩, 왼쪽에서 Fν(0) 입사, 왼쪽 면 τν·오른쪽 면 0, s는 오른쪽으로 증가, dτ′ν = −κν ds]",
+"note": ""
+},
+{
+"id": "L02.s8b",
+"loc": "슬라이드 8 ②",
+"raw": "• Since ∫ Frad ds = (1/c)∬ κνFν dν ds = (1/c)∬ κνFν(0)e^{−τ′ν} dν ds = (−1/c)∬ Fν(0)e^{−τ′ν} dν dτ′ν = (1/c)∫ Fν(0)(1 − e^{−τν}) dν (빨간색 강조: κν ds → −dτ′ν)",
+"note": ""
+},
+{
+"id": "L02.s8c",
+"loc": "슬라이드 8 ③",
+"raw": "one obtains Prad ≅ F(0)/c in the limit of τν→∞. • This is equal to the expression for Prad at distance d from a star. – Prad corresponds to the radiation pressure when radiation is completely absorbed.",
+"note": ""
+},
+{
+"id": "L02.s9",
+"loc": "슬라이드 9",
+"raw": "(빈 슬라이드)",
+"note": "",
+"skip": "빈 슬라이드"
+},
+{
+"id": "L02.s10a",
+"loc": "슬라이드 10 ①",
+"raw": "Q1 • Using the Sun’s luminosity and radius, calculate its (frequency-integrated) specific intensity. L⊙ = 3.85 × 10³³ erg s⁻¹, R⊙ = 6.96 × 10¹⁰ cm",
+"note": ""
+},
+{
+"id": "L02.s10b",
+"loc": "슬라이드 10 ②",
+"raw": "Q1 • Answers: F⊙ = L⊙/(4πR⊙²) = 6.33 × 10¹⁰ erg s⁻¹ cm⁻²;  I⊙ = F⊙/π ≈ 2.0 × 10¹⁰ erg s⁻¹ cm⁻² sr⁻¹",
+"note": "python 재계산 F=6.32×10¹⁰(반올림 차), I=2.01×10¹⁰"
+},
+{
+"id": "L02.s11a",
+"loc": "슬라이드 11 ①",
+"raw": "Q2 • Assuming that the only important source of light is the Sun, compute the (frequency-integrated) mean intensity and the energy density at the distance of Mars. I⊙ = 2 × 10¹⁰ erg s⁻¹ cm⁻² sr⁻¹, R⊙ = 7 × 10¹⁰ cm, and rMars = 2.28 × 10¹³ cm (mean intensity, energy density 빨간색)",
+"note": ""
+},
+{
+"id": "L02.s11b",
+"loc": "슬라이드 11 ②",
+"raw": "Q2 • Answers: J = 4.6 × 10⁴ erg s⁻¹ cm⁻² sr⁻¹;  u = (4π/c)J = 2 × 10⁻⁵ erg s⁻¹ cm⁻³",
+"note": "python 재계산 J=4.71×10⁴(슬라이드 4.6×10⁴), u=1.98×10⁻⁵ erg cm⁻³ — 슬라이드 u 단위의 s⁻¹은 오타(에너지밀도는 erg cm⁻³)"
+},
+{
+"id": "L02.s12a",
+"loc": "슬라이드 12 ①",
+"raw": "Q3 • Where does the Solar System end? There are different ways of defining the ‘edge’ of the Solar System, but suppose we take it to be the distance at which the radiation energy density from the Sun is equivalent to the ambient mean energy density of interstellar space, the latter about 10⁻¹² erg cm⁻³. • Calculate the radius of the solar system.",
+"note": ""
+},
+{
+"id": "L02.s12b",
+"loc": "슬라이드 12 ②",
+"raw": "Q3 • Answer: r = √(πI⊙R⊙²/(uc)) = 1.0 × 10¹⁷ cm = 6700 au",
+"note": "python 재계산 1.01×10¹⁷ cm = 6.77×10³ au"
+},
+{
+"id": "L02.s13a",
+"loc": "슬라이드 13 ①",
+"raw": "Q4 • Find the relation between the radiation pressure Pν and energy density uν for isotropic radiation (as in the cosmic microwave radiation — 빨간색).",
+"note": ""
+},
+{
+"id": "L02.s13b",
+"loc": "슬라이드 13 ②",
+"raw": "Q4 • Answer: Pν = (1/3)uν",
+"note": ""
+}
+]

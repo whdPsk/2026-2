@@ -1,0 +1,121 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 10장에서 얻은 점전하의 장은 속도장(\(\propto1/\rr^2\))과 가속도장(\(\propto1/\rr\))의 합이었다. 유도 1의 \(1/r\) 기준을 이 둘에 적용하면 어느 쪽이 복사인지 즉시 결정된다 — 답을 미리 말해 보라. 또, 움직이는 차에서 총알을 쏘는 상황을 떠올려 보라: 표적에 총알이 <i>도달하는</i> 비율과 총구를 <i>떠난</i> 비율이 같을까? 이 사소해 보이는 구분이 Liénard 공식의 \(\gamma^6\)를 만든다.</div>
+
+<h4>11.2.1 Larmor 공식 <span class="en">the Larmor formula</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>속도장은 왜 복사가 아닌가</div><ol>
+<li>임의 운동하는 점전하의 정확한 장(10.72, 10.73):
+\[ \vb{E}(\vb{r},t)=\frac{q}{4\pi\eps}\frac{\rr}{(\boldsymbol\rr\cdot\vb{u})^3}\Big[(c^2-v^2)\vb{u}+\boldsymbol\rr\times(\vb{u}\times\vb{a})\Big],\qquad \vb{u}\equiv c\hat{\boldsymbol\rr}-\vb{v}, \]
+\[ \vb{B}=\frac1c\hat{\boldsymbol\rr}\times\vb{E}. \]
+첫 항이 <b>속도장</b>(가속도와 무관), 둘째 항이 <b>가속도장</b>이다.</li>
+<li>전략 변경에 주의하라. §11.1에서는 원점 중심의 고정된 구를 썼지만, 이제는 <b>지연 시각에서의 입자 위치를 중심</b>으로 반지름 \(\rr\)의 구를 그린다. 복사는 시각 \(t_s\equiv t+\rr/c\)에 그 구에 도달하므로, 구 위 모든 점에서 \(t\)가 정확히 지연 시각이 된다.</li>
+<li>차수 세기: \(\boldsymbol\rr\cdot\vb{u}\propto\rr\)이므로 분모는 \(\rr^3\). 첫 항의 분자는 \(\rr\cdot\rr^0\), 둘째 항은 \(\rr\cdot\rr^1\). 따라서
+\[ \vb{E}_{\rm vel}\sim\frac{1}{\rr^2},\qquad \vb{E}_{\rm acc}\sim\frac{1}{\rr}. \]</li>
+<li>구 면적이 \(\propto\rr^2\)이므로 \(\vb{S}\)의 \(1/\rr^2\) 항만 유한한 기여를 남긴다. \(\Rightarrow\) <b>가속도장만이 진짜 복사</b>(그래서 radiation field라고도 부른다):
+\[ \vb{E}_{\rm rad}=\frac{q}{4\pi\eps}\frac{\rr}{(\boldsymbol\rr\cdot\vb{u})^3}\big[\boldsymbol\rr\times(\vb{u}\times\vb{a})\big]. \]
+속도장도 에너지를 나르지만, 그것은 입자가 <b>끌고 다니는</b> 에너지일 뿐 무한대로 떠나지 않는다. (쓰레기차를 따라다니는 파리 vs 날아가 버리는 파리.)</li>
+<li>유용한 부산물: \(\vb{E}_{\rm rad}\perp\hat{\boldsymbol\rr}\)이므로
+\[ \vb{S}=\frac{1}{\muz c}\big[E^2\hat{\boldsymbol\rr}-(\hat{\boldsymbol\rr}\cdot\vb{E})\vb{E}\big]\ \longrightarrow\ \vb{S}_{\rm rad}=\frac{1}{\muz c}E_{\rm rad}^2\,\hat{\boldsymbol\rr}, \]
+즉 복사 에너지는 순수하게 방사 방향으로만 흐른다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>순간정지 좌표계에서의 Larmor 공식</div><ol>
+<li>지연 시각에 입자가 순간적으로 정지해 있다고 하자(\(\vb{v}=0\)). 그러면 \(\vb{u}=c\hat{\boldsymbol\rr}\), \(\boldsymbol\rr\cdot\vb{u}=\rr c\)이고
+\[ \vb{E}_{\rm rad}=\frac{q}{4\pi\eps c^2\rr}\big[\hat{\boldsymbol\rr}\times(\hat{\boldsymbol\rr}\times\vb{a})\big]=\frac{\muz q}{4\pi \rr}\big[(\hat{\boldsymbol\rr}\cdot\vb{a})\hat{\boldsymbol\rr}-\vb{a}\big]. \]
+U21의 마스터 공식과 정확히 같은 <b>투영 구조</b>임에 주목(\(\ddot{\vb{p}}=q\vb{a}\)).</li>
+<li>\[ \vb{S}_{\rm rad}=\frac{1}{\muz c}\left(\frac{\muz q}{4\pi\rr}\right)^2\big[a^2-(\hat{\boldsymbol\rr}\cdot\vb{a})^2\big]\hat{\boldsymbol\rr}=\frac{\muz q^2a^2}{16\pi^2c}\frac{\sin^2\theta}{\rr^2}\hat{\boldsymbol\rr}, \]
+여기서 \(\theta\)는 <b>\(\hat{\boldsymbol\rr}\)와 \(\vb{a}\) 사이의 각</b>이다(속도가 아니라 가속도 기준!).</li>
+<li>각분포: 다시 \(\sin^2\theta\) 도넛. 가속도 방향의 앞뒤로는 복사가 0이고, 가속도에 수직한 평면에서 최대다.</li>
+<li>구면 적분 \(\int\sin^2\theta\,\dd\Omega=8\pi/3\):
+\[ \boxed{\;P=\frac{\muz q^2a^2}{6\pi c}\;}\qquad\text{(Larmor)} \]
+U21에서 \(P=\muz\ddot p^2/6\pi c\)에 \(\ddot{\vb{p}}=q\vb{a}\)를 넣어 얻은 것과 완전히 일치한다 — 전혀 다른 두 경로가 같은 답을 준다는 것이 강력한 검산이다.</li>
+<li>적용 범위: \(v=0\)에서 유도했지만 실제로는 \(v\ll c\)이면 좋은 근사로 성립한다. 특수상대론의 관점에서 \(v=0\)은 "좌석을 잘 고른 것"일 뿐 본질적 제약이 아니다.</li>
+<li><b>핵심 메시지</b>: 정지한 입자도, 등속 운동하는 입자도 복사하지 않는다. <b>가속</b>만이 복사한다. 단, 이 명제는 <b>점전하</b>에 대한 것임을 반드시 기억할 것(체크포인트 Q1).</li>
+</ol></div>
+
+<h4>11.2.2 Liénard 공식 <span class="en">the Liénard formula</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>움직이는 총구: \(\dd W/\dd t\ne \dd W/\dd t_s\)와 \(\gamma^6\)</div><ol>
+<li>일반적인 \(\vb{v}\ne0\)에서는 두 가지 어려움이 생긴다. (i) \(\vb{E}_{\rm rad}\)가 복잡해진다. (ii) 더 미묘하게, <b>구를 통과하는 에너지 비율이 입자를 떠난 비율과 다르다</b>.</li>
+<li>(ii)의 비유: 달리는 차 창문에서 총알을 연사한다고 하자. 표적에 맞는 비율 \(N_t\)와 총구를 떠난 비율 \(N_g\)는 차의 운동 때문에 다르며,
+\[ N_g=\left(1-\frac{\hat{\boldsymbol\rr}\cdot\vb{v}}{c}\right)N_t. \]
+차가 표적을 향해 달리면 총알이 "몰려서" 도착하므로 \(N_t&gt;N_g\)이다.</li>
+<li>형식적으로, \(\dd W/\dd t_s\)가 구를 통과하는 비율이면 전하를 떠난 비율은 (10.78의 \(\partial t/\partial t_s\)를 써서)
+\[ \frac{\dd W}{\dd t}=\frac{\dd W}{\dd t_s}\frac{\partial t_s}{\partial t}=\left(\frac{\boldsymbol\rr\cdot\vb{u}}{\rr c}\right)\frac{\dd W}{\dd t_s},\qquad \frac{\boldsymbol\rr\cdot\vb{u}}{\rr c}=1-\frac{\hat{\boldsymbol\rr}\cdot\vb{v}}{c}. \]
+이 인수는 순수하게 기하학적이며 Doppler 효과에 나오는 것과 같은 인수다.</li>
+<li>따라서 단위 입체각당 복사 일률은
+\[ \boxed{\;\frac{\dd P}{\dd\Omega}=\left(\frac{\boldsymbol\rr\cdot\vb{u}}{\rr c}\right)\frac{1}{\muz c}E_{\rm rad}^2\,\rr^2=\frac{q^2}{16\pi^2\eps}\frac{|\hat{\boldsymbol\rr}\times(\vb{u}\times\vb{a})|^2}{(\hat{\boldsymbol\rr}\cdot\vb{u})^5}\;}\]
+분모의 <b>5제곱</b>이 상대론적 빔 집속(beaming)의 근원이다.</li>
+<li>전 입체각에 걸쳐 적분하면(계산은 고되므로 결과를 인용)
+\[ \boxed{\;P=\frac{\muz q^2\gamma^6}{6\pi c}\left(a^2-\left|\frac{\vb{v}\times\vb{a}}{c}\right|^2\right)\;},\qquad \gamma\equiv\frac{1}{\sqrt{1-v^2/c^2}}. \]
+이것이 <b>Liénard의 일반화</b>다.</li>
+<li>검산: \(v\ll c\)면 \(\gamma\to1\), 둘째 항 \(\to0\) → Larmor 복원. ✓ 그리고 \(v\to c\)에서 \(\gamma^6\) 때문에 복사 일률이 폭발적으로 증가한다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>직선 가속 vs 원운동: bremsstrahlung과 synchrotron</div><ol>
+<li><b>(A) \(\vb{v}\parallel\vb{a}\) (직선 운동, Ex. 11.3)</b>. \(\vb{v}\times\vb{a}=0\)이므로 곧바로
+\[ P_\parallel=\frac{\muz q^2a^2\gamma^6}{6\pi c}. \]</li>
+<li>각분포도 직접 구할 수 있다. \((\vb{u}\times\vb{a})=c(\hat{\boldsymbol\rr}\times\vb{a})\)이고 \(|\hat{\boldsymbol\rr}\times(\hat{\boldsymbol\rr}\times\vb{a})|^2=a^2-(\hat{\boldsymbol\rr}\cdot\vb{a})^2\)이므로, \(z\)축을 \(\vb{v}\)로 잡으면
+\[ \frac{\dd P}{\dd\Omega}=\frac{\muz q^2a^2}{16\pi^2c}\frac{\sin^2\theta}{(1-\beta\cos\theta)^5},\qquad \beta\equiv v/c. \]
+\(\beta=0\)이면 유도 2의 도넛으로 환원된다. ✓</li>
+<li>총 일률 재확인(적분 연습): \(\varphi\) 적분이 \(2\pi\), \(x=\cos\theta\) 치환 후
+\[ P=\frac{\muz q^2a^2}{8\pi c}\int_{-1}^{+1}\frac{1-x^2}{(1-\beta x)^5}\dd x=\frac{\muz q^2a^2}{8\pi c}\cdot\frac43(1-\beta^2)^{-3}=\frac{\muz q^2a^2\gamma^6}{6\pi c}. \ \checkmark \]</li>
+<li><b>빔 집속</b>: \(\beta\to1\)에서 \((1-\beta\cos\theta)^{-5}\)가 도넛을 앞쪽으로 짓눌러 좁은 원뿔로 만든다. 최대 방출각은 \(\theta_{\max}\approx\sqrt{(1-\beta)/2}\sim1/2\gamma\). 정확히 앞 방향(\(\theta=0\))은 여전히 0이지만, 거의 모든 에너지가 \(1/\gamma\) 크기의 원뿔 안에 갇힌다. 고속 전자가 금속 표적에서 급감속할 때 나오는 것이 <b>bremsstrahlung(제동복사)</b>이며, 위 결과가 그 고전 이론이다.</li>
+<li><b>(B) \(\vb{v}\perp\vb{a}\) (순간 원운동)</b>. \(|\vb{v}\times\vb{a}|^2=v^2a^2\)이므로
+\[ P_\perp=\frac{\muz q^2\gamma^6}{6\pi c}a^2(1-\beta^2)=\frac{\muz q^2a^2\gamma^4}{6\pi c}. \]</li>
+<li><b>비교의 결론</b>: 같은 \(|\vb{a}|\)에 대해 \(P_\parallel/P_\perp=\gamma^2\) — 직선 가속이 더 강하게 복사한다. 그러나 <b>실제 가속기에서 문제가 되는 것은 원형 쪽</b>이다. 이유: 선형 가속기에서 주어지는 것은 힘이고, 상대론적 입자에 가할 수 있는 단위 길이당 에너지 이득에는 한계가 있어 \(a\)가 크지 않다. 반면 반지름 \(R\)의 원형 가속기에서는 \(a=v^2/R\approx c^2/R\)가 <b>기하학적으로 강제</b>되고, 그 결과
+\[ P_\perp\approx\frac{\muz q^2c^3\gamma^4}{6\pi R^2} \]
+가 \(\gamma^4\)로 폭증한다. 이것이 <b>synchrotron radiation</b>이며, 전자 원형 충돌기의 에너지 상한을 결정하는 요인이자(그래서 LEP 다음에 LHC는 양성자를 쓴다), 동시에 방사광 가속기라는 강력한 광원의 원리이기도 하다. 상대론적 전자에서 이 복사는 기관차 헤드라이트처럼 좁은 빔이 되어 궤도를 따라 쓸고 지나간다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — Larmor와 Liénard</div>
+\[ \boxed{P_{\rm Larmor}=\frac{\muz q^2 a^2}{6\pi c}}\ (v\ll c),\qquad \boxed{P_{\rm Li\acute{e}nard}=\frac{\muz q^2\gamma^6}{6\pi c}\left(a^2-\frac{|\vb{v}\times\vb{a}|^2}{c^2}\right)} \]
+<p class="note">Liénard \(\to\) Larmor 환원(\(\gamma\to1\), 둘째 항 \(\to0\))은 항상 첫 줄에 쓸 것. 특수경우 두 개만 외우면 충분하다: \(\vb{v}\parallel\vb{a}\Rightarrow \gamma^6\), \(\vb{v}\perp\vb{a}\Rightarrow\gamma^4\).</p></div>
+
+<div class="formula"><div class="ftitle">암기 — 각분포 (직선 가속)</div>
+\[ \frac{\dd P}{\dd\Omega}=\frac{\muz q^2a^2}{16\pi^2c}\frac{\sin^2\theta}{(1-\beta\cos\theta)^5},\qquad \theta_{\max}\xrightarrow{\ \beta\to1\ }\sqrt{\frac{1-\beta}{2}}\sim\frac{1}{2\gamma} \]
+<p class="note">\(\beta=0\)이면 \(\sin^2\theta\) 도넛. 분모의 5제곱이 "헤드라이트 효과"를 만든다. 각분포가 \(a^2\)에만 의존하므로 <b>가속이든 감속이든 패턴이 동일</b>하다.</p></div>
+
+<div class="callout"><b class="head">고전 원자는 \(10^{-11}\)초 만에 무너진다 (Prob. 11.14).</b> Bohr 수소 바닥상태를 고전적으로 다뤄 보자. \(k\equiv1/4\pi\eps\), 원궤도의 총 에너지 \(E=-ke^2/2r\), 가속도 \(a=ke^2/mr^2\). \(\dd E/\dd t=-P_{\rm Larmor}\)에 넣고 정리하면
+\[ r^2\,\dd r=-\frac{4k^2e^4}{3c^3m^2}\dd t\ \Longrightarrow\ t=\frac{r_0^3}{4\,r_e^2\,c},\qquad r_e\equiv\frac{ke^2}{mc^2}\approx2.8\times10^{-15}\,\mathrm{m}. \]
+\(r_0=5\times10^{-11}\,\)m를 넣으면 \(t\approx1.3\times10^{-11}\,\mathrm{s}\). 궤도 대부분에서 \(v\ll c\)이므로 Larmor 공식을 쓴 것도 정당하다. 즉 <b>고전 전자기학은 원자가 존재할 수 없다고 예측한다.</b> 이 파국적 실패가 양자역학이 필요했던 가장 극적인 이유 중 하나이며, U23의 복사 반작용 병리와 함께 "고전 이론의 한계"라는 같은 이야기의 두 얼굴이다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u22-1"><div class="qq">(참/거짓 + 증명 또는 반례) "Larmor 공식에 따르면 가속도가 0이 아닌 전하는 반드시 복사한다. 따라서 일정한 각속도로 회전하는 균일 대전 고리는 복사한다(모든 점이 \(a=\omega^2R\)로 가속하므로)."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>거짓.</b> 등속 회전하는 균일 대전 고리는 <b>정상 전류</b>이므로 \(\vb{E},\vb{B}\)가 모두 정적이다. 정적 장 → \(\vb{S}\)가 시간에 무관하고 \(1/\rr^4\)로 떨어짐 → 복사 0.<br><br>
+<b>오류의 소재</b>: Larmor 공식은 <b>점전하</b>에 대한 것이다. 확장된 전하 분포에 대해서는 각 조각이 "낼" 일률을 더할 수 없는데, 그 이유는 <b>Poynting 벡터가 장의 이차식이라 중첩 원리를 따르지 않기</b> 때문이다:
+\[ |\vb{E}_1+\vb{E}_2|^2\ne|\vb{E}_1|^2+|\vb{E}_2|^2. \]
+교차항이 이 경우 모든 방향에서 완전 상쇄 간섭을 일으킨다.<br><br>
+<b>같은 부류의 반례</b>: 숨쉬는 대전 구껍질(U20 Q1). 반대로 <b>중첩이 성립하는 것</b>은 장 자체(\(\vb{E},\vb{B}\))이지 에너지 흐름이 아니라는 점을 명시하면 만점 답안이다.
+</div></div>
+
+<div class="qz" data-q="u22-2"><div class="qq">(차원해석) Larmor 공식의 형태 \(P\propto \muz q^2 a^2/c\)를, 결과를 모른다고 가정하고 차원해석만으로 유도하라. 즉 \(P=k\,\muz q^2 a^m c^n\)에서 \(m,n\)을 결정하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+\([\muz q^2]=\mathrm{kg\,m\,C^{-2}}\cdot\mathrm{C^2}=\mathrm{kg\cdot m}\).<br>
+\([a^m c^n]=(\mathrm{m\,s^{-2}})^m(\mathrm{m\,s^{-1}})^n=\mathrm{m^{m+n}\,s^{-2m-n}}\).<br>
+전체를 \(\mathrm{W=kg\,m^2s^{-3}}\)에 맞추면
+\[ \mathrm{kg\;m^{1+m+n}\;s^{-2m-n}}=\mathrm{kg\;m^{2}\;s^{-3}} \Rightarrow \begin{cases} 1+m+n=2\\ 2m+n=3 \end{cases} \]
+두 식을 빼면 \(m=2\), 따라서 \(n=-1\):
+\[ \boxed{P\propto\frac{\muz q^2a^2}{c}}. \]
+<b>덤으로 얻는 물리</b>: 지수 \(m=2\)가 <b>강제된다</b>는 것 — 복사 일률은 가속도의 <b>제곱</b>에 비례할 수밖에 없다. 이는 (i) \(P\)가 부호에 무관해야 하고(가속·감속이 같은 패턴), (ii) 장이 \(a\)에 선형이고 에너지가 장의 제곱이라는 사실과 정확히 일치한다. 남는 무차원 계수 \(1/6\pi\)만이 실제 적분에서 나온다. 상대론적 일반화가 \(\gamma\)의 거듭제곱만 곱하는 형태여야 하는 것도 \(\gamma\)가 무차원이기 때문이다 — 차원해석으로는 그 지수를 결정할 수 없고, 실제 계산(또는 \(P\)의 로렌츠 변환)이 필요하다.
+</div></div>
+
+<div class="qz" data-q="u22-3"><div class="qq">(Example 변형, 계산기 없이) 같은 크기의 외력 \(F\)를 전자와 양성자에 각각 가한다. (a) 두 입자의 복사 일률 비는? (b) 전자를 \(\gamma=10^3\)까지 가속한 원형 가속기와 같은 반지름·같은 \(\gamma\)의 양성자 가속기에서 synchrotron 손실 비는? (\(m_p/m_e\approx1836\))</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>(a)</b> 비상대론적 영역에서 \(a=F/m\)이므로 \(P=\muz q^2a^2/6\pi c\propto q^2/m^2\). 전하 크기가 같으므로
+\[ \frac{P_e}{P_p}=\left(\frac{m_p}{m_e}\right)^2\approx1836^2. \]
+암산: \(1836^2=(1800+36)^2=1800^2+2\cdot1800\cdot36+36^2=3.24\times10^6+1.296\times10^5+1296\approx3.37\times10^6\).<br>
+\(\Rightarrow\) <b>약 \(3.4\times10^6\)배</b>. 가벼운 입자가 압도적으로 잘 복사한다.<br><br>
+<b>(b)</b> 원형 궤도에서는 \(a=v^2/R\approx c^2/R\)로 <b>질량과 무관하게 기하학이 결정</b>한다. 따라서
+\[ P_\perp=\frac{\muz q^2c^3\gamma^4}{6\pi R^2} \]
+는 같은 \(R,\gamma\)에서 두 입자가 <b>동일</b>하다. 비는 \(1\).<br><br>
+<b>그런데 왜 실제로는 전자가 훨씬 불리한가?</b> 같은 <b>에너지</b> \(E=\gamma mc^2\)에서 비교해야 하기 때문이다. 같은 \(E\)라면 \(\gamma_e/\gamma_p=m_p/m_e=1836\)이고, \(P\propto\gamma^4\)이므로
+\[ \frac{P_e}{P_p}=1836^4\approx(3.4\times10^6)^2\approx1.1\times10^{13}. \]
+이 천문학적 인수가 LEP(전자·양전자)를 같은 터널의 LHC(양성자)로 바꾼 이유다. <b>"무엇을 고정하고 비교하는가"</b>를 명시하는 것이 이 문제의 채점 포인트다.
+</div></div>
+
+<div class="qz" data-q="u22-4"><div class="qq">(개념) 각분포 \(\dd P/\dd\Omega\)가 가속이든 감속이든 동일한 이유는 무엇인가? 그리고 상대론적 극한에서 복사가 앞쪽으로 쏠리는데, 왜 정확히 \(\theta=0\)에서는 여전히 0인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>(i) 가속·감속 대칭</b>: 복사장은 \(\vb{a}\)에 <b>선형</b>이고 \(\vb{S}\propto E_{\rm rad}^2\)는 <b>이차</b>이므로 \(\vb{a}\to-\vb{a}\)에서 불변이다. 식으로도 \(\dd P/\dd\Omega\propto a^2\)에만 의존한다. 그래서 금속에 부딪혀 급감속하는 전자(bremsstrahlung)와 가속되는 전자가 같은 패턴을 낸다.<br><br>
+<b>(ii) \(\theta=0\)에서 0인 이유</b>: 분자의 \(\sin^2\theta\)는 <b>횡파성</b>에서 온다. 복사장은 \(\hat{\boldsymbol\rr}\times(\hat{\boldsymbol\rr}\times\vb{a})\), 즉 가속도를 시선에 수직한 평면으로 투영한 것이므로, 시선이 \(\vb{a}\)와 정확히 나란하면 투영이 0이다. 이는 상대론적 인수 \((1-\beta\cos\theta)^{-5}\)가 아무리 커도 <b>바꿀 수 없는 기하학적 사실</b>이다.<br><br>
+<b>(iii) 그럼에도 "앞으로 쏠린다"는 말이 옳은 이유</b>: \(\beta\to1\)에서 분모 인수가 \(\theta\sim1/\gamma\) 근처에서 급격히 작아져, \(\sin^2\theta\)의 억제를 압도적으로 이긴다. 결과적으로 최대는 \(\theta_{\max}\approx\sqrt{(1-\beta)/2}\sim1/2\gamma\)라는 <b>0이 아니지만 극히 작은 각</b>에 위치하고, 거의 모든 에너지가 반각 \(\sim1/\gamma\)인 원뿔에 갇힌다. 즉 "정확히 앞은 어둡지만, 그 바로 옆이 눈부시게 밝다."
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> 속도장과 가속도장을 차수로 구분해 Larmor 공식을 유도하고, "움직이는 총구" 인수 \((1-\hat{\boldsymbol\rr}\cdot\vb{v}/c)\)의 물리적 의미를 설명하며, Liénard 공식에서 \(\gamma^6\)(직선)와 \(\gamma^4\)(원운동)를 각각 뽑아내 synchrotron 손실을 논할 수 있다.</div>

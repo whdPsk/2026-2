@@ -1,0 +1,59 @@
+[
+{
+"id": "L07.s1",
+"loc": "슬라이드 1",
+"raw": "Radiation From Moving Charges — Introduction to Astrophysics I, 2026 Fall, Woong-Tae Kim",
+"skip": "표지"
+},
+{
+"id": "L07.s2",
+"loc": "슬라이드 2",
+"raw": "Questions? • Feel free to ask any questions you had while watching the flipped-learning animations.",
+"skip": "질문 안내(내용 없음)"
+},
+{
+"id": "L07.s3a",
+"loc": "슬라이드 3 ①",
+"raw": "Review Questions • What is free-free emission?"
+},
+{
+"id": "L07.s3b",
+"loc": "슬라이드 3 ②",
+"raw": "Review Questions • What is the source of the radiation energy in free-free emission?"
+},
+{
+"id": "L07.s3c",
+"loc": "슬라이드 3 ③",
+"raw": "Review Questions • What is the impulse approximation?"
+},
+{
+"id": "L07.s3d",
+"loc": "슬라이드 3 ④",
+"raw": "Review Questions • Derive an expression for the total energy radiated by an electron of velocity v and impact parameter b interacting with an ion with charge Ze?"
+},
+{
+"id": "L07.s3e",
+"loc": "슬라이드 3 ⑤",
+"raw": "Review Questions • Using the above result, find an expression for Ê(ν)."
+},
+{
+"id": "L07.s4",
+"loc": "슬라이드 4 (Q1)",
+"raw": "Q1 • Calculate the rms speed and the corresponding kinetic energy of an electron in a plasma with temperature T = 10⁴ K. • Answer: v_rms = 674 km s⁻¹, E_K = 1.3 eV"
+},
+{
+"id": "L07.s5",
+"loc": "슬라이드 5 (Q2)",
+"raw": "Q2 • If the electron lost all of its kinetic energy (came to a stop) during an encounter with a nucleus without recombining, what would be the frequency of the resulting emission and in what part of the spectrum does this frequency occur? • Answer: ν = 3.1 × 10¹⁴ Hz, or λ = 9600 Å"
+},
+{
+"id": "L07.s6",
+"loc": "슬라이드 6 (Q3)",
+"raw": "Q3 • Compare the frequency in Q2 with a typical thermal Bremsstrahlung photon at a radio frequency of ν = 5 × 10⁹ Hz from an HII region. • Based on this comparison, what fraction of an electron's kinetic energy has actually been lost during an encounter with a nucleus? • Answer: 1.6 × 10⁻⁵"
+},
+{
+"id": "L07.s7",
+"loc": "슬라이드 7 (Q4)",
+"raw": "Q4 • The HI line emission from a galaxy is optically thin. This emission, averaged over the source solid angle and integrated over all line velocities, is ∫I_ν dv = 0.0458 Jy beam⁻¹ km s⁻¹. The beam solid angle is Ω_b = 5.21 × 10⁻⁹ sr. Calculate the average HI column density of the galaxy. [식] N_H/cm⁻² = 1.82×10¹⁸ ∫[T_B(v)/K] dv/(km s⁻¹) • Answer: N_H = 2.57 × 10²⁰ cm⁻²"
+}
+]

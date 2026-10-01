@@ -1,0 +1,14 @@
+.labcard{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:18px 20px;margin:0 0 18px}
+.labcard h3{font:700 16px/1.4 var(--sans);margin:0 0 8px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.labu{font-size:12.5px;font-weight:500;color:var(--brand);margin-left:auto}
+.lab-control{display:grid;grid-template-columns:130px 1fr 56px;gap:14px;align-items:center;margin:14px 0}
+.lab-control input{width:100%;accent-color:var(--brand)}
+.lab-control output{font:600 13px var(--mono);text-align:right}
+svg.chart{width:100%;max-width:720px;display:block;height:auto;color:var(--ink3);border:1px solid var(--line);border-radius:8px;background:var(--bg);margin-top:6px}
+.chart text{fill:currentColor;font-size:13px}
+.chart line{stroke:var(--line)}
+.chart path{fill:none;stroke:var(--brand);stroke-width:3}
+.chart .ref{stroke:var(--gold);stroke-dasharray:5 5;stroke-width:2}
+.metrics{display:flex;gap:20px;flex-wrap:wrap;margin:14px 0;font-size:14px}
+.metrics strong{color:var(--brand)}
+@media (max-width:600px){.lab-control{grid-template-columns:80px 1fr 44px;gap:8px}}

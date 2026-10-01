@@ -1,0 +1,11 @@
+<div class="exq"><span class="examtag">PPT Review Q③ · 9/15 수업 문제</span><br>What is the Lorentz gauge? Why do we use the Lorentz gauge?<br>(번역) 로렌츠(Lorenz) 게이지란 무엇이고 왜 쓰는가? — 평면파 퍼텐셜 \(\mathbf A=A_0\hat x\,e^{i(kz-\omega t)},\ \phi=0\)으로 확인하라. [[L05.s3c]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>조건 확인 → 장 계산</div><ol>
+<li>Lorenz 조건: \(\nabla\cdot\mathbf A+\frac1c\partial_t\phi=0\). 여기서 A는 x 성분만 있고 z에만 의존 → \(\nabla\cdot\mathbf A=\partial_xA_x=0\), φ = 0 → 만족. [[S0915.09]]</li>
+<li>\(\mathbf E=-\nabla\phi-\frac1c\partial_t\mathbf A=\frac{i\omega}cA_0\hat x\,e^{i(kz-\omega t)}=ikA_0\hat x\,e^{i(\dots)}\) (ω = ck). [[S0915.08]]</li>
+<li>\(\mathbf B=\nabla\times\mathbf A=\hat y\,\partial_zA_x=ikA_0\hat y\,e^{i(\dots)}\). → \(|\mathbf E|=|\mathbf B|\), E ⊥ B ⊥ k — 플립 10의 평면파와 일치. [[F10.10, F10.11]]</li>
+<li>진공이면 Lorenz 게이지에서 \(\Box\mathbf A=0\)(파동방정식) → \(e^{i(kz-\omega t)}\)가 해. 원천이 있으면 \(\Box\phi=-4\pi\rho,\ \Box\mathbf A=-\frac{4\pi}c\mathbf j\). [[S0915.09, S0915.10]]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>게이지 = 장을 바꾸지 않는 퍼텐셜 선택의 자유를 고정하는 조건. Lorenz 조건을 쓰면 φ와 A의 방정식이 서로 분리된 (원천 있는) 파동방정식이 되어 간단해진다 — "왜 쓰나 = 미분방정식이 간단해지니까."</p></div>
+<div class="prof"><b>수업 중 질문</b>Lorenz 게이지를 안 쓰면? 식 형태는 달라지지만 장(결과)은 같아야 한다. 굳이 어려운 길로 갈 필요가 없다. [[S0915.16]]</div>
+<div class="qz" data-q="ex3.12-a"><div class="qq"><b>+α</b> 게이지 변환 \(\mathbf A\to\mathbf A+\nabla\chi\)에서 φ는 어떻게 바꿔야 E가 불변인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\phi\to\phi-\frac1c\partial_t\chi\). 그러면 \(-\nabla\phi-\frac1c\partial_t\mathbf A\)에서 χ 항이 상쇄.</p></div></div>
+<div class="qz" data-q="ex3.12-b"><div class="qq"><b>+α</b> 게이지를 바꾸면 관측되는 편광·세기가 바뀌나?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. E, B가 불변이므로 Stokes 변수도 불변.</p></div></div>

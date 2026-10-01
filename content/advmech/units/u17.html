@@ -1,0 +1,47 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 막대 양 끝에 추를 단 아령을, 막대가 회전축과 비스듬한 각 \(\alpha\)를 이루도록 축에 붙여 돌린다. 각속도 \(\boldsymbol\omega\)는 축 방향이다. 각운동량 \(\vb L=\sum m\,\vb r\times\vb v\)는 어느 방향일까 — 축 방향? 막대에 수직? 그리고 \(\vb L\)이 방향을 계속 바꾼다면 축을 붙잡은 베어링은 무엇을 해 줘야 할까?</div>
+
+<h4>11.4 강체의 각운동량 <span class="en">angular momentum</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>\(L_i=\sum_jI_{ij}\omega_j\) <b>(필수)</b></div>
+<ol>
+<li>기준점 \(O\)는 (a) 물체의 한 점이 고정되어 있으면 그 점, (b) 아니면 CM. 그러면 \(\vb p_\alpha=m_\alpha\boldsymbol\omega\times\vb r_\alpha\).</li>
+<li>\[ \vb L=\sum_\alpha m_\alpha\,\vb r_\alpha\times(\boldsymbol\omega\times\vb r_\alpha)=\sum_\alpha m_\alpha\left[r_\alpha^2\boldsymbol\omega-\vb r_\alpha(\vb r_\alpha\cdot\boldsymbol\omega)\right] \]
+(BAC−CAB).</li>
+<li>\(i\) 성분: \(L_i=\sum_\alpha m_\alpha\left[\omega_ir_\alpha^2-x_{\alpha,i}\sum_jx_{\alpha,j}\omega_j\right]=\sum_j\omega_j\sum_\alpha m_\alpha\left(\delta_{ij}r_\alpha^2-x_{\alpha,i}x_{\alpha,j}\right)\).</li>
+<li>괄호 합이 \(I_{ij}\)이므로
+\[ \boxed{\ L_i=\sum_jI_{ij}\omega_j\quad\Longleftrightarrow\quad\vb L=\I\cdot\boldsymbol\omega\ } \]</li>
+<li><b>결정적 결과</b>: 비대각 성분이 있으면 \(\boldsymbol\omega=(\omega,0,0)\)이어도 \(\vb L=(I_{11},I_{21},I_{31})\omega\) — <b>\(\vb L\)과 \(\boldsymbol\omega\)는 일반적으로 평행하지 않다</b>.</li>
+<li>\(\sum_i\omega_iL_i=\sum_{ij}I_{ij}\omega_i\omega_j=2T_{\rm rot}\) → \(T_{\rm rot}=\tfrac12\boldsymbol\omega\cdot\vb L\). (텐서·벡터 → 벡터, 텐서·벡터·벡터 → 스칼라.)</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>비스듬한 아령 — Example 11.10 (그림 11-4, 11-11)</div>
+<ol>
+<li>가벼운 막대 양끝 \(m_1,m_2\), 원점(축 위의 막대 중점)에서 거리 \(b\). 물체계: \(x_3\)을 막대 방향, \(x_2\)는 막대와 \(\boldsymbol\omega\)가 이루는 평면 안. 막대와 \(\boldsymbol\omega\)의 각 \(\alpha\):
+\[ \boldsymbol\omega=(0,\ \omega\sin\alpha,\ \omega\cos\alpha). \]</li>
+<li>주관성 모멘트(질점이 \(x_3\)축 위): \(I_1=I_2=(m_1+m_2)b^2\), \(I_3=0\).</li>
+<li>\(\vb L=(0,\ (m_1+m_2)b^2\omega\sin\alpha,\ 0)\) — <b>막대에 수직</b>이고 \(\boldsymbol\omega\)와 각 \(90°-\alpha\).</li>
+<li>물체가 돌면 \(\vb L\)은 \(\boldsymbol\omega\) 둘레로 원뿔을 그린다 → \(\dot{\vb L}\ne0\) → 외부 토크가 필요. Euler 방정식(U22, \(\dot{\boldsymbol\omega}=0\)):
+\[ N_1=-(I_2-I_3)\omega_2\omega_3=-(m_1+m_2)b^2\omega^2\sin\alpha\cos\alpha,\quad N_2=N_3=0 . \]
+토크는 \(x_1\)(막대와 \(\boldsymbol\omega\) 평면에 수직) 방향, 크기는 \(\alpha=45°\)에서 최대. 베어링이 계속 이 짝힘을 공급 — 균형 안 맞는 바퀴가 흔들리는 이유(동적 불균형).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>평면 진자를 텐서로 — Example 11.4</div>
+<ol>
+<li>길이 \(b\)인 막대 끝에 \(m_1\), 중간(\(b/2\))에 \(m_2\). 원점 = 매단 점, \(\uv e_1\) 막대 방향, \(\uv e_3\) 회전면에 수직. \(\boldsymbol\omega=\dot\theta\uv e_3\).</li>
+<li>모든 질량이 \(x_1\)축 위 → \(I_{33}=m_1b^2+m_2b^2/4\), 비대각 0. \(L_3=I_{33}\dot\theta\).</li>
+<li>중력 토크: \(\vb r\times m\vb g\)의 \(3\)성분 \(=-(m_1b+m_2b/2)g\sin\theta\). \(\dot L_3=N_3\):
+\[ \omega_0^2=\frac{g}{b}\,\frac{m_1+m_2/2}{m_1+m_2/4}. \]
+검산: \(m_2\to0\): \(g/b\) ✓, \(m_1\to0\): \(2g/b\) (길이 \(b/2\)) ✓.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 각운동량</div>
+\[ \boxed{\ \vb L=\I\cdot\boldsymbol\omega,\qquad T_{\rm rot}=\tfrac12\boldsymbol\omega\cdot\vb L\ } \]
+<p class="note">\(\vb L\parallel\boldsymbol\omega\) ⟺ \(\boldsymbol\omega\)가 주축 방향(U18). 비스듬한 아령: \(|\vb L|=(m_1+m_2)b^2\omega\sin\alpha\), 필요 토크 \((m_1+m_2)b^2\omega^2\sin\alpha\cos\alpha\).</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u17-1"><div class="qq">\(\vb L=\sum m\,\vb r\times(\boldsymbol\omega\times\vb r)\)에서 \(L_i=\sum_jI_{ij}\omega_j\)를 유도하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 1. BAC−CAB 후 \(\omega_i=\sum_j\delta_{ij}\omega_j\)로 바꾸는 것이 요령.</p></div></div>
+
+<div class="qz" data-q="u17-2"><div class="qq">Example 11.3의 정육면체(모서리 원점)를 \(x_1\)축 둘레로 \(\omega\)로 돌린다. \(\vb L\)을 구하고 \(\boldsymbol\omega\)와의 각을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\vb L=Mb^2\omega\left(\tfrac23,-\tfrac14,-\tfrac14\right)\) (Example 11.5 앞부분). \(\cos\phi=\dfrac{2/3}{\sqrt{4/9+1/8}}=\dfrac{0.667}{0.754}=0.884\) → \(\phi\approx27.9°\).</p></div></div>
+
+<div class="qz" data-q="u17-3"><div class="qq">비스듬한 아령에서 \(\vb L\)의 끝이 그리는 원의 반지름과, \(\dot{\vb L}=\boldsymbol\omega\times\vb L\)(고정계에서 \(\vb L\)은 물체와 함께 돈다)로 토크 크기를 구해 Euler 방정식 결과와 비교하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\vb L\)과 \(\boldsymbol\omega\)의 각 \(90°-\alpha\) → \(\vb L\)의 \(\boldsymbol\omega\)에 수직인 성분 \(L\cos\alpha\)가 원의 반지름. \(|\dot{\vb L}|=\omega L\sin(90°-\alpha)=\omega(m_1+m_2)b^2\omega\sin\alpha\cos\alpha\) ✓ — 같다.</p></div></div>

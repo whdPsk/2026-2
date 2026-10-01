@@ -1,0 +1,19 @@
+<div class="predict"><b>◈ 학습 목표.</b> 13.1 · 13.2 · 13.3의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.</div>
+
+<h4>기말 <span class="en">약 45분</span></h4>
+
+<p>정역학평형에서는압력구배가중력을상쇄한다. 중력이아래쪽이면위로갈수록압력이감소해야한다. 평형식만으로밀도분포가정해지지는않고, 등온또는폴리트로프같은상태관계와중력의원천을정해야한다.</p><p>일정중력의등온대기는지수분포지만, 중심질량이만드는얇은원반의수직중력은z에비례하여Gaussian분포가된다. 기체자체중력이중요한등온층은sech²분포를갖는다. 모양의차이는‘모두등온’이어도중력모형이다르기때문이다.</p><p>구대칭자체중력에서는평형식과질량누적식을함께풀어야한다. P=Kρ¹⁺¹ᐟⁿ인폴리트로프를무차원화하면Lane–Emden방정식이된다. 중심밀도는규모를정하고, n은정규화된모양을결정한다. 단열과정의γ와평형의폴리트로프지수는물리적으로다른역할일수있다.</p><p>등온기체구는무한히뻗는해를그대로실제구름에적용하면총질량문제가생긴다. 외부압력으로잘라내고안정성을검토해야한다. 뒤의Bonnor–Ebert/비리얼단원과연결하자.</p>
+
+<div class="callout"><b class="head">강의·교재 강조점.</b> 교재312쪽 폴리트로프 중심압력·무차원계수 직접 확인; 절 전수 대조 전 / 후속 강의·HW 강조점은 아직 미반영.</div>
+
+<div class="formula"><div class="ftitle">암기 — 정역학 평형·원반·기체구</div><p><b>구대칭 정역학</b></p>\[ {dP\over dr}=-{GM(r)\rho\over r^2},\quad {dM\over dr}=4\pi r^2\rho \]<p class="note">M(r)는r안에있는질량이다. 표면총질량을모든r에넣지말것. <i>조건: 구대칭·비회전·비자화</i></p><p><b>등온 수직분포</b></p>\[ \rho(z)=\rho_0e^{-z/H},\ H=c_T^2/g;\qquad\rho(z)=\rho_0e^{-z^2/(2H^2)},\ H=c_T/\Omega \]<p class="note">첫식은일정g, 둘째는g_z=Ω²z. <i>조건: 첫식z≥0; 둘째는중심질량지배얇은원반</i></p><p><b>Lane–Emden</b></p>\[ \rho=\rho_c\theta^n,\ r=a\xi,\quad {1\over\xi^2}{d\over d\xi}\left(\xi^2{d\theta\over d\xi}\right)=-\theta^n,\quad a^2={(n+1)K\rho_c^{1/n-1}\over4\pi G} \]<p class="note">중심조건θ(0)=1, θ′(0)=0. θ가0이되는지점이표면. <i>조건: P=Kρ¹⁺¹ᐟⁿ인정역학구</i></p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u24-1"><div class="qq">등온이면밀도는항상지수적으로감소하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>중력모형에따라다르다. 일정g인지, z에비례하는지, 자체중력인지확인해야한다.</p></div></div>
+
+
+<div class="qz" data-q="u24-2"><div class="qq">평형이라는사실은안정성까지보장하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 작은섭동이성장하는지별도로검사해야한다.</p></div></div>
+
+
+<p class="note">출처: 교재 p.306–316 · 상태: 교재 선행 · 교재312쪽 폴리트로프 중심압력·무차원계수 직접 확인; 절 전수 대조 전</p>

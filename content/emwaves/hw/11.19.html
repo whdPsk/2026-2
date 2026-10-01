@@ -1,0 +1,21 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> 방정식을 \(t-\epsilon\)에서 \(t+\epsilon\)까지 적분:</p>
+\[ \int_{t-\epsilon}^{t+\epsilon}a\,dt'=\tau\big[a(t+\epsilon)-a(t-\epsilon)\big]+\frac1m\int_{t-\epsilon}^{t+\epsilon}F\,dt'. \]
+<p>\(F\)가 유한(유한한 도약 포함)이면 \(\epsilon\to0\)에서 양쪽 적분이 모두 0으로 가므로 \(\Delta a=0\). 즉 \(\boxed{a\ \text{는 연속}}\). (복사반작용이 \(a\)의 급변을 감쇠시킨다.)</p>
+<p><b>(b)</b> \(\dot a-a/\tau=-F/m\tau\)의 해는 \(a=Ae^{t/\tau}+F/m\):</p>
+\[ \text{(i) }t&lt;0:\;a=A_ie^{t/\tau},\qquad \text{(ii) }0&lt;t&lt;T:\;a=A_me^{t/\tau}+\frac Fm,\qquad \text{(iii) }t&gt;T:\;a=A_fe^{t/\tau}. \]
+<p><b>(c)</b> 연속조건 \(t=0\): \(A_i=A_m+F/m\); \(t=T\): \(A_me^{T/\tau}+F/m=A_fe^{T/\tau}\). 두 식을 합치면</p>
+\[ \boxed{\;A_f=A_i-\frac Fm\left(1-e^{-T/\tau}\right)\;} \]
+<p>\(A_f=0\)(폭주 제거) \(\Rightarrow A_i=\frac Fm(1-e^{-T/\tau})\neq0\) → 예비가속 발생.<br>
+\(A_i=0\)(예비가속 없음) \(\Rightarrow A_f=-\frac Fm(1-e^{-T/\tau})\neq0\) → 폭주 발생. <b>둘 다는 불가능</b>.</p>
+<p><b>(d)</b> \(A_f=0\)을 택하면 \(A_i=\frac Fm(1-e^{-T/\tau})\), \(A_m=-\frac Fm e^{-T/\tau}\):</p>
+\[ \boxed{\;a(t)=\begin{cases}\dfrac Fm\left(1-e^{-T/\tau}\right)e^{t/\tau}, & t&lt;0\\[6pt]
+\dfrac Fm\left(1-e^{(t-T)/\tau}\right), & 0&lt;t&lt;T\\[6pt] 0,& t&gt;T\end{cases}\;} \]
+<p>\(v(-\infty)=0\)에서 적분하면</p>
+\[ \boxed{\;v(t)=\begin{cases}\dfrac{F\tau}{m}\left(1-e^{-T/\tau}\right)e^{t/\tau}, & t&lt;0\\[6pt]
+\dfrac Fm\left[t+\tau\left(1-e^{(t-T)/\tau}\right)\right], & 0&lt;t&lt;T\\[6pt] \dfrac{FT}{m},& t&gt;T\end{cases}\;} \]
+<p>최종속도는 중성입자와 <b>똑같이</b> \(FT/m\)이다.</p>
+<p><b>(e)</b> 중성입자: \(a\)는 높이 \(F/m\)의 계단(0→\(F/m\)→0), \(v\)는 꺾인 직선. 하전입자: \(a\)는 \(t&lt;0\)에서 이미 지수적으로 상승하기 시작해 \(t=0^-\)에 \(\frac Fm(1-e^{-T/\tau})\)에 도달하고, \(0&lt;t&lt;T\)에서 서서히 <b>감소</b>해 \(t=T\)에 정확히 0이 된 뒤 계속 0. \(v\)는 어디서나 매끄럽고 결국 같은 \(FT/m\)에 안착. 모든 "모서리"가 시간폭 \(\tau\sim6\times10^{-24}\)s 정도로 둥글려진다.</p>
+<div class="alabel">감점 포인트</div>
+<p>(b)에서 특수해를 \(F/m\) 대신 \(-F/m\)로 쓰거나 지수를 \(e^{-t/\tau}\)로 쓰는 부호 실수 — 폭주해가 \(e^{+t/\tau}\)라는 점이 이 문제의 핵심이다.</p></div><!--/sol-->

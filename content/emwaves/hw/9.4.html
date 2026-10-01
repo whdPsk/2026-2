@@ -1,0 +1,10 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(\tilde f(z,t)=Z(z)T(t)\)로 놓고 \(\partial_z^2 f=\frac{1}{v^2}\partial_t^2 f\)에 대입 후 \(ZT\)로 나누면
+\[\frac{Z''}{Z}=\frac{1}{v^2}\frac{\ddot T}{T}=\text{const}\equiv -k^2 .\]
+(상수가 음수여야 \(z\to\pm\infty\)에서 발산하지 않는 진동해를 얻는다.) 그러면
+\[Z(z)=e^{\pm ikz},\qquad T(t)=e^{\pm i\omega t},\quad \omega=|k|v .\]
+\(k\)를 음수까지 허용하면 \(e^{ikz}\) 하나로 좌·우 진행을 모두 담을 수 있고, 시간 인자는 \(e^{-i\omega t}\) 하나만 잡으면 된다(다른 부호는 \(\tilde f^*\)이므로 실수부를 취할 때 중복). \(k\)가 연속 변수이므로 일반해는 중첩(적분):
+\[\boxed{\tilde f(z,t)=\int_{-\infty}^{\infty}\tilde A(k)\,e^{i(kz-\omega t)}dk,\qquad \omega=|k|v}\]
+<div class="alabel">감점 포인트</div>
+분리상수를 \(+k^2\)로 두면 지수적으로 발산/감쇠하는 비물리적 해가 나온다. 부호 선택 이유를 한 줄이라도 쓸 것.</div><!--/sol-->

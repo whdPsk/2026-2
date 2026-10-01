@@ -1,0 +1,10 @@
+<div class="exq"><span class="examtag">9/29 수업 적용 · PPT 슬라이드 7 Orion</span><br>The turn-over frequency corresponds to \(\tau_\nu=1\). (Example spectrum: Orion nebula)<br><b>문제.</b> Orion 성운 전파 스펙트럼의 turnover 주파수가 약 1 GHz이다. \(T=10^4\) K, 순수 수소라고 하고 EM을 구하라. 반지름이 0.5 pc인 균일 구라고 가정하면 전자밀도는? [[L08.s7b]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>τ = 1 → EM → 크기 → \(n_e\)</div><ol>
+<li>turnover에서 τ = 1, 수소만(\(Z=1\)), \(T_4=1\), \(n_i/n_p\approx1\)을 광학 깊이 식에 넣는다. [[D0929.28]]</li>
+<li>\(1=3.37\times10^{-7}\times1\times1^{-2.118}\times\mathrm{EM}\) → \(\mathrm{EM}=3.0\times10^6\) cm⁻⁶ pc.</li>
+<li>크기를 다른 방법으로 알면(가정 R = 0.5 pc): \(\mathrm{EM}=n^2\cdot\tfrac43R\) → \(n=\sqrt{3.0\times10^6/0.667}=2.1\times10^3\) cm⁻³. [[D0929.23, D0929.28]]</li>
+<li>질량까지: \(M=n m_p\tfrac43\pi R^3\) — "천체 연구의 목표는 광도·온도·밀도·질량 같은 물리량". [[D0929.23]]</li></ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>EM ≈ 3×10⁶ cm⁻⁶ pc; (R = 0.5 pc 가정 시) \(n_e\approx2\times10^3\) cm⁻³. EM은 turnover 주파수에 \(\nu^{2.118}\)로 민감 — 1.5 GHz면 7×10⁶, 2 GHz면 1.3×10⁷ (python).</p></div>
+<div class="trap"><b>주의</b>R = 0.5 pc는 계산 연습용 가정값(PPT·녹음에 없음). 녹음상 Orion turnover는 "1, 1, 2 GH" — 대략 1–2 GHz로 들리며 그림의 화살표는 ~10³ MHz 근처. [[D0929.27]]</div>
+<div class="qz" data-q="ex5.14-a"><div class="qq"><b>+α</b> turnover가 2 GHz라면 EM은 1 GHz 경우의 몇 배인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(2^{2.118}=4.3\)배 → 1.3×10⁷ cm⁻⁶ pc. 밀도는 √4.3 ≈ 2.1배.</p></div></div>
+<div class="qz" data-q="ex5.14-b"><div class="qq"><b>+α</b> 그래프의 저주파 쪽 기울기 ≈ 2, 고주파 쪽 ≈ −0.1을 각각 무엇으로 설명하나?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>저주파: 두꺼워 \(F=B_\nu\Omega\), RJ \(\propto\nu^2\). 고주파: 얇아 \(F=\bar\tau_\nu B_\nu\Omega\propto\nu^{-2.118}\nu^2=\nu^{-0.118}\).</p></div></div>

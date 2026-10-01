@@ -1,0 +1,11 @@
+<div class="exq"><span class="examtag">PPT Review Q④ · 9/15 수업 문제</span><br>What is the retarded time?<br>(번역) 지연시간이란? — 관측자에서 원천까지 거리가 (a) 1 m(실험실), (b) 1 AU(태양), (c) 2 kpc(게성운 펄서 정도)일 때 \(t-t_{\rm ret}\)을 구하라. [[L05.s3d]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(t_{\rm ret}=t-|\mathbf x-\mathbf x'|/c\)</div><ol>
+<li>장은 빛의 속도로 전달 → 시각 t에 받은 신호는 \(|\mathbf x-\mathbf x'|/c\) 이전, <b>그때의</b> 전하 위치에서 방출. [[S0915.11]]</li>
+<li>(a) 100 cm / 3.00×10¹⁰ cm s⁻¹ = 3.3×10⁻⁹ s = 3.3 ns.</li>
+<li>(b) 1.496×10¹³ cm / c = 499 s ≈ 8.3분.</li>
+<li>(c) 2×10³ × 3.086×10¹⁸ cm / c = 2.06×10¹¹ s ≈ 6.5×10³ yr. (python 재계산)</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>3.3 ns · 499 s(8.3분) · ~6500년. 그러나 지연시간이 중요한 이유는 크기가 아니라 "신호를 받을 때 방출한 전하는 이미 다른 곳에 있다" — 가속 궤적을 방출 시각 순서대로 추적해야 하기 때문.</p></div>
+<div class="intuit"><b>수업 강조</b>"굉장히 중요하고." 지구 실험실에서도 원리상 지연은 있지만 너무 짧다. 우주 팽창 같은 우주론적 효과는 고려하지 않는다. [[S0915.11, S0915.12]]</div><div class="prof"><b>수업 중 질문</b>거리만큼 시간을 따로 보정하면 되지 않나? → 복사는 가속 때문이고 가속은 속도의 크기·방향이 변하는 것 → 정확한 시간대로 궤적을 따라가야 가속도·장을 계산하고, 비밍 같은 상대론 효과도 들어간다. [[S0915.15]]</div>
+<div class="qz" data-q="ex3.13-a"><div class="qq"><b>+α</b> 원운동하는 전자(주기 P)를 거리 r에서 볼 때, 받는 신호의 주기는 P와 같은가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>원운동 중심이 정지해 있으면 평균 주기는 P. 다만 전자가 관측자 쪽으로 다가올 때와 멀어질 때 지연시간이 달라져 한 주기 안의 신호 모양은 일그러진다(상대론적이면 비밍·펄스 압축).</p></div></div>
+<div class="qz" data-q="ex3.13-b"><div class="qq"><b>+α</b> 8 kpc(은하 중심)에서 오는 빛의 지연시간은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>8×10³ pc × 3.086×10¹⁸ cm/pc / c ≈ 8.2×10¹¹ s ≈ 2.6×10⁴ yr.</p></div></div>

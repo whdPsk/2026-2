@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>Section 11.1.4의 논법을 자기 쌍극자에 적용하면, 복사대의 벡터퍼텐셜은</p>
+\[ \mathbf A_{\rm rad}(\mathbf r,t)=\frac{\mu_0}{4\pi c}\frac{\dot{\mathbf m}(t_0)\times\hat{\mathbf r}}{r},\qquad t_0=t-\frac rc . \]
+<p>(확인: \(\mathbf m=m_0\cos\omega t\,\hat{\mathbf z}\)를 넣으면 Eq. 11.35가 그대로 나온다.)</p>
+\[ \mathbf E=-\frac{\partial\mathbf A}{\partial t}=\frac{\mu_0}{4\pi cr}\big[\hat{\mathbf r}\times\ddot{\mathbf m}(t_0)\big],\qquad
+\mathbf B=\frac1c\hat{\mathbf r}\times\mathbf E . \]
+\[ \mathbf S=\frac{1}{\mu_0c}|\mathbf E|^2\hat{\mathbf r}=\frac{\mu_0}{16\pi^2c^3r^2}\,\ddot m^2\sin^2\Theta\,\hat{\mathbf r} \]
+<p>(\(\Theta\)는 \(\ddot{\mathbf m}\)에서 잰 각). 적분:</p>
+\[ \int\sin^2\Theta\,d\Omega=2\pi\int_0^\pi\sin^3\Theta\,d\Theta
+=2\pi\int_{-1}^{1}(1-x^2)\,dx=2\pi\Big(2-\frac23\Big)=2\pi\cdot\frac43=\frac{8\pi}{3}. \]
+\[ P=\frac{\mu_0\ddot m^2}{16\pi^2c^3}\cdot\frac{8\pi}{3}=\boxed{\;\frac{\mu_0\,[\ddot{\mathbf m}(t_0)]^2}{6\pi c^3}\;} \]
+<p><b>고전 필수</b>: 전기 쌍극자 \(P=\mu_0\ddot p^2/6\pi c\)와 비교하면 \(c^2\)만큼 약하다 — 자기 쌍극자 복사가 언제나 훨씬 약한 이유.</p>
+<div class="alabel">감점 포인트</div>
+<p>\(\int_0^\pi\sin^3\Theta\,d\Theta=4/3\)을 \(\pi/2\)나 \(2\)로 잘못 쓰는 것. \(x=\cos\Theta\) 치환을 반드시 명시할 것.</p></div><!--/sol-->

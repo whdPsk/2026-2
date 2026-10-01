@@ -1,0 +1,14 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+(a) 도선을 \(x\)축, 관측점 \((0,d)\). 현재 위치 \((x,0)\)의 전하요소 \(\lambda\,dx\)에 대해 \(R=\sqrt{x^2+d^2}\), \(\sin\theta=d/R\). \(x\)성분은 대칭으로 상쇄되고 수직 성분만 남는다:
+\[ E_\perp=\frac{\lambda(1-\beta^2)}{4\pi\eps}\int_{-\infty}^{\infty}\frac{(d/R)\,dx}{R^2(1-\beta^2d^2/R^2)^{3/2}}
+=\frac{\lambda d(1-\beta^2)}{4\pi\eps}\int_{-\infty}^{\infty}\frac{dx}{(R^2-\beta^2d^2)^{3/2}} . \]
+\(R^2-\beta^2d^2=x^2+d^2(1-\beta^2)\)이고 \(\int_{-\infty}^{\infty}dx/(x^2+A^2)^{3/2}=2/A^2\)이므로
+\[ E_\perp=\frac{\lambda d(1-\beta^2)}{4\pi\eps}\cdot\frac{2}{d^2(1-\beta^2)}=\boxed{\frac{\lambda}{2\pi\eps d}\ \hat{\vb{s}}} \]
+\(\beta\)가 <b>완전히 상쇄</b>되어 정지 도선과 똑같다. (물리적으로: \(\gamma\) 인자의 증강과 각도분포의 수축이 정확히 상쇄.)
+
+(b) \(\vb{B}=\dfrac{1}{c^2}\vb{v}\times\vb{E}\) (등속). \(\vb{v}=v\hat{\vb{x}}\), \(\vb{E}=\frac{\lambda}{2\pi\eps d}\hat{\vb{y}}\):
+\[ \vb{B}=\frac{v}{c^2}\frac{\lambda}{2\pi\eps d}(\hat{\vb{x}}\times\hat{\vb{y}})=\boxed{\frac{\muz\lambda v}{2\pi d}\hat{\boldsymbol\varphi}=\frac{\muz I}{2\pi d}\hat{\boldsymbol\varphi}},\quad I=\lambda v \]
+Ampère 법칙 그대로 ✓
+<div class="alabel">감점 포인트</div>
+\(\lambda\)를 정지좌표계의 선밀도로 착각하는 것 — 여기서 \(\lambda\)는 실험실계에서 잰 값이다.</div><!--/sol-->

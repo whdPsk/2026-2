@@ -1,0 +1,17 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<b>(a)</b> 얇은 원판이면 옆면 flux는 무시되고 위·아래 면만 남으므로 \(\oint\mathbf S\cdot d\mathbf a=0\)은 \(z=0\)에서 \(\langle S_z\rangle\)의 연속을 뜻한다. 매질 1에서
+\[\mathbf S=\mathbf S_I+\mathbf S_R+\frac{1}{\mu_1}\left[(\mathbf E_I\times\mathbf B_R)+(\mathbf E_R\times\mathbf B_I)\right].\]
+평행 편광에서 \(\hat n_I=(\cos\theta_I,0,-\sin\theta_I)\), \(\tilde{\mathbf B}_I=\frac{E_{0I}}{v_1}\hat y\); \(\hat n_R=(\cos\theta_I,0,\sin\theta_I)\), \(\tilde{\mathbf B}_R=-\frac{E_{0R}}{v_1}\hat y\)이다. \(z=0\)에서 지수인자가 모두 같으므로
+\[\left(\tilde{\mathbf E}_I\times\tilde{\mathbf B}_R^*\right)_z=-\frac{E_{0I}E_{0R}}{v_1}\cos\theta_I,\qquad \left(\tilde{\mathbf E}_R\times\tilde{\mathbf B}_I^*\right)_z=+\frac{E_{0R}E_{0I}}{v_1}\cos\theta_I .\]
+\[\boxed{\text{교차항의 }z\text{성분은 정확히 상쇄된다}}\]
+(반면 \(x\)성분은 상쇄되지 않는다 — 경계면을 따라 흐르는 에너지이므로 보존식과 무관.) 따라서
+\[\langle S_z\rangle\big|_{1}=I_I\cos\theta_I-I_R\cos\theta_I,\qquad \langle S_z\rangle\big|_{2}=I_T\cos\theta_T\]
+\[\Rightarrow\ \boxed{I_I\cos\theta_I=I_R\cos\theta_I+I_T\cos\theta_T\quad\Longleftrightarrow\quad R+T=1}\]
+<b>(b) 빔 그림.</b> 단면적 \(A_I\)의 입사 빔은 계면에서 넓이 \(A_{\text{surf}}=A_I/\cos\theta_I\)를 비춘다. 반사 빔은 같은 각이므로 \(A_R=A_{\text{surf}}\cos\theta_I=A_I\). 투과 빔은 각이 \(\theta_T\)이므로
+\[\boxed{A_T=A_{\text{surf}}\cos\theta_T=A_I\frac{\cos\theta_T}{\cos\theta_I}}\]
+풍선 모양 면(각 빔에 수직으로 구멍이 뚫린)에 대한 \(\oint\mathbf S\cdot d\mathbf a=0\)은 겹치는 장이 없으므로 단순히
+\[|\mathbf S_I|A_I=|\mathbf S_R|A_R+|\mathbf S_T|A_T\ \Rightarrow\ I_I=I_R+I_T\frac{\cos\theta_T}{\cos\theta_I}\]
+이고, \(R\equiv I_R/I_I\), \(T\equiv\dfrac{I_T\cos\theta_T}{I_I\cos\theta_I}\)로 정의하면 다시 \(R+T=1\ \checkmark\)
+<div class="alabel">감점 포인트</div>
+(a)에서 교차항을 "시간평균하면 0"이라고 처리하면 틀린다 — 세 파의 \(\omega\)가 같으므로 평균은 0이 아니다. 상쇄되는 것은 <b>\(z\)성분</b>이라는 점이 핵심. (b)에서는 빔 단면적이 반사/투과에서 다르다는 기하가 핵심.</div><!--/sol-->

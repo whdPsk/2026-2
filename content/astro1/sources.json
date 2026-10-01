@@ -1,0 +1,274 @@
+{
+ "L07": {
+  "title": "Lecture07 MovingCharges·Bremsstrahlung (PPT)",
+  "short": "PPT07",
+  "kind": "ppt",
+  "url": "https://drive.google.com/file/d/1dkTArTElJftYuWGHJdTUN8_EekVby0IC/view",
+  "date": "2026-09-22"
+ },
+ "S0922": {
+  "title": "9/22 강의 속기 (0922_천물개1.txt)",
+  "short": "속기9/22",
+  "kind": "transcript",
+  "url": "https://drive.google.com/file/d/1oQi7sm8baixTwvRatHisL0ujZv6qBum4/view",
+  "date": "2026-09-22"
+ },
+ "L01": {
+  "title": "Lecture01 Radiation Basics (PPT)",
+  "short": "L01",
+  "kind": "ppt",
+  "date": "2026-09-01",
+  "url": "https://drive.google.com/file/d/1LAAzQHDUNC5YArQZmeAELe2TPmzbyvup/view"
+ },
+ "S0901": {
+  "title": "9/1 강의 속기 (0901_천물개1.txt)",
+  "short": "속기9/1",
+  "kind": "transcript",
+  "date": "2026-09-01",
+  "url": "https://drive.google.com/file/d/1DITEFSqjGP68P9Lcc9zYv8XIWWvA9orm/view"
+ },
+ "L02": {
+  "title": "Lecture02 FlippedLearning (PPT)",
+  "short": "L02",
+  "kind": "ppt",
+  "date": "2026-09-03",
+  "url": "https://drive.google.com/file/d/1gPGLOHRbmOkz3DM_AEOMZW4xXfqxUepY/view"
+ },
+ "S0903": {
+  "title": "9/3 강의 속기 (0903_천물개1.txt)",
+  "short": "속기9/3",
+  "kind": "transcript",
+  "date": "2026-09-03",
+  "url": "https://drive.google.com/file/d/1Kdk5ivLTpPT15N5zVThsneIQb87Tdf1d/view"
+ },
+ "L03": {
+  "title": "Lecture03 Radiation (PPT)",
+  "short": "L03",
+  "kind": "ppt",
+  "date": "2026-09-08",
+  "url": "https://drive.google.com/file/d/1E3-KLxdHuL9rfDaSWLjhW7wQU8KwmeTJ/view"
+ },
+ "S0908": {
+  "title": "9/8 강의 속기 (0908_천물개1.txt)",
+  "short": "속기9/8",
+  "kind": "transcript",
+  "date": "2026-09-08",
+  "url": "https://drive.google.com/file/d/1dfjnZGiNFWL5CxWjgqlWurCKeJu6K2z2/view"
+ },
+ "L04": {
+  "title": "Lecture04 LineRadiation (PPT)",
+  "short": "L04",
+  "kind": "ppt",
+  "date": "2026-09-10",
+  "url": "https://drive.google.com/file/d/1O3OXvDeu-FHZliMc9HTbHUA3KMmeReSD/view"
+ },
+ "S0910": {
+  "title": "9/10 강의 속기 (0910_천물개1.txt)",
+  "short": "속기9/10",
+  "kind": "transcript",
+  "date": "2026-09-10",
+  "url": "https://drive.google.com/file/d/1dYRCjed0wJeDZjTxUAhPn840gY7UpD8Z/view"
+ },
+ "L05": {
+  "title": "Lecture05 EMWaves (PPT)",
+  "short": "L05",
+  "kind": "ppt",
+  "date": "2026-09-15",
+  "url": "https://drive.google.com/file/d/1fubk_xzIoxQ4TwtXZccMriK1-Uo8E_77/view"
+ },
+ "S0915": {
+  "title": "9/15 강의 속기 (0915_천물개1.txt)",
+  "short": "속기9/15",
+  "kind": "transcript",
+  "date": "2026-09-15",
+  "url": "https://drive.google.com/file/d/1HF7gfyUdjYxqa2cj-sgletGeDvPdNtdX/view"
+ },
+ "L06": {
+  "title": "Lecture06 MovingCharges (PPT)",
+  "short": "L06",
+  "kind": "ppt",
+  "date": "2026-09-17",
+  "url": "https://drive.google.com/file/d/193_66wKxjQe2Sk7uzRM0aZJLqXwkji3E/view"
+ },
+ "S0917": {
+  "title": "9/17 강의 속기 (0917_천물개1.txt)",
+  "short": "속기9/17",
+  "kind": "transcript",
+  "date": "2026-09-17",
+  "url": "https://drive.google.com/file/d/1RAuvHqD5vRnKA-j-OPnwy59n4iVuE_36/view"
+ },
+ "L08": {
+  "title": "Lecture08 Bremsstrahlung (PPT)",
+  "short": "L08",
+  "kind": "ppt",
+  "date": "2026-09-29",
+  "url": "https://drive.google.com/file/d/11CnmhTaodYbqr1xqbrLneBvcsfl9c1MX/view"
+ },
+ "D0929": {
+  "title": "9/29 강의 녹음 (다글로 「플라즈마 입자 충돌과 쿨롱 로그」)",
+  "short": "녹음9/29",
+  "kind": "transcript",
+  "date": "2026-09-29"
+ },
+ "F01": {
+  "title": "플립 01 · 복사 기초 (다글로 스크립트)",
+  "short": "플립01",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F02": {
+  "title": "플립 02 · 복사세기 (다글로 스크립트)",
+  "short": "플립02",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F03": {
+  "title": "플립 03 · 플럭스밀도와 복사압 (다글로 스크립트)",
+  "short": "플립03",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F04": {
+  "title": "플립 04 · 방출 또는 흡수 대기 (다글로 스크립트)",
+  "short": "플립04",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F05": {
+  "title": "플립 05 · 일반적인 대기 (다글로 스크립트)",
+  "short": "플립05",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F06": {
+  "title": "플립 06 · 키르히호프의 복사 법칙 (다글로 스크립트)",
+  "short": "플립06",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F07": {
+  "title": "플립 07 · 아인슈타인 계수 (다글로 스크립트)",
+  "short": "플립07",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F08": {
+  "title": "플립 08 · 방출계수 (다글로 스크립트)",
+  "short": "플립08",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F09": {
+  "title": "플립 09 · 키르히호프의 분광 법칙 (다글로 스크립트)",
+  "short": "플립09",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F10": {
+  "title": "플립 10 · 평면 전자기파 (다글로 스크립트)",
+  "short": "플립10",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F11": {
+  "title": "플립 11 · 편광 (다글로 스크립트)",
+  "short": "플립11",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F12": {
+  "title": "플립 12 · 스톡스 변수 (다글로 스크립트)",
+  "short": "플립12",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F13": {
+  "title": "플립 13 · 뒤처진퍼텐셜 (다글로 스크립트)",
+  "short": "플립13",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F14": {
+  "title": "플립 14 · 속도장과 복사장 (다글로 스크립트)",
+  "short": "플립14",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F15": {
+  "title": "플립 15 · 라모 공식 (다글로 스크립트)",
+  "short": "플립15",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F16": {
+  "title": "플립 16 · 전자-이온 충돌 (다글로 스크립트)",
+  "short": "플립16",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "L00": {
+  "title": "Lecture00 Introduction (PPT)",
+  "short": "PPT00",
+  "kind": "ppt",
+  "date": "2026-09-01",
+  "url": "https://drive.google.com/file/d/1m5qAFtVqV_GCGjzBEfkVdo6zGqw3Oqlg/view"
+ },
+ "F17": {
+  "title": "플립 17 · 단일 전자에 의한 복사 (다글로 스크립트)",
+  "short": "플립17",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F18": {
+  "title": "플립 18 · 제동복사 파워 (다글로 스크립트)",
+  "short": "플립18",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F19": {
+  "title": "플립 19 · 나선운동 (다글로 스크립트)",
+  "short": "플립19",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "F20": {
+  "title": "플립 20 · 단일 전자의 파워 (다글로 스크립트)",
+  "short": "플립20",
+  "kind": "video",
+  "date": "",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "L09": {
+  "title": "Lecture09 Synchrotron (PPT)",
+  "short": "L09",
+  "kind": "ppt",
+  "date": "2026-10-01",
+  "url": "https://drive.google.com/file/d/1iogritDv2V9LoBdCVZWgTsfhFopBWL3t/view"
+ },
+ "D1001": {
+  "title": "10/1 강의 녹음 (다글로 「은하단 쿨링 플로우와 AGN 피드백 및 싱크로트론 방사」)",
+  "short": "녹음10/1",
+  "kind": "transcript",
+  "date": "2026-10-01",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ }
+}

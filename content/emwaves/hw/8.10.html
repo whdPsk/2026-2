@@ -1,0 +1,14 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>솔레노이드 안쪽 \(\vb{B}=\muz n I\hat{\vb{z}}\) (\(s&lt;R\)). 살에는 반지름 방향 전류 \(I_s(t)=-dQ/dt\) 가 \(+\hat{\vb{s}}\) 로 흐른다(양전하가 안쪽 \(+Q\) 에서 바깥 \(-Q\) 로).</p>
+<p>전류요소가 받는 힘:
+\[d\vb{F}=I_s\,ds\,\hat{\vb{s}}\times\muz nI\hat{\vb{z}}=-\muz nI\,I_s\,ds\,\hat{\boldsymbol\varphi}\]
+(자기장은 \(s&lt;R\) 에서만 있으므로 \(a\le s\le R\) 구간만 기여).</p>
+<p>토크의 \(z\)성분:
+\[N_z=\int_a^R s\,(-\muz nI I_s)\,ds=-\frac{\muz nI I_s}{2}(R^{2}-a^{2}).\]
+시간 적분하면 \(\int I_s\,dt=Q\) 이므로
+\[\boxed{\;\vb{L}=-\tfrac12\muz n I Q\,(R^{2}-a^{2})\,\hat{\vb{z}}\;}\]
+이는 Eq. 8.34의 초기 장 각운동량과 정확히 같다.</p>
+<p><b>요점.</b> Ex. 8.4에서는 Faraday 유도 전기장이, 여기서는 Lorentz 힘이 전달 매개였지만 결과는 동일하다 — 장이 가진 각운동량은 "어떻게 꺼내든" 같은 양이 나온다.</p>
+<div class="alabel">감점 포인트</div>
+적분 상한을 \(b\)로 잡는 것. \(s&gt;R\)에서는 \(\vb{B}=0\)이라 힘이 없다.</div><!--/sol-->

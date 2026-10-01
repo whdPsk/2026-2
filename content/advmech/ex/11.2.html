@@ -1,0 +1,12 @@
+<div class="exq"><b>상황.</b> 질량 \(M\)인 강체가 CM을 지나지 않는 수평축 \(O\) 둘레로 자기 무게에 의해 진동한다. \(O\)에서 CM까지 \(l\), \(O\)에 대한 회전 반지름 \(k\) (\(I=Mk^2\)). 작은 진동의 진동수와 주기.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>Lagrangian.</div>
+<ol>
+<li>\(T=\tfrac12I\dot\theta^2\), \(U=-Mgl\cos\theta\approx-Mgl(1-\theta^2/2)\).</li>
+<li>\(L=\tfrac12I\dot\theta^2-\tfrac12Mgl\theta^2+\)상수 → \(I\ddot\theta+Mgl\theta=0\).</li>
+<li>\(\omega_0^2=\dfrac{Mgl}{I}=\dfrac{gl}{k^2}\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \nu=\frac1{2\pi}\sqrt{\frac{gl}{k^2}},\qquad T_0=2\pi\sqrt{\frac{k^2}{gl}}\ } \]
+<p class="note"><b>검산</b> ① 점질량(\(k=l\)): \(2\pi\sqrt{l/g}\) ✓. ② 토크 방법: \(I\ddot\theta=-Mgl\sin\theta\) — 같다 ✓.</p></div>
+<div class="qz" data-q="ex11.2-a"><div class="qq"><b>+α</b> 반지름 \(R\)인 얇은 고리를 둘레의 한 점에 걸어 고리 면 안에서 흔든다. 주기는? 같은 고리를 면에 수직으로(고리 면이 흔들림 면에 수직) 흔들면?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>면 안: \(I=MR^2+MR^2=2MR^2\), \(l=R\) → \(T=2\pi\sqrt{2R/g}\). 면에 수직: 지름 축 \(I_{\rm CM}=\tfrac12MR^2\) → \(I=\tfrac32MR^2\) → \(T=2\pi\sqrt{3R/2g}\).</p></div></div>
+<div class="qz" data-q="ex11.2-b"><div class="qq"><b>+α</b> 매단 점과 진동 중심(\(O\)에서 \(k^2/l\))을 서로 바꿔 매달아도 주기가 같음을 보여라 (Kater 진자).</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(k^2=k_c^2+l^2\), 진동 중심은 CM 반대편 \(l'=k^2/l-l=k_c^2/l\). 그 점에 매달면 \(l_{\rm eq}'=\frac{k_c^2+l'^2}{l'}=l'+\frac{k_c^2}{l'}=\frac{k_c^2}{l}+l=l_{\rm eq}\) ✓. 두 칼날 사이 거리 = \(l_{\rm eq}\)을 정밀 측정해 \(g\)를 얻는다.</p></div></div>

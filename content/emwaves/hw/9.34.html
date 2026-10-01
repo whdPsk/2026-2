@@ -1,0 +1,14 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(\tilde f(z,t)=\int\tilde A(k)e^{i(kz-\omega t)}dk\), \(\omega=|k|v\).<br>
+\(t=0\): \(\tilde f(z,0)=\int\tilde A(k)e^{ikz}dk\) → 역변환
+\[\tilde A(k)=\frac{1}{2\pi}\int_{-\infty}^{\infty}\tilde f(z,0)e^{-ikz}dz .\qquad(\ast)\]
+시간 미분: \(\dot{\tilde f}(z,0)=\int(-i\omega)\tilde A(k)e^{ikz}dk\) → 역변환
+\[-i\omega\tilde A(k)=\frac{1}{2\pi}\int\dot{\tilde f}(z,0)e^{-ikz}dz\ \Rightarrow\ \tilde A(k)=\frac{i}{\omega}\cdot\frac{1}{2\pi}\int\dot{\tilde f}(z,0)e^{-ikz}dz .\qquad(\ast\ast)\]
+실제 파동은 \(f=\mathrm{Re}\,\tilde f=\tfrac12(\tilde f+\tilde f^*)\)이다. \(\tilde f^*(z,0)=\int\tilde A^*(-k)e^{ikz}dk\)이므로 실수 초기함수의 변환은
+\[\frac{1}{2\pi}\int f(z,0)e^{-ikz}dz=\tfrac12\left[\tilde A(k)+\tilde A^*(-k)\right],\]
+\[\frac{1}{2\pi}\int \dot f(z,0)e^{-ikz}dz=\tfrac12\left[-i\omega\tilde A(k)+i\omega\tilde A^*(-k)\right]\quad(\omega(-k)=\omega(k)).\]
+두 번째 식에 \(i/\omega\)를 곱해 첫 번째와 더하면 \(\tilde A^*(-k)\) 항이 상쇄되고
+\[\boxed{\tilde A(k)=\frac{1}{2\pi}\int_{-\infty}^{\infty}\left[f(z,0)+\frac{i}{\omega}\dot f(z,0)\right]e^{-ikz}\,dz}\]
+<div class="alabel">감점 포인트</div>
+복소 \(\tilde f\)와 실수 \(f\)를 구별하지 않으면 인수 \(1/2\)가 남는다. 실수 초기조건 두 개(위치·속도)가 있어야 해가 유일하게 결정된다는 점이 핵심.</div><!--/sol-->

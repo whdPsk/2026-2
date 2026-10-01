@@ -1,0 +1,11 @@
+<div class="exq"><span class="examtag">PPT Review Q⑤ · 9/15 수업 문제</span><br>What is the retarded potential?<br>(번역) 지연 퍼텐셜이란? — 원점에 정지한 점전하 q와, 원점에서 전하량이 \(q(t)=q_0\cos\omega t\)로 변한다고 (가상으로) 놓은 경우 거리 r에서의 φ를 비교하라. [[L05.s3e]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>쿨롱형 적분 + 지연시간</div><ol>
+<li>\(\phi(\mathbf x,t)=\int\rho(\mathbf x',t_{\rm ret})/|\mathbf x-\mathbf x'|\,d^3x'\), \(\mathbf A=\frac1c\int\mathbf j(\mathbf x',t_{\rm ret})/|\mathbf x-\mathbf x'|\,d^3x'\). [[S0915.13, S0915.14]]</li>
+<li>정지 점전하: ρ가 시간에 무관 → 지연이 의미 없음 → \(\phi=q/r\) (쿨롱). ∫ρ d³x′ = 총전하. [[S0915.13]]</li>
+<li>변하는 전하(사고 실험): \(\phi(r,t)=q_0\cos[\omega(t-r/c)]/r\) — 같은 1/r 꼴이지만 위상이 \(\omega r/c=kr\)만큼 늦다. (실제로는 전하 보존 때문에 단극자 전하가 변할 수 없어 복사하지 않음 — U08 다중극.)</li>
+<li>A도 ρ 대신 j = ρv를 넣고 c로 나눈 같은 꼴. φ, A로부터 \(\mathbf B=\nabla\times\mathbf A\), \(\mathbf E=-\nabla\phi-\frac1c\partial_t\mathbf A\). [[S0915.14]]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>지연 퍼텐셜 = 쿨롱(정자기) 퍼텐셜과 같은 1/거리 적분인데, 원천(ρ, j)을 지연시간 \(t-|\mathbf x-\mathbf x'|/c\)에서 평가한 것. 정적이면 쿨롱으로 돌아간다.</p></div>
+<div class="trap"><b>함정</b>"φ = q/r에 t만 늦춰 넣으면 끝"은 점전하가 <b>움직일</b> 때 틀린다 — 원천 각 부분의 지연시간이 달라 추가 인자가 생긴다(다음 시간 Liénard–Wiechert). 유도는 수학적으로 만만치 않다. [[S0915.13, S0915.14]]</div>
+<div class="qz" data-q="ex3.14-a"><div class="qq"><b>+α</b> ω = 2π × 1 MHz, r = 300 m이면 위상 지연 kr은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>k = ω/c = 2π×10⁶/3×10¹⁰ cm⁻¹ = 2.09×10⁻⁴ cm⁻¹; kr = 2.09×10⁻⁴ × 3×10⁴ = 6.28 rad = 2π (정확히 한 파장 λ = 300 m).</p></div></div>
+<div class="qz" data-q="ex3.14-b"><div class="qq"><b>+α</b> A의 적분에 왜 1/c가 붙나?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>가우스 단위에서 전류 원천은 j/c로 들어간다(∇×B = (4π/c)j + …와 같은 이유). 정적 극한에서 Biot–Savart와 일치.</p></div></div>

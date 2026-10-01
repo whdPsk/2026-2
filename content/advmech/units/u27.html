@@ -1,0 +1,33 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 가벼운 용수철로 약하게 이어진 두 진자 중 하나만 당겼다 놓으면, 처음엔 그 진자만 흔들리다가 점점 멈추고 다른 진자가 흔들리기 시작한다. 에너지가 완전히 넘어가는 데 걸리는 시간은 결합의 세기 \(\varepsilon\)에 어떻게 의존할까? 두 정규 진동수의 <b>차이</b>와 무슨 관계일까?</div>
+
+<h4>12.3 약한 결합 <span class="en">weak coupling</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>진동수 분리의 전개 — 교재 식 (12.16)–(12.21)</div>
+<ol>
+<li>\(\kappa_{12}\ll\kappa\). \(\varepsilon\equiv\dfrac{\kappa_{12}}{2\kappa}\ll1\).</li>
+<li>\(\omega_1=\sqrt{\frac\kappa M}\sqrt{1+4\varepsilon}\approx\sqrt{\frac\kappa M}(1+2\varepsilon)\), \(\omega_2=\sqrt{\kappa/M}\).</li>
+<li>상대를 고정했을 때의 자연 진동수 \(\omega_0=\sqrt{\frac{\kappa+\kappa_{12}}M}\approx\sqrt{\frac\kappa M}(1+\varepsilon)\).</li>
+<li>따라서 \(\omega_1\approx\omega_0(1+\varepsilon)\), \(\omega_2\approx\omega_0(1-\varepsilon)\) — \(\omega_0\) 위아래로 대칭 분리. 차이 \(\omega_1-\omega_2\approx2\varepsilon\omega_0\).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>맥놀이와 에너지 교환 — 교재 식 (12.22)–(12.26) <b>(필수)</b></div>
+<ol>
+<li>초기조건 \(x_1(0)=D\), 나머지 0. 일반해에 넣으면 네 계수가 모두 \(D/4\):
+\[ x_1=\tfrac D2(\cos\omega_1t+\cos\omega_2t),\qquad x_2=\tfrac D2(\cos\omega_2t-\cos\omega_1t). \]</li>
+<li>합-곱 공식:
+\[ x_1=D\cos\frac{\omega_1-\omega_2}{2}t\,\cos\frac{\omega_1+\omega_2}2t\approx\left(D\cos\varepsilon\omega_0t\right)\cos\omega_0t, \]
+\[ x_2\approx\left(D\sin\varepsilon\omega_0t\right)\sin\omega_0t . \]</li>
+<li>빠른 진동(\(\omega_0\)) 위에 느린 포락선(\(\varepsilon\omega_0\)). \(t=\pi/(2\varepsilon\omega_0)\)에서 \(x_1\)의 진폭 0 — 에너지 전부 \(x_2\)로. 그다음 되돌아옴 = <b>맥놀이</b>.</li>
+<li>완전 전달 시간 \(T_{\rm tr}=\dfrac{\pi}{2\varepsilon\omega_0}=\dfrac{\pi}{\omega_1-\omega_2}\) — 결합이 약할수록 오래 걸린다(예측의 답). 양자역학의 두 준위 Rabi 진동, 결합 도파관의 에너지 교환과 같은 구조.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 약한 결합</div>
+\[ \varepsilon=\frac{\kappa_{12}}{2\kappa},\quad \omega_{1,2}\approx\omega_0(1\pm\varepsilon),\quad x_1\approx D\cos(\varepsilon\omega_0t)\cos\omega_0t,\quad x_2\approx D\sin(\varepsilon\omega_0t)\sin\omega_0t \]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u27-1"><div class="qq">초기조건 \(x_1(0)=D\), 나머지 0에서 \(x_1(t),x_2(t)\)를 정규 모드 합으로 구하고 맥놀이 형태로 바꿔라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>정규좌표로 하면 빠르다: \(\eta_1(0)=D\), \(\eta_2(0)=D\), 속도 0 → \(\eta_1=D\cos\omega_1t\), \(\eta_2=D\cos\omega_2t\). \(x_1=\tfrac12(\eta_1+\eta_2)\), \(x_2=\tfrac12(\eta_2-\eta_1)\) → 유도 2 ✓.</p></div></div>
+
+<div class="qz" data-q="u27-2"><div class="qq">길이 1 m 진자 두 개(\(\omega_0\approx3.13\) rad/s)를 \(\varepsilon=0.02\)로 결합했다. 에너지가 한쪽에서 다른 쪽으로 완전히 넘어가는 데 몇 초 걸리는가? 그동안 몇 번 흔들리는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(T_{\rm tr}=\frac{\pi}{2(0.02)(3.13)}\approx25\) s. 진자 주기 \(2\pi/3.13\approx2.0\) s → 약 12.5번.</p></div></div>
+
+<div class="qz" data-q="u27-3"><div class="qq">각 진동자의 에너지 \(E_1\approx\tfrac12M\omega_0^2D^2\cos^2(\varepsilon\omega_0t)\)임을 보이고 \(E_1+E_2\)가 (근사적으로) 보존됨을 확인하라. 결합 용수철의 에너지는 왜 무시할 수 있는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>느린 포락선을 상수로 보면 \(x_1\)은 진폭 \(D\cos\varepsilon\omega_0t\)인 조화진동 → 평균 에너지 \(\tfrac12M\omega_0^2(D\cos\varepsilon\omega_0t)^2\). \(E_2\)는 \(\sin^2\). 합 \(\tfrac12M\omega_0^2D^2\) ✓. 결합 용수철 에너지 \(\tfrac12\kappa_{12}(x_1-x_2)^2\sim\varepsilon\kappa D^2\) — \(O(\varepsilon)\)이라 무시.</p></div></div>

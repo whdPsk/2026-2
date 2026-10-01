@@ -1,0 +1,10 @@
+<div class="exq"><span class="examtag">수명–선폭 적용</span><br>들뜬 준위의 자발 방출 계수가 \(A=4.4\times10^7\,\mathrm{s^{-1}}\)(Hα, \(A_{32}\))이다. 에너지 수명과 자연 선폭 \(\Delta\nu\)(FWHM)을 구하고, 고전 복사 감쇠 \(\Gamma=\omega_0^2\tau\)와 비교하라. [[L06.s13, L06.s17]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>자연 선폭</div><ol>
+<li>에너지가 \(e^{-\Gamma t}\)로 줄 때 \(\Gamma\)를 \(A\)로 둔다 → 수명 \(1/A=2.27\times10^{-8}\) s. [[L06.s13]]</li>
+<li>\(\Delta\omega_{\rm FWHM}=\Gamma\) → \(\Delta\nu=A/2\pi=7.0\times10^6\) Hz. [[L06.s17]]</li>
+<li>파장 폭: \(\Delta\lambda=\lambda^2\Delta\nu/c=(6563\,\text{Å})^2\cdot7.0\times10^6/c\approx1.0\times10^{-4}\)Å.</li>
+<li>고전값: \(\omega_0=2\pi c/6563\,\text{Å}\), \(\Gamma=\omega_0^2\tau=5.2\times10^7\,\mathrm{s^{-1}}\) (python) — 같은 차수. [[L06.s12]]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>수명 ≈ 2.27×10⁻⁸ s, Δν ≈ 7.0×10⁶ Hz, Δλ ≈ 1.0×10⁻⁴ Å. 고전 Γ = 5.2×10⁷ s⁻¹, 고전 Δλ = 1.18×10⁻⁴ Å. 실제 관측 폭은 도플러·충돌·기기 효과도 포함.</p></div>
+<div class="qz" data-q="ex4.3-a"><div class="qq"><b>+α</b> Lyα(1216 Å)의 고전 수명은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\Gamma=\omega_0^2\tau=1.5\times10^9\,\mathrm{s^{-1}}\) → \(\tau_{\rm life}=6.7\times10^{-10}\) s (실제 A₂₁ = 6.3×10⁸ s⁻¹로 같은 차수).</p></div></div>
+<div class="qz" data-q="ex4.3-b"><div class="qq"><b>+α</b> 수명이 10배 짧은 준위의 자연 선폭(Δν)은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>Δν = 1/(2π τ_life)이므로 10배 넓어진다.</p></div></div>

@@ -1,0 +1,78 @@
+[
+ {
+  "id": "L00.s1",
+  "loc": "슬라이드 1 (p.1 위)",
+  "raw": "Introduction to Astrophysics I · 천체물리학개론 I · 2026 Fall · Woong-Tae Kim",
+  "skip": "표지"
+ },
+ {
+  "id": "L00.s2a",
+  "loc": "슬라이드 2 · 개요 ①",
+  "raw": "개요 • 천체는 주로 기체(플라즈마)로 이루어져 있으며 복사를 방출, 흡수하거나 복사와 상호작용한다. 따라서 복사과정(radiative processes)과 기체역학(gas dynamics)은 천체물리학 연구를 수행하는데 있어서 절대적으로 필요한 두 줄기의 중요한 도구이다. 이 강좌에서는 현대 천문학의 여러 문제를 이해하고 해결하기 위해 필수적인 복사과정과 기체역학에 대해 학습한다."
+ },
+ {
+  "id": "L00.s2b",
+  "loc": "슬라이드 2 · 개요 ②",
+  "raw": "– 제 1부에서는 흑체 복사, 제동복사, 싱크로트론 복사, 콤턴 복사 등, 다양의 복사의 생성 및 전달 과정을 학습하고 이를 천체 현상에 적용해본다. – 제 2부에서는 기체역학의 기본방정식, 충격파, 여러 가지 불안정성 등에 대한 기초 이론을 습득하고, 이를 천체 현상에 적용해본다."
+ },
+ {
+  "id": "L00.s2c",
+  "loc": "슬라이드 2 · 조교",
+  "raw": "• 담당조교: – 박종인 (19동 212B호, joey1170@snu.ac.kr)"
+ },
+ {
+  "id": "L00.s3",
+  "loc": "슬라이드 3 · 교재",
+  "raw": "교재/참고문헌 • 천체물리학 (구본철/김웅태 공저, 2022, 개정판) • Radiative Processes in High Energy Astrophysics (Lecture Notes in Physics v.873) by G. Ghisellini, Springer, 2013 – https://link.springer.com/book/10.1007/978-3-319-00612-3 – (서울대학교 도서관 홈페이지에서 접근 가능) • Astrophysical Flows by J. Pringle & A. King, Cambridge University Press, 2007 – 서울대학교 도서관 홈페이지에서 온라인 이용 가능 [그림: 교재 표지 — 『천체물리학 — 복사와 기체역학』 개정판, 초신성 잔해 사진]"
+ },
+ {
+  "id": "L00.s4a",
+  "loc": "슬라이드 4 · 평가",
+  "raw": "평가 • 과제 25%, 중간고사 30%, 기말고사 30%, 출석 5%, 학습태도 10%"
+ },
+ {
+  "id": "L00.s4b",
+  "loc": "슬라이드 4 · 유의사항",
+  "raw": "• 수강생 유의사항: – 출석률과 성적과의 상관관계가 아주 높으니 수업에 반드시 참여합시다. – 과제물 제출은 마감일 수업 시작 이전까지이며 이보다 늦게 제출된 과제물은 1일당 40% 이상 감점. – 과제 문제에 대해 동료 학생들과 토론하는 것은 고무적이지만 베끼는 것은 허용되지 않음 (보여준 과제물과 베낀 과제물 모두 0점 처리)"
+ },
+ {
+  "id": "L00.s5",
+  "loc": "슬라이드 5 · 강의 계획",
+  "raw": "강의 계획 *(상황에 따라 변동될 수 있음) • 제 01 주 과목 소개/복사 기초 I • 제 02 주 복사 기초 II • 제 03 주 선복사 • 제 04 주 전자기 복사의 방출 • 제 05 주 열적제동복사 • 제 06 주 싱크로트론 복사 • 제 07 주 콤턴 산란, 플라즈마 효과 • 제 08 주 중간고사(10월 27일), 유체의 기본방정식 • 제 09 주 유체의 기본방정식 • 제 10 주 평형/파동 • 제 11 주 충격파 • 제 12 주 유체의 불안정 • 제 13 주 중력 불안정 • 제 14 주 초신성 잔해의 진화 • 제 15 주 비리얼 정리, 기말고사(12월 10일)"
+ },
+ {
+  "id": "L00.s6a",
+  "loc": "슬라이드 6 · AI ①",
+  "raw": "Using AI in This Course • Use AI actively as a personal tutor. – You understand the material only when you can explain it yourself."
+ },
+ {
+  "id": "L00.s6b",
+  "loc": "슬라이드 6 · AI ② Review",
+  "raw": "• Review – Ask AI to explain concepts you do not fully understand. – Ask for intermediate steps omitted in class. – Ask for alternative explanations or simple examples. – Use AI to check your own understanding."
+ },
+ {
+  "id": "L00.s6c",
+  "loc": "슬라이드 6 · AI ③ Homework",
+  "raw": "• Homework – Think and work on the problem yourself first. – Ask AI for hints or possible approaches when you get stuck. – Ask AI to check your solution for errors. – Compare your solution with alternative solutions suggested by AI. – Do not simply accept or submit AI-generated answers. – Always verify AI-generated results by checking units, limiting cases, and physical assumptions."
+ },
+ {
+  "id": "L00.s6d",
+  "loc": "슬라이드 6 · AI ④ Exams",
+  "raw": "• Exams – The use of AI will be prohibited."
+ },
+ {
+  "id": "L00.s7",
+  "loc": "슬라이드 7 · Centaurus A",
+  "raw": "Centaurus A [그림: 타원은하 Centaurus A 합성 사진 — 가운데 먼지띠, 위·아래로 뻗은 주황색 로브/제트, 파란색으로 퍼진 X선 방출] Orange: 870 μm · Blue: X-ray · Other colors: optical"
+ },
+ {
+  "id": "L00.s8",
+  "loc": "슬라이드 8 · EM Spectrum",
+  "raw": "Electromagnetic Spectrum • High energy photons have energies from X- up to Gamma-ray energies. – X-rays: 0.1-100 keV – High-energy γ-rays ≥100 MeV – Very-high-energy γ-rays ≥ 100 GeV [그림: 전자기 스펙트럼 아치 — RADIO, MICROWAVE, INFRARED, VISIBLE LIGHT, UV, X-RAY, GAMMA(HIGH-ENERGY 화살표), 아래에 WAVELENGTH(nm)와 ENERGY(eV) 눈금, 1 cm = 10,000,000 nanometers]"
+ },
+ {
+  "id": "L00.s9",
+  "loc": "슬라이드 9 · ISRF",
+  "raw": "Interstellar Radiation Field (ISRF) — Figure 1.6 of Koo & Kim (2022) [그림: 가로축 Wavelength (μm) 0.1–10000, 세로축 Brightness λI_λ (W m⁻² sr⁻¹) 10⁻¹⁰–10⁻⁴. 곡선 라벨: Lyα, OI, O₂, OH, Airglow(지구 대기), Zodiacal light (thermal emission, ~10 μm 피크), scattered sunlight(빨간 표시), Faint stars(~1 μm 부근), Cirrus(점선, dust emission ~100 μm), CMB (2.726K, ~1 mm 피크). 출처 Leinert et al. (1998)]"
+ }
+]

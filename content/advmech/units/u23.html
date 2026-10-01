@@ -1,0 +1,44 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 원반(프리스비)을 살짝 흔들리게 던지면 원반 면이 워블한다. 외력이 없으므로 \(\vb L\)은 공간에 고정이다. 그러면 흔들리는 것은 무엇인가 — 물체의 대칭축이 \(\vb L\) 둘레를 돈다? \(\boldsymbol\omega\)는? 물체 안에서 본 \(\boldsymbol\omega\)는 대칭축 둘레를 돌까? 원반(납작, \(I_3&gt;I_1\))과 막대(길쭉, \(I_3&lt;I_1\))에서 그 회전 방향이 같을지 예측해 보라.</div>
+
+<h4>11.10 외력 없는 대칭 팽이 <span class="en">force-free motion of a symmetric top</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>물체계에서 \(\boldsymbol\omega\)의 세차 \(\Omega=\frac{I_3-I_1}{I_1}\omega_3\) <b>(필수)</b></div>
+<ol>
+<li>\(I_1=I_2\ne I_3\), \(\vb N=0\). Euler 방정식:
+\[ I_1\dot\omega_1=(I_1-I_3)\omega_2\omega_3,\quad I_1\dot\omega_2=(I_3-I_1)\omega_3\omega_1,\quad I_3\dot\omega_3=0 . \]</li>
+<li>셋째 식: \(\omega_3=\) 상수. \(\Omega\equiv\dfrac{I_3-I_1}{I_1}\omega_3\)로 두면
+\[ \dot\omega_1+\Omega\omega_2=0,\qquad \dot\omega_2-\Omega\omega_1=0 . \]</li>
+<li>\(\eta=\omega_1+i\omega_2\): \(\dot\eta=i\Omega\eta\) → \(\eta=Ae^{i\Omega t}\):
+\[ \omega_1=A\cos\Omega t,\quad\omega_2=A\sin\Omega t,\quad|\boldsymbol\omega|=\sqrt{A^2+\omega_3^2}=\text{const}. \]</li>
+<li>물체에서 보면 \(\boldsymbol\omega\)는 대칭축 \(x_3\) 둘레로 각속도 \(\Omega\)로 원뿔(<b>물체 원뿔, body cone</b>)을 그린다. 방향: \(I_3&gt;I_1\)(납작)이면 \(\Omega\)와 \(\omega_3\) 같은 부호, \(I_3&lt;I_1\)(길쭉)이면 반대.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>공간 원뿔과 물체 원뿔의 굴림 — \(\vb L\), \(\boldsymbol\omega\), \(\uv e_3\)는 한 평면에</div>
+<ol>
+<li>\(\vb L\)은 공간에 고정, \(T=\tfrac12\boldsymbol\omega\cdot\vb L\)도 보존 → \(\boldsymbol\omega\)의 \(\vb L\) 방향 성분이 일정 → \(\boldsymbol\omega\)는 \(\vb L\) 둘레로 일정 각의 원뿔(<b>공간 원뿔, space cone</b>).</li>
+<li>공면성: \(\vb L\cdot(\boldsymbol\omega\times\uv e_3)=L_1\omega_2-L_2\omega_1=I_1(\omega_1\omega_2-\omega_2\omega_1)=0\) (\(I_1=I_2\)가 핵심).</li>
+<li>두 원뿔의 접선이 순간 회전축(\(\boldsymbol\omega\)) — 그 선 위의 점은 순간 정지 → 물체 원뿔이 공간 원뿔 위를 <b>미끄러짐 없이 굴러간다</b>.</li>
+<li>Example 11.11: \(\theta\) = \(\vb L\)과 \(\uv e_3\) 사이 각, \(\alpha\) = \(\boldsymbol\omega\)와 \(\uv e_3\) 사이 각. \(L_2/L_3=\tan\theta=\dfrac{I_1}{I_3}\tan\alpha\).
+<ul><li>길쭉(prolate, \(I_1&gt;I_3\)): \(\theta&gt;\alpha\) — 공간 원뿔이 물체 원뿔 <b>바깥</b>.</li>
+<li>납작(oblate, \(I_3&gt;I_1\)): \(\alpha&gt;\theta\) — 물체 원뿔이 공간 원뿔을 <b>감싸며</b> 굴러간다.</li></ul></li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>공간에서의 세차 각속도 \(\dot\phi=L/I_1\) — Example 11.12</div>
+<ol>
+<li>\(\uv e_3\), \(\boldsymbol\omega\), \(\vb L\)이 한 평면에 있으므로 대칭축과 \(\boldsymbol\omega\)는 같은 각속도로 \(\vb L\) 둘레를 돈다. 고정 \(x'_3\)을 \(\vb L\)로 잡으면 그 각속도가 \(\dot\phi\).</li>
+<li>\(\uv e_2\)를 그 평면에 두는 순간 \(\psi=0\): U21에서 \(\omega_2=\dot\phi\sin\theta\) → \(\dot\phi=\omega_2/\sin\theta\).</li>
+<li>\(\omega_2=L_2/I_1=L\sin\theta/I_1\) → \[ \boxed{\ \dot\phi=\frac{L}{I_1}\ } \]</li>
+<li><b>지구</b>: 약간 납작, \(\frac{I_3-I_1}{I_1}\approx\frac1{300}\) → 물체계 세차 주기 약 300일 예측. 관측(Chandler 요동)은 약 430일 — 지구가 강체가 아니기 때문. (태양·달 조석 토크에 의한 26,000년 세차 운동은 외력이 있는 다른 현상.)</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 자유 대칭 팽이</div>
+\[ \omega_3=\text{const},\quad \Omega=\frac{I_3-I_1}{I_1}\omega_3\ (\text{물체계}),\quad \dot\phi=\frac{L}{I_1}\ (\text{공간}),\quad \tan\theta=\frac{I_1}{I_3}\tan\alpha \]
+<p class="note">길쭉: 공간 원뿔 바깥, \(\Omega\)와 \(\omega_3\) 반대. 납작: 물체 원뿔이 공간 원뿔을 감쌈, 같은 부호.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u23-1"><div class="qq">(시험형) 자유 대칭 팽이의 Euler 방정식을 풀어 \(\boldsymbol\omega\)가 물체축 둘레로 \(\Omega=\frac{I_3-I_1}{I_1}\omega_3\)로 세차함을 보여라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 1. Foucault 진자(U14)와 같은 복소 변수 요령.</p></div></div>
+
+<div class="qz" data-q="u23-2"><div class="qq">얇은 원판(\(I_3=2I_1\))을 던졌더니 약간 흔들린다. 워블(대칭축이 \(\vb L\) 둘레를 도는) 각속도와 자전 \(\omega_3\)의 비를 작은 각에서 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\dot\phi=L/I_1\), 작은 각에서 \(L\approx I_3\omega_3\) → \(\dot\phi\approx\frac{I_3}{I_1}\omega_3=2\omega_3\). 워블이 자전의 <b>2배</b> 빠르다.</p></div></div>
+
+<div class="qz" data-q="u23-3"><div class="qq">\(\vb L\cdot(\boldsymbol\omega\times\uv e_3)=0\)을 증명하라. \(I_1\ne I_2\)이면 왜 깨지는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\boldsymbol\omega\times\uv e_3=(\omega_2,-\omega_1,0)\). \(\vb L\cdot(\ldots)=I_1\omega_1\omega_2-I_2\omega_2\omega_1=(I_1-I_2)\omega_1\omega_2\). \(I_1=I_2\)일 때만 0 — 비대칭 팽이의 운동은 이렇게 간단하지 않다(타원 함수, 폴호드).</p></div></div>

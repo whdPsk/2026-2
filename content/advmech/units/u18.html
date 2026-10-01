@@ -1,0 +1,39 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 어떤 축 둘레로 돌면 \(\vb L\)과 \(\boldsymbol\omega\)가 평행해질까? 그런 축을 찾는 문제는 선형대수의 어떤 문제와 같은가? 정육면체를 한 꼭짓점을 원점으로 잡았을 때, 그런 축 하나는 대칭성만으로 바로 짐작할 수 있다 — 어느 방향일까?</div>
+
+<h4>11.5 관성 주축 <span class="en">principal axes of inertia</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>주축 = 관성 텐서의 고유벡터 — 영년방정식 <b>(필수)</b></div>
+<ol>
+<li>주축이면 \(\vb L=I\boldsymbol\omega\) (스칼라 \(I\)). 한편 \(L_i=\sum_jI_{ij}\omega_j\). 같다고 놓으면
+\[ \sum_j(I_{ij}-I\delta_{ij})\omega_j=0 . \]</li>
+<li>자명하지 않은 해가 있으려면
+\[ \boxed{\ \det(I_{ij}-I\delta_{ij})=0\ } \]
+— \(I\)에 대한 3차식(<b>영년방정식</b>, secular equation). 세 근 \(I_1,I_2,I_3\): <b>주관성 모멘트</b>.</li>
+<li>각 근을 다시 넣으면 \(\omega_1:\omega_2:\omega_3\) <b>비율</b>만 정해진다 — 방향만 필요하므로 충분(크기는 기하가 아니라 초기조건이 정함).</li>
+<li>주축 좌표계에서
+\[ \I=\mathrm{diag}(I_1,I_2,I_3),\qquad L_i=I_i\omega_i,\qquad T=\tfrac12\sum_iI_i\omega_i^2 . \]</li>
+<li><b>분류</b>: \(I_1=I_2=I_3\) 구형 팽이(spherical top) · \(I_1=I_2\ne I_3\) 대칭 팽이 · 모두 다름 비대칭 팽이 · \(I_1=I_2,\ I_3=0\) 회전자(rotor, 이원자 분자). 회전체는 대칭축이 주축이고, 나머지 둘은 수직 평면 안에서 아무렇게나(중근).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>정육면체(모서리 원점)의 주축 — Example 11.5</div>
+<ol>
+<li>\(\I=\beta\begin{pmatrix}2/3&-1/4&-1/4\\-1/4&2/3&-1/4\\-1/4&-1/4&2/3\end{pmatrix}\), \(\beta=Mb^2\).</li>
+<li><b>요령</b>: 행렬식은 행끼리 빼도 불변. 둘째 행에서 첫째 행을 빼면 \(\left(-\tfrac{11}{12}\beta+I,\ \tfrac{11}{12}\beta-I,\ 0\right)\) — 인수 \((\tfrac{11}{12}\beta-I)\)가 나온다.</li>
+<li>전개·인수분해:
+\[ \left(\tfrac16\beta-I\right)\left(\tfrac{11}{12}\beta-I\right)^2=0\ \Rightarrow\ I_1=\tfrac16\beta,\quad I_2=I_3=\tfrac{11}{12}\beta . \]
+검산: 대각합 \(\tfrac16+\tfrac{11}{6}=2=3\times\tfrac23\) ✓ (대각합은 불변).</li>
+<li>\(I_1=\beta/6\)을 넣으면 \(2\omega_1-\omega_2-\omega_3=0\), \(-\omega_1+2\omega_2-\omega_3=0\) → \(\omega_1=\omega_2=\omega_3\): <b>대각선 방향</b>(예측의 답).</li>
+<li>중근 \(11\beta/12\): 대각선에 수직인 평면의 아무 두 직교 방향 — 대각선이 3회 대칭축이기 때문.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 주축</div>
+\[ \det(\I-I\,\mathbb 1)=0,\qquad (\I-I_k\mathbb 1)\boldsymbol\omega_k=0,\qquad \text{주축계: }L_i=I_i\omega_i,\ T=\tfrac12\sum I_i\omega_i^2 \]
+<p class="note">정육면체(모서리): \(I=\tfrac16Mb^2\) (대각선), \(\tfrac{11}{12}Mb^2\) (중근). 대각합·행렬식은 좌표에 무관 — 검산에 써라.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u18-1"><div class="qq">\(\I=\begin{pmatrix}A&-C&0\\-C&A&0\\0&0&B\end{pmatrix}\)의 주관성 모멘트와 주축을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(z\)는 분리 → \(I_3=B\), 축 \(\uv z\). 위 2×2 블록: \((A-I)^2=C^2\) → \(I=A\mp C\). \(I=A-C\): \(\omega_1=\omega_2\) → \((\uv x+\uv y)/\sqrt2\). \(I=A+C\): \(\omega_1=-\omega_2\) → \((\uv x-\uv y)/\sqrt2\). (U16 체크포인트 3의 질점: \(A=C=ma^2\) → \(0\)과 \(2ma^2\) — 질점을 잇는 방향의 모멘트 0 ✓.)</p></div></div>
+
+<div class="qz" data-q="u18-2"><div class="qq">정육면체(모서리 원점)의 영년방정식을 행 빼기 요령으로 풀어 세 근을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 2. 다른 빠른 길: 모든 비대각이 같은 행렬 \(a\mathbb 1+c(\mathbb J-\mathbb 1)\) (\(\mathbb J\): 전부 1)은 고유값이 \(a+2c\) (벡터 (1,1,1))과 \(a-c\) (중근). \(a=\tfrac23\beta\), \(c=-\tfrac14\beta\): \(\tfrac16\beta\), \(\tfrac{11}{12}\beta\) ✓.</p></div></div>
+
+<div class="qz" data-q="u18-3"><div class="qq">(개념) 물체가 주축이 아닌 축 둘레로 일정한 \(\boldsymbol\omega\)로 돌려면 왜 외부 토크가 필요한가? 자동차 바퀴 "밸런스"를 맞춘다는 것은 무엇을 맞추는 것인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\vb L\not\parallel\boldsymbol\omega\)이면 \(\vb L\)이 물체와 함께 \(\boldsymbol\omega\) 둘레로 돌아 \(\dot{\vb L}=\boldsymbol\omega\times\vb L\ne0\) → 토크 필요. 바퀴 밸런싱: ① 정적 — CM을 축 위에(원심력 제거), ② 동적 — 회전축을 주축으로(관성곱 제거, 흔들림 짝힘 제거). 납 추를 양쪽 림에 붙이는 이유.</p></div></div>

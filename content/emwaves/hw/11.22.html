@@ -1,0 +1,17 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> \(\mathbf p=qd\cos\omega t\,\hat{\mathbf z}\), \(\omega=\sqrt{k/m}\), \(p_0=qd\). 쌍극자에서 바닥 점까지 거리 \(r=\sqrt{R^2+h^2}\), 극각은 \(\sin\theta=R/r\).</p>
+\[ |\langle\mathbf S\rangle|=\frac{\mu_0p_0^2\omega^4}{32\pi^2c}\frac{\sin^2\theta}{r^2}=\frac{\mu_0q^2d^2\omega^4}{32\pi^2c}\frac{R^2}{(R^2+h^2)^2}. \]
+<p>"바닥 단위면적당" 전력이므로 \(\hat{\mathbf r}\)와 바닥 법선의 각도 인수 \(\cos=h/r\)를 곱한다:</p>
+\[ \boxed{\;I(R)=\frac{\mu_0q^2d^2\omega^4}{32\pi^2c}\frac{R^2h}{(R^2+h^2)^{5/2}}\;} \]
+<p>최대: \(\dfrac{d}{dR}\dfrac{R^2}{(R^2+h^2)^{5/2}}=0\Rightarrow 2(R^2+h^2)=5R^2\Rightarrow\boxed{R=h\sqrt{2/3}\approx0.816\,h}\).</p>
+<p><b>(b)</b> \(\displaystyle\int_0^\infty\frac{R^3dR}{(R^2+h^2)^{5/2}}=\frac{2}{3h}\) 이므로</p>
+\[ \int_0^\infty I\,2\pi R\,dR=\frac{\mu_0q^2d^2\omega^4h}{32\pi^2c}\cdot2\pi\cdot\frac{2}{3h}
+=\boxed{\;\frac{\mu_0q^2d^2\omega^4}{24\pi c}\;} \]
+<p>총 복사출력 \(\langle P\rangle=\dfrac{\mu_0q^2d^2\omega^4}{12\pi c}\)의 <b>정확히 절반</b> — 바닥은 반공간이고 \(\sin^2\theta\) 분포가 위아래 대칭이므로 당연하다 ✓.</p>
+<p><b>(c)</b> 진폭 \(A\)일 때 \(U=\tfrac12kA^2\), \(\dfrac{dU}{dt}=-\dfrac{\mu_0q^2A^2\omega^4}{12\pi c}=-\dfrac{\mu_0q^2\omega^4}{6\pi ck}U\). 따라서 \(U\propto e^{-\gamma t}\)로</p>
+\[ \gamma=\frac{\mu_0q^2\omega^4}{6\pi ck}=\frac{\mu_0q^2\omega^4}{6\pi c\,m\omega^2}=\frac{\mu_0q^2\omega^2}{6\pi mc}=\omega^2\tau_0 \]
+<p>(Eq. 11.84와 일치). 진폭은 \(\sqrt U\propto e^{-\gamma t/2}\)이므로 \(d/e\)가 되는 시각은 \(\gamma t/2=1\):</p>
+\[ \boxed{\;\tau=\frac2\gamma=\frac{12\pi mc}{\mu_0q^2\omega^2}=\frac{12\pi\epsilon_0mc^3}{q^2\omega^2}\;} \]
+<div class="alabel">감점 포인트</div>
+<p>(a)에서 \(\cos\) 인수 \(h/r\)를 곱하지 않고 \(|\mathbf S|\) 자체를 답으로 쓰는 것 — "바닥 단위면적당"이므로 경사 투영이 필요하다. (c)에서 에너지 감쇠율과 진폭 감쇠율(2배 차이)을 혼동하는 것.</p></div><!--/sol-->

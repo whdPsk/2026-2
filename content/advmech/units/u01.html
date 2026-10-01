@@ -1,0 +1,94 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 한 입자에 대해 \(\vb F=\dot{\vb p}\)를 안다. 입자가 \(n\)개이고 서로 힘을 주고받는다면, 계 "전체"의 운동을 기술하는 방정식에 <b>내력(internal force)</b>이 나타날까? 나타나지 않으려면 입자 사이의 힘에 어떤 조건이 필요할지 먼저 적어 보라. 또 각운동량에 대해서도 같은 조건이면 충분할까, 아니면 더 강한 조건이 필요할까? (힌트: 크기가 같고 방향이 반대인 두 힘이 <em>같은 작용선 위에 있지 않으면</em> 무엇이 남는가?)</div>
+
+<h4>9.1 입자계를 다루기 위한 두 가지 가정 <span class="en">weak &amp; strong forms of the third law</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>한 입자의 네 법칙 복습 — 강의노트 식 (9.1)–(9.6)</div>
+<ol>
+<li><b>운동방정식.</b> 관성계에서 입자에 작용하는 모든 힘의 합을 \(\vb F\)라 하면
+\[ \vb F=\dot{\vb p}=\od{\vb p}{t}=m\od{\vb v}{t}=m\vb a . \]</li>
+<li><b>선운동량 보존.</b> \(\vb F=0\)이면 \(\dot{\vb p}=0\), 즉 \(\vb p\)가 상수.</li>
+<li><b>각운동량 보존.</b> \(\vb L=\vb r\times\vb p\)를 미분하면 \(\dot{\vb r}\times\vb p=\vb v\times m\vb v=0\)이므로
+\[ \dot{\vb L}=\vb v\times\vb p+\vb r\times m\od{\vb v}{t}=\vb r\times\vb F=\vb N. \]
+토크 \(\vb N=0\)이면 \(\vb L\) 보존.</li>
+<li><b>에너지 보존.</b> 점 1에서 2까지 힘이 한 일은
+\[ W_{12}=\int_1^2\vb F\cdot\dd\vb r=m\int_1^2\od{\vb v}{t}\cdot\vb v\,\dd t=\frac m2\int_1^2\od{}{t}(v^2)\,\dd t=\tfrac12m(v_2^2-v_1^2)=T_2-T_1. \]
+보존력이면 \(\oint\vb F\cdot\dd\vb r=0\)이므로 \(\vb F=-\nabla U\), \(W_{12}=U_1-U_2\), 따라서 \(T_1+U_1=T_2+U_2\).</li>
+<li><b>이 장의 전략.</b> 이 네 문장을 입자 \(\alpha=1,\dots,n\)에 각각 쓰고 <b>\(\alpha\)에 대해 합한다</b>. 합하는 순간 내력 항 \(\sum_\alpha\sum_\beta(\cdots)\)이 생기는데, 이것을 없애는 데 필요한 가정이 바로 Newton 제3법칙의 두 형태다. 강의노트의 요약 1–8번은 전부 "합한 뒤 내력 항을 어떻게 처리했는가"의 결과다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">정의</span>약한 형태와 강한 형태 (교재 식 9.1, 그림 9-1)</div>
+<ol>
+<li>\(\vb f_{\alpha\beta}\)를 "입자 \(\beta\)가 입자 \(\alpha\)에 주는 힘"으로 쓴다. (첫 첨자 = 힘을 <em>받는</em> 입자.)</li>
+<li><b>약한 형태 (weak form)</b>: 크기가 같고 방향이 반대.
+\[ \vb f_{\alpha\beta}=-\vb f_{\beta\alpha}. \]</li>
+<li><b>강한 형태 (strong form)</b>: 약한 형태 + 두 힘이 두 입자를 잇는 직선 위에 놓임.
+\[ \vb f_{\alpha\beta}=-\vb f_{\beta\alpha},\qquad \vb f_{\alpha\beta}\parallel\vb r_{\alpha\beta}\equiv\vb r_\alpha-\vb r_\beta . \]
+중력·Coulomb 힘·용수철 힘 같은 <b>중심력</b>은 강한 형태를 만족한다.</li>
+<li><b>어디에 쓰이나 (시험 포인트).</b>
+<table><tr><th>결론</th><th>필요한 형태</th><th>이유</th></tr>
+<tr><td>\(M\ddot{\vb R}=\vb F^{\rm ext}\), \(\vb P\) 보존 (U2)</td><td>약한</td><td>\(\vb f_{\alpha\beta}+\vb f_{\beta\alpha}=0\)만 쓰면 이중합이 0</td></tr>
+<tr><td>\(\dot{\vb L}=\vb N^{\rm ext}\), \(\vb L\) 보존 (U3)</td><td>강한</td><td>\(\vb r_{\alpha\beta}\times\vb f_{\alpha\beta}=0\)이 추가로 필요</td></tr>
+<tr><td>\(E\) 보존 (U4)</td><td>(내력이 보존력)</td><td>내력의 일은 상쇄되지 않고 내부 퍼텐셜로 들어감</td></tr></table></li>
+</ol></div>
+
+<div class="callout warn"><b class="head">움직이는 전하는 예외 — 강의노트 Note 3이 교재보다 정확하다.</b> 교재(p.329)는 자기력 \(q\vb v\times\vb B\)가 "약한 형태는 만족하지만 강한 형태는 위반한다"고 쓴다. 강의노트는 더 나아가 <b>움직이는 전하 사이의 전자기력은 순간적으로는 약한 형태조차 만족하지 않는다</b>고 말한다. 예: \(x\)축 위를 움직이는 전하 1과 \(y\)축 위를 움직이는 전하 2 — 1이 2에 주는 자기력과 2가 1에 주는 자기력은 크기도 방향도 다르다(Griffiths 8.2.1의 예). 그래도 전자기장이 나르는 운동량 \(\vb P_{\rm field}\)까지 포함하면
+\[ \vb F_{\alpha\beta}+\vb F_{\beta\alpha}=-\od{\vb P_{\rm field}}{t} \]
+이 되어 <b>총운동량은 보존</b>된다. 역학적 운동량만 보면 보존이 깨진 것처럼 보일 뿐이다.</div>
+
+<h4>9.2 질량중심 <span class="en">center of mass</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>질량중심의 정의와 좌표 의존성</div>
+<ol>
+<li>총질량과 질량중심 위치벡터:
+\[ M=\sum_{\alpha=1}^n m_\alpha,\qquad \vb R=\frac1M\sum_\alpha m_\alpha\vb r_\alpha . \]
+연속 분포이면 \(\vb R=\dfrac1M\int\vb r\,\dd m\).</li>
+<li><b>Note 1 (강의).</b> 원점을 \(\vb a\)만큼 옮기면 \(\vb r_\alpha\to\vb r_\alpha-\vb a\)이므로
+\[ \vb R\to\frac1M\sum m_\alpha(\vb r_\alpha-\vb a)=\vb R-\vb a . \]
+즉 \(\vb R\)이라는 <em>벡터</em>는 바뀌지만, 그것이 가리키는 <em>점</em>은 그대로다. "질량중심의 위치는 유일, 위치벡터는 좌표계 의존"이 바로 이 뜻이다.</li>
+<li><b>대칭성으로 성분 줄이기.</b> 질량 분포가 어떤 평면에 대해 거울대칭이면 \(\vb R\)은 그 평면 위에 있다. 적분 \(\int x\,\dd m\)에서 \(x\)와 \(-x\)의 기여가 상쇄되기 때문(홀함수를 대칭 구간에서 적분). Example 9.1의 첫 단계가 이것이다.</li>
+<li><b>합성 물체.</b> 물체를 조각 \(A,B,\dots\)로 나누면 각 조각을 그 질량중심에 놓인 점질량으로 바꿔도 된다:
+\[ \vb R=\frac{M_A\vb R_A+M_B\vb R_B+\cdots}{M_A+M_B+\cdots}. \]
+구멍 뚫린 물체는 "음의 질량"을 더하는 것으로 처리한다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>대표 결과 — 반구, 원뿔, 원호 (Example 9.1, Problems 9-1~9-4 유형)</div>
+<ol>
+<li><b>꽉 찬 반구</b> (반지름 \(a\), 평면이 \(y=0\), 볼록면이 \(+y\)): 두께 \(\dd y\)인 원판 조각 \(\dd m=\rho\pi(a^2-y^2)\dd y\).
+\[ Y=\frac{\rho\pi}{M}\int_0^a y(a^2-y^2)\,\dd y=\frac{\rho\pi}{M}\frac{a^4}{4},\qquad M=\tfrac23\pi a^3\rho\ \Rightarrow\ Y=\frac{3a}{8}. \]</li>
+<li><b>얇은 반구 껍질</b> (반지름 \(a\)): 폭 \(a\,\dd\vartheta\)인 띠, \(y=a\cos\vartheta\), \(\dd m=\sigma\,2\pi a\sin\vartheta\cdot a\,\dd\vartheta\).
+\[ Y=\frac{\int_0^{\pi/2}a\cos\vartheta\,\sin\vartheta\,\dd\vartheta}{\int_0^{\pi/2}\sin\vartheta\,\dd\vartheta}=\frac a2 . \]
+(Archimedes: 구면대의 넓이는 높이에 비례 → 껍질은 높이 방향으로 "균일"하므로 중점 \(a/2\).)</li>
+<li><b>꽉 찬 원뿔</b> (높이 \(h\), 꼭짓점이 원점): 반지름 \(r(z)=az/h\)인 원판, \(\dd m\propto z^2\dd z\).
+\[ Z=\frac{\int_0^h z\cdot z^2\dd z}{\int_0^h z^2\dd z}=\frac34h\quad(\text{밑면에서 }h/4). \]</li>
+<li><b>원호 도선</b> (반지름 \(a\), 중심각 \(\beta\), 대칭축이 \(x\)): \(X=\dfrac{\int_{-\beta/2}^{\beta/2}a\cos\phi\,\dd\phi}{\beta}=\dfrac{2a\sin(\beta/2)}{\beta}\). \(\beta=\pi\)(반원)이면 \(2a/\pi\).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 질량중심</div>
+\[ M=\sum_\alpha m_\alpha,\qquad \vb R=\frac1M\sum_\alpha m_\alpha\vb r_\alpha=\frac1M\int\vb r\,\dd m \]
+<table><tr><th>물체</th><th>평면(밑면)에서 CM까지</th></tr>
+<tr><td>꽉 찬 반구</td><td>\(3a/8\)</td></tr><tr><td>반구 껍질</td><td>\(a/2\)</td></tr>
+<tr><td>꽉 찬 원뿔</td><td>\(h/4\) (꼭짓점에서 \(3h/4\))</td></tr><tr><td>반원판</td><td>\(4a/3\pi\)</td></tr><tr><td>반원호</td><td>\(2a/\pi\)</td></tr></table>
+<p class="note">약한 형태 → 선운동량, 강한 형태 → 각운동량. 이 두 줄을 먼저 떠올리고 유도를 시작하라.</p></div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span></h4>
+
+<div class="qz" data-q="u01-1"><div class="qq">두 입자 사이의 힘이 \(\vb f_{12}=-\vb f_{21}\)이지만 두 입자를 잇는 직선에 수직이라고 하자(작용선이 평행하게 어긋나 있음). 외력이 없을 때 (a) 총운동량 (b) 총각운동량은 보존되는가? 각운동량의 변화율을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>(a) <b>보존된다.</b> \(\dot{\vb P}=\vb f_{12}+\vb f_{21}=0\). 약한 형태만 쓰였다.</p>
+<p>(b) <b>보존되지 않는다.</b>
+\[ \dot{\vb L}=\vb r_1\times\vb f_{12}+\vb r_2\times\vb f_{21}=(\vb r_1-\vb r_2)\times\vb f_{12}=\vb r_{12}\times\vb f_{12}\neq0. \]
+크기는 \(|\vb r_{12}||\vb f_{12}|\) — 크기가 같고 방향이 반대인 두 힘이 <b>짝힘(couple)</b>을 이룬다. 짝힘의 토크는 원점과 무관하다는 것도 확인: 원점을 옮겨도 \(\vb r_{12}\)는 그대로.</p>
+<p><b>교훈</b>: \(\vb L\) 보존에는 \(\vb r_{12}\parallel\vb f_{12}\)(강한 형태)가 반드시 필요하다.</p></div></div>
+
+<div class="qz" data-q="u01-2"><div class="qq">반지름 \(a\)인 꽉 찬 반구의 질량중심이 평면에서 \(3a/8\)임을 <b>원판 조각</b>으로 유도하라. 그리고 같은 결과를 <b>구면 껍질 조각</b>(반지름 \(r\), 두께 \(\dd r\)인 반구 껍질들의 합)으로도 얻어 보라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>원판 조각</b>: 유도 3의 1번 — \(Y=\dfrac{\pi\rho a^4/4}{(2/3)\pi\rho a^3}=\dfrac{3a}{8}\).</p>
+<p><b>껍질 조각</b>: 반지름 \(r\)인 반구 껍질의 질량 \(\dd m=\rho\,2\pi r^2\dd r\), 그 질량중심 높이는 \(r/2\)(유도 3의 2번). 따라서
+\[ Y=\frac{\int_0^a (r/2)\,2\pi\rho r^2\dd r}{\int_0^a 2\pi\rho r^2\dd r}=\frac{\tfrac12\cdot a^4/4}{a^3/3}=\frac{3a}{8}.\ \checkmark \]
+<b>검산</b>: \(3a/8&lt;a/2\) — 꽉 찬 반구는 질량이 평면 쪽에 더 많으므로 껍질보다 CM이 낮아야 한다 ✓.</p></div></div>
+
+<div class="qz" data-q="u01-3"><div class="qq">원점을 \(\vb a\)만큼 옮기면 \(\vb R\)은 \(\vb R-\vb a\)가 된다. 그렇다면 "계의 운동량 \(\vb P=M\dot{\vb R}\)"은 원점 이동에 따라 바뀌는가? 원점이 <b>일정한 속도 \(\vb u\)로 움직이는</b> 경우는 어떤가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>고정된 \(\vb a\): \(\dd(\vb R-\vb a)/\dd t=\dot{\vb R}\)이므로 \(\vb P\)는 <b>불변</b>.</p>
+<p>움직이는 원점 \(\vb a=\vb u t\): \(\vb P'=M(\dot{\vb R}-\vb u)=\vb P-M\vb u\). 운동량 값은 기준계에 따라 바뀌지만 \(\vb u\)가 상수이므로 \(\dot{\vb P}'=\dot{\vb P}=\vb F^{\rm ext}\) — <b>운동방정식은 Galilei 변환에 불변</b>이다. 보존 여부(외력이 0인가)도 모든 관성계에서 같다.</p></div></div>
+
+<div class="qz" data-q="u01-4"><div class="qq">(개념) 교재는 자기력이 "약한 형태는 만족, 강한 형태는 위반"이라고 쓰고, 강의노트는 "움직이는 전하 사이 힘은 약한 형태도 만족하지 않을 수 있다"고 쓴다. 둘 중 어느 쪽이 일반적으로 옳은지, 그리고 그래도 운동량 보존이 살아남는 이유를 한 문장으로 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>강의노트가 일반적으로 옳다.</b> 두 전하가 서로 수직 방향으로 움직이면 한쪽은 상대의 자기장을 느끼고 다른 쪽은 느끼지 않는 배치가 가능해 \(\vb F_{12}\ne-\vb F_{21}\)이다. 교재의 문장은 "균일한 외부 자기장 속 전하" 같은 특수한 상황에만 맞는다.</p>
+<p>그래도 보존이 살아남는 이유: <b>전자기장 자체가 운동량 \(\vb P_{\rm field}=\epsilon_0\int\vb E\times\vb B\,\dd\tau\)를 가지므로</b>, 입자 운동량 + 장 운동량의 합이 보존된다(\(\vb F_{\alpha\beta}+\vb F_{\beta\alpha}=-\dd\vb P_{\rm field}/\dd t\)).</p></div></div>

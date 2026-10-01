@@ -1,0 +1,23 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>Prob. 7.38 결과: \(r&gt;R\)에서
+\[\vb{B}=\frac{\muz I}{4\pi r}\tan(\theta/2)\,\hat{\boldsymbol\varphi},\qquad
+\vb{E}=\frac{It}{4\pi\eps r^{2}}\hat{\vb{r}} .\]
+(Amperian 원에 북쪽 사발면을 씌우면 실제 전류는 통과하지 않고 변위전류
+\(\eps\dot\Phi_E=\tfrac{I}{2}(1-\cos\theta)\) 만 남는다.)</p>
+<p><b>(a)</b> \(\hat{\vb{r}}\times\hat{\boldsymbol\varphi}=-\hat{\boldsymbol\theta}\) 이므로
+\[\boxed{\;\vb{S}=-\frac{I^{2}t}{16\pi^{2}\eps r^{3}}\tan(\theta/2)\,\hat{\boldsymbol\theta}\;}\]
+즉 에너지는 남극(전선 쪽)에서 나와 표면을 감싸며 북쪽으로 흐른다.</p>
+<p><b>(b)</b>
+\[u=\frac{I^{2}t^{2}}{32\pi^{2}\eps r^{4}}+\frac{\muz I^{2}}{32\pi^{2}r^{2}}\tan^{2}(\theta/2).\]</p>
+<p><b>(c)</b> \(\partial u/\partial t=\dfrac{I^{2}t}{16\pi^{2}\eps r^{4}}\).
+한편 \(\sin\theta\tan(\theta/2)=1-\cos\theta\) 를 이용하면
+\[\divg\vb{S}=\frac{1}{r\sin\theta}\frac{\partial}{\partial\theta}(\sin\theta\,S_\theta)
+=-\frac{I^{2}t}{16\pi^{2}\eps r^{4}} .\]
+따라서 \(\partial u/\partial t=-\divg\vb{S}\) ✓. \(\theta=\pi\)(음의 \(z\)축)에서는 \(\tan(\theta/2)\)가 발산 — 그곳에 실제 전류가 있으므로 예외.</p>
+<p><b>(d)</b> \(-z\)축의 전선에서 \(\vb{E}\)는 원점 바깥쪽(\(-\hat{\vb{z}}\) 방향), 전류는 \(+\hat{\vb{z}}\) 방향이므로 장이 전하를 <em>막고</em> 있다. 외부가 공급하는 일률:
+\[P_{\rm ext}=\int_R^\infty \frac{It}{4\pi\eps r^{2}}\,I\,dr=\frac{I^{2}t}{4\pi\eps R}.\]
+한편 전기장 에너지 \(U_E=\dfrac{Q^{2}}{8\pi\eps R}\Rightarrow \dfrac{dU_E}{dt}=\dfrac{QI}{4\pi\eps R}=\dfrac{I^{2}t}{4\pi\eps R}\).
+\[\boxed{\;P_{\rm ext}=\frac{dU_{\rm em}}{dt}=\frac{I^{2}t}{4\pi\eps R}\;}\]</p>
+<div class="alabel">감점 포인트</div>
+Amperian 고리의 "모자"를 남쪽 사발로 잡아 실제 전류를 세면서 변위전류도 같이 세는 이중 계산.</div><!--/sol-->

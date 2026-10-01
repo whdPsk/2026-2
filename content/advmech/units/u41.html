@@ -1,0 +1,54 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 대기 상층에서 생긴 뮤온의 반감기는 1.5 μs 남짓이다. 빛의 속도로 날아도 1.5 μs 동안 450 m밖에 못 간다. 그런데 해수면에서도 뮤온이 많이 잡힌다. 지상의 관점과 뮤온의 관점 각각에서 이것을 어떻게 설명할까? 두 설명은 같은 개수를 예측해야 할까?</div>
+
+<h4>14.4 실험적 검증 <span class="en">experimental verification</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>뮤온 붕괴 — 두 관점, 한 결과 <b>(필수)</b></div>
+<ol>
+<li>설정: 2000 m 산 위에서 \(v=0.98c\) 뮤온을 \(N_0=1000\)개 센다. 정지계 반감기 \(t_{1/2}=1.52\,\mu\)s. 붕괴 법칙 \(N=N_0\,2^{-t/t_{1/2}}\).</li>
+<li><b>고전</b>: 비행 시간 \(2000/(0.98c)=6.8\,\mu\)s → \(N=1000\cdot2^{-4.47}\approx45\). 관측은 약 542 — 12배 차이.</li>
+<li><b>지상 관점(시간 팽창)</b>: \(\gamma=1/\sqrt{1-0.98^2}\approx5\). 뮤온 시계로는 \(6.8/5=1.36\,\mu\)s → \(N=1000\cdot2^{-0.895}\approx538\). ✓</li>
+<li><b>뮤온 관점(길이 수축)</b>: 반감기는 그대로 1.52 μs. 대신 산 높이가 \(2000/5=400\,\)m로 수축 → 걸리는 시간 \(400/(0.98c)=1.36\,\mu\)s → 똑같이 538 (Example 14.3).</li>
+<li>교훈: 한 계에서는 시간 팽창, 다른 계에서는 길이 수축. 해석은 달라도 <b>측정 가능한 예측(개수)</b>은 같다 — 상대성 원리의 본질.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>Hafele–Keating 원자시계 (1972) — 규모 추정</div>
+<ol>
+<li>지구 자전·중력 효과를 무시한 계산: 둘레 \(4\times10^7\,\)m, 제트기 300 m/s → \(T_0\approx1.33\times10^5\,\)s(약 37시간).</li>
+<li>\(\Delta T=T_0(1-\sqrt{1-\beta^2})\approx\tfrac12\beta^2T_0\). \(\beta=10^{-6}\) → \(\Delta T\approx\tfrac12\cdot10^{-12}\cdot1.33\times10^5\approx66\,\)ns. 측정 오차보다 크다.</li>
+<li>실제 결과(ns): 동쪽 예측 \(-40\pm23\), 관측 \(-59\pm10\); 서쪽 예측 \(275\pm21\), 관측 \(273\pm7\). 동서 비대칭은 지구 자전(지구 중심 관성계에서 동쪽 비행기가 더 빠름), 전체 양(+) 이동은 중력(일반상대론) 효과.</li>
+<li>주의: "움직이는 시계가 느리다" = 움직인 시계는 <b>틱 수가 적다</b> → 읽는 시간(초)이 더 작다.</li>
+</ol></div>
+
+<h4>14.5 상대론적 Doppler 효과 <span class="en">relativistic Doppler effect</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>접근하는 광원 — 교재 식 (14.25)–(14.31) <b>(필수)</b></div>
+<ol>
+<li>수신자는 \(K\)에 정지, 광원(\(K'\))이 속도 \(v\)로 다가온다. 수신자 시간 \(\Delta t\) 동안 광원이 \(n\)개의 파를 낸다. 첫 파는 \(c\Delta t\)만큼 나아갔고 광원은 \(v\Delta t\)만큼 따라왔으므로 파열의 길이 = \((c-v)\Delta t\).</li>
+<li>\(\lambda=\frac{(c-v)\Delta t}{n}\), \(\nu=\frac cλ=\frac{cn}{(c-v)\Delta t}\).</li>
+<li>광원 입장에서 \(n=\nu_0\Delta t'\), 여기서 \(\Delta t'\)은 광원의 <b>고유 시간</b>(파열의 처음과 끝 모두에 있음): \(\Delta t'=\Delta t/\gamma\).</li>
+<li>대입:
+\[ \nu=\frac{\nu_0}{\gamma(1-\beta)}=\nu_0\frac{\sqrt{1-\beta^2}}{1-\beta}=\nu_0\sqrt{\frac{1+\beta}{1-\beta}} . \]</li>
+<li>멀어지면 파열 길이가 \((c+v)\Delta t\) → \(\beta\to-\beta\). 한 식으로:
+\[ \boxed{\ \nu=\nu_0\sqrt{\frac{1+\beta}{1-\beta}}\ },\quad \beta>0\ \text{접근},\ \ \beta&lt;0\ \text{후퇴} . \]
+수신자가 움직이는 경우도 같은 결과(문제 14-14) — 상대 속도만 중요.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>고전 Doppler와의 비교 · 횡 Doppler</div>
+<ol>
+<li>소리: 음원 이동 \(\nu=\nu_0/(1-\beta_s)\), 관측자 이동 \(\nu=\nu_0(1+\beta_o)\) — 1차는 같고 2차부터 다르다.</li>
+<li>빛: \(\sqrt{\frac{1+\beta}{1-\beta}}\approx1+\beta+\tfrac12\beta^2\). 음원식과 관측자식의 <b>기하평균</b>이다: \(\sqrt{\frac{1}{1-\beta}\cdot(1+\beta)}\).</li>
+<li>옆을 지날 때(Example 14.11): 관측자 계에서 빛이 수직으로 올 때 \(\nu=\nu_0/\gamma\) — 순수한 시간 팽창 효과(<b>횡 Doppler</b>), 고전 역학엔 없다.</li>
+<li>천문학: 후퇴하는 은하의 스펙트럼선이 긴 파장 쪽으로 → <b>적색편이</b>. 거리가 멀수록 적색편이가 커짐 → 우주 팽창.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 검증과 Doppler</div>
+\[ \nu=\nu_0\sqrt{\frac{1+\beta}{1-\beta}},\qquad \nu_\perp=\frac{\nu_0}\gamma,\qquad \Delta T\approx\tfrac12\beta^2T_0\ (\beta\ll1) \]
+<p class="note">\(\beta\)의 부호: 접근 +, 후퇴 −. 파장은 역수: \(\lambda=\lambda_0\sqrt{(1-\beta)/(1+\beta)}\).</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u41-1"><div class="qq">(시험형) 광원이 다가오는 경우 상대론적 Doppler 공식을 유도하라. 어느 단계에서 상대론이 들어가는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 3. 파열 길이 \((c-v)\Delta t\)와 \(\nu=cn/[(c-v)\Delta t]\)까지는 고전과 같다. 상대론은 \(n=\nu_0\Delta t'\)에서 \(\Delta t'=\Delta t/\gamma\)(광원의 고유 시간)로 들어간다. 결과 \(\nu_0/[\gamma(1-\beta)]=\nu_0\sqrt{(1+\beta)/(1-\beta)}\).</p></div></div>
+
+<div class="qz" data-q="u41-2"><div class="qq">어떤 퀘이사의 Hα선(656 nm)이 1312 nm로 관측되었다. 특수상대론 Doppler만으로 해석한 후퇴 속도는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\lambda/\lambda_0=2=\sqrt{(1+\beta_r)/(1-\beta_r)}\) (\(\beta_r\) = 후퇴 속도/c) → \(4(1-\beta_r)=1+\beta_r\) → \(\beta_r=0.6\). (고전식 \(\lambda/\lambda_0=1+\beta\)라면 \(\beta=1\)이 되어 말이 안 된다. 실제 우주론적 적색편이는 공간 팽창으로 해석해야 한다.)</p></div></div>
+
+<div class="qz" data-q="u41-3"><div class="qq">뮤온 반감기 1.5 μs, \(v=0.999c\). 지구 관측자가 재는 반감기는? (문제 14-13)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\gamma=1/\sqrt{1-0.998}=1/\sqrt{0.001999}\approx22.4\). 반감기 \(\approx22.4\times1.5\approx33.5\,\mu\)s.</p></div></div>

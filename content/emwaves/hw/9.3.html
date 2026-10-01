@@ -1,0 +1,11 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+실수부·허수부로 나누면
+\[A_3\cos\delta_3=A_1\cos\delta_1+A_2\cos\delta_2,\qquad A_3\sin\delta_3=A_1\sin\delta_1+A_2\sin\delta_2 .\]
+두 식을 제곱해서 더하면 (\(\cos^2+\sin^2=1\), 교차항에 코사인 덧셈정리)
+\[\boxed{A_3=\sqrt{A_1^2+A_2^2+2A_1A_2\cos(\delta_1-\delta_2)}}\]
+두 식의 비를 취하면
+\[\boxed{\tan\delta_3=\frac{A_1\sin\delta_1+A_2\sin\delta_2}{A_1\cos\delta_1+A_2\cos\delta_2}}\]
+극한 점검: \(\delta_1=\delta_2\)이면 \(A_3=A_1+A_2\)(보강), \(\delta_1-\delta_2=\pi\)이면 \(A_3=|A_1-A_2|\)(상쇄).
+<div class="alabel">감점 포인트</div>
+\(\arctan\)의 분지(branch) 문제. 분모가 음수면 \(\delta_3\)에 \(\pi\)를 더해야 한다 — 사분면을 확인할 것.</div><!--/sol-->

@@ -1,0 +1,21 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<b>(a)</b> \(\mathbf E=E_\phi(r,\theta,t)\hat\phi\)이고 \(\phi\) 의존성이 없으므로 \(\nabla\cdot\mathbf E=\frac{1}{r\sin\theta}\partial_\phi E_\phi=0\ \checkmark\).<br>
+\[(\nabla\times\mathbf E)_r=\frac{1}{r\sin\theta}\frac{\partial(\sin\theta\,E_\phi)}{\partial\theta}=\frac{2A\cos\theta}{r^2}\left[\cos u-\frac{\sin u}{kr}\right]\]
+\[(\nabla\times\mathbf E)_\theta=-\frac1r\frac{\partial(rE_\phi)}{\partial r}=\frac{A\sin\theta}{r}\left[k\sin u+\frac{\cos u}{r}-\frac{\sin u}{kr^2}\right]\]
+\(\mathbf B=-\int(\nabla\times\mathbf E)\,dt\) (\(\int\cos u\,dt=-\frac1\omega\sin u\), \(\int\sin u\,dt=\frac1\omega\cos u\)):
+\[\boxed{\mathbf B=\frac{2A\cos\theta}{ckr^2}\left[\sin u+\frac{\cos u}{kr}\right]\hat r-\frac{A\sin\theta}{cr}\left[\cos u-\frac{\sin u}{kr}-\frac{\cos u}{k^2r^2}\right]\hat\theta}\]
+\(\nabla\cdot\mathbf B=0\) 확인:
+\[\frac{1}{r^2}\partial_r(r^2B_r)+\frac{1}{r\sin\theta}\partial_\theta(\sin\theta B_\theta) =\frac{2A\cos\theta}{cr^2}\left\{\frac1k\left[k\cos u-\frac{\sin u}{r}-\frac{\cos u}{kr^2}\right]-\left[\cos u-\frac{\sin u}{kr}-\frac{\cos u}{k^2r^2}\right]\right\}=0\ \checkmark\]
+\(\nabla\times\mathbf B=\frac{1}{c^2}\partial_t\mathbf E\)도 같은 방식으로 확인된다(\(\omega=ck\) 사용). 이것은 진동하는 <b>자기쌍극자</b>의 장 형태다.<br>
+<b>(b)</b> \(\hat\phi\times\hat r=\hat\theta\), \(\hat\phi\times\hat\theta=-\hat r\):
+\[\mathbf S=\frac{1}{\mu_0}\left[-E_\phi B_\theta\,\hat r+E_\phi B_r\,\hat\theta\right]\]
+\(\langle\cos^2u\rangle=\langle\sin^2u\rangle=\frac12\), \(\langle\sin u\cos u\rangle=0\)을 쓰면 \(\hat r\) 성분에서 \(1/(k^2r^2)\) 항들이 서로 상쇄되고
+\[\boxed{\mathbf I=\langle\mathbf S\rangle=\frac{A^2\sin^2\theta}{2\mu_0cr^2}\,\hat r}\]
+\(\hat\theta\) 성분은 \(\langle[\cos u-\frac{\sin u}{kr}][\sin u+\frac{\cos u}{kr}]\rangle=\frac{1}{2kr}-\frac{1}{2kr}=0\)이라 사라진다. 방향은 바깥쪽 \(\hat r\ \checkmark\), \(1/r^2\)로 감소 \(\checkmark\), 적도(\(\theta=90^\circ\))에서 최대·축(\(\theta=0\))에서 0 — 쌍극자 복사 패턴 \(\checkmark\)<br>
+<b>(c)</b>
+\[P=\oint\mathbf I\cdot d\mathbf a=\frac{A^2}{2\mu_0c}\int_0^{2\pi}\!\!\int_0^\pi\sin^2\theta\cdot\sin\theta\,d\theta\,d\phi=\frac{A^2}{2\mu_0c}(2\pi)\left(\frac43\right)\]
+\[\boxed{P=\frac{4\pi A^2}{3\mu_0 c}}\]
+\(r\)에 무관 → 에너지 보존 \(\checkmark\)
+<div class="alabel">감점 포인트</div>
+근접장 항 \(1/kr\)을 미리 버리면 \(\nabla\cdot\mathbf B=0\)과 Maxwell 방정식이 정확히는 만족되지 않는다. 시간평균 때 이 항들이 상쇄되어 \(1/r^2\)만 남는 과정을 보일 것.</div><!--/sol-->

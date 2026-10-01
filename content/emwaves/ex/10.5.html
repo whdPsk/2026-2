@@ -1,0 +1,59 @@
+<div class="exq"><b>상황.</b> 점전하가 원점에 정지해 있다가 \(t=0\)에 \(+x\) 방향으로 <b>짧은 시간 \(\tau\) 동안</b> 걷어차여, 그 뒤로는 일정한 속도 \(v\)로 날아간다. 시각 \(t\ (\gg\tau)\)에서의 <b>전기장 모양을 그리고</b>, 자기장은 어떻게 되는지 설명하는 것이 목표다. 계산이 아니라 <em>인과성 논증</em>으로 그림을 만드는 문제다: 소식은 \(c\)로 퍼지므로 공간이 세 영역으로 갈라진다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>바깥 = 아직 소식 없음(정지 전하의 Coulomb 장), 안쪽 = 등속 전하의 팬케이크 장, 그 사이 껍질에서 장선이 강제로 이어지며 꺾인다.</div>
+<ol>
+<li><b>바깥 영역 \(r&gt;r_2=ct\).</b> "전하가 걷어차였다"는 소식이 아직 도착하지 않았다. 여기서 장은 <em>원점에 정지한 전하</em>의 Coulomb 장이다:
+\[ \vb{E}=\frac{q}{4\pi\eps r^2}\hat{\vb{r}}\ \ (\text{원점 중심의 방사선}),\qquad \vb{B}=0. \]
+장선은 원점에서 뻗어 나오는 곧은 방사선이다.</li>
+
+<li><b>안쪽 영역 \(r&lt;r_1=c(t-\tau)\).</b> (이 구는 \(t=\tau\)일 때의 전하 위치를 중심으로 한다.) 여기서는 이미 등속운동 소식이 도착해 자리 잡았고, Example 10.4의 장이 그대로 성립한다: \(\vb{E}\)는 전하의 <em>현재</em> 위치에서 방사상으로 뻗되 진행 방향으로 눌린 팬케이크, \(\vb{B}=\frac{1}{c^2}(\vb{v}\times\vb{E})\)로 \(x\)축을 감는 원.</li>
+
+<li><b>껍질 \(r_1&lt;r&lt;r_2\) (두께 \(c\tau\)).</b> 걷어차는 동안 전하가 정확히 어떻게 가속했는지 모르므로 상세한 장은 모른다. 그러나 결정적인 사실 하나는 안다 — <b>장선은 끊어질 수 없다</b>(\(\divg\vb{E}=0\), 껍질 안에 전하가 없으므로). 바깥의 "원점 중심 방사선"과 안쪽의 "현재 위치 중심 방사선"은 서로 어긋나 있으므로, 껍질 안에서 장선이 옆으로 꺾여 두 쪽을 이어야 한다.</li>
+
+<li><b>꺾임 = 접선 성분.</b> 이 꺾인 구간에서 \(\vb{E}\)는 큰 \(\hat{\boldsymbol\theta}\) 성분(진행방향에 대한 극각 \(\theta\))을 갖는다. 방사 성분 \(E_r\)은 여전히 \(1/r^2\)이지만, 접선 성분은 \(1/r\)로만 떨어진다(다음 +α에서 정량화). 그래서 멀리 갈수록 껍질만이 살아남는다.</li>
+
+<li><b>자기장과 에너지 흐름.</b> \(\vb{B}=\frac1c\hat{\boldsymbol{\rr}}\times\vb{E}\)이므로 껍질 안에서 \(\vb{B}\)는 \(\vb{E}\)와 수직인 \(\hat{\boldsymbol\varphi}\) 방향으로 크게 생긴다. 그러면
+\[ \vb{S}=\frac{1}{\muz}(\vb{E}\times\vb{B})\propto E_\theta B_\varphi\,\hat{\vb{r}} \]
+로 <b>방사 방향 성분이 있다</b> — 껍질과 함께 에너지가 광속으로 바깥으로 흘러나간다. 이것이 <em>복사</em>다. 바깥(정적 Coulomb)에도 안쪽(등속)에도 알짜 방사 에너지 흐름은 없다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \begin{aligned} &r&gt;ct:\ \text{원점 중심 Coulomb 장},\ \vb{B}=0\\ &r&lt;c(t-\tau):\ \text{현재 위치 중심 팬케이크 장},\ \vb{B}=\tfrac{1}{c^2}\vb{v}\times\vb{E}\\ &\text{그 사이 두께 }c\tau\text{ 껍질}:\ \text{장선이 꺾이며 큰 }E_\theta,\ \vb{S}\cdot\hat{\vb{r}}&gt;0\ (\text{복사}) \end{aligned}\ } \]
+<p class="note">"가속하는 전하가 복사한다"는 문장의 가장 시각적인 증명. 복사는 전하가 아니라 <em>장선의 꺾임</em>이 광속으로 달아나는 현상이다. <b>검산</b> ① 정적 극한 \(v\to0\): 껍질 안팎이 같은 Coulomb 장이 되어 꺾임이 사라지고 복사도 0 ✓. ② \(\tau\to\infty\)(아주 부드러운 가속): 껍질이 무한히 두꺼워져 꺾임 각도가 0으로 가고 \(E_\theta\to0\) ✓ — 천천히 가속할수록 덜 복사한다. ③ 인과성: \(r&gt;ct\)에서 정보가 전혀 없다 ✓. ④ 차원/스케일: 껍질 두께 \(c\tau\), 반지름 \(ct\)이므로 \(t\to\infty\)에서 껍질은 상대적으로 얇아지지만 그 안의 에너지는 보존된다(다음 +α) ✓.</p></div>
+
+<div class="qz" data-q="ex10.5-a"><div class="qq"><b>+α</b> 이 그림을 <b>정량화</b>하라. 껍질 안에서 \(E_\theta/E_r\)를 기하학적으로 추정해 \(E_\theta\)의 명시적 표현을 얻고, 그것이 11장의 복사장 공식과 일치함을 보여라. (\(v\ll c\)로 가정)</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 기하.</b> 극각 \(\theta\)(진행축 \(x\)로부터) 방향의 장선 하나를 따라가 보자. 바깥 부분은 <em>원점</em>에서 나온 선, 안쪽 부분은 <em>현재 위치</em>(원점에서 \(vt\) 떨어짐)에서 나온 선이다. 두 직선은 서로 평행하지만 <b>가로 방향으로 어긋나 있다</b>. 어긋난 거리(=꺾임이 감당해야 할 가로 변위)는
+\[ \Delta_\perp = vt\sin\theta. \]
+이 변위를 껍질의 두께 \(\Delta_\parallel=c\tau\) 안에서 소화해야 한다.</p>
+<p><b>2) 성분비.</b> 장선의 기울기가 곧 장의 성분비이므로
+\[ \frac{E_\theta}{E_r}=\frac{\Delta_\perp}{\Delta_\parallel}=\frac{v\,t\sin\theta}{c\tau}. \]</p>
+<p><b>3) 대입.</b> 껍질 위치에서 \(E_r=\dfrac{q}{4\pi\eps r^2}\), \(r=ct\), 그리고 가속도는 \(a=v/\tau\). 따라서
+\[ E_\theta=\frac{q}{4\pi\eps (ct)^2}\cdot\frac{(a\tau)t\sin\theta}{c\tau}=\frac{q\,a\sin\theta}{4\pi\eps c^3 t}. \]
+\(t=r/c\)를 넣으면
+\[ \boxed{\ E_\theta=\frac{q\,a\sin\theta}{4\pi\eps c^2 r}=\frac{\muz\,q\,a\sin\theta}{4\pi r}\ } \]
+(\(1/\eps c^2=\muz\)).</p>
+<p><b>4) 11장과의 대조.</b> 11장의 쌍극자 복사장은 \(E_\theta=\dfrac{\muz \ddot p\sin\theta}{4\pi r}\)이고, 점전하에서는 \(\ddot p=qa\). <b>완전히 일치한다</b> ✓. 즉 Thomson의 그림만으로 정확한 복사장 계수까지 나온다.</p>
+<p><b>5) 왜 \(1/r\)인가.</b> \(E_r\propto1/r^2\)이지만 꺾임 비율 \(\propto t\propto r\)가 곱해져 \(E_\theta\propto1/r\)이 된다. \(1/r\)이야말로 복사의 지문이다 — \(|\vb{S}|\propto E^2\propto1/r^2\)이고 구면 넓이가 \(r^2\)이므로 총 일률이 \(r\)에 무관해진다(에너지가 무한대까지 실려 나간다). \(1/r^2\) 장은 총 일률이 \(1/r^2\to0\)이라 복사가 아니다.</p>
+<p><b>6) 검산.</b> \(\theta=0\)(진행축): \(E_\theta=0\) — 앞뒤로는 복사하지 않는다 ✓ (도넛 모양). \(a\to0\): \(E_\theta\to0\) ✓. 차원: \(\muz q a/r=(\mathrm{T\,m/A})(\mathrm{C})(\mathrm{m/s^2})/\mathrm{m}\); \(\mathrm{C/A=s}\)이므로 \(=\mathrm{T\,m/s}=\mathrm{V/m}\) ✓.</p></div></div>
+
+<div class="qz" data-q="ex10.5-b"><div class="qq"><b>+α</b> 다른 양을 물어보자. 껍질 <b>안에 들어 있는 총 에너지</b>를 계산하고, 그것이 Larmor 공식이 예측하는 \(P\tau\)와 같음을 확인하라. 또 상황을 뒤집어(달리던 전하가 \(t=0\)에 급정지) 그림이 어떻게 바뀌는지 설명하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 껍질 속 에너지 밀도.</b> 껍질 안에서는 \(E_\theta\)와 \(B_\varphi=E_\theta/c\)가 지배적이므로
+\[ u=\frac{\eps}{2}E_\theta^2+\frac{1}{2\muz}B_\varphi^2=\frac{\eps}{2}E_\theta^2+\frac{\eps}{2}E_\theta^2=\eps E_\theta^2 \]
+(전기·자기가 정확히 반반).</p>
+<p><b>2) 적분.</b> 껍질은 반지름 \(r=ct\), 두께 \(c\tau\)이므로 \(\dd V=r^2\dd\Omega\cdot c\tau\):
+\[ U=\int \eps E_\theta^2\,r^2 c\tau\,\dd\Omega=\eps c\tau\left(\frac{\muz qa}{4\pi}\right)^2\int\sin^2\theta\,\dd\Omega. \]
+\(\displaystyle\int\sin^2\theta\,\dd\Omega=2\pi\int_0^\pi\sin^3\theta\,\dd\theta=2\pi\cdot\frac43=\frac{8\pi}{3}\)이므로
+\[ U=\eps c\tau\frac{\muz^2q^2a^2}{16\pi^2}\cdot\frac{8\pi}{3}=\frac{\eps\muz\,\muz q^2a^2c\tau}{6\pi}=\frac{\muz q^2a^2}{6\pi c}\,\tau. \]</p>
+<p><b>3) Larmor와 비교.</b>
+\[ \boxed{\ U=\left(\frac{\muz q^2a^2}{6\pi c}\right)\tau=P_{\rm Larmor}\,\tau\ } \]
+가속이 지속된 시간 \(\tau\) 동안 Larmor 일률로 복사한 에너지가 정확히 껍질 안에 담겨 있다 ✓. 껍질은 반지름이 커져도(에너지 밀도 \(\propto1/r^2\), 부피 \(\propto r^2\)) 총 에너지가 보존되며 무한대까지 실려 나간다.</p>
+<p><b>4) 역방향: 급정지(bremsstrahlung).</b> 속도 \(v\)로 달리던 전하가 \(t=0\), 원점에서 시간 \(\tau\) 동안 멈춘다고 하자. 그림이 뒤집힌다:
+<br>· <b>안쪽</b> \(r&lt;c(t-\tau)\): 이미 "멈췄다"는 소식이 도착 → 원점에 정지한 전하의 Coulomb 장.
+<br>· <b>바깥</b> \(r&gt;ct\): 아직 소식 없음 → 전하가 <em>계속 달렸다면 있었을</em> 가상의 현재 위치 \(vt\)를 중심으로 한 팬케이크 장. (전하는 거기 없는데 장선은 거기를 가리킨다!)
+<br>· 껍질에서 다시 꺾임이 생기고, \(a\)의 부호만 반대이므로 \(E_\theta\)의 부호가 뒤집힐 뿐 <b>세기는 같다</b>. Larmor 공식이 \(a^2\)에만 의존하는 것과 정확히 대응한다 — 가속이든 감속이든 복사량은 같다.
+<br>· 금속 표적에 고속 전자를 때려 감속시킬 때 나오는 X선이 바로 이것: <b>bremsstrahlung(제동복사)</b>. Example 11.3에서 상대론적으로 정밀하게 다룬다.</p>
+<p><b>5) 검산.</b> \(v\to0\)(약한 킥): \(a\tau=v\to0\)이라 \(U\to0\) ✓. \(\tau\to\infty\)에서 \(a=v/\tau\to0\)이므로 \(U=\muz q^2 v^2/(6\pi c\tau)\to0\) — 아주 천천히 가속하면 복사가 없다 ✓. 차원: \(\muz q^2a^2\tau/c=(\mathrm{T\,m/A})(\mathrm{C^2})(\mathrm{m^2/s^4})(\mathrm{s})/(\mathrm{m/s})=\mathrm{J}\) ✓.</p></div></div>

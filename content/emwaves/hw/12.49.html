@@ -1,0 +1,20 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<b>★★ 두 불변량 — 시험 최빈출.</b> \(x\)방향 부스트에 대해 Eq. 12.111을 대입한다.
+
+<p><b>(a)</b></p>
+\[ \bar{\vb{E}}\cdot\bar{\vb{B}}=E_xB_x+\gamma^{2}(E_y-vB_z)\Big(B_y+\frac{v}{c^{2}}E_z\Big)+\gamma^{2}(E_z+vB_y)\Big(B_z-\frac{v}{c^{2}}E_y\Big) \]
+<p>교차항 \(\pm\frac{v}{c^{2}}E_yE_z\)와 \(\mp vB_yB_z\)가 정확히 상쇄되고 남는 것은</p>
+\[ \gamma^{2}\Big(1-\frac{v^{2}}{c^{2}}\Big)(E_yB_y+E_zB_z)=E_yB_y+E_zB_z, \]
+\[ \boxed{\ \bar{\vb{E}}\cdot\bar{\vb{B}}=\vb{E}\cdot\vb{B}\ } \]
+
+<p><b>(b)</b> 같은 방식으로</p>
+\[ \bar E^{2}-c^{2}\bar B^{2}=E_x^{2}-c^{2}B_x^{2}+\gamma^{2}\Big[(E_y^{2}+E_z^{2})\Big(1-\frac{v^{2}}{c^{2}}\Big)-c^{2}(B_y^{2}+B_z^{2})\Big(1-\frac{v^{2}}{c^{2}}\Big)\Big] \]
+<p>(여기서도 \(\mp2vE_yB_z,\ \pm2vE_zB_y\) 꼴의 교차항이 모두 상쇄된다.) 따라서</p>
+\[ \boxed{\ \bar E^{2}-c^{2}\bar B^{2}=E^{2}-c^{2}B^{2}\ } \]
+
+<p><b>(c)</b> 불가능하다. 주어진 점 \(P\)에서 \(E^{2}-c^{2}B^{2}=E^{2}&gt;0\)이고 이 값은 모든 계에서 같으므로</p>
+\[ \bar E^{2}=E^{2}+c^{2}\bar B^{2}\ \ge\ E^{2}&gt;0\ \Rightarrow\ \bar{\vb{E}}\neq0. \]
+<p><b>불변량이 주는 분류:</b> \(E^{2}-c^{2}B^{2}&gt;0\)이면 "전기적" 장(\(\bar{\vb{B}}=0\)인 계가 있을 수 있음), \(&lt;0\)이면 "자기적" 장(\(\bar{\vb{E}}=0\)인 계가 있을 수 있음), \(=0\)이면 어느 계에서도 둘 다 0이 아니다(평면파). 그리고 \(\vb{E}\cdot\vb{B}\neq0\)이면 어느 쪽도 불가능하다.</p>
+<div class="alabel">감점 포인트</div>
+"한 계에서만" 성립함을 보이고 끝내는 것. 임의 방향 부스트는 회전 + \(x\)부스트로 분해되고 두 양은 회전 불변이므로 이것으로 충분하다 — 이 한 줄을 반드시 덧붙여라.</div><!--/sol-->

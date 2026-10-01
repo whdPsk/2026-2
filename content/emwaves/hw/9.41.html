@@ -1,0 +1,28 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<b>(a)</b> \(\mathbf k_T=k_T(\sin\theta_T\hat x+\cos\theta_T\hat z)\), \(k_T=\omega n_2/c\), \(\sin\theta_T=\frac{n_1}{n_2}\sin\theta_I&gt;1\), \(\cos\theta_T=i\sqrt{\sin^2\theta_T-1}\). 그러면
+\[\mathbf k_T\cdot\mathbf r=\frac{\omega n_2}{c}\cdot\frac{n_1\sin\theta_I}{n_2}x+i\frac{\omega n_2}{c}\sqrt{\sin^2\theta_T-1}\,z=kx+i\kappa z\]
+\[\boxed{\tilde{\mathbf E}_T=\tilde{\mathbf E}_{0T}e^{-\kappa z}e^{i(kx-\omega t)},\quad k=\frac{\omega n_1\sin\theta_I}{c},\quad \kappa=\frac{\omega}{c}\sqrt{(n_1\sin\theta_I)^2-n_2^2}}\]
+경계면에 <b>평행하게 진행</b>하고 \(z\)방향으로 <b>지수적으로 감쇠</b>하는 evanescent wave. (\(\theta_I=\theta_c\)에서 \(\kappa=0\), 각이 커질수록 침투깊이 \(1/\kappa\)가 짧아진다.)<br>
+<b>(b) 평행(p) 편광.</b> \(\alpha=\dfrac{\cos\theta_T}{\cos\theta_I}=\dfrac{i\sqrt{\sin^2\theta_T-1}}{\cos\theta_I}\equiv ia\)(\(a\) 실수), \(\beta\)는 실수. Eq. 9.110:
+\[R=\left|\frac{\alpha-\beta}{\alpha+\beta}\right|^2=\left|\frac{ia-\beta}{ia+\beta}\right|^2=\frac{a^2+\beta^2}{a^2+\beta^2}=\boxed{1}\]
+<b>(c) 수직(s) 편광.</b> Prob. 9.17의 결과에서 \(\alpha\beta=ia\beta\)는 순허수:
+\[R=\left|\frac{1-ia\beta}{1+ia\beta}\right|^2=\frac{1+a^2\beta^2}{1+a^2\beta^2}=\boxed{1}\]
+두 경우 모두 <b>100% 반사</b> — 은거울(Prob. 9.23의 93%)보다 완벽하다. 이것이 광섬유·프리즘 반사의 원리.<br>
+<b>(d)</b> \(\mathbf E=E_0e^{-\kappa z}\cos(kx-\omega t)\hat y\)에서 \(\nabla\times\mathbf E=-\partial_t\mathbf B\):
+\[(\nabla\times\mathbf E)_x=-\partial_zE_y=\kappa E_0e^{-\kappa z}\cos(kx-\omega t),\quad (\nabla\times\mathbf E)_z=\partial_xE_y=-kE_0e^{-\kappa z}\sin(kx-\omega t)\]
+시간적분하면
+\[\boxed{\mathbf B=\frac{E_0}{\omega}e^{-\kappa z}\left[\kappa\sin(kx-\omega t)\hat x+k\cos(kx-\omega t)\hat z\right]}\]
+(Eq. 9.205와 일치.) \(\mathbf B\)의 \(x\)성분은 \(\mathbf E\)와 \(90^\circ\) 위상차임에 주목.<br>
+<b>(e) Maxwell 검산.</b>
+\[\nabla\cdot\mathbf E=\partial_yE_y=0\ \checkmark\]
+\[\nabla\cdot\mathbf B=\partial_xB_x+\partial_zB_z=\frac{E_0}{\omega}e^{-\kappa z}\left[\kappa k\cos-\kappa k\cos\right]=0\ \checkmark\]
+\[(\nabla\times\mathbf B)_y=\partial_zB_x-\partial_xB_z=\frac{(k^2-\kappa^2)E_0}{\omega}e^{-\kappa z}\sin(kx-\omega t)\]
+\[\mu\epsilon\,\partial_t E_y=\frac{n_2^2}{c^2}\omega E_0e^{-\kappa z}\sin(kx-\omega t)\]
+\(k^2-\kappa^2=\frac{\omega^2n_1^2\sin^2\theta_I}{c^2}-\frac{\omega^2}{c^2}\left[n_1^2\sin^2\theta_I-n_2^2\right]=\frac{\omega^2n_2^2}{c^2}\)이므로 두 식이 같다 \(\checkmark\) (Faraday는 (d)에서 이미 사용.)<br>
+<b>(f)</b> \(\hat y\times\hat x=-\hat z\), \(\hat y\times\hat z=\hat x\):
+\[S_z=-\frac{1}{\mu_0}E_yB_x=-\frac{\kappa E_0^2}{\mu_0\omega}e^{-2\kappa z}\cos(kx-\omega t)\sin(kx-\omega t)\ \Rightarrow\ \boxed{\langle S_z\rangle=0}\]
+\[S_x=\frac{1}{\mu_0}E_yB_z=\frac{kE_0^2}{\mu_0\omega}e^{-2\kappa z}\cos^2(kx-\omega t)\ \Rightarrow\ \boxed{\langle S_x\rangle=\frac{kE_0^2}{2\mu_0\omega}e^{-2\kappa z}\neq0}\]
+평균적으로 매질 2로 들어가는 에너지는 <b>0</b>(그래서 \(R=1\)이 모순 없음)이고, 에너지는 경계면을 따라 옆으로 흐른다.
+<div class="alabel">감점 포인트</div>
+\(\theta_T\)는 더 이상 각도가 아니다 — \(\cos\theta_T\)가 순허수라는 사실을 명시하고 \(\kappa&gt;0\) 가지를 골라야 한다. 또 "\(E\neq0\)인데 왜 \(R=1\)인가?"에 대한 답이 (f), 즉 순 에너지 전달이 0이라는 것.</div><!--/sol-->

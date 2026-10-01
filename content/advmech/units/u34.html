@@ -1,0 +1,34 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 진동하는 줄의 총에너지를 정규 모드로 쓰면 모드끼리의 교차항은 사라질까? 또 한 주기 평균으로 운동에너지와 퍼텐셜 에너지를 비교하면 어느 쪽이 클까? (조화진동자에서 알던 사실을 떠올려라.) 줄의 퍼텐셜 에너지 밀도는 \(q\)에 비례할까, \(\partial q/\partial x\)에 비례할까?</div>
+
+<h4>13.3 진동하는 줄의 에너지 <span class="en">energy of a vibrating string</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>운동에너지와 퍼텐셜 에너지 밀도 <b>(필수)</b></div>
+<ol>
+<li>운동에너지: \(T=\frac\rho2\int_0^L\left(\pd qt\right)^2\dd x\).</li>
+<li>퍼텐셜: loaded string의 \(U=\frac{\tau}{2d}\sum(q_{j-1}-q_j)^2=\frac\tau2\sum\left(\frac{q_{j-1}-q_j}d\right)^2d\) → \(d\to0\):
+\[ U=\frac\tau2\int_0^L\left(\pd qx\right)^2\dd x . \]
+기울기에 비례 — 줄이 늘어난 길이 \(\sqrt{1+q'^2}-1\approx\tfrac12q'^2\)에 장력을 곱한 것과 같다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>모드별 에너지의 합 — 교재 식 (13.14)–(13.26)</div>
+<ol>
+<li>\(q=\sum_r\eta_r\sin\frac{r\pi x}L\). \(T=\frac\rho2\sum_{rs}\dot\eta_r\dot\eta_s\int\sin\sin\,\dd x=\frac{\rho L}4\sum_r\dot\eta_r^2\) (직교성으로 교차항 소멸).</li>
+<li>\(\pd qx=\sum\frac{r\pi}L\eta_r\cos\frac{r\pi x}L\), 코사인도 직교 → \(U=\frac{\tau L}4\sum\frac{r^2\pi^2}{L^2}\eta_r^2=\frac{\rho L}4\sum\omega_r^2\eta_r^2\).</li>
+<li>실수부로: \(\text{Re}\,\eta_r=\mu_r\cos\omega_rt-\nu_r\sin\omega_rt\). 더하면 \(\sin^2+\cos^2=1\)로 시간 의존이 사라져
+\[ \boxed{\ E=\frac{\rho L}{4}\sum_r\omega_r^2\left(\mu_r^2+\nu_r^2\right)=\frac{\rho L}4\sum_r\omega_r^2|\beta_r|^2\ } \]
+<b>보존되고, 모드별 기여의 단순 합</b>.</li>
+<li>시간 평균(기본 주기에 걸쳐): \(\langle T\rangle=\langle U\rangle=\frac{\rho L}8\sum\omega_r^2|\beta_r|^2\) — 비리얼 정리.</li>
+<li>Lagrangian: \(L=\frac{\rho L}4\sum_r(\dot\eta_r^2-\omega_r^2\eta_r^2)\) → \(\ddot\eta_r+\omega_r^2\eta_r=0\) (U35의 강제·감쇠로 이어짐).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 줄의 에너지</div>
+\[ T=\frac\rho2\int\dot q^2\dd x,\quad U=\frac\tau2\int q'^2\dd x,\quad E=\frac{\rho L}4\sum_r\omega_r^2|\beta_r|^2,\quad \langle T\rangle=\langle U\rangle \]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u34-1"><div class="qq">\(E=\frac{\rho L}4\sum\omega_r^2(\mu_r^2+\nu_r^2)\)를 유도하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 2. \(T\propto\omega_r^2(\mu_r\sin+\nu_r\cos)^2\), \(U\propto\omega_r^2(\mu_r\cos-\nu_r\sin)^2\) — 합의 교차항 \(2\mu_r\nu_r\sin\cos\)이 부호 반대로 상쇄.</p></div></div>
+
+<div class="qz" data-q="u34-2"><div class="qq">가운데를 \(h\) 뜯은 줄(U33)의 총에너지를 두 방법으로 구하라: (a) 초기 퍼텐셜 \(\frac\tau2\int q'^2\dd x\) (b) 모드 합. \(\sum_{\text{odd}}1/r^2=\pi^2/8\).</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>(a) 기울기 \(\pm2h/L\): \(U=\frac\tau2\cdot\frac{4h^2}{L^2}L=\frac{2\tau h^2}L\).</p>
+<p>(b) \(E=\frac{\rho L}4\sum_{\rm odd}\frac{r^2\pi^2\tau}{\rho L^2}\cdot\frac{64h^2}{r^4\pi^4}=\frac{16\tau h^2}{\pi^2L}\sum_{\rm odd}\frac1{r^2}=\frac{16\tau h^2}{\pi^2L}\cdot\frac{\pi^2}8=\frac{2\tau h^2}{L}\) ✓.</p></div></div>
+
+<div class="qz" data-q="u34-3"><div class="qq">뜯은 줄에서 기본음 에너지가 전체의 몇 %인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>모드 에너지 \(\propto1/r^2\) (홀수), 합 \(\pi^2/8\). 기본음 비율 \(=\frac{1}{\pi^2/8}=\frac8{\pi^2}\approx81\%\).</p></div></div>

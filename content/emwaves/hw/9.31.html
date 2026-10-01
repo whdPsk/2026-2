@@ -1,0 +1,16 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(B_z=B_0\cos\frac{m\pi x}{a}\cos\frac{n\pi y}{b}\,e^{i(kz-\omega t)}\), \(E_z=0\), \(\kappa^2\equiv(\omega/c)^2-k^2=\left(\frac{m\pi}{a}\right)^2+\left(\frac{n\pi}{b}\right)^2=\omega_{mn}^2/c^2\). Eq. 9.182:
+\[E_x=\frac{i\omega}{\kappa^2}\partial_yB_z,\quad E_y=-\frac{i\omega}{\kappa^2}\partial_xB_z,\quad B_x=\frac{ik}{\kappa^2}\partial_xB_z,\quad B_y=\frac{ik}{\kappa^2}\partial_yB_z .\]
+\(G\equiv|\partial_xB_z|^2+|\partial_yB_z|^2\)로 두면
+\[\langle S_z\rangle=\frac{1}{2\mu_0}\mathrm{Re}\big(E_xB_y^*-E_yB_x^*\big)=\frac{\omega k}{2\mu_0\kappa^4}G,\]
+\[\langle u\rangle=\frac14\left[\epsilon_0\frac{\omega^2}{\kappa^4}G+\frac{1}{\mu_0}\left(\frac{k^2}{\kappa^4}G+|B_z|^2\right)\right] =\frac{1}{4\mu_0}\left[\frac{(\omega^2/c^2+k^2)G}{\kappa^4}+|B_z|^2\right].\]
+단면 적분(\(m,n\neq0\); \(\int_0^a\sin^2=\int_0^a\cos^2=a/2\)):
+\[\iint G\,da=B_0^2\frac{ab}{4}\left[\left(\frac{m\pi}{a}\right)^2+\left(\frac{n\pi}{b}\right)^2\right]=B_0^2\frac{ab}{4}\kappa^2,\qquad \iint|B_z|^2da=B_0^2\frac{ab}{4}.\]
+따라서 단위시간당 운반 에너지와 단위길이당 저장 에너지는
+\[P=\iint\langle S_z\rangle da=\frac{\omega k}{2\mu_0\kappa^2}\frac{B_0^2ab}{4},\qquad U=\iint\langle u\rangle da=\frac{B_0^2ab}{16\mu_0}\cdot\frac{\omega^2/c^2+k^2+\kappa^2}{\kappa^2}=\frac{B_0^2ab\,\omega^2}{8\mu_0c^2\kappa^2}\]
+(\(\kappa^2=\omega^2/c^2-k^2\)를 써서 분자 \(=2\omega^2/c^2\)).
+\[\frac{P}{U}=\frac{\omega k}{2}\cdot\frac{2c^2}{\omega^2}=\frac{kc^2}{\omega}=\frac{c^2}{v}=\boxed{v_g=c\sqrt{1-(\omega_{mn}/\omega)^2}}\]
+(\(vv_g=c^2\)이므로.) 에너지는 위상속도 \(v&gt;c\)가 아니라 군속도 \(v_g&lt;c\)로 흐른다.
+<div class="alabel">감점 포인트</div>
+\(\langle u\rangle\)에서 \(|B_z|^2\) 항(종방향 자기장의 기여)을 빼먹으면 비가 \(v\)가 되어 버린다. 이 항이 있어야 \(v_g\)가 나온다.</div><!--/sol-->

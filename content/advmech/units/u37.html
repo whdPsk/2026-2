@@ -1,0 +1,37 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> loaded string의 \(\omega=2\sqrt{\tau/md}\,|\sin(kd/2)|\)는 \(k\)가 커지면 최대 \(2\sqrt{\tau/md}\)에서 포화된다. 그렇다면 이 최대 진동수보다 빠르게 한쪽 끝 구슬을 흔들면 어떻게 될까 — 파동이 전달될까, 아니면 흔드는 곳 근처에만 머물까? 에너지 손실이 없는 계인데 "감쇠"가 생길 수 있을까?</div>
+
+<h4>13.8 위상속도, 분산, 감쇠 <span class="en">phase velocity, dispersion, attenuation</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>위상속도와 분산관계 <b>(필수)</b></div>
+<ol>
+<li>진행파 \(\Psi=Ae^{i(\omega t-kx)}\). 위상 \(\phi=\omega t-kx\)가 일정한 점을 따라가는 속도: \(\dd\phi=0\) → 
+\[ V=\frac{\dd x}{\dd t}=\frac\omega k . \]
+무한히 긴 단색파에서만 엄밀히 정의된다.</li>
+<li>loaded string: 모드 \(r\)에서 \(\lambda_r=2L/r\), \(\frac{r\pi}{2(n+1)}=\frac{kd}2\) → \(n,L\)이 사라진 <b>분산관계</b>
+\[ \omega(k)=2\sqrt{\frac\tau{md}}\left|\sin\frac{kd}2\right| \]
+(무한히 긴 loaded string에도 적용).</li>
+<li>\[ V(k)=\frac\omega k=\sqrt{\frac{\tau d}m}\,\frac{|\sin(kd/2)|}{kd/2} . \]
+\(V\)가 \(k\)에 의존 → <b>분산성</b> 매질(프리즘처럼 파장마다 다른 속도). 장파장(\(kd\ll1\))에서 \(V\to\sqrt{\tau/\rho}\) — 연속 줄과 일치(이 극한에서만).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>차단 진동수와 복소 파수 — 교재 식 (13.99)–(13.106) <b>(필수)</b></div>
+<ol>
+<li>\(\omega\)의 최대: \(k_{\max}=\pi/d\)에서 \(\omega_c=2\sqrt{\tau/md}\) (<b>차단 진동수</b>). 이보다 빨리 흔들면? \(k=\kappa-i\beta\)로 두고 대입:
+\[ \omega=2\sqrt{\frac\tau{md}}\left(\sin\frac{\kappa d}2\cosh\frac{\beta d}2-i\cos\frac{\kappa d}2\sinh\frac{\beta d}2\right). \]</li>
+<li>\(\omega\) 실수 → 허수부 0 → \(\cos\frac{\kappa d}2=0\) (\(\beta\ne0\)) → \(\kappa=\pi/d\), \(\sin=1\):
+\[ \omega=\omega_c\cosh\frac{\beta d}2\quad(\omega&gt;\omega_c). \]</li>
+<li>\(\Psi=Ae^{-\beta x}e^{i(\omega t-\kappa x)}\) — 거리에 따라 <b>지수 감쇠</b>. \(\omega\le\omega_c\): 통과대역(passing band), \(\omega&gt;\omega_c\): 감쇠. 인접 구슬이 정반대 위상(\(\kappa d=\pi\))으로 흔들리며 진폭이 줄어든다.</li>
+<li><b>에너지 손실 없는 감쇠</b>: 정상 상태에서 구동력이 구동점 속도와 90° 어긋나 평균 일률 \(\langle Fv\rangle=0\) — 에너지가 들어가지 않을 뿐 소산되지 않는다(도파관 차단, 광학 결정의 밴드갭, 소멸파와 같은 현상).</li>
+<li>복소 \(k\)이면 위상속도는 \(V=\omega/\mathrm{Re}\,k\) — 정의의 근본은 "위상 일정"이지 \(\omega/k\)가 아니다. 공간 감쇠(\(\omega\) 실수, \(k\) 복소)는 진행파, 시간 감쇠(\(\omega\) 복소, \(k\) 실수)는 정상파에 중요.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 분산과 차단</div>
+\[ V=\frac\omega k,\quad \omega(k)=2\sqrt{\frac\tau{md}}\left|\sin\frac{kd}2\right|,\quad \omega_c=2\sqrt{\frac\tau{md}},\quad \omega&gt;\omega_c:\ k=\frac\pi d-i\beta,\ \cosh\frac{\beta d}2=\frac\omega{\omega_c} \]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u37-1"><div class="qq">(시험형) 차단 진동수 위에서 \(k=\kappa-i\beta\)로 두어 \(\kappa=\pi/d\)와 \(\cosh(\beta d/2)=\omega/\omega_c\)를 유도하라. 왜 \(k=\kappa+i\beta\)로 쓰지 않는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 2. \(\sin(a-ib)=\sin a\cosh b-i\cos a\sinh b\). \(+i\beta\)(\(\beta&gt;0\))면 \(e^{+\beta x}\) — 구동점에서 멀어질수록 무한히 커지는 비물리적 해.</p></div></div>
+
+<div class="qz" data-q="u37-2"><div class="qq">\(\omega=1.5\,\omega_c\)로 구동하면 진폭이 구슬 하나 건널 때마다 몇 배로 줄어드는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\cosh(\beta d/2)=1.5\) → \(\beta d/2=\cosh^{-1}1.5=0.962\) → \(\beta d=1.925\) → 구슬마다 \(e^{-1.925}\approx0.146\)배 (그리고 부호 반전: \(e^{-i\pi}\)).</p></div></div>
+
+<div class="qz" data-q="u37-3"><div class="qq">분산관계 \(\omega=2\omega_0|\sin(kd/2)|\)에서 \(k\)와 \(k+2\pi/d\)는 같은 운동을 기술함을 보여라 (U32의 "모드 중복"과 연결).</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>구슬 위치 \(x_j=jd\)에서 \(e^{-i(k+2\pi/d)jd}=e^{-ikjd}e^{-2\pi ij}=e^{-ikjd}\) — 구슬들의 변위가 똑같다. 서로 다른 운동은 \(|k|\le\pi/d\) (첫 Brillouin 영역) 안에만 있다. U32에서 \(r&gt;n\)이 새 모드를 주지 않던 것과 같은 이유.</p></div></div>

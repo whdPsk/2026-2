@@ -1,0 +1,12 @@
+node_modules/
+dist/
+
+# 컴파일러가 content/에서 만들어내는 파일 (원본이 아님)
+site/public/data/
+site/*/index.html
+!site/index.html
+
+.DS_Store
+Thumbs.db
+*.log
+.vscode/

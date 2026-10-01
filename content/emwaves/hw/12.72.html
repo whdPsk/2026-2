@@ -1,0 +1,19 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>1단계: \(\bar{\vb{E}}=0\)인 계 찾기.</b> \(\vb{E}\times\vb{B}=E_0B_0\hat{\vb{y}}\)이므로 \(\vb{v}=v\hat{\vb{y}}\)로 부스트한다. \(\vb{E},\vb{B}\)가 모두 \(\hat{\vb{y}}\)에 수직이므로</p>
+\[ \bar{\vb{E}}=\gamma(\vb{E}+\vb{v}\times\vb{B})=\gamma(E_0-vB_0)\hat{\vb{z}}=0\ \Longrightarrow\ \boxed{v=\frac{E_0}{B_0}\ (&lt;c)} \]
+\[ \bar{\vb{B}}=\gamma\Big(\vb{B}-\frac{1}{c^{2}}\vb{v}\times\vb{E}\Big)=\gamma\Big(B_0-\frac{vE_0}{c^{2}}\Big)\hat{\vb{x}}=\frac{B_0}{\gamma}\hat{\vb{x}},\qquad \gamma=\Big(1-\frac{E_0^{2}}{c^{2}B_0^{2}}\Big)^{-1/2}. \]
+
+<p><b>2단계: \(\bar S\)에서의 운동.</b> 자기장만 있으므로 <b>등속원운동</b>. 초기조건: \(S\)에서 정지 → \(\bar S\)에서 \(\bar{\vb{u}}(0)=-v\hat{\vb{y}}\). 속력은 \(v\)로 일정하고</p>
+\[ R=\frac{\gamma m v}{q\bar B}=\frac{\gamma^{2}mv}{qB_0},\qquad \bar\omega=\frac{v}{R}=\frac{qB_0}{\gamma^{2}m}. \]
+<p>초기 힘 \(q(-v\hat{\vb{y}})\times(\bar B\hat{\vb{x}})=+qv\bar B\hat{\vb{z}}\)이므로 원의 중심은 \((0,0,R)\):</p>
+\[ \bar y(\bar t)=-R\sin\bar\omega\bar t,\qquad \bar z(\bar t)=R(1-\cos\bar\omega\bar t),\qquad \bar x=0. \]
+
+<p><b>3단계: \(S\)로 되돌리기.</b> \(y=\gamma(\bar y+v\bar t),\ z=\bar z,\ t=\gamma(\bar t+v\bar y/c^{2})\):</p>
+\[ \boxed{\ \begin{aligned} y&=\gamma\big(v\bar t-R\sin\bar\omega\bar t\big)\\ z&=R\big(1-\cos\bar\omega\bar t\big)\\ t&=\gamma\Big(\bar t-\frac{vR}{c^{2}}\sin\bar\omega\bar t\Big)\end{aligned}\ } \]
+<p>매개변수 \(\bar t\)로 표현된 <b>상대론적 트로코이드(사이클로이드)</b>다. \(\vb{B}\) 방향(\(\hat{\vb{x}}\))으로는 전혀 움직이지 않고, \(\vb{E}\times\vb{B}\) 방향(\(\hat{\vb{y}}\))으로 표류한다.</p>
+<p><b>Ex. 5.2와 비교:</b> \(v\ll c\ (\gamma\to1)\) 극한에서 \(R\to mE_0/(qB_0^{2})\), \(\bar\omega\to qB_0/m\equiv\omega\), \(R\omega=v\)이므로</p>
+\[ y\approx R(\omega t-\sin\omega t),\qquad z\approx R(1-\cos\omega t) \]
+<p>— Ex. 5.2의 사이클로이드와 <b>정확히 같다</b>. 상대론적 효과는 (i) \(R\)이 \(\gamma^{2}\)배 커지고 (ii) 시간 매개변수가 \(t\)가 아니라 \(\bar t\)로 뒤틀린다는 점뿐이다.</p>
+<div class="alabel">감점 포인트</div>
+\(\bar S\)에서 전하가 정지 출발한다고 착각하는 것 — \(S\)에서 정지이므로 \(\bar S\)에서는 \(-v\hat{\vb{y}}\)로 움직이며, 그래야 원운동이 생긴다.</div><!--/sol-->

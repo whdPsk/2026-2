@@ -1,0 +1,142 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> \((\vb{v}\times\vb{B})\cdot\vb{v}=0\)은 논쟁의 여지가 없는 항등식이다. 그렇다면 자석이 클립을 들어올릴 때 위치에너지가 증가한 만큼의 에너지는 <em>반드시</em> 다른 어딘가에서 나와야 한다. 후보는 셋뿐이다: (i) 물체 내부에 저장된 다른 형태의 에너지, (ii) 전류를 유지하는 전원, (iii) 밖에서 줄을 당기는 사람. 세 가지 모델(Ex. 8.5, 8.6, 8.7)이 정확히 이 셋에 하나씩 대응한다 — 어느 상황에서 어느 것이 답일지 미리 짐작해 보라. 힌트: "무엇이 <em>변하는가</em>(자속? 전류? 회전 속도?)"를 물으면 답이 갈린다.</div>
+
+<h4>8.3 자기력은 일을 하지 않는다 <span class="en">magnetic forces do no work</span></h4>
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 1</span>기본 정리와 그것이 만드는 역설의 정확한 형태</div>
+<ol>
+<li><b>정리.</b> Lorentz 힘 \(\vb{F}=q(\vb{E}+\vb{v}\times\vb{B})\)에서 자기 부분이 하는 일은
+\[ dW_{\text{mag}}=q(\vb{v}\times\vb{B})\cdot d\vb{l}=q(\vb{v}\times\vb{B})\cdot\vb{v}\,dt=0. \]
+스칼라 삼중곱에 같은 벡터가 두 번 들어가므로 <b>항등적으로</b> 0. 근사도, 특수한 경우도 아니다.</li>
+<li><b>따라서 자기장은 에너지의 <em>원천</em>이 될 수 없다.</b> 그러나 <em>운반자</em>나 <em>변환기</em>는 될 수 있다 — 자기력은 방향만 바꾸므로, 한 자유도의 운동에너지를 다른 자유도로 <em>옮길</em> 수 있다.</li>
+<li><b>역설의 정확한 형태.</b> 자기 크레인이 폐차를 들어올린다. 차는 강자성체이고, 자기장 속에서 미시적 자기 쌍극자(전자 스핀)들이 정렬한다. 이 자화는 표면을 도는 <em>속박 전류</em>와 등가이므로, 차를 <b>원형 전류 고리</b>로 모형화한다. 고리는 확실히 위로 들어올려지고 위치에너지가 증가한다. 그 에너지의 출처를 밝혀야 한다.</li>
+<li><b>중요한 전제.</b> 자기장은 <b>비균일</b>해야 한다. 균일한 \(\vb{B}\)에서는 전류 고리에 알짜 힘이 없고 돌림힘만 있다. 힘은 \(\vb{B}\)의 <em>지름 성분</em> \(B_s\)에서 나온다.</li>
+</ol>
+</div>
+
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 2</span>Example 8.5 — 회전하는 대전 고리: 회전 에너지가 위치 에너지로 변환된다</div>
+<ol>
+<li><b>모형.</b> 반지름 \(a\), 선전하밀도 \(\lambda\)인 부도체 고리가 각속도 \(\omega\)로 돈다. 등가 전류는 \(I=\lambda\omega a\). 위쪽 자석이 만드는 장의 지름 성분을 \(B_s\)라 하고, 고리가 올라가는 동안 \(B_s\)는 일정하다고 둔다.</li>
+<li><b>들어올리는 힘.</b> 고리 전체에 대해 \(\vb{F}=I\oint d\vb{l}\times\vb{B}\)의 연직 성분은 \(B_s\)에서만 나오므로
+\[ F=2\pi I a B_s=2\pi\lambda\omega a^2B_s\quad(\text{위 방향}). \]</li>
+<li><b>고리가 \(dz\)만큼 올라갈 때의 "일".</b>
+\[ dW_{\text{lift}}=F\,dz=2\pi a^2\lambda\omega B_s\,dz. \]
+이만큼 중력 위치에너지가 증가한다. 그런데 이 일을 한 것은 자기장이 아니다.</li>
+<li><b>동시에 일어나는 일 — 운동 기전력.</b> 고리가 올라가면서 고리를 통과하는 자속이 변한다. 시각 \(t\)의 고리와 \(t+dt\)의 고리를 잇는 "띠(ribbon)"를 통과하는 자속은 (옆면 넓이 \(2\pi a\,dz\), 그곳의 수직 성분이 \(B_s\))
+\[ d\Phi=B_s\,2\pi a\,dz. \]</li>
+<li><b>단위 전하당 힘.</b> \(\mathcal E=-d\Phi/dt\)이고 \(\mathcal E=\oint\vb{f}\cdot d\vb{l}=f(2\pi a)\)이므로
+\[ f=-B_s\frac{dz}{dt}. \]
+이 \(f\)는 고리를 <em>따라</em>(원주 방향) 작용하며, 전하의 회전을 <b>방해</b>한다. 물리적으로 이것은 자기력의 <em>수평 성분</em>이다: 고리가 위로 움직이는 순간 전하의 속도가 연직 성분을 얻고, \(q\vb{v}_z\times\vb{B}_s\)가 원주 방향 제동력을 만든다.</li>
+<li><b>제동 돌림힘과 그것이 하는 (음의) 일.</b> 길이 \(dl\) 구간의 힘은 \(f\lambda\,dl\)이므로
+\[ N=a\left(-B_s\frac{dz}{dt}\right)\lambda(2\pi a)=-2\pi a^2\lambda B_s\frac{dz}{dt}. \]
+회전각 \(d\varphi=\omega\,dt\)에 대해
+\[ dW_{\text{rot}}=N\,d\varphi=N\omega\,dt=-2\pi a^2\lambda\omega B_s\,dz. \]</li>
+<li><b>대조.</b>
+\[ \boxed{\ dW_{\text{lift}}+dW_{\text{rot}}=0\ } \]
+고리가 잃은 <b>회전 운동에너지</b>가 정확히 얻은 <b>위치에너지</b>와 같다. 고리는 올라가면서 <em>느려진다</em>. 자기장은 단 한 톨의 에너지도 공급하지 않고 형태만 바꿔주었다.</li>
+<li><b>한 줄 요약(다소 헐거운 표현이지만 기억에 좋다).</b> 자기력의 <em>연직</em> 성분이 한 일 = − 자기력의 <em>수평</em> 성분이 한 일. 총합은 항상 0이다.</li>
+</ol>
+</div>
+
+<div class="callout"><b class="head">자기력은 "회전문"이다.</b> 자기력은 은행 계좌에 돈을 넣지도 빼지도 않는다. 다만 계좌 사이에서 <em>이체</em>를 시킬 뿐이다. Ex. 8.5에서는 회전 → 병진, Ex. 8.6에서는 전원 → 위치에너지 + 장 에너지, Ex. 8.7에서는 사람의 근육 → 차의 위치에너지. 문제를 만나면 항상 물어라: <b>"어느 계좌에서 어느 계좌로?"</b></div>
+
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 3</span>Example 8.6 — 전류가 일정한 두 고리: 전원이 두 배의 일을 하고, 절반은 장으로 간다</div>
+<ol>
+<li><b>모형.</b> 탁자 위의 큰 고리(반지름 \(b\), 전류 \(I_b\))와 그 바로 아래 바닥의 작은 고리(반지름 \(a\), 전류 \(I_a\), 질량 \(m\)). 거리 \(h\). 이번에는 두 전류가 <em>일정하게 유지</em>되도록 각각 전원을 단다.</li>
+<li><b>상호 인덕턴스와 힘.</b> \(a\ll b\)인 경우
+\[ M=\frac{\pi\muz}{2}\frac{a^2b^2}{(b^2+h^2)^{3/2}}. \]
+아래 고리를 자기 쌍극자로 다루면 인력의 크기는
+\[ F_{\text{mag}}=\left|I_aI_b\frac{dM}{dh}\right|=\frac{3\pi}{2}\muz I_aI_b\frac{a^2b^2h}{(b^2+h^2)^{5/2}}. \]
+전류를 조절해 이것이 \(mg\)와 정확히 균형을 이루어 고리가 "떠 있게" 만든다.</li>
+<li><b>\(dz\)만큼 들어올릴 때 필요한 일.</b>
+\[ dW_g=mg\,dz=\frac{3\pi}{2}\muz I_aI_b\frac{a^2b^2h}{(b^2+h^2)^{5/2}}\,dz. \]</li>
+<li><b>아래 고리 전원이 한 일.</b> 고리가 올라가면 자속 \(\Phi_a=MI_b\)가 변해 기전력이 생긴다:
+\[ \mathcal E_a=-I_b\frac{dM}{dt}=-I_b\frac{dM}{dh}\frac{dh}{dt},\qquad dh=-dz. \]
+전원이 이 기전력을 <em>거슬러</em> 전류를 유지하며 한 일은
+\[ dW_a=-\mathcal E_aI_a\,dt=\frac{3\pi}{2}\muz I_aI_b\frac{a^2b^2h}{(b^2+h^2)^{5/2}}\,dz=dW_g. \]
+<b>즉 고리를 들어올린 에너지는 아래 고리의 전원에서 나왔다.</b></li>
+<li><b>그런데 위 고리에서도 기전력이 유도된다.</b> \(\Phi_b=MI_a\)도 같은 비율로 변하므로
+\[ \mathcal E_b=-I_a\frac{dM}{dt}\ \Rightarrow\ dW_b=-\mathcal E_bI_b\,dt=dW_a. \]
+두 전원이 <em>합해서 필요한 일의 두 배</em>를 했다.</li>
+<li><b>"낭비된" 에너지의 행방.</b> 두 전류 고리계의 에너지는
+\[ U=\tfrac12L_aI_a^2+\tfrac12L_bI_b^2+MI_aI_b, \]
+전류가 일정하므로
+\[ dU=I_aI_b\,dM=dW_b. \]
+남은 절반은 정확히 <b>장에 저장된 에너지의 증가분</b>이다.</li>
+<li><b>결산.</b> 네 개의 에너지 증분 \(dW_g,\ dW_a,\ dW_b,\ dU\)가 모두 같다. 굳이 배분하자면: 아래 고리 전원이 <em>들어올리는 일</em>을, 위 고리 전원이 <em>장 에너지 증가분</em>을 댄 셈이다. 어느 항목에도 "자기장이 한 일"은 없다.</li>
+</ol>
+</div>
+
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 4</span>Example 8.7 — 진짜 크레인: 자속이 변하지 않으면 전원조차 필요 없다</div>
+<ol>
+<li><b>모형.</b> 실제 자기 크레인에서는 차가 자석에 <em>붙어서</em> 함께 올라간다. 위 고리는 큰 상자에, 아래 고리는 작은 상자에 넣고, 인력이 \(mg\)보다 훨씬 커서 두 상자가 붙어 있다고 하자. 이제 위 상자에 줄을 매어 사람이 당긴다.</li>
+<li><b>메커니즘은 Ex. 8.5와 같다.</b> 아래 고리가 올라가면서 자기력이 뒤로 기울어진다: 연직 성분은 고리를 들어올리고, 수평 성분은 전류를 방해한다. 알짜 일은 0.</li>
+<li><b>결정적 차이 — 자속이 변하지 않는다.</b> 두 고리의 상대 거리가 일정하므로 아래 고리를 통과하는 자속 \(\Phi_a=MI_b\)는 \(M\)이 변하지 않아 일정하다. 따라서
+\[ \mathcal E_{\text{motional}}+\mathcal E_{\text{Faraday}}=0. \]
+직관적으로: 고리가 위로 움직여 더 센 장의 영역으로 들어가므로 자속이 늘어나려 하지만, 동시에 위 고리도 함께 올라가므로 공간의 각 점에서 위 고리가 만드는 장이 줄어든다 — 두 효과가 정확히 상쇄된다.</li>
+<li><b>따라서 전원이 필요 없다.</b> 아래 고리에도(운동 기전력이 상쇄되므로), 위 고리에도(장 에너지가 변하지 않으므로) 전류 유지에 에너지를 댈 필요가 없다.</li>
+<li><b>일을 한 사람.</b> <b>줄을 당긴 사람</b>이다. 자기장의 역할은 그 에너지를 사람 → 줄 → 위 상자 → (자기력의 연직 성분) → 차로 <em>전달</em>한 것뿐이다. 자기장 자신은, 언제나 그렇듯, 일을 하지 않았다.</li>
+<li><b>세 모형 비교표(반드시 외울 것).</b>
+<br>· <b>Ex. 8.5</b> — 자석 정지, 고리 자유 회전, 전원 없음 ⇒ 에너지원은 <b>고리의 회전 운동에너지</b>(고리가 느려진다).
+<br>· <b>Ex. 8.6</b> — 자석 정지, 두 전류 일정(전원 있음) ⇒ 에너지원은 <b>전원</b>. 전원은 필요량의 두 배를 내고, 절반은 장 에너지로 저장된다.
+<br>· <b>Ex. 8.7</b> — 자석과 차가 함께 상승, 자속 불변 ⇒ 에너지원은 <b>줄을 당기는 사람</b>. 전원도 장 에너지 변화도 불필요.</li>
+</ol>
+</div>
+
+<div class="formula">
+<div class="ftitle">암기 — 정리, 그리고 그것을 깨려면 무엇이 필요한가</div>
+\[ \boxed{\ dW_{\text{mag}}=q(\vb{v}\times\vb{B})\cdot\vb{v}\,dt=0\ \ (\text{항등적}) } \]
+<p class="note">자기 홀극이 존재한다면 Lorentz 힘은
+\[ \vb{F}=q_e(\vb{E}+\vb{v}\times\vb{B})+q_m\!\left(\vb{B}-\eps\muz\,\vb{v}\times\vb{E}\right) \]
+로 확장되고, 이때 자기장은 <b>자기 전하에 대해서만</b> 일을 할 수 있다. 자동차는 홀극으로 만들어져 있지 않으므로 이것은 크레인 역설의 답이 아니다. 또 하나의 가능성인 "전류와 무관한 진짜 점 자기 쌍극자"(\(\vb{F}\)에 \(\nabla(\vb{m}_i\cdot\vb{B})\) 추가)는 고전 전기역학의 전제(모든 자기 현상은 움직이는 전하 때문이라는 Ampère의 가정)를 벗어난다. 실제 스핀은 양자역학의 대상이며, 고전 전기역학 안에서의 답은 단호하다 — <b>자기력은 일을 하지 않는다.</b></p>
+</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u4-1"><div class="qq">[참/거짓+증명] "자기력은 결코 일을 하지 않으므로, 자기력이 관여하는 어떤 과정에서도 계의 운동에너지 총합은 변하지 않는다." 참이면 증명하고, 거짓이면 반례를 들어라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>거짓.</b> 두 진술은 전혀 다르다.
+<b>전제는 참:</b> \((\vb{v}\times\vb{B})\cdot\vb{v}=0\)은 항등식이다.
+<b>결론은 거짓 — 반례(Example 8.5):</b> 회전하는 대전 고리가 자석에 끌려 올라갈 때, 고리의 <em>회전</em> 운동에너지는 \(2\pi a^2\lambda\omega B_s\,dz\)만큼 <b>감소</b>하고 <em>병진</em> 운동에너지(정확히는 중력 위치에너지)는 같은 양만큼 <b>증가</b>한다. 각 자유도의 운동에너지는 확실히 변한다.
+<b>더 강한 반례:</b> 사이클로트론에서 자기장은 입자의 속력을 바꾸지 않지만, Ex. 8.6에서는 전원이 공급한 에너지가 자기 상호작용을 <em>매개로</em> 역학적 에너지로 바뀐다. 즉 계 전체의 운동에너지는 얼마든지 변할 수 있다.
+<b>올바른 진술:</b> "자기력이 <em>총 에너지의 원천</em>이 될 수는 없다. 자기력은 에너지를 한 형태(또는 한 자유도)에서 다른 형태로 <em>재배분</em>할 뿐이다." 각 사례에서 실제 에너지원(회전 에너지 / 전원 / 사람)을 지목할 수 있어야 한다.
+</div></div>
+
+<div class="qz" data-q="u4-2"><div class="qq">[점근·차원 분석] Ex. 8.6의 힘 \(F_{\text{mag}}=\frac{3\pi}{2}\muz I_aI_b\frac{a^2b^2h}{(b^2+h^2)^{5/2}}\)에 대해, (i) \(h\ll b\) 극한에서 \(F\propto h^{m}b^{n}\)의 \(m,n\)을, (ii) \(h\gg b\) 극한에서 \(F\propto h^{m'}\)의 \(m'\)을 구하고, 각 극한의 물리적 의미와 힘이 최대가 되는 \(h\)를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>(i) \(h\ll b\):</b> \((b^2+h^2)^{5/2}\to b^5\)이므로
+\[ F\approx\frac{3\pi}{2}\muz I_aI_b\,a^2\,\frac{h}{b^3}\ \Rightarrow\ \boxed{m=1,\ n=-3}. \]
+<b>의미:</b> 큰 고리가 만드는 장은 축 근처에서 \(\hat z\) 방향으로 거의 균일하고, 힘을 만드는 <em>지름 성분</em> \(B_s\)는 \(\nabla\cdot\vb{B}=0\)에 의해 축에서의 거리에 비례해 \(h\)에 선형으로 커진다. \(h\to0\)에서 힘이 0으로 가는 것은 <b>균일한 장은 알짜 힘을 주지 않는다</b>는 사실의 표현이다.
+<b>(ii) \(h\gg b\):</b> \((b^2+h^2)^{5/2}\to h^5\)이므로
+\[ F\approx\frac{3\pi}{2}\muz I_aI_b\,a^2b^2\,\frac{1}{h^4}\ \Rightarrow\ \boxed{m'=-4}. \]
+<b>의미:</b> 두 개의 축상 자기 쌍극자 사이의 힘. 쌍극자 장이 \(1/h^3\)이고 힘은 그 기울기이므로 \(1/h^4\) — 표준적인 쌍극자–쌍극자 결과다. 두 고리 모멘트 \(m_a=I_a\pi a^2\), \(m_b=I_b\pi b^2\)로 쓰면 \(F=\frac{3\muz m_am_b}{2\pi h^4}\).
+<b>(iii) 최댓값.</b> \(g(h)=h(b^2+h^2)^{-5/2}\)를 미분하면 \((b^2+h^2)^{-5/2}-5h^2(b^2+h^2)^{-7/2}=0\Rightarrow b^2+h^2=5h^2\), 즉
+\[ \boxed{h_{\max}=\frac{b}{2}}. \]
+<b>차원 점검:</b> \([\muz I^2 a^2b^2h/(b^2+h^2)^{5/2}]=\mathrm{(T\,m/A)A^2 m^5/m^5}=\mathrm{T\,A\,m}=\mathrm N\) ✓.
+</div></div>
+
+<div class="qz" data-q="u4-3"><div class="qq">[교과서 Example 변형] Ex. 8.5의 고리가 질량 \(m\), 반지름 \(a\), 선전하밀도 \(\lambda\)인 얇은 링이고 초기 각속도가 \(\omega_0\)이다. 지름 자기장 성분 \(B_s\)가 일정할 때, 고리가 도달할 수 있는 최대 높이 \(z_{\max}\)를 구하고, 그때 \(\omega\)가 얼마인지 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>(1) 각속도의 변화율.</b> 링의 관성모멘트는 \(J=ma^2\). 유도 2의 6단계에서 제동 돌림힘은
+\[ N=-2\pi a^2\lambda B_s\frac{dz}{dt}\ \Rightarrow\ ma^2\frac{d\omega}{dt}=-2\pi a^2\lambda B_s\frac{dz}{dt}. \]
+<b>(2) 적분.</b> \(t\)를 소거하면 \(m\,d\omega=-2\pi\lambda B_s\,dz\), 즉
+\[ \omega(z)=\omega_0-\frac{2\pi\lambda B_s}{m}z. \]
+각속도가 높이에 <b>선형으로</b> 감소한다.
+<b>(3) 상승을 멈추는 조건.</b> 들어올리는 힘은 \(F=2\pi\lambda\omega a^2B_s\)이므로, 중력을 포함하면 \(F=mg\)일 때 평형이다. 중력을 무시하고 "회전이 완전히 멈출 때까지"를 묻는 판본이면 \(\omega=0\)에서
+\[ \boxed{z_{\max}=\frac{m\omega_0}{2\pi\lambda B_s}},\qquad \omega(z_{\max})=0. \]
+<b>(4) 중력을 포함한 판본.</b> \(2\pi\lambda a^2B_s\,\omega=mg\)에서 임계 각속도 \(\omega_c=\frac{mg}{2\pi\lambda a^2B_s}\), 따라서
+\[ z_{\max}=\frac{m(\omega_0-\omega_c)}{2\pi\lambda B_s}=\frac{m\omega_0}{2\pi\lambda B_s}-\frac{m^2g}{(2\pi\lambda B_s)^2a^2}. \]
+(\(\omega_0&lt;\omega_c\)이면 애초에 뜨지 못한다.)
+<b>(5) 에너지 결산.</b> 잃은 회전 에너지 \(\frac12ma^2(\omega_0^2-\omega^2)\)가 얻은 위치에너지 \(mgz\)와 (해당 판본에서) 일치함을 확인하면 검산이 된다. <b>자기장은 여전히 아무 일도 하지 않았다.</b>
+</div></div>
+
+<div class="qz" data-q="u4-4"><div class="qq">[개념 설명] Ex. 8.5, 8.6, 8.7은 모두 "자기력이 물체를 들어올리는" 상황인데 에너지원이 각각 다르다. 세 상황을 구별하는 <em>단 하나의 판별 기준</em>을 제시하고, 그 기준으로 세 경우를 분류하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>판별 기준:</b> "<b>들어올려지는 고리를 통과하는 자속 \(\Phi\)가 변하는가, 그리고 그 고리의 전류를 무엇이 유지하는가?</b>"
+<br>자속이 변하면 운동 기전력이 생기고, 그 기전력을 <em>누가 상대하는가</em>가 에너지원을 결정한다.
+<b>분류:</b>
+<br>· <b>Ex. 8.5</b> — \(\Phi\) 변함, 전원 <em>없음</em> ⇒ 기전력을 상대할 것이 없으므로 <b>전류(=회전) 자체가 줄어든다</b>. 에너지원 = 고리의 회전 운동에너지. 고리가 느려진다.
+<br>· <b>Ex. 8.6</b> — \(\Phi\) 변함, 전원 <em>있음</em> ⇒ 전원이 기전력을 거슬러 전류를 유지하며 일을 한다. 에너지원 = <b>전원</b>. 게다가 위 고리의 전원도 같은 양의 일을 하며, 그 절반은 장 에너지 \(U=\frac12L_aI_a^2+\frac12L_bI_b^2+MI_aI_b\)의 증가로 저장된다.
+<br>· <b>Ex. 8.7</b> — \(\Phi\) <em>불변</em>(자석과 고리가 함께 이동, \(M\) 일정) ⇒ 운동 기전력과 Faraday 기전력이 상쇄되어 전원이 불필요하고 장 에너지도 변하지 않는다. 에너지원 = <b>줄을 당기는 외부 행위자</b>.
+<b>공통점:</b> 세 경우 모두 자기장이 한 일은 정확히 0이며, 자기력은 에너지를 <em>전달·변환</em>하는 통로 역할만 했다.
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> "자기 크레인이 차를 들어올릴 때 일을 한 것은 누구인가"라는 질문에 대해, 자속 변화 여부라는 판별 기준을 세워 Ex. 8.5·8.6·8.7 세 상황의 에너지원을 각각 지목하고, Ex. 8.5의 상승 일과 회전 에너지 손실이 상쇄됨을 수식으로 유도할 수 있다.</div>

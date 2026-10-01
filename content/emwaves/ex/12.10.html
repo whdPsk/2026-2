@@ -1,0 +1,49 @@
+<div class="exq"><b>상황.</b> 질량 \(m\)인 입자에 크기가 일정한 힘 \(F\)가 \(+x\) 방향으로 계속 작용한다. \(t=0\)에 원점에서 정지 상태로 출발했다면 위치 \(x(t)\)는? 뉴턴 제2법칙은 상대론에서도 \(\vb F=d\vb p/dt\) 형태로 유효하되, \(\vb p=\gamma m\vb u\)인 <b>상대론적 운동량</b>을 써야 한다는 점이 요점이다. (예: 균일 전기장 속 하전입자.)</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>운동량은 무한히 커질 수 있지만 속력은 \(c\)에서 포화한다 — \(p=\gamma mu\)를 \(u\)에 대해 푸는 것이 전부.</div>
+<ol>
+<li><b>운동량을 먼저 구한다.</b> \(dp/dt=F\)이고 \(F\)가 상수이므로
+\[ p(t)=Ft+\text{const}=Ft\qquad(p(0)=0). \]
+운동량은 고전과 <b>똑같이</b> 시간에 비례해 무한정 커진다.</li>
+<li><b>속도로 번역한다.</b> \(p=\dfrac{mu}{\sqrt{1-u^2/c^2}}=Ft\)를 \(u\)에 대해 푼다. 양변 제곱 후 정리하면 \(m^2u^2=F^2t^2(1-u^2/c^2)\), 즉 \(u^2\left(m^2+\dfrac{F^2t^2}{c^2}\right)=F^2t^2\):
+\[ u(t)=\frac{(F/m)\,t}{\sqrt{1+(Ft/mc)^2}}. \]
+분자는 고전적 답 \(at\)이고, 분모가 브레이크 역할을 한다.</li>
+<li><b>극한 확인.</b> \(Ft\ll mc\)이면 \(u\approx(F/m)t\)(뉴턴), \(t\to\infty\)이면 \(u\to c\)(초과 불가).</li>
+<li><b>적분한다.</b> \(x=\int_0^t u\,dt'\). \(w\equiv1+(Ft'/mc)^2\)로 치환하면 \(dw=2(F/mc)^2t'dt'\)이므로
+\[ x(t)=\frac{F}{m}\int_0^t\frac{t'\,dt'}{\sqrt{1+(Ft'/mc)^2}} =\frac{mc^2}{F}\sqrt{1+(Ft'/mc)^2}\ \Big|_0^t. \]</li>
+<li>대입하면 결과를 얻는다.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ u(t)=\frac{(F/m)t}{\sqrt{1+(Ft/mc)^2}},\qquad x(t)=\frac{mc^2}{F}\left[\sqrt{1+\left(\frac{Ft}{mc}\right)^2}-1\right]\ } \]
+<p>정리하면 \(\left(x+\dfrac{mc^2}{F}\right)^2-(ct)^2=\left(\dfrac{mc^2}{F}\right)^2\) — 시공간 도표에서 <b>쌍곡선</b>이다(그래서 hyperbolic motion).</p>
+<p class="note"><b>검산</b>: (i) \(Ft\ll mc\)에서 \(\sqrt{1+\epsilon}\approx1+\tfrac12\epsilon\)을 쓰면 \(x\approx\dfrac{mc^2}{F}\cdot\dfrac12\dfrac{F^2t^2}{m^2c^2}=\dfrac{F}{2m}t^2\) — 정확히 고전 포물선 ✓. (ii) \(t\to\infty\)에서 \(x\to ct-\dfrac{mc^2}{F}\), 즉 세계선이 광선 \(x=ct\)에 점근한다(45°) ✓. (iii) 차원: \(Ft/mc\)는 \(\dfrac{\mathrm{N\cdot s}}{\mathrm{kg\cdot m/s}}=1\) 무차원, \(mc^2/F\)는 \(\dfrac{\mathrm J}{\mathrm N}=\mathrm m\) 길이 ✓. (iv) \(u&lt;c\)가 모든 \(t\)에서 자동 보장된다 ✓.</p></div>
+<div class="qz" data-q="ex12.10-a"><div class="qq"><b>+α</b> (고유시간으로 다시 쓰기) 입자의 <em>고유시간</em> \(\tau\)로 표현하면 어떻게 되는가? \(a\equiv F/m\)일 때 \(u,\ t,\ x\)를 \(\tau\)의 함수로 구하고, "1 g로 계속 가속하는 우주선"의 시간 척도를 추정하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>치환의 요령.</b> \(\dfrac{at}{c}=\sinh\varphi\)로 놓으면 \(\sqrt{1+\sinh^2\varphi}=\cosh\varphi\)이므로</p>
+\[ u=\frac{at}{\sqrt{1+(at/c)^2}}=c\,\frac{\sinh\varphi}{\cosh\varphi}=c\tanh\varphi,\qquad \gamma=\frac{1}{\sqrt{1-\tanh^2\varphi}}=\cosh\varphi. \]
+<p>\(\varphi\)를 <b>rapidity</b>라 한다. 고유시간과의 관계는 \(dt=\gamma\,d\tau\)에서:</p>
+\[ t=\frac{c}{a}\sinh\varphi\ \Rightarrow\ dt=\frac ca\cosh\varphi\,d\varphi=\gamma\,d\tau\ \Rightarrow\ d\tau=\frac ca\,d\varphi\ \Rightarrow\ \varphi=\frac{a\tau}{c}. \]
+<p>즉 <b>rapidity가 고유시간에 정비례</b>한다. 따라서</p>
+\[ \boxed{\ u=c\tanh\!\frac{a\tau}{c},\quad t=\frac ca\sinh\!\frac{a\tau}{c},\quad x=\frac{c^2}{a}\left[\cosh\!\frac{a\tau}{c}-1\right],\quad \gamma=\cosh\!\frac{a\tau}{c}\ } \]
+<p>또한 입자의 <b>고유가속도</b>(순간 정지계에서 느끼는 가속도)는 \(a=F/m\)로 <em>일정</em>하다 — "일정한 힘"의 진짜 의미가 이것이다.</p>
+<p><b>1 g 우주선.</b> \(a=9.8\ \mathrm{m/s^2}\)이면 특성 시간은</p>
+\[ \frac ca=\frac{3\times10^{8}}{9.8}=3.06\times10^{7}\ \mathrm{s}=0.97\ \text{년}\approx1\ \text{년}. \]
+<p>따라서 승무원 고유시간으로 약 1년이면 \(\varphi\approx1\), \(u=c\tanh1=0.76c\), \(\gamma=\cosh1=1.54\). 고유시간 10년이면 \(\gamma=\cosh10\approx1.1\times10^{4}\)로 은하 중심(2.6만 광년)까지 갈 수 있다.</p>
+<p><b>검산</b>: (i) \(a\tau/c\ll1\)에서 \(\tanh x\approx x,\ \cosh x\approx1+x^2/2\)이므로 \(u\approx a\tau,\ t\approx\tau,\ x\approx\tfrac12a\tau^2\) — 뉴턴 결과 완벽 회복 ✓. (ii) \(\cosh^2-\sinh^2=1\)에서 \(\left(x+\tfrac{c^2}{a}\right)^2-(ct)^2=\left(\tfrac{c^2}{a}\right)^2\)로 본문의 쌍곡선과 일치 ✓. (iii) rapidity는 속도 덧셈에서 <em>단순히 더해지는</em> 양(\(\varphi_{AC}=\varphi_{AB}+\varphi_{BC}\))이므로 Example 12.6과도 연결된다.</p></div></div>
+<div class="qz" data-q="ex12.10-b"><div class="qq"><b>+α</b> (역방향/조건 찾기) 광선이 뒤쪽 \(x=-d\)에서 \(t=0\)에 출발해 \(+x\)로 달려온다. 위 입자가 이 광선에 <b>영원히 따라잡히지 않을</b> 조건을 구하라. 1 g 가속의 경우 필요한 \(d\)는?</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>두 세계선을 비교한다.</b></p>
+\[ x_{\text{light}}(t)=ct-d,\qquad x_p(t)=\frac{mc^2}{F}\left[\sqrt{1+\left(\frac{Ft}{mc}\right)^2}-1\right]. \]
+<p>큰 \(t\)에서 입자의 점근선은(\(\sqrt{1+z^2}\approx z+\tfrac{1}{2z}\), \(z=Ft/mc\))</p>
+\[ x_p\to ct-\frac{mc^2}{F}+\frac{m^2c^3}{2F^2t}\ \longrightarrow\ ct-\frac{mc^2}{F}. \]
+<p>즉 입자는 광선과 <b>같은 기울기</b>(속력 \(c\))로 점근하되, 항상 \(mc^2/F\)만큼 뒤처진 선을 따라간다. 광선은 \(ct-d\) 선을 따라가므로, 광선이 입자보다 늘 뒤에 있으려면</p>
+\[ \boxed{\ d\ &gt;\ \frac{mc^2}{F}=\frac{c^2}{a}\ } \]
+<p><b>엄밀 확인.</b> \(x_p(t)-x_{\text{light}}(t)=\dfrac{mc^2}{F}\left[\sqrt{1+z^2}-1\right]-ct+d\)에서 \(ct=\dfrac{mc^2}{F}z\)이므로</p>
+\[ x_p-x_{\text{light}}=\frac{mc^2}{F}\left[\sqrt{1+z^2}-1-z\right]+d. \]
+<p>\(\sqrt{1+z^2}-z\)는 \(z\)에 대해 단조감소하며 \(z\to\infty\)에서 0으로 간다. 따라서 대괄호는 \(0\)(at \(z=0\))에서 \(-1\)까지 단조감소한다. 최솟값이 \(-mc^2/F+d\)이므로, 이 값이 양수, 즉 \(d&gt;mc^2/F\)이면 <b>모든 \(t\)에서</b> 광선이 뒤에 있다.</p>
+<p><b>수치(1 g).</b></p>
+\[ d&gt;\frac{c^2}{g}=\frac{9\times10^{16}}{9.8}=9.2\times10^{15}\ \mathrm{m}=0.97\ \text{광년}. \]
+<p>약 1광년의 선발(head start)만 있으면 빛보다 앞선 채로 영원히 도망칠 수 있다.</p>
+<p><b>모순 아닌가?</b> 아니다. 입자의 속력은 항상 \(c\)보다 작고, 광선은 계속 입자에 다가가지만 <em>거리 차가 \(mc^2/F-d\)로 수렴</em>할 뿐 결코 0이 되지 않는다. 물리적으로 이 광선은 입자의 <b>Rindler 지평선(사건의 지평선)</b> 너머에 있어, 가속하는 관측자에게는 영원히 도달하지 못하는 신호다 — 블랙홀 지평선의 가장 단순한 모형이다.</p>
+<p><b>검산</b>: \(F\to\infty\)(무한히 센 힘)이면 필요한 \(d\to0\) — 즉시 광속에 근접하므로 ✓. \(F\to0\)이면 \(d\to\infty\) — 가속이 없으면 빛을 절대 못 따돌린다 ✓. 차원: \(mc^2/F=\mathrm{J/N=m}\) ✓.</p></div></div>

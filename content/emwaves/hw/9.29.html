@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(m=n=0\)이면 \(k_x=k_y=0\)이므로 Eq. 9.185에서 \((\omega/c)^2-k^2=0\), 즉 \(k=\omega/c\). 이때 Eq. 9.182는 \(0/0\) 꼴이므로 Eq. 9.181로 돌아간다.<br>
+TE이므로 \(E_z=0\). Eq. 9.181의 (v),(vi)에 \(k=\omega/c\)를 넣으면
+\[\partial_yB_z=ikB_y-\frac{i\omega}{c^2}E_x=ik\left(B_y-\frac{E_x}{c}\right),\qquad \partial_xB_z=ik\left(B_x+\frac{E_y}{c}\right),\]
+그리고 (ii),(iii)에서 \(E_x=cB_y\), \(E_y=-cB_x\)를 얻는다. 이를 위 두 식에 넣으면
+\[\partial_xB_z=\partial_yB_z=0\ \Rightarrow\ B_z=\text{상수(단면 위에서)} .\]
+이제 단면 \(S\) 전체에 Faraday 법칙의 적분형을 적용:
+\[\oint_{\partial S}\mathbf E\cdot d\boldsymbol\ell=-\frac{d}{dt}\int_S\mathbf B\cdot d\mathbf a .\]
+벽에서 \(\mathbf E^{\parallel}=0\)이므로 좌변 \(=0\). 우변 \(=-\dfrac{d}{dt}(B_z\,ab)=i\omega B_z ab\). \(\omega\neq0\)이므로
+\[\boxed{B_z=0\ \Rightarrow\ E_z=B_z=0\ (\text{TEM 모드})}\]
+그런데 속 빈 완전도체 관은 TEM 모드를 지지할 수 없다(단면의 정전기 문제에서 경계가 하나뿐인 등전위면이면 내부 \(\mathbf E=0\)). 따라서
+\[\boxed{\mathrm{TE}_{00}\ \text{모드는 존재하지 않는다 — 최소한 하나의 지수는 0이 아니어야 한다}}\]
+<div class="alabel">감점 포인트</div>
+"\(B_z\)가 상수"에서 곧바로 0이라고 하면 안 된다. Faraday 적분형 + 벽에서 \(E^\parallel=0\)이라는 논거가 반드시 필요하다.</div><!--/sol-->

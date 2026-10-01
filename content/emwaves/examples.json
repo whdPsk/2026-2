@@ -1,0 +1,274 @@
+[
+ {
+  "num": "8.1",
+  "unit": "u1",
+  "page": 389,
+  "title": "저항 도선의 Joule 발열을 Poynting 벡터로 다시 계산하기",
+  "en": "Recompute the Joule heating of a resistive wire from the Poynting flux entering its <b>surface</b>, not from the current inside. <i>· key terms: Poynting vector, Joule heating, surface integral</i>",
+  "summary": "전력은 도선 <em>내부의 전류</em>를 따라 흘러 들어오는 것이 아니라, 도선 <em>옆의 빈 공간</em>을 타고 옆구리로 들어온다."
+ },
+ {
+  "num": "8.2",
+  "unit": "u2",
+  "page": 394,
+  "title": "균일 대전 구의 북반구가 받는 힘 — Maxwell 변형력 텐서",
+  "en": "Force on the northern hemisphere of a uniformly charged sphere, obtained from the <b>Maxwell stress tensor</b> on a boundary rather than a volume sum. <i>· key terms: Maxwell stress tensor, hemisphere, boundary integral</i>",
+  "summary": "부피적분(Coulomb 합) 대신 <em>경계면 위의 응력</em>만으로 힘 전체를 얻는다."
+ },
+ {
+  "num": "8.3",
+  "unit": "u3",
+  "page": 398,
+  "title": "정지한 동축 케이블에 저장된 전자기 운동량",
+  "en": "Electromagnetic <b>momentum</b> stored in a static coaxial cable, and where it goes when the current is switched off. <i>· key terms: momentum density, coaxial cable, field momentum</i>",
+  "summary": "아무것도 움직이지 않는데 장은 운동량을 갖고 있고, 전류를 끄면 그 운동량이 케이블에 그대로 전달된다."
+ },
+ {
+  "num": "8.4",
+  "unit": "u3",
+  "page": 400,
+  "title": "Feynman 원판 역설 — 각운동량은 장에 들어 있었다",
+  "en": "Feynman's disk paradox: the <b>angular momentum</b> that makes the cylinder spin was in the field all along. <i>· key terms: angular momentum density, induced electric field, solenoid</i>",
+  "summary": "전류를 끄면 정지해 있던 원통들이 돌기 시작한다. 각운동량의 출처는 처음부터 장이었다."
+ },
+ {
+  "num": "8.5",
+  "unit": "u4",
+  "page": 404,
+  "title": "자석이 회전 대전 고리를 들어올릴 때, 일을 한 것은 누구인가",
+  "en": "A magnet lifts a spinning charged ring — identify what actually does the work as the ring rises and slows. <i>· key terms: magnetic forces do no work, rotational kinetic energy</i>",
+  "summary": "고리는 올라가면서 <em>회전이 느려진다</em> — 위치에너지는 회전에너지에서 왔고 자기력은 중개만 했다."
+ },
+ {
+  "num": "8.6",
+  "unit": "u4",
+  "page": 405,
+  "title": "전류가 일정한 두 고리 — 전원이 두 배의 일을 한 이유",
+  "en": "Two loops held at constant current: why the sources supply twice the work, and which source pays for what. <i>· key terms: back EMF, field energy, work done by sources</i>",
+  "summary": "전원 \\(a\\)는 물체를 들어올리는 일을, 전원 \\(b\\)는 장 에너지를 늘리는 일을 한다. 자기장 자신은 여전히 일을 하지 않는다."
+ },
+ {
+  "num": "8.7",
+  "unit": "u4",
+  "page": 407,
+  "title": "진짜 자기 크레인 — 밧줄을 당기는 사람이 일을 한다",
+  "en": "A genuine magnetic crane: with flux unchanged no EMF is needed, so the magnetic field only transmits the force. <i>· key terms: constant flux, force transmission</i>",
+  "summary": "자석과 차가 붙어 함께 올라가면 자속이 변하지 않아 전원조차 필요 없다. 자기장은 힘을 <em>전달</em>만 한다."
+ },
+ {
+  "num": "9.1",
+  "unit": "u5",
+  "page": 419,
+  "title": "복소 표기로 사인파 더하기 — 진폭은 그냥 복소수로 더한다",
+  "en": "Add two sinusoidal waves by adding their <b>complex amplitudes</b> instead of wrestling with trig identities. <i>· key terms: complex amplitude, phasor, superposition</i>",
+  "summary": "삼각함수 항등식과 씨름하는 대신, 복소 진폭 \\(\\tilde A\\)를 벡터처럼 더하면 끝난다."
+ },
+ {
+  "num": "9.2",
+  "unit": "u7",
+  "page": 428,
+  "title": "단색 평면파의 표준형 — 그리고 그것이 나르는 에너지·운동량·복사압",
+  "en": "Standard form of a monochromatic plane wave, and the energy, momentum and <b>radiation pressure</b> it carries. <i>· key terms: transverse wave, intensity, radiation pressure</i>",
+  "summary": "\\(\\vb{E}\\perp\\vb{B}\\perp\\hat{\\vb{k}}\\), 위상 일치, \\(B_0=E_0/c\\). 여기서 세기 \\(I=\\tfrac12c\\eps E_0^{2}\\)와 복사압 \\(I/c\\)가 곧바로 나온다."
+ },
+ {
+  "num": "10.1",
+  "unit": "u15",
+  "page": 467,
+  "title": "퍼텐셜에서 소스를 역추적하기 — 빛의 속도로 퍼져나가는 \"전류 켜짐\" 소식",
+  "en": "Given V and A, work backwards to the charge and current that produced them. <i>· key terms: potentials, source reconstruction, gauge</i>",
+  "summary": "\\(V\\)와 \\(\\vb{A}\\)가 주어졌을 때 거꾸로 \\(\\rho,\\vb{J}\\)를 찾는 문제. 답은 \\(t=0\\)에 켜져 선형으로 자라는 무한 평면 표면전류이고, 그 소식은 정확히 \\(c\\)로 퍼진다."
+ },
+ {
+  "num": "10.2",
+  "unit": "u17",
+  "page": 476,
+  "title": "\\(t=0\\)에 켜진 무한 직선 전류 — 지연 퍼텐셜과 정적 결과로의 수렴",
+  "en": "Infinite straight current switched on at t = 0: retarded potentials, and convergence to the static Ampere result. <i>· key terms: retarded time, causality, static limit</i>",
+  "summary": "Ampère 법칙이 주는 \\(B=\\muz I_0/2\\pi s\\)는 \"이미 오래전부터 흐르던\" 전류의 답이다. 켜지는 순간부터를 정직하게 풀면 소식이 도달하기 전엔 0, 도달 직후엔 발산, 그리고 \\(t\\to\\infty\\)에 1학기 결과로 수렴한다."
+ },
+ {
+  "num": "10.3",
+  "unit": "u18",
+  "page": 484,
+  "title": "등속으로 달리는 점전하의 Liénard–Wiechert 퍼텐셜",
+  "en": "<b>Lienard-Wiechert potentials</b> for a charge in uniform motion — one of the few cases where the retarded-time equation can actually be solved. <i>· key terms: retarded time equation, Lienard-Wiechert potentials</i>",
+  "summary": "지연시각 방정식을 실제로 풀 수 있는 거의 유일한 경우. 이차방정식 하나로 \\(V,\\vb{A}\\)의 닫힌 형태를 얻고, 이것이 \\(\\gamma\\)에 의한 \"납작해짐\"의 출발점이 된다."
+ },
+ {
+  "num": "10.4",
+  "unit": "u19",
+  "page": 489,
+  "title": "등속 점전하의 장 — 진행 방향으로 납작해지는 \"팬케이크\"",
+  "en": "Field of a uniformly moving charge: it points at the <b>present</b> position, and is flattened into a pancake transverse to the motion. <i>· key terms: present position, gamma factor, field flattening</i>",
+  "summary": "지연 위치에서 출발한 정보인데도 \\(\\vb{E}\\)는 정확히 <em>현재</em> 위치를 가리킨다. 크기는 앞뒤로 \\(1/\\gamma^2\\)배 줄고 옆으로 \\(\\gamma\\)배 커진다."
+ },
+ {
+  "num": "10.5",
+  "unit": "u19",
+  "page": 491,
+  "title": "Thomson kink 모형 — 장선(field line)의 \"꺾임\"이 곧 복사다",
+  "en": "Thomson's kink model: the bend joining inner and outer field lines <b>is</b> the radiation field. <i>· key terms: field-line kink, transverse component, radiation field</i>",
+  "summary": "정지 전하를 툭 차면, 팽창하는 얇은 껍질 안에서 장선이 억지로 이어 붙는다. 그 꺾임이 만드는 접선 성분이 바로 복사장이다."
+ },
+ {
+  "num": "11.1",
+  "unit": "u20",
+  "page": 501,
+  "title": "하늘은 왜 파란가 — \\(\\omega^4\\)의 힘",
+  "en": "Why the sky is blue: the omega^4 scattering law also explains its polarization and the red sunset. <i>· key terms: Rayleigh scattering, dipole radiation, polarization</i>",
+  "summary": "쌍극자 복사 일률이 \\(\\omega^4\\)에 비례한다는 사실 하나로 파란 하늘, 편광된 하늘빛, 붉은 노을이 전부 설명된다."
+ },
+ {
+  "num": "11.2",
+  "unit": "u21",
+  "page": 509,
+  "title": "임의의 시간 의존성을 갖는 쌍극자 — 진동 쌍극자와 Larmor 공식의 통합",
+  "en": "Dipole with arbitrary time dependence — one formula that yields both the oscillating-dipole omega^4 result and the Larmor formula. <i>· key terms: second derivative of dipole moment, Larmor formula</i>",
+  "summary": "\\(P=\\muz[\\ddot p]^2/6\\pi c\\) 하나에서 (a) 진동 쌍극자의 \\(\\omega^4\\) 공식과 (b) 점전하의 Larmor 공식이 동시에 튀어나온다."
+ },
+ {
+  "num": "11.3",
+  "unit": "u22",
+  "page": 515,
+  "title": "\\(\\vb{v}\\parallel\\vb{a}\\)인 경우 — 앞으로 쏠리는 복사와 제동복사(bremsstrahlung)",
+  "en": "Velocity parallel to acceleration: radiation beamed forward into a narrow cone, and <b>bremsstrahlung</b>. <i>· key terms: relativistic beaming, bremsstrahlung, Lienard formula</i>",
+  "summary": "비상대론적 도넛이 \\((1-\\beta\\cos\\theta)^{-5}\\)에 눌려 앞쪽 좁은 원뿔로 몰리고, 총 일률은 \\(\\gamma^6\\)로 폭발한다."
+ },
+ {
+  "num": "11.4",
+  "unit": "u23",
+  "page": 519,
+  "title": "복사 감쇠 — 스프링에 매달린 전하의 감쇠 상수 \\(\\gamma=\\omega^2\\tau\\)",
+  "en": "Radiation damping: the damping constant assumed in Ch.9 is really the <b>radiation reaction</b>, with gamma = omega^2 tau. <i>· key terms: radiation reaction, damping constant, Abraham-Lorentz</i>",
+  "summary": "9장에서 \"편의상\" 넣었던 감쇠항 \\(-\\gamma m\\vb{v}\\)의 정체가 밝혀진다. 그것은 복사 반작용이며, 그 크기는 원자 스펙트럼선의 자연 폭을 정확히 준다."
+ },
+ {
+  "num": "11.5",
+  "unit": "u23",
+  "page": 520,
+  "title": "\"복사 반작용\"이 브레이크가 아니라 <b>가속기</b>인 경우",
+  "en": "A case where the radiation reaction force points <b>along</b> the motion — evidence that the name is misleading. <i>· key terms: Abraham-Lorentz force, sign of the force</i>",
+  "summary": "떨어지는 전하에 작용하는 Abraham–Lorentz 힘이 운동 방향과 <em>같은</em> 쪽을 향한다. 이름이 잘못 붙은 힘이라는 증거."
+ },
+ {
+  "num": "12.1",
+  "unit": "u24",
+  "page": 541,
+  "title": "날아가는 뮤온의 수명",
+  "en": "Lifetime of a fast-moving muon: multiply the proper lifetime by gamma. <i>· key terms: proper time, time dilation</i>",
+  "summary": "고유수명(proper lifetime)에 \\(\\gamma\\)를 곱하면 실험실에서 본 수명이 된다 — time dilation의 가장 단순한 적용."
+ },
+ {
+  "num": "12.2",
+  "unit": "u24",
+  "page": 543,
+  "title": "쌍둥이 역설",
+  "en": "The twin paradox — only the twin who accelerates ages less, so the situation is not symmetric. <i>· key terms: proper time, broken symmetry, acceleration</i>",
+  "summary": "가속을 겪은 쪽만 \"덜 늙는다\" — 두 쌍둥이가 대칭이 아니라는 점이 역설의 해소 열쇠."
+ },
+ {
+  "num": "12.3",
+  "unit": "u24",
+  "page": 546,
+  "title": "헛간과 사다리 역설",
+  "en": "The barn and ladder paradox: since \"inside\" depends on simultaneity, both observers are right. <i>· key terms: relativity of simultaneity, length contraction</i>",
+  "summary": "\"사다리가 헛간 안에 있다\"는 말 자체가 동시성에 의존하므로, 두 관측자가 모두 옳다."
+ },
+ {
+  "num": "12.4",
+  "unit": "u25",
+  "page": 551,
+  "title": "Lorentz 변환에서 동시성·시계 어긋남·시간 팽창 뽑아내기",
+  "en": "Extract simultaneity, clock offset and time dilation from the single line t-bar = gamma(t - vx/c^2). <i>· key terms: Lorentz transformation, clock synchronization</i>",
+  "summary": "앞서 따로따로 유도했던 세 가지 상대론 효과가 모두 \\(\\bar t=\\gamma(t-vx/c^2)\\) 한 줄에서 나온다."
+ },
+ {
+  "num": "12.5",
+  "unit": "u25",
+  "page": 552,
+  "title": "Lorentz 수축을 변환식으로 유도하기",
+  "en": "Derive length contraction from the transformation equations — the measuring frame's time must be held fixed. <i>· key terms: length contraction, simultaneous measurement</i>",
+  "summary": "막대 길이를 잴 때는 <em>측정자의 시간</em>을 고정해야 한다 — 그래야 \\(\\Delta x=\\Delta\\bar x/\\gamma\\)가 나온다."
+ },
+ {
+  "num": "12.6",
+  "unit": "u25",
+  "page": 552,
+  "title": "Einstein 속도 덧셈 법칙",
+  "en": "Einstein's velocity addition law: transform dx and dt separately, then divide. <i>· key terms: velocity addition, speed limit c</i>",
+  "summary": "\\(dx,dt\\)를 각각 변환한 뒤 나누면 속도 변환이 나온다 — 분모의 \\(1-uv/c^2\\)가 빛속도 한계를 지킨다."
+ },
+ {
+  "num": "12.7",
+  "unit": "u27",
+  "page": 566,
+  "title": "정면 충돌 후 달라붙는 점토 덩어리",
+  "en": "Head-on collision of two lumps that stick together: kinetic energy becomes rest mass. <i>· key terms: invariant mass, mass is not conserved, 4-momentum</i>",
+  "summary": "운동에너지가 정지에너지로 바뀌면서 <b>질량이 증가</b>한다 — 질량은 불변량이지만 보존량은 아니다."
+ },
+ {
+  "num": "12.8",
+  "unit": "u27",
+  "page": 568,
+  "title": "정지한 파이온의 2체 붕괴 \\(\\pi\\to\\mu+\\nu\\)",
+  "en": "Two-body decay of a pion at rest into a muon and a massless neutrino. <i>· key terms: 4-momentum conservation, massless particle, invariant square</i>",
+  "summary": "질량 없는 입자가 낀 2체 붕괴 — 불변량 제곱으로 속도를 몰라도 에너지를 얻는다."
+ },
+ {
+  "num": "12.9",
+  "unit": "u27",
+  "page": 569,
+  "title": "Compton 산란",
+  "en": "<b>Compton scattering</b>: the wavelength shift is fixed by the scattering angle alone. <i>· key terms: photon, Compton shift, elastic collision</i>",
+  "summary": "광자가 정지 전자에 튕기면 파장이 길어진다 — 산란각만으로 에너지가 결정되는 탄성 충돌."
+ },
+ {
+  "num": "12.10",
+  "unit": "u27",
+  "page": 571,
+  "title": "일정한 힘 아래의 운동 — 쌍곡선 운동",
+  "en": "Motion under a constant force: the classical parabola becomes a <b>hyperbola</b>, and the speed never reaches c. <i>· key terms: hyperbolic motion, relativistic dynamics</i>",
+  "summary": "고전적 포물선 \\(x=\\tfrac{F}{2m}t^2\\)이 상대론에서는 쌍곡선이 되고, 속력은 결코 \\(c\\)를 넘지 못한다."
+ },
+ {
+  "num": "12.11",
+  "unit": "u27",
+  "page": 574,
+  "title": "균일 자기장 속의 사이클로트론 운동",
+  "en": "Cyclotron motion in a uniform field: the centripetal force is pu/R, so p = QBR survives relativistically. <i>· key terms: cyclotron motion, momentum-radius relation</i>",
+  "summary": "구심력은 \\(mu^2/R\\)이 아니라 \\(pu/R\\) — 그 결과 \\(p=QBR\\)이 상대론에서도 그대로 성립한다."
+ },
+ {
+  "num": "12.12",
+  "unit": "u27",
+  "page": 575,
+  "title": "동축 케이블의 장 운동량과 에너지 중심",
+  "en": "Field momentum and the center of energy in a coaxial cable — flowing energy means a moving energy centroid. <i>· key terms: field momentum, center of energy</i>",
+  "summary": "정지한 케이블인데 장이 운동량을 가진 이유 — <b>에너지가 흐르면</b> 에너지 중심이 움직이고, 그것이 곧 운동량이다."
+ },
+ {
+  "num": "12.13",
+  "unit": "u27",
+  "page": 576,
+  "title": "전기장 속 자기 쌍극자의 숨은 운동량",
+  "en": "<b>Hidden momentum</b>: a stationary current loop in an electric field carries mechanical momentum (m x E)/c^2. <i>· key terms: hidden momentum, magnetic dipole, relativistic mechanics</i>",
+  "summary": "정지한 전류고리가 \\(\\vb p=\\dfrac{1}{c^2}(\\vb m\\times\\vb E)\\)만큼의 <b>역학적</b> 운동량을 품는다 — 순전히 상대론적 효과."
+ },
+ {
+  "num": "12.14",
+  "unit": "u28",
+  "page": 583,
+  "title": "등속으로 움직이는 점전하의 전기장",
+  "en": "Electric field of a uniformly moving point charge, from the field transformation rules alone. <i>· key terms: field transformation, flattened field</i>",
+  "summary": "장 변환 \\(E^\\perp=\\gamma E_0^\\perp,\\ E^\\parallel=E_0^\\parallel\\)만으로 \"납작해진\" Coulomb 장을 얻는다 — 지연퍼텐셜보다 훨씬 빠르다."
+ },
+ {
+  "num": "12.15",
+  "unit": "u28",
+  "page": 588,
+  "title": "등속으로 움직이는 점전하의 자기장",
+  "en": "Magnetic field of a uniformly moving point charge: B = (v x E)/c^2, with no B in the rest frame. <i>· key terms: field transformation, magnetism from relativity</i>",
+  "summary": "정지계에는 \\(\\vb B\\)가 없다 → 특수한 변환 \\(\\vb B=\\dfrac{1}{c^2}(\\vb v\\times\\vb E)\\) 한 줄로 자기장이 나온다."
+ }
+]

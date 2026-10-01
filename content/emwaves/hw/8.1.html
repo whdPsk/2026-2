@@ -1,0 +1,18 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>이 문제는 "전력은 도선 속이 아니라 도선 <em>주위의 장</em>이 나른다"는 것을 보여주는 표준 예제다.</b> 시험 단골.</p>
+<p><b>(i) 동축 케이블</b> (안쪽 반지름 \(a\), 바깥 \(b\)). 두 도체 사이에서
+\[\vb{E}=\frac{\lambda}{2\pi\eps s}\hat{\vb{s}},\qquad \vb{B}=\frac{\muz I}{2\pi s}\hat{\boldsymbol\varphi}.\]
+전위차 조건 \(V=\int_a^b E\,ds=\dfrac{\lambda}{2\pi\eps}\ln(b/a)\) 를 써서 \(\lambda/2\pi\eps = V/\ln(b/a)\) 로 치환하면
+\[\vb{E}=\frac{V}{s\ln(b/a)}\hat{\vb{s}}.\]
+따라서
+\[\vb{S}=\frac{1}{\muz}\vb{E}\times\vb{B}=\frac{VI}{2\pi s^{2}\ln(b/a)}\hat{\vb{z}}.\]
+단면 적분:
+\[P=\int_a^b S\,2\pi s\,ds=\frac{VI}{\ln(b/a)}\int_a^b\frac{ds}{s}=VI.\]</p>
+<p><b>(ii) 리본 전송선</b> (폭 \(w\), 간격 \(h\ll w\)). 평행판 근사로
+\(E=V/h\) (아래로), \(B=\muz K=\muz I/w\). 두 리본 사이에서만 장이 존재하므로
+\[S=\frac{EB}{\muz}=\frac{V}{h}\cdot\frac{I}{w}=\frac{VI}{hw},\qquad P=S\,(hw)=VI.\]</p>
+<p>\[\boxed{\;P=VI\;}\quad(\text{두 경우 모두})\]
+즉 회로이론의 \(P=VI\) 는 장의 관점에서 Poynting 흐름의 단면적분으로 정확히 재현된다.</p>
+<div class="alabel">감점 포인트</div>
+\(\lambda\)나 \(\sigma\)를 \(V\)로 바꾸지 않고 답을 남기는 것, 그리고 적분 영역을 도체 내부까지 잡는 것(도체 안은 \(\vb{E}\approx0\)이라 기여 없음).</div><!--/sol-->

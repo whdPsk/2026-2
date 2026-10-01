@@ -1,0 +1,68 @@
+<div class="exq"><b>상황.</b> 같은 파수 \(k\)와 같은 각진동수 \(\omega\)를 갖지만 진폭과 위상이 다른 두 사인파
+\(f_1=A_1\cos(kz-\omega t+\delta_1)\), \(f_2=A_2\cos(kz-\omega t+\delta_2)\)를 더하려 한다. 실수 표기로 하면 삼각함수 항등식을 계속 뒤져야 한다. 복소 파동함수 \(\tilde f=\tilde A\,\ee^{\ii(kz-\omega t)}\), \(\tilde A=A\ee^{\ii\delta}\)를 도입하면 이 작업이 얼마나 간단해지는지, 그리고 <b>합성파의 진폭 \(A_3\)와 위상 \(\delta_3\)</b>가 무엇인지 구한다. 아울러 이 편법이 <em>언제 통하지 않는지</em>도 명확히 한다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(\mathrm{Re}\)는 <b>선형</b> 연산이므로 합과 교환된다 — 이것이 전부다.</div>
+<ol>
+<li><b>복소 표기.</b> Euler 공식 \(\ee^{\ii\theta}=\cos\theta+\ii\sin\theta\)에서
+\[ f(z,t)=A\cos(kz-\omega t+\delta)=\mathrm{Re}\!\left[A\ee^{\ii\delta}\ee^{\ii(kz-\omega t)}\right]=\mathrm{Re}\big[\tilde f\big],\qquad \tilde A\equiv A\ee^{\ii\delta}. \]
+복소 진폭 \(\tilde A\) 하나가 진폭과 위상 두 정보를 모두 담는다.</li>
+
+<li><b>덧셈.</b> \(\mathrm{Re}\)의 선형성으로
+\[ f_3=f_1+f_2=\mathrm{Re}(\tilde f_1)+\mathrm{Re}(\tilde f_2)=\mathrm{Re}(\tilde f_1+\tilde f_2)\equiv\mathrm{Re}(\tilde f_3). \]</li>
+
+<li><b>공통 인자를 뽑는다.</b> \(k,\omega\)가 같으므로 \(\ee^{\ii(kz-\omega t)}\)가 공통:
+\[ \tilde f_3=(\tilde A_1+\tilde A_2)\ee^{\ii(kz-\omega t)}\;\Longrightarrow\;\boxed{\tilde A_3=\tilde A_1+\tilde A_2}. \]
+합성파도 <b>같은 \(k,\omega\)</b>를 갖는다 — 파장도 진동수도 안 바뀐다.</li>
+
+<li><b>실수 진폭과 위상 추출.</b> \(A_3\ee^{\ii\delta_3}=A_1\ee^{\ii\delta_1}+A_2\ee^{\ii\delta_2}\)의 실·허수부를 각각 쓰면
+\[ A_3\cos\delta_3=A_1\cos\delta_1+A_2\cos\delta_2,\qquad A_3\sin\delta_3=A_1\sin\delta_1+A_2\sin\delta_2. \]
+제곱해서 더하면 (교차항에 \(\cos(\delta_1-\delta_2)\)가 나온다)
+\[ A_3^{2}=A_1^{2}+A_2^{2}+2A_1A_2\cos(\delta_1-\delta_2), \]
+나누면
+\[ \tan\delta_3=\frac{A_1\sin\delta_1+A_2\sin\delta_2}{A_1\cos\delta_1+A_2\cos\delta_2}. \]</li>
+
+<li><b>주의(caveat).</b> \(\mathrm{Re}\)는 곱과는 교환하지 <b>않는다</b>:
+\[ \mathrm{Re}(\tilde f_1\tilde f_2)\ne\mathrm{Re}(\tilde f_1)\,\mathrm{Re}(\tilde f_2). \]
+에너지밀도·Poynting 벡터처럼 장에 대해 <b>2차</b>인 양을 다룰 때는 반드시 실수 표기로 돌아가거나, 시간평균 전용 공식 \(\langle fg\rangle=\tfrac12\mathrm{Re}(\tilde f\tilde g^{*})\)를 써야 한다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \tilde A_3=\tilde A_1+\tilde A_2,\qquad A_3=\sqrt{A_1^{2}+A_2^{2}+2A_1A_2\cos(\delta_1-\delta_2)},\qquad \tan\delta_3=\frac{A_1\sin\delta_1+A_2\sin\delta_2}{A_1\cos\delta_1+A_2\cos\delta_2}\ } \]
+<p class="note">\(A_3\) 식은 두 <b>벡터</b>(위상자, phasor)를 사이각 \(\delta_1-\delta_2\)로 더하는 코사인 제2법칙과 완전히 같다. 이것이 간섭(interference)의 수학적 정체다. <b>검산</b> ① 차원: 모든 항이 진폭 차원, \(\delta\)는 무차원 ✓. ② 극한 \(\delta_1=\delta_2\)(보강간섭): \(A_3=A_1+A_2\) ✓. ③ 극한 \(\delta_1-\delta_2=\pi\)(상쇄간섭): \(A_3=|A_1-A_2|\) ✓, 특히 \(A_1=A_2\)이면 0 ✓. ④ \(A_2=0\)이면 \(A_3=A_1,\ \delta_3=\delta_1\) ✓. ⑤ \(\delta_1-\delta_2=\pi/2\)이면 \(A_3=\sqrt{A_1^2+A_2^2}\) — 직교 위상자의 피타고라스 합 ✓.</p></div>
+
+<div class="qz" data-q="ex9.1-a"><div class="qq"><b>+α</b> 이 도구의 실전 사용처 — <b>줄에서의 반사와 투과</b>: 선밀도 \(\mu_1\)인 줄(파속 \(v_1\))이 \(z=0\)에서 선밀도 \(\mu_2\)인 줄(파속 \(v_2\))에 매듭으로 묶여 있다. 왼쪽에서 입사파 \(\tilde A_I\)가 오면 반사파 \(\tilde A_R\)와 투과파 \(\tilde A_T\)가 생긴다. 경계조건에서 \(\tilde A_R,\tilde A_T\)를 구하고, (i) 고정단·자유단 극한, (ii) 에너지 보존 \(R+T=1\)을 확인하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 파동 설정.</b> 진동수 \(\omega\)는 양쪽에서 같고(매듭이 함께 흔들리므로) 파수는 다르다: \(k_1=\omega/v_1,\ k_2=\omega/v_2\).
+\[ \tilde f(z,t)=\begin{cases}\tilde A_I\ee^{\ii(k_1z-\omega t)}+\tilde A_R\ee^{\ii(-k_1z-\omega t)}, & z&lt;0,\\[2pt] \tilde A_T\ee^{\ii(k_2z-\omega t)}, & z&gt;0.\end{cases} \]</p>
+<p><b>2) 경계조건.</b> ① 줄이 끊어지지 않으므로 \(f\)가 \(z=0\)에서 연속. ② 매듭의 질량이 0이면 위·아래 방향 알짜 힘이 유한해야 하므로 \(\partial f/\partial z\)도 연속. 여기서 <b>이 Example의 결과가 그대로 쓰인다</b> — 왼쪽에서 두 파를 더할 때 복소 진폭을 그냥 더하면 된다.
+\[ \tilde A_I+\tilde A_R=\tilde A_T,\qquad k_1(\tilde A_I-\tilde A_R)=k_2\tilde A_T. \]</p>
+<p><b>3) 풀기.</b>
+\[ \boxed{\ \tilde A_R=\left(\frac{k_1-k_2}{k_1+k_2}\right)\tilde A_I=\left(\frac{v_2-v_1}{v_2+v_1}\right)\tilde A_I,\qquad \tilde A_T=\left(\frac{2k_1}{k_1+k_2}\right)\tilde A_I=\left(\frac{2v_2}{v_2+v_1}\right)\tilde A_I\ } \]
+계수가 <b>실수</b>이므로 위상은 0 또는 \(\pi\)만 가능하다.</p>
+<p><b>4) (i) 극한.</b>
+<br>• \(\mu_2\to\infty\ (v_2\to0)\), 즉 <b>고정단</b>: \(\tilde A_R=-\tilde A_I\) (\(\pi\) 위상 뒤집힘), \(\tilde A_T=0\) ✓ 잘 아는 결과.
+<br>• \(\mu_2\to0\ (v_2\to\infty)\), 즉 <b>자유단</b>: \(\tilde A_R=+\tilde A_I\) (위상 유지), \(\tilde A_T=2\tilde A_I\) ✓.
+<br>• \(\mu_2=\mu_1\): \(\tilde A_R=0,\ \tilde A_T=\tilde A_I\) ✓ 경계가 없는 것과 같다.</p>
+<p><b>5) (ii) 에너지 보존.</b> 사인파가 나르는 평균 일률은 \(P=\tfrac12\mu v\omega^{2}A^{2}\)이고, 장력 \(T=\mu v^{2}\)가 같으므로 \(\mu v=T/v\). 따라서
+\[ R=\frac{P_R}{P_I}=\left(\frac{A_R}{A_I}\right)^{2}=\left(\frac{v_2-v_1}{v_2+v_1}\right)^{2},\qquad T_{\rm coef}=\frac{\mu_2v_2}{\mu_1v_1}\left(\frac{A_T}{A_I}\right)^{2}=\frac{v_1}{v_2}\cdot\frac{4v_2^{2}}{(v_1+v_2)^{2}}=\frac{4v_1v_2}{(v_1+v_2)^{2}}. \]
+\[ R+T_{\rm coef}=\frac{(v_2-v_1)^{2}+4v_1v_2}{(v_1+v_2)^{2}}=\frac{(v_1+v_2)^{2}}{(v_1+v_2)^{2}}=1\ \checkmark \]</p>
+<p><b>검산</b>: \(\tilde A_T\)가 \(2\tilde A_I\)까지 커질 수 있지만 \(T_{\rm coef}\le1\)이다 — 진폭이 커져도 가벼운 줄은 에너지를 덜 나르기 때문 ✓. \(v_1=v_2\)에서 \(R=0,T=1\) ✓. 모든 계수가 무차원 ✓. 이 구조는 9.3절 Fresnel 계수(수직입사)와 형태가 완전히 같다 — \(v\to1/n\) 대응으로 옮겨간다.</p>
+</div></div>
+
+<div class="qz" data-q="ex9.1-b"><div class="qq"><b>+α</b> 역방향으로 묻기: (a) 진폭이 같은 두 파(\(A_1=A_2=A\))를 더했더니 합성 진폭이 <b>정확히 \(A\)</b>였다. 위상차는 얼마인가? (b) 진폭이 같고 위상이 \(2\pi/N\)씩 균등하게 어긋난 \(N\)개의 파를 더하면 어떻게 되는가? \(N=3\)에 대해 명시적으로 확인하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>(a) 역문제.</b> \(A_1=A_2=A\), \(\Delta\equiv\delta_1-\delta_2\)라 두면
+\[ A_3^{2}=A^{2}+A^{2}+2A^{2}\cos\Delta=2A^{2}(1+\cos\Delta)=4A^{2}\cos^{2}\!\frac{\Delta}{2}. \]
+즉 \(A_3=2A\left|\cos\frac{\Delta}{2}\right|\). 이것이 \(A\)와 같으려면
+\[ 2\left|\cos\frac{\Delta}{2}\right|=1\;\Rightarrow\;\cos\frac{\Delta}{2}=\pm\frac12\;\Rightarrow\;\boxed{\ \Delta=\pm\frac{2\pi}{3}\ (+2\pi n)\ } \]
+(동등하게 \(\cos\Delta=-\tfrac12\).) 위상차가 \(120^\circ\)면 두 파의 합이 원래 한 파와 같은 진폭이 된다.</p>
+<p><b>(b) \(N\)개 균등 위상.</b> 복소 진폭들의 합은 등비급수:
+\[ \tilde A_{\rm tot}=A\sum_{n=0}^{N-1}\ee^{\ii\,2\pi n/N}=A\,\frac{1-\ee^{\ii2\pi}}{1-\ee^{\ii2\pi/N}}=0\qquad(N\ge2). \]
+즉 <b>완전 상쇄</b>. 기하학적으로는 \(N\)개의 같은 길이 위상자가 정\(N\)각형을 이루어 닫히는 것이다.</p>
+<p><b>\(N=3\) 명시 확인.</b> \(\ee^{0}+\ee^{\ii2\pi/3}+\ee^{\ii4\pi/3}=1+\left(-\tfrac12+\ii\tfrac{\sqrt3}{2}\right)+\left(-\tfrac12-\ii\tfrac{\sqrt3}{2}\right)=0\) ✓.
+실수 표기로 확인하려면 \(\cos\theta+\cos(\theta+\tfrac{2\pi}{3})+\cos(\theta+\tfrac{4\pi}{3})=0\)을 항등식으로 보여야 하는데 — 복소 표기가 왜 편한지 바로 느낄 수 있다.</p>
+<p><b>보너스 연결.</b> (a)의 세 파를 두 개씩 짝지어보면: 앞의 두 개가 \(120^\circ\) 차이로 합쳐져 진폭 \(A\), 위상은 남은 세 번째와 정확히 \(180^\circ\) — 그래서 셋을 다 더하면 0이 된다 ✓ 두 결과가 서로를 검증한다.</p>
+<p><b>검산</b>: (a)에서 \(\Delta=0\to A_3=2A\), \(\Delta=\pi\to A_3=0\), \(\Delta=2\pi/3\to A_3=A\) — \(A_3(\Delta)=2A|\cos(\Delta/2)|\)가 단조 감소하며 이 세 값을 지난다 ✓. (b)의 결과는 3상 교류(three-phase AC)에서 중성선 전류가 0인 이유이자, 회절격자에서 특정 방향의 소멸조건과 같은 수학이다 ✓.</p>
+</div></div>

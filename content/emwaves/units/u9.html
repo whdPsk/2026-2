@@ -1,0 +1,124 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 물질 속에서 빛이 느려진다는 사실은 잘 알려져 있다. 그런데 "느려진다"는 것은 정확히 무엇이 느려지는 것인가 — 광자 하나하나가 느려지는가, 아니면 다른 무언가인가? 그리고 공기에서 유리로 수직 입사할 때 반사율이 4%라는 유명한 숫자는 어떤 조합에서 나오는가? \(n_1,n_2\)를 서로 바꾸면 반사율이 달라질지 미리 답해 보라.</div>
+
+<h4>9.3.1 선형 매질에서의 전파 <span class="en">propagation in linear media</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>매질 속 Maxwell 방정식 → \(v=c/n\)</div>
+<ol>
+<li>자유전하·자유전류가 없는 물질 내부에서 Maxwell 방정식은
+\[ \divg\vb{D}=0,\quad \divg\vb{B}=0,\quad \curl\vb{E}=-\frac{\partial\vb{B}}{\partial t},\quad \curl\vb{H}=\frac{\partial\vb{D}}{\partial t} \]</li>
+<li>매질이 <b>선형</b>(\(\vb{D}=\eps\vb{E},\ \vb{H}=\vb{B}/\mu\))이고 <b>균질</b>(\(\eps,\mu\)가 위치에 무관)이면
+\[ \divg\vb{E}=0,\quad \divg\vb{B}=0,\quad \curl\vb{E}=-\frac{\partial\vb{B}}{\partial t},\quad \curl\vb{B}=\mu\eps\frac{\partial\vb{E}}{\partial t} \]
+진공 방정식과 <b>단 하나</b>의 차이: \(\muz\eps \to \mu\eps\).</li>
+<li>따라서 U7의 유도 1을 문자 그대로 반복할 수 있고, 결과는
+\[ v=\frac{1}{\sqrt{\epsilon\mu}}=\frac{c}{n},\qquad \boxed{\,n\equiv\sqrt{\frac{\epsilon\mu}{\eps\muz}}\,} \]
+\(n\)이 <b>굴절률</b>이다.</li>
+<li>대부분의 물질에서 \(\mu\approx\muz\)이므로
+\[ n\approx\sqrt{\epsilon_r} \]
+\(\epsilon_r\ge1\)이 보통이므로 빛은 물질 속에서 <b>느려진다</b>.</li>
+<li>U7~U8의 모든 결과가 \(\eps\to\eps,\ \muz\to\mu,\ c\to v\) 치환으로 옮겨온다:
+\[ u=\tfrac12\!\left(\eps E^2+\frac1\mu B^2\right),\quad \vb{S}=\frac1\mu(\vb{E}\times\vb{B}),\quad B_0=\frac{E_0}{v},\quad \boxed{I=\tfrac12\eps v E_0^2} \]</li>
+<li><b>물리적 주의:</b> "빛이 느려진다"는 것은 개별 광자가 느려진다는 뜻이 아니다. 통과하는 파동이 분자들을 분극시키고, 진동하는 쌍극자들이 만든 2차 파동이 원래 파동과 중첩되어 <b>같은 진동수·다른 속도</b>의 단일 파동을 만든다(Ewald–Oseen 소거 정리). 이 절묘한 상쇄가 곧 투명성이며, 선형성의 비자명한 귀결이다.</li>
+</ol></div>
+
+<h4>9.3.2 수직 입사에서의 반사와 투과 <span class="en">reflection and transmission at normal incidence</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>경계조건 → 진폭 관계</div>
+<ol>
+<li>\(xy\)평면이 매질 1과 2의 경계다. \(x\)편광, \(+z\)진행 입사파:
+\[ \tilde{\vb{E}}_I=\tilde E_{0I}\ee^{\ii(k_1z-\omega t)}\hat{\vb{x}},\qquad \tilde{\vb{B}}_I=\frac{1}{v_1}\tilde E_{0I}\ee^{\ii(k_1z-\omega t)}\hat{\vb{y}} \]</li>
+<li>반사파는 \(-z\)로 진행하므로 \(\hat{\vb{k}}_R=-\hat{\vb{z}}\)이고 \(\vb{B}=\frac1v\hat{\vb{k}}\times\vb{E}\)에서 <b>부호가 뒤집힌다</b>:
+\[ \tilde{\vb{E}}_R=\tilde E_{0R}\ee^{\ii(-k_1z-\omega t)}\hat{\vb{x}},\qquad \tilde{\vb{B}}_R=-\frac{1}{v_1}\tilde E_{0R}\ee^{\ii(-k_1z-\omega t)}\hat{\vb{y}} \]
+이 마이너스를 놓치는 것이 이 절의 최다 실수다. \(\vb{S}\propto\vb{E}\times\vb{B}\)가 \(-\hat{\vb{z}}\)를 향해야 한다는 것으로 검산하라.</li>
+<li>투과파: \(\tilde{\vb{E}}_T=\tilde E_{0T}\ee^{\ii(k_2z-\omega t)}\hat{\vb{x}},\ \tilde{\vb{B}}_T=\frac{1}{v_2}\tilde E_{0T}\ee^{\ii(k_2z-\omega t)}\hat{\vb{y}}\).</li>
+<li>경계조건(Eq. 9.75) 네 개 중 (i),(ii)는 수직 성분에 대한 것인데 여기서는 \(E_z=B_z=0\)이라 자명하게 만족된다. 남는 것은 접선 성분:
+<br>(iii) \(E^{\parallel}\) 연속:
+\[ \tilde E_{0I}+\tilde E_{0R}=\tilde E_{0T} \]
+(iv) \(\dfrac{1}{\mu}B^{\parallel}\) 연속:
+\[ \frac{1}{\mu_1}\left(\frac{\tilde E_{0I}}{v_1}-\frac{\tilde E_{0R}}{v_1}\right)=\frac{1}{\mu_2}\frac{\tilde E_{0T}}{v_2} \]</li>
+<li>둘째 식을 정리하면
+\[ \tilde E_{0I}-\tilde E_{0R}=\beta\,\tilde E_{0T},\qquad \boxed{\beta\equiv\frac{\mu_1v_1}{\mu_2v_2}=\frac{\mu_1n_2}{\mu_2n_1}} \]</li>
+<li>두 식을 연립하면
+\[ \boxed{\;\tilde E_{0R}=\left(\frac{1-\beta}{1+\beta}\right)\tilde E_{0I},\qquad \tilde E_{0T}=\left(\frac{2}{1+\beta}\right)\tilde E_{0I}\;} \]
+\(\mu_1=\mu_2=\muz\)이면 \(\beta=v_1/v_2=n_2/n_1\)이고
+\[ \tilde E_{0R}=\frac{n_1-n_2}{n_1+n_2}\tilde E_{0I},\qquad \tilde E_{0T}=\frac{2n_1}{n_1+n_2}\tilde E_{0I} \]
+<b>U6의 줄 결과와 완전히 같은 꼴</b>이다(\(v\leftrightarrow 1/n\)).</li>
+<li>위상: \(n_2\gt n_1\)(더 조밀한 매질로 들어감)이면 괄호가 음수 → 반사파가 \(180^\circ\) 뒤집힌다. 줄에서 무거운 줄로 갈 때와 같다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>반사·투과 계수 \(R,T\)와 \(R+T=1\)</div>
+<ol>
+<li>강도는 \(I=\tfrac12\eps v E_0^2\)이다. 반사파는 <b>같은 매질</b>에 있으므로
+\[ R\equiv\frac{I_R}{I_I}=\frac{\tfrac12\epsilon_1v_1E_{0R}^2}{\tfrac12\epsilon_1v_1E_{0I}^2}=\left(\frac{E_{0R}}{E_{0I}}\right)^2 \]
+계수가 통째로 약분된다.</li>
+<li>투과파는 <b>다른 매질</b>에 있으므로 \(\eps v\) 인수가 남는다:
+\[ T\equiv\frac{I_T}{I_I}=\frac{\epsilon_2v_2}{\epsilon_1v_1}\left(\frac{E_{0T}}{E_{0I}}\right)^2 \]
+<b>이 앞 인수를 빠뜨리면 \(R+T=1\)이 성립하지 않는다.</b> \(\mu=\muz\)일 때 \(\eps v=\eps c n\)이므로 인수는 \(n_2/n_1\)이다.</li>
+<li>\(\mu_1=\mu_2=\muz\)를 넣으면
+\[ \boxed{\;R=\left(\frac{n_1-n_2}{n_1+n_2}\right)^2,\qquad T=\frac{4n_1n_2}{(n_1+n_2)^2}\;} \]</li>
+<li>검산:
+\[ R+T=\frac{(n_1-n_2)^2+4n_1n_2}{(n_1+n_2)^2}=\frac{n_1^2+2n_1n_2+n_2^2}{(n_1+n_2)^2}=1\;\checkmark \]
+에너지 보존이 자동으로 나온다. \(\mu\)를 일반화해도 성립한다(Prob. 9.14).</li>
+<li>공기(\(n_1=1\))→유리(\(n_2=1.5\)): \(R=(0.5/2.5)^2=0.04\), \(T=0.96\). <b>유리창 한 면에서 4%가 반사된다.</b></li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>편광은 왜 보존되는가 (Prob. 9.15의 논리)</div>
+<ol>
+<li>위 계산에서 우리는 반사·투과파의 편광이 입사파와 같은 \(\hat{\vb{x}}\)라고 <b>가정</b>했다. 이를 증명해야 논리가 닫힌다.</li>
+<li>일반적으로 \(\hat{\vb{n}}_R=\cos\theta_R\hat{\vb{x}}+\sin\theta_R\hat{\vb{y}}\), \(\hat{\vb{n}}_T=\cos\theta_T\hat{\vb{x}}+\sin\theta_T\hat{\vb{y}}\)로 두고 경계조건을 성분별로 쓴다.</li>
+<li>\(\hat{\vb{y}}\) 성분만 모으면 입사파 기여가 없으므로
+\[ \tilde E_{0R}\sin\theta_R=\tilde E_{0T}\sin\theta_T,\qquad -\frac{1}{\mu_1v_1}\tilde E_{0R}\sin\theta_R=\frac{1}{\mu_2v_2}\tilde E_{0T}\sin\theta_T \]
+(부호는 \(\vb{B}\)의 방향에서 온다.)</li>
+<li>두 식을 결합하면 \(\left(\dfrac{1}{\mu_1v_1}+\dfrac{1}{\mu_2v_2}\right)\tilde E_{0T}\sin\theta_T=0\). 괄호는 양수이므로
+\[ \sin\theta_T=0 \;\Rightarrow\; \theta_T=0 \;\Rightarrow\; \sin\theta_R=0 \;\Rightarrow\; \theta_R=0 \]</li>
+<li>결론: 수직 입사에서는 편광이 그대로 유지된다. 이는 문제에 \(x\)와 \(y\)를 구별할 물리적 요소가 없기 때문이며(회전 대칭), 비스듬한 입사에서는 <b>입사면</b>이 이 대칭을 깨뜨리기 때문에 \(\parallel\)과 \(\perp\)가 다르게 행동한다(U10).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 매질과 수직 입사</div>
+\[ v=\frac{c}{n},\quad n=\sqrt{\frac{\epsilon\mu}{\eps\muz}}\approx\sqrt{\epsilon_r},\qquad I=\tfrac12\epsilon vE_0^2 \]
+\[ \boxed{\;R=\left(\frac{n_1-n_2}{n_1+n_2}\right)^2,\qquad T=\frac{4n_1n_2}{(n_1+n_2)^2},\qquad R+T=1\;} \]
+<p class="note">\(R\)이 \(n_1\leftrightarrow n_2\) 교환에 대해 대칭이라는 점에 주목. 유리에서 공기로 나갈 때도 4%다. 반면 \(T\) 계산에서는 \(\epsilon_2v_2/\epsilon_1v_1=n_2/n_1\) 인수를 절대 빠뜨리면 안 된다.</p></div>
+
+<div class="callout"><b class="head">유리창에 비친 내 얼굴, 그리고 무반사 코팅.</b> 유리판 하나에는 앞뒤 두 면이 있으므로 총 반사가 약 8%다. 렌즈가 10장 들어간 카메라라면 \(0.96^{20}\approx0.44\), 즉 절반 이상을 잃는다. 그래서 렌즈에 \(n=\sqrt{n_1n_2}=\sqrt{1\times1.5}\approx1.22\), 두께 \(\lambda/4\)인 막을 입힌다. 앞면 반사와 뒷면 반사가 정확히 \(180^\circ\) 어긋나 상쇄되기 때문이다(Prob. 9.38, 9.39의 다층 투과 공식이 정확한 계산을 준다). 카메라 렌즈가 보랏빛으로 반짝이는 이유가 바로 이 코팅이 가시광 중심 파장만 완벽히 지우기 때문이다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u9-1"><div class="qq">(참/거짓 + 증명 또는 반례) "수직 입사 반사율 \(R\)은 빛이 어느 쪽 매질에서 오느냐에 따라 달라진다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>거짓</b>(단, 세기에 한해서). \(\mu_1=\mu_2\)일 때
+\[ R=\left(\frac{n_1-n_2}{n_1+n_2}\right)^2 \]
+는 \(n_1\leftrightarrow n_2\) 교환에 대해 <b>불변</b>이다. 분자가 부호만 바뀌는데 제곱하므로 사라진다. 공기→유리도 4%, 유리→공기도 4%다.
+<b>그러나 위상은 다르다.</b> 진폭비 \(\dfrac{n_1-n_2}{n_1+n_2}\)는 부호가 뒤집힌다:
+<ul>
+<li>공기→유리(\(n_2\gt n_1\)): 음수 → 반사파 \(180^\circ\) 위상 반전</li>
+<li>유리→공기(\(n_2\lt n_1\)): 양수 → 위상 그대로</li>
+</ul>
+이 위상차가 바로 무반사 코팅과 박막 간섭(비눗방울 색)의 핵심이다. 세기만 보면 대칭이지만 간섭 실험에서는 결정적으로 구별된다.
+<b>주의:</b> \(\mu_1\neq\mu_2\)이면 \(\beta=\mu_1n_2/\mu_2n_1\)이므로 교환 대칭이 일반적으로 깨진다. \(R=\left(\frac{1-\beta}{1+\beta}\right)^2\)에서 \(1\leftrightarrow2\) 교환은 \(\beta\to\mu_2n_1/\mu_1n_2\)로 \(\beta\to1/\beta\)가 아니다.
+</div></div>
+
+<div class="qz" data-q="u9-2"><div class="qq">(점근 분석, 지수 명시) \(n_2\to\infty\)일 때 \(1-R\)이 \(n_2\)의 몇 승으로 0에 접근하는가? 이 극한이 물리적으로 무엇에 해당하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+\(x\equiv n_1/n_2 \to 0\)로 두면
+\[ R=\left(\frac{n_1-n_2}{n_1+n_2}\right)^2=\left(\frac{x-1}{x+1}\right)^2=(1-x)^2(1+x)^{-2} \]
+전개하면
+\[ R=(1-2x+x^2)(1-2x+3x^2+\cdots)=1-4x+O(x^2) \]
+따라서
+\[ 1-R=T\approx 4x=\frac{4n_1}{n_2}\propto n_2^{-1} \]
+<b>지수는 \(-1\).</b> 직접 확인해도 같다: \(T=\dfrac{4n_1n_2}{(n_1+n_2)^2}\approx\dfrac{4n_1n_2}{n_2^2}=\dfrac{4n_1}{n_2}\) ✓.
+<b>물리적 의미:</b> \(n\to\infty\)는 \(v\to0\), 즉 "무한히 무거운 매질"이며 U6의 고정단 극한(\(\mu_2\to\infty\))에 대응한다. 완전도체 표면 반사(U11)의 \(\tilde E_{0R}=-\tilde E_{0I}\)와 같은 상황이다. \(n_2\)를 10배 키우면 투과는 10분의 1로 줄어든다 — 지수 \(-1\)이므로 매우 느린 수렴이다. 실제 금속의 "완전 반사"가 \(n\)이 아니라 <b>복소</b> 파수의 발산에서 오는 것도 같은 맥락이다.
+</div></div>
+
+<div class="qz" data-q="u9-3"><div class="qq">(계산, 계산기 없이) (a) 공기→물(\(n=4/3\)), (b) 물→유리(\(n_1=4/3,\ n_2=3/2\)), (c) 공기→다이아몬드(\(n=2.42\))의 수직 입사 \(R\)를 구하고 크기 순서를 논하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>(a) 공기→물:</b> \[ R=\left(\frac{1-4/3}{1+4/3}\right)^2=\left(\frac{-1/3}{7/3}\right)^2=\left(\frac17\right)^2=\frac{1}{49}\approx 0.020 \] 약 2%.
+<b>(b) 물→유리:</b> \[ \frac{4}{3}-\frac{3}{2}=\frac{8-9}{6}=-\frac16,\qquad \frac43+\frac32=\frac{8+9}{6}=\frac{17}{6} \] \[ R=\left(\frac{-1/6}{17/6}\right)^2=\left(\frac{1}{17}\right)^2=\frac{1}{289}\approx 0.0035 \] 약 0.35% — 매우 작다.
+<b>(c) 공기→다이아몬드:</b> \[ R=\left(\frac{1-2.42}{1+2.42}\right)^2=\left(\frac{1.42}{3.42}\right)^2\approx(0.415)^2\approx 0.172 \] 약 17%.
+<b>논의:</b> 반사율은 굴절률의 <b>절대값이 아니라 대비(contrast)</b>가 결정한다. 물속에서 유리를 보면 거의 안 보이고(0.35%), 다이아몬드는 굴절률 대비가 커서 강하게 반짝인다(17%). 다이아몬드의 광채는 이 높은 \(R\)과 작은 임계각(\(\theta_c=\sin^{-1}(1/2.42)\approx24^\circ\), U10)에 의한 내부 전반사가 결합된 결과다.
+</div></div>
+
+<div class="qz" data-q="u9-4"><div class="qq">(개념) 물의 정적 유전상수는 \(\epsilon_r\approx80\)이므로 \(n=\sqrt{80}\approx8.9\)여야 하지만, 실제 가시광에 대한 물의 굴절률은 1.33이다. 무엇이 잘못되었는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>잘못된 것은 "\(\epsilon_r\)이 상수"라는 가정이다.</b> \(\epsilon_r\)이 "상수"인 것은 \(\vb{E}\)의 <b>진폭</b>에 무관하다는 의미(선형성)일 뿐, <b>진동수</b>에 무관하다는 뜻이 아니다.
+물의 \(\epsilon_r\approx80\)은 <b>정적</b>(\(\omega\to0\)) 값이며, 그 대부분은 물 분자 전체가 회전하여 영구 쌍극자를 정렬하는 <b>배향 분극</b>에서 온다. 물 분자의 회전 응답 시간은 \(\sim10^{-11}\ \mathrm{s}\)로, 가시광 진동수 \(\sim10^{15}\ \mathrm{Hz}\)에서는 전혀 따라가지 못한다. 따라서 가시광에서는 이 기여가 통째로 사라지고, 빠르게 반응하는 <b>전자 분극</b>만 남아 \(\epsilon_r\approx1.77,\ n\approx1.33\)이 된다.
+이것이 §9.4.3(U12)의 주제다. Lorentz 진동자 모형에서 \(\omega\)가 어떤 공명 진동수 \(\omega_j\)를 넘어서면 그 항의 기여가 부호를 바꾸며 사실상 사라지는 것으로 정량화된다:
+\[ \tilde\epsilon_r(\omega)=1+\frac{Nq^2}{m\eps}\sum_j\frac{f_j}{\omega_j^2-\omega^2-\ii\gamma_j\omega} \]
+<b>일반 교훈:</b> 표에서 유전상수를 가져올 때는 반드시 어느 진동수에서 측정한 값인지 확인해야 한다. 정적 값으로 광학을 하면 이렇게 7배쯤 틀린다.
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> \(\eps\muz\to\epsilon\mu\) 치환으로 매질 결과를 모두 재구성하고, 경계조건에서 \(\beta\)를 정의해 \(R,T\)를 유도하며 \(R+T=1\)을 확인할 수 있다.</div>

@@ -1,0 +1,53 @@
+<div class="exq"><b>상황.</b> 점전하 \(q\)가 계 \(S_0\)의 원점에 정지해 있다. \(S\)는 \(S_0\)에 대해 (전하가 \(S\)에서 \(+x\)로 \(v_0\)로 움직이도록) 상대운동한다. \(S\)에서 이 전하의 전기장 \(\vb E\)를 구하라. 주어진 도구는 커패시터 논증으로 얻은 장 변환 규칙 \(E^\perp=\gamma_0E_0^\perp\)(수직 성분은 \(\gamma_0\)배), \(E^\parallel=E_0^\parallel\)(평행 성분은 불변)이다. \(\vb R\)를 전하의 <b>현재 위치</b>에서 관측점까지의 벡터, \(\theta\)를 \(\vb R\)와 운동 방향 사이의 각으로 둔다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span><b>장</b>도 변환하고 <b>좌표</b>도 변환한다 — 두 개의 \(\gamma_0\)가 절묘하게 균형을 이룬다.</div>
+<ol>
+<li><b>정지계의 장.</b> \(S_0\)에서는 그냥 Coulomb 장이다:
+\[ E_{x_0}=\frac{1}{4\pi\eps}\frac{qx_0}{r_0^3},\quad E_{y_0}=\frac{1}{4\pi\eps}\frac{qy_0}{r_0^3},\quad E_{z_0}=\frac{1}{4\pi\eps}\frac{qz_0}{r_0^3}, \]
+\(r_0=\sqrt{x_0^2+y_0^2+z_0^2}\).</li>
+<li><b>장을 변환한다.</b> 운동 방향이 \(x\)이므로 \(x\)성분은 평행, \(y,z\)성분은 수직:
+\[ E_x=E_{x_0},\qquad E_y=\gamma_0E_{y_0},\qquad E_z=\gamma_0E_{z_0}. \]</li>
+<li><b>좌표도 변환한다.</b> 아직 우변이 \(S_0\) 좌표로 쓰여 있다. 시각 \(t\)에 전하는 \(S\)에서 \(x=v_0t\)에 있으므로, 관측점까지의 벡터 \(\vb R\)의 성분으로
+\[ x_0=\gamma_0(x-v_0t)\ \text{의 역}\ \Rightarrow\ x_0=\gamma_0 R_x,\qquad y_0=R_y,\qquad z_0=R_z. \]
+<b>여기서 두 번째 \(\gamma_0\)가 등장한다.</b></li>
+<li><b>대입한다.</b> 분자는
+\[ (E_x,E_y,E_z)=\frac{q}{4\pi\eps r_0^3}\big(\gamma_0R_x,\ \gamma_0R_y,\ \gamma_0R_z\big)=\frac{q\gamma_0}{4\pi\eps r_0^3}\vb R. \]
+<b>세 성분 모두 \(\gamma_0\)를 하나씩 갖게 되어</b>, \(\vb E\)는 정확히 \(\vb R\)와 나란하다 — 즉 장이 전하의 <em>현재 위치</em>를 향한다.</li>
+<li><b>분모를 \(S\) 좌표로 쓴다.</b>
+\[ r_0^2=\gamma_0^2R_x^2+R_y^2+R_z^2=\gamma_0^2R^2\cos^2\theta+R^2\sin^2\theta=\gamma_0^2R^2(1-\beta_0^2\sin^2\theta), \]
+(마지막 등식: \(\gamma_0^2\cos^2\theta+\sin^2\theta=\gamma_0^2-(\gamma_0^2-1)\sin^2\theta=\gamma_0^2(1-\beta_0^2\sin^2\theta)\).) 따라서 \(r_0^3=\gamma_0^3R^3(1-\beta_0^2\sin^2\theta)^{3/2}\).</li>
+<li>정리하면 \(\gamma_0/\gamma_0^3=1/\gamma_0^2=1-v_0^2/c^2\)가 앞으로 나온다.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \vb E=\frac{q}{4\pi\eps}\,\frac{1-v_0^2/c^2}{\big[1-(v_0^2/c^2)\sin^2\theta\big]^{3/2}}\,\frac{\hat{\vb R}}{R^2}\ } \]
+<p class="note">Chapter 10에서 지연퍼텐셜(Liénard–Wiechert)로 힘들게 얻었던 Eq. 10.75와 <b>완전히 같은 결과</b>를 몇 줄 만에 얻었다. 게다가 왜 장이 <em>지연 위치</em>가 아니라 <b>현재 위치</b>를 향하는지도 드러난다: \(E_x\)는 좌표 변환에서, \(E_y,E_z\)는 장 변환에서 각각 \(\gamma_0\)를 하나씩 받아 균형이 맞기 때문이다. <b>검산</b>: (i) \(v_0\ll c\)이면 분자·분모 모두 1이 되어 \(\vb E\to\dfrac{q}{4\pi\eps}\dfrac{\hat{\vb R}}{R^2}\) — 정확히 Coulomb 법칙 ✓. (ii) 차원: 괄호 안이 무차원이므로 Coulomb과 같은 차원 ✓. (iii) 등방성은 깨졌지만 \(\vb E\parallel\hat{\vb R}\)는 유지된다 ✓. (iv) 총 flux는 여전히 \(q/\eps\)여야 한다(아래 +α에서 확인).</p></div>
+<div class="qz" data-q="ex12.14-a"><div class="qq"><b>+α</b> \(\theta=0^\circ\)(앞뒤)과 \(\theta=90^\circ\)(옆)에서 장의 세기를 Coulomb 값과 비교하라. 그리고 이렇게 일그러졌음에도 구면을 통과하는 총 flux가 \(q/\eps\)임을 직접 적분해 확인하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 두 특별한 방향.</b> \(E_C\equiv\dfrac{q}{4\pi\eps R^2}\)로 두자.</p>
+\[ \theta=0^\circ:\ \ E=E_C\,\frac{1-\beta^2}{1}=\frac{E_C}{\gamma^2}\quad(\text{약해짐}), \]
+\[ \theta=90^\circ:\ \ E=E_C\,\frac{1-\beta^2}{(1-\beta^2)^{3/2}}=\frac{E_C}{\sqrt{1-\beta^2}}=\gamma E_C\quad(\text{세짐}). \]
+\[ \boxed{\ \frac{E_\perp}{E_\parallel}=\gamma^3\ } \]
+<p>즉 장이 운동 방향으로는 눌리고 옆으로는 부풀어 <b>"팬케이크"</b> 모양이 된다. 초상대론적 극한에서는 두께 \(\sim1/\gamma\)의 얇은 원반 형태로, 이 때문에 고에너지 입자의 장은 거의 평면파처럼 행동한다(Weizsäcker–Williams 근사).</p>
+<p><b>2) Flux 계산.</b> 전하를 중심으로 반지름 \(R\)인 구면에서</p>
+\[ \oint\vb E\cdot d\vb a=\int_0^\pi E(\theta)\,R^2\,2\pi\sin\theta\,d\theta =\frac{q(1-\beta^2)}{2}\int_0^\pi\frac{\sin\theta\,d\theta}{(1-\beta^2\sin^2\theta)^{3/2}}. \]
+<p>\(u=\cos\theta\)로 치환하면 \(1-\beta^2\sin^2\theta=(1-\beta^2)+\beta^2u^2\):</p>
+\[ \oint\vb E\cdot d\vb a=\frac{q(1-\beta^2)}{2}\int_{-1}^{1}\frac{du}{\left[(1-\beta^2)+\beta^2u^2\right]^{3/2}}. \]
+<p>표준적분 \(\displaystyle\int\frac{du}{(a^2+b^2u^2)^{3/2}}=\frac{u}{a^2\sqrt{a^2+b^2u^2}}\)에 \(a^2=1-\beta^2,\ b^2=\beta^2\)를 넣으면</p>
+\[ \int_{-1}^{1}=\frac{2}{(1-\beta^2)\sqrt{(1-\beta^2)+\beta^2}}=\frac{2}{1-\beta^2}. \]
+<p>따라서</p>
+\[ \oint\vb E\cdot d\vb a=\frac{q(1-\beta^2)}{2}\cdot\frac{2}{1-\beta^2}\cdot\frac{1}{\eps}\ \Rightarrow\ \boxed{\ \oint\vb E\cdot d\vb a=\frac{q}{\eps}\ } \]
+<p>(위에서 \(1/4\pi\eps\)의 상수를 정리하면 정확히 이렇게 된다.) <b>Gauss 법칙은 움직이는 전하에 대해서도 정확히 성립한다</b> — 전하는 불변량이므로 당연한 결과이며, \(\theta=0\)에서 줄어든 만큼 \(\theta=90^\circ\)에서 늘어나 정확히 균형을 맞춘다.</p>
+<p><b>검산</b>: \(\beta\to0\)이면 \(E_\perp/E_\parallel\to1\)로 등방성 회복 ✓. \(\beta\to1\)이면 비율 \(\to\infty\)로 완전한 팬케이크 ✓. Flux는 \(\beta\)에 무관 ✓.</p></div></div>
+<div class="qz" data-q="ex12.14-b"><div class="qq"><b>+α</b> (역방향) 어떤 각 \(\theta\)에서 이 장의 세기가 <em>정확히 Coulomb 값과 같아지는가</em>? 일반식과 \(\beta=0.8\)일 때의 수치를 구하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p>조건은 각도 인자가 1이 되는 것:</p>
+\[ \frac{1-\beta^2}{\left[1-\beta^2\sin^2\theta\right]^{3/2}}=1\ \Longrightarrow\ \left[1-\beta^2\sin^2\theta\right]^{3/2}=1-\beta^2. \]
+<p>양변을 \(2/3\)제곱하면</p>
+\[ 1-\beta^2\sin^2\theta=(1-\beta^2)^{2/3}\ \Longrightarrow\ \boxed{\ \sin^2\theta=\frac{1-(1-\beta^2)^{2/3}}{\beta^2}=\frac{1-\gamma^{-4/3}}{\beta^2}\ } \]
+<p><b>수치</b>(\(\beta=0.8,\ \beta^2=0.64,\ 1-\beta^2=0.36\)):</p>
+\[ (0.36)^{2/3}=e^{\frac23\ln0.36}=e^{\frac23(-1.0217)}=e^{-0.6811}=0.5061, \]
+\[ \sin^2\theta=\frac{1-0.5061}{0.64}=\frac{0.4939}{0.64}=0.7717\ \Rightarrow\ \sin\theta=0.8785, \]
+\[ \boxed{\ \theta=61.5^\circ\ \text{또는}\ 118.5^\circ\ } \]
+<p><b>해석.</b> 이 각도가 "약해지는 영역"과 "세지는 영역"의 <b>경계</b>다. \(\theta&lt;61.5^\circ\)(운동 방향 근처)에서는 Coulomb보다 약하고, \(61.5^\circ&lt;\theta&lt;118.5^\circ\)(옆쪽)에서는 더 세다. Flux가 보존되므로 이런 경계가 반드시 존재해야 한다는 것을 앞의 +α에서 이미 예상할 수 있었다.</p>
+<p><b>검산</b>: (i) \(\beta\to0\) 극한을 보자. \((1-\beta^2)^{2/3}\approx1-\tfrac23\beta^2\)이므로 \(\sin^2\theta\to\dfrac{\tfrac23\beta^2}{\beta^2}=\dfrac23\), 즉 \(\theta\to54.7^\circ\)(=\(\cos^{-1}(1/\sqrt3)\), 이른바 "magic angle")로 수렴한다. 흥미롭게도 0으로 가지 않고 유한한 각으로 간다 — 장의 왜곡은 작아지지만 그 <em>형태</em>(사중극 모양의 보정)는 남기 때문이다 ✓. (ii) \(\beta\to1\)이면 \(\gamma^{-4/3}\to0\)이라 \(\sin^2\theta\to1\), \(\theta\to90^\circ\) — 모든 것이 적도면으로 몰린다 ✓. (iii) \(\sin^2\theta\le1\)이 항상 성립하는가? \(1-\gamma^{-4/3}\le\beta^2=1-\gamma^{-2}\)는 \(\gamma^{-4/3}\ge\gamma^{-2}\), 즉 \(\gamma\ge1\)과 동치이므로 항상 성립 ✓.</p></div></div>

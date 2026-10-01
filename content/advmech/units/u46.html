@@ -1,0 +1,59 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 9장에서 같은 질량 두 공의 탄성 충돌(하나는 정지)은 항상 직각으로 흩어졌다(U09). 입사 입자가 광속에 가까우면 끼인각은 90°보다 클까 작을까? 그리고 가속기에서 새 입자를 만들려면 고정 표적에 쏘는 것과 두 빔을 정면 충돌시키는 것 중 어느 쪽이 유리할까?</div>
+
+<h4>14.11 상대론적 운동학 <span class="en">relativistic kinematics</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>질량중심계 → <b>운동량중심계</b> — 교재 식 (14.116)–(14.122)</div>
+<ol>
+<li>질량과 에너지가 섞이므로 "질량중심"은 의미를 잃는다. 대신 총 운동량이 0인 <b>운동량중심계(CM)</b> \(K'\)을 쓴다: \(p_1'=p_2'\) (크기).</li>
+<li>실험실계 \(K\): \(m_1\)이 \(u_1\)(\(\gamma_1\))로, \(m_2\)는 정지. \(K'\)은 \(K\)에 대해 \(u_2'\)로 움직인다(\(m_2\)가 CM계에서 \(-u_2'\)로 움직이므로).</li>
+<li>가장 빠른 길은 <b>불변량</b>(U44):
+\[ s\equiv E_{\rm tot}^2-p_{\rm tot}^2c^2=(m_1^2+m_2^2+2m_1m_2\gamma_1)c^4 = (E_1'+E_2')^2 . \]</li>
+<li>CM 속도의 \(\gamma\): \(\gamma_{\rm cm}=\dfrac{E_{\rm tot}}{\sqrt s}=\dfrac{\gamma_1m_1+m_2}{\sqrt{m_1^2+m_2^2+2m_1m_2\gamma_1}}\) (교재 식 14.122b의 \(\gamma_2'\)). 같은 질량이면
+\[ \gamma_1'=\gamma_2'=\sqrt{\frac{1+\gamma_1}2} . \]</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>실험실계 산란각 — 교재 식 (14.123)–(14.126)</div>
+<ol>
+<li>CM계에서 산란각 \(\theta\). 탄성이면 각 입자의 CM 속력은 충돌 전후 같다. \(m_1\)의 운동량 성분을 \(K\)로 되돌리는 Lorentz 변환(+ 부호):
+\[ p_{1x}=\gamma_2'\left(p_1'\cos\theta+\frac{\beta_2'E_1'}c\right),\quad p_{1y}=p_1'\sin\theta . \]</li>
+<li>\(\tan\psi=p_{1y}/p_{1x}\), \(p_1'=m_1c\beta_1'\gamma_1'\), \(E_1'=m_1c^2\gamma_1'\):
+\[ \tan\psi=\frac1{\gamma_2'}\,\frac{\sin\theta}{\cos\theta+\beta_2'/\beta_1'} . \]</li>
+<li>되튐 입자: \(\tan\zeta=-\dfrac1{\gamma_2'}\dfrac{\sin\theta}{1-\cos\theta}\) (부호는 반대쪽 방향 의미).</li>
+<li>비상대론 극한(\(\gamma'\to1\))에서 9장 식 (9.69), (9.73)으로 돌아간다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>같은 질량: 끼인각은 90°보다 작다 — 교재 식 (14.127)–(14.131) <b>(필수)</b></div>
+<ol>
+<li>\(m_1=m_2\): \(\beta_1'=\beta_2'\), \(\gamma'=\sqrt{(1+\gamma_1)/2}\) →
+\[ \tan\psi=\frac1{\gamma'}\frac{\sin\theta}{1+\cos\theta},\qquad \tan\zeta=\frac1{\gamma'}\frac{\sin\theta}{1-\cos\theta} . \]</li>
+<li>곱: \(\dfrac{\sin^2\theta}{\gamma'^2(1-\cos^2\theta)}=\dfrac1{\gamma'^2}\):
+\[ \boxed{\ \tan\psi\tan\zeta=\frac{2}{1+\gamma_1}\ } \]
+(부호는 방향 규약). \(\gamma_1\to1\): 곱 = 1 → \(\psi+\zeta=\pi/2\) ✓(9장). \(\gamma_1>1\): 곱 &lt; 1 → \(\psi+\zeta&lt;\pi/2\).</li>
+<li>대칭 산란(\(\psi=\zeta\)): 끼인각 \(\phi=2\tan^{-1}\sqrt{2/(1+\gamma_1)}\). \(\gamma_1=10\)(\(\beta\approx0.995\)): \(\tan\psi=\sqrt{2/11}=0.426\) → \(\phi\approx46^\circ\).</li>
+<li>기하학적 그림: CM계의 원형 운동량 분포가 실험실계에서 앞쪽으로 \(\gamma'\)배 눌린 <b>타원</b>이 된다. 거품 상자 사진에서 끼인각이 90°보다 작으면 상대론적 충돌의 증거.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>불변 질량과 문턱 에너지 (+α, 교재 문제 유형)</div>
+<ol>
+<li>반응 \(a+b\to\) 생성물(질량 합 \(M_f\)). 문턱 = 생성물이 CM계에서 모두 정지 → \(\sqrt s=M_fc^2\).</li>
+<li>고정 표적(\(b\) 정지): \(s=(m_a^2+m_b^2)c^4+2E_am_bc^2\) →
+\[ T_a^{\rm th}=\frac{(M_f^2-(m_a+m_b)^2)c^2}{2m_b} . \]</li>
+<li>예: \(p+p\to p+p+p+\bar p\): \(M_f=4m_p\) → \(T^{\rm th}=\frac{(16-4)m_pc^2}{2}=6m_pc^2\approx5.6\,\)GeV (Bevatron, 1955 반양성자 발견).</li>
+<li>정면 충돌기(같은 에너지 \(E\)): \(\sqrt s=2E\). 필요한 빔 에너지는 각각 \(2m_pc^2\)(운동에너지 \(m_pc^2\)) — 고정 표적보다 훨씬 유리. 고정 표적에서는 \(\sqrt s\propto\sqrt{E}\)로만 증가.</li>
+<li>2체 붕괴 \(M\to m_1+m_2\) (정지계): \(E_1=\dfrac{(M^2+m_1^2-m_2^2)c^2}{2M}\). 예: \(\pi^+\to\mu^++\nu\)에서 뮤온 운동에너지 약 4.1 MeV.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 상대론적 운동학</div>
+\[ s=\Big(\sum E\Big)^2-\Big(\sum\vb p\Big)^2c^2\ \text{(불변)},\qquad \gamma'_{\rm cm}=\sqrt{\tfrac{1+\gamma_1}2}\ (m_1=m_2) \]
+\[ \tan\psi\tan\zeta=\frac2{1+\gamma_1},\qquad T^{\rm th}=\frac{(M_f^2-(m_a+m_b)^2)c^2}{2m_b} \]
+<p class="note">요령: 계를 오가며 성분을 변환하는 대신 <b>불변량을 두 계에서 각각 계산해 등치</b>하라. 대부분의 시험 문제가 3줄로 끝난다.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u46-1"><div class="qq">(시험형) 같은 질량의 탄성 충돌에서 \(\tan\psi\tan\zeta=2/(1+\gamma_1)\)을 유도하고, 끼인각이 \(\pi/2\)보다 작음을 보여라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 1(\(\gamma'=\sqrt{(1+\gamma_1)/2}\), 불변량 \(s\)로)과 유도 3. \(\tan\psi\tan\zeta=1/\gamma'^2&lt;1\)이면 \(\tan\psi&lt;\cot\zeta=\tan(\pi/2-\zeta)\) → \(\psi+\zeta&lt;\pi/2\).</p></div></div>
+
+<div class="qz" data-q="u46-2"><div class="qq">\(\gamma_1=3\)인 양성자가 정지한 양성자와 대칭 탄성 산란(\(\psi=\zeta\))한다. 끼인각은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\tan^2\psi=2/4=1/2\) → \(\tan\psi=0.707\), \(\psi=35.3^\circ\), 끼인각 \(70.5^\circ\).</p></div></div>
+
+<div class="qz" data-q="u46-3"><div class="qq">\(\gamma+p\to p+\pi^0\) (\(m_\pi c^2=135\,\)MeV, \(m_pc^2=938\,\)MeV, 양성자 정지)의 문턱 광자 에너지는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>광자 질량 0: \(E_\gamma^{\rm th}=\frac{(m_p+m_\pi)^2-m_p^2}{2m_p}c^2=\frac{m_\pi(2m_p+m_\pi)}{2m_p}c^2=\frac{135\times2011}{1876}\approx145\,\)MeV.</p></div></div>
+
+<div class="qz" data-q="u46-4"><div class="qq">정지한 \(\pi^+\)(139.6 MeV)가 \(\mu^+\)(105.7 MeV)와 질량 없는 중성미자로 붕괴한다. 뮤온의 운동에너지는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(E_\mu=\frac{M^2+m_\mu^2}{2M}c^2=\frac{139.6^2+105.7^2}{279.2}=\frac{19488+11172}{279.2}\approx109.8\,\)MeV → \(T_\mu\approx4.1\,\)MeV. (중성미자는 29.8 MeV.)</p></div></div>

@@ -1,0 +1,19 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a) 같은 부호.</b> 전하를 \(z=\pm a\)에 두면 중간면 \(z=0\)에서 \(z\)-성분은 상쇄되고 지름 성분만 남는다:
+\[\vb{E}=\frac{q s}{2\pi\eps (s^{2}+a^{2})^{3/2}}\hat{\vb{s}}\quad(E_z=0).\]
+따라서 \(T_{zz}=\eps(E_z^{2}-\tfrac12E^{2})=-\tfrac{\eps}{2}E^{2}\).
+위쪽 반공간을 감싸면 평면의 바깥법선은 \(-\hat{\vb{z}}\):
+\[F_z=-\int T_{zz}\,da=\frac{\eps}{2}\int_0^\infty E^{2}\,2\pi s\,ds
+=\frac{q^{2}}{4\pi\eps}\int_0^\infty\frac{s^{3}ds}{(s^{2}+a^{2})^{3}}
+=\frac{q^{2}}{4\pi\eps}\cdot\frac{1}{4a^{2}} .\]
+\[\boxed{\;F=\frac{q^{2}}{16\pi\eps a^{2}}\ (\text{척력})\;}\]
+Coulomb 법칙 \(q^{2}/4\pi\eps(2a)^{2}\)와 정확히 같다 ✓</p>
+<p><b>(b) 반대 부호</b> (\(+q\) 위, \(-q\) 아래). 이번엔 지름 성분이 상쇄되고
+\[\vb{E}=-\frac{qa}{2\pi\eps(s^{2}+a^{2})^{3/2}}\hat{\vb{z}}\quad(E_s=0),\]
+\(T_{zz}=+\tfrac{\eps}{2}E^{2}\) 이므로 부호가 뒤집힌다:
+\[F_z=-\frac{\eps}{2}\int E^{2}da=-\frac{q^{2}a^{2}}{4\pi\eps}\int_0^\infty\frac{s\,ds}{(s^{2}+a^{2})^{3}}
+=-\frac{q^{2}a^{2}}{4\pi\eps}\cdot\frac{1}{4a^{4}} .\]
+\[\boxed{\;F=-\frac{q^{2}}{16\pi\eps a^{2}}\ (\text{인력})\;}\]</p>
+<div class="alabel">감점 포인트</div>
+두 경우의 차이는 오직 "평면에서 \(\vb{E}\)가 면에 나란한가(접선) 수직인가"이며, 이것이 \(T_{zz}\)의 부호를 바꾼다. 여기를 놓치면 인력/척력이 뒤바뀐다.</div><!--/sol-->

@@ -1,0 +1,167 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 정적인 경우 \(V=\dfrac{1}{4\pi\eps}\displaystyle\int\frac{\rho}{\rr}\dd\tau'\)였다. "전자기적 소식은 \(c\)로 전파한다"는 직관을 그대로 적용하면 \(\rho(\vb{r}')\to\rho(\vb{r}',t_r)\), \(t_r=t-\rr/c\)로 바꾸면 될 것 같다. 이 추측은 <b>퍼텐셜에 대해서는 맞다</b>. 그런데 똑같은 추측을 Coulomb 법칙 \(\vb{E}=\dfrac{1}{4\pi\eps}\displaystyle\int\frac{\rho}{\rr^2}\rhat\,\dd\tau'\)에 적용하면 <b>틀린다</b>. 무엇이 다른가? 힌트: \(\nabla\)를 적분 기호 안으로 넣을 때 \(\rr\)이 <b>두 군데</b>에 등장한다는 사실.</div>
+
+<h4>10.2.1 지연 퍼텐셜 <span class="en">retarded potentials</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>지연 퍼텐셜이 비동차 파동방정식을 만족함을 <b>증명</b>하기</div>
+<ol>
+<li><b>주장.</b> \(t_r\equiv t-\dfrac{\rr}{c}\), \(\rr=|\vb{r}-\vb{r}'|\)일 때
+\[ V(\vb{r},t)=\frac{1}{4\pi\eps}\int\frac{\rho(\vb{r}',t_r)}{\rr}\,\dd\tau' \]
+이 \(\Box^2V=-\rho/\eps\)를 만족한다. (Griffiths는 이 식을 "직관으로 추측"했을 뿐이므로 <b>증명이 필요하다</b>.)</li>
+<li><b>결정적 관찰.</b> 피적분함수는 \(\vb{r}\)에 <b>두 방식</b>으로 의존한다 — (i) 분모 \(1/\rr\)에 <b>명시적으로</b>, (ii) 분자 \(\rho(\vb{r}',t_r)\)에 \(t_r=t-\rr/c\)를 통해 <b>암묵적으로</b>. 이 둘을 모두 미분해야 한다. 여기서 실수하면 전부 틀린다.</li>
+<li><b>그래디언트.</b> 곱 규칙:
+\[ \nabla V=\frac{1}{4\pi\eps}\int\left[(\nabla\rho)\frac{1}{\rr}+\rho\,\nabla\!\left(\frac{1}{\rr}\right)\right]\dd\tau' \]</li>
+<li><b>암묵적 항의 연쇄 법칙.</b> \(\vb{r}'\)은 독립 변수이므로 \(\nabla\rr=\rhat\). 따라서
+\[ \nabla\rho=\dot\rho\,\nabla t_r=-\frac{1}{c}\dot\rho\,\nabla\rr=-\frac{1}{c}\dot\rho\,\rhat \]
+(점은 자신의 두 번째 인수에 대한 미분. \(\rr\)은 \(t\)와 무관하므로 \(\partial/\partial t_r=\partial/\partial t\)임에 유의.)</li>
+<li>또 \(\nabla(1/\rr)=-\rhat/\rr^2\). 합치면
+\[ \nabla V=\frac{1}{4\pi\eps}\int\left[-\frac{\dot\rho}{c}\frac{\rhat}{\rr}-\rho\frac{\rhat}{\rr^2}\right]\dd\tau' \tag{★} \]
+이 식은 Jefimenko 유도에서 그대로 재사용한다.</li>
+<li><b>발산 취하기.</b> 네 항이 나온다:
+\[ \nabla^2V=\frac{1}{4\pi\eps}\int\left\{-\frac{1}{c}\left[\frac{\rhat}{\rr}\cdot(\nabla\dot\rho)+\dot\rho\,\divg\!\left(\frac{\rhat}{\rr}\right)\right]-\left[\frac{\rhat}{\rr^2}\cdot(\nabla\rho)+\rho\,\divg\!\left(\frac{\rhat}{\rr^2}\right)\right]\right\}\dd\tau' \]</li>
+<li><b>필요한 네 개의 보조 결과.</b>
+<br>(i) \(\nabla\dot\rho=-\dfrac{1}{c}\ddot\rho\,\rhat\) (4단계와 동일한 논리)
+<br>(ii) \(\divg\!\left(\dfrac{\rhat}{\rr}\right)=\dfrac{1}{\rr^2}\)
+<br>(iii) \(\divg\!\left(\dfrac{\rhat}{\rr^2}\right)=4\pi\delta^3(\boldsymbol{\rr})\) ← <b>델타 함수! 여기서 원천이 나온다.</b>
+<br>(iv) \(\nabla\rho=-\dfrac{1}{c}\dot\rho\,\rhat\)</li>
+<li><b>항별 계산.</b>
+<br>A: \(-\dfrac{1}{c}\cdot\dfrac{\rhat}{\rr}\cdot\left(-\dfrac{\ddot\rho}{c}\rhat\right)=+\dfrac{1}{c^2}\dfrac{\ddot\rho}{\rr}\)
+<br>B: \(-\dfrac{1}{c}\dot\rho\cdot\dfrac{1}{\rr^2}=-\dfrac{\dot\rho}{c\,\rr^2}\)
+<br>C: \(-\dfrac{\rhat}{\rr^2}\cdot\left(-\dfrac{\dot\rho}{c}\rhat\right)=+\dfrac{\dot\rho}{c\,\rr^2}\)
+<br>D: \(-4\pi\rho\,\delta^3(\boldsymbol{\rr})\)
+<br><b>B와 C가 정확히 상쇄된다.</b> 이 상쇄가 증명의 심장이다.</li>
+<li>남은 것:
+\[ \nabla^2V=\frac{1}{4\pi\eps}\int\left[\frac{1}{c^2}\frac{\ddot\rho}{\rr}-4\pi\rho\,\delta^3(\boldsymbol{\rr})\right]\dd\tau'=\frac{1}{c^2}\frac{\partial^2V}{\partial t^2}-\frac{1}{\eps}\rho(\vb{r},t) \]
+(첫 항은 \(V\)의 정의에서 시간 2계 미분을 뽑아낸 것, 둘째 항은 델타 함수가 \(\vb{r}'=\vb{r}\)을 집어낸 것 — 그리고 그때 \(\rr=0\Rightarrow t_r=t\)이므로 <b>현재 시각</b>의 \(\rho\)가 나온다.)</li>
+<li>즉 \(\boxed{\Box^2V=-\dfrac{\rho}{\eps}}\). ∎ \(\vb{A}\)에 대해서도 성분별로 동일한 논증이 성립한다. (Lorenz 조건 \(L=0\)의 확인은 Prob. 10.10.)</li>
+<li><b>보너스 통찰.</b> 이 증명은 부호 몇 개만 바꾸면 <b>선행 퍼텐셜(advanced potentials)</b> \(t_a=t+\rr/c\)에 대해서도 그대로 통한다. 즉 선행 퍼텐셜도 Maxwell 방정식의 <b>정당한 해</b>다. 이를 배제하는 것은 방정식이 아니라 <b>인과율이라는 경계조건</b>이다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>Jefimenko 방정식 — 지연 퍼텐셜에서 장으로</div>
+<ol>
+<li><b>\(\vb{E}\)부터.</b> \(\vb{E}=-\nabla V-\partial\vb{A}/\partial t\). \(\nabla V\)는 유도 1의 (★)에 이미 있다.</li>
+<li>\(\partial\vb{A}/\partial t\)는 쉽다 — \(\vb{r}\) 미분이 아니므로 암묵 의존을 걱정할 필요가 없다:
+\[ \frac{\partial\vb{A}}{\partial t}=\frac{\muz}{4\pi}\int\frac{\dot{\vb{J}}(\vb{r}',t_r)}{\rr}\,\dd\tau' \]</li>
+<li>합치고 \(c^2=1/\muz\eps\)를 써서 \(\muz=1/(\eps c^2)\)로 통일하면
+\[ \boxed{\;\vb{E}(\vb{r},t)=\frac{1}{4\pi\eps}\int\left[\frac{\rho(\vb{r}',t_r)}{\rr^2}\rhat+\frac{\dot\rho(\vb{r}',t_r)}{c\,\rr}\rhat-\frac{\dot{\vb{J}}(\vb{r}',t_r)}{c^2\,\rr}\right]\dd\tau'\;} \]</li>
+<li><b>\(\vb{B}\).</b> \(\curl\vb{A}=\dfrac{\muz}{4\pi}\displaystyle\int\left[\frac{1}{\rr}(\curl\vb{J})-\vb{J}\times\nabla\!\left(\frac{1}{\rr}\right)\right]\dd\tau'\).</li>
+<li>\(\curl\vb{J}\)를 성분으로 확인한다. \((\curl\vb{J})_x=\dfrac{\partial J_z}{\partial y}-\dfrac{\partial J_y}{\partial z}\)인데, \(\vb{J}\)의 \(\vb{r}\) 의존은 오직 \(t_r\)을 통해서다:
+\[ \frac{\partial J_z}{\partial y}=\dot J_z\frac{\partial t_r}{\partial y}=-\frac{1}{c}\dot J_z\frac{\partial\rr}{\partial y} \]
+따라서 \((\curl\vb{J})_x=-\dfrac{1}{c}\left(\dot J_z\dfrac{\partial\rr}{\partial y}-\dot J_y\dfrac{\partial\rr}{\partial z}\right)=\dfrac{1}{c}\left[\dot{\vb{J}}\times(\nabla\rr)\right]_x\). \(\nabla\rr=\rhat\)이므로
+\[ \curl\vb{J}=\frac{1}{c}\dot{\vb{J}}\times\rhat \]
+<b>주의:</b> 정적 경우라면 \(\curl\vb{J}=0\)이다(\(\vb{J}\)는 \(\vb{r}'\)의 함수). 여기서 0이 아닌 것은 순전히 지연 때문이다.</li>
+<li>\(\nabla(1/\rr)=-\rhat/\rr^2\)을 넣고 정리:
+\[ \boxed{\;\vb{B}(\vb{r},t)=\frac{\muz}{4\pi}\int\left[\frac{\vb{J}(\vb{r}',t_r)}{\rr^2}+\frac{\dot{\vb{J}}(\vb{r}',t_r)}{c\,\rr}\right]\times\rhat\;\dd\tau'\;} \]</li>
+<li><b>정적 극한 검산.</b> \(\dot\rho=\dot{\vb{J}}=0\)이면 첫 항만 남아 각각 Coulomb 법칙, Biot–Savart 법칙이 된다. ✓ Jefimenko는 이 둘의 <b>인과적 시간 의존 일반화</b>다.</li>
+<li><b>실용적 위상.</b> 실제 계산에서는 대개 퍼텐셜을 먼저 구하고 미분하는 쪽이 쉽다. Jefimenko의 가치는 <b>구조적 완결성</b>과, 다음 유도 3의 교훈에 있다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>왜 "Coulomb 법칙 + 지연"은 <b>장</b>에 대해 틀리는가</div>
+<ol>
+<li><b>순진한 추측:</b> \(\vb{E}\overset{?}{=}\dfrac{1}{4\pi\eps}\displaystyle\int\frac{\rho(\vb{r}',t_r)}{\rr^2}\rhat\,\dd\tau'\). 유도 2와 비교하면 <b>두 항이 통째로 빠졌다</b> — \(\dot\rho\) 항과 \(\dot{\vb{J}}\) 항. 이 둘이 바로 복사(radiation)를 만드는 항이므로, 순진한 공식은 복사를 완전히 놓친다.</li>
+<li><b>구조적 이유 (핵심).</b> \(\dfrac{1}{4\pi}\displaystyle\int\frac{s(\vb{r}',t_r)}{\rr}\dd\tau'\) 형태의 "지연 적분 공식"은 아무 데나 쓰는 마법이 아니다. 그것은 오직
+\[ \Box^2f=-s \]
+라는 <b>비동차 파동방정식의 Green 함수 해</b>일 때만 유효하다. Lorenz 게이지에서 \(V,\vb{A}\)는 정확히 이 형태를 만족한다(유도 1). 그래서 퍼텐셜에 대해서는 "\(t\to t_r\)"이 통한다.</li>
+<li><b>\(\vb{E},\vb{B}\)는 어떤 파동방정식을 만족하는가?</b> Maxwell 방정식에서 직접 유도하면
+\[ \Box^2\vb{E}=\frac{1}{\eps}\nabla\rho+\muz\frac{\partial\vb{J}}{\partial t},\qquad \Box^2\vb{B}=-\muz(\curl\vb{J}) \]
+<b>원천이 \(\rho\)와 \(\vb{J}\)가 아니라 \(\nabla\rho\), \(\partial\vb{J}/\partial t\), \(\curl\vb{J}\)이다.</b> 이것이 결정적 차이다.</li>
+<li>따라서 올바른 지연 해는
+\[ \vb{E}(\vb{r},t)=-\frac{1}{4\pi}\int\frac{1}{\rr}\left[\frac{1}{\eps}\nabla'\rho+\muz\dot{\vb{J}}\right]_{t_r}\dd\tau' \]
+이고, 여기서 부분적분(\(\nabla'\)을 \(1/\rr\)로 옮기면 \(t_r\)의 \(\vb{r}'\) 의존 때문에 <b>추가 항</b>이 생긴다)을 수행해야 비로소 Jefimenko 식이 복원된다. (Prob. 10.36)</li>
+<li><b>계산상의 이유 (미분과 지연은 교환되지 않는다).</b> \(\nabla\)를 적분 안으로 넣을 때 \(\rr\)이 <b>분모와 \(t_r\) 양쪽</b>에 있다. 순진한 추측은 분모만 미분하고 \(t_r\)을 통한 미분(\(-\dot\rho\,\rhat/c\) 항)을 빠뜨린 결과다. 유도 1의 (★)식이 정확히 이 두 항을 보여준다.</li>
+<li><b>왜 정적 극한에서는 문제가 없는가.</b> \(\dot\rho=\dot{\vb{J}}=0\)이면 \(t_r\)을 통한 미분이 전부 0이 되어, 명시적 의존만 남는다. 그래서 정전기·자기정역학에서는 이런 함정이 존재하지 않았다.</li>
+<li><b>1분 자가 진단.</b> 어떤 공식을 보고 "\(t\to t_r\)로 바꿔도 되나?"를 판단하는 기준: <b>그 양이 \(\rho\) 또는 \(\vb{J}\)를 직접 원천으로 하는 \(\Box^2\) 방정식을 만족하는가?</b> \(V,\vb{A}\)는 예. \(\vb{E},\vb{B}\)는 아니오.</li>
+<li><b>보너스 — 준정적 근사가 왜 그렇게 잘 맞는가.</b> \(\vb{J}(t_r)\approx\vb{J}(t)+(t_r-t)\dot{\vb{J}}(t)=\vb{J}(t)-\dfrac{\rr}{c}\dot{\vb{J}}(t)\)를 \(\vb{B}\) 식의 첫 항에 넣으면 \(-\dfrac{\dot{\vb{J}}}{c\,\rr}\times\rhat\)가 나와 <b>둘째 항과 정확히 상쇄</b>된다. 결과: \(\vb{B}=\dfrac{\muz}{4\pi}\displaystyle\int\frac{\vb{J}(\vb{r}',t)\times\rhat}{\rr^2}\dd\tau'\) — 지연 없는 Biot–Savart가 <b>1차까지</b> 정확하다. 두 개의 오차(지연 무시 + 둘째 항 무시)가 서로 상쇄된다. (Prob. 10.14)</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>Example 10.2 — 갑자기 켜진 무한 직선 도선</div>
+<ol>
+<li><b>설정.</b> \(z\)축 위 무한 도선. \(I(t)=0\ (t\le0)\), \(I(t)=I_0\ (t&gt;0)\). 도선은 전기적으로 중성이므로 \(\rho=0\Rightarrow V=0\). 남는 것은 \(\vb{A}\)뿐이다.</li>
+<li>거리 \(s\)인 점 \(P\)에서
+\[ \vb{A}(s,t)=\frac{\muz}{4\pi}\hat{\vb{z}}\int_{-\infty}^{\infty}\frac{I(t_r)}{\rr}\,\dd z,\qquad \rr=\sqrt{s^2+z^2},\quad t_r=t-\frac{\rr}{c} \]</li>
+<li><b>적분 범위의 결정 — 이 문제의 핵심.</b> \(I(t_r)\neq0\)이려면 \(t_r&gt;0\), 즉
+\[ t-\frac{\sqrt{s^2+z^2}}{c}&gt;0 \;\Longleftrightarrow\; |z|\le\sqrt{(ct)^2-s^2} \]
+따라서 \(ct&lt;s\)이면 실수해가 없다 ⇒ \(\vb{A}=0\). <b>소식이 아직 도착하지 않았다.</b> 도선의 "켜짐"은 도선 전체에서 동시에 일어났지만, \(P\)에는 가까운 부분부터 순차적으로 도달한다.</li>
+<li>\(t&gt;s/c\)일 때 대칭성을 이용해 반쪽만 적분하고 2배:
+\[ \vb{A}=\frac{\muz I_0}{4\pi}\hat{\vb{z}}\cdot2\int_0^{\sqrt{(ct)^2-s^2}}\frac{\dd z}{\sqrt{s^2+z^2}} =\frac{\muz I_0}{2\pi}\hat{\vb{z}}\Big[\ln\big(z+\sqrt{s^2+z^2}\big)\Big]_0^{\sqrt{(ct)^2-s^2}} \]
+윗끝에서 \(\sqrt{s^2+z^2}=ct\)이므로
+\[ \boxed{\;\vb{A}(s,t)=\frac{\muz I_0}{2\pi}\ln\!\left(\frac{ct+\sqrt{(ct)^2-s^2}}{s}\right)\hat{\vb{z}}\;} \]</li>
+<li><b>전기장.</b> \(u\equiv ct\), \(R\equiv\sqrt{u^2-s^2}\)로 두면 \(\dfrac{\partial}{\partial t}\ln\!\dfrac{u+R}{s}=c\cdot\dfrac{1+u/R}{u+R}=\dfrac{c}{R}\). 따라서
+\[ \vb{E}=-\frac{\partial\vb{A}}{\partial t}=-\frac{\muz I_0 c}{2\pi\sqrt{(ct)^2-s^2}}\,\hat{\vb{z}} \]
+전류와 <b>반대</b> 방향이다 — 유도 기전력(역기전력). \(t\to s/c^+\)에서 발산하는 것은 전류가 계단 함수로 무한히 빨리 켜진다는 이상화의 산물이다.</li>
+<li><b>자기장.</b> \(\vb{B}=\curl\vb{A}=-\dfrac{\partial A_z}{\partial s}\hat{\boldsymbol{\varphi}}\). 계산:
+\[ \frac{\partial}{\partial s}\ln\frac{u+R}{s}=\frac{-s/R}{u+R}-\frac{1}{s}=-\frac{s^2+R(u+R)}{sR(u+R)}=-\frac{u(u+R)}{sR(u+R)}=-\frac{u}{sR} \]
+(\(R^2=u^2-s^2\) 이용.) 따라서
+\[ \vb{B}=\frac{\muz I_0}{2\pi s}\frac{ct}{\sqrt{(ct)^2-s^2}}\,\hat{\boldsymbol{\varphi}} \]</li>
+<li><b>극한 검산.</b> \(t\to\infty\): \(\dfrac{ct}{\sqrt{(ct)^2-s^2}}\to1\)이므로 \(\vb{B}\to\dfrac{\muz I_0}{2\pi s}\hat{\boldsymbol{\varphi}}\) — Ampère 법칙의 정상 결과. ✓ 그리고 \(\vb{E}\to0\). ✓ 정상 상태로 부드럽게 수렴한다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 지연 퍼텐셜</div>
+\[ \boxed{\;V(\vb{r},t)=\frac{1}{4\pi\eps}\int\frac{\rho(\vb{r}',t_r)}{\rr}\dd\tau',\qquad \vb{A}(\vb{r},t)=\frac{\muz}{4\pi}\int\frac{\vb{J}(\vb{r}',t_r)}{\rr}\dd\tau'\;} \]
+\[ t_r\equiv t-\frac{\rr}{c},\qquad \rr=|\vb{r}-\vb{r}'| \]
+<p class="note">분모의 \(\rr\)은 <b>지연되지 않는다</b>(그냥 기하학적 거리). 지연되는 것은 오직 원천의 <b>시각</b>이다. 정적 극한에서 자동으로 옛 공식으로 환원.</p></div>
+
+<div class="formula"><div class="ftitle">암기 — Jefimenko 방정식</div>
+\[ \vb{E}(\vb{r},t)=\frac{1}{4\pi\eps}\int\left[\frac{\rho(t_r)}{\rr^2}\rhat+\frac{\dot\rho(t_r)}{c\,\rr}\rhat-\frac{\dot{\vb{J}}(t_r)}{c^2\rr}\right]\dd\tau' \]
+\[ \vb{B}(\vb{r},t)=\frac{\muz}{4\pi}\int\left[\frac{\vb{J}(t_r)}{\rr^2}+\frac{\dot{\vb{J}}(t_r)}{c\,\rr}\right]\times\rhat\;\dd\tau' \]
+<p class="note">\(1/\rr^2\) 항 = 일반화된 Coulomb / Biot–Savart. \(1/\rr\) 항 = <b>복사</b>(§11의 주인공). 퍼텐셜과 달리 장에는 <b>완전히 새로운 항</b>이 생긴다.</p></div>
+
+<div class="callout"><b class="head">선행 퍼텐셜(advanced potentials)은 왜 버리는가.</b> \(t_a=t+\rr/c\)를 쓴 퍼텐셜도 Maxwell 방정식을 <b>정확히</b> 만족한다(유도 1의 부호 몇 개만 바뀔 뿐). 달랑베르시안은 \(\partial^2/\partial t^2\)를 포함하므로 이론 자체가 시간 반전 대칭이며 과거와 미래를 구별하지 않는다. 시간의 화살은 <b>방정식이 아니라 우리가 고르는 경계조건</b>에서 들어온다. 지연 해를 택하는 것은 "전자기적 영향은 미래가 아니라 과거로부터 온다"는 물리적 신념의 표현이다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u17-1"><div class="qq">(참/거짓 + 증명 또는 반례) "선행 퍼텐셜은 Maxwell 방정식을 만족하지 않으므로 수학적으로 틀린 해다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>거짓.</b> 선행 퍼텐셜은 Maxwell 방정식의 <b>완벽하게 정당한</b> 해다.</p>
+<p><b>증명 스케치.</b> \(t_a=t+\rr/c\)로 놓고 유도 1을 그대로 반복한다. 바뀌는 곳은 4단계뿐:
+\[ \nabla\rho=\dot\rho\,\nabla t_a=+\frac{1}{c}\dot\rho\,\rhat \]
+부호가 뒤집힌다. 그러면 (★)의 첫 항 부호가 바뀌고, 8단계의 B항과 C항도 <b>둘 다</b> 부호가 바뀌어 여전히 상쇄된다. 결정적으로 A항은 \(\left(+\dfrac{1}{c}\right)\left(+\dfrac{1}{c}\right)\)로 <b>부호가 두 번 바뀌어 원래대로</b>이고, D항(델타 함수)은 \(t_a\)와 무관하므로 그대로다. 따라서 최종 결과 \(\Box^2V_a=-\rho/\eps\)가 그대로 성립한다. ∎</p>
+<p><b>왜 버리는가.</b> 물리적 이유는 인과율이다. 선행 퍼텐셜은 "지금의 퍼텐셜이 원천의 <b>미래</b> 상태에 의존한다"고 말한다 — 결과가 원인에 선행한다. 방정식이 아니라 <b>경계조건 선택</b>(무한 과거에 들어오는 자유 복사가 없다)이 지연 해를 골라낸다.</p>
+<p><b>주의할 표현.</b> "선행 퍼텐셜은 틀렸다"(✗) → "선행 퍼텐셜은 수학적으로 유효하지만 인과율에 위배되어 직접적 물리적 의미가 없다"(✓). Wheeler–Feynman 흡수체 이론처럼 지연·선행 해의 대칭 조합을 쓰는 이론적 시도도 있다.</p>
+</div></div>
+
+<div class="qz" data-q="u17-2"><div class="qq">(점근·차수 분석, 지수 명시) 국소화된 원천에서 멀리 떨어진 곳에서 Jefimenko의 \(\vb{E}\) 세 항의 \(\rr\) 지수를 각각 밝히고, 왜 오직 하나의 항만이 무한대로 에너지를 나르는지 Poynting 플럭스의 지수 계산으로 증명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 각 항의 지수.</b>
+<br>• 항 1: \(\dfrac{\rho(t_r)}{\rr^2}\rhat\ \sim\ \rr^{-2}\) (일반화 Coulomb / 속도장 성격)
+<br>• 항 2: \(\dfrac{\dot\rho(t_r)}{c\,\rr}\rhat\ \sim\ \rr^{-1}\)
+<br>• 항 3: \(\dfrac{\dot{\vb{J}}(t_r)}{c^2\rr}\ \sim\ \rr^{-1}\)
+<br>\(\vb{B}\)도 동일하게 \(\rr^{-2}\)와 \(\rr^{-1}\).</p>
+<p><b>2) Poynting 플럭스의 지수.</b> \(\vb{S}=\dfrac{1}{\muz}\vb{E}\times\vb{B}\), 복사 영역에서 \(|\vb{B}|=|\vb{E}|/c\)이므로 \(|\vb{S}|\propto|\vb{E}|^2\). 반지름 \(\rr\)인 구면 전체에 대한 플럭스는
+\[ P=\oint\vb{S}\cdot\dd\vb{a}\ \propto\ |\vb{E}|^2\cdot 4\pi \rr^2 \]
+\(|\vb{E}|\sim\rr^{-n}\)이면 \(P\sim\rr^{\,2-2n}\).
+<br>• \(n=2\) (Coulomb 항): \(P\sim\rr^{-2}\xrightarrow[\rr\to\infty]{}0\). 에너지가 무한대에 도달하지 <b>못한다</b>.
+<br>• \(n=1\) (\(\dot\rho,\dot{\vb{J}}\) 항): \(P\sim\rr^{0}=\)상수. <b>거리와 무관한 유한한 에너지가 영원히 흘러 나간다</b> ⇒ 복사.
+<br>• 교차항 (\(n=2\)와 \(n=1\)의 곱): \(|\vb{E}|^2\)의 교차 성분 \(\sim\rr^{-3}\), \(P\sim\rr^{-1}\to0\). 역시 기여 없음.</p>
+<p><b>3) 결론.</b> 복사는 오직 \(\rr^{-1}\) 항, 즉 원천의 <b>시간 미분</b>(\(\dot\rho,\dot{\vb{J}})\)에서 나온다. 정적 원천은 절대 복사하지 않는다.</p>
+<p><b>4) 이것이 유도 3의 교훈과 어떻게 연결되는가.</b> 순진한 "Coulomb + 지연" 공식에는 \(\rr^{-1}\) 항이 하나도 없다. 즉 그 공식으로는 <b>복사 현상 전체를 놓친다</b>. 안테나, 싱크로트론, 빛 — 전부 사라진다. 단순한 부호 오류 수준의 문제가 아니라 물리의 절반이 없어지는 문제다.</p>
+</div></div>
+
+<div class="qz" data-q="u17-3"><div class="qq">(Example 10.2 변형 계산) 같은 무한 도선에 \(t&gt;0\)부터 <b>선형으로 증가하는</b> 전류 \(I(t)=kt\)가 흐른다. \(\vb{A},\vb{E},\vb{B}\)를 구하고 \(t\to\infty\) 극한을 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>설정.</b> \(u\equiv ct\), \(R\equiv\sqrt{(ct)^2-s^2}\). 적분 범위는 Ex. 10.2와 동일하게 \(|z|\le R\).</p>
+<p><b>벡터 퍼텐셜.</b> \(I(t_r)=k\!\left(t-\dfrac{\sqrt{s^2+z^2}}{c}\right)\)이므로
+\[ A_z=\frac{\muz k}{2\pi}\int_0^{R}\left[\frac{t}{\sqrt{s^2+z^2}}-\frac{1}{c}\right]\dd z =\frac{\muz k}{2\pi}\left[t\ln\!\frac{R+\sqrt{s^2+R^2}}{s}-\frac{R}{c}\right] \]
+\(\sqrt{s^2+R^2}=ct\)이므로
+\[ \boxed{\;\vb{A}=\frac{\muz k}{2\pi}\left[t\,\ln\!\left(\frac{ct+\sqrt{(ct)^2-s^2}}{s}\right)-\frac{\sqrt{(ct)^2-s^2}}{c}\right]\hat{\vb{z}}\;} \]</p>
+<p><b>전기장.</b> \(f\equiv\ln\dfrac{u+R}{s}\)로 두면 유도 4에서 \(\dfrac{\partial f}{\partial t}=\dfrac{c}{R}\). 또 \(\dfrac{\partial}{\partial t}\!\left(\dfrac{R}{c}\right)=\dfrac{1}{c}\cdot\dfrac{uc}{R}=\dfrac{ct}{R}\). 따라서
+\[ \frac{\partial A_z}{\partial t}=\frac{\muz k}{2\pi}\left[f+t\cdot\frac{c}{R}-\frac{ct}{R}\right]=\frac{\muz k}{2\pi}f \]
+두 항이 <b>정확히 상쇄</b>되는 것이 이 문제의 묘미다.
+\[ \boxed{\;\vb{E}=-\frac{\muz k}{2\pi}\ln\!\left(\frac{ct+\sqrt{(ct)^2-s^2}}{s}\right)\hat{\vb{z}}\;} \]</p>
+<p><b>자기장.</b> \(\dfrac{\partial f}{\partial s}=-\dfrac{u}{sR}\) (유도 4), \(\dfrac{\partial R}{\partial s}=-\dfrac{s}{R}\). 따라서
+\[ \frac{\partial A_z}{\partial s}=\frac{\muz k}{2\pi}\left[-\frac{tu}{sR}+\frac{s}{cR}\right] =\frac{\muz k}{2\pi R}\cdot\frac{s^2-c^2t^2}{sc}=-\frac{\muz k}{2\pi}\frac{R}{sc} \]
+\[ \boxed{\;\vb{B}=-\frac{\partial A_z}{\partial s}\hat{\boldsymbol{\varphi}}=\frac{\muz k}{2\pi s}\sqrt{t^2-\frac{s^2}{c^2}}\;\hat{\boldsymbol{\varphi}}\;} \]</p>
+<p><b>극한 검산 (\(ct\gg s\)).</b>
+<br>• \(\vb{B}\to\dfrac{\muz kt}{2\pi s}\hat{\boldsymbol{\varphi}}=\dfrac{\muz I(t)}{2\pi s}\hat{\boldsymbol{\varphi}}\) ✓ 준정적 Ampère 법칙과 정확히 일치. (유도 3의 8단계 — 두 오차의 상쇄가 실제로 작동하는 예.)
+<br>• \(\vb{E}\to-\dfrac{\muz k}{2\pi}\ln\!\dfrac{2ct}{s}\hat{\vb{z}}\): 로그로 느리게 <b>발산</b>한다. 이는 무한 직선 도선의 자체 인덕턴스가 로그 발산하는 것과 같은 기원이며, 유한 회로에서는 나타나지 않는 이상화의 부산물이다.
+<br>• \(t\to s/c^+\): \(\vb{E}\to0\), \(\vb{B}\to0\). 계단 전류(Ex. 10.2)와 달리 발산하지 않는다 — 전류가 연속적으로 켜지기 때문. 물리적으로 훨씬 온건하다.</p>
+</div></div>
+
+<div class="qz" data-q="u17-4"><div class="qq">(개념) 전기적으로 <b>중성인</b> 도선 고리에 \(I(t)=kt\)가 흐를 때, 고리 중심에서 \(\vb{E}\neq0\)이다. \(\rho=0\)이므로 \(V=0\)인데 어떻게 전기장이 생기는가? 또 이 \(\vb{A}\) 표현식으로 왜 \(\vb{B}\)는 구할 수 없는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>1) \(\vb{E}\)의 기원.</b> \(\vb{E}=-\nabla V-\dfrac{\partial\vb{A}}{\partial t}\)에서 \(V=0\)이더라도 <b>둘째 항</b>이 살아 있다. 전류가 변하면 \(\vb{A}\)가 변하고, 그것이 곧 전기장이다. 이는 Faraday의 유도 전기장을 퍼텐셜 언어로 다시 말한 것이다. <b>전하 없이도 전기장이 존재할 수 있다</b> — 정전기학적 직관("전기장은 전하가 만든다")이 깨지는 대표적 지점.</p>
+<p><b>2) 정량적 구조.</b> 중심에서
+\[ \vb{A}(\vb{0},t)=\frac{\muz}{4\pi}\oint\frac{I(t_r)}{\rr}\dd\boldsymbol{\ell}',\qquad t_r=t-\frac{\rr}{c} \]
+\(I=kt\)이므로 \(I(t_r)=k\left(t-\dfrac{\rr}{c}\right)\)이고
+\[ \vb{A}=\frac{\muz k}{4\pi}\oint\left[\frac{t}{\rr}-\frac{1}{c}\right]\dd\boldsymbol{\ell}' \]
+\(\displaystyle\oint\dd\boldsymbol{\ell}'=0\)(닫힌 고리)이므로 둘째 항은 사라지고, \(\vb{E}=-\partial\vb{A}/\partial t=-\dfrac{\muz k}{4\pi}\displaystyle\oint\frac{\dd\boldsymbol{\ell}'}{\rr}\). 지연이 \(\vb{E}\)에서 <b>완전히 사라진다</b>는 것이 놀랍다.</p>
+<p><b>3) 왜 이 \(\vb{A}\)로 \(\vb{B}\)를 구할 수 없는가.</b> 우리가 계산한 것은 <b>한 점(중심)에서의</b> \(\vb{A}\) 값뿐이다. \(\vb{B}=\curl\vb{A}\)를 구하려면 그 점 <b>주변</b>에서의 \(\vb{A}\)를 알아야 한다 — 즉 \(\vb{A}(\vb{r},t)\)를 \(\vb{r}\)의 함수로 알아야 공간 미분이 정의된다. 반면 \(\vb{E}=-\partial\vb{A}/\partial t\)는 <b>시간</b> 미분이므로 한 점의 시간 이력만 있으면 충분하다.</p>
+<p><b>4) 일반 교훈.</b> 미분 연산의 종류에 따라 필요한 정보의 "차원"이 다르다. 시험에서 "중심에서 \(\vb{A}\)를 구하라 → \(\vb{E}\)를 구하라"가 나오면 풀 수 있지만, "\(\vb{B}\)를 구하라"가 이어지면 함정이거나 다른 접근(Jefimenko 직접 적용)을 요구하는 것이다.</p>
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> 지연 퍼텐셜의 \(\Box^2V=-\rho/\eps\) 증명을 \(t_r\)을 통한 연쇄 법칙과 B·C항 상쇄, \(\divg(\rhat/\rr^2)=4\pi\delta^3\)까지 포함해 백지에서 재현하고, "장에는 \(t\to t_r\)이 통하지 않는 이유"를 \(\Box^2\vb{E}\)의 원천이 \(\nabla\rho,\partial\vb{J}/\partial t\)라는 구조로 설명할 수 있다.</div>

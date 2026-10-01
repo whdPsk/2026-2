@@ -1,0 +1,61 @@
+<div class="exq"><b>상황.</b> Example 10.3과 같은 설정 — 전하 \(q\)가 등속 \(\vb{v}\)로 달리고 \(\vb{w}(t)=\vb{v}t\). 이번엔 퍼텐셜이 아니라 <b>장 \(\vb{E},\vb{B}\)</b>를 구한다. 출발점은 일반 점전하 장 공식
+\[ \vb{E}=\frac{q}{4\pi\eps}\frac{\rr}{(\boldsymbol{\rr}\cdot\vb{u})^3}\Big[(c^2-v^2)\vb{u}+\boldsymbol{\rr}\times(\vb{u}\times\vb{a})\Big],\qquad \vb{B}=\frac1c\hat{\boldsymbol{\rr}}\times\vb{E},\qquad \vb{u}\equiv c\hat{\boldsymbol{\rr}}-\vb{v} \]
+이고, 등속이므로 \(\vb{a}=0\)을 넣으면 된다(가속항 = 복사장이 통째로 사라진다). 결과를 <em>현재</em> 위치 \(\vb{R}=\vb{r}-\vb{v}t\)와 각 \(\theta\)로 표현하는 것이 목표다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(\vb{a}=0\)을 넣고, \(\rr\vb{u}\)가 기적적으로 \(c\vb{R}\)(현재 위치 방향)이 됨을 보인다.</div>
+<ol>
+<li><b>가속항 제거.</b> \(\vb{a}=0\)이므로
+\[ \vb{E}=\frac{q}{4\pi\eps}\frac{(c^2-v^2)}{(\boldsymbol{\rr}\cdot\vb{u})^3}\,\rr\,\vb{u}. \]
+남은 것은 "velocity field" 또는 "generalized Coulomb field"뿐이다 — \(1/\rr^2\)로 떨어지므로 복사하지 않는다.</li>
+
+<li><b>\(\rr\vb{u}\)의 정체.</b> \(\vb{u}=c\hat{\boldsymbol{\rr}}-\vb{v}\)이므로
+\[ \rr\vb{u}=c\boldsymbol{\rr}-\rr\vb{v}=c(\vb{r}-\vb{v}t_r)-c(t-t_r)\vb{v}=c(\vb{r}-\vb{v}t)=c\vb{R}. \]
+\(t_r\)이 <b>완전히 소거된다</b>. 즉 \(\vb{E}\parallel\vb{R}\) — 장은 지연 위치가 아니라 <em>현재</em> 위치를 가리킨다. (등속운동에서만 성립하는 "우연"이다.)</li>
+
+<li><b>분모.</b> Example 10.3에서 \(\boldsymbol{\rr}\cdot\vb{u}=\rr c-\boldsymbol{\rr}\cdot\vb{v}=\mathcal{D}\)였고, +α에서 \(\mathcal{D}=Rc\sqrt{1-\beta^2\sin^2\theta}\)임을 보였다. 따라서
+\[ (\boldsymbol{\rr}\cdot\vb{u})^3=R^3c^3\big(1-\beta^2\sin^2\theta\big)^{3/2}. \]</li>
+
+<li><b>전기장 조립.</b>
+\[ \vb{E}=\frac{q}{4\pi\eps}\frac{c^2(1-\beta^2)\cdot c\vb{R}}{R^3c^3(1-\beta^2\sin^2\theta)^{3/2}} =\frac{q}{4\pi\eps}\frac{1-\beta^2}{(1-\beta^2\sin^2\theta)^{3/2}}\frac{\hat{\vb{R}}}{R^2}. \]</li>
+
+<li><b>자기장.</b> \(\rr\hat{\boldsymbol{\rr}}=\boldsymbol{\rr}=\vb{r}-\vb{v}t_r=(\vb{r}-\vb{v}t)+(t-t_r)\vb{v}=\vb{R}+\frac{\rr}{c}\vb{v}\), 즉 \(\hat{\boldsymbol{\rr}}=\dfrac{\vb{R}}{\rr}+\dfrac{\vb{v}}{c}\). \(\vb{E}\parallel\vb{R}\)이므로 \(\vb{R}\times\vb{E}=0\)이고
+\[ \vb{B}=\frac1c\hat{\boldsymbol{\rr}}\times\vb{E}=\frac{1}{c}\frac{\vb{v}}{c}\times\vb{E}=\frac{1}{c^2}(\vb{v}\times\vb{E}). \]</li>
+
+<li><b>모양 읽기.</b> \(\theta=0,\pi\)(앞뒤): \(E=\frac{q}{4\pi\eps R^2}(1-\beta^2)=\frac{1}{\gamma^2}E_{\rm Coul}\) — 줄어든다. \(\theta=\pi/2\)(옆): \(E=\frac{q}{4\pi\eps R^2}\frac{1-\beta^2}{(1-\beta^2)^{3/2}}=\gamma E_{\rm Coul}\) — 커진다. 그래서 장은 진행 방향에 수직인 <b>팬케이크</b>로 눌린다. \(\gamma\to\infty\)면 두께 \(\sim1/\gamma\)의 얇은 원반이 된다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \vb{E}(\vb{r},t)=\frac{q}{4\pi\eps}\frac{1-v^2/c^2}{\big(1-\tfrac{v^2}{c^2}\sin^2\theta\big)^{3/2}}\frac{\hat{\vb{R}}}{R^2},\qquad \vb{B}=\frac{1}{c^2}(\vb{v}\times\vb{E})\ } \]
+<p class="note">\(\vb{B}\)의 선은 진행축을 둘러싼 동심원이고, 어디서나 \(\vb{B}\perp\vb{E}\)다. Heaviside(1888)의 결과. <b>검산</b> ① 차원: 대괄호는 무차원, 나머지는 Coulomb 장 ✓. ② 정지 극한 \(v=0\): \(\vb{E}=\frac{q\hat{\vb{R}}}{4\pi\eps R^2}\), \(\vb{B}=0\) — Coulomb ✓. ③ 비상대론 극한 \(\beta\ll1\): \(\vb{E}\approx\frac{q\hat{\vb{R}}}{4\pi\eps R^2}\), \(\vb{B}\approx\frac{\muz}{4\pi}\frac{q\vb{v}\times\hat{\vb{R}}}{R^2}\) — 5장에서 "쓰면 안 된다"고 경고했던 <em>점전하 Biot–Savart</em>가 여기서 정당한 근사로 유도된다 ✓. ④ Gauss: 현재 위치를 중심으로 한 구면에서 \(\oint\vb{E}\cdot\dd\vb{a}=q/\eps\) (다음 +α에서 증명) ✓. ⑤ 복사 없음: \(\vb{E}\propto1/R^2\)이므로 \(\oint\vb{S}\cdot\dd\vb{a}\propto1/R^2\to0\) — 등속 전하는 복사하지 않는다 ✓.</p></div>
+
+<div class="qz" data-q="ex10.4-a"><div class="qq"><b>+α</b> 장이 방향에 따라 \(1/\gamma^2\)~\(\gamma\)로 들쭉날쭉한데도 Gauss 법칙은 살아 있는가? 전하의 <b>현재 위치를 중심으로 한 반지름 \(R\)의 구면</b>에서 \(\oint\vb{E}\cdot\dd\vb{a}\)를 직접 계산하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 설정.</b> 구면 위에서 \(R\)이 일정하고 \(\vb{E}\parallel\hat{\vb{R}}\)이므로 \(\dd\vb{a}=R^2\sin\theta\,\dd\theta\,\dd\varphi\,\hat{\vb{R}}\)와의 내적이 간단하다:
+\[ \oint\vb{E}\cdot\dd\vb{a}=\frac{q(1-\beta^2)}{4\pi\eps}\int_0^{2\pi}\!\!\dd\varphi\int_0^\pi\frac{\sin\theta\,\dd\theta}{(1-\beta^2\sin^2\theta)^{3/2}} =\frac{q(1-\beta^2)}{2\eps}\int_0^\pi\frac{\sin\theta\,\dd\theta}{(1-\beta^2\sin^2\theta)^{3/2}}. \]</p>
+<p><b>2) 적분.</b> \(x=\cos\theta\)로 치환하면 \(\sin^2\theta=1-x^2\)이므로
+\[ \int_{-1}^{1}\frac{\dd x}{\big[(1-\beta^2)+\beta^2x^2\big]^{3/2}}. \]
+표준 결과 \(\displaystyle\int\frac{\dd x}{(A+Bx^2)^{3/2}}=\frac{x}{A\sqrt{A+Bx^2}}\)에 \(A=1-\beta^2,\ B=\beta^2\)를 넣으면 \(A+Bx^2\big|_{x=1}=1\)이므로
+\[ \left.\frac{x}{(1-\beta^2)\sqrt{(1-\beta^2)+\beta^2x^2}}\right|_{-1}^{1}=\frac{2}{1-\beta^2}. \]</p>
+<p><b>3) 결과.</b>
+\[ \oint\vb{E}\cdot\dd\vb{a}=\frac{q(1-\beta^2)}{2\eps}\cdot\frac{2}{1-\beta^2}=\boxed{\ \frac{q}{\eps}\ } \]
+속도에 무관하게 정확히 \(q/\eps\)다 ✓.</p>
+<p><b>4) 왜 당연한가.</b> \(\divg\vb{E}=\rho/\eps\)는 Maxwell 방정식이고 항상 참이다. 각분포가 아무리 찌그러져도 그 <em>총합</em>은 안에 든 전하가 결정한다 — 방향에 따른 \(\gamma\)배 증폭과 \(1/\gamma^2\)배 감쇠가 입체각 가중치와 정확히 상쇄된다. (Wheeler의 원칙: "답을 알기 전엔 계산하지 마라" — 이 문제는 그 말이 맞는 대표적 예다.) 다만 <b>지연 위치를 중심으로 한 구</b>에서 계산하면 훨씬 지저분해진다. 현재 위치 중심이 특별한 이유는 \(\vb{E}\)가 정확히 그 점을 향하기 때문이다.</p></div></div>
+
+<div class="qz" data-q="ex10.4-b"><div class="qq"><b>+α</b> 앞 단원 결과와 연결하기. 무한히 긴 직선에 선전하밀도 \(\lambda\)가 고르게 발려 있고, 전체가 도선 방향으로 등속 \(v\)로 흐른다(즉 전류 \(I=\lambda v\)). 위 식 \(\vb{E}\)를 중첩해 수직거리 \(d\)에서의 \(\vb{E}\)와 \(\vb{B}\)를 구하고, 2장·5장 결과와 비교하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 설정.</b> 도선을 \(x\)축, 운동방향을 \(+\hat{\vb{x}}\), 관측점을 \((0,d,0)\)에 둔다. 위치 \(x\)에 있는 전하조각 \(\dd q=\lambda\,\dd x\)가 만드는 장은 그 조각의 <em>현재</em> 위치를 향하며 \(R=\sqrt{x^2+d^2}\), \(\sin\theta=d/R\). 대칭에 의해 \(x\)성분은 상쇄되고 \(\hat{\vb{y}}\)성분만 남는다(가중치 \(\sin\theta=d/R\)).</p>
+<p><b>2) 적분.</b>
+\[ E_y=\frac{\lambda(1-\beta^2)}{4\pi\eps}\int_{-\infty}^{\infty}\frac{(d/R)\,\dd x}{R^2\big(1-\beta^2 d^2/R^2\big)^{3/2}} =\frac{\lambda(1-\beta^2)d}{4\pi\eps}\int_{-\infty}^{\infty}\frac{\dd x}{R^3}\cdot\frac{R^3}{(R^2-\beta^2d^2)^{3/2}}. \]
+\(R^2=x^2+d^2\)이므로 \(R^2-\beta^2d^2=x^2+d^2(1-\beta^2)\). 놀랍게도 \(R^3\)이 통째로 약분된다:
+\[ E_y=\frac{\lambda(1-\beta^2)d}{4\pi\eps}\int_{-\infty}^{\infty}\frac{\dd x}{\big[x^2+d^2(1-\beta^2)\big]^{3/2}}. \]
+\(a^2\equiv d^2(1-\beta^2)\)로 두면 \(\int_{-\infty}^{\infty}\dd x/(x^2+a^2)^{3/2}=2/a^2\)이므로
+\[ E_y=\frac{\lambda(1-\beta^2)d}{4\pi\eps}\cdot\frac{2}{d^2(1-\beta^2)}=\frac{\lambda}{2\pi\eps d}. \]</p>
+<p><b>3) 결론.</b>
+\[ \boxed{\ \vb{E}=\frac{\lambda}{2\pi\eps d}\hat{\vb{y}}\ \ (\text{속도와 무관!}),\qquad \vb{B}=\frac{1}{c^2}(\vb{v}\times\vb{E})=\frac{\muz \lambda v}{2\pi d}\hat{\boldsymbol\varphi}=\frac{\muz I}{2\pi d}\hat{\boldsymbol\varphi}\ } \]</p>
+<p><b>4) 해석 — 이게 왜 아름다운가.</b>
+<br>· \(\vb{E}\)는 <b>2장의 정지 무한 선전하</b> 결과와 글자 그대로 같다. 각 전하의 장은 팬케이크로 찌그러졌지만, 무한히 긴 줄로 더하면 찌그러짐이 완전히 씻겨 나간다(옆에서 \(\gamma\)배 세짐과 축 근처에서 \(1/\gamma^2\)배 약해짐이 적분에서 정확히 상쇄).
+<br>· \(\vb{B}\)는 <b>5장의 Ampère 법칙</b> \(B=\muz I/2\pi d\)와 정확히 같다. <em>단 한 번도 Ampère 법칙을 쓰지 않았는데</em>, 그저 Coulomb 장 + 특수상대론적 변형 + 중첩으로 자기정역학이 통째로 튀어나왔다.
+<br>· 이것이 12장의 메시지 — 자기력은 상대론적으로 본 전기력이다.</p>
+<p><b>5) 검산.</b> \(v\to0\): \(\vb{B}\to0\), \(\vb{E}\)는 그대로 ✓. 차원: \(\muz I/2\pi d\)는 T ✓. \(E/B=c^2/v&gt;c\)인데, 이는 복사파가 아니라 정적 장이므로 문제 없다 ✓.</p></div></div>

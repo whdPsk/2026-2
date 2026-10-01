@@ -1,0 +1,29 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>도구 1 — 미분 연산자 변환</b>(연쇄법칙, \(\bar S\)는 \(+x\)로 \(v\)):</p>
+\[ \frac{\partial}{\partial\bar x}=\gamma\Big(\frac{\partial}{\partial x}+\frac{v}{c^{2}}\frac{\partial}{\partial t}\Big),\quad \frac{\partial}{\partial\bar y}=\frac{\partial}{\partial y},\quad \frac{\partial}{\partial\bar z}=\frac{\partial}{\partial z},\quad \frac{\partial}{\partial\bar t}=\gamma\Big(\frac{\partial}{\partial t}+v\frac{\partial}{\partial x}\Big). \]
+<p><b>도구 2 — 원천 변환</b>(\(J^{\mu}=(c\rho,\vb{J})\)가 4-벡터):</p>
+\[ \bar\rho=\gamma\Big(\rho-\frac{v}{c^{2}}J_x\Big),\quad \bar J_x=\gamma(J_x-v\rho),\quad \bar J_y=J_y,\quad \bar J_z=J_z. \]
+
+<p><b>(i) Gauss 법칙.</b></p>
+\[ \bar\nabla\cdot\bar{\vb{E}}=\gamma\Big(\partial_x+\frac{v}{c^{2}}\partial_t\Big)E_x+\gamma\partial_y(E_y-vB_z)+\gamma\partial_z(E_z+vB_y) \]
+\[ =\gamma\Big[\divg\vb{E}+\frac{v}{c^{2}}\frac{\partial E_x}{\partial t}-v(\curl\vb{B})_x\Big] \]
+<p>여기에 \(S\)의 Ampère–Maxwell \((\curl\vb{B})_x=\muz J_x+\frac{1}{c^{2}}\partial_tE_x\)를 넣으면 \(\partial_tE_x\) 항이 <b>정확히 상쇄</b>된다:</p>
+\[ =\gamma\Big[\frac{\rho}{\eps}-v\muz J_x\Big]=\frac{1}{\eps}\gamma\Big(\rho-\frac{v}{c^{2}}J_x\Big)=\frac{\bar\rho}{\eps}\ \checkmark \]
+
+<p><b>(ii) \(\divg\vb{B}=0\).</b></p>
+\[ \bar\nabla\cdot\bar{\vb{B}}=\gamma\Big[\divg\vb{B}+\frac{v}{c^{2}}\Big(\frac{\partial B_x}{\partial t}+(\curl\vb{E})_x\Big)\Big]=0\ \checkmark \]
+<p>(Faraday 법칙이 괄호를 죽인다.)</p>
+
+<p><b>(iii) Faraday, \(x\)성분.</b></p>
+\[ (\bar\nabla\times\bar{\vb{E}})_x=\gamma\big[\partial_y(E_z+vB_y)-\partial_z(E_y-vB_z)\big]=\gamma\big[(\curl\vb{E})_x+v(\partial_yB_y+\partial_zB_z)\big] \]
+\[ =\gamma\Big[-\frac{\partial B_x}{\partial t}-v\frac{\partial B_x}{\partial x}\Big]=-\frac{\partial\bar B_x}{\partial\bar t}\ \checkmark\quad(\bar B_x=B_x) \]
+
+<p><b>(iv) Ampère–Maxwell, \(x\)성분.</b></p>
+\[ (\bar\nabla\times\bar{\vb{B}})_x=\gamma\Big[(\curl\vb{B})_x-\frac{v}{c^{2}}(\partial_yE_y+\partial_zE_z)\Big]=\gamma\Big[\muz J_x+\frac{1}{c^{2}}\partial_tE_x-\frac{v}{c^{2}}\Big(\frac{\rho}{\eps}-\partial_xE_x\Big)\Big] \]
+\[ =\muz\gamma(J_x-v\rho)+\frac{\gamma}{c^{2}}(\partial_t+v\partial_x)E_x=\muz\bar J_x+\muz\eps\frac{\partial\bar E_x}{\partial\bar t}\ \checkmark \]
+<p>나머지 성분(iii),(iv)의 \(y,z\)는 \(\bar E_y,\bar B_z\) 등을 같은 방식으로 대입하면 똑같이 맞는다.</p>
+\[ \boxed{\ \text{Maxwell 방정식은 Lorentz 공변적이다}\ } \]
+<p><b>요령 요약:</b> 매번 "\(S\)의 다른 Maxwell 방정식 하나"를 대입해 원치 않는 항을 죽이는 것이 전부다. 네 방정식이 서로를 지탱한다는 사실 자체가 이 문제의 교훈이다. 텐서 표기로는 \(\partial_\nu F^{\mu\nu}=\muz J^{\mu}\)의 양변이 같은 방식으로 변환하므로 <b>증명할 것이 없다</b>.</p>
+<div class="alabel">감점 포인트</div>
+좌표 미분 변환을 빼먹고 장만 변환하는 것. \(\bar\nabla\)와 \(\partial/\partial\bar t\)도 반드시 함께 변환해야 한다.</div><!--/sol-->

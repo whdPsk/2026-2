@@ -1,0 +1,13 @@
+<div class="exq"><b>상황.</b> 길이 \(2b\)인 가벼운 막대 양 끝에 \(m_1,m_2\)가 있고, 막대 중점(원점)이 회전축 위에 있다(\(|\vb r_1|=|\vb r_2|=b\)). 막대가 회전축(\(\boldsymbol\omega\))과 각 \(\alpha\)를 이루며 일정한 \(\omega\)로 돈다. 각운동량과 필요 토크.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>물체계: \(x_3\)을 막대, \(x_2\)를 막대–\(\boldsymbol\omega\) 평면 안에.</div>
+<ol>
+<li>\(\boldsymbol\omega=(0,\ \omega\sin\alpha,\ \omega\cos\alpha)\).</li>
+<li>\(I_1=I_2=(m_1+m_2)b^2\), \(I_3=0\).</li>
+<li>\(\vb L=(0,\ (m_1+m_2)b^2\omega\sin\alpha,\ 0)\) — 막대에 수직.</li>
+<li>Euler (\(\dot\omega_i=0\)): \(N_1=-(I_2-I_3)\omega_2\omega_3=-(m_1+m_2)b^2\omega^2\sin\alpha\cos\alpha\), \(N_2=N_3=0\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ L=(m_1+m_2)b^2\omega\sin\alpha\ (\perp\text{막대}),\qquad N_1=-(m_1+m_2)b^2\omega^2\sin\alpha\cos\alpha\ } \]
+<p class="note"><b>검산</b> ① \(\alpha=90°\)(막대가 축에 수직): \(\vb L\parallel\boldsymbol\omega\), 토크 0 ✓ (주축 회전). ② \(\alpha=0\): \(L=0\), 토크 0 ✓. ③ \(|\dot{\vb L}|=\omega L\cos\alpha\) (U17 체크포인트 3)과 크기 일치 ✓.</p></div>
+<div class="qz" data-q="ex11.10-a"><div class="qq"><b>+α</b> 토크의 방향을 고정계에서 말로 설명하라. 그 토크는 베어링에 어떤 힘으로 나타나는가? (축의 두 베어링 사이 거리 \(d\))</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\uv e_1\) = 막대와 \(\boldsymbol\omega\)가 이루는 평면에 수직 — 물체와 함께 돈다. 막대를 축과 수직한 방향으로 "세우려는" 원심력의 짝힘을 상쇄하는 방향. 베어링은 크기 \(N/d\)인 반대 방향 횡력 한 쌍을 공급하며, 이 힘들이 각속도 \(\omega\)로 돈다 → 진동·소음(동적 불균형).</p></div></div>
+<div class="qz" data-q="ex11.10-b"><div class="qq"><b>+α</b> 원심력으로 직접 검산: 회전계에서 각 질점에 원심력 \(m\omega^2\rho\)가 작용한다. 원점에 대한 원심력의 총 토크를 구해 \(N_1\)의 크기와 비교하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>질점의 축까지 거리 \(\rho=b\sin\alpha\), 원심력 \(m\omega^2b\sin\alpha\) (축에서 바깥), 팔 = 축 방향 거리 \(b\cos\alpha\). 두 질점의 토크는 같은 방향: \((m_1+m_2)\omega^2b^2\sin\alpha\cos\alpha\) — 막대를 축에 수직으로 눕히려는 방향. 베어링 토크가 이를 상쇄 ✓.</p></div></div>

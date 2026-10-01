@@ -1,0 +1,16 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>일반형 \(\mathbf E=\dfrac{\mu_0}{4\pi r}\big[(\hat{\mathbf r}\cdot\ddot{\mathbf p})\hat{\mathbf r}-\ddot{\mathbf p}\big]\), \(\mathbf B=-\dfrac{\mu_0}{4\pi rc}(\hat{\mathbf r}\times\ddot{\mathbf p})\)에 \(\ddot{\mathbf p}=-\omega^2\mathbf p(t_0)\), \(t_0=t-r/c\)를 넣는다.</p>
+\[ \ddot{\mathbf p}(t_0)=-\omega^2p_0[\cos\omega t_0\,\hat{\mathbf x}+\sin\omega t_0\,\hat{\mathbf y}],\qquad |\ddot{\mathbf p}|^2=\omega^4p_0^2 . \]
+<p>\(\hat{\mathbf r}=\sin\theta\cos\varphi\,\hat{\mathbf x}+\sin\theta\sin\varphi\,\hat{\mathbf y}+\cos\theta\,\hat{\mathbf z}\)이므로</p>
+\[ \hat{\mathbf r}\cdot\ddot{\mathbf p}=-\omega^2p_0\sin\theta\cos(\varphi-\omega t_0). \]
+\[ \mathbf S=\frac{1}{\mu_0 c}|\mathbf E|^2\hat{\mathbf r}=\frac{\mu_0}{16\pi^2c\,r^2}\big[\ddot p^2-(\hat{\mathbf r}\cdot\ddot{\mathbf p})^2\big]\hat{\mathbf r}
+=\frac{\mu_0p_0^2\omega^4}{16\pi^2cr^2}\big[1-\sin^2\theta\cos^2(\varphi-\omega t_0)\big]\hat{\mathbf r}. \]
+<p>시간평균 \(\langle\cos^2\rangle=\tfrac12\), \(1-\tfrac12\sin^2\theta=\tfrac12(1+\cos^2\theta)\):</p>
+\[ \boxed{\;\langle\mathbf S\rangle=\frac{\mu_0p_0^2\omega^4}{32\pi^2c\,r^2}\big(1+\cos^2\theta\big)\hat{\mathbf r}\;} \]
+<p>세기 분포: 회전축(\(\theta=0,\pi\))에서 최대(원편광), 회전면(\(\theta=\pi/2\))에서 최소이며 정확히 절반(선편광). 어느 방향으로도 0이 아니다 — 선형 쌍극자의 도넛과 달리 "찌그러진 공" 모양.</p>
+<p>총 출력: \(\displaystyle\int_0^\pi(1+\cos^2\theta)\sin\theta\,d\theta=\int_{-1}^{1}(1+x^2)dx=2+\frac23=\frac83\), \(\varphi\) 적분은 \(2\pi\):</p>
+\[ \langle P\rangle=\frac{\mu_0p_0^2\omega^4}{32\pi^2c}\cdot2\pi\cdot\frac83=\boxed{\;\frac{\mu_0p_0^2\omega^4}{6\pi c}\;} \]
+<p>이는 단일 진동 쌍극자 결과 \(\mu_0p_0^2\omega^4/12\pi c\)의 <b>정확히 2배</b> — 두 쌍극자의 출력이 그냥 더해진 것처럼 보인다. 이유: 출력은 장의 이차식이라 교차항 \(\propto\langle\cos\omega t_0\sin\omega t_0\rangle\)이 생기는데, 두 쌍극자가 \(90^\circ\) 위상차 + 직교 방향이므로 이 교차항의 시간평균이 0이다. 즉 "우연히" 중첩이 성립.</p>
+<div class="alabel">감점 포인트</div>
+<p>Eq. 11.21의 \(\sin^2\theta\)를 그대로 쓰면 안 된다 — 그 식은 극축이 \(\ddot{\mathbf p}\) 방향일 때만 유효하고, 여기서는 \(\ddot{\mathbf p}\)가 회전한다.</p></div><!--/sol-->

@@ -1,0 +1,11 @@
+<div class="exq"><span class="examtag">HW2-4 연계 · 9/17 Review ③ 확장</span><br>전하가 속도 \(v\ll c\)로 달리다 짧은 시간 \(\Delta t\) 동안 일정 감속 \(a=v/\Delta t\)로 \(t=0\)에 멈췄다. 시각 \(T\)에 반경 \(r\approx cT\)에 있는 두께 \(c\Delta t\)의 transition 껍질(kink)에서 전기장의 접선 성분 \(E_\theta\)를 구하고, 그것이 복사장과 같음을 보여라(θ는 운동 방향과 관측 방향 사이 각). [[L06.s3c]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>kink의 기하</div><ol>
+<li>껍질 안쪽 력선은 \(x=0\)에서, 바깥쪽은 \(x=vT\)에서 방사상. 같은 력선이 껍질에서 이어지려면 접선 방향으로 \(vT\sin\theta\)만큼 옆으로 밀려야 한다. 껍질 두께는 \(c\Delta t\). [[F14.12, S0917.08]]</li>
+<li>껍질 안에서 장의 방향 비 \(E_\theta/E_r=vT\sin\theta/(c\Delta t)\).</li>
+<li>\(E_r\simeq q/r^2\)(가우스 법칙: 껍질을 지나는 력선 수는 보존), \(T\simeq r/c\), \(v/\Delta t=a\) 대입: \(E_\theta=\dfrac{q}{r^2}\cdot\dfrac{a\,(r/c)\sin\theta}{c}=\dfrac{qa\sin\theta}{c^2r}\).</li>
+<li>이는 비상대론 복사장 \(|E_{\rm rad}|=qa\sin\Theta/(c^2R)\)과 정확히 같다(플립 15). [[F15.04]]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>\(|E_\theta|\simeq|q|a\sin\theta/(c^2r)\): 접선(횡) 성분, \(r^{-1}\), 가속도에 비례 = 복사장. \(E_\theta/E_r=(a r/c^2)\sin\theta\) — 멀어질수록 kink 장이 쿨롱 장을 압도. 부호·방향은 전하와 각도 기준을 그림으로 확인.</p></div>
+<div class="intuit"><b>직관</b>력선이 "끊어질 수 없다"는 조건 하나로 \(1/r\)이 나온다: 옆으로 밀리는 거리 \(vT\)는 \(r\)에 비례해 커지고, 쿨롱 장은 \(1/r^2\)로 줄어서 곱이 \(1/r\). 교수님: "아주 중요한 그림이고 이해하는 게 필요". [[S0917.09]]</div>
+<div class="qz" data-q="ex4.1-a"><div class="qq"><b>+α</b> v = 0.01c인 전자가 Δt = 10⁻⁹ s 동안 멈출 때, r = 1 m에서 E_θ/E_r (θ=90°)는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(a=v/\Delta t=3\times10^{17}\) cm s⁻², \(ar/c^2=3\times10^{17}\cdot100/9\times10^{20}\approx0.033\). r = 100 m이면 3.3 — 거리가 멀수록 복사장이 우세.</p></div></div>
+<div class="qz" data-q="ex4.1-b"><div class="qq"><b>+α</b> Δt를 더 짧게(급정거) 하면 kink 장의 세기와 껍질 두께는 어떻게 되는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>두께 cΔt는 얇아지고 a = v/Δt가 커져 E_θ도 커진다(같은 력선 이동을 더 얇은 층에서 함). 껍질이 운반하는 에너지 ∝ E²×두께 ∝ a²Δt — 라모 공식 P·Δt와 같은 꼴.</p></div></div>

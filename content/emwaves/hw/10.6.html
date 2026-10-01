@@ -1,0 +1,14 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+어떤 퍼텐셜 \((V,\vb{A})\)에 대해 \(L\equiv\divg\vb{A}+\muz\eps\,\partial V/\partial t\)라 두자. 게이지 변환
+\(\vb{A}'=\vb{A}+\nabla\lambda,\ V'=V-\partial\lambda/\partial t\) 후
+\[ L'=\divg\vb{A}'+\muz\eps\frac{\partial V'}{\partial t}=L+\nabla^2\lambda-\muz\eps\frac{\partial^2\lambda}{\partial t^2}=L+\Box^2\lambda . \]
+따라서 \(\Box^2\lambda=-L\)을 풀면 \(L'=0\). 이는 소스가 \(L\)인 비동차 파동방정식이고 지연해
+\(\lambda(\vb{r},t)=\frac{1}{4\pi}\int \frac{L(\vb{r}',t_r)}{\rr}d\tau'\)가 항상 존재한다. → <b>Lorenz 게이지는 항상 가능</b> ∎
+
+<b>\(V=0\)?</b> \(V'=V-\partial\lambda/\partial t=0\)이려면 \(\lambda(\vb{r},t)=\int_0^tV(\vb{r},t')dt'\)로 잡으면 된다. 항상 가능 (temporal/Weyl 게이지). \(\boxed{V=0\ \text{항상 가능}}\)
+
+<b>\(\vb{A}=0\)?</b> \(\vb{A}+\nabla\lambda=0\)이려면 \(\vb{A}=-\nabla\lambda\), 즉 \(\curl\vb{A}=\vb{B}=0\)이어야 한다.
+\[ \boxed{\vb{A}=0\ \text{은 } \vb{B}=0 \text{인 경우에만 가능}} \]
+<div class="alabel">감점 포인트</div>
+\(\lambda\)의 존재성을 "풀 수 있다고 가정"만 하고 넘어가면 감점 — 지연해라는 구체적 해를 제시할 것.</div><!--/sol-->

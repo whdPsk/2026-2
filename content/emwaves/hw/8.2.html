@@ -1,0 +1,19 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>좌표: \(-\sigma\) 평면을 \(z=0\), \(+\sigma\) 평면을 \(z=d\)에 둔다. 판 사이에서
+\(\vb{E}_\sigma=-(\sigma/\eps)\hat{\vb{z}}\), 바깥에서는 0.</p>
+<p><b>(a)</b> 총 에너지 \(\tfrac{\eps}{2}\int(\vb{E}_\sigma+\vb{E}_q)^2\) 에서 자기 자신 항을 빼면 교차항만 남는다:
+\[W_{\rm int}=\eps\int \vb{E}_\sigma\cdot\vb{E}_q\,d\tau=-\sigma\int_{0&lt;z&lt;d}(E_q)_z\,d\tau .\]
+\((E_q)_z=-\partial V_q/\partial z\) 를 넣고 \(z\)에 대해 먼저 적분하면
+\[W_{\rm int}=\sigma\iint\big[V_q(x,y,d)-V_q(x,y,0)\big]dx\,dy .\]
+평면 위의 적분은 \(\rho&lt;L\)로 자르면
+\(\iint V_q\,dxdy=\dfrac{q}{2\eps}\big(L-|z-z_0|\big)\) 이고, 발산하는 \(L\) 항은 차에서 소거된다:
+\[W_{\rm int}=\frac{\sigma q}{2\eps}\Big[(-|d-z_0|)-(-|z_0|)\Big]=\frac{\sigma q}{2\eps}\,(2z_0-d).\]
+\[\boxed{\;W_{\rm int}=\frac{\sigma q}{\eps}\Big(z_0-\frac{d}{2}\Big)\;}\]</p>
+<p><b>(b)</b> \(q\)가 받는 힘은 \(q\vb{E}_\sigma=-(q\sigma/\eps)\hat{\vb{z}}\)이므로, 중앙 \(z=d/2\)를 기준으로 한 퍼텐셜 에너지는
+\(U=(q\sigma/\eps)(z_0-d/2)\). 즉
+\[\boxed{\;W_{\rm int}=U\;}\]
+정확히 일치한다. (원천 \(\sigma\)가 <em>고정</em>되어 있어 유도전하 문제처럼 \(1/2\) 인자가 붙지 않는다.)</p>
+<p><b>(c)</b> \(\vb{F}=-\nabla W_{\rm int}=-\dfrac{q\sigma}{\eps}\hat{\vb{z}}=q\vb{E}_\sigma\). 놀랄 것 없음. \(\boxed{\vb{F}=-\dfrac{q\sigma}{\eps}\hat{\vb{z}}}\)</p>
+<div class="alabel">감점 포인트</div>
+발산하는 자기에너지를 빼지 않고 계산하려 하거나, 절단(cutoff) 없이 두 발산 적분의 차를 형식적으로 다뤄 부호를 틀리는 경우.</div><!--/sol-->

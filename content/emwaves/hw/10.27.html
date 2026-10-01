@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+중심이 관측점이므로 \(\rr=r\), \(t_r=t-r/c\). 시각 \(t'\)에서 \(\rho=\dfrac{Q}{\frac43\pi(vt')^3}\) (단, \(r&lt;vt'\)).
+기여 조건: \(r&lt;v\left(t-\dfrac rc\right)\Rightarrow r&lt;r_{\max}=\dfrac{vt}{1+v/c}\).
+\[ Q_{\rm eff}=\int_0^{r_{\max}}\frac{3Q}{4\pi v^3(t-r/c)^3}\,4\pi r^2dr=\frac{3Q}{v^3}\int_0^{r_{\max}}\frac{r^2\,dr}{(t-r/c)^3}. \]
+\(s=t-r/c\ (r=c(t-s),\ dr=-c\,ds)\)로 치환, \(s\) 범위는 \(t\to s_{\min}=\dfrac{ct}{c+v}\):
+\[ Q_{\rm eff}=\frac{3Qc^3}{v^3}\int_{s_{\min}}^{t}\frac{(t-s)^2}{s^3}ds,\qquad
+\int\frac{(t-s)^2}{s^3}ds=-\frac{t^2}{2s^2}+\frac{2t}{s}+\ln s . \]
+\(\beta=v/c\), \(s_{\min}=t/(1+\beta)\)를 넣고 정리하면
+\[ Q_{\rm eff}=\frac{3Q}{\beta^3}\left[\ln(1+\beta)-\beta+\frac{\beta^2}{2}\right]. \]
+이것이 <b>정확한</b> 답. \(\ln(1+\beta)=\beta-\frac{\beta^2}{2}+\frac{\beta^3}{3}-\frac{\beta^4}{4}+\cdots\)를 넣으면 대괄호 \(=\frac{\beta^3}{3}-\frac{\beta^4}{4}+\cdots\)이므로
+\[ \boxed{Q_{\rm eff}=Q\left(1-\frac{3\beta}{4}+O(\beta^2)\right)=Q\left(1-\frac{3v}{4c}\right)} \]
+<b>교훈:</b> \(\int\rho(t_r)d\tau\)는 총 전하가 <b>아니다</b> — 이것이 L–W 퍼텐셜에 \((1-\rhat\cdot\vb{v}/c)^{-1}\) 인자가 붙는 이유(팽창하는 소스는 겉보기 전하가 줄어든다).
+<div class="alabel">감점 포인트</div>
+적분 상한을 \(vt\)로 잡는 실수 — 지연 때문에 \(vt/(1+v/c)\)로 줄어든다.</div><!--/sol-->

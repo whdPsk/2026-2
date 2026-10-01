@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(\vb{w}(t)=a(\cos\omega t,\sin\omega t,0)\), 관측점 \(\vb{r}=(0,0,z)\).
+\[ \rr=|\vb{r}-\vb{w}(t_r)|=\sqrt{a^2+z^2}\quad(\text{상수!}) \Rightarrow\ t_r=t-\frac{\sqrt{a^2+z^2}}{c}. \]
+지연시간이 <b>모든 \(t\)에 대해 일정한 지연</b>이라는 것이 이 문제의 요령이다.
+\[ \boldsymbol{\rr}=(-a\cos\omega t_r,\,-a\sin\omega t_r,\,z),\qquad \vb{v}=a\omega(-\sin\omega t_r,\,\cos\omega t_r,\,0). \]
+\[ \boldsymbol{\rr}\cdot\vb{v}=a^2\omega(\cos\omega t_r\sin\omega t_r-\sin\omega t_r\cos\omega t_r)=0 . \]
+Doppler 인자가 1이 되어
+\[ \boxed{V(z,t)=\frac{1}{4\pi\eps}\frac{qc}{\rr c-\boldsymbol{\rr}\cdot\vb{v}}=\frac{1}{4\pi\eps}\frac{q}{\sqrt{a^2+z^2}}} \]
+(시간에 무관 — 원운동이라 \(z\)축에서 본 거리가 변하지 않기 때문.)
+\[ \boxed{\vb{A}=\frac{\vb{v}}{c^2}V=\frac{\muz q a\omega}{4\pi\sqrt{a^2+z^2}}\Big\{-\sin\big[\omega(t-\tfrac{\sqrt{a^2+z^2}}{c})\big]\hat{\vb{x}}+\cos\big[\omega(t-\tfrac{\sqrt{a^2+z^2}}{c})\big]\hat{\vb{y}}\Big\}} \]
+<div class="alabel">감점 포인트</div>
+\(\vb{A}\)의 위상에 \(t\)가 아니라 \(t_r\)를 넣어야 한다는 점 — 여기가 이 문제의 채점 포인트다.</div><!--/sol-->

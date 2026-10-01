@@ -1,0 +1,13 @@
+<div class="exq"><b>상황.</b> \(K\)에 정지한 광원이 진동수 \(\nu_0\)의 빛을 낸다. \(K'\)의 관측자가 \(+x_1\) 방향으로 \(v\)로 움직이고, \(K\)에서 본 빛의 진행 방향이 운동 방향과 각 \(\theta\)를 이룬다. 관측 진동수 \(\nu'\)을 구하라.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>광자의 4-운동량을 변환.</div>
+<ol>
+<li>\(K\)에서 광자: \(E=h\nu_0\), \(p=h\nu_0/c\), \(p_1=p\cos\theta\).</li>
+<li>에너지 변환 \(E'=\gamma(E-vp_1)\): \(h\nu'=\gamma\left(h\nu_0-v\frac{h\nu_0}c\cos\theta\right)\).</li>
+<li>\(\nu'=\gamma\nu_0(1-\beta\cos\theta)\).</li>
+<li>특수한 경우: \(\theta=\pi\)(빛이 관측자 쪽으로, 관측자는 광원을 향해 접근) → \(\nu'=\gamma(1+\beta)\nu_0=\nu_0\sqrt{\frac{1+\beta}{1-\beta}}\). \(\theta=0\)(멀어짐) → \(\nu_0\sqrt{\frac{1-\beta}{1+\beta}}\). \(\theta=\pi/2\) → \(\nu'=\gamma\nu_0\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \nu'=\gamma\nu_0(1-\beta\cos\theta)\ } \]
+<p class="note">주의: \(\theta\)는 <b>광원 계 \(K\)</b>에서 잰 각. \(\theta=\pi/2\)에서 \(\gamma\nu_0\)(청색 이동)인데, 관측자 계에서 빛이 수직으로 올 때(\(\theta'=\pi/2\))는 \(\nu_0/\gamma\)(적색 이동) — 두 "횡 Doppler"는 다른 순간이다(광행차). <b>검산</b>: \(\beta\to0\) ✓, 각 극한에서 식 (14.31), (14.33) 재현 ✓. 문제 14-18: 광원이 움직여도 같은 결과.</p></div>
+<div class="qz" data-q="ex14.11-a"><div class="qq"><b>+α</b> 관측자 계에서 잰 각 \(\theta'\)로 표현하면 \(\nu'\)은? (역변환 \(E=\gamma(E'+vp_1')\) 사용)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(h\nu_0=\gamma h\nu'(1+\beta\cos\theta')\) → \(\nu'=\frac{\nu_0}{\gamma(1+\beta\cos\theta')}\). \(\theta'=\pi/2\): \(\nu_0/\gamma\) (순수 시간 팽창).</p></div></div>
+<div class="qz" data-q="ex14.11-b"><div class="qq"><b>+α</b> 광원 계의 \(\theta=\pi/2\) 빛은 관측자 계에서 어떤 각으로 오는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(p_1'=\gamma(p_1-\beta E/c)=-\gamma\beta p\), \(p_2'=p\) → \(\tan\theta'=p_2'/p_1'=-1/(\gamma\beta)\), 즉 \(\cos\theta'=-\beta\): 관측자 쪽에서 볼 때 앞으로 기울어져 온다(광행차).</p></div></div>

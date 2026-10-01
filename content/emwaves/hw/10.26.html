@@ -1,0 +1,17 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+세 꼭짓점과 제약조건:
+<ul>
+<li><b>소스</b> \((\rho,\vb{J})\), 제약: 연속방정식 \(\divg\vb{J}+\partial\rho/\partial t=0\)</li>
+<li><b>퍼텐셜</b> \((V,\vb{A})\), 제약: Lorenz 조건 \(\divg\vb{A}=-\muz\eps\,\partial V/\partial t\)</li>
+<li><b>장</b> \((\vb{E},\vb{B})\)</li>
+</ul>
+다섯 개의 화살표(문제 지시대로 장→퍼텐셜은 제외):
+\[ \textbf{소스}\to\textbf{퍼텐셜}:\quad \boxed{V=\frac{1}{4\pi\eps}\int\frac{\rho(\vb{r}',t_r)}{\rr}d\tau',\quad \vb{A}=\frac{\muz}{4\pi}\int\frac{\vb{J}(\vb{r}',t_r)}{\rr}d\tau'}\ \ (\text{지연 퍼텐셜}) \]
+\[ \textbf{퍼텐셜}\to\textbf{소스}:\quad \boxed{\rho=-\eps\Box^2V,\qquad \vb{J}=-\frac{1}{\muz}\Box^2\vb{A}} \]
+\[ \textbf{퍼텐셜}\to\textbf{장}:\quad \boxed{\vb{E}=-\nabla V-\frac{\partial\vb{A}}{\partial t},\qquad \vb{B}=\curl\vb{A}} \]
+\[ \textbf{소스}\to\textbf{장}:\quad \boxed{\text{Jefimenko 방정식 (10.36, 10.38)}} \]
+\[ \textbf{장}\to\textbf{소스}:\quad \boxed{\rho=\eps\divg\vb{E},\qquad \vb{J}=\frac{1}{\muz}\curl\vb{B}-\eps\frac{\partial\vb{E}}{\partial t}} \]
+정적 극한에서 위 도표는 Fig. 2.35(전기 쪽)와 Fig. 5.51(자기 쪽)로 각각 분해된다.
+<div class="alabel">감점 포인트</div>
+Lorenz 조건과 연속방정식이라는 <b>두 제약</b>을 표시하지 않으면 도표가 완성되지 않는다(자유도 세기가 안 맞음).</div><!--/sol-->

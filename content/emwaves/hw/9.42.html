@@ -1,0 +1,17 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+양끝 벽 때문에 \(z\)방향으로도 정상파가 서야 한다: \(e^{\pm ikz}\)를 겹쳐 \(\sin(kz)\) 또는 \(\cos(kz)\)를 만들고, 끝벽 경계조건(\(E^{\parallel}=0\), \(B^{\perp}=B_z=0\) at \(z=0,d\))이 \(k\)를 양자화한다:
+\[k=\frac{l\pi}{d}\quad(l=0,1,2,\dots).\]
+도파관 분산관계 \(\left(\frac{\omega}{c}\right)^2=k^2+\left(\frac{m\pi}{a}\right)^2+\left(\frac{n\pi}{b}\right)^2\)에 넣으면
+\[\boxed{\omega_{lmn}=c\pi\sqrt{\left(\frac ld\right)^2+\left(\frac ma\right)^2+\left(\frac nb\right)^2}}\]
+<b>TE형 장</b> (\(E_z=0\); \(\kappa^2\equiv(m\pi/a)^2+(n\pi/b)^2\), 공통 인자 \(e^{-i\omega t}\)):
+\[B_z=B_0\cos\frac{m\pi x}{a}\cos\frac{n\pi y}{b}\sin\frac{l\pi z}{d}\quad(\Rightarrow B_z=0\ \text{at}\ z=0,d\ \checkmark)\]
+\[E_x=-\frac{i\omega}{\kappa^2}\frac{n\pi}{b}B_0\cos\frac{m\pi x}{a}\sin\frac{n\pi y}{b}\sin\frac{l\pi z}{d},\qquad E_y=+\frac{i\omega}{\kappa^2}\frac{m\pi}{a}B_0\sin\frac{m\pi x}{a}\cos\frac{n\pi y}{b}\sin\frac{l\pi z}{d}\]
+\[B_x=-\frac{1}{\kappa^2}\frac{m\pi}{a}\frac{l\pi}{d}B_0\sin\frac{m\pi x}{a}\cos\frac{n\pi y}{b}\cos\frac{l\pi z}{d},\qquad B_y=-\frac{1}{\kappa^2}\frac{n\pi}{b}\frac{l\pi}{d}B_0\cos\frac{m\pi x}{a}\sin\frac{n\pi y}{b}\cos\frac{l\pi z}{d}\]
+확인: \(E_x\)는 \(y=0,b\)와 \(z=0,d\)에서 0, \(E_y\)는 \(x=0,a\)와 \(z=0,d\)에서 0 → 여섯 벽 모두에서 \(E^{\parallel}=0\ \checkmark\); \(B_x\)는 \(x=0,a\)에서, \(B_y\)는 \(y=0,b\)에서, \(B_z\)는 \(z=0,d\)에서 0 → \(B^{\perp}=0\ \checkmark\)<br>
+<b>TM형 장</b> (\(B_z=0\)):
+\[E_z=E_0\sin\frac{m\pi x}{a}\sin\frac{n\pi y}{b}\cos\frac{l\pi z}{d}\quad(m,n\ge1)\]
+나머지 성분은 위와 같은 방식(9.182의 \(ik\to\partial_z\) 치환)으로 얻어지며 공진주파수 식은 동일하다.<br>
+공동에서는 <b>이산적인</b> 주파수만 허용된다 — 도파관과 달리 연속 스펙트럼이 아니다(레이저 공진기, 마이크로파 캐비티의 기초).
+<div class="alabel">감점 포인트</div>
+TE에서는 \(l\ge1\)이 필요하고(\(l=0\)이면 장이 사라짐), TM에서는 \(l=0\)도 허용되지만 \(m,n\ge1\)이다. 지수의 허용 범위를 대충 쓰면 감점.</div><!--/sol-->

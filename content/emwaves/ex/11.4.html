@@ -1,0 +1,58 @@
+<div class="exq"><b>상황.</b> 질량 \(m\), 전하 \(q\)인 입자가 고유진동수 \(\omega_0\)인 스프링에 매달려 있고, 외부에서 진동수 \(\omega\)로 구동된다. 이 입자는 진동하면서 복사하므로 에너지를 잃는데, 그 되받음(recoil)이 <b>Abraham–Lorentz 힘</b>
+\[ \vb{F}_{\rm rad}=\frac{\muz q^2}{6\pi c}\dot{\vb{a}}=m\tau\dot{\vb{a}},\qquad \tau\equiv\frac{\muz q^2}{6\pi mc} \]
+이다. 목표는 이 힘을 운동방정식에 넣고, 그것이 9장에서 쓰던 <b>속도 비례 감쇠</b> \(-\gamma m\dot x\)와 같은 역할을 함을 보이며 <b>감쇠 상수 \(\gamma\)를 \(\omega,\tau\)로 표현</b>하는 것이다. (전자의 경우 \(\tau=6.3\times10^{-24}\,\mathrm{s}\).)</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>정상상태 사인 진동에서는 \(\dddot x=-\omega^2\dot x\) — 3계 미분이 1계로 접힌다.</div>
+<ol>
+<li><b>운동방정식.</b> 세 힘(스프링 복원력, 복사 반작용, 구동력)을 모으면
+\[ m\ddot x=-m\omega_0^2x+m\tau\dddot x+F_{\rm drive}. \]
+이대로는 3계 미분방정식이라 다루기 곤란하다.</li>
+
+<li><b>정상상태 가정.</b> 시스템은 결국 구동 진동수 \(\omega\)로 진동한다: \(x(t)=x_0\cos(\omega t+\delta)\). 그러면
+\[ \ddot x=-\omega^2x,\qquad \dddot x=\frac{\dd}{\dd t}(\ddot x)=-\omega^2\dot x. \]
+이것이 핵심 트릭이다 — 3계 항이 <b>1계 항(속도)으로 정확히 환원</b>된다.</li>
+
+<li><b>표준형으로 정리.</b> 대입하면
+\[ m\ddot x=-m\omega_0^2x-m\tau\omega^2\dot x+F_{\rm drive}\ \Longrightarrow\ m\ddot x+m\gamma\dot x+m\omega_0^2x=F_{\rm drive} \]
+와 정확히 같은 꼴이며,
+\[ \gamma=\omega^2\tau=\frac{\muz q^2\omega^2}{6\pi mc}. \]</li>
+
+<li><b>9장과의 화해.</b> 9장 분산 이론에서는 \(F_{\rm damping}=-\gamma m\dot x\)를 "단순화를 위해" 가정했다. 이제 그 근거가 생겼다: 진짜 감쇠는 \(\ddot{\vb{v}}\)에 비례하지만, <em>사인 진동에서는 \(\vb{v}\)의 짝수 번 미분이 모두 \(\vb{v}\)에 비례</em>하므로 결과가 같다. 다만 \(\gamma\)가 상수가 아니라 <b>\(\omega^2\)에 비례</b>한다는 점이 새 정보다.</li>
+
+<li><b>일관성 확인(에너지).</b> 정상상태에서 감쇠가 소모하는 평균 일률은 \(\langle m\gamma\dot x^2\rangle=m\tau\omega^2\langle\dot x^2\rangle=m\tau\omega^2\cdot\tfrac12\omega^2x_0^2=\tfrac12 m\tau\omega^4x_0^2\). 한편 Larmor 복사 일률은 \(\langle P\rangle=m\tau\langle a^2\rangle=m\tau\cdot\tfrac12\omega^4x_0^2\) — <b>정확히 같다</b> ✓ (\(\muz q^2/6\pi c=m\tau\)).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ m\ddot x+m\gamma\dot x+m\omega_0^2x=F_{\rm drive},\qquad \gamma=\omega^2\tau,\qquad \tau=\frac{\muz q^2}{6\pi mc}\ } \]
+<p class="note">\(\tau\)는 빛이 "고전 전자 반지름" 정도를 지나는 데 걸리는 시간 규모다: \(\tau=\frac{2}{3}\frac{r_e}{c}\)(\(r_e=q^2/4\pi\eps mc^2\)). 전자에 대해 \(6.3\times10^{-24}\,\mathrm{s}\). <b>검산</b> ① 차원: \([\tau]=\frac{(\mathrm{T\,m/A})(\mathrm{C^2})}{\mathrm{kg\cdot m/s}}\)를 풀면 s ✓, \([\gamma]=\mathrm{s^{-1}}\) ✓. ② 극한 \(q\to0\): \(\tau\to0,\gamma\to0\) — 중성 입자는 감쇠 없음 ✓. ③ \(\omega\to0\)(느린 운동): \(\gamma\to0\) — 천천히 흔들면 복사하지 않음, Ex 10.5 검산과 정합 ✓. ④ 섭동 타당성: \(\gamma/\omega_0=\omega_0\tau\sim10^{-8}\ll1\)이므로 복사 반작용은 언제나 작은 보정 ✓. ⑤ 알려진 특수경우: 다음 +α에서 원자 스펙트럼선의 자연 폭(\(\sim10^8\,\mathrm{s^{-1}}\))과 일치함을 확인 ✓.</p></div>
+
+<div class="qz" data-q="ex11.4-a"><div class="qq"><b>+α</b> 숫자를 넣어라. 가시광 전이(\(\lambda_0=600\,\mathrm{nm}\))에 대해 (ⅰ) 감쇠 상수 \(\gamma\), (ⅱ) 들뜬 상태 수명 \(1/\gamma\), (ⅲ) 품질계수 \(Q=\omega_0/\gamma\), (ⅳ) 스펙트럼선의 자연 폭 \(\Delta\nu\)와 \(\Delta\lambda\)를 구하고 실험값과 비교하라. 그리고 \(\gamma\)가 \(\lambda\)에 어떻게 의존하는지 논하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>(ⅰ)</b> \(\omega_0=2\pi c/\lambda_0=2\pi(3\times10^8)/(6\times10^{-7})=3.14\times10^{15}\,\mathrm{rad/s}\). 전자 \(\tau=6.3\times10^{-24}\,\mathrm{s}\):
+\[ \gamma=\omega_0^2\tau=(3.14\times10^{15})^2(6.3\times10^{-24})=\boxed{\ 6.2\times10^{7}\ \mathrm{s^{-1}}\ } \]</p>
+<p><b>(ⅱ) 수명</b> \(\displaystyle\frac1\gamma\approx1.6\times10^{-8}\,\mathrm{s}=16\,\mathrm{ns}\). 실제 원자의 허용 전이 수명이 전형적으로 \(1\!-\!100\,\mathrm{ns}\)다 — <b>고전 모형이 자릿수까지 맞힌다</b> ✓. (에너지가 \(e^{-\gamma t}\)로 줄고 진폭은 \(e^{-\gamma t/2}\).)</p>
+<p><b>(ⅲ) \(Q\)값</b> \(\displaystyle Q=\frac{\omega_0}{\gamma}=\frac{1}{\omega_0\tau}=\frac{3.14\times10^{15}}{6.2\times10^7}\approx5\times10^{7}\). 진동자가 감쇠하기까지 약 \(Q/2\pi\approx8\times10^6\)번 진동한다 — 자연에서 가장 좋은 공진기 중 하나다.</p>
+<p><b>(ⅳ) 선폭.</b> Lorentz 선형의 FWHM은 \(\Delta\omega=\gamma\)이므로
+\[ \Delta\nu=\frac{\gamma}{2\pi}=\frac{6.2\times10^7}{6.28}\approx1.0\times10^{7}\,\mathrm{Hz}=10\,\mathrm{MHz}. \]
+\(\nu=c/\lambda\Rightarrow|\Delta\lambda|=\frac{\lambda^2}{c}\Delta\nu=\frac{(6\times10^{-7})^2}{3\times10^8}(1.0\times10^7)\approx1.2\times10^{-14}\,\mathrm{m}=1.2\times10^{-5}\,\mathrm{nm}\).
+실제 원자 스펙트럼의 자연 폭도 \(\sim10\,\mathrm{MHz}\) 수준이다 ✓. (실험에서 보이는 선폭은 대개 Doppler 넓힘(\(\sim\)GHz)이 훨씬 커서 자연 폭을 보려면 특별한 기법이 필요하다.)</p>
+<p><b>파장 의존성.</b> \(\gamma=\omega_0^2\tau\propto\lambda^{-2}\)이므로 <b>\(\Delta\nu\propto\lambda^{-2}\)</b>, 그러나 파장 폭으로 환산하면
+\[ \Delta\lambda=\frac{\lambda^2}{c}\Delta\nu=\frac{\lambda^2}{c}\frac{\omega_0^2\tau}{2\pi}=\frac{\lambda^2}{c}\frac{(2\pi c/\lambda)^2\tau}{2\pi}=2\pi c\tau\quad(\text{일정!}) \]
+\(2\pi c\tau=2\pi(3\times10^8)(6.3\times10^{-24})=1.2\times10^{-14}\,\mathrm{m}\) — 위 계산과 일치 ✓. 즉 <b>자연 선폭은 파장 단위로 보면 모든 전이에서 같은 상수 \(2\pi c\tau\approx0.012\,\mathrm{pm}\)</b>다. 예쁜 결과다.</p></div></div>
+
+<div class="qz" data-q="ex11.4-b"><div class="qq"><b>+α</b> 구동을 끄고 <b>자유 감쇠</b>를 보자. \(t=0\)에 킥을 받아 초기 에너지 \(U_0=\tfrac12mv_0^2\)를 얻은 뒤 스스로 진동하며 복사한다. 감쇠가 약하다(\(\gamma\ll\omega_0\))고 할 때 <b>총 복사 에너지가 정확히 \(U_0\)</b>임을 확인하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 해.</b> \(\ddot x+\gamma\dot x+\omega_0^2x=0\), 초기조건 \(x(0)=0,\ \dot x(0)=v_0\). \(\gamma\ll\omega_0\)이므로 \(\gamma^2\)를 \(\omega_0^2\)에 비해 버리면
+\[ x(t)=\frac{v_0}{\omega_0}e^{-\gamma t/2}\sin(\omega_0 t),\qquad \gamma=\omega_0^2\tau. \]</p>
+<p><b>2) 가속도.</b> 한 주기 안에서 \(e^{-\gamma t}\)의 변화를 무시하면 \(\ddot x\approx-\omega_0^2x\)이므로
+\[ \langle a^2\rangle_{\rm cycle}=\omega_0^4\langle x^2\rangle=\omega_0^4\cdot\frac{v_0^2}{\omega_0^2}e^{-\gamma t}\cdot\frac12=\frac{\omega_0^2v_0^2}{2}e^{-\gamma t}. \]</p>
+<p><b>3) 복사 일률.</b> Larmor를 \(m\tau\)로 쓰면
+\[ P(t)=\frac{\muz q^2}{6\pi c}\langle a^2\rangle=m\tau\cdot\frac{\omega_0^2v_0^2}{2}e^{-\gamma t}=\frac{m\gamma v_0^2}{2}e^{-\gamma t} \]
+(\(\tau\omega_0^2=\gamma\)를 썼다).</p>
+<p><b>4) 총 에너지.</b>
+\[ U_{\rm rad}=\int_0^\infty P(t)\,\dd t=\frac{m\gamma v_0^2}{2}\cdot\frac1\gamma=\boxed{\ \frac12 mv_0^2=U_0\ }\ \checkmark \]
+킥으로 넣어준 에너지가 <b>남김없이</b> 복사로 나간다. \(\gamma\)가 약분되어 사라진다는 점이 아름답다 — 감쇠가 느리면 오래 걸릴 뿐, 총량은 같다.</p>
+<p><b>5) 곁들여: 두 진동자 역설.</b> 똑같은 진동자 두 개를 똑같이 걷어차면 총 복사는 \(2U_0\)여야 한다. 그런데 둘을 <em>같은 자리에 겹쳐</em> 두면 전하 \(2q\)인 진동자 하나와 같고, Larmor는 \(P\propto q^2\)이므로 <b>4배</b>, 즉 \(4U_0\)를 예측하는 듯하다. 어디가 틀렸나?
+<br>답: \(\gamma\)도 \(q^2\)에 비례한다(\(\tau=\muz q^2/6\pi mc\)). 겹친 계는 \(\gamma'=2\gamma\)(질량은 \(2m\)이지만 전하는 \(2q\)이므로 \(\tau'=\muz(2q)^2/6\pi(2m)c=2\tau\))로 <b>2배 빨리</b> 감쇠한다. 총량은 \(\int P\,\dd t\propto (\text{일률})\times(\text{시간})=4\times\tfrac12=2\)배 → \(2U_0\) ✓. 순간 일률은 4배지만 지속 시간이 절반이라 총합이 맞는다. 에너지 보존은 언제나 이긴다.</p></div></div>

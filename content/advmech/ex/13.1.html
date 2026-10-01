@@ -1,0 +1,12 @@
+<div class="exq"><b>상황.</b> 양 끝이 고정된 길이 \(L\)인 줄의 한가운데를 \(h\)만큼 당겨 삼각형으로 만든 뒤 정지 상태에서 놓는다. \(q(x,t)\)를 구한다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(\nu_r=0\), \(\mu_r\)는 사인 Fourier 계수.</div>
+<ol>
+<li>\(q(x,0)=\frac{2h}Lx\) (\(0\le x\le L/2\)), \(\frac{2h}L(L-x)\) (\(L/2\le x\le L\)). \(\dot q(x,0)=0\) → \(\nu_r=0\).</li>
+<li>\(\mu_r=\frac{4h}{L^2}\left[\int_0^{L/2}x\sin\frac{r\pi x}L\dd x+\int_{L/2}^L(L-x)\sin\frac{r\pi x}L\dd x\right]=\frac{8h}{r^2\pi^2}\sin\frac{r\pi}2\).</li>
+<li>\(r\) 짝수: 0. \(r=1,3,5,\ldots\): \(\frac{8h}{\pi^2}\left(1,-\frac19,\frac1{25},\ldots\right)\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ q(x,t)=\frac{8h}{\pi^2}\left[\sin\frac{\pi x}L\cos\omega_1t-\frac19\sin\frac{3\pi x}L\cos\omega_3t+\frac1{25}\sin\frac{5\pi x}L\cos\omega_5t-\cdots\right]\ } \]
+<p class="note">\(\omega_r=\frac{r\pi}L\sqrt{\tau/\rho}\). <b>검산</b> ① \(t=0,\ x=L/2\): \(\frac{8h}{\pi^2}(1+\frac19+\frac1{25}+\cdots)=\frac{8h}{\pi^2}\cdot\frac{\pi^2}8=h\) ✓. ② 짝수 모드는 가운데 마디 → 대칭 초기조건으로 들뜨지 않음 ✓. ③ 에너지 비 \(1:\frac19:\frac1{25}\) → 3배음 −19 dB, 5배음 −28 dB.</p></div>
+<div class="qz" data-q="ex13.1-a"><div class="qq"><b>+α</b> Problem 13-4: \(q(x,0)=\frac{4h}{L^2}x(L-x)\) (포물선), 정지 출발. 모드 진폭과 뜯은 줄과의 차이를 논하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\mu_r=\frac{8h}{L^3}\int_0^Lx(L-x)\sin\frac{r\pi x}L\dd x=\frac{8h}{L^3}\cdot\frac{2L^3}{r^3\pi^3}[1-(-1)^r]=\frac{32h}{r^3\pi^3}\) (홀수), 0 (짝수). \(1/r^3\)로 더 빨리 줄어든다 — 매끄러운 초기 모양(꺾임 없음)일수록 고배음이 약하다(부드러운 음색).</p></div></div>
+<div class="qz" data-q="ex13.1-b"><div class="qq"><b>+α</b> Problem 13-5형: 변위 0인 줄의 가운데 길이 \(2s\) 구간에 초기 속도 \(v_0\)를 준다(해머로 친 피아노 현). \(\nu_r\)을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\nu_r=-\frac{2}{\omega_rL}\int_{L/2-s}^{L/2+s}v_0\sin\frac{r\pi x}L\dd x=-\frac{2v_0}{\omega_rL}\cdot\frac{2L}{r\pi}\sin\frac{r\pi}2\sin\frac{r\pi s}L=-\frac{4v_0}{r\pi\omega_r}\sin\frac{r\pi}2\sin\frac{r\pi s}L\). 역시 홀수 모드만; \(\omega_r\propto r\)이라 진폭 \(\propto1/r^2\)(작은 \(s\)).</p></div></div>

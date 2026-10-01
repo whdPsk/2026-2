@@ -1,0 +1,78 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> U13에서 TEM이 죽은 이유는 "경계가 하나뿐이라 등퍼텐셜 값이 하나"였기 때문이다. 그렇다면 안쪽 심선과 바깥 도체가 서로 다른 퍼텐셜을 가질 수 있는 동축 구조에서는 TEM이 부활해야 한다. TEM이 살아나면 차단 진동수가 있을까, 없을까? 그리고 그 파동의 속도는 얼마일까 — 자유 공간의 \(c\)와 같을까 다를까?</div>
+
+<h4>9.5.3 동축선의 TEM 모드 <span class="en">the TEM mode of a coax</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>2차원 정전기 문제를 풀어 장의 모양 얻기</div>
+<ol>
+<li>안쪽 반지름 \(a\), 바깥 반지름 \(b\)인 동축 도체. TEM이므로 \(E_z=B_z=0\)이고, 유도 2(U13)의 논증에 따라 단면 장은 <b>2차원 정전기 문제</b>의 해다.</li>
+<li>축 대칭이므로 \(\vb E_\perp=E(s)\hat s\). 2차원 Gauss 법칙(단위 길이당 전하 \(\lambda\)):
+\[ E(s)=\frac{A}{s}\qquad(A\ \text{는 상수}) \]
+\(1/s\) 꼴은 2차원 라플라스 방정식의 축대칭 해이며, 경계 \(s=a,b\)에서 서로 다른 두 퍼텐셜을 이어 준다 — U13에서 불가능했던 바로 그 상황이다.</li>
+<li>마찬가지로 \(\vb B_\perp=B(s)\hat\phi\), \(B(s)=A'/s\).</li>
+<li>Maxwell 방정식이 \(\vb B=\frac1c\hat z\times\vb E\)를 요구하므로 \(A'=A/c\). 시간 의존성을 붙이면
+\[ \boxed{\;\tilde{\vb E}(s,\phi,z,t)=\frac{A\,\ee^{\ii(kz-\omega t)}}{s}\hat s,\qquad \tilde{\vb B}=\frac{A\,\ee^{\ii(kz-\omega t)}}{cs}\hat\phi\;} \]</li>
+<li><b>경계 조건 확인.</b> 두 도체 표면에서 \(\vb E\)는 면에 <b>수직</b>(\(\hat s\))이므로 \(\vb E^\parallel=0\) ✓, \(\vb B\)는 면에 <b>평행</b>(\(\hat\phi\))이므로 \(B^\perp=0\) ✓. 모든 조건이 자동으로 만족된다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>분산 관계 — 차단이 없다</div>
+<ol>
+<li>유도 1(U13)의 Helmholtz 방정식에서 TEM이면 \(E_z=B_z=0\)이고, 횡성분 표현식의 분모 \((\omega/c)^2-k^2\)가 0이 아니면 모든 횡성분도 0이 되어 버린다. 따라서 TEM이 존재하려면 반드시
+\[ \boxed{\;k=\frac{\omega}{c}\;} \]</li>
+<li><b>결과 1 — 차단 진동수가 없다.</b> \(k\)는 모든 \(\omega&gt;0\)에서 실수다. 아무리 낮은 진동수도(DC에 임의로 가깝게) 전파된다.</li>
+<li><b>결과 2 — 무분산.</b> \(v_p=v_g=c\). 파속이 모양을 유지한 채 이동하므로 <b>펄스가 퍼지지 않는다</b>. (유전체를 채우면 \(c\to c/n\)이 되고, 그 \(n(\omega)\)의 분산만 남는다.)</li>
+<li><b>결과 3 — 진짜 횡파.</b> 자유 공간 평면파와 완전히 같은 국소 구조(\(\vb E\perp\vb B\perp\hat z\), \(B=E/c\))를 갖는다. 도파관 모드가 "벽 사이를 튕기는 비스듬한 파"였던 것과 대조적이다.</li>
+<li><b>왜 케이블이 이렇게 생겼는가.</b> 이 세 성질(차단 없음·무분산·넓은 대역)이 TV 안테나선, 이더넷 이전의 동축 네트워크, 오실로스코프 프로브가 모두 동축인 이유다. 반대로 도파관은 저손실 고출력 마이크로파에 유리하다 — 유전체가 없어 손실이 작기 때문.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>전송 전력과 특성 임피던스</div>
+<ol>
+<li>Poynting 벡터:
+\[ \vb S=\frac{1}{\muz}\vb E\times\vb B=\frac{1}{\muz}\cdot\frac{A^2\cos^2(kz-\omega t)}{cs^2}\,\hat z \]
+에너지는 <b>도체 사이의 빈 공간</b>을 따라 흐른다 — 도선 "안"이 아니다(U1 Example 8.1의 교훈이 여기서도).</li>
+<li>단면 적분:
+\[ \langle P\rangle=\int_a^b\langle S\rangle\,2\pi s\,\dd s=\frac{\pi A^2}{\muz c}\ln\frac{b}{a} \]
+(\(\langle\cos^2\rangle=\tfrac12\) 사용.) \(1/s^2\)와 \(s\,\dd s\)가 만나 \(\ln(b/a)\)를 낳는다.</li>
+<li><b>회로 언어로 번역.</b> 두 도체 사이 전압과 심선 전류는
+\[ V=\int_a^b E\,\dd s=A\ln\frac ba,\qquad I=\oint \frac{\vb B}{\muz}\cdot\dd\vb l=\frac{2\pi A}{\muz c} \]
+비를 취하면 <b>특성 임피던스</b>
+\[ \boxed{\;Z_0=\frac VI=\frac{\muz c}{2\pi}\ln\frac ba=\frac{1}{2\pi}\sqrt{\frac{\muz}{\eps}}\ln\frac ba\;} \]
+\(\sqrt{\muz/\eps}=377\ \Omega\)(자유 공간 임피던스)이므로 \(Z_0=60\,\Omega\cdot\ln(b/a)\).</li>
+<li><b>수치 감각.</b> \(50\ \Omega\) 케이블이 되려면 \(\ln(b/a)=50/60=0.83\Rightarrow b/a\approx2.3\). 유전체(\(n\approx1.5\))를 채우면 \(Z_0\)가 \(1/n\)배 되므로 실제 \(b/a\)는 더 크다. 실험실 BNC 케이블의 단면비가 대략 이 값이다.
+<br>또한 \(P=V^2/2Z_0\)로 2단계의 결과와 일치함을 확인할 수 있다 — 장 계산과 회로 계산이 만나는 지점.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 동축선 TEM</div>
+\[ \vb E=\frac{A}{s}\hat s\,\ee^{\ii(kz-\omega t)},\qquad \vb B=\frac{A}{cs}\hat\phi\,\ee^{\ii(kz-\omega t)},\qquad k=\frac{\omega}{c}\ (\text{차단 없음, 무분산}) \]
+\[ Z_0=\frac{1}{2\pi}\sqrt{\frac{\muz}{\eps}}\ln\frac ba=60\,\Omega\cdot\ln\frac ba,\qquad \langle P\rangle=\frac{\pi A^2}{\muz c}\ln\frac ba \]
+</div>
+
+<div class="callout"><b class="head">도체 하나 차이가 만드는 것.</b> 직사각형 도파관과 동축선의 차이는 오직 "경계가 연결된 하나인가, 분리된 둘인가"뿐이다. 그런데 그 위상학적 차이 하나가 <b>차단 진동수의 존재 여부</b>, <b>분산의 유무</b>, <b>DC 전송 가능 여부</b>를 전부 뒤집는다. 물리 문제에서 경계의 <b>모양</b>이 아니라 <b>연결 구조</b>가 결정적일 수 있다는 좋은 예다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u14-1"><div class="qq">(참/거짓 + 증명 또는 반례) "동축 케이블에는 TEM 모드만 존재한다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>거짓.</b> TEM이 <b>존재한다</b>는 것과 <b>그것뿐이다</b>는 다르다.
+동축선도 속이 빈 도관이므로 U13의 일반 이론이 그대로 적용되어 TE·TM 모드가 함께 존재하며, 각각 차단 진동수를 갖는다. 최저 TE 모드의 차단 파장은 대략 평균 둘레
+\[ \lambda_c\approx\pi(a+b)\quad\Longrightarrow\quad \nu_c\approx\frac{c}{\pi(a+b)} \]
+<b>실무적 의미:</b> 이 진동수 위에서 케이블을 쓰면 TEM 외의 모드가 함께 전파되어 신호가 <b>분산·왜곡</b>된다. 그래서 동축 케이블에는 항상 상한 사용 주파수가 명시되어 있다(예: \(a+b\sim3\) mm면 \(\nu_c\sim30\) GHz).
+<b>정확한 진술:</b> "동축선은 <b>차단 진동수가 0인 모드(TEM)를 갖는 유일한 종류</b>이며, 통상 그 단일 모드 영역에서 사용한다."
+</div></div>
+
+<div class="qz" data-q="u14-2"><div class="qq">(계산) 진공 유전체 동축선의 \(Z_0=75\ \Omega\)가 되려면 \(b/a\)는 얼마인가? 또 같은 케이블에 \(\epsilon_r=2.25\)인 폴리에틸렌을 채우면 \(Z_0\)와 신호 속도는 어떻게 변하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>(a)</b> \(75=60\ln(b/a)\Rightarrow\ln(b/a)=1.25\Rightarrow b/a=e^{1.25}\approx3.5\).
+<b>(b)</b> 유전체를 채우면 \(\sqrt{\muz/\epsilon}\)에서 \(\epsilon=\epsilon_r\eps\)이므로
+\[ Z_0\to\frac{Z_0}{\sqrt{\epsilon_r}}=\frac{75}{1.5}=50\ \Omega \]
+속도는
+\[ v=\frac{c}{\sqrt{\epsilon_r}}=\frac{c}{1.5}=2\times10^8\ \mathrm{m/s}\quad(0.67c) \]
+<b>해석:</b> 케이블 규격표의 "velocity factor 0.66"이 바로 이 값이다. 신호 지연을 계산할 때 \(c\)가 아니라 \(0.66c\)를 써야 하는 이유이고, 같은 기하로 75 Ω과 50 Ω 케이블을 만들 수 있는 이유이기도 하다.
+</div></div>
+
+<div class="qz" data-q="u14-3"><div class="qq">(개념·연결) 동축선의 TEM 모드에서 에너지는 어디로 흐르는가? 이 답이 U1(Poynting 정리)의 저항 도선 예제와 어떻게 연결되는지 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>에너지는 두 도체 사이의 빈 공간(유전체 영역)을 따라 \(+\hat z\)로 흐른다.</b> \(\vb S\propto1/s^2\)이므로 심선에 가까울수록 밀도가 높지만, 도체 <b>내부</b>에는 (이상 도체라면) 장이 없으므로 에너지가 전혀 흐르지 않는다.
+<b>U1과의 연결.</b> Example 8.1에서 저항 도선의 에너지가 "도선 속을 따라"가 아니라 <b>주위 장을 타고 흐르다 표면으로 스며든다</b>고 했다. 동축선은 그 그림의 이상적 버전이다:
+<br>• 이상 도체(\(\sigma=\infty\)): \(\vb E^\parallel=0\)이므로 \(\vb S\)에 도체 쪽 성분이 없다 ⇒ 손실 없이 축 방향으로만 흐름.
+<br>• 실제 도체(\(\sigma\) 유한): 표면에 작은 \(E_z\)가 생기고, 그로 인한 \(\vb S\)의 <b>안쪽 성분</b>이 정확히 Joule 발열을 공급한다 — Example 8.1과 동일한 구조. 이것이 케이블 감쇠의 물리적 정체다.
+<b>한 줄 요약:</b> "전선은 에너지를 나르는 관이 아니라 <b>장을 안내하는 레일</b>이다. 에너지는 언제나 장 속에 있다."
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> 동축선에서 TEM이 살아나는 이유를 경계의 연결 구조로 설명하고, 장의 형태·무분산성·특성 임피던스를 유도할 수 있다.</div>

@@ -1,0 +1,200 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> Liénard–Wiechert 퍼텐셜을 \(\vb{E}=-\nabla V-\partial\vb{A}/\partial t\)에 넣으면 무엇이 나올까? 미분이 까다로운 이유는 \(\boldsymbol{\rr}\)과 \(\vb{v}\)가 모두 \(t_r\)에서 평가되고, \(t_r\) 자체가 \(\vb{r},t\)의 함수이기 때문이다. 결과에 \(\vb{a}\)(가속도)가 들어갈지 먼저 생각해 보라 — 퍼텐셜에는 \(\vb{a}\)가 없었는데도. 그리고 정지 전하에서 \(E\sim\rr^{-2}\)였다면, 가속도에 비례하는 항은 몇 제곱으로 떨어져야 "복사"가 될 수 있을까?</div>
+
+<h4>10.3.2 미분의 열쇠 — \(\nabla t_r\)과 \(\partial t_r/\partial t\) <span class="en">differentiating through the retarded time</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>두 개의 운동학적 미분과 장의 최종 형태</div>
+<ol>
+<li><b>왜 어려운가.</b> \(\boldsymbol{\rr}=\vb{r}-\vb{w}(t_r)\), \(\vb{v}=\dot{\vb{w}}(t_r)\)이고 \(t_r\)은 \(|\vb{r}-\vb{w}(t_r)|=c(t-t_r)\)로 <b>암묵 정의</b>된다. §10.2와 결정적으로 다른 점: 거기서는 \(\boldsymbol{\rr}=\vb{r}-\vb{r}'\)이고 \(\vb{r}'\)이 독립 변수라 \(\nabla\rr=\rhat\)이었다. 여기서는 그렇지 않다.</li>
+<li><b>\(\partial t_r/\partial t\) 먼저 (쉬운 쪽).</b> \(\rr=c(t-t_r)\)의 양변을 \(t\)로 미분:
+\[ \frac{\partial\rr}{\partial t}=c\left(1-\frac{\partial t_r}{\partial t}\right) \]
+한편 \(\rr=|\boldsymbol{\rr}|\)이므로 \(\dfrac{\partial\rr}{\partial t}=\rhat\cdot\dfrac{\partial\boldsymbol{\rr}}{\partial t}=\rhat\cdot\left(-\vb{v}\dfrac{\partial t_r}{\partial t}\right)=-(\rhat\cdot\vb{v})\dfrac{\partial t_r}{\partial t}\).</li>
+<li>연립: \(-(\rhat\cdot\vb{v})T=c(1-T)\), \(T\equiv\partial t_r/\partial t\). 풀면
+\[ \boxed{\;\frac{\partial t_r}{\partial t}=\frac{c}{c-\rhat\cdot\vb{v}}=\frac{1}{1-\rhat\cdot\vb{v}/c}=\frac{c\,\rr}{\boldsymbol{\rr}\cdot\vb{u}}\;} \]
+여기서 \(\vb{u}\equiv c\,\rhat-\vb{v}\)를 도입했다(\(\boldsymbol{\rr}\cdot\vb{u}=c\rr-\boldsymbol{\rr}\cdot\vb{v}\)). <b>또 그 인자다.</b> 접근하는 입자의 시계가 관측자에게 빨리 흐르는 것처럼 보인다 — Doppler의 뿌리.</li>
+<li><b>\(\nabla t_r\) (어려운 쪽).</b> \(\rr=c(t-t_r)\Rightarrow\nabla\rr=-c\nabla t_r\). 좌변을 직접 전개:
+\[ \nabla\rr=\nabla\sqrt{\boldsymbol{\rr}\cdot\boldsymbol{\rr}}=\frac{1}{2\rr}\nabla(\boldsymbol{\rr}\cdot\boldsymbol{\rr})=\frac{1}{\rr}\big[(\boldsymbol{\rr}\cdot\nabla)\boldsymbol{\rr}+\boldsymbol{\rr}\times(\curl\boldsymbol{\rr})\big] \]</li>
+<li>두 조각을 계산한다. \(\boldsymbol{\rr}=\vb{r}-\vb{w}(t_r)\)이므로
+<br>• \((\boldsymbol{\rr}\cdot\nabla)\boldsymbol{\rr}=(\boldsymbol{\rr}\cdot\nabla)\vb{r}-(\boldsymbol{\rr}\cdot\nabla)\vb{w}=\boldsymbol{\rr}-\vb{v}(\boldsymbol{\rr}\cdot\nabla t_r)\)
+<br>• \(\curl\boldsymbol{\rr}=\curl\vb{r}-\curl\vb{w}=0-(-\vb{v}\times\nabla t_r)=\vb{v}\times\nabla t_r\)
+<br>(둘 다 연쇄 법칙: \(\partial w_i/\partial x_j=\dot w_i\,\partial t_r/\partial x_j\).)</li>
+<li>BAC–CAB로 삼중곱 정리: \(\boldsymbol{\rr}\times(\vb{v}\times\nabla t_r)=\vb{v}(\boldsymbol{\rr}\cdot\nabla t_r)-\nabla t_r(\boldsymbol{\rr}\cdot\vb{v})\). 5단계와 더하면 \(\vb{v}(\boldsymbol{\rr}\cdot\nabla t_r)\) 항이 <b>상쇄</b>되고
+\[ -c\nabla t_r=\frac{1}{\rr}\big[\boldsymbol{\rr}-(\boldsymbol{\rr}\cdot\vb{v})\nabla t_r\big] \]</li>
+<li>\(\nabla t_r\)에 대해 풀면
+\[ \boxed{\;\nabla t_r=-\frac{\boldsymbol{\rr}}{c\,\rr-\boldsymbol{\rr}\cdot\vb{v}}=-\frac{\boldsymbol{\rr}}{\boldsymbol{\rr}\cdot\vb{u}}\;} \]</li>
+<li><b>나머지 계산의 구조.</b> 이 두 결과를 \(\nabla V\)와 \(\partial\vb{A}/\partial t\)에 대입하고, \(\nabla(\boldsymbol{\rr}\cdot\vb{v})=\vb{v}+(\boldsymbol{\rr}\cdot\vb{a}-v^2)\nabla t_r\) 같은 중간 결과를 조합하면(여기서 처음으로 <b>\(\vb{a}\equiv\dot{\vb{v}}(t_r)\)</b>가 등장한다 — \(\vb{v}\)를 \(t_r\)로 미분해야 하기 때문) 두 항의 합에서 대부분이 상쇄되고 놀랍도록 간결한 결과가 남는다:
+\[ \boxed{\;\vb{E}(\vb{r},t)=\frac{q}{4\pi\eps}\frac{\rr}{(\boldsymbol{\rr}\cdot\vb{u})^3}\Big[(c^2-v^2)\vb{u}+\boldsymbol{\rr}\times(\vb{u}\times\vb{a})\Big],\qquad \vb{u}\equiv c\,\rhat-\vb{v}\;} \]</li>
+<li><b>자기장.</b> \(\vb{A}=(\vb{v}/c^2)V\)이므로 \(\curl\vb{A}=\dfrac{1}{c^2}\big[V(\curl\vb{v})-\vb{v}\times\nabla V\big]\). \(\curl\vb{v}=-\vb{a}\times\nabla t_r\)와 위의 \(\nabla V\)를 넣고 정리하면 대괄호 안이 \(\vb{E}\)의 대괄호와 거의 같아지고(차이는 \(\vb{v}\) vs \(\vb{u}\), 그런데 \(\boldsymbol{\rr}\)과 외적하므로 \(\boldsymbol{\rr}\)에 비례하는 차이는 사라진다) 최종적으로
+\[ \boxed{\;\vb{B}(\vb{r},t)=\frac{1}{c}\,\rhat\times\vb{E}(\vb{r},t)\;} \]</li>
+<li><b>즉시 읽어야 할 사실.</b> 점전하의 \(\vb{B}\)는 <b>언제나</b> \(\vb{E}\)에 수직이고, <b>언제나</b> \(\rhat\)(지연 위치 방향)에 수직이다. 임의의 운동에 대해 예외 없이. 그리고 \(|\vb{B}|\le|\vb{E}|/c\).</li>
+<li><b>검산 (정지).</b> \(\vb{v}=\vb{a}=0\Rightarrow\vb{u}=c\rhat\), \(\boldsymbol{\rr}\cdot\vb{u}=c\rr\):
+\[ \vb{E}=\frac{q}{4\pi\eps}\frac{\rr\cdot c^2\cdot c\,\rhat}{c^3\rr^3}=\frac{q}{4\pi\eps}\frac{\rhat}{\rr^2} \] ✓ Coulomb.</li>
+<li><b>전기역학의 종착점.</b> 이 두 식 + 로런츠 힘 법칙 \(\vb{F}=Q(\vb{E}+\vb{V}\times\vb{B})\)를 합치면, 한 점전하가 다른 점전하에 가하는 힘의 완전한 공식이 된다. 중첩 원리와 함께 <b>고전 전기역학 전체</b>가 그 안에 들어 있다.</li>
+</ol></div>
+
+<h4>10.3.2 속도장과 가속도장 <span class="en">velocity field vs acceleration field</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>\(1/\rr^2\)와 \(1/\rr\)의 분리 — 그리고 왜 복사는 가속에서만 나오는가</div>
+<ol>
+<li><b>각 조각의 \(\rr\) 차수를 센다.</b>
+<br>• \(\vb{u}=c\rhat-\vb{v}\): 크기가 \(\rr\)에 <b>무관</b> (\(c-v\le|\vb{u}|\le c+v\)) ⇒ \(\rr^0\)
+<br>• \(\boldsymbol{\rr}\cdot\vb{u}=\rr(c-\rhat\cdot\vb{v})\) ⇒ \(\rr^1\), 따라서 \((\boldsymbol{\rr}\cdot\vb{u})^3\sim\rr^3\)
+<br>• 앞의 스칼라 \(\rr\) ⇒ \(\rr^1\)</li>
+<li><b>제1항 (속도장 / 일반화 Coulomb 장).</b>
+\[ \vb{E}_v=\frac{q}{4\pi\eps}\frac{\rr(c^2-v^2)\vb{u}}{(\boldsymbol{\rr}\cdot\vb{u})^3}\ \sim\ \frac{\rr^1\cdot\rr^0}{\rr^3}=\boxed{\rr^{-2}} \]
+<b>\(\vb{a}\)에 의존하지 않는다.</b> 그래서 <b>속도장(velocity field)</b>이라 부른다. \(\vb{v}=0\)에서 정확히 Coulomb 장이 되므로 <b>일반화 Coulomb 장</b>이라고도 한다.</li>
+<li><b>제2항 (가속도장 / 복사장).</b>
+\[ \vb{E}_a=\frac{q}{4\pi\eps}\frac{\rr\,\boldsymbol{\rr}\times(\vb{u}\times\vb{a})}{(\boldsymbol{\rr}\cdot\vb{u})^3}\ \sim\ \frac{\rr^1\cdot\rr^1}{\rr^3}=\boxed{\rr^{-1}} \]
+<b>\(\vb{a}\)에 선형</b>이다. \(\vb{a}=0\)이면 통째로 사라진다.</li>
+<li><b>먼 곳에서는 가속도장이 압도한다.</b> \(\rr^{-1}\gg\rr^{-2}\). 이것이 \(\vb{E}_a\)를 <b>복사장(radiation field)</b>이라 부르는 이유이며, §11 전체의 주인공이다.</li>
+<li><b>왜 \(\rr^{-1}\)만이 복사인가 — Poynting 논증.</b> 반지름 \(\rr\)의 구면을 통과하는 총 일률은
+\[ P=\oint\vb{S}\cdot\dd\vb{a}=\frac{1}{\muz}\oint(\vb{E}\times\vb{B})\cdot\dd\vb{a}\ \propto\ |\vb{E}|^2\rr^2 \]
+(\(|\vb{B}|=|\vb{E}|/c\), \(\vb{S}\)는 \(\rhat\) 성분을 가짐.)
+<br>• \(\vb{E}_v\)만: \(P\sim(\rr^{-2})^2\rr^2=\rr^{-2}\to0\). 무한대에 도달 <b>못함</b>.
+<br>• \(\vb{E}_a\)만: \(P\sim(\rr^{-1})^2\rr^2=\rr^{0}=\)상수. <b>영원히 흘러 나감</b> ⇒ 진짜 복사.
+<br>• 교차항: \(P\sim\rr^{-2}\cdot\rr^{-1}\cdot\rr^2=\rr^{-1}\to0\). 기여 없음.
+<br><b>결론: 가속하지 않는 전하는 복사하지 않는다.</b></li>
+<li><b>가속도장은 횡파다.</b> \(\vb{E}_a\propto\boldsymbol{\rr}\times(\cdots)\)이므로 자동으로 \(\boldsymbol{\rr}\)에 수직:
+\[ \rhat\cdot\vb{E}_a=0 \]
+반면 속도장은 \(\vb{u}=c\rhat-\vb{v}\)에 비례하므로 \(\rhat\) 성분을 가진다(종파 성분 존재). 이 차이가 "복사장은 횡파"라는 §11의 대전제를 만든다.</li>
+<li><b>구조를 외우는 법.</b> \(\vb{E}_a\)를 BAC–CAB로 풀면 \(\boldsymbol{\rr}\times(\vb{u}\times\vb{a})=\vb{u}(\boldsymbol{\rr}\cdot\vb{a})-\vb{a}(\boldsymbol{\rr}\cdot\vb{u})\). 특히 순간적으로 정지한 전하(\(\vb{v}=0\), \(\vb{u}=c\rhat\))에서는
+\[ \vb{E}_a=\frac{q}{4\pi\eps c^2\rr}\big[\rhat(\rhat\cdot\vb{a})-\vb{a}\big]=-\frac{q\,\vb{a}_\perp}{4\pi\eps c^2\rr},\qquad |\vb{E}_a|=\frac{q\,a\sin\theta}{4\pi\eps c^2\rr} \]
+가속도의 <b>수직 성분</b>만 복사한다. \(\sin\theta\) 패턴 — 쌍극자 복사 패턴이 여기서 태어난다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>Example 10.4 — 등속 운동: "현재 위치를 가리키는" 놀라움과 \(\gamma\) 납작해짐</div>
+<ol>
+<li><b>설정.</b> \(\vb{a}=0\), \(\vb{w}(t)=\vb{v}t\). 유도 1의 결과에서 둘째 항이 사라진다:
+\[ \vb{E}=\frac{q}{4\pi\eps}\frac{\rr(c^2-v^2)\vb{u}}{(\boldsymbol{\rr}\cdot\vb{u})^3} \]</li>
+<li><b>결정적 항등식.</b> \(\rr\vb{u}\)를 계산한다. \(\vb{u}=c\rhat-\vb{v}\)이므로 \(\rr\vb{u}=c\boldsymbol{\rr}-\rr\vb{v}\). 여기에 \(\boldsymbol{\rr}=\vb{r}-\vb{v}t_r\), \(\rr=c(t-t_r)\)를 넣으면
+\[ \rr\vb{u}=c(\vb{r}-\vb{v}t_r)-c(t-t_r)\vb{v}=c(\vb{r}-\vb{v}t)=c\vb{R} \]
+여기서 \(\boxed{\vb{R}\equiv\vb{r}-\vb{v}t}\)는 <b>현재</b> 위치에서 관측점으로 향하는 벡터다.<br>
+<b>이것이 이 절 전체의 마법이다.</b> \(t_r\)이 완전히 상쇄되어 사라졌다.</li>
+<li><b>분모.</b> U18 유도 4에서 이미 계산했다:
+\[ \boldsymbol{\rr}\cdot\vb{u}=c\rr-\boldsymbol{\rr}\cdot\vb{v}=Rc\sqrt{1-\frac{v^2\sin^2\theta}{c^2}} \]
+(\(\theta\)는 \(\vb{R}\)과 \(\vb{v}\) 사이 각.)</li>
+<li><b>조립.</b>
+\[ \vb{E}=\frac{q}{4\pi\eps}\frac{(c^2-v^2)\,c\vb{R}}{R^3c^3(1-v^2\sin^2\theta/c^2)^{3/2}} =\boxed{\;\frac{q}{4\pi\eps}\frac{1-v^2/c^2}{(1-v^2\sin^2\theta/c^2)^{3/2}}\frac{\hat{\vb{R}}}{R^2}\;} \]</li>
+<li><b>놀라움 1 — 현재 위치를 가리킨다.</b> \(\vb{E}\parallel\hat{\vb{R}}\), 즉 전기장은 <b>입자가 지금 있는 곳</b>에서 정확히 방사상으로 뻗어 나간다. 그런데 "소식"은 <b>지연</b> 위치에서 출발했다! 장이 마치 입자의 미래 위치를 미리 알고 외삽(extrapolate)한 것처럼 행동한다.<br>
+<b>이것은 초광속이 아니다.</b> 입자가 등속으로 계속 갈 것이라는 정보가 이미 과거의 신호에 담겨 있어서, 직선 외삽이 우연히(그러나 필연적으로) 맞아떨어질 뿐이다. 만약 입자가 도중에 가속하면 이 외삽은 즉시 깨지고, 그 "깨짐"이 바로 유도 4의 킹크(복사)다.</li>
+<li><b>놀라움 2 — 팬케이크 납작해짐.</b> \(\beta\equiv v/c\), \(\gamma=(1-\beta^2)^{-1/2}\)로 두고 각도별로 본다:
+<br>• <b>전후방</b> \(\theta=0,\pi\): \(\sin\theta=0\Rightarrow\vb{E}=\dfrac{q(1-\beta^2)}{4\pi\eps R^2}\hat{\vb{R}}=\dfrac{1}{\gamma^2}\times\)(정지 Coulomb) — <b>\(\gamma^{-2}\)만큼 약해짐</b>
+<br>• <b>수직</b> \(\theta=\pi/2\): \(\dfrac{1-\beta^2}{(1-\beta^2)^{3/2}}=\dfrac{1}{\sqrt{1-\beta^2}}=\gamma\) — <b>\(\gamma\)배 강해짐</b>
+<br>비: \(E_\perp/E_\parallel=\gamma^3\). 빠른 전하의 장은 운동 방향에 수직한 <b>납작한 팬케이크</b>로 압축된다.</li>
+<li><b>자기장.</b> \(\rhat\)을 \(\vb{R}\)로 표현한다:
+\[ \rhat=\frac{\boldsymbol{\rr}}{\rr}=\frac{(\vb{r}-\vb{v}t)+(t-t_r)\vb{v}}{\rr}=\frac{\vb{R}}{\rr}+\frac{\vb{v}}{c} \]
+\(\vb{E}\parallel\vb{R}\)이므로 \(\dfrac{\vb{R}}{\rr}\times\vb{E}=0\). 따라서
+\[ \vb{B}=\frac{1}{c}\rhat\times\vb{E}=\frac{1}{c^2}(\vb{v}\times\vb{E}) \]
+자기력선은 운동 축을 둘러싸고 원을 그린다.</li>
+<li><b>비상대론 극한.</b> \(\beta\ll1\):
+\[ \vb{E}\approx\frac{q}{4\pi\eps}\frac{\hat{\vb{R}}}{R^2},\qquad \vb{B}\approx\frac{\muz}{4\pi}\frac{q(\vb{v}\times\hat{\vb{R}})}{R^2} \]
+첫째는 Coulomb 법칙, 둘째는 §5에서 "조심해서 쓰라"고 경고받았던 <b>점전하판 Biot–Savart 법칙</b>이다. 이제 그 정확한 유효 범위(\(v\ll c\), \(\vb{a}=0\))를 알게 되었다.</li>
+<li><b>역사 주석.</b> 등속 전하의 이 장은 Oliver Heaviside가 1888년에 얻었다 — 특수상대성이론(1905)보다 17년 앞선다. \(\gamma\)가 상대론 이전에 이미 전자기학에서 나타나고 있었다는 사실이 시사적이다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>Example 10.5 — Thomson 킥 모형: 복사장을 그림으로 만들어내기</div>
+<ol>
+<li><b>설정.</b> 전하가 원점에 정지해 있다가 \(t=0\)에 짧은 시간 \(\tau\) 동안 \(\hat{\vb{x}}\) 방향으로 "차여서" 속력 \(v\)에 도달한 뒤 등속으로 날아간다. 시각 \(t\gg\tau\)에 장을 그린다.</li>
+<li><b>바깥 영역 \(\rr&gt;ct\).</b> 킥의 소식이 아직 도달하지 않았다. 장은 <b>원점에 정지한 전하</b>의 Coulomb 장 그대로. 장선은 원점에서 방사상.</li>
+<li><b>안쪽 영역 \(\rr&lt;c(t-\tau)\).</b> 소식이 도달했고 입자는 등속이다. 유도 3에 의해 장선은 <b>현재 위치 \(\vb{v}t\)</b>에서 방사상으로 뻗으며, \(\gamma\)만큼 납작하다.</li>
+<li><b>껍질 \(c(t-\tau)&lt;\rr&lt;ct\) — 여기가 핵심.</b> 이 껍질 안에는 전하가 없으므로 \(\divg\vb{E}=0\)이고, <b>장선은 시작하거나 끝날 수 없다</b>. 바깥의 (원점 중심) 장선과 안쪽의 (현재 위치 중심) 장선이 반드시 <b>이어져야</b> 한다. 두 중심이 어긋나 있으므로 장선은 껍질 안에서 급격히 꺾인다 — <b>킹크(kink)</b>. 그 결과 큰 <b>접선(횡) 성분</b>이 생긴다.</li>
+<li><b>킹크의 크기를 정량화하자.</b> 각 \(\theta\) 방향에서, 두 장선의 횡방향 어긋남은 현재 위치의 횡 변위 \(\approx vt\sin\theta\)이다. 껍질의 반경 방향 두께는 \(c\tau\)이다. 장선이 이 어긋남을 껍질 두께 안에서 메워야 하므로
+\[ \frac{E_\perp}{E_r}=\frac{vt\sin\theta}{c\tau} \]</li>
+<li><b>가속도로 바꿔 쓴다.</b> \(v=a\tau\)(킥 동안의 평균 가속도), 그리고 껍질의 위치 \(\rr=ct\Rightarrow t=\rr/c\):
+\[ \frac{E_\perp}{E_r}=\frac{a\tau\,t\sin\theta}{c\tau}=\frac{a\,t\sin\theta}{c}=\frac{a\,\rr\sin\theta}{c^2} \]
+<b>\(\tau\)가 상쇄된다</b> — 킥의 세부 사항에 무관하다는 뜻.</li>
+<li><b>절대 크기.</b> \(E_r=\dfrac{q}{4\pi\eps\rr^2}\)이므로
+\[ E_\perp=\frac{q}{4\pi\eps\rr^2}\cdot\frac{a\rr\sin\theta}{c^2}=\boxed{\frac{q\,a\sin\theta}{4\pi\eps c^2\,\rr}} \]
+<b>\(\rr^{-1}\)</b>! 그리고 <b>\(a\)에 비례</b>, <b>\(\sin\theta\)</b> 패턴.</li>
+<li><b>일반 공식과의 정확한 일치.</b> 유도 2의 7단계에서 순간 정지 전하(\(\vb{v}=0\))의 가속도장은
+\[ |\vb{E}_a|=\frac{q\,a\sin\theta}{4\pi\eps c^2\rr} \]
+<b>완전히 동일하다.</b> 두 페이지짜리 브루트포스 계산의 결과를, 장선이 끊기지 않는다는 그림 하나로 재현한 것이다. (\(\muz/4\pi=1/4\pi\eps c^2\)이므로 흔히 쓰는 \(E_{\rm rad}=\dfrac{\muz q\,a\sin\theta}{4\pi\rr}\) 형태와도 같다.)</li>
+<li><b>자기장과 에너지 흐름.</b> 바깥 구 밖에서는 \(\vb{B}=0\)(정지 전하), 안쪽 구에서는 축을 둘러싼 원형(유도 3). 껍질 안에서는 \(\vb{B}=\dfrac{1}{c}\rhat\times\vb{E}\)이고 \(\vb{E}\)가 큰 접선 성분을 가지므로, Poynting 벡터 \(\vb{S}=\dfrac{1}{\muz}\vb{E}\times\vb{B}\)가 <b>상당한 방사 성분</b>을 갖는다.</li>
+<li><b>물리적 그림.</b> 광속으로 팽창하는 이 껍질이 곧 <b>복사 펄스</b>다. 에너지가 전하로부터 영원히 떨어져 나가 다시는 돌아오지 않는다. "가속하는 전하는 복사한다"의 가장 직관적인 증명.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 임의 운동 점전하의 장</div>
+\[ \boxed{\;\vb{E}(\vb{r},t)=\frac{q}{4\pi\eps}\frac{\rr}{(\boldsymbol{\rr}\cdot\vb{u})^3}\Big[\underbrace{(c^2-v^2)\vb{u}}_{\text{속도장}\ \sim\rr^{-2}}+\underbrace{\boldsymbol{\rr}\times(\vb{u}\times\vb{a})}_{\text{가속도장}\ \sim\rr^{-1}}\Big]\;} \]
+\[ \vb{u}\equiv c\,\rhat-\vb{v},\qquad \boldsymbol{\rr}\cdot\vb{u}=c\rr-\boldsymbol{\rr}\cdot\vb{v},\qquad \boxed{\vb{B}=\frac{1}{c}\,\rhat\times\vb{E}} \]
+<p class="note">\(\boldsymbol{\rr},\vb{v},\vb{a}\) 모두 <b>지연 시각</b>에서. 보조 결과: \(\nabla t_r=-\dfrac{\boldsymbol{\rr}}{\boldsymbol{\rr}\cdot\vb{u}}\), \(\dfrac{\partial t_r}{\partial t}=\dfrac{c\rr}{\boldsymbol{\rr}\cdot\vb{u}}\).</p></div>
+
+<div class="formula"><div class="ftitle">암기 — 등속 전하 (Heaviside, 1888)</div>
+\[ \vb{E}(\vb{r},t)=\frac{q}{4\pi\eps}\frac{1-v^2/c^2}{\left(1-\dfrac{v^2\sin^2\theta}{c^2}\right)^{3/2}}\frac{\hat{\vb{R}}}{R^2},\qquad \vb{B}=\frac{1}{c^2}(\vb{v}\times\vb{E}) \]
+<p class="note">\(\vb{R}=\vb{r}-\vb{v}t\)는 <b>현재</b> 위치에서의 벡터, \(\theta=\angle(\vb{R},\vb{v})\). 핵심 항등식은 \(\rr\vb{u}=c\vb{R}\). 전후방 \(\times\gamma^{-2}\), 수직 \(\times\gamma\), 비 \(\gamma^3\).</p></div>
+
+<div class="callout"><b class="head">"현재 위치를 가리킨다"를 오해하지 말 것.</b> 이것은 정보가 초광속으로 전달된다는 뜻이 <b>절대</b> 아니다. 등속 운동에서는 "입자가 이 속도로 계속 간다"는 정보가 이미 지연 시각의 신호에 완전히 담겨 있어, 장이 직선 외삽한 결과가 현재 위치와 일치할 뿐이다. 입자가 갑자기 방향을 바꾸면 그 소식은 여전히 \(c\)로 전파하며, 외삽이 틀렸던 자리에 정확히 <b>킹크 = 복사</b>가 남는다(유도 4). 등속 결과의 우아함과 가속 시의 복사는 <b>같은 동전의 양면</b>이다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u19-1"><div class="qq">(참/거짓 + 증명 또는 반례) "임의로 운동하는 점전하에 대해 \(\vb{B}\perp\vb{E}\)이고 \(|\vb{B}|=|\vb{E}|/c\)이다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>첫 부분 참, 둘째 부분 거짓</b>(일반적으로는 부등호).</p>
+<p><b>\(\vb{B}\perp\vb{E}\) — 참, 증명.</b> 유도 1의 9단계에서 \(\vb{B}=\dfrac{1}{c}\rhat\times\vb{E}\)이다. 외적의 성질상 \(\vb{B}\)는 \(\rhat\)과 \(\vb{E}\) <b>둘 다에</b> 수직이다. 따라서 \(\vb{E}\cdot\vb{B}=0\)이 <b>임의의 궤적, 임의의 시각, 임의의 관측점에서</b> 성립한다. ∎<br>
+(참고: \(\vb{E}\cdot\vb{B}\)는 로런츠 불변량이므로, 어느 한 관성계에서 0이면 모든 관성계에서 0이다. 점전하 장의 강한 구조적 성질.)</p>
+<p><b>\(|\vb{B}|=|\vb{E}|/c\) — 일반적으로 거짓.</b>
+\[ |\vb{B}|=\frac{1}{c}|\rhat\times\vb{E}|=\frac{1}{c}|\vb{E}|\sin\alpha,\qquad \alpha=\angle(\rhat,\vb{E}) \]
+따라서 \(|\vb{B}|=\dfrac{|\vb{E}|}{c}\)는 \(\vb{E}\perp\rhat\)일 때만 성립한다.</p>
+<p><b>반례.</b> 정지 전하(\(\vb{v}=\vb{a}=0\)): \(\vb{E}=\dfrac{q\rhat}{4\pi\eps\rr^2}\)로 \(\vb{E}\parallel\rhat\Rightarrow\alpha=0\Rightarrow\vb{B}=0\). 명백히 \(|\vb{E}|/c\neq0\)이다.</p>
+<p><b>언제 등호가 성립하나.</b> <b>복사장(가속도장)</b>에서는 \(\vb{E}_a\propto\boldsymbol{\rr}\times(\cdots)\perp\rhat\)이므로(유도 2의 6단계) \(\alpha=\pi/2\), 따라서 \(|\vb{B}_a|=|\vb{E}_a|/c\)가 <b>정확히</b> 성립한다. 즉 등호는 먼 거리(복사 영역)에서 점근적으로 회복되며, 이것이 복사장을 평면파처럼 다룰 수 있는 근거다.</p>
+<p><b>정확한 답안:</b> "\(\vb{B}\perp\vb{E}\)와 \(\vb{B}\perp\rhat\)는 항상 참. \(|\vb{B}|=|\vb{E}|/c\)는 \(\vb{E}\perp\rhat\)인 경우 — 즉 복사장 성분에 대해서만 — 참."</p>
+</div></div>
+
+<div class="qz" data-q="u19-2"><div class="qq">(점근·차수 분석, 지수 명시) \(\vb{E}=\vb{E}_v+\vb{E}_a\)일 때 \(|\vb{E}_v|,|\vb{E}_a|\)의 \(\rr\) 지수를 세고, 구면 Poynting 플럭스에서 세 종류의 항(\(vv\), \(aa\), 교차)의 지수를 각각 구하라. 또 \(\vb{E}_a\)가 \(\vb{E}_v\)를 압도하기 시작하는 거리 \(\rr^*\)를 추정하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 장의 지수.</b> \((\boldsymbol{\rr}\cdot\vb{u})^3\sim\rr^3\), 앞 인자 \(\rr^1\), \(|\vb{u}|\sim\rr^0\), \(|\boldsymbol{\rr}\times(\vb{u}\times\vb{a})|\sim\rr^1\):
+\[ |\vb{E}_v|\sim\frac{\rr^1\cdot\rr^0}{\rr^3}=\rr^{-2},\qquad |\vb{E}_a|\sim\frac{\rr^1\cdot\rr^1}{\rr^3}=\rr^{-1} \]</p>
+<p><b>2) Poynting 플럭스 \(P=\oint\vb{S}\cdot\dd\vb{a}\propto|\vb{E}|^2\rr^2\)의 세 항.</b>
+<br>• \(vv\) 항: \((\rr^{-2})^2\rr^2=\rr^{-2}\ \to0\)
+<br>• 교차항 \(va\): \((\rr^{-2})(\rr^{-1})\rr^2=\rr^{-1}\ \to0\)
+<br>• \(aa\) 항: \((\rr^{-1})^2\rr^2=\rr^{0}=\)<b>상수</b>
+<br>\(\rr\to\infty\)에서 살아남는 것은 오직 \(aa\) 항. 이것이 복사 일률이며, 순간 정지 전하에 대해 각적분하면 Larmor 공식 \(P=\dfrac{\muz q^2a^2}{6\pi c}\)가 나온다.</p>
+<p><b>3) 교차 거리 \(\rr^*\).</b> 두 항의 크기를 (순간 정지, \(\theta=\pi/2\) 기준으로) 비교:
+\[ |\vb{E}_v|\approx\frac{q}{4\pi\eps\rr^2},\qquad |\vb{E}_a|\approx\frac{qa}{4\pi\eps c^2\rr} \]
+\[ \frac{|\vb{E}_a|}{|\vb{E}_v|}=\frac{a\,\rr}{c^2}\quad\Longrightarrow\quad \boxed{\rr^*=\frac{c^2}{a}} \]</p>
+<p><b>4) 수치 감각.</b>
+<br>• 진동수 \(\omega\), 진폭 \(d\)로 진동하는 전하: \(a\sim\omega^2d\), \(\rr^*\sim\dfrac{c^2}{\omega^2 d}=\dfrac{\lambda^2}{4\pi^2 d}\). 즉 \(d\ll\lambda\)인 통상적 안테나에서는 \(\rr^*\gg\lambda\)가 아니라 \(\rr^*\sim\lambda^2/d\)로, "근거리장/원거리장" 경계가 \(\sim\lambda\) 스케일에서 시작함을 반영한다.
+<br>• 지구 표면 중력 가속도 \(a=9.8\,\mathrm{m/s^2}\): \(\rr^*=c^2/a\approx9.2\times10^{15}\,\mathrm{m}\approx1\)광년. 자유낙하하는 전자의 복사는 사실상 관측 불가능하다.
+<br>• 선형 가속기 \(a\sim10^{20}\,\mathrm{m/s^2}\): \(\rr^*\sim10^{-3}\,\mathrm{m}\). 밀리미터만 떨어져도 복사가 지배한다.</p>
+<p><b>지수 요약표.</b> \(|\vb{E}_v|:\rr^{-2}\), \(|\vb{E}_a|:\rr^{-1}\), \(P_{vv}:\rr^{-2}\), \(P_{va}:\rr^{-1}\), \(P_{aa}:\rr^{0}\).</p>
+</div></div>
+
+<div class="qz" data-q="u19-3"><div class="qq">(Example 10.4 변형 계산) 전하가 \(v=0.8c\)로 등속 운동한다. (a) \(\theta=0^\circ,90^\circ\)에서 \(E\)가 정지 Coulomb 값의 몇 배인가? (b) 두 값의 비를 \(\gamma\)로 표현하라. (c) \(E\)가 정지 값과 같아지는 각 \(\theta_0\)를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>준비.</b> \(\beta=0.8\), \(\beta^2=0.64\), \(1-\beta^2=0.36\), \(\gamma=\dfrac{1}{\sqrt{0.36}}=\dfrac{1}{0.6}=\dfrac{5}{3}\approx1.667\).
+\[ f(\theta)\equiv\frac{E(\theta)}{E_{\rm Coulomb}}=\frac{1-\beta^2}{(1-\beta^2\sin^2\theta)^{3/2}} \]</p>
+<p><b>(a) 전방/후방 \(\theta=0^\circ\).</b> \(\sin\theta=0\):
+\[ f(0)=\frac{0.36}{1}=\boxed{0.36}=1-\beta^2=\frac{1}{\gamma^2} \]
+검산: \(1/\gamma^2=0.6^2=0.36\) ✓. 정지 값의 <b>36%</b>로 약해진다.</p>
+<p><b>수직 \(\theta=90^\circ\).</b> \(\sin\theta=1\):
+\[ f(90^\circ)=\frac{0.36}{(1-0.64)^{3/2}}=\frac{0.36}{0.36^{3/2}}=\frac{1}{\sqrt{0.36}}=\frac{1}{0.6}=\boxed{1.667}=\gamma \]
+정지 값의 <b>약 1.67배</b>로 강해진다.</p>
+<p><b>(b) 비.</b>
+\[ \frac{f(90^\circ)}{f(0^\circ)}=\frac{\gamma}{\gamma^{-2}}=\gamma^3=\left(\frac53\right)^3=\frac{125}{27}\approx\boxed{4.63} \]
+장이 수직 방향으로 4.6배 집중된 <b>팬케이크</b>. \(v\to c\)에서 \(\gamma^3\to\infty\)로 무한히 납작해진다.</p>
+<p><b>(c) \(f(\theta_0)=1\).</b>
+\[ \frac{1-\beta^2}{(1-\beta^2\sin^2\theta_0)^{3/2}}=1 \;\Rightarrow\; (1-\beta^2\sin^2\theta_0)^{3/2}=1-\beta^2=0.36 \]
+\[ 1-0.64\sin^2\theta_0=0.36^{2/3} \]
+\(0.36^{2/3}\): \(\ln0.36=-1.0217\), \(\times\tfrac23=-0.6811\), \(e^{-0.6811}=0.5061\).
+\[ \sin^2\theta_0=\frac{1-0.5061}{0.64}=\frac{0.4939}{0.64}=0.7717 \;\Rightarrow\;\sin\theta_0=0.8785 \]
+\[ \boxed{\theta_0\approx61.5^\circ\ \text{또는}\ 118.5^\circ} \]</p>
+<p><b>해석.</b> \(\theta&lt;61.5^\circ\)에서는 정지 전하보다 약하고, \(61.5^\circ&lt;\theta&lt;118.5^\circ\)에서는 강하다. 총 플럭스는 Gauss 법칙에 의해 여전히 정확히 \(q/\eps\)여야 하므로(Prob. 10.22) 약해진 부분과 강해진 부분이 정확히 상쇄된다 — 좋은 자가 검증.</p>
+</div></div>
+
+<div class="qz" data-q="u19-4"><div class="qq">(Prob. 10.21, 겉보기 모순 해소) \(x\)축을 따라 운동하는 전하의 축 <b>오른쪽</b>(전방) 장은 \(\vb{E}=\dfrac{q}{4\pi\eps}\dfrac{1}{\rr^2}\dfrac{c+v}{c-v}\hat{\vb{x}}\), \(\vb{B}=0\)이다(\(v\)가 일정하지 않아도!). 그런데 Ex. 10.4는 전방 장이 \((1-\beta^2)\)만큼 <b>약해진다</b>고 했다. 모순을 해소하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 먼저 주어진 결과를 유도한다.</b> 축 위 오른쪽 점에서는 \(\rhat=\hat{\vb{x}}\), \(\vb{v}=v\hat{\vb{x}}\), 운동이 축에 구속되므로 \(\vb{a}=a\hat{\vb{x}}\).
+<br>• \(\vb{u}=c\rhat-\vb{v}=(c-v)\hat{\vb{x}}\), \(\boldsymbol{\rr}\cdot\vb{u}=\rr(c-v)\).
+<br>• <b>가속도장이 사라진다:</b> \(\vb{u}\times\vb{a}=0\) (둘 다 \(\hat{\vb{x}}\) 방향). 따라서 \(a\)가 아무리 커도 축 위 전방에는 복사가 없다 — 가속도의 <b>수직</b> 성분만 복사하기 때문(유도 2의 7단계).
+<br>• 남은 속도장:
+\[ \vb{E}=\frac{q}{4\pi\eps}\frac{\rr(c^2-v^2)(c-v)\hat{\vb{x}}}{\rr^3(c-v)^3}=\frac{q}{4\pi\eps\rr^2}\frac{(c-v)(c+v)}{(c-v)^2}\hat{\vb{x}}=\frac{q}{4\pi\eps\rr^2}\frac{c+v}{c-v}\hat{\vb{x}} \]✓
+<br>• \(\vb{B}=\dfrac{1}{c}\rhat\times\vb{E}=0\) (\(\vb{E}\parallel\hat{\vb{x}}=\rhat\)). ✓
+<br>왼쪽(후방)에서는 \(\rhat=-\hat{\vb{x}}\)이므로 \(v\to-v\): \(\vb{E}=\dfrac{q}{4\pi\eps\rr^2}\dfrac{c-v}{c+v}(-\hat{\vb{x}})\).</p>
+<p><b>2) 모순처럼 보이는 이유.</b> \(\dfrac{c+v}{c-v}=\dfrac{1+\beta}{1-\beta}&gt;1\)이므로 전방 장이 <b>강해</b> 보인다. 반면 Ex. 10.4는 \((1-\beta^2)&lt;1\)로 <b>약해진다</b>고 한다.</p>
+<p><b>3) 해소 — 두 공식의 거리가 다르다.</b>
+<br>• Prob. 10.21의 \(\rr\) = <b>지연</b> 위치까지의 거리
+<br>• Ex. 10.4의 \(R\) = <b>현재</b> 위치까지의 거리
+<br>전방 축 위에서 이 둘의 관계는: 입자는 신호가 이동하는 시간 \((t-t_r)=\rr/c\) 동안 관측자 쪽으로 \(v\cdot\rr/c\)만큼 다가왔으므로
+\[ R=\rr-v\frac{\rr}{c}=\rr(1-\beta) \]</p>
+<p><b>4) 대입해서 확인.</b> Ex. 10.4의 \(\theta=0\) 결과에 \(R=\rr(1-\beta)\)를 넣으면
+\[ E=\frac{q(1-\beta^2)}{4\pi\eps R^2}=\frac{q(1-\beta)(1+\beta)}{4\pi\eps\,\rr^2(1-\beta)^2}=\frac{q}{4\pi\eps\rr^2}\cdot\frac{1+\beta}{1-\beta}=\frac{q}{4\pi\eps\rr^2}\frac{c+v}{c-v} \]
+<b>정확히 일치한다.</b> ∎ 모순은 없었다.</p>
+<p><b>5) 교훈.</b> "장이 강해졌나 약해졌나"라는 질문은 <b>어느 거리를 고정하고 비교하느냐</b>를 명시하지 않으면 무의미하다. 같은 <b>현재</b> 거리에서 비교하면 전방은 \(\gamma^{-2}\)배 약하고, 같은 <b>지연</b> 거리에서 비교하면 \(\dfrac{1+\beta}{1-\beta}\)배 강하다. 두 진술 모두 옳다.</p>
+<p><b>6) 보너스.</b> Prob. 10.21의 결과는 \(v\)가 일정하지 않아도 성립한다는 점이 강력하다 — 축 위에서는 \(\vb{u}\times\vb{a}=0\)이 항상 성립하므로. 반면 Ex. 10.4의 \(\vb{R}\) 표현은 <b>등속에서만</b> 유효하다. 일반적인 경우 "현재 위치"라는 개념 자체가 장에 대해 의미를 잃는다.</p>
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> \(\nabla t_r=-\boldsymbol{\rr}/(\boldsymbol{\rr}\cdot\vb{u})\)와 \(\partial t_r/\partial t=c\rr/(\boldsymbol{\rr}\cdot\vb{u})\)를 유도하고, \(\vb{E}\)의 두 항을 \(\rr^{-2}/\rr^{-1}\) 차수와 Poynting 논증으로 구분하며, \(\rr\vb{u}=c\vb{R}\) 항등식으로 등속 결과를 얻고 Thomson 킥 그림으로 \(E_\perp=qa\sin\theta/(4\pi\eps c^2\rr)\)를 재현할 수 있다.</div>

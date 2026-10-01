@@ -1,0 +1,67 @@
+<div class="exq"><b>상황.</b> 전하 \(q\)가 일정한 속도 \(\vb{v}\)로 직선운동한다. 편의상 \(t=0\)에 원점을 지나도록 잡아 궤적을 \(\vb{w}(t)=\vb{v}t\)로 둔다. 임의의 관측점 \(\vb{r}\), 임의의 시각 \(t\)에서 <b>Liénard–Wiechert 퍼텐셜</b>
+\[ V(\vb{r},t)=\frac{1}{4\pi\eps}\frac{qc}{(\rr c-\boldsymbol{\rr}\cdot\vb{v})},\qquad \vb{A}(\vb{r},t)=\frac{\vb{v}}{c^2}V \]
+를 명시적인 함수로 계산하는 것이 목표다. 어려운 부분은 오직 하나 — <b>지연시각 \(t_r\)</b>을 푸는 것이다. \(t_r\)은 \(|\vb{r}-\vb{w}(t_r)|=c(t-t_r)\)로 암묵적으로 정의되는데, 등속운동에서는 이것이 \(t_r\)의 이차방정식이 되어 실제로 풀린다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>지연시각 조건을 제곱해 이차방정식으로 만들고, \(v\to0\) 극한으로 부호를 고른다. 그다음 분모 \(\rr(1-\hat{\boldsymbol{\rr}}\cdot\vb{v}/c)\)를 직접 조립한다.</div>
+<ol>
+<li><b>지연시각 방정식.</b> \(|\vb{r}-\vb{v}t_r|=c(t-t_r)\). 양변 제곱:
+\[ r^2-2(\vb{r}\cdot\vb{v})t_r+v^2t_r^2=c^2t^2-2c^2 t\,t_r+c^2t_r^2. \]
+\(t_r\)에 대해 정리하면 \((c^2-v^2)t_r^2-2(c^2t-\vb{r}\cdot\vb{v})t_r+(c^2t^2-r^2)=0\).</li>
+
+<li><b>근의 공식과 부호 선택.</b>
+\[ t_r=\frac{(c^2t-\vb{r}\cdot\vb{v})\pm\sqrt{(c^2t-\vb{r}\cdot\vb{v})^2+(c^2-v^2)(r^2-c^2t^2)}}{c^2-v^2}. \]
+부호는 \(v=0\) 극한으로 정한다: 그때 \(t_r=t\pm r/c\)가 되는데, 정지 전하라면 물리적 지연시각은 \(t-r/c\)여야 하므로 <b>음부호</b>가 맞다.</li>
+
+<li><b>분모 조립.</b> \(\rr=c(t-t_r)\), \(\hat{\boldsymbol{\rr}}=\dfrac{\vb{r}-\vb{v}t_r}{c(t-t_r)}\)이므로
+\[ \rr\left(1-\frac{\hat{\boldsymbol{\rr}}\cdot\vb{v}}{c}\right)=c(t-t_r)-\frac{\vb{v}\cdot(\vb{r}-\vb{v}t_r)}{c}=\frac{1}{c}\Big[(c^2t-\vb{r}\cdot\vb{v})-(c^2-v^2)t_r\Big]. \]
+여기에 2단계의 \(t_r\)(음부호)를 대입하면 \((c^2t-\vb{r}\cdot\vb{v})\)가 상쇄되고 제곱근만 남는다:
+\[ \rr c-\boldsymbol{\rr}\cdot\vb{v}=\sqrt{(c^2t-\vb{r}\cdot\vb{v})^2+(c^2-v^2)(r^2-c^2t^2)}\equiv \mathcal{D}. \]
+<em>이것이 이 Example의 심장이다</em> — 지긋지긋한 \(t_r\)이 완전히 사라졌다.</li>
+
+<li><b>퍼텐셜.</b> 따라서
+\[ V(\vb{r},t)=\frac{qc}{4\pi\eps\,\mathcal{D}},\qquad \vb{A}(\vb{r},t)=\frac{\muz}{4\pi}\frac{qc\,\vb{v}}{\mathcal{D}}=\frac{\vb{v}}{c^2}V. \]
+\(\vb{A}=(\vb{v}/c^2)V\)는 등속운동에서 언제나 성립한다(\(\muz/4\pi=1/4\pi\eps c^2\)).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ V(\vb{r},t)=\frac{1}{4\pi\eps}\frac{qc}{\sqrt{(c^2t-\vb{r}\cdot\vb{v})^2+(c^2-v^2)(r^2-c^2t^2)}},\qquad \vb{A}=\frac{\vb{v}}{c^2}V\ } \]
+<p class="note">이 식은 겉보기엔 흉하지만 다음 +α에서 \(V=\dfrac{q}{4\pi\eps R\sqrt{1-(v^2/c^2)\sin^2\theta}}\)라는 놀랍도록 간단한 형태로 정리된다 — \(R\)은 <em>현재</em> 위치까지의 거리다. <b>검산</b> ① 차원: \(\mathcal{D}\)는 \([c^2t]=\mathrm{m^2/s}\) 차원이고 \(qc/\mathcal{D}\)는 \(\mathrm{C\cdot(m/s)/(m^2/s)}=\mathrm{C/m}\), \(\times1/4\pi\eps\)로 전압 ✓. ② 정지 극한 \(v=0\): \(\mathcal{D}=\sqrt{c^4t^2+c^2r^2-c^4t^2}=cr\)이므로 \(V=q/4\pi\eps r\) — Coulomb ✓. ③ 비상대론 극한 \(v\ll c\): \(\mathcal{D}\approx c^2\sqrt{(t-\vb{r}\cdot\vb{v}/c^2)^2+ (r^2-c^2t^2)/c^2}\to cR\)로 \(V\to q/4\pi\eps R\) ✓. ④ \(\vb{A}/V=\vb{v}/c^2\)는 정지 좌표계에서 \((V,c\vb{A})\)가 4-벡터로 변환된다는 12장 결과와 일치 ✓.</p></div>
+
+<div class="qz" data-q="ex10.3-a"><div class="qq"><b>+α</b> 위 흉한 제곱근이 사실은 <b>현재 위치</b>로 표현하면 간단함을 보여라. \(\vb{R}\equiv\vb{r}-\vb{v}t\)(전하의 현재 위치에서 관측점까지의 벡터), \(\theta\equiv\) \(\vb{R}\)과 \(\vb{v}\) 사이 각이라 할 때
+\[ V=\frac{1}{4\pi\eps}\frac{q}{R\sqrt{1-(v^2/c^2)\sin^2\theta}} \]
+임을 증명하고, \(\theta=0\)(진행축 위)과 \(\theta=\pi/2\)(옆구리)에서의 값을 정지 전하와 비교하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 증명.</b> 보일 것은 \(\mathcal{D}^2=c^2R^2\big(1-\tfrac{v^2}{c^2}\sin^2\theta\big)\)이다. 우변부터 정리하자. \(R^2\sin^2\theta=R^2-(\vb{R}\cdot\hat{\vb{v}})^2\)이므로
+\[ c^2R^2-v^2\big[R^2-(\vb{R}\cdot\hat{\vb{v}})^2\big]=(c^2-v^2)R^2+(\vb{R}\cdot\vb{v})^2 \]
+(\(v^2(\vb{R}\cdot\hat{\vb{v}})^2=(\vb{R}\cdot\vb{v})^2\)를 썼다). 이제 \(\vb{R}=\vb{r}-\vb{v}t\)를 풀어 쓰면 \(R^2=r^2-2t(\vb{r}\cdot\vb{v})+v^2t^2\), \(\vb{R}\cdot\vb{v}=\vb{r}\cdot\vb{v}-v^2t\):
+\[ (c^2-v^2)R^2=c^2r^2-2c^2t(\vb{r}\cdot\vb{v})+c^2v^2t^2-v^2r^2+2v^2t(\vb{r}\cdot\vb{v})-v^4t^2, \]
+\[ (\vb{R}\cdot\vb{v})^2=(\vb{r}\cdot\vb{v})^2-2v^2t(\vb{r}\cdot\vb{v})+v^4t^2. \]
+더하면 \(c^2r^2-v^2r^2+c^2v^2t^2-2c^2t(\vb{r}\cdot\vb{v})+(\vb{r}\cdot\vb{v})^2\).</p>
+<p>한편 \(\mathcal{D}^2=(c^2t-\vb{r}\cdot\vb{v})^2+(c^2-v^2)(r^2-c^2t^2)\)를 전개하면
+\[ c^4t^2-2c^2t(\vb{r}\cdot\vb{v})+(\vb{r}\cdot\vb{v})^2+c^2r^2-c^4t^2-v^2r^2+c^2v^2t^2, \]
+즉 \(c^2r^2-v^2r^2+c^2v^2t^2-2c^2t(\vb{r}\cdot\vb{v})+(\vb{r}\cdot\vb{v})^2\) — <b>정확히 같다</b> ✓. 따라서
+\[ \boxed{\ V=\frac{1}{4\pi\eps}\frac{q}{R\sqrt{1-\beta^2\sin^2\theta}},\qquad \vb{A}=\frac{\vb{v}}{c^2}V,\qquad \beta\equiv v/c\ } \]</p>
+<p><b>2) 놀라운 점.</b> "소식"은 <em>지연</em> 위치에서 출발했는데, 결과는 <em>현재</em> 위치까지의 거리 \(R\)로만 쓰인다. 우연이 아니라 등속운동의 특권이다(가속하면 깨진다).</p>
+<p><b>3) 방향별 값.</b>
+<br>· \(\theta=0\) 또는 \(\pi\) (진행축 위, 앞뒤): \(\sin\theta=0\)이므로 \(V=\dfrac{q}{4\pi\eps R}\) — <b>정지 전하와 완전히 동일</b>. 아무리 빨라도 축 위의 퍼텐셜은 Coulomb 그대로다.
+<br>· \(\theta=\pi/2\) (옆구리): \(V=\dfrac{q}{4\pi\eps R}\cdot\dfrac{1}{\sqrt{1-\beta^2}}=\gamma\dfrac{q}{4\pi\eps R}\) — \(\gamma\)배로 <b>증폭</b>.
+<br>즉 등퍼텐셜면은 진행 방향으로 늘어난 회전타원체(pancake의 전조)다.</p>
+<p><b>4) 비상대론 극한.</b> \(\beta\ll1\)이면 \(V\approx\frac{q}{4\pi\eps R}\), \(\vb{A}\approx\frac{\muz}{4\pi}\frac{q\vb{v}}{R}\) — 후자는 5장에서 예고한 "점전하의 Biot–Savart 벡터퍼텐셜" ✓.</p></div></div>
+
+<div class="qz" data-q="ex10.3-b"><div class="qq"><b>+α</b> 소스의 운동을 바꾸자. 전하 \(q\)가 \(xy\)평면 위 반지름 \(a\)의 원을 각속도 \(\omega\)로 등속원운동한다(\(t=0\)에 \((a,0,0)\)). <b>\(z\)축 위의 점</b> \((0,0,z)\)에서의 Liénard–Wiechert 퍼텐셜을 구하라. 여기서는 \(t_r\)이 왜 쉽게 풀리는가?</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 지연시각이 상수인 이유.</b> 궤적은 \(\vb{w}(t)=a(\cos\omega t,\ \sin\omega t,\ 0)\). 관측점 \((0,0,z)\)까지의 거리는
+\[ \rr=|\,(0,0,z)-\vb{w}(t_r)\,|=\sqrt{a^2+z^2}\equiv d \]
+로 <b>\(t_r\)에 무관하게 일정</b>하다. 그러므로 \(\rr=c(t-t_r)\)에서 곧바로
+\[ t_r=t-\frac{\sqrt{a^2+z^2}}{c}. \]
+축 위는 원의 모든 점에서 등거리라는 기하가 문제를 풀어준다.</p>
+<p><b>2) 분모 \(\rr c-\boldsymbol{\rr}\cdot\vb{v}\).</b> \(\boldsymbol{\rr}=(0,0,z)-\vb{w}(t_r)=(-a\cos\omega t_r,\ -a\sin\omega t_r,\ z)\), 속도는 \(\vb{v}(t_r)=a\omega(-\sin\omega t_r,\ \cos\omega t_r,\ 0)\). 내적하면
+\[ \boldsymbol{\rr}\cdot\vb{v}=a^2\omega(\cos\omega t_r\sin\omega t_r-\sin\omega t_r\cos\omega t_r)=0. \]
+속도가 항상 \(\boldsymbol{\rr}\)에 수직이다(축 위에서만!). 따라서 분모는 그냥 \(\rr c=cd\).</p>
+<p><b>3) 답.</b>
+\[ \boxed{\ V(z,t)=\frac{1}{4\pi\eps}\frac{q}{\sqrt{a^2+z^2}}\ }\quad(\text{시간에 무관!}) \]
+\[ \boxed{\ \vb{A}(z,t)=\frac{\muz}{4\pi}\frac{q a\omega}{\sqrt{a^2+z^2}}\Big[-\sin\big(\omega t_r\big)\hat{\vb{x}}+\cos\big(\omega t_r\big)\hat{\vb{y}}\Big],\quad t_r=t-\frac{\sqrt{a^2+z^2}}{c}\ } \]</p>
+<p><b>4) 읽는 법.</b> 스칼라 퍼텐셜은 마치 전하가 고리에 고르게 발려 있는 것처럼 정적이다 — 축 위에서는 전하가 원 어디에 있든 거리가 같으니 당연하다. 반면 벡터퍼텐셜은 \(z\)축 주위로 각속도 \(\omega\)로 <b>회전</b>하되, 위상이 \(\omega\sqrt{a^2+z^2}/c\)만큼 <em>지연</em>되어 있다. 멀리 갈수록 위상이 뒤처지는 것 — 이것이 곧 11장의 회전 쌍극자 복사로 이어진다.</p>
+<p><b>5) 검산.</b> \(\omega\to0\): \(\vb{A}\to0\), \(V=q/4\pi\eps\sqrt{a^2+z^2}\) — 정지 점전하 ✓. \(z\gg a\): \(V\to q/4\pi\eps z\), \(|\vb{A}|\to \muz q a\omega/4\pi z\) — 크기 \(qa\omega=|\dot{\vb{p}}|\)인 회전 쌍극자의 \(\vb{A}=\muz\dot{\vb{p}}/4\pi r\)와 일치 ✓ (Example 11.2 참조).</p></div></div>

@@ -1,0 +1,60 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 회전목마 위에서 공을 가운데를 향해 굴리면 공이 휘어 보인다. 바닥에서 보면 공은 직선으로 간다. 회전목마의 관찰자가 Newton 법칙을 억지로 쓰려면 어떤 "힘"들을 추가해야 할까? 유도 전에 개수를 세어 보라 — 원점의 가속, 각속도의 변화, 회전 자체, 그리고 회전계 안에서의 운동. 이 중 속도에 비례하는 것은 어느 것일까?</div>
+
+<h4>10.3 원심력과 Coriolis 힘 <span class="en">centrifugal and Coriolis forces</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>가속도의 변환 — 교재 식 (10.19)–(10.23) <b>(필수)</b></div>
+<ol>
+<li>관성계에서만 \(\vb F=m\vb a_f=m(\dd\vb v_f/\dd t)_f\). U11의 \(\vb v_f=\vb V+\vb v_r+\boldsymbol\omega\times\vb r\)을 고정계에서 미분:
+\[ \vb a_f=\left(\od{\vb V}{t}\right)_f+\left(\od{\vb v_r}{t}\right)_f+\dot{\boldsymbol\omega}\times\vb r+\boldsymbol\omega\times\left(\od{\vb r}{t}\right)_f . \]</li>
+<li>첫 항: 원점의 가속도 \(\ddot{\vb R}_f\).</li>
+<li>둘째 항: \(\vb v_r\)에 연산자 공식 → \((\dd\vb v_r/\dd t)_r+\boldsymbol\omega\times\vb v_r=\vb a_r+\boldsymbol\omega\times\vb v_r\).</li>
+<li>넷째 항: \((\dd\vb r/\dd t)_f=\vb v_r+\boldsymbol\omega\times\vb r\) → \(\boldsymbol\omega\times\vb v_r+\boldsymbol\omega\times(\boldsymbol\omega\times\vb r)\).</li>
+<li>모으면 (\(\boldsymbol\omega\times\vb v_r\)가 <b>두 번</b> 나온다 — Coriolis의 2의 기원):
+\[ \vb a_f=\ddot{\vb R}_f+\vb a_r+\dot{\boldsymbol\omega}\times\vb r+\boldsymbol\omega\times(\boldsymbol\omega\times\vb r)+2\boldsymbol\omega\times\vb v_r . \]</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>회전계의 유효 운동방정식 — 교재 식 (10.25)</div>
+<ol>
+<li>회전계의 관찰자는 \(\vb F_{\rm eff}=m\vb a_r\)이라 쓰고 싶다. 유도 1에서 \(m\vb a_r\)을 풀면
+\[ \boxed{\ \vb F_{\rm eff}=\vb F-m\ddot{\vb R}_f-m\dot{\boldsymbol\omega}\times\vb r-m\boldsymbol\omega\times(\boldsymbol\omega\times\vb r)-2m\boldsymbol\omega\times\vb v_r\ } \]</li>
+<li>각 항의 이름과 의미
+<table><tr><th>항</th><th>이름</th><th>원인</th></tr>
+<tr><td>\(\vb F\)</td><td>실제 힘</td><td>관성계에서 측정되는 모든 힘</td></tr>
+<tr><td>\(-m\ddot{\vb R}_f\)</td><td>병진 관성력</td><td>원점의 가속</td></tr>
+<tr><td>\(-m\dot{\boldsymbol\omega}\times\vb r\)</td><td>(방위각력, Euler force)</td><td>각속도 변화</td></tr>
+<tr><td>\(-m\boldsymbol\omega\times(\boldsymbol\omega\times\vb r)\)</td><td>원심력</td><td>회전 자체, 위치에 의존</td></tr>
+<tr><td>\(-2m\boldsymbol\omega\times\vb v_r\)</td><td>Coriolis 힘</td><td>회전계 안의 운동, 속도에 의존</td></tr></table></li>
+<li><b>원심력의 방향</b>: \(\vb r=\vb r_\parallel+\vb r_\perp\) (\(\boldsymbol\omega\) 방향 성분과 수직 성분)으로 나누면 \(\boldsymbol\omega\times(\boldsymbol\omega\times\vb r)=-\omega^2\vb r_\perp\). 따라서 원심력 \(=+m\omega^2\vb r_\perp\) — <b>회전축에서 바깥으로</b>, 크기 \(m\omega^2\rho\) (\(\rho\): 축까지 거리). 퍼텐셜로 쓰면 \(U_{\rm cf}=-\tfrac12m\omega^2\rho^2\).</li>
+<li><b>Coriolis 힘의 성질</b>: \(\vb v_r\)에 항상 수직 → <b>일을 하지 않는다</b>. 정지한 물체에는 작용하지 않는다. 회전 방향(\(\boldsymbol\omega\))이 위쪽이면 움직이는 물체를 진행 방향의 <b>오른쪽</b>으로 휜다.</li>
+<li><b>해석</b>: 원심력·Coriolis 힘은 상호작용이 아니라 비관성계에서 Newton 법칙의 <em>꼴</em>을 유지하려고 넣는 보정항이다(반작용이 없다). 그래도 회전하는 물체 위의 운동을 기술하는 가장 쉬운 방법이다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>회전계의 Lagrangian (Problem 10-15형 — 해석역학과의 연결)</div>
+<ol>
+<li>관성계 속도 \(\vb v_f=\vb v_r+\boldsymbol\omega\times\vb r\) (원점 고정, \(\boldsymbol\omega\) 일정). 
+\[ L=\tfrac12m|\dot{\vb r}+\boldsymbol\omega\times\vb r|^2-U(\vb r)=\tfrac12m\dot r^2+m\dot{\vb r}\cdot(\boldsymbol\omega\times\vb r)+\tfrac12m|\boldsymbol\omega\times\vb r|^2-U . \]</li>
+<li>Euler–Lagrange 방정식을 쓰면 정확히 \(m\ddot{\vb r}=-\nabla U-2m\boldsymbol\omega\times\dot{\vb r}-m\boldsymbol\omega\times(\boldsymbol\omega\times\vb r)\)이 나온다. 가운데 항(속도에 선형)이 Coriolis, 마지막 항이 원심 퍼텐셜 \(-\tfrac12m|\boldsymbol\omega\times\vb r|^2\).</li>
+<li>Hamiltonian: \(H=\tfrac12mv_r^2+U-\tfrac12m|\boldsymbol\omega\times\vb r|^2\) — 보존되지만 관성계 에너지 \(E\)와 다르다(Jacobi 적분). Coriolis 항은 \(H\)에 들어가지 않는다(일을 안 하므로).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 회전계의 유효력</div>
+\[ m\vb a_r=\vb F-m\ddot{\vb R}_f-m\dot{\boldsymbol\omega}\times\vb r-m\boldsymbol\omega\times(\boldsymbol\omega\times\vb r)-2m\boldsymbol\omega\times\vb v_r \]
+<p class="note">원심력 \(m\omega^2\rho\) 바깥, 퍼텐셜 \(-\tfrac12m\omega^2\rho^2\). Coriolis \(-2m\boldsymbol\omega\times\vb v_r\): 일 안 함, \(\boldsymbol\omega\)가 위면 오른쪽으로 휨. "2"는 \(\boldsymbol\omega\times\vb v_r\)가 두 곳에서 나와서.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u12-1"><div class="qq">(시험형) \(\vb a_f=\ddot{\vb R}+\vb a_r+\dot{\boldsymbol\omega}\times\vb r+\boldsymbol\omega\times(\boldsymbol\omega\times\vb r)+2\boldsymbol\omega\times\vb v_r\)를 유도하라. Coriolis 항의 두 기여가 각각 어디서 오는지 표시할 것.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>유도 1. 하나는 \(\vb v_r\)을 고정계에서 미분할 때(회전하는 기저 위의 벡터 \(\vb v_r\)의 방향 변화), 다른 하나는 \(\boldsymbol\omega\times\vb r\)에서 \(\vb r\)을 미분할 때(\(\vb r\)이 회전계 안에서 움직여 \(\boldsymbol\omega\times\vb r\)의 크기가 바뀜).</p></div></div>
+
+<div class="qz" data-q="u12-2"><div class="qq">양동이에 물을 담고 축 둘레로 일정한 \(\omega\)로 돌린다(Problem 10-6). 회전계에서 물 표면의 모양을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>회전계에서 물은 정지 → Coriolis 없음. 유효 퍼텐셜(단위 질량) \(gz-\tfrac12\omega^2\rho^2\). 자유 표면은 등퍼텐셜면:
+\[ z(\rho)=z_0+\frac{\omega^2\rho^2}{2g} \]
+— <b>회전 포물면</b>. 검산: 표면 기울기 \(\dd z/\dd\rho=\omega^2\rho/g\) = (원심 가속도)/(중력) ✓ (유효 중력이 표면에 수직).</p></div></div>
+
+<div class="qz" data-q="u12-3"><div class="qq">원판(각속도 \(\omega\), 반시계)의 중심에서 질량 \(m\)인 구슬이 반지름 방향의 매끄러운 홈을 따라 바깥으로 속력 \(v_r\)로 미끄러진다(홈이 강제). 홈이 구슬에 주는 옆방향 힘의 크기와 방향은? 관성계에서도 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>회전계: 구슬은 홈을 따라서만 움직이므로 옆방향 가속도 0. Coriolis 힘 \(-2m\boldsymbol\omega\times\vb v_r\)은 크기 \(2m\omega v_r\), 방향은 (\(\boldsymbol\omega\) 위, \(\vb v_r\) 바깥) 진행 방향의 오른쪽 = 회전의 반대 방향. 홈의 힘은 이를 상쇄해야 하므로 <b>회전 방향으로 \(2m\omega v_r\)</b>.</p>
+<p>관성계: 각운동량 \(L=m\rho^2\omega\)가 \(\rho\)와 함께 증가 → 토크 \(\dot L=2m\rho\dot\rho\omega=\rho\cdot(2m\omega v_r)\) 필요 ✓.</p></div></div>
+
+<div class="qz" data-q="u12-4"><div class="qq">회전계의 Hamiltonian \(H=\tfrac12mv_r^2+U-\tfrac12m|\boldsymbol\omega\times\vb r|^2\)은 보존되지만 관성계 에너지 \(E=\tfrac12mv_f^2+U\)와 다르다. \(E-H\)를 구하고, \(E\)가 보존되는 상황(중심력, 축대칭 퍼텐셜)에서 두 보존량이 무엇과 연결되는지 말하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(v_f^2=v_r^2+2\vb v_r\cdot(\boldsymbol\omega\times\vb r)+|\boldsymbol\omega\times\vb r|^2\) → \(E-H=m\vb v_r\cdot(\boldsymbol\omega\times\vb r)+m|\boldsymbol\omega\times\vb r|^2=\boldsymbol\omega\cdot[\vb r\times m(\vb v_r+\boldsymbol\omega\times\vb r)]=\boldsymbol\omega\cdot\vb L\).</p>
+<p>즉 \(H=E-\boldsymbol\omega\cdot\vb L\). 퍼텐셜이 \(\boldsymbol\omega\) 축에 대해 대칭이면 \(E\)와 \(L_\omega\)가 각각 보존되고 \(H\)는 그 조합일 뿐. 대칭이 없으면(예: 회전하는 막대 퍼텐셜) \(E\)와 \(L\)은 따로 보존되지 않아도 \(H\)는 보존 — 제한 3체 문제의 Jacobi 적분.</p></div></div>

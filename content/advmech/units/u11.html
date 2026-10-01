@@ -1,0 +1,52 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 회전하는 회전목마 위에 고정된 점을 바닥(관성계)에서 보면 속도 \(\vb v=\boldsymbol\omega\times\vb r\)로 움직인다. 이제 그 점이 회전목마 위에서도 움직인다면, 바닥에서 본 속도는 무엇과 무엇의 합일까? 그리고 이 규칙이 위치벡터뿐 아니라 <em>모든</em> 벡터(속도, 각운동량, …)에 적용된다면 가속도에는 어떤 항들이 생겨날지 추측해 보라.</div>
+
+<h4>10.2 회전 좌표계 <span class="en">rotating coordinate systems</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>회전계에 고정된 점: \((\dd\vb r/\dd t)_{\rm fixed}=\boldsymbol\omega\times\vb r\)</div>
+<ol>
+<li>고정계(관성계) 좌표 \(x'_i\), 회전계 좌표 \(x_i\). 한 점 \(P\)에 대해 \(\vb r'=\vb R+\vb r\) (\(\vb R\): 회전계 원점의 위치, 교재 식 10.1). 우선 \(\vb R=0\)으로 두고 회전만 본다.</li>
+<li>임의의 미소 변위는 어떤 축(순간 회전축) 둘레의 미소 회전 \(\delta\boldsymbol\theta\)로 쓸 수 있다. 회전계에 붙박인 점은
+\[ (\dd\vb r)_{\rm fixed}=\dd\boldsymbol\theta\times\vb r . \]
+(1장 식 1.106 — 미소 회전은 벡터처럼 더할 수 있다. 유한 회전은 안 된다.)</li>
+<li>\(\dd t\)로 나누고 \(\boldsymbol\omega=\dd\boldsymbol\theta/\dd t\):
+\[ \left(\od{\vb r}{t}\right)_{\rm fixed}=\boldsymbol\omega\times\vb r\qquad(P\text{가 회전계에 고정}). \]</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>연산자 공식 \(\left(\frac{\dd\vb Q}{\dd t}\right)_{\rm fixed}=\left(\frac{\dd\vb Q}{\dd t}\right)_{\rm rot}+\boldsymbol\omega\times\vb Q\) <b>(필수 — 이 장의 모든 것의 출발점)</b></div>
+<ol>
+<li>Example 10.1 방식(성분 미분): 회전계 기저로 \(\vb Q=\sum_i Q_i\uv e_i\). 고정계에서 미분하면 성분도 기저도 변한다:
+\[ \left(\od{\vb Q}{t}\right)_{\rm fixed}=\sum_i\dot Q_i\uv e_i+\sum_iQ_i\dot{\uv e}_i . \]</li>
+<li>첫 항은 회전계의 관찰자가 보는 변화율 \((\dd\vb Q/\dd t)_{\rm rot}\) — 그에게 \(\uv e_i\)는 고정이다.</li>
+<li>기저벡터는 회전계에 붙박인 벡터이므로 유도 1에 의해 \(\dot{\uv e}_i=\boldsymbol\omega\times\uv e_i\). 예: \(\omega_3\)는 \(\uv e_1\)을 \(+\uv e_2\) 쪽으로, \(\omega_2\)는 \(-\uv e_3\) 쪽으로 돌린다 → \(\dot{\uv e}_1=\omega_3\uv e_2-\omega_2\uv e_3=\boldsymbol\omega\times\uv e_1\) ✓ (교재 식 10.9). 각 도함수가 원래 단위벡터에 수직인 것은 크기가 보존되기 때문.</li>
+<li>둘째 항 \(=\sum Q_i\,\boldsymbol\omega\times\uv e_i=\boldsymbol\omega\times\vb Q\). 따라서
+\[ \boxed{\ \left(\od{\vb Q}{t}\right)_{\rm fixed}=\left(\od{\vb Q}{t}\right)_{\rm rot}+\boldsymbol\omega\times\vb Q\ } \]
+<b>임의의 벡터</b>에 성립한다. 연산자로 \(\left(\frac{\dd}{\dd t}\right)_{\rm f}=\left(\frac{\dd}{\dd t}\right)_{\rm r}+\boldsymbol\omega\times\).</li>
+<li><b>따름정리</b>: \(\vb Q=\boldsymbol\omega\)이면 \(\boldsymbol\omega\times\boldsymbol\omega=0\) → \(\dot{\boldsymbol\omega}\)는 두 계에서 같다(교재 식 10.13). 그래서 그냥 \(\dot{\boldsymbol\omega}\)라 쓴다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>속도의 변환 \(\vb v_f=\vb V+\vb v_r+\boldsymbol\omega\times\vb r\) (교재 식 10.17)</div>
+<ol>
+<li>\(\vb r'=\vb R+\vb r\)을 고정계에서 미분: \(\left(\frac{\dd\vb r'}{\dd t}\right)_{\rm f}=\left(\frac{\dd\vb R}{\dd t}\right)_{\rm f}+\left(\frac{\dd\vb r}{\dd t}\right)_{\rm f}\).</li>
+<li>마지막 항에 연산자 공식: \(\left(\frac{\dd\vb r}{\dd t}\right)_{\rm r}+\boldsymbol\omega\times\vb r\).</li>
+<li>\[ \vb v_f=\vb V+\vb v_r+\boldsymbol\omega\times\vb r \]
+\(\vb v_f\): 고정계에서 본 속도, \(\vb V=\dot{\vb R}_f\): 움직이는 원점의 속도, \(\vb v_r\): 회전계에서 본 속도, \(\boldsymbol\omega\times\vb r\): 좌표계 회전 때문에 생기는 속도.</li>
+<li>예: 경사면을 미끄러지지 않고 구르는 원판 — 접촉점을 순간 회전축으로 보면 \(\vb v=\boldsymbol\omega\times\vb r_{\rm 접촉점\to P}\).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 회전계의 미분 연산자</div>
+\[ \boxed{\ \left(\od{}{t}\right)_{\rm fixed}=\left(\od{}{t}\right)_{\rm rot}+\boldsymbol\omega\times\ },\qquad \dot{\uv e}_i=\boldsymbol\omega\times\uv e_i,\qquad \dot{\boldsymbol\omega}_{\rm f}=\dot{\boldsymbol\omega}_{\rm r} \]
+\[ \vb v_f=\vb V+\vb v_r+\boldsymbol\omega\times\vb r \]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u11-1"><div class="qq">연산자 공식을 회전계 기저벡터의 미분으로 유도하라. \(\dot{\uv e}_2\)를 \(\omega_1,\omega_3\)로 직접 써서 \(\boldsymbol\omega\times\uv e_2\)와 일치함을 확인할 것.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>유도 2. \(\omega_3\)는 \(\uv e_2\)를 \(-\uv e_1\) 쪽으로, \(\omega_1\)은 \(+\uv e_3\) 쪽으로 돌린다: \(\dot{\uv e}_2=-\omega_3\uv e_1+\omega_1\uv e_3\). 한편 \(\boldsymbol\omega\times\uv e_2=(\omega_1\uv e_1+\omega_2\uv e_2+\omega_3\uv e_3)\times\uv e_2=\omega_1\uv e_3-\omega_3\uv e_1\) ✓.</p></div></div>
+
+<div class="qz" data-q="u11-2"><div class="qq">반지름 \(a\)인 원판이 수평면에서 미끄러지지 않고 속력 \(v\)로 굴러간다. 원판의 꼭대기 점과 중심 높이의 앞쪽 점의 지면 속도를 "접촉점을 순간 회전축으로" 하는 방법으로 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(\omega=v/a\). 꼭대기: 접촉점에서 거리 \(2a\), 그 선분(연직)에 수직 → 속력 \(2v\), 전진 방향. 앞쪽 점: 접촉점에서 거리 \(\sqrt2a\), 45° 기울어진 선분에 수직 → 속력 \(\sqrt2v\), 방향은 <b>전진 방향에서 45° 아래</b>, 즉 \((v,-v)\). 검산: 중심 속도 \(v\uv x\) + 중심에 대한 회전 속도(시계방향 회전, 앞쪽 점은 아래로 \(v\)) = \((v,-v)\) ✓.</p></div></div>
+
+<div class="qz" data-q="u11-3"><div class="qq">(참/거짓) "각속도 벡터의 시간 변화율은 고정계와 회전계에서 다르게 측정된다." 이유와 함께.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>거짓.</b> \(\vb Q=\boldsymbol\omega\)를 연산자 공식에 넣으면 \(\boldsymbol\omega\times\boldsymbol\omega=0\) → 같다. (단 회전계가 <em>그 \(\boldsymbol\omega\)로</em> 도는 계일 때. 강체의 Euler 방정식(U22)에서 물체계 성분으로 쓴 \(\dot\omega_i\)가 그대로 \(\dot{\boldsymbol\omega}\)의 성분인 이유.)</p></div></div>
+
+<div class="qz" data-q="u11-4"><div class="qq">원점이 같은 두 좌표계에서, 고정계의 벡터 \(\vb Q\)가 일정하다(\((\dd\vb Q/\dd t)_f=0\))면 회전계의 관찰자는 \(\vb Q\)가 어떻게 변한다고 보는가? 별이 밤하늘에서 도는 현상과 연결하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\((\dd\vb Q/\dd t)_r=-\boldsymbol\omega\times\vb Q\) — 회전계 관찰자에게 \(\vb Q\)는 각속도 \(-\boldsymbol\omega\)로 돈다. 지구(\(\boldsymbol\omega\): 북쪽)에서 보면 "고정된" 별들이 천구의 북극 둘레로 반대 방향(동→서)으로 하루에 한 바퀴 돈다.</p></div></div>

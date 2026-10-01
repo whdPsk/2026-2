@@ -1,0 +1,72 @@
+<div class="predict"><b>◈ 학습 목표.</b> ① 비상대론적 가속 전하의 복사장에서 <b>방향(오른손 법칙)·세기(\(\sin\Theta\))</b>를 읽고, ② 포인팅 플럭스 → \(dP/dA\) → \(dP/d\Omega\) → 총파워로 이어지는 <b>라모 공식</b>을 단계별로 재현하며(\(\int\sin^2\Theta\,d\Omega=8\pi/3\)), ③ 여러 전하를 하나의 <b>쌍극자 모멘트 \(\mathbf p\)</b>로 묶는 쌍극자 근사의 조건(\(r'\ll\lambda\))을 말하고, ④ \(\sin^2\Theta\) 파워 패턴(가속 축 방향 0, 수직 방향 최대)과 100% 선편광을 그림으로 설명한다. 시험은 <span class="hl">라모 공식 암기 + 파워 패턴 해석 + 단진동 시간평균 계산</span> 위주.</div>
+
+<h4>1. 라모 공식 — Review Question ④ <span class="en">Larmor's formula</span></h4>
+<div class="slide"><div class="sh">L06 · 슬라이드 3 ④ <span class="st">Review Questions</span></div>
+<ul><li>State Larmor's formula for the power radiated by a charge \(q\) undergoing acceleration \(a\).</li></ul> [[L06.s3d]]</div>
+<div class="explain"><b>부가설명 · 모범답</b> \(P=\dfrac{2q^2a^2}{3c^3}\) (Gaussian cgs, 비상대론). 전자라면 \(P=\dfrac{2e^2a^2}{3c^3}\). <span class="star">강조</span> 교수님: <span class="hl">"여러분이 외우고 있어야 하는 것" — 분자에 2가 3개(\(2\cdot e^2\cdot a^2\)), 분모에 3이 2개(\(3\cdot c^3\))</span>. 일반 전하는 \(e\to q\). 이 식과 "복사 에너지가 시간당 그만큼 방출된다"는 의미까지 기억하면 동영상 두 편(플립 13–15)이 설명하려던 것을 다 이해한 것. 유도는 수학적으로 복잡하니 궁금하면 학부 전자기학 책이나 Jackson <i>Classical Electrodynamics</i>를 직접 따라가 보라고 권함. [[S0917.10, F15.11]]</div>
+<div class="trap"><b>STT 교정</b>녹음 "1월 10월 전자의 경우에는 이렇게 분자의 2가 3개고 국무회는 3회", "라모노프면", "2제곱 나누기 32제곱" → 모두 라모 공식 \(2e^2a^2/3c^3\)의 오인식. 플립 자막 "라모르 포뮬라"도 동일. [[S0917.10, F15.10]]</div>
+<div class="explain"><b>부가설명 · 라모 공식의 적용 조건</b> 라모 공식은 앞 단원의 전기장에서 <b>복사장 항만</b> 고려해 계산한 것이고, 특히 속도가 매우 느려 \(\beta\)를 무시하고(\(\hat{\mathbf n}-\boldsymbol\beta\to\hat{\mathbf n}\)) \(\kappa=1\)로 잡은 상황, 즉 <span class="hl">비상대론적으로 가속하는 전자(non-relativistic accelerating electron)</span>의 복사 에너지다. 상대론적이면 \(\kappa\)·\(\gamma\) 인자가 살아나 비밍이 생긴다(싱크로트론 단원). [[S0917.12]]</div>
+
+<h4>2. 비상대론적 복사장: 방향과 세기 <span class="en">플립 15 · Non-relativistic radiation field</span></h4>
+<div class="slide flip"><div class="sh">플립 15 · 0:00–3:36 <span class="st">가속 전하의 복사장</span></div>
+<ol>
+<li>복사장 \(\mathbf E_{\rm rad}\), \(\mathbf B_{\rm rad}=\hat{\mathbf n}\times\mathbf E_{\rm rad}\)을 응용한다. 전하 \(q\), 위치 \(\mathbf x\)이면 쌍극자 모멘트 \(\mathbf p=q\mathbf x\), \(\dot{\mathbf p}=q\dot{\mathbf x}=q\mathbf v\)(속도), \(\ddot{\mathbf p}=q\dot{\mathbf v}\)(가속도). <span class="hl">복사에는 가속도가 필요 — 전하가 가속(또는 감속)되면 복사가 생긴다.</span> [[F15.01]]</li>
+<li>속도가 광속보다 훨씬 느리면(\(\beta=v/c\ll1\), 비상대론) \(\kappa=1-\hat{\mathbf n}\cdot\boldsymbol\beta\approx1\), 또 길이 1인 \(\hat{\mathbf n}\)에 비해 \(\beta\)는 작으니 \(\hat{\mathbf n}-\boldsymbol\beta\approx\hat{\mathbf n}\):
+\[ \mathbf E_{\rm rad}=\left[\frac{q}{c^2R}\,\hat{\mathbf n}\times(\hat{\mathbf n}\times\dot{\mathbf u})\right]_{\rm ret},\qquad \mathbf B_{\rm rad}=[\hat{\mathbf n}\times\mathbf E_{\rm rad}] \] [[F15.02]]</li>
+<li>방향: 전하가 위쪽으로 가속, 관측자는 \(\hat{\mathbf n}\)(소스→관측자) 방향. \(\hat{\mathbf n}\times\dot{\boldsymbol\beta}\)는 오른손 법칙으로 스크린 밖으로 나오는 방향, 거기에 다시 \(\hat{\mathbf n}\times\)를 하면 → \(\mathbf E_{\rm rad}\)는 \(\hat{\mathbf n}\)에 수직이면서 <b>가속도와 \(\hat{\mathbf n}\)이 이루는 평면 안</b>에 놓인다(가속도의 \(\hat{\mathbf n}\)에 수직인 성분의 반대 방향). [[F15.03]]</li>
+<li>\(\mathbf B_{\rm rad}=\hat{\mathbf n}\times\mathbf E_{\rm rad}\)는 스크린 안쪽으로 들어가는 방향. 세기: \(|\mathbf E|=|\mathbf B|\), 가속도와 \(\hat{\mathbf n}\) 사이 각이 \(\Theta\)이므로 외적에서 \(\sin\Theta\), \(\dot\beta=\dot v/c\)에서 \(c\)가 하나 더 나와 \(c^2\):
+\[ |\mathbf E_{\rm rad}|=|\mathbf B_{\rm rad}|=\frac{q\,\dot u}{c^2R}\sin\Theta \] [[F15.04]]</li>
+</ol></div>
+<div class="intuit"><b>직관 · "가속도의 그림자"</b>관측자가 보는 복사장은 가속도 벡터를 시선에 수직인 하늘 평면에 투영한 것(부호 반대)이다. 시선과 나란한 성분은 투영하면 0 → 가속 축 방향에서 보면 아무것도 안 보인다. 이 한 문장이 \(\sin\Theta\), 파워 패턴, 편광 방향, 톰슨 산란 편광을 다 설명한다. [[F15.03, F15.04]]</div>
+
+<h4>3. 포인팅 플럭스 → 파워 패턴 → 총파워 <span class="en">Poynting flux, dP/dΩ, total power</span></h4>
+<div class="slide flip"><div class="sh">플립 15 · 3:36–8:50 <span class="st">라모 공식 유도</span></div>
+<ol>
+<li>포인팅 벡터(포인팅 플럭스) \(\mathbf S=\dfrac{c}{4\pi}\mathbf E\times\mathbf B\). \(\mathbf E\perp\mathbf B\)이고 크기가 같으며 방향은 복사 전파 방향 \(\hat{\mathbf n}\) → \(\mathbf S=\dfrac{c}{4\pi}E_{\rm rad}^2\,\hat{\mathbf n}\). 앞의 세기를 제곱해 넣으면 복사 플럭스
+\[ S=\frac{c}{4\pi}\frac{q^2\dot u^2}{c^4R^2}\sin^2\Theta=\frac{q^2\dot u^2}{4\pi c^3R^2}\sin^2\Theta \] [[F15.05]]</li>
+<li>\(E,B\)가 각각 \(R^{-1}\)이므로 플럭스는 \(R^{-2}\) — 복사 플럭스가 거리 제곱에 반비례한다는 사실과 정확히 일치. 파워 = 에너지/시간, 플럭스 = 에너지/면적/시간이므로 \(S=dP/dA\). [[F15.06]]</li>
+<li>\(\hat{\mathbf n}\)을 곱한 것은 방향만 나타내므로 크기만 쓴다. 입체각 정의 \(d\Omega=dA/R^2\) → \(dA=R^2d\Omega\), 양변의 \(R^2\)가 상쇄되어 <b>파워 패턴</b>:
+\[ \frac{dP}{d\Omega}=\frac{q^2\dot u^2}{4\pi c^3}\sin^2\Theta \] 어떤 방향으로 파워가 얼마나 나가는가(각도 의존성)를 보여준다. [[F15.07]]</li>
+<li>가속도 방향과 관측 방향 사이 각 \(\Theta\). \(\Theta=90^\circ\)(\(\sin\Theta=1\))에서 최대. 좌표축 둘레로 회전하면 튜브(토러스) 모양 — 방위각 \(\phi\) 방향으로는 등방, 극각 방향으로는 \(\Theta=\pi/2\)에서 최대. 즉 <span class="hl">가속도에 수직인 방향으로 최대 파워가 방출되고, 가속 방향(\(\Theta=0,180^\circ\))으로는 0</span>. [[F15.08]]</li>
+<li>극좌표의 "타원 두 개 붙은" 그림 = 주어진 방향으로 파워가 상대적으로 얼마나 나가는지. 총파워는 \(R^2\)을 상쇄시킨 위 식을 입체각으로 적분: \(d\Omega=\sin\Theta\,d\Theta\,d\phi\), \(\phi\) 적분 \(=2\pi\), 남는 것 \(\int_0^\pi\sin^3\Theta\,d\Theta\) → \(\mu=\cos\Theta\) 치환이 편리. [[F15.09]]</li>
+<li>\(\sin\Theta\,d\Theta=-d\mu\), \(\sin^2\Theta=1-\mu^2\): \(2\pi\int_{-1}^{1}(1-\mu^2)d\mu=4\pi\int_0^1(1-\mu^2)d\mu=4\pi\left(1-\tfrac13\right)=\tfrac{8\pi}{3}\) (우함수). 따라서
+\[ P=\frac{q^2\dot u^2}{4\pi c^3}\cdot\frac{8\pi}{3}=\frac{2q^2\dot u^2}{3c^3} \] = <b>라모 공식</b>(가속도 제곱에 비례). [[F15.10]]</li>
+<li>가속도를 \(a\)라 하면 \(P=\dfrac{2q^2a^2}{3c^3}\), 전자는 \(\dfrac{2e^2a^2}{3c^3}\) — "분자에 2가 3개, 분모에 3이 2개, 기억해 두기 바랍니다." 또 관측자를 지나가는 전기장은 늘 한 방향(위아래)으로만 진동 → <span class="hl">이 복사는 100% 선형 편광</span>. [[F15.11]]</li>
+<li>(플립 15 마무리 인사.) [[F15.12]]</li>
+</ol></div>
+<div class="trap"><b>함정 · 플립 자막의 각도 실수</b>플립 15 5:57 자막에 "세타가 0인 때는 최대"라는 말이 섞여 있지만, 바로 뒤에서 "세타가 90도일 때 \(\sin\theta=1\)이니까 최대", "가속도 방향(θ=0, 180°)으로는 0"이라고 정정한다. <span class="hl">\(\Theta=0\)은 파워 0, \(\Theta=90^\circ\)가 최대</span>. [[F15.08]]</div>
+<div class="explain"><b>부가설명 · 수업(9/17)에서의 같은 유도</b> 포인팅 플럭스 \(\frac{c}{4\pi}\mathbf E\times\mathbf B\)에서 \(|E|=|B|\)이라 \(E^2\)로 쓰고, \(\hat{\mathbf n}\times\)에서 \(\sin\Theta\)가 나온다. 이를 대입한 게 \(dP/dA\), 면적을 \(R^2d\Omega\)로 바꿔 \(R^2\)을 없앤 게 \(dP/d\Omega\) — "첫 번째 식은 동영상에서 설명한 내용". 두 번째 식은 \(\sin^2\Theta\)를 입체각에 대해 적분한 것으로 \(\mu=\cos\Theta\)로 잡으면 \(\int_{-1}^1(1-\mu^2)d\mu\) → \(8\pi/3\) "잘 알려진 사실". [[S0917.14]]</div>
+<div class="trap"><b>STT 교정</b>"시나노 미사파이의 토미팅 블록스" = \(\frac{c}{4\pi}\) 포인팅 플럭스, "3번의 코파이" = \(8\pi/3\), "레디션 블랙" = radiation field. [[S0917.14]]</div>
+
+<h4>4. 쌍극자 근사 <span class="en">Dipole approximation</span></h4>
+<div class="slide"><div class="sh">L06 · 슬라이드 5 <span class="st">Dipole Approximation</span></div>
+<ul>
+<li>When there are many particles with different positions \(\mathbf r_i\), velocities \(\mathbf v_i\), and charges \(q_i\), we can find the radiation field at large distances by simply adding together the \(\mathbf E_{\rm rad}\) from each particle.
+<ul><li>However, the differences in retarded time make it difficult to obtain \(\mathbf E_{\rm rad}\).</li></ul></li>
+<li>When many charged particles are in a small volume with size (\(r'\ll\lambda\)), the differences in retarded time across the source are negligible ➔ <b>dipole approximation</b>.</li>
+<li>Then, \[ \mathbf E_{\rm rad}(\mathbf x,t)=\sum_i\frac{q_i}{c}\left[\frac{\hat{\mathbf n}\times\{\hat{\mathbf n}\times\dot{\boldsymbol\beta}_i\}}{R_i}\right]_{\rm ret}=\left[\frac{\hat{\mathbf n}\times\{\hat{\mathbf n}\times\ddot{\mathbf p}\}}{c^2R_0}\right]_{\rm ret} \]
+where the dipole moment is \(\mathbf p\equiv\sum_iq_i\mathbf x_i=\int_{V_0}\rho(\mathbf x',t)\,\mathbf x'\,d^3x'\)
+\[ \Rightarrow\ \frac{dP}{d\Omega}=\frac{\ddot p^2\sin^2\Theta}{4\pi c^3},\qquad P=\frac{2\ddot p^2}{3c^3} \]</li>
+<li>[그림: 회색 원(소스 부피 \(V_0\)) 안에 원점 O와 위치 \(\mathbf x'\), \(\rho(\mathbf x',t')\), \(\mathbf j(\mathbf x',t')\); 멀리 떨어진 관측점 P(\(\phi(\mathbf x,t)\), \(\mathbf A(\mathbf x,t)\))까지 벡터 \(\mathbf x\)와 \(\mathbf x-\mathbf x'\)]</li>
+</ul> [[L06.s5]]</div>
+<div class="explain"><b>부가설명</b> 실제 소스(관측자가 보는 천체)에는 전자가 굉장히 많고, 이온은 전하도 다르다. 원칙적으로는 각 입자의 복사장을 다 더하면 되지만, 입자마다 관측자까지 거리가 달라 <b>retarded time이 다 다르므로</b> 계산이 어렵다. 쌍극자 근사는 그 거리 차를 무시하자는 것: <span class="hl">소스 크기가 파장보다 작으면(\(r'\ll\lambda\)) 거리 차에 따른 retarded time 차이를 무시할 수 있다.</span> [[S0917.12]] <br>비상대론이므로 앞 식에서 \(\beta\)를 무시하고(\(\hat{\mathbf n}\) 크기 1), 모든 전하를 같은 retarded time으로 더한다. \(\dot{\boldsymbol\beta}_i=\dot{\mathbf v}_i/c\)에서 \(c\)가 하나 더 나와 \(c^2\), \(\mathbf v\)는 \(\mathbf x\)의 시간미분 → \(\sum q_i\mathbf x_i\) = <b>쌍극자 모멘트</b>. 연속 분포면 전하밀도의 적분 \(\int\rho\,\mathbf x'\,d^3x'\). \(\ddot{\mathbf p}\)는 두 번 시간미분 = 가속도. 파워는 포인팅 벡터(시간당·면적당 에너지)를 면적에 대해 적분한 것. [[S0917.13]] <br>결과의 총파워는 단일 전자일 때와 같은 꼴이다(\(qa\to\ddot p\)). "charge와 acceleration을 분리하면" 앞의 라모 식으로 돌아간다. [[S0917.14, S0917.15]]</div>
+<div class="trap"><b>STT 교정</b>"다이폴 분사"·"나이프롤러전자" = dipole approximation(쌍극자 근사), "리타일 타임"·"18타임"·"루타의 타임" = retarded time, "Normal latency" = non-relativistic. [[S0917.12, S0917.13]]</div>
+<div class="intuit"><b>직관 · 왜 \(r'\ll\lambda\)인가</b>소스 양 끝의 경로차 \(\sim r'\) → 위상차 \(\sim2\pi r'/\lambda\). 이 값이 작으면 모든 전하의 장이 같은 위상으로 도착해 "한 덩어리 쌍극자"처럼 더해진다. 크면 서로 다른 위상의 장이 섞여 간섭 패턴이 생기고, 쌍극자 하나로는 안 된다(사중극자 등 고차항 필요). [[L06.s5, S0917.12]]</div>
+<div class="trap"><b>함정 · 장을 더할까, 파워를 더할까</b>쌍극자 근사는 <b>장(진폭)</b>을 먼저 더한 뒤 제곱한다(\(\ddot{\mathbf p}=\sum q_i\ddot{\mathbf x}_i\)). 같은 위상으로 움직이는 \(N\)개 전하는 \(\ddot p\propto N\) → \(P\propto N^2\) (coherent). 반대로 위상이 무작위인 독립 입자(대부분의 천체 열복사)는 교차항이 평균 0 → 파워를 그냥 더해 \(P\propto N\). 같은 부호 전하쌍이 서로 반대로 가속하면 \(\ddot{\mathbf p}=0\)이 될 수도 있다. [[L06.s5]]</div>
+
+<h4>5. 파워 패턴 해석 <span class="en">sin²Θ pattern</span></h4>
+<div class="explain"><b>부가설명 · 수업에서 강조한 그림</b> 쌍극자가 위아래로 진동(=가속 방향이 위아래)할 때, \(\Theta\)는 <b>쌍극자 벡터와 관측자 방향 사이의 각</b>. \(\Theta=0\)(진동 축 위·아래에 있는 관측자)는 가속 방향과 시선이 나란해 <span class="hl">아무런 파워도 받지 못한다</span>. 최대는 \(\sin\Theta=1\), 즉 90° 방향. 이를 극좌표로 그린 것이 파워 패턴: "수직 방향으로 Maximum Power가 나오고 가속 방향으로는 Power가 나오지 않는다." <span class="star">강조</span> [[S0917.15]]</div>
+<div class="apply"><b>수치 척도 · 단진동 전하</b>\(x=x_0\cos\omega t\)이면 \(\ddot x=-\omega^2x_0\cos\omega t\), \(\langle\cos^2\rangle=\tfrac12\) → \(\langle P\rangle=\dfrac{2q^2}{3c^3}\cdot\dfrac{\omega^4x_0^2}{2}=\dfrac{q^2\omega^4x_0^2}{3c^3}\). 최대 가속도 \(\omega^2x_0\)를 그대로 넣은 \(2q^2\omega^4x_0^2/3c^3\)은 <b>순간 최대 파워</b>로 평균의 2배. 진폭 2배 → 4배, 같은 진폭에서 주파수 2배 → 16배. 이 \(\omega^4\)가 레일리 산란(U13)의 \(\omega^4\)와 같은 뿌리. [[L06.s10, F15.10]]</div>
+<div class="apply"><b>천체 적용 · 원운동 전하(HW2-2, 예제 4.2)</b>원운동은 서로 90° 위상차인 두 선진동의 합. 궤도축 방향에서 보면 두 성분이 모두 보여 원편광, 궤도면 안에서 보면 한 성분만 보여 선편광, 중간은 타원편광. 평균 각분포 \(\propto(1+\cos^2\theta)\) — 톰슨 산란 무편광 단면적(U14)과 같은 꼴. [[F15.11]]</div>
+
+<div class="formula"><div class="ftitle">암기 — 라모 공식과 쌍극자 복사</div><p><b>복사장·각분포·총파워 (비상대론)</b></p>\[ |E_{\rm rad}|=|B_{\rm rad}|=\frac{q a\sin\Theta}{c^2R},\quad {dP\over d\Omega}={q^2a^2\over4\pi c^3}\sin^2\Theta,\quad P={2q^2a^2\over3c^3} \]<p class="note">\(\int\sin^2\Theta\,d\Omega=8\pi/3\). 100% 선편광, \(\mathbf E\)는 가속도와 \(\hat{\mathbf n}\)이 만드는 평면 안. <i>조건: β≪1, Gaussian cgs</i></p><p><b>쌍극자와 단진동</b></p>\[ \mathbf p=\sum_iq_i\mathbf x_i,\quad {dP\over d\Omega}={\ddot p^2\sin^2\Theta\over4\pi c^3},\quad P={2\ddot p^2\over3c^3},\quad \langle P\rangle={q^2\omega^4x_0^2\over3c^3} \]<p class="note">진폭 2배→평균 파워 4배, 주파수 2배→16배(같은 진폭). <i>조건: 소스 크기 \(r'\ll\lambda\); 마지막은 \(x=x_0\cos\omega t\)인 한 전하</i></p></div>
+
+<h4>체크포인트</h4>
+<div class="qz" data-q="u12-1"><div class="qq">쌍극자의 축 방향에서 복사가 없는 이유를 말하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>복사장은 \(\hat{\mathbf n}\times(\hat{\mathbf n}\times\ddot{\mathbf p})\), 즉 시선에 수직인 가속도 성분만 만든다. 축 방향에서는 그 투영이 0(\(\sin\Theta=0\))이다. [[F15.08, S0917.15]]</p></div></div>
+<div class="qz" data-q="u12-2"><div class="qq">같은 위상인 전하 N개의 파워는 항상 N배인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 소스가 파장보다 작고 동일 진폭·위상이면 장을 먼저 더해 \(\ddot p\propto N\), 파워 \(\propto N^2\)이 된다. 위상이 무작위인 독립 입자라야 평균적으로 \(N\)배. 방향·전하 부호·위상 조건을 확인한다. [[L06.s5]]</p></div></div>
+<div class="qz" data-q="u12-3"><div class="qq">ω를2배, 진폭을1/2배로 하면 단진동 평균파워는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\langle P\rangle\propto\omega^4x_0^2\)에 따라 \(16\times\tfrac14=4\)배.</p></div></div>
+<div class="qz" data-q="u12-4"><div class="qq">\(dP/d\Omega\)에서 총파워로 갈 때 나오는 \(8\pi/3\)을 \(\mu=\cos\Theta\) 치환으로 1분 안에 계산하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\int\sin^2\Theta\,d\Omega=2\pi\int_{-1}^1(1-\mu^2)d\mu=2\pi(2-\tfrac23)=\tfrac{8\pi}{3}\). 그래서 \(P=\tfrac{q^2a^2}{4\pi c^3}\cdot\tfrac{8\pi}{3}=\tfrac{2q^2a^2}{3c^3}\). [[F15.10, S0917.14]]</p></div></div>
+<div class="qz" data-q="u12-5"><div class="qq">쌍극자 근사가 성립하는 조건과, 그 조건이 없애주는 어려움은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>소스 크기 \(r'\ll\lambda\) (그리고 비상대론). 입자마다 관측자까지 거리가 달라 생기는 retarded time 차이를 무시할 수 있게 해, 모든 전하를 같은 시각에서 합한 \(\ddot{\mathbf p}\) 하나로 복사를 쓴다. [[L06.s5, S0917.12]]</p></div></div>
+<div class="qz" data-q="u12-6"><div class="qq">위로 가속하는 전하를 오른쪽(Θ=90°)에서 볼 때 \(\mathbf E_{\rm rad}\), \(\mathbf B_{\rm rad}\)의 방향과 편광은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\mathbf E_{\rm rad}\propto\hat{\mathbf n}\times(\hat{\mathbf n}\times\mathbf a)=-\mathbf a_\perp\) → 아래쪽(가속도 반대, 가속이 진동하면 위아래로 진동). \(\mathbf B=\hat{\mathbf n}\times\mathbf E\) → 스크린 안쪽. 전기장이 한 축으로만 진동하므로 100% 선편광. [[F15.03, F15.04, F15.11]]</p></div></div>
+
+<p class="note">출처: Lecture06 슬라이드 3 ④(Review)·5(Dipole Approximation)·10(단진동 파워) · 플립 15(라모 공식) 전 구간 · 9/17 속기 16:07–17:07, 20:40–27:12 · HW2-2 · 상태: PPT·플립·속기 장부 기준 전수 반영</p>

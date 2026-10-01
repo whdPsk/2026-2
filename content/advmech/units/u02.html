@@ -1,0 +1,73 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 공중에서 포탄이 터져 파편이 사방으로 흩어진다. 폭발 직후 파편들의 질량중심은 어떤 궤적을 그릴까? 폭발력의 세기나 파편 수에 따라 달라질까? 그리고 "모든 내력의 합이 0"이라는 말을 \(\sum_\alpha\sum_{\beta\neq\alpha}\vb f_{\alpha\beta}=0\)으로 쓸 때, 이 이중합이 0이 되는 이유를 <em>한 줄로</em> 말할 수 있는지 먼저 시도해 보라.</div>
+
+<h4>9.3 계의 선운동량 <span class="en">linear momentum of the system</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>\(M\ddot{\vb R}=\vb F^{\rm ext}\) — 이중합이 사라지는 과정 <b>(필수)</b></div>
+<ol>
+<li>입자 \(\alpha\)에 작용하는 힘을 외력과 내력으로 나눈다(강의 식 9.9–9.10):
+\[ \vb F_\alpha=\vb F^{(\rm ext)}_\alpha+\vb f_\alpha,\qquad \vb f_\alpha=\sum_{\beta\ne\alpha}\vb f_{\alpha\beta}. \]</li>
+<li>입자마다 Newton 제2법칙:
+\[ \od{^2}{t^2}(m_\alpha\vb r_\alpha)=\vb F^{(\rm ext)}_\alpha+\sum_{\beta\ne\alpha}\vb f_{\alpha\beta}. \]</li>
+<li>\(\alpha\)에 대해 합한다. 좌변은 \(\od{^2}{t^2}\sum m_\alpha\vb r_\alpha=M\ddot{\vb R}\).
+\[ M\ddot{\vb R}=\underbrace{\sum_\alpha\vb F^{(\rm ext)}_\alpha}_{\vb F}+\sum_\alpha\sum_{\beta\ne\alpha}\vb f_{\alpha\beta}. \]</li>
+<li><b>이중합 처리 (핵심).</b> 방법 ① 짝 짓기: 순서쌍 \((\alpha,\beta)\)와 \((\beta,\alpha)\)를 묶으면
+\[ \sum_\alpha\sum_{\beta\ne\alpha}\vb f_{\alpha\beta}=\sum_{\alpha&lt;\beta}(\vb f_{\alpha\beta}+\vb f_{\beta\alpha})=0 . \]
+방법 ② 더미 첨자(교재 각주): 합 \(S=\sum\sum\vb f_{\alpha\beta}\)에서 첨자 이름을 바꾸면 \(S=\sum\sum\vb f_{\beta\alpha}=-S\), 따라서 \(S=0\). <b>약한 형태만 썼다.</b></li>
+<li>결론 (요약 1번):
+\[ \boxed{\,M\ddot{\vb R}=\vb F\,} \]
+질량중심은 총질량 \(M\)인 한 입자가 외력의 합을 받는 것처럼 움직인다 — 내력의 성질과 무관하게.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>계의 운동량과 보존 (요약 2–3번)</div>
+<ol>
+<li>총운동량을 정의하고 질량중심 정의를 미분한다:
+\[ \vb P=\sum_\alpha m_\alpha\dot{\vb r}_\alpha=\od{}{t}\sum_\alpha m_\alpha\vb r_\alpha=\od{}{t}(M\vb R)=M\dot{\vb R}. \]
+(질량이 일정하다는 가정이 들어갔다 — 로켓(U10)에서 이 가정이 깨진다.)</li>
+<li>유도 1과 합치면 \(\dot{\vb P}=M\ddot{\vb R}=\vb F\).</li>
+<li><b>보존.</b> \(\vb F=0\)이면 \(\vb P\)는 상수이고, 그 값은 질량중심에 놓인 질량 \(M\)의 운동량과 같다.</li>
+<li><b>성분별 보존.</b> 외력이 0이 아니어도 어떤 방향 \(\uv n\)으로의 성분이 0이면 \(\vb P\cdot\uv n\)은 보존된다. 예: 중력만 받는 폭발 → 수평 운동량 보존, 연직 방향은 \(\dot P_z=-Mg\).</li>
+</ol></div>
+
+<div class="callout"><b class="head">포탄 폭발 — 예측의 답.</b> 폭발은 내력이므로 질량중심 궤적에 영향을 주지 않는다. 파편들의 질량중심은 폭발이 없었을 때와 <b>똑같은 포물선</b>을 계속 그린다(어느 파편이든 땅에 닿기 전까지 — 땅에 닿으면 수직항력이라는 새 외력이 생긴다).</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>계의 운동량으로 푸는 법 — Example 9.2 낙하 사슬의 구조</div>
+<ol>
+<li>길이 \(b\), 선밀도 \(\rho\), 질량 \(M=\rho b\)인 사슬의 두 끝 A, B를 같은 높이에 모아 걸었다가 B를 놓는다. B가 \(x\)만큼 떨어졌을 때 고정점 A의 장력 \(T\)를 구하는 문제.</li>
+<li><b>계 전체</b>에 \(\dot{\vb P}=\vb F\)를 쓴다. 외력은 중력 \(Mg\)(아래)와 A의 장력 \(T\)(위)뿐. 아래를 양으로 잡으면
+\[ \dot P=Mg-T. \]</li>
+<li>\(x\)만큼 떨어진 순간 왼쪽(고정된 쪽) 길이는 \((b+x)/2\)로 정지, 오른쪽(움직이는 쪽) 길이는 \((b-x)/2\)로 속력 \(\dot x\). 따라서
+\[ P=\frac{\rho}{2}(b-x)\dot x . \]
+(주의: 끝점 B의 속력이 \(\dot x\)이고 오른쪽 가닥 전체가 같은 속력으로 움직인다.)</li>
+<li><b>(a) 자유낙하 가정</b>: \(\dot x=gt\), \(\ddot x=g\), \(\dot x^2=2gx\).
+\[ \dot P=\frac\rho2[(b-x)\ddot x-\dot x^2]=\frac{\rho g}{2}(b-3x)\ \Rightarrow\ T=Mg-\dot P=\frac{Mg}{2}\left(1+\frac{3x}{b}\right). \]
+끝(\(x\to b\))에서 \(T\to2Mg\).</li>
+<li><b>(b) 에너지 보존 가정</b> (Calkin &amp; March): 사슬이 에너지를 잃지 않는다면 \(\dot x^2=g(2bx-x^2)/(b-x)\)가 되고
+\[ T=\frac{Mg}{4b}\frac{2b^2+2bx-3x^2}{b-x}\ \xrightarrow{x\to b}\ \infty . \]
+실험에서 끝부분 장력이 무게의 약 25배까지 치솟음 → (b)가 실제에 가깝다. 이 예제의 교훈은 "<b>운동량 방정식은 같고, 어떤 운동학(\(\dot x\) 관계)을 넣느냐가 물리를 결정한다</b>"는 것.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 계의 선운동량 (요약 1–3)</div>
+\[ \boxed{\ \vb P=\sum_\alpha m_\alpha\dot{\vb r}_\alpha=M\dot{\vb R},\qquad \dot{\vb P}=M\ddot{\vb R}=\vb F^{(\rm ext)}\ } \]
+<p class="note">필요한 가정: 약한 형태 \(\vb f_{\alpha\beta}=-\vb f_{\beta\alpha}\), 질량 불변. 외력의 어떤 성분이 0이면 그 성분의 운동량만 보존.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u02-1"><div class="qq">\(n=3\)인 경우 \(\sum_\alpha\sum_{\beta\ne\alpha}\vb f_{\alpha\beta}\)의 여섯 항을 모두 적고 짝지어 0이 됨을 보여라. 교재 각주가 "\(N=3\)에 대해 직접 계산해 확인하라"고 한 것이 이것이다.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+\[ \vb f_{12}+\vb f_{13}+\vb f_{21}+\vb f_{23}+\vb f_{31}+\vb f_{32}=(\vb f_{12}+\vb f_{21})+(\vb f_{13}+\vb f_{31})+(\vb f_{23}+\vb f_{32})=0. \]
+<p>\(\alpha&lt;\beta\)인 쌍은 \((1,2),(1,3),(2,3)\) 세 개 = \(\binom32\). 일반적으로 \(n(n-1)\)개의 항이 \(n(n-1)/2\)개의 짝으로 묶인다.</p></div></div>
+
+<div class="qz" data-q="u02-2"><div class="qq">매끄러운 얼음 위에 정지한 썰매(질량 \(M\)) 위에 사람(질량 \(m\))이 서 있다. 사람이 썰매에 대해 상대속도 \(u\)로 걷기 시작하면 썰매의 속도는? 사람이 썰매 끝까지(길이 \(\ell\)) 걸었을 때 썰매가 움직인 거리는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>수평 외력이 없으므로 \(P_x=0\) 유지. 썰매 속도 \(V\), 사람의 지면 속도 \(V+u\):
+\[ MV+m(V+u)=0\ \Rightarrow\ V=-\frac{m}{M+m}u. \]
+<b>변위</b>: \(\dot X_{\rm CM}=0\)이므로 CM이 고정. 사람이 썰매에 대해 \(\ell\) 움직이는 동안 썰매 변위 \(\Delta X\)는 \(M\Delta X+m(\Delta X+\ell)=0\):
+\[ \Delta X=-\frac{m\ell}{M+m}. \]
+<b>검산</b>: \(M\to\infty\)이면 0 ✓, \(M\to0\)이면 \(-\ell\)(썰매만 뒤로 미끄러짐) ✓. 결과가 걷는 방식(속도 변화)과 무관한 것은 CM 고정의 직접적 결과.</p></div></div>
+
+<div class="qz" data-q="u02-3"><div class="qq">Example 9.2 (a)에서 \(T=\frac{Mg}{2}(1+3x/b)\)를 직접 유도하라. 왜 \(x=0\)에서 \(T=Mg/2\)인가? 물리적으로 해석하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>유도 3의 4번 참조. \(P=\tfrac\rho2(b-x)\dot x\)를 미분하면 \(\dot P=\tfrac\rho2[-\dot x^2+(b-x)\ddot x]\), \(\ddot x=g\), \(\dot x^2=2gx\) 대입: \(\dot P=\tfrac{\rho g}{2}(b-3x)\). \(T=Mg-\dot P=\rho g b-\tfrac{\rho g}{2}(b-3x)=\tfrac{\rho g}{2}(b+3x)\).</p>
+<p><b>\(x=0\)</b>: 놓는 순간 사슬은 아직 정지해 있지만 B쪽 절반은 즉시 자유낙하 가속도 \(g\)를 가진다(가정). 그 절반의 무게 \(Mg/2\)는 A가 받쳐주지 않고, 나머지 정지한 절반의 무게 \(Mg/2\)만 A가 받친다 ✓.</p></div></div>
+
+<div class="qz" data-q="u02-4"><div class="qq">질량 \(M\)인 포탄이 최고점에서 두 조각으로 쪼개졌다. 한 조각(질량 \(M/2\))은 폭발 직후 정지해 곧장 수직 낙하해 발사점에서 수평거리 \(R/2\)인 곳에 떨어졌다(\(R\)은 폭발이 없었을 때의 사거리). 다른 조각은 어디에 떨어지는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>두 조각은 같은 높이에서 연직 속도 0으로 출발하므로 <b>동시에</b> 착지한다. 그 순간 CM은 원래 포물선의 착지점 \(R\)에 있다:
+\[ \frac{(M/2)(R/2)+(M/2)x_2}{M}=R\ \Rightarrow\ x_2=\frac{3R}{2}. \]
+<b>주의</b>: 두 조각이 동시에 착지하지 않는 경우(연직 속도가 다른 경우)에는 먼저 떨어진 조각에 수직항력이 걸리므로 "CM은 포물선을 따른다"를 착지 시점에 그대로 쓸 수 없다.</p></div></div>

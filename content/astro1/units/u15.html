@@ -1,0 +1,187 @@
+<div class="predict"><b>◈ 학습 목표.</b> free-free 방출(제동복사)이 무엇이고 광자 에너지가 어디서 오는지 말한다. 쿨롱 에너지 ≪ 운동에너지라는 사실에서 impulse approximation을 정당화하고, 한 번의 전자–이온 충돌이 내는 에너지 \(W\propto b^{-3}\)와 스펙트럼 모양(저주파 평탄 → \(\omega\sim v/b\) 위에서 0)을 플립 16 순서대로 끌어낸다. 이어 9/29 Review: 충돌률 \(2\pi n_evb\,db\) → \(\int db/b\) = <b>쿨롱 로그</b>, \(b_{\max}\)·\(b_{\min}\)의 선택까지. 마지막으로 이 방출을 내는 천체(HII·ICM·코로나)의 가열/냉각에 적용한다. 9/22 PPT Review Questions 5개 + 9/29 Review Questions 앞 3개가 뼈대이고, 열적 평균(Maxwell)·흡수·방출측도는 U16.</div>
+
+<h4>제동복사란? <span class="en">free-free emission · bremsstrahlung</span></h4>
+<div class="slide"><div class="sh">L07 · 슬라이드 3 ① <span class="st">Review Questions</span></div>
+<ul><li>What is free-free emission?</li></ul> [[L07.s3a]]</div>
+<div class="explain"><b>부가설명</b> Bremsstrahlung은 독일어로 "제동(braking) 복사". 감속도 가속이므로, 양이온 근처를 지나며 궤도가 휘는 전자는 복사한다. 많이 생기려면 전자와 이온이 따로 있는 <b>플라즈마</b>여야 한다(중성 기체에선 안 나옴). [[S0922.10]] 전자가 자유 상태에서 출발해 자유 상태로 남은 채(free → free) 운동에너지 일부만 광자로 바꾸기 때문에 <span class="hl">free-free emission</span>이라고 부른다. [[L07.s3a, S0922.17]]</div>
+<table class="simple"><tr><th>전이</th><th>이름</th><th>과정</th></tr>
+<tr><td>bound → free</td><td>bound-free</td><td>이온화</td></tr>
+<tr><td>free → bound</td><td>free-bound</td><td>재결합</td></tr>
+<tr><td>bound → bound</td><td>bound-bound</td><td>들뜸·내려옴(선복사)</td></tr>
+<tr><td>free → free</td><td><b>free-free</b></td><td>자유전자가 자유 상태로 남은 채 에너지만 변함 = 제동복사</td></tr></table>
+
+<div class="slide flip"><div class="sh">플립 16 · 0:00–2:28 <span class="st">도입: 천문학의 플라즈마와 제동복사</span></div>
+<ol><li>이번 차시 내용: 단일 전자로부터 방출되는 복사 → 일정한 속도를 가진 전자들의 복사 → 온도가 \(T\)인 플라즈마의 (열적) 제동복사. [[F16.01]]</li>
+<li>천문학에는 플라즈마가 많이 관측된다. 예: Coma 은하단(머리털자리)의 X선, HII 영역의 복사. 두 천체 모두 전자와 이온으로 분리된(이온화된) 물질이 있고, 전하가 다르므로 서로 전자기력을 느끼며 가속을 준다. [[F16.01]]</li>
+<li>전자가 이온 주변을 지나며 쿨롱 상호작용으로 가속 → 고전 이론상 가속된 하전입자는 복사 → 이 복사가 <b>Bremsstrahlung</b>(braking radiation, 제동복사). 전자가 자유 → 자유 상태로 변하면서 <span class="hl">운동에너지가 복사에너지로 바뀌는</span> 현상이므로 free-free emission이라고도 한다. [[F16.02]]</li>
+<li>완전한 이해에는 양자역학이 필요하지만, 고전적으로 다뤄도 물리를 잘 이해할 수 있고 결과도 크게 다르지 않다 → 고전 유도 + 약간의 보정항(나중의 Gaunt 인자)으로 기술. 전하 \(Ze\)인 이온 옆을 전자가 지나며 궤도가 바뀌고(가속), 광자 \(h\nu\)가 나온다. [[F16.03]]</li>
+<li>온도 \(T\)인 플라즈마에서 전자의 운동에너지: \(\tfrac32kT=\tfrac12m_ev^2\), 즉 \(m_ev^2=3kT\). [[F16.03, F16.04]]</li></ol></div>
+<div class="trap"><b>STT 교정 (플립 16)</b>"코마크로스터 머리털 자리" → Coma cluster(머리털자리 은하단), "H2O Region" → HII region, "브램스트랄룸" → Bremsstrahlung, "GE+" → \(Ze\)(+), "H뇨" → \(h\nu\), "3KT" → \(\tfrac32kT\). [[F16.01, F16.03]]</div>
+
+<h4>에너지의 원천 <span class="en">Review Q ②</span></h4>
+<div class="slide"><div class="sh">L07 · 슬라이드 3 ② <span class="st">Review Questions</span></div>
+<ul><li>What is the source of the radiation energy in free-free emission?</li></ul> [[L07.s3b]]</div>
+<div class="explain"><b>부가설명</b> 광자의 에너지는 <span class="hl">전자의 운동에너지</span>에서 온다(이온의 들뜬 준위가 아님). 공급이 없으면 free-free 방출로 계(system)는 에너지를 잃고 식는다. 그런데 사람 시간 척도에서 천체는 거의 변하지 않는다 → 무언가가 계속 공급하고 있다(정상상태). 별이 빛으로 에너지를 잃는 만큼 중심부에서 만드는 것과 같은 논리. [[L07.s3b, S0922.18]]</div>
+<div class="intuit"><b>더 근원적인 질문</b>그러면 전자 운동에너지의 원천은? HII 영역은 중심별의 UV, ICM은 아직 모른다 — 아래 "천체 적용" 참고. 교수님: 이런 질문을 계속 던지다 보면 연구 주제가 보인다. [[S0922.20]]</div>
+
+<h4>Impulse approximation <span class="en">Review Q ③</span></h4>
+<div class="slide"><div class="sh">L07 · 슬라이드 3 ③ <span class="st">Review Questions</span></div>
+<ul><li>What is the impulse approximation?</li></ul> [[L07.s3c]]</div>
+<div class="explain"><b>부가설명</b> 전자는 \(-\infty\)부터 \(+\infty\)까지 이온과 상호작용하지만, 중요한 부분은 <span class="hl">최근접 거리(충격매개변수) \(b\) 근처에서 충돌시간 \(\tau\sim b/v\) 동안</span> 일어난다고 본다. 궤도는 거의 직선(아주 가까이 와서 크게 꺾이는 경우는 통계적으로 드묾 — 대부분은 멀리서 살짝 휨). [[L07.s3c, S0922.21]]</div>
+<div class="slide flip"><div class="sh">플립 16 · 2:28–4:27 <span class="st">왜 직선 궤도로 봐도 되나</span></div>
+<ol><li>쿨롱 퍼텐셜 에너지와 운동에너지의 비를 본다. 전자가 이온에 거리 \(b\)까지 다가왔다고 하고, \(b\)를 평균 입자 간 거리 \(b^3n_e\sim1\), 즉 \(b\sim n_e^{-1/3}\)로 잡는다(가장 근접한 거리의 대표값). [[F16.04]]</li>
+<li>숫자 인자는 빼고 운동에너지 \(\sim kT\), 쿨롱 에너지 \(\sim Ze^2/b\):
+\[ \frac{Ze^2/b}{kT}\sim\frac{Ze^2n_e^{1/3}}{kT}\ll1 \]
+온도가 높은 플라즈마에서는 일반적으로 1보다 훨씬 작다. [[F16.04]]</li>
+<li>→ 충돌 동안 <b>운동에너지의 변화가 작다</b> → 궤도 변화가 거의 없다(그림은 크게 그렸지만 실제 궤도는 거의 일직선). 이것이 <span class="hl">small-angle approximation = impulse approximation</span>: 모든 상호작용이 최근접 거리 근처에서 일어난다는 가정. [[F16.05]]</li>
+<li>설정: 이온이 원점, 전자는 충격매개변수 \(b\)로 속도 \(v\)로 지나간다. 최근접 순간을 \(t=0\)으로 잡으면 시각 \(t\)에 전자는 경로를 따라 \(vt\)만큼 와 있다. [[F16.05]]</li></ol></div>
+<div class="apply"><b>수치 척도 (python)</b>HII 영역 \(n_e=10\,\mathrm{cm^{-3}},T=10^4\) K: \(e^2n_e^{1/3}/kT=3.6\times10^{-7}\). ICM \(n_e=10^{-3},T=10^8\) K: \(1.7\times10^{-12}\). 평균 거리에서 보면 쿨롱 에너지는 운동에너지의 백만분의 일도 안 된다 → 직선 궤도 근사가 매우 좋다. [[F16.04]]</div>
+
+<h4>단일 충돌에서 방출되는 에너지 <span class="en">Review Q ④</span></h4>
+<div class="slide"><div class="sh">L07 · 슬라이드 3 ④ <span class="st">Review Questions</span></div>
+<ul><li>Derive an expression for the total energy radiated by an electron of velocity \(v\) and impact parameter \(b\) interacting with an ion with charge \(Ze\)?</li></ul> [[L07.s3d]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">판서 순서 (9/22)</span>라모 파워 × 충돌시간 [[L07.s3d, S0922.22]]</div><ol>
+<li>라모: \(P=\dfrac{2e^2a^2}{3c^3}\).</li>
+<li>최근접에서 수직 가속도 \(a\simeq\dfrac{Ze^2}{m_eb^2}\) (일반적으로는 \(a_\perp(t)=\dfrac{Ze^2b}{m_e(b^2+v^2t^2)^{3/2}}\), 각도로 쓰면 \(\cos^3\) 꼴).</li>
+<li>에너지 \(W\simeq P\cdot\dfrac{b}{v}=\dfrac{2Z^2e^6}{3m_e^2c^3}\dfrac{1}{b^3v}\).</li>
+<li>정확히 시간 적분하면 \(\int a_\perp^2dt=\dfrac{Z^2e^4}{m_e^2}\dfrac{3\pi}{8vb^3}\) → \(W=\dfrac{\pi Z^2e^6}{4m_e^2c^3b^3v}\). 근사와의 비 \(3\pi/8\approx1.18\) — 거의 1. <span class="star">강조</span> <span class="hl">차수(양)를 잡는 게 중요</span>하다는 교수님 강조.</li>
+</ol></div>
+<div class="slide flip"><div class="sh">플립 16 · 4:27–6:53 <span class="st">가속도 → 라모 파워 → 시간 적분</span></div>
+<ol><li>각도 \(\psi\)를 이온–전자 연결선과 \(b\) 방향 사이 각으로 잡으면 \(\cos\psi=b/L\), 거리 \(L\)은 피타고라스로 \(L^2=b^2+v^2t^2\). [[F16.06]]</li>
+<li>전자기력은 전자에서 이온을 향하고, 가속도 크기 \(a=\dfrac{Ze^2}{m_eL^2}\)(질량으로 나눔). \(L\)이 시간에 따라 변하므로 \(\psi\)로 쓰면 \(L^{-2}=\cos^2\psi/b^2\). 수직·평행 성분으로 나누면
+\[ a_\perp=\frac{Ze^2}{m_eb^2}\cos^3\psi,\qquad a_\parallel=\frac{Ze^2}{m_eb^2}\cos^2\psi\sin\psi \]
+(수직 성분은 \(\cos\)가 하나 더 붙어 3승, 평행은 \(\sin\psi\)). [[F16.06]]</li>
+<li>시간에 따라 그려 보면 대개 수직 가속도가 평행 가속도보다 크다 → 평행 항은 크게 중요하지 않고 <b>수직 방향 가속도</b>로 계산한다. [[F16.07]]</li>
+<li>라모 공식 \(P=\dfrac{2e^2a^2}{3c^3}\)에 \(a_\perp\)를 대입:
+\[ P(t)=\frac{2Z^2e^6}{3m_e^2c^3b^4}\cos^6\psi \] [[F16.07]]</li>
+<li>파워 = 시간당 에너지이므로 시간에 대해 적분하면 한 번의 충돌(single encounter)에서 방출한 총 에너지. \(t=(b/v)\tan\psi\), \(dt=(b/v)\sec^2\psi\,d\psi\)로 바꾸면
+\[ W=\int P\,dt=\frac{2Z^2e^6}{3m_e^2c^3b^4}\frac{b}{v}\int_{-\pi/2}^{\pi/2}\cos^4\psi\,d\psi=\frac{2Z^2e^6}{3m_e^2c^3b^3v}\cdot\frac{3\pi}{8}=\frac{\pi Z^2e^6}{4m_e^2c^3b^3v} \]
+\(\int\cos^4\psi\,d\psi=3\pi/8\) (python 확인 1.178). [[F16.08]]</li>
+<li>다시 쓰면 \(W\approx P(t=0)\times\dfrac{b}{v}\) — \(b/v\)는 <b>collision time</b>, 즉 거리 \(b\)를 속도 \(v\)로 달리는 데 걸리는 시간. 인자(3π/8)는 좀 다르지만 근사적으로 거의 같다. [[F16.08, F16.09]]</li>
+<li>해석: impulse 근사란 모든 상호작용이 이 거리에서 일어난다고 보는 것 → <span class="hl">대부분의 에너지가 최근접 거리에서 충돌시간 \(b/v\)에 걸쳐 방출된다</span>. [[F16.09]]</li></ol></div>
+<div class="trap"><b>STT 수치 교정</b>플립 녹음 "3분의 8파이"는 \(3\pi/8\)(≈1.18)이다(\(8\pi/3\approx8.4\)이면 "거의 1"이라는 설명과 모순). 9/22 판서도 "8분의 3 파이"(=\(3\pi/8\)). [[F16.08, S0922.22]]</div>
+<p>→ \(W\propto b^{-3}\): 가까이 지나갈수록 훨씬 많이 낸다. 이것이 아래 쿨롱 로그의 출발점.</p>
+
+<h4>스펙트럼: 전기장의 푸리에 변환 <span class="en">Review Q ⑤</span></h4>
+<div class="slide"><div class="sh">L07 · 슬라이드 3 ⑤ <span class="st">Review Questions</span></div>
+<ul><li>Using the above result, find an expression for \(\hat E(\nu)\).</li></ul> [[L07.s3e]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">판서 순서 (9/22)</span>\(\hat E(\nu)\)의 두 극한 [[L07.s3e, S0922.23, S0922.24]]</div><ol>
+<li>복사장 \(E(t)=\dfrac{e}{c^2R}a_\perp(t)\sin\Theta\) (Θ는 가속도와 시선 사이 각). 시간 의존은 \(a_\perp(t)\)에만.</li>
+<li>\(\hat E(\omega)\propto\int a_\perp(t)e^{i\omega t}dt\). 제대로 하면 수정 Bessel 함수가 나온다(플립 영상).</li>
+<li><b>고주파</b> \(\omega b/v\gg1\): \(a_\perp\)는 천천히, \(e^{i\omega t}\)는 빨리 변해 평균이 0 → \(\hat E\to0\).</li>
+<li><b>저주파</b> \(\omega b/v\ll1\): \(e^{i\omega t}\approx1\) → \(\int a_\perp dt=\Delta v=\dfrac{2Ze^2}{m_ebv}\) 상수. 따라서 \(\dfrac{dW}{d\omega}\simeq\dfrac{8Z^2e^6}{3\pi c^3m_e^2b^2v^2}\) (\(\omega\lesssim v/b\)), 위로는 ≈0.</li>
+</ol></div>
+<div class="slide flip"><div class="sh">플립 16 · 6:53–9:47 <span class="st">복사장의 푸리에 변환</span></div>
+<ol><li>복사의 스펙트럼을 구하려면 <b>Fourier transform</b>을 구해야 한다. 비상대론적 복사장(가속도장):
+\[ \mathbf E_{\rm rad}=\frac{e}{c^2R}\,\hat{\mathbf n}\times(\hat{\mathbf n}\times\mathbf a) \]
+가속도에 비례하고 거리의 1승에 반비례. [[F16.09, F16.10]]</li>
+<li>지금 구한 가속도는 \(a_\perp\). 라모 공식 유도 때처럼 가속도 방향 \(\hat{\mathbf a}\)와 관측자 방향 \(\hat{\mathbf n}\) 사이 각을 \(\Theta\)라 하면 크기는 \(\sin\Theta\)가 붙어
+\[ E(t)=\frac{e\,a_\perp\sin\Theta}{c^2R}=\frac{Ze^3\sin\Theta}{m_ec^2Rb^2}\cos^3\psi \] [[F16.10]]</li>
+<li>Fourier 변환의 정의: 시간에 따라 변하는 전기장에 \(e^{i2\pi\nu t}\)를 곱해 적분 —
+\[ \hat E(\nu)=\int_{-\infty}^{\infty}E(t)\,e^{i2\pi\nu t}dt=\frac{Ze^3\sin\Theta}{m_ec^2Rb^2}\int\cos^3\psi\,e^{i\omega t}dt,\quad\omega=2\pi\nu \]
+앞은 상수이고 적분만 제대로 하면 된다. [[F16.10, F16.11]]</li>
+<li>정확한 적분은 특수함수(<b>Bessel 함수</b>, 수정 Bessel \(K_1\))로 풀 수 있지만 간단히 두 극한을 본다. [[F16.11]]</li>
+<li><b>\(\omega\gg v/b\)</b> (collision time의 역수보다 훨씬 큰 주파수): \(e^{i\omega t}\)(cos·sin)가 매우 빨리 진동 → +와 −가 상쇄 → 적분 ≈ 0. [[F16.11]]</li>
+<li><b>\(\omega\ll v/b\)</b>: \(\omega\to0\)으로 두면 \(e^{i\omega t}\to1\) → 적분이 쉬워진다.
+\[ \int_{-\infty}^{\infty}\cos^3\psi\,dt=\frac{b}{v}\int_{-\pi/2}^{\pi/2}\cos\psi\,d\psi=\frac{2b}{v} \]
+(적분표로 "\(v\)분의 \(2b\)"). 즉 \(\hat E\approx\dfrac{2Ze^3\sin\Theta}{m_ec^2Rbv}\). [[F16.12]]</li>
+<li>정리(\(\nu=\omega/2\pi\)): 주파수가 작을 때는 위의 일정한 값, 클 때는 0 — 계단 모양 스펙트럼. [[F16.12]]</li></ol></div>
+<div class="explain"><b>부가설명 · 에너지 스펙트럼 검산</b> \(|\hat E|^2\)을 구면 전체로 적분하면 \(\dfrac{dW}{d\omega}=\dfrac{2e^2|\Delta v|^2}{3\pi c^3}\), \(\Delta v=\dfrac{2Ze^2}{m_ebv}\)를 넣으면 위의 \(\dfrac{8Z^2e^6}{3\pi c^3m_e^2b^2v^2}\). 이를 \(0\)부터 \(v/b\)까지 적분하면 \(\dfrac{8}{3\pi}\dfrac{Z^2e^6}{m_e^2c^3b^3v}\)로 정확한 \(W=\dfrac{\pi}{4}(\cdots)\)와 비 \(32/3\pi^2=1.08\) — 계단 근사가 총에너지도 거의 맞춘다(python). [[F16.12]]</div>
+<div class="intuit"><b>직관 · 왜 제동복사는 저주파(전파)에서 보이나</b>전자가 이온을 스쳐 가는 시간 \(b/v\)가 길다(상대적으로) → 그 역수보다 큰 주파수 성분은 거의 없다. <span class="hl">시간 척도가 크면 주파수는 작다.</span> 그래서 HII 영역의 free-free는 주로 전파로 관측(ICM처럼 아주 뜨거우면 X선까지). [[S0922.24]]</div>
+<div class="prof"><b>수업 중 질문 (9/22)</b>Q. 수직 방향 가속도만 다뤘는데 평행 방향은? → 진폭이 작고, 다가올 땐 끌려가다 지나가면 감속돼 <b>부호가 바뀐다</b> → 더 높은 주파수 쪽에 기여. free-free를 주로 보는 저주파(전파)에서는 영향이 작고, 넣어도 ~10% 정도(주파수에 따라 다름). [[S0922.16]] 플립에서도 \(a_\parallel\propto\cos^2\psi\sin\psi\)는 홀함수라 저주파 적분(\(\omega\to0\))이 0이 된다. [[F16.07]]</div>
+
+<div class="slide flip"><div class="sh">플립 17 · 0:00–2:21 <span class="st">정확한 단일 충돌 스펙트럼: 수정 Bessel 함수 \(K_0\), \(K_1\)</span></div>
+<ol><li>스펙트럼을 구하려면 교재 식(3.48, 복사 에너지 스펙트럼 식)에 지금 구한 \(\hat E(\nu)\)를 넣는다. 이 양은 <b>단위 입체각당·단위 주파수당 방출 에너지</b>. \(\hat E\)에 \(\sin^2\Theta\) 인자가 있으므로 라모 공식 유도 때처럼 입체각 적분이 쉽게 된다. [[F17.01]]</li>
+<li>입체각 적분 결과 = 주파수당 방출 에너지는 두 경우: <b>고주파 → 0</b>, <b>저주파 → 일정한 값</b>(앞 플립 16의 계단 근사). 근사 없이 특수함수로 끝까지 적분하면 (표준형, \(x\equiv\omega b/v\))
+\[ \frac{dW}{d\omega}=\frac{8Z^2e^6}{3\pi c^3m_e^2b^2v^2}\;x^2\left[K_1^2(x)+K_0^2(x)\right] \] [[F17.01]]</li>
+<li>\(K_0\), \(K_1\)은 <b>수정 Bessel 함수(modified Bessel function)</b>. \(K_0\) 항은 <b>평행(parallel) 가속도</b>에서, \(K_1\) 항은 <b>수직(perpendicular) 가속도</b>에서 온 것. [[F17.02]]</li>
+<li>그림: 계단 근사는 \(x\)가 1보다 "매우 작다" 대신 그냥 <b>1보다 작으면 일정, 크면 0</b>으로 고쳐 읽으면 된다. 정밀 계산을 수직·평행 기여로 나눠 그리면 <span class="hl">모든 주파수에서 수직 기여가 더 크다</span>. [[F17.02]]</li>
+<li>특히 저주파(전파) 영역에서는 평행 가속도 기여가 거의 0이고 수직이 압도적 → 수직 가속도만 쓴 근사로 충분하다. [[F17.03]]</li>
+<li>지금까지 계산한 것은 전자–이온 <b>single interaction</b>. 플라즈마에는 전자도 이온도 많으므로 그 효과를 모두 더해야 한다 → 아래 충돌률·쿨롱 로그. [[F17.03]]</li></ol></div>
+<div class="apply"><b>수치 확인 (python)</b>\(x=0.001\): \(x^2K_1^2=0.99999\), \(x^2K_0^2=5\times10^{-5}\) → 저주파 극한이 계단 근사값과 정확히 일치. \(x=0.1\): 수직 0.97, 평행 0.059(약 6%) — 9/22 수업의 "넣어도 ~10%"와 같은 차수. \(x=1\): 0.36 vs 0.18, \(x=3\): 0.015 vs 0.011 → \(x\gtrsim1\)에서 지수적으로 급감. 총 에너지로 적분하면 \(\int x^2K_1^2dx=3\pi^2/32\)(→ 정확히 \(W=\pi Z^2e^6/4m_e^2c^3b^3v\) 재현), \(\int x^2K_0^2dx=\pi^2/32\) — 평행 성분은 총량으로는 수직의 1/3이지만 <b>높은 주파수 쪽</b>에 몰려 있다. [[F17.02, F17.03]]</div>
+<div class="trap"><b>STT 교정 (플립 17)</b>"Modified Vessel Function" → modified Bessel function, "Papendicular" → perpendicular, "프리에텐스 폼" → Fourier transform. 교재 "식 3.48"의 번호는 녹음 그대로 — 교재 확인 필요. [[F17.01, F17.02]]</div>
+
+<h4>9/29 Review ① 충돌률 <span class="en">rate of collisions</span></h4>
+<div class="slide"><div class="sh">L08 · 슬라이드 3 ① <span class="st">Review Questions</span></div>
+<ul><li>What is the rate of collisions between electrons with a single ion with impact parameter \(b\sim b+db\)?</li>
+<li>[그림: 속도 \(v\)로 움직이는 전자들 속 축 위의 이온, 반지름 \(b\)·두께 \(db\)의 원통 껍질이 길이 \(v\,dt\)만큼 이어짐]</li>
+<li>\(n_e\cdot v\,dt\cdot2\pi b\,db/dt=2\pi n_evb\,db\) &nbsp;[Typos in the animation]</li></ul> [[L08.s3a]]</div>
+<div class="explain"><b>부가설명</b> 9/29 수업은 플립 영상 두 개 내용으로 제동복사를 끝내는 시간. [[D0929.01]] 모든 충돌 문제의 기본식:
+\[ \text{시간당 충돌 횟수}=n\sigma v\ \ [\mathrm{s^{-1}}],\qquad t_{\rm col}=\frac{1}{n\sigma v} \]
+\(n\)은 수밀도, \(\sigma\)는 단면적, \(v\)는 상대속도. 역수는 한 번 충돌하는 데 걸리는 시간(collision time). [[D0929.02]]<br>
+이 경우 단일 이온에 대해 \(n\to n_e\), 단면적은 충격매개변수가 \(b\)와 \(b+db\) 사이인 원통 껍질의 넓이 \(\sigma\to2\pi b\,db\)(\(2\pi b\)는 둘레, \(db\)는 두께) → 시간당 충돌 수 \(2\pi n_evb\,db\). 여기에 이온 수밀도 \(n_i\)를 곱하면 <span class="hl">단위 시간·단위 부피당 충돌 수 \(2\pi n_en_ivb\,db\)</span>. [[D0929.03]]</div>
+<div class="intuit"><b>교수님 비유 · 이성 친구 만드는 데 걸리는 시간</b>\(t=1/(n\sigma v)\): \(n\) = 사람이 많은 곳에 가야 함, \(\sigma\) = 매력 지수(클수록 많이 달라붙음), \(v\) = 내가 부지런히 움직이는 정도. <span class="star">강조</span> "\(n\sigma v\) 잘 기억해 두라." [[D0929.02, D0929.03]]</div>
+<div class="apply"><b>다른 분야에도</b>복사 문제뿐 아니라 은하 동역학에서 별과 별 사이의 (중력) 충돌도 같은 식으로 계산한다. [[D0929.03]]</div>
+<div class="trap"><b>애니메이션 오타</b>교수님: 애니메이션에는 속도 \(v\)가 빠져 있다(두 군데 오타). 단위 시간당이므로 \(v\,dt\)의 \(dt\)를 나누면 \(v\)가 남아야 한다. [[L08.s3a, D0929.03]]</div>
+<div class="prof"><b>수업 중 질문 (9/29)</b>Q. 영상에서 이온을 고정하고 전자들이 모두 같은 속도로 한 방향으로 움직인다고 했는데 실제로는? → 상대속도로 생각하면 문제없다. 접근 순서: ① 이온–전자 <b>단일 상호작용</b>에서의 파워(9/22) → ② 그 파워의 스펙트럼(플립) → ③ 같은 속도를 가진 여러 입자의 시간당 상호작용(\(dW/d\omega\,dV\,dt\)) → ④ 실제 플라즈마는 속도가 다 다르므로 Maxwell–Boltzmann 분포로 평균(U16). [[D0929.01]]</div>
+
+<h4>9/29 Review ② 쿨롱 로그 <span class="en">Coulomb logarithm</span></h4>
+<div class="slide"><div class="sh">L08 · 슬라이드 3 ② <span class="st">Review Questions</span></div>
+<ul><li>What is the Coulomb logarithm?</li></ul> [[L08.s3b]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">판서 순서 (9/29)</span>단일 충돌 → 여러 충돌 → \(\int db/b\) [[L08.s3b, D0929.04, D0929.05, D0929.06, D0929.07]]</div><ol>
+<li>복사장 \(\mathbf E=\dfrac{e}{c^2R}\hat{\mathbf n}\times(\hat{\mathbf n}\times\mathbf a)\) — 중요한 것은 <b>가속도에 비례</b>, 특히 \(a_\perp=\dfrac{Ze^2}{m_eb^2}\). [[D0929.04]]</li>
+<li>Fourier 변환은 차원만 보면 시간에 대해 한 번 적분한 것: \(\hat E\sim E\times(b/v)\). \(b/v\)는 상호작용 시간, 그 역수가 방출 주파수. \(b\) 의존성만 보면 \(\hat E\propto\dfrac{1}{b^2}\cdot b=\dfrac1b\). [[D0929.05]]</li>
+<li>에너지 스펙트럼은 \(|\hat E|^2\)에 비례 → <span class="hl">한 번 충돌의 \(dW/d\omega\propto b^{-2}\)</span>. (쿨롱 로그를 보려고 다른 것은 다 뺀 것.) [[D0929.05]]</li>
+<li>많은 입자의 충돌로 확장: 단위 시간·부피·주파수당
+\[ \frac{dW}{d\omega\,dV\,dt}=n_en_i\,2\pi v\int_{b_{\min}}^{b_{\max}}\frac{dW(b)}{d\omega}\,b\,db \]
+\(4\pi\)로 나누면 방출계수(emissivity). [[D0929.06]]</li>
+<li>\(dW/d\omega\propto b^{-2}\)에 \(b\,db\)가 곱해지므로 반드시 \(\int db/b\)가 나온다:
+\[ \int_{b_{\min}}^{b_{\max}}\frac{db}{b}=\ln\frac{b_{\max}}{b_{\min}}\equiv\ln\Lambda \]
+이것을 <b>쿨롱 로그(Coulomb logarithm)</b>라고 부른다. [[D0929.07]]</li>
+<li>결과(플립의 \(dW/d\omega\) 대입): \(\dfrac{dW}{d\omega\,dV\,dt}=\dfrac{16Z^2e^6}{3c^3m_e^2v}\,n_en_i\ln\dfrac{b_{\max}}{b_{\min}}\). (부가: \(2\pi v\times\dfrac{8Z^2e^6}{3\pi c^3m_e^2v^2}\) 정리.)</li></ol></div>
+<div class="slide flip"><div class="sh">플립 17 · 2:21–4:58 <span class="st">충돌률 → emissivity → 쿨롱 로그</span></div>
+<ol><li>그림: 파란 입자 = 전자들, 빨간 입자 = 이온. 원래는 이온이 정지하고 전자가 움직이지만, 좌표계를 바꿔 <b>전자들이 정지하고 이온이 속도 \(v\)로 지나가는</b> 경우로 본다(상대속도). [[F17.04]]</li>
+<li>충격매개변수가 \(b\)와 \(b+db\) 사이인 색칠된 영역: 시간 \(dt\) 동안 이온이 \(v\,dt\)만큼 지나가며 쓸고 가는 <b>원통 껍질 부피</b> \(=v\,dt\cdot2\pi b\,db\). 여기에 \(n_e\)를 곱하면 껍질 안 전자 수, \(dt\)로 나누면 <b>시간당 충돌 횟수</b>. [[F17.04]]</li>
+<li>\(dt\)가 약분되어 단일 이온의 충돌률 \(2\pi n_evb\,db\). 이온도 많으므로 \(n_i\)를 곱하면 <span class="hl">단위 부피·단위 시간당 충돌 수 \(2\pi n_en_ivb\,db\)</span>. 한 번 충돌마다 앞에서 구한 만큼의 주파수당 에너지가 나온다. [[F17.05]]</li>
+<li>곱하면 부피당·시간당 차원. 사방으로 퍼지므로 <b>입체각(4π)으로 나누면</b> 단위 입체각당 → 이것이 바로 <b>(total) emissivity</b>: 부피당·시간당·진동수당·입체각당 방출 에너지. [[F17.06]]</li>
+<li>다 넣고 계산하면 어렵지 않다 — 나머지는 상수이고 \(\int db/b\)가 남는다. 적분 한계는 전자–이온 충돌의 최소·최대 충격매개변수 \(b_{\min}\), \(b_{\max}\). 아직 값은 모르지만 적분하면 log 함수 = <b>Coulomb logarithm</b>. [[F17.06]]
+\[ j_\omega\cdot\text{(부피·시간·주파수·입체각당)}=\frac{1}{4\pi}\,2\pi n_en_iv\int_{b_{\min}}^{b_{\max}}\frac{dW}{d\omega}b\,db\ \propto\ \ln\frac{b_{\max}}{b_{\min}} \]</li></ol></div>
+<div class="apply"><b>중력에서도 같은 항</b>전자기 쿨롱 상호작용뿐 아니라 중력 상호작용에서도 똑같은 항이 나온다 — 별 하나가 성단에 들어와 다른 별들과 중력적으로 상호작용하며 에너지를 나눠 갖는 과정(이완, relaxation). 둘 다 \(1/r^2\) 힘이기 때문. [[D0929.07, D0929.08]]</div>
+
+<h4>9/29 Review ③ \(b_{\max}\)와 \(b_{\min}\) <span class="en">proper choices</span></h4>
+<div class="slide"><div class="sh">L08 · 슬라이드 3 ③ <span class="st">Review Questions</span></div>
+<ul><li>What are the proper choices of \(b_{\max}\) and \(b_{\min}\)?</li></ul> [[L08.s3c]]</div>
+<div class="explain"><b>부가설명</b> 가장 단순하게는 \(b_{\max}\)를 계의 반지름(지름) 정도로 잡을 수 있다. 반지름이냐 지름이냐는 상관없다 — <span class="hl">로그라서 10배 차이도 (log₁₀으로) 1 차이</span>일 뿐. [[D0929.08]]<br>
+<b>\(b_{\max}\) (이 문제에서)</b>: 방출 주파수가 충돌시간의 역수보다 작아야 복사가 나온다(플립의 스펙트럼 결과): \(\omega\,b/v\lesssim1\) → \(b_{\max}\approx\dfrac{v}{\omega}=\dfrac{v}{2\pi\nu}\). 이보다 먼 충돌은 그 주파수의 복사를 내지 않는다. [[D0929.09]]<br>
+<b>\(b_{\min}\) — 두 가능성</b>: 고전적 / 양자역학적. [[D0929.09]]<br>
+① <b>고전</b>: 이 상호작용은 약한(weak) 상호작용이라고 가정했다 — 우연히 아주 가까이 충돌할 수도 있지만 실제론 드물고 대부분 먼 거리에서 살짝 지나간다. 조건 = 정전 에너지 ≲ 운동에너지. 적분 한계를 정할 때는 등호로 두면 \(\dfrac{Ze^2}{b}\sim m_ev^2\Rightarrow b_{\min}^{\rm cl}\sim\dfrac{Ze^2}{m_ev^2}\). 실제 천체에서 입자 평균 거리와 비교하면 매우 작은 거리. [[D0929.10]]<br>
+② <b>양자</b>: Heisenberg 불확정성 \(\Delta x\,\Delta p\ge\hbar\). \(\Delta x\sim b\), \(\Delta p\sim m_ev\) → \(b_{\min}^{\rm QM}\sim\dfrac{\hbar}{m_ev}\). 이보다 작으면 전자의 운동을 입자 궤도로 기술할 수 없다(확률로 기술해야 함) → 궤도 + impulse 근사 방식은 이보다 커야 한다. [[D0929.10, D0929.11]]<br>
+<span class="star">강조</span> 둘 다 만족해야 하므로 <span class="hl">둘 중 큰 값</span>을 \(b_{\min}\)으로 쓴다. 그래도 로그라 구체적 값은 크게 중요하지 않다. 실제로는 양자역학적으로 유도한 식을 쓰고, 고전 유도와의 차이를 <b>Gaunt 인자</b>로 표현 → 쿨롱 로그가 Gaunt 인자에 포함되어 사실상 크게 신경 쓰지 않아도 된다. 교수님: "좀 어려운 문제". [[D0929.11]]</div>
+<div class="slide flip"><div class="sh">플립 17 · 4:58–7:00 <span class="st">\(b_{\max}\)와 \(b_{\min}\) (고전 vs 양자)</span></div>
+<ol><li>쿨롱 로그 값은 크지 않아(로그) 사실 크게 신경 쓰지 않아도 되지만, 어쨌든 한계를 정해야 한다. [[F17.07]]</li>
+<li><b>\(b_{\max}\)</b>: 스펙트럼 조건 — 복사는 저주파에서만 나오고 고주파에선 0. 충돌시간 \(\Delta t_{\rm col}=b/v\)(거리 \(b\)를 속도 \(v\)로 달리는 시간)이므로 \(\omega\,b/v\lesssim1\)을 등호로 두면
+\[ b_{\max}=\frac{v}{\omega}=\frac{v}{2\pi\nu} \] [[F17.07]]</li>
+<li><b>\(b_{\min}\) — 두 가지 선택.</b> ① 고전: impulse 근사가 가능하려면 운동에너지 &gt; 쿨롱 퍼텐셜 에너지 → 이 조건에 해당하는 \(b\): \(b_{\min}^{\rm cl}\sim Ze^2/m_ev^2\). ② 양자: Heisenberg 불확정성 원리(운동량 불확정 × 위치 불확정 ≥ \(h/2\pi\)), 운동량 \(m_ev\), 위치 \(b\) → \(b_{\min}^{\rm QM}\sim\hbar/m_ev\). [[F17.08]]</li>
+<li>어느 쪽이 큰가: 둘을 나누면 \(b_{\min}^{\rm QM}/b_{\min}^{\rm cl}=\hbar v/Ze^2\); 상수를 넣으면 입자 속도가 <b>빛의 속도의 약 1%보다 크면 양자역학적 \(b_{\min}\)이 더 크다</b>. 양자가 중요한 영역과 고전이 중요한 영역이 있고, <span class="hl">둘 중 큰 것을 선택</span>한다. [[F17.09]]</li></ol></div>
+<div class="apply"><b>수치 (python)</b>경계 속도 \(v=Z\alpha c=c/137=2.19\times10^8\) cm/s = <b>0.73% c</b>(플립의 "1%"는 반올림). \(\tfrac12m_ev^2=\tfrac32kT\)로 바꾸면 \(T\approx1.1\times10^5Z^2\) K: HII(10⁴ K)는 고전, ICM(10⁸ K)은 양자 쪽 — 위 9/29 수치와 일치. [[F17.09, D0929.11]]</div>
+<div class="trap"><b>STT 교정</b>"coolum logarithm" → Coulomb logarithm, "beam과 beam x" → \(b_{\min}\)과 \(b_{\max}\), "Impact Impulse Approximation" → impulse approximation, "플랑크 상수의 2파이" → \(h/2\pi=\hbar\), "minimum Q" → minimum \(b\). [[F17.06, F17.08, F17.09]]</div>
+<div class="formula"><div class="ftitle">암기 — 쿨롱 로그</div>\[ \ln\Lambda=\ln\frac{b_{\max}}{b_{\min}},\quad b_{\max}\approx\frac{v}{2\pi\nu},\quad b_{\min}=\max\!\left(\frac{Ze^2}{m_ev^2},\ \frac{\hbar}{m_ev}\right),\quad g_{\rm ff}=\frac{\sqrt3}{\pi}\ln\Lambda \]<p class="note">두 \(b_{\min}\)의 비 \(=Ze^2/\hbar v=Z\alpha c/v\) → \(v&lt;Z\alpha c\approx2.2\times10^8\) cm/s(대략 \(T\lesssim10^5Z^2\) K)면 고전값이 크다. 수치 인자는 교재마다 다름(차수만).</p></div>
+<div class="apply"><b>수치 (python, 1 GHz)</b>HII \(T=10^4\) K(\(v_{\rm rms}=6.7\times10^7\) cm/s): \(b_{\min}^{\rm cl}=5.6\times10^{-8}\) cm &gt; \(b_{\min}^{\rm QM}=1.7\times10^{-8}\) cm → 고전값 사용, \(b_{\max}=0.011\) cm, \(\ln\Lambda\approx12\). ICM \(T=10^8\) K: \(b_{\min}^{\rm QM}=1.7\times10^{-10}\) cm가 더 큼(양자), \(\ln\Lambda\approx23\). 온도가 10⁴배 달라도 ln Λ는 2배 정도 — 로그의 둔감함. [[D0929.10, D0929.11]]</div>
+<div class="trap"><b>로그 함정</b>교수님 "10배 차이는 로그로 1 증가"는 log₁₀ 기준. 자연로그(\(\ln\))로는 10배 → 2.3 증가. 어느 쪽이든 \(\ln\Lambda\sim10\text{–}20\)에서 결론(둔감)은 같다. [[D0929.08]]</div>
+<div class="trap"><b>STT 교정 (9/29 녹음)</b>"쿨룸 오버리디움·오클룸 오가리늄·관리 쇼" → Coulomb logarithm, "bvex·Dmax" → \(b_{\max}\), "비비니" → \(b_{\min}\), "하이슨 버그" → Heisenberg, "H바" → \(\hbar\), "건트/건축 팩터" → Gaunt factor, "186" → \(v/2\pi\nu\)(추정). [[D0929.07, D0929.09, D0929.10, D0929.11]]</div>
+
+<h4>천체 적용 — free-free를 내는 곳 <span class="en">HII · ICM · corona</span></h4>
+<div class="apply"><b>HII 영역 (~10⁴ K)</b>O·B형 별의 UV가 주변 수소를 이온화(13.6 eV 이상). 바깥은 HI. 이온화 원천이 UV라서 <b>열역학 평형이 아니다</b> — 열평형이 되려면 충돌 이온화가 중요할 만큼 밀도가 높아야 함. [[S0922.11]]<br>
+가열: 예) 20 eV 광자를 흡수하면 13.6 eV를 뺀 6.4 eV가 광전자의 운동에너지 → 충돌(정면 충돌이 아니라 전자기력)로 주변에 나눠 줌 = 가열. 냉각: 전자 에너지가 ~1 eV 수준으로 내려온 뒤 재결합 등으로 복사가 되고, 광학적으로 얇아 빠져나감 — 우리가 보는 그 복사가 곧 냉각. OB별 주계열 수명 동안 유지되다 별이 식으면 사라진다. 10⁴ K에서 양성자는 ~10 km/s(100 K에 ~1 km/s), 전자는 더 빠름. [[S0922.13]]</div>
+<div class="apply"><b>은하단 매질 ICM (10⁷–10⁸ K)</b>은하 수백~수천 개와 암흑물질이 만드는 중력장 안의 뜨거운 기체. 1 eV ≈ 11600 K ≈ 10⁴ K이므로 10⁸ K ≈ 10 keV → X선(플립 도입의 Coma 은하단 X선 사진이 바로 이것). 충돌로 이온화. [[S0922.12, F16.01]]<br>
+애초에 왜 뜨거운가: 거대한 원시 은하단 구름이 수축하며 충격파로 운동에너지를 열로 바꿨다. [[S0922.19]]<br>
+왜 아직 뜨거운가는 <b>미해결</b>: 냉각 시간 \(t_{\rm cool}=E/L\)(태양 나이를 에너지/광도로 구하는 것과 같은 계산)이 중심부에서 은하단 나이(≥10¹⁰년)보다 훨씬 짧다 → 중심에 차가운 기체를 기대했지만, 1990년대 후반 X선 망원경으로 보니 바깥 온도의 약 1/3에서 바닥이 있고 더 차가운 기체가 없다. 중심 블랙홀(AGN) 피드백이 유력하지만 아직 석연치 않다. [[S0922.20, S0922.14]]</div>
+<div class="trap"><b>수치 확인</b>녹음상 냉각 시간이 "100만 년"으로 들리지만, 표준 추정은 중심부 \(n\sim0.1\,\mathrm{cm^{-3}},T\sim3\times10^7\)K에서 \(t_{\rm cool}\sim10^8\text{–}10^9\)년. 핵심 논리는 "나이보다 훨씬 짧다" — 수치는 PPT/교재로 확인. [[S0922.20]]</div>
+<div class="apply"><b>태양 코로나 (10⁶–10⁷ K)</b>희박하고 뜨거운 코로나도 free-free를 낸다. 가열은 오랫동안 수수께끼였고, 지금은 표면의 기체 운동이 자기장을 흔들어 <b>알벤파</b>로 에너지가 자기장을 따라 바깥으로 전달된다는 설명이 유력(100% 확정은 아님). 교수님: "내 분야가 아니어도 모든 학문이 연결돼 있다." [[S0922.14, S0922.15]]</div>
+
+<div class="formula"><div class="ftitle">암기 — 전자–이온 충돌과 제동복사</div><p><b>impulse 근사의 근거</b></p>\[ \frac{Ze^2/b}{kT}\sim\frac{Ze^2n_e^{1/3}}{kT}\ll1 \]<p class="note">운동에너지 변화가 작다 → 직선 궤도. \(\tfrac32kT=\tfrac12m_ev^2\).</p><p><b>시간과 주파수 척도</b></p>\[ t_{\rm col}\sim b/v,\quad\omega_{\rm cut}\sim v/b,\quad\nu_{\rm cut}\sim v/(2\pi b) \]<p class="note">짧은 펄스일수록 넓은 주파수 범위. ω와 ν를 혼용하면 2π 차이. <i>조건: 차수 추정; 정확한 컷오프 형태는 Fourier 적분(Bessel 함수) 필요</i></p><p><b>단일 충돌 에너지와 스펙트럼</b></p>\[ a_\perp=\frac{Ze^2}{m_eb^2}\cos^3\psi,\quad W={\pi Z^2e^6\over4m_e^2c^3b^3v}\ \ (\approx P(0)\cdot b/v),\qquad {dW\over d\omega}\simeq{8Z^2e^6\over3\pi c^3m_e^2b^2v^2}\ \ (\omega\lesssim v/b) \]<p class="note">W∝b⁻³, 저주파 평탄 → v/b 위에서 급감. <i>조건: Gaussian cgs, 고정 이온·작은 굴절·비상대론 전자</i></p><p><b>여러 충돌 → 쿨롱 로그</b></p>\[ \text{충돌률}=2\pi n_en_ivb\,db,\qquad \frac{dW}{d\omega\,dV\,dt}=\frac{16Z^2e^6}{3c^3m_e^2v}n_en_i\ln\frac{b_{\max}}{b_{\min}} \]<p class="note">\(n\sigma v\) 꼴. b_max ≈ v/2πν, b_min = max(고전, 양자). 로그라 둔감, 보정은 Gaunt 인자로.</p><p><b>광자 에너지 상한의 척도</b></p>\[ h\nu\lesssim {1\over2}m_ev^2 \]<p class="note">전자의 가용 운동에너지보다 큰 광자를 방출할 수 없다. 실제 전파 광자는 그 ~10⁻⁵만 가져간다(PPT Q3).</p></div>
+
+<h4>체크포인트</h4>
+<div class="qz" data-q="u15-1"><div class="qq">b가 작아지면 방출은 세지고 높은 주파수까지 가는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>작은 굴절 근사가 유지되는 범위에서 그렇다. W∝b⁻³이고 충돌시간 b/v가 짧아져 컷오프 v/b가 올라간다. 극단적으로 작으면 직선 근사와 고전 취급이 깨진다 → 그래서 b_min(고전·양자 중 큰 값)으로 자른다. [[D0929.10]]</p></div></div>
+<div class="qz" data-q="u15-2"><div class="qq">제동복사에서 광자 에너지는 이온의 들뜬 준위에서 나오는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. free–free 과정에서는 전자의 운동에너지가 감소한다. 원자 준위 전이의 선복사와 다르다. [[L07.s3b]]</p></div></div>
+<div class="qz" data-q="u15-3"><div class="qq">한 번의 충돌 스펙트럼이 곧 온도T인 플라즈마의 전체 스펙트럼인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. b 분포(충돌률 2πn_e v b db → 쿨롱 로그), 같은 속도 전자 집단, 마지막으로 Maxwell 속도분포까지 적분해야 열적 방출계수가 된다 — 9/22에 예고하고 9/29에 정리한 순서. [[S0922.23]]</p></div></div>
+<div class="qz" data-q="u15-4"><div class="qq">HII 영역이 "열역학 평형이 아니다"라고 하는 이유는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>이온화를 일으키는 것이 기체 자신의 충돌이 아니라 외부(중심별) UV 복사이기 때문. 충돌 이온화가 지배하려면 밀도가 높아야 한다. [[S0922.11]]</p></div></div>
+<div class="qz" data-q="u15-5"><div class="qq">ICM 문제의 핵심을 "냉각 시간"으로 한 문장에 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>중심부 냉각 시간 E/L이 은하단 나이보다 훨씬 짧아 이미 식었어야 하는데, 관측상 온도 바닥이 있어 무언가(AGN 피드백?)가 계속 가열하고 있다. [[S0922.20]]</p></div></div>
+<div class="qz" data-q="u15-6"><div class="qq">평행 방향 가속도의 기여가 전파 관측에서 작은 이유 두 가지는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>진폭이 작고, 접근·이탈에서 부호가 바뀌어(cos²ψ sinψ는 홀함수) 기여가 높은 주파수 쪽으로 간다. 저주파에선 ~10% 이하. [[S0922.16]]</p></div></div>
+<div class="qz" data-q="u15-7"><div class="qq">쿨롱 로그는 왜 생기나? "dW/dω의 b 의존성"과 "충돌률"로 한 줄에 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>한 번 충돌의 dW/dω ∝ b⁻²인데 b~b+db 충돌률이 2πn_e v b db ∝ b db라서, 합하면 ∫db/b = ln(b_max/b_min). 1/r² 힘이면(중력 포함) 항상 나온다. [[D0929.05, D0929.07]]</p></div></div>
+<div class="qz" data-q="u15-8"><div class="qq">b_max와 b_min을 정하는 물리적 조건을 각각 말하고, b_min은 두 후보 중 어느 것을 쓰나?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>b_max: 충돌시간 b/v의 역수보다 낮은 주파수만 나오므로 b_max ≈ v/2πν. b_min: 고전(Ze²/b ≈ 운동에너지 → Ze²/mv²)과 양자(불확정성 → ħ/mv) 중 <b>큰 값</b>. 로그라 정확한 선택은 덜 중요하고 보정은 Gaunt 인자로. [[D0929.09, D0929.11]]</p></div></div>
+<div class="qz" data-q="u15-9"><div class="qq">플립 16은 impulse 근사를 어떤 에너지 비로 정당화했나? HII 영역 값의 차수는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>쿨롱 에너지/운동에너지 ~ Ze²n_e^{1/3}/kT (b를 평균 입자 간 거리 n_e^{-1/3}로). n=10, T=10⁴ K이면 ~4×10⁻⁷ ≪ 1 → 운동에너지 변화 작음 → 직선 궤도. [[F16.04, F16.05]]</p></div></div>
+<div class="qz" data-q="u15-10"><div class="qq">정확한 단일 충돌 스펙트럼의 \(K_0\)·\(K_1\) 항은 각각 어떤 가속도에서 오며, 전파 영역에서 어느 쪽이 중요한가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(K_0\) = 평행 가속도, \(K_1\) = 수직 가속도. 모든 주파수에서 수직이 더 크고, 저주파(\(x=\omega b/v\ll1\))에선 \(x^2K_1^2\to1\), \(x^2K_0^2\to0\)이라 수직만으로 충분. [[F17.02, F17.03]]</p></div></div>
+<div class="qz" data-q="u15-11"><div class="qq">양자역학적 \(b_{\min}\)이 고전값보다 커지는 속도(또는 온도) 기준은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>비 \(\hbar v/Ze^2&gt;1\) ↔ \(v&gt;Z\alpha c\approx0.7\%\,c\)(플립: "빛의 1%"), 온도로 \(T\gtrsim10^5Z^2\) K. 둘 중 큰 값을 쓴다. [[F17.09]]</p></div></div>
+
+<p class="note">출처: Lecture07 PPT 슬라이드 3 · Lecture08 PPT 슬라이드 3 ①–③ · 플립 16(0:00–9:47 전 구간) · 플립 17(0:00–7:00 전 구간: Bessel 스펙트럼·충돌률·쿨롱 로그·b_min) · 9/22 속기(20:25–50:34) · 9/29 녹음(01:13–18:40) · 상태: 강의 반영 · 9/22·9/29 PPT·속기·플립 전 항목 인용 / 교재 5.1 세부 대조 전</p>

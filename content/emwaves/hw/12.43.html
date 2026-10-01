@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>일반 논증(이것만으로 이미 결론이 난다).</b> Eq. 12.77과 Eq. 8.46은 같은 적분에 부호만 반대다:</p>
+\[ \vb{p}_{\rm hid}=-\frac{1}{c^{2}}\int V\vb{K}\,\dd a,\qquad \vb{p}_{\rm em}=+\frac{1}{c^{2}}\int V\vb{K}\,\dd a\ \Longrightarrow\ \boxed{\vb{p}_{\rm hid}=-\vb{p}_{\rm em}} \]
+
+<p><b>명시적 계산.</b> 껍질 위에서 쌍극자의 퍼텐셜은 \(V=\dfrac{\vb{p}\cdot\hat{\vb{r}}}{4\pi\eps R^{2}}\), 면전류는 \(\vb{K}=K_0\sin\theta\,\hat{\boldsymbol\phi}\), \(\dd a=R^{2}\sin\theta\,\dd\theta\,\dd\phi\). \(\hat{\boldsymbol\phi}=-\sin\phi\,\hat{\vb{x}}+\cos\phi\,\hat{\vb{y}}\)와 \(\vb{p}\cdot\hat{\vb{r}}=p_x\sin\theta\cos\phi+p_y\sin\theta\sin\phi+p_z\cos\theta\)를 넣고 먼저 \(\phi\) 적분:</p>
+\[ \int_0^{2\pi}(\vb{p}\cdot\hat{\vb{r}})\hat{\boldsymbol\phi}\,\dd\phi=\pi\sin\theta\,(\hat{\vb{z}}\times\vb{p}). \]
+<p>이어서</p>
+\[ \int V\vb{K}\,\dd a=\frac{K_0}{4\pi\eps}\int_0^{\pi}\!\!\sin^{2}\theta\cdot\pi\sin\theta\,\dd\theta\,(\hat{\vb{z}}\times\vb{p})=\frac{K_0}{3\eps}(\hat{\vb{z}}\times\vb{p}). \]
+<p>이 껍질은 균일자화 구와 같아서 \(\vb{m}=\tfrac{4\pi}{3}R^{3}K_0\hat{\vb{z}}\), 즉 \(K_0\hat{\vb{z}}=3\vb{m}/(4\pi R^{3})\). 따라서</p>
+\[ \int V\vb{K}\,\dd a=\frac{\vb{m}\times\vb{p}}{4\pi\eps R^{3}},\qquad \boxed{\ \vb{p}_{\rm hid}=\frac{\muz}{4\pi R^{3}}(\vb{p}\times\vb{m})=-\vb{p}_{\rm em}\ } \]
+<p>(\(\vb{p}\parallel\vb{m}\)이면 둘 다 0이다.)</p>
+<p><b>운동량 보존은 어떻게 되나?</b> 8.26(c)(d)(e)에서 확인한 충격량 수지는 <b>바뀌지 않는다</b>. 달라진 것은 해석이다: 처음부터 총 운동량(장 + 숨은)은 0이었고(에너지중심이 정지해 있으므로 당연), 장을 끄면 숨은 운동량이 역학적 충격량으로 "풀려나면서" 장 운동량이 도선에 준 충격량과 정확히 상쇄된다. 즉 계는 처음에도 끝에도 총 운동량 0이며, 이전 계산에서 "어디선가 온 듯한" 충격량의 출처가 바로 숨은 운동량이다.</p>
+<div class="alabel">감점 포인트</div>
+숨은 운동량을 "추가로 더해지는 운동량"으로 착각하는 것 — 그것은 장 운동량을 <b>상쇄</b>해서 총합을 0으로 만드는 항이다.</div><!--/sol-->

@@ -1,0 +1,12 @@
+<div class="exq"><span class="examtag">PPT Q1 · 9/3 수업 문제</span><br>Using the Sun’s luminosity and radius, calculate its (frequency-integrated) specific intensity. \(L_\odot=3.85\times10^{33}\ {\rm erg\ s^{-1}}\), \(R_\odot=6.96\times10^{10}\ {\rm cm}\).<br>
+(번역) 태양의 광도와 반지름을 써서 (진동수 적분한) 태양의 specific intensity를 구하라. [[L02.s10a]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>표면 flux → ÷π</div><ol>
+<li>표면 flux(지난 시간 astrophysical flux): \(F_\odot=\dfrac{L_\odot}{4\pi R_\odot^2}=\dfrac{3.85\times10^{33}}{4\pi(6.96\times10^{10})^2}=6.32\times10^{10}\ {\rm erg\ s^{-1}\,cm^{-2}}\) (PPT 6.33×10¹⁰ — 반올림 차). [[L02.s10b, S0903.30]]</li>
+<li>등방으로 나가는 반구 적분 \(F^+=\pi I\) (단원 U03 7절, \(F_{\rm surf}=\pi B\)의 π) → \(I_\odot=F_\odot/\pi\). [[L02.s4b, S0903.30]]</li>
+<li>\(I_\odot=6.32\times10^{10}/\pi=2.01\times10^{10}\ {\rm erg\ s^{-1}\,cm^{-2}\,sr^{-1}}\). [[L02.s10b]]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과 (PPT 답과 대조)</div><p>\(F_\odot=6.33\times10^{10}\) erg s⁻¹ cm⁻², \(I_\odot=F_\odot/\pi\approx2.0\times10^{10}\) erg s⁻¹ cm⁻² sr⁻¹. [[L02.s10b]]</p></div>
+<div class="intuit"><b>수업 포인트</b> <span class="star">시험</span> "가급적 계산기 들고 다니세요." 지난 시간 계산한 flux 결과를 쓰면 간단 — flux는 intensity × π라는 관계. <span class="hl">단위 조심</span>: I에는 sr⁻¹이 붙는다(erg s⁻¹ cm⁻² sr⁻¹). [[S0903.30]]</div>
+<div class="trap"><b>함정</b> \(I=F/4\pi\)로 나누는 실수. 4π는 \(J\)와 \(u\)에 나오는 인자이고, 표면에서 나가는 반구 flux와 세기 사이는 <b>π</b>다(\(\int_0^1\mu\,d\mu\cdot2\pi=\pi\)). [[L02.s4b]]</div>
+<div class="qz" data-q="ex1.20-a"><div class="qq"><b>+α</b> 광도 10 L☉, 반지름 2 R☉인 별의 진동수 적분 세기는 태양의 몇 배인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>I=L/(4π²R²) ∝ L/R² → 10/4=2.5배, 약 5.0×10¹⁰ erg s⁻¹ cm⁻² sr⁻¹.</p></div></div>
+<div class="qz" data-q="ex1.20-b"><div class="qq"><b>+α</b> 지구에서 본 태양의 세기 I는 Q1 답과 같은가? 지구에서의 flux는? (1 au=1.496×10¹³ cm)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>같다(I는 거리 무관). F=IΔΩ, ΔΩ=π(R☉/1 au)²=6.8×10⁻⁵ sr → F≈2.01×10¹⁰×6.8×10⁻⁵≈1.37×10⁶ erg s⁻¹ cm⁻² (태양상수).</p></div></div>

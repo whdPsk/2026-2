@@ -1,0 +1,11 @@
+<div class="exq"><span class="examtag">PPT Q4 · 9/22 수업 문제</span><br>광학적으로 얇은 은하의 HI 방출. 소스 입체각 평균·전 속도 적분 \(\int I_\nu dv=0.0458\) Jy beam⁻¹ km s⁻¹, 빔 입체각 \(\Omega_b=5.21\times10^{-9}\) sr. 은하의 평균 HI 기둥밀도는? 주어진 식 \(N_{\rm H}/\mathrm{cm^{-2}}=1.82\times10^{18}\int[T_B/\mathrm K]\,dv/(\mathrm{km\,s^{-1}})\). [[L07.s7]]</div>
+<div class="prof"><b>배경 — 전파망원경은 "빔" 단위</b>가시광 CCD는 픽셀이 한꺼번에 찍히지만, 전파 단일 접시는 primary beam 하나(중심이 가장 민감)로 한 번에 "픽셀 하나"를 얻는다. 위치를 옮겨 가며 모자이크로 이어 붙여 영상을 만든다. 그래서 단위가 Jy/beam. [[S0922.29]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>Jy/beam → 세기 → 밝기온도 → 기둥밀도 [[S0922.30]]</div><ol>
+<li>빔당이니 Ω_b로 나눠 세기로: \(\int I_\nu dv=\dfrac{0.0458\times10^{-23}}{5.21\times10^{-9}}=8.79\times10^{-17}\) erg s⁻¹cm⁻²Hz⁻¹sr⁻¹·km/s.</li>
+<li>RJ: \(T_B=\dfrac{c^2I_\nu}{2k\nu^2}=\dfrac{\lambda^2I_\nu}{2k}\), λ = 21.1 cm → \(\int T_Bdv=\dfrac{(21.1)^2}{2(1.38\times10^{-16})}\times8.79\times10^{-17}\approx142\) K km/s.</li>
+<li>\(N_{\rm H}=1.82\times10^{18}\times142\approx2.6\times10^{20}\) cm⁻².</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>N_H ≈ 2.6×10²⁰ cm⁻² (PPT 답 2.57×10²⁰ — 상수 반올림 차이). 은하 전체 평균값.</p></div>
+<div class="apply"><b>후속 문제(수업에서 각자 풀기로)</b>이 은하까지 거리 d = 8.6 Mpc, 은하 전체의 입체각 Ω_s가 주어지면 총 HI 질량은? → \(M_{\rm HI}=m_H\bar N_{\rm H}\,\Omega_sd^2\). Ω_s 수치는 녹음이 불명확(“1.85…”로 들림) — PPT/eTL에서 확인 후 대입. [[S0922.31]]</div>
+<div class="qz" data-q="ex2.3-a"><div class="qq"><b>+α</b> Ω_s = 1.85×10⁻⁷ sr라 가정하면 M_HI는? (가정값)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>면적 = Ω_s d² = 1.85×10⁻⁷ × (2.65×10²⁵ cm)² = 1.30×10⁴⁴ cm². M = 1.67×10⁻²⁴ × 2.57×10²⁰ × 1.30×10⁴⁴ ≈ 5.6×10⁴⁰ g ≈ 2.8×10⁷ M☉. (Ω_s 실제 값으로 다시 계산)</p></div></div>
+<div class="qz" data-q="ex2.3-b"><div class="qq"><b>+α</b> 빔 입체각을 곱하지 않고 Jy/beam을 그대로 Jy로 쓰면 어떤 오류가 생기나?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>세기(sr⁻¹)가 아닌 플럭스로 착각해 차원이 틀리고, T_B가 1/Ω_b ≈ 2×10⁸배 어긋난다.</p></div></div>

@@ -1,0 +1,14 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> \(x(t)=\dfrac{v_0}{\omega_0}e^{-\gamma t/2}\sin\omega_0t\), \(\gamma=\omega_0^2\tau\), \(\tau=\dfrac{\mu_0q^2}{6\pi mc}\). Larmor 출력은 \(P=\dfrac{\mu_0q^2a^2}{6\pi c}=m\tau a^2\).</p>
+<p>\(\gamma\ll\omega_0\)이므로 \(a=\ddot x\approx-\omega_0^2x=-v_0\omega_0e^{-\gamma t/2}\sin\omega_0t\), 한 주기 평균 \(\langle\sin^2\rangle=\tfrac12\):</p>
+\[ \int_0^\infty P\,dt= m\tau\,\frac{v_0^2\omega_0^2}{2}\int_0^\infty e^{-\gamma t}dt=\frac{m\tau v_0^2\omega_0^2}{2\gamma}
+=\frac{m\tau v_0^2\omega_0^2}{2\omega_0^2\tau}=\boxed{\;\frac12mv_0^2=U_0\;} \]
+<p><b>(b)</b> 오류: 전하를 \(2q\)로 만들면 출력이 4배가 되는 것은 맞지만, <b>감쇠상수도 함께 커진다</b>는 것을 잊었다. 겹쳐진 계는 전하 \(2q\), 질량 \(2m\)이므로</p>
+\[ \tau'=\frac{\mu_0(2q)^2}{6\pi(2m)c}=2\tau,\qquad \gamma'=\omega_0^2\tau'=2\gamma . \]
+<p>즉 진폭이 <b>2배 빨리</b> 죽는다. 출력 \(P'=\dfrac{\mu_0(2q)^2a^2}{6\pi c}=4m\tau a^2\), 진폭 감쇠 \(e^{-\gamma' t/2}\)이므로</p>
+\[ \int_0^\infty P'dt=4m\tau\frac{v_0^2\omega_0^2}{2}\int_0^\infty e^{-2\gamma t}dt=\frac{4m\tau v_0^2\omega_0^2}{2\cdot2\gamma}
+=\frac{m\tau v_0^2\omega_0^2}{\gamma}=mv_0^2=\boxed{\;2U_0\;} \]
+<p>초기 총에너지가 \(2\times\tfrac12mv_0^2=mv_0^2\)이므로 정확히 맞다. 출력 4배 × 지속시간 1/2 = 2배.</p>
+<div class="alabel">감점 포인트</div>
+<p>겹쳤을 때 질량도 \(2m\)이 된다는 점을 빠뜨리면 \(\tau'=4\tau\)가 되어 답이 틀린다.</p></div><!--/sol-->

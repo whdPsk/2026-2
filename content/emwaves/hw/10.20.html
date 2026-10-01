@@ -1,0 +1,25 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<b>Step 1: \(\partial t_r/\partial t\).</b> \(\rr=c(t-t_r)\)에서
+\[ \frac{\partial\rr}{\partial t}=c\left(1-\frac{\partial t_r}{\partial t}\right). \]
+동시에 \(\rr=|\vb{r}-\vb{w}(t_r)|\)이므로 \(\vb{r}\) 고정하고 미분하면
+\[ \frac{\partial\rr}{\partial t}=\frac{1}{\rr}(\vb{r}-\vb{w})\cdot\!\left(-\dot{\vb{w}}\frac{\partial t_r}{\partial t}\right)=-\frac{\boldsymbol{\rr}\cdot\vb{v}}{\rr}\frac{\partial t_r}{\partial t}. \]
+둘을 같다고 놓으면
+\[ c=\frac{\partial t_r}{\partial t}\left(c-\frac{\boldsymbol{\rr}\cdot\vb{v}}{\rr}\right)
+\ \Longrightarrow\ \boxed{\frac{\partial t_r}{\partial t}=\frac{\rr c}{\rr c-\boldsymbol{\rr}\cdot\vb{v}}=\frac{\rr c}{\boldsymbol{\rr}\cdot\vb{u}}},\quad \vb{u}\equiv c\rhat-\vb{v}. \]
+(비교: 공간 미분은 \(\nabla t_r=-\dfrac{\boldsymbol{\rr}}{\boldsymbol{\rr}\cdot\vb{u}}\), Eq. 10.68.)
+
+<b>Step 2: \(\partial\vb{A}/\partial t\).</b> \(\vb{A}=\dfrac{q}{4\pi\eps c}\dfrac{\vb{v}}{\rr c-\boldsymbol{\rr}\cdot\vb{v}}\). 필요한 시간 도함수:
+\[ \frac{\partial\vb{v}}{\partial t}=\vb{a}\frac{\partial t_r}{\partial t},\qquad
+\frac{\partial\boldsymbol{\rr}}{\partial t}=-\vb{v}\frac{\partial t_r}{\partial t},\qquad
+\frac{\partial(\boldsymbol{\rr}\cdot\vb{v})}{\partial t}=\big(-v^2+\boldsymbol{\rr}\cdot\vb{a}\big)\frac{\partial t_r}{\partial t}. \]
+따라서
+\[ \frac{\partial}{\partial t}\big(\rr c-\boldsymbol{\rr}\cdot\vb{v}\big)
+=\left[-\frac{c(\boldsymbol{\rr}\cdot\vb{v})}{\rr}+v^2-\boldsymbol{\rr}\cdot\vb{a}\right]\frac{\rr c}{\boldsymbol{\rr}\cdot\vb{u}} . \]
+몫의 미분법으로 정리하면
+\[ \boxed{\frac{\partial\vb{A}}{\partial t}=\frac{1}{4\pi\eps}\frac{qc}{(\rr c-\boldsymbol{\rr}\cdot\vb{v})^3}
+\left[(\rr c-\boldsymbol{\rr}\cdot\vb{v})\!\left(-\vb{v}+\frac{\rr\vb{a}}{c}\right)+\frac{\rr}{c}\big(c^2-v^2+\boldsymbol{\rr}\cdot\vb{a}\big)\vb{v}\right]} \]
+이것과 Eq. 10.69의 \(\nabla V\)를 합치면 유명한
+\(\vb{E}=\dfrac{q}{4\pi\eps}\dfrac{\rr}{(\boldsymbol{\rr}\cdot\vb{u})^3}\big[(c^2-v^2)\vb{u}+\boldsymbol{\rr}\times(\vb{u}\times\vb{a})\big]\)가 나온다.
+<div class="alabel">감점 포인트</div>
+\(\vb{v},\vb{a},\boldsymbol{\rr}\)가 모두 \(t_r\)에서 평가된다는 것을 잊고 \(\partial t_r/\partial t\) 인자를 곱하지 않는 것 — 이 장에서 가장 흔한 실점.</div><!--/sol-->

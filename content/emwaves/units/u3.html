@@ -1,0 +1,149 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> U2의 \(\vb{F}=\oint\overleftrightarrow{T}\cdot d\vb{a}-\eps\muz\frac{d}{dt}\int\vb{S}\,d\tau\)에서 좌변을 \(d\vb{p}_{\text{mech}}/dt\)로 바꿔 쓰면, 시간 미분이 붙은 항은 자연스럽게 좌변으로 옮겨져 "무엇 + 무엇의 시간 변화율 = 표면을 통해 들어오는 무엇"이라는 형태가 된다. 그렇다면 <em>장의 운동량</em>은 어떤 표현이어야 하는가? 차원을 확인해 보라: \(\vb{S}/c^2\)의 단위는 무엇인가? 그리고 각운동량은 정의상 \(\vb{r}\times(\text{운동량 밀도})\)일 텐데, \(\vb{E}\)와 \(\vb{B}\)가 <em>둘 다 시간에 무관</em>해도 \(\vb{E}\times\vb{B}\ne0\)이면 각운동량이 0이 아닐 수 있다 — 이것이 말이 되는가?</div>
+
+<h4>8.2.3 운동량 보존 <span class="en">conservation of momentum</span></h4>
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 1</span>장 운동량 밀도 \(\vb{g}\)의 식별과 운동량 연속방정식</div>
+<ol>
+<li><b>Newton 제2법칙 대입.</b> 부피 \(\mathcal V\) 안 입자들의 역학적 운동량을 \(\vb{p}_{\text{mech}}=\sum m_i\vb{v}_i\)라 하면 \(\vb{F}=d\vb{p}_{\text{mech}}/dt\). U2의 Eq. 8.20에 넣으면
+\[ \frac{d\vb{p}_{\text{mech}}}{dt}=-\eps\muz\frac{d}{dt}\int_{\mathcal V}\vb{S}\,d\tau+\oint_{\mathcal S}\overleftrightarrow{T}\cdot d\vb{a}. \]
+(전자기력 외의 힘은 없다고 가정하고, 입자가 \(\mathcal V\)를 드나들지 않는다고 둔다.)</li>
+<li><b>구조를 읽는다.</b> Poynting 정리 \(\frac{dW}{dt}=-\frac{d}{dt}\int u\,d\tau-\oint\vb{S}\cdot d\vb{a}\)와 나란히 놓고 보면, 첫째 항은 명백히 "장에 저장된 운동량의 감소율"이고 둘째 항은 "표면을 통해 <em>들어오는</em> 단위 시간당 운동량"이다.</li>
+<li><b>따라서 장의 운동량과 운동량 밀도를 정의한다.</b>
+\[ \vb{p}_{\text{em}}=\muz\eps\int_{\mathcal V}\vb{S}\,d\tau,\qquad
+\boxed{\ \vb{g}=\muz\eps\,\vb{S}=\eps(\vb{E}\times\vb{B})=\frac{\vb{S}}{c^2}\ } \]</li>
+<li><b>운동량 흐름 밀도는 \(-\overleftrightarrow{T}\)이다.</b> 부호에 주의: \(\overleftrightarrow{T}\cdot d\vb{a}\)가 <em>들어오는</em> 운동량이므로, \(\vb{J}\)에 대응하는 "밖으로 나가는 흐름"은 \(-\overleftrightarrow{T}\cdot d\vb{a}\)다.</li>
+<li><b>빈 공간에서의 연속방정식.</b> \(d\vb{p}_{\text{mech}}/dt=0\)이면
+\[ \int\frac{\partial\vb{g}}{\partial t}d\tau=\oint\overleftrightarrow{T}\cdot d\vb{a}=\int(\nabla\cdot\overleftrightarrow{T})\,d\tau
+\ \Rightarrow\ \boxed{\ \frac{\partial\vb{g}}{\partial t}=\nabla\cdot\overleftrightarrow{T}\ } \]
+\(\vb{g}\leftrightarrow\rho\), \(-\overleftrightarrow{T}\leftrightarrow\vb{J}\)로 U1의 연속방정식과 형태가 같다.</li>
+<li><b>제3법칙 문제의 해소.</b> U2 유도 1에서 두 전하의 자기력이 상쇄되지 않았던 것은, 사라진 운동량이 <em>장으로 흘러들어갔기</em> 때문이다. \(\vb{p}_{\text{mech}}+\vb{p}_{\text{em}}\)만이 보존된다. 역학적 운동량만, 혹은 장 운동량만 따로 보면 일반적으로 보존되지 않는다.</li>
+</ol>
+</div>
+
+<div class="formula">
+<div class="ftitle">암기 — 장의 운동량·각운동량 밀도</div>
+\[ \vb{g}=\eps(\vb{E}\times\vb{B})=\frac{\vb{S}}{c^2},\qquad
+\boldsymbol\ell=\vb{r}\times\vb{g}=\eps\left[\vb{r}\times(\vb{E}\times\vb{B})\right] \]
+\[ \frac{d\vb{p}_{\text{mech}}}{dt}+\frac{d\vb{p}_{\text{em}}}{dt}=\oint_{\mathcal S}\overleftrightarrow{T}\cdot d\vb{a} \]
+<p class="note">\(u,\ \vb{S},\ \vb{g},\ \boldsymbol\ell,\ \overleftrightarrow{T}\) 다섯 양이 모두 장에 대해 <b>이차식</b>이라는 사실을 기억하라 — 따라서 어느 것도 중첩 원리를 만족하지 않는다. 전하가 두 배면 이들은 네 배가 된다.</p>
+</div>
+
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 2</span>Example 8.3 — 동축 케이블: 정적인 장에 갇힌 운동량, 그리고 그 회수</div>
+<ol>
+<li><b>설정.</b> 길이 \(l\), 내부 도체 반지름 \(a\)(선전하 \(+\lambda\), 전류 \(I\)가 오른쪽), 외부 도체 반지름 \(b\)(\(-\lambda\), 반대 방향 전류). 저항 없는 케이블이 한쪽은 전지, 한쪽은 저항에 연결되어 있다.</li>
+<li><b>장.</b> Gauss/Ampère 법칙으로 \(a&lt;s&lt;b\) 영역에서
+\[ \vb{E}=\frac{\lambda}{2\pi\eps s}\hat s,\qquad \vb{B}=\frac{\muz I}{2\pi s}\hat\phi. \]</li>
+<li><b>Poynting 벡터.</b> \(\hat s\times\hat\phi=\hat z\):
+\[ \vb{S}=\frac{1}{\muz}EB\,\hat z=\frac{\lambda I}{4\pi^2\eps s^2}\hat z. \]
+에너지는 <b>도체 속이 아니라 도체 사이의 빈 공간을 따라</b> 전지에서 저항으로 흘러간다.</li>
+<li><b>전력 확인.</b>
+\[ P=\int\vb{S}\cdot d\vb{a}=\frac{\lambda I}{4\pi^2\eps}\int_a^b\frac{1}{s^2}2\pi s\,ds=\frac{\lambda I}{2\pi\eps}\ln(b/a)=IV, \]
+여기서 \(V=\frac{\lambda}{2\pi\eps}\ln(b/a)\)는 두 도체 간 전위차. 회로이론과 완전히 일치 ✓.</li>
+<li><b>장의 운동량.</b> \(d\tau=2\pi s\,l\,ds\)로
+\[ \vb{p}_{\text{em}}=\muz\eps\int\vb{S}\,d\tau=\frac{\muz\lambda I}{4\pi^2}\hat z\int_a^b\frac{2\pi s\,l}{s^2}ds=\frac{\muz\lambda I l}{2\pi}\ln(b/a)\,\hat z=\eps\muz IVl\,\hat z. \]
+<b>충격:</b> 케이블은 정지해 있고 \(\vb{E},\vb{B}\)는 시간에 무관한데도 알짜 운동량이 \(+z\) 방향으로 존재한다.</li>
+<li><b>회수 실험.</b> 저항을 키워 전류를 서서히 0으로 줄이면 변하는 \(\vb{B}\)가 유도 전기장을 만든다:
+\[ \vb{E}_{\text{ind}}=\left[\frac{\muz}{2\pi}\frac{dI}{dt}\ln s+K\right]\hat z. \]</li>
+<li><b>전하에 작용하는 힘.</b> 내부 도체(\(+\lambda l\), \(s=a\))와 외부 도체(\(-\lambda l\), \(s=b\))에 작용하는 힘의 합은 상수 \(K\)가 소거되어
+\[ \vb{F}=-\frac{\muz\lambda l}{2\pi}\frac{dI}{dt}\ln(b/a)\,\hat z. \]</li>
+<li><b>충격량 적분.</b> 전류가 \(I\to0\)으로 갈 때
+\[ \vb{p}_{\text{mech}}=\int\vb{F}\,dt=\frac{\muz\lambda I l}{2\pi}\ln(b/a)\,\hat z, \]
+즉 <b>처음 장에 저장돼 있던 운동량과 정확히 같다</b> ✓. 장이 갖고 있던 운동량이 물질로 넘어갔다.</li>
+<li><b>남은 수수께끼.</b> 정지한 계에 알짜 운동량이 있다는 것은 여전히 불편하다 — 이 역설의 완전한 해소(숨은 운동량, hidden momentum)는 12장 Ex. 12.12에서 상대론적으로 이루어진다. 지금은 "장이 운동량을 가진다"는 결론이 보존법칙을 <em>살린다</em>는 점만 확실히 하라.</li>
+</ol>
+</div>
+
+<div class="callout"><b class="head">Poynting 벡터의 두 얼굴.</b> \(\vb{S}\) 하나가 두 가지를 동시에 말한다: \(\vb{S}\) 자체는 <em>에너지 flux 밀도</em>, \(\vb{S}/c^2\)는 <em>운동량 밀도</em>. 이는 우연이 아니라 상대론에서 에너지와 운동량이 하나의 4-텐서(에너지-운동량 텐서)의 성분이기 때문이다. 같은 이유로 \(\overleftrightarrow{T}\)도 두 얼굴을 갖는다: 면에 걸리는 응력이자, 운동량의 흐름 밀도(\(-\overleftrightarrow{T}\)).</div>
+
+<h4>8.2.4 각운동량 <span class="en">angular momentum</span></h4>
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 3</span>Example 8.4 — Feynman 원반 역설: 솔레노이드 + 두 원통 껍질</div>
+<ol>
+<li><b>설정.</b> 반지름 \(R\), 단위 길이당 감은 수 \(n\), 전류 \(I\)인 매우 긴 솔레노이드. 이와 동축인 길이 \(l\)의 부도체 원통 껍질 두 개: 안쪽(반지름 \(a&lt;R\))에 전하 \(+Q\), 바깥쪽(반지름 \(b&gt;R\))에 \(-Q\). 전류를 서서히 끄면 원통들이 <em>회전하기 시작한다</em>. 각운동량은 어디서 왔는가?</li>
+<li><b>초기 장.</b>
+\[ \vb{E}=\frac{Q}{2\pi\eps l}\frac{1}{s}\hat s\quad(a&lt;s&lt;b),\qquad \vb{B}=\muz nI\,\hat z\quad(s&lt;R). \]
+두 장이 동시에 0이 아닌 영역은 \(a&lt;s&lt;R\) — 여기서만 \(\vb{g}\ne0\)이다.</li>
+<li><b>운동량 밀도.</b> \(\hat s\times\hat z=-\hat\phi\)이므로
+\[ \vb{g}=\eps(\vb{E}\times\vb{B})=-\frac{\muz nIQ}{2\pi l s}\hat\phi. \]
+<em>원주 방향</em>이다 — 알짜 선운동량은 0이지만 축에 대한 각운동량은 0이 아니다.</li>
+<li><b>각운동량 밀도.</b> \(\vb{r}\times\vb{g}\)의 \(z\)성분은 \(s\,g_\phi\)이므로
+\[ (\vb{r}\times\vb{g})_z=-\frac{\muz nIQ}{2\pi l}, \]
+<b>\(s\)에 무관한 상수!</b> (지름 성분은 대칭에 의해 적분하면 0.) 따라서 부피를 곱하기만 하면 된다.</li>
+<li><b>총 각운동량.</b> 부피는 \(\pi(R^2-a^2)l\):
+\[ \boxed{\ \vb{L}_{\text{em}}=-\tfrac12\muz nIQ\,(R^2-a^2)\,\hat z\ } \]</li>
+<li><b>전류를 끌 때 유도되는 전기장.</b> Faraday 법칙(원형 고리):
+\[ \vb{E}=\begin{cases}-\dfrac12\muz n\dfrac{dI}{dt}\dfrac{R^2}{s}\hat\phi,& s&gt;R,\\[6pt] -\dfrac12\muz n\dfrac{dI}{dt}\,s\,\hat\phi,& s&lt;R.\end{cases}\]</li>
+<li><b>바깥 원통(\(-Q\), 반지름 \(b&gt;R\))에 걸리는 돌림힘.</b>
+\[ \vb{N}_b=\vb{r}\times(-Q\vb{E})=\tfrac12\muz nQR^2\frac{dI}{dt}\hat z
+\ \Rightarrow\ \vb{L}_b=\tfrac12\muz nQR^2\hat z\int_I^0\frac{dI}{dt}dt=-\tfrac12\muz nIQR^2\hat z. \]</li>
+<li><b>안쪽 원통(\(+Q\), 반지름 \(a&lt;R\))에 걸리는 돌림힘.</b>
+\[ \vb{N}_a=-\tfrac12\muz nQa^2\frac{dI}{dt}\hat z\ \Rightarrow\ \vb{L}_a=+\tfrac12\muz nIQa^2\hat z. \]</li>
+<li><b>대조.</b>
+\[ \vb{L}_a+\vb{L}_b=-\tfrac12\muz nIQ(R^2-a^2)\hat z=\vb{L}_{\text{em}}\ \checkmark \]
+장이 잃은 각운동량이 정확히 원통들이 얻은 각운동량이다. 총 각운동량(장 + 물질)은 보존된다.</li>
+</ol>
+</div>
+
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 4</span>같은 장치, 다른 메커니즘 (Prob. 8.10) — 전기장을 끄면 Lorentz 힘이 일을 넘겨받는다</div>
+<ol>
+<li><b>변형된 설정.</b> 이번에는 전류를 끄는 대신, 두 원통 사이에 <em>약하게 도전성인 방사형 살(spoke)</em>을 연결해 전기장을 서서히 없앤다(솔레노이드에 슬롯을 내어 원통은 자유롭게 돌 수 있게). 두 원통은 강체로 연결되어 함께 돈다.</li>
+<li><b>살에 흐르는 전류.</b> 방전 전류를 \(I_s\)라 하면 \(I_s=-dQ/dt\), 방향은 \(+\hat s\)(안쪽 \(+Q\)에서 바깥으로).</li>
+<li><b>살의 전류 요소에 작용하는 자기력.</b> \(s&lt;R\)에서만 \(\vb{B}=\muz nI\hat z\)이므로
+\[ d\vb{F}=I_s\,ds\,(\hat s\times\muz nI\hat z)=-\muz nI\,I_s\,ds\,\hat\phi, \]
+(\(\hat s\times\hat z=-\hat\phi\)).</li>
+<li><b>돌림힘.</b> \(d\vb{N}=s\hat s\times d\vb{F}=-\muz nI\,I_s\,s\,ds\,\hat z\)이므로 \(a\) 부터 \(R\) 까지 적분:
+\[ N_z=-\muz nI\,I_s\,\frac{R^2-a^2}{2}. \]
+(\(s&gt;R\) 구간은 \(\vb{B}=0\)이라 기여 없음.)</li>
+<li><b>충격 각운동량.</b> \(I_s=-dQ/dt\)를 넣고 시간 적분:
+\[ L_z=\int N_z\,dt=\frac{\muz nI(R^2-a^2)}{2}\int_Q^0 dQ'=-\tfrac12\muz nIQ(R^2-a^2). \]</li>
+<li><b>결론.</b> Eq. 8.34와 정확히 같다 ✓. <b>주목할 점:</b> 각운동량이 장에서 물질로 넘어가는 <em>메커니즘</em>이 두 경우 완전히 다르다 — 유도 3에서는 Faraday 유도 전기장, 여기서는 Lorentz 자기력. 그런데도 최종 결과는 같다. 보존법칙은 메커니즘의 세부에 의존하지 않는다.</li>
+</ol>
+</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u3-1"><div class="qq">[참/거짓+증명] "\(\vb{E}\)와 \(\vb{B}\)가 모두 시간에 무관한 정적인 계는 알짜 전자기 운동량이나 각운동량을 가질 수 없다." 참이면 증명하고, 거짓이면 명시적 반례를 계산과 함께 제시하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>거짓.</b> \(\vb{g}=\eps(\vb{E}\times\vb{B})\)는 시간 미분을 포함하지 않으므로, \(\vb{E}\)와 \(\vb{B}\)가 완전히 정적이어도 \(\vb{E}\times\vb{B}\ne0\)이면 운동량 밀도가 존재한다.
+<b>반례 1(선운동량, Example 8.3).</b> 동축 케이블: \(\vb{E}=\frac{\lambda}{2\pi\eps s}\hat s\), \(\vb{B}=\frac{\muz I}{2\pi s}\hat\phi\) 모두 정적이지만
+\[ \vb{p}_{\text{em}}=\frac{\muz\lambda I l}{2\pi}\ln(b/a)\hat z\ne0. \]
+<b>반례 2(각운동량, Example 8.4).</b> 솔레노이드 + 두 대전 원통: \(\vb{L}_{\text{em}}=-\frac12\muz nIQ(R^2-a^2)\hat z\ne0\).
+<b>실재성의 증거:</b> 두 경우 모두, 계를 서서히 끄면 정확히 그만큼의 운동량/각운동량이 물질에 <em>실제로 전달된다</em>(Example 8.3의 8단계, Example 8.4의 9단계). 즉 장부기(bookkeeping) 장치가 아니라 물리적으로 측정 가능한 양이다.
+<b>단, 주의:</b> Example 8.3처럼 정지한 계에 알짜 선운동량이 있는 것은 상대론적으로 "숨은 운동량"이 상쇄해 주어야 완전히 정합적이다(12장). 각운동량 사례에는 그런 문제가 없다.
+</div></div>
+
+<div class="qz" data-q="u3-2"><div class="qq">[점근·차원 분석] 전하 \(q_e\)와 가상의 자기 홀극 \(q_m\)이 거리 \(d\)만큼 떨어져 정지해 있다(Thomson dipole). 장에 저장된 총 각운동량이 \(L\propto q_e^{p}q_m^{q}d^{\,n}\)일 때 \(p,q,n\)을 결정하고, \(n\)의 값이 갖는 물리적 함의를 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>지수:</b> \(\boldsymbol\ell\)은 \(\vb{E}\times\vb{B}\)에 비례하므로 \(\vb{E}\propto q_e\), \(\vb{B}\propto q_m\)에서 \(p=q=1\).
+<b>\(n\) 결정(차원 논증).</b> \(\ell\sim\eps\,r\,EB\), \(E\sim\frac{q_e}{4\pi\eps r^2}\), \(B\sim\frac{\muz q_m}{4\pi r^2}\)이므로 \(\ell\sim\frac{\muz q_eq_m}{r^3}\cdot\frac{1}{16\pi^2}\). 여기에 부피 \(\sim r^3\)를 곱하면 \(r\)이 <em>완전히 상쇄</em>된다. 실제 적분 결과는
+\[ \boxed{\ \vb{L}=\frac{\muz}{4\pi}q_eq_m\,\hat d\ }\qquad(p=1,\ q=1,\ n=0), \]
+방향은 \(q_e\)에서 \(q_m\)을 향한다.
+<b>물리적 함의(\(n=0\)):</b> 각운동량이 <em>거리에 전혀 의존하지 않는다</em>. 두 입자를 무한히 멀리 떼어놓아도 장은 같은 각운동량을 품는다. 양자역학에서 각운동량은 \(\hbar/2\)의 정수배로 양자화되므로
+\[ \frac{\muz q_eq_m}{4\pi}=\frac{n\hbar}{2},\qquad n=1,2,3,\dots \]
+즉 우주 어딘가에 자기 홀극이 <em>단 하나</em>라도 존재하면 전하가 이산적인 단위로 양자화되어야 한다 — Dirac(1931)의 유명한 논증이다.
+</div></div>
+
+<div class="qz" data-q="u3-3"><div class="qq">[교과서 Example 변형] 반지름 \(a\)(전하 \(+Q\))와 \(b&gt;a\)(전하 \(-Q\))인 동심 구 껍질 두 개가 균일 자기장 \(\vb{B}=B_0\hat z\) 속에 있다. (a) 중심에 대한 장의 각운동량을 구하라. (b) 자기장을 서서히 끌 때 각 껍질에 걸리는 돌림힘과 최종 각운동량을 구해 (a)와 비교하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>(a) 장의 각운동량.</b> \(a&lt;r&lt;b\)에서 \(\vb{E}=\frac{Q}{4\pi\eps r^2}\hat r\), \(\vb{B}=B_0\hat z\). \(\hat r\times\hat z=-\sin\theta\,\hat\phi\)이므로
+\[ \vb{g}=\eps(\vb{E}\times\vb{B})=-\frac{QB_0\sin\theta}{4\pi r^2}\hat\phi. \]
+\(\boldsymbol\ell=\vb{r}\times\vb{g}\)의 \(z\)성분은 \(r\sin\theta\,|g_\phi|\)의 부호를 따져 \(\ell_z=-\frac{QB_0\sin^2\theta}{4\pi r}\).
+\[ L_z=-\frac{QB_0}{4\pi}\int_a^b\!\!\int_0^\pi\!\!\int_0^{2\pi}\frac{\sin^2\theta}{r}r^2\sin\theta\,dr\,d\theta\,d\varphi
+=-\frac{QB_0}{4\pi}\cdot 2\pi\cdot\frac{b^2-a^2}{2}\cdot\frac43=\boxed{-\frac{QB_0(b^2-a^2)}{3}\hat z}\ \text{의 }z\text{성분}. \]
+(\(\int_0^\pi\sin^3\theta\,d\theta=4/3\), \(\int_a^b r\,dr=(b^2-a^2)/2\).)
+<b>(b) 자기장을 끌 때.</b> Faraday 법칙으로 반지름 \(r\)의 위도 원(각 \(\theta\))에 유도되는 전기장은
+\[ E_\phi(2\pi r\sin\theta)=-\frac{d}{dt}\left(B_z\pi r^2\sin^2\theta\right)\ \Rightarrow\ E_\phi=-\frac{r\sin\theta}{2}\frac{dB_0}{dt}. \]
+반지름 \(R_s\), 전하 \(q\)인 껍질의 돌림힘 \(z\)성분은 표면전하 \(\sigma=q/4\pi R_s^2\)에 대해
+\[ N_z=\oint (R_s\sin\theta)\,E_\phi\,\sigma\,da=-\frac{q R_s^2}{2}\frac{dB_0}{dt}\cdot\frac{\langle\sin^2\theta\rangle\cdot ...}{} = -\frac{qR_s^2}{3}\frac{dB_0}{dt}, \]
+(각 평균 \(\int\sin^3\theta\,d\theta/\int\sin\theta\,d\theta=2/3\)를 쓰면 계수 \(1/3\)이 나온다.)
+시간 적분(\(B_0\to0\))하면 각 껍질이 얻는 각운동량은 \(L_z^{(q,R_s)}=+\frac{qR_s^2B_0}{3}\).
+<b>합:</b> \(L_z=\frac{QB_0a^2}{3}+\frac{(-Q)B_0b^2}{3}=-\frac{QB_0(b^2-a^2)}{3}\) — (a)와 정확히 일치 ✓.
+</div></div>
+
+<div class="qz" data-q="u3-4"><div class="qq">[개념 설명] "장의 운동량"이 단순한 부기(bookkeeping) 트릭이 아니라 실재하는 물리량이라는 근거를 세 가지 서로 다른 층위에서 제시하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>(1) 실험적/조작적 층위.</b> Example 8.3과 8.4에서, 계를 끄면 저장돼 있던 운동량·각운동량이 <em>물질에 실제로 전달된다</em>. 원통이 돌기 시작하고 케이블이 밀린다. 관측 가능한 결과가 있으므로 실재한다.
+<b>(2) 이론적 정합성 층위.</b> 전기동역학에서는 제3법칙이 깨진다(U2 유도 1). 장 운동량을 도입하지 않으면 운동량 보존이 <em>틀린 법칙</em>이 되어버린다. 반대로 \(\vb{g}=\eps(\vb{E}\times\vb{B})\)를 인정하면 \(\partial\vb{g}/\partial t=\nabla\cdot\overleftrightarrow{T}\)라는 국소 보존법칙이 Maxwell 방정식으로부터 <em>유도</em>된다 — 사후 끼워맞춤이 아니다.
+<b>(3) 구조적/상대론적 층위.</b> \(\vb{g}=\vb{S}/c^2\)라는 관계는 에너지 flux와 운동량 밀도가 같은 대상의 두 측면임을 말한다. 이는 상대론에서 \(u,\ \vb{S}/c,\ \overleftrightarrow{T}\)가 하나의 에너지-운동량 4-텐서 \(T^{\mu\nu}\)의 성분으로 통합된다는 사실의 반영이다. 어떤 관성계에서 순수한 에너지 흐름인 것이 다른 계에서는 운동량 성분을 갖는다.
+<b>보너스(광압).</b> 전자기파는 \(\vb{g}=u/c\)의 운동량 밀도를 나르고, 이것이 흡수체에 주는 복사압 \(P=I/c\)는 직접 측정된다(9장).
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> Example 8.3과 8.4를 백지에서 재현하여, 정적인 장에 저장된 운동량/각운동량을 계산하고 계를 끌 때 물질이 받는 충격량·충격 각운동량이 그와 정확히 같음을 두 가지 서로 다른 메커니즘(Faraday 유도장, Lorentz 힘)으로 각각 보일 수 있다.</div>

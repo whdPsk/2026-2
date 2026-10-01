@@ -1,0 +1,25 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> \(F^{\mu\nu}\)에서 \(\vb{E}/c\to c\vb{D},\ \vb{B}\to\vb{H}\)로 치환한다:</p>
+\[ D^{\mu\nu}=\begin{pmatrix}0&cD_x&cD_y&cD_z\\-cD_x&0&H_z&-H_y\\-cD_y&-H_z&0&H_x\\-cD_z&H_y&-H_x&0\end{pmatrix},\qquad J_f^{\mu}=(c\rho_f,\vb{J}_f) \]
+<p>검산: \(\mu=0\)이면 \(\partial_i D^{0i}=c\,\divg\vb{D}=c\rho_f\) ✓ (Gauss in matter). \(\mu=1\)이면</p>
+\[ \partial_0D^{10}+\partial_2D^{12}+\partial_3D^{13}=-\frac{\partial D_x}{\partial t}+\frac{\partial H_z}{\partial y}-\frac{\partial H_y}{\partial z}=\Big(\curl\vb{H}-\frac{\partial\vb{D}}{\partial t}\Big)_x=J_{f,x}\ \checkmark \]
+\[ \boxed{\ \frac{\partial D^{\mu\nu}}{\partial x^{\nu}}=J_f^{\mu}\ } \]
+
+<p><b>(b)</b> 쌍대는 \(c\vb{D}\to\vb{H},\ \vb{H}\to-c\vb{D}\):</p>
+\[ H^{\mu\nu}=\begin{pmatrix}0&H_x&H_y&H_z\\-H_x&0&-cD_z&cD_y\\-H_y&cD_z&0&-cD_x\\-H_z&-cD_y&cD_x&0\end{pmatrix} \]
+<p>(동차 방정식 \(\divg\vb{B}=0\), Faraday는 여전히 \(\partial_\nu G^{\mu\nu}=0\)이 담당한다. \(H^{\mu\nu}\)는 구성관계를 쓰기 위한 것.)</p>
+
+<p><b>(c) 정지 매질:</b> \(\eta^{\mu}=(c,\vb{0})\), 따라서 \(\eta_\nu=(-c,\vb{0})\). \(\mu=1\)에 대해</p>
+\[ D^{1\nu}\eta_\nu=D^{10}(-c)=(-cD_x)(-c)=c^{2}D_x,\qquad c^{2}\epsilon F^{1\nu}\eta_\nu=c^{2}\epsilon\Big(-\frac{E_x}{c}\Big)(-c)=c^{2}\epsilon E_x \]
+\[ \Rightarrow\ \boxed{\vb{D}=\epsilon\vb{E}}\quad(\text{Eq. }4.32) \]
+\[ H^{1\nu}\eta_\nu=(-H_x)(-c)=cH_x,\qquad \frac{1}{\mu}G^{1\nu}\eta_\nu=\frac{1}{\mu}(-B_x)(-c)=\frac{cB_x}{\mu}\ \Rightarrow\ \boxed{\vb{H}=\frac{1}{\mu}\vb{B}}\quad(\text{Eq. }6.31) \]
+
+<p><b>(d) 움직이는 매질:</b> \(\eta^{\mu}=\gamma_u(c,\vb{u})\), \(\eta_\nu=\gamma_u(-c,\vb{u})\). \(\mu=1\)을 계산하면(\(\gamma_u\)는 양변에서 소거)</p>
+\[ -cD^{10}+D^{12}u_y+D^{13}u_z=c^{2}D_x+(\vb{u}\times\vb{H})_x,\qquad c^{2}\epsilon\big[-cF^{10}+F^{12}u_y+F^{13}u_z\big]=c^{2}\epsilon(\vb{E}+\vb{u}\times\vb{B})_x \]
+\[ \boxed{\ \vb{D}+\frac{1}{c^{2}}(\vb{u}\times\vb{H})=\epsilon\big(\vb{E}+\vb{u}\times\vb{B}\big)\ } \]
+<p>같은 방식으로 \(H^{\mu\nu}\eta_\nu=\frac{1}{\mu}G^{\mu\nu}\eta_\nu\)에서</p>
+\[ \boxed{\ \vb{H}-\vb{u}\times\vb{D}=\frac{1}{\mu}\Big(\vb{B}-\frac{1}{c^{2}}\vb{u}\times\vb{E}\Big)\ } \]
+<p>(\(\mu=0\) 성분은 \(\vb{D}\cdot\vb{u}=\epsilon(\vb{E}\cdot\vb{u})\) 등으로 위 식의 \(\vb{u}\)방향 사영과 무모순이다.) \(\vb{u}\to0\)에서 (c)로 환원된다 ✓ 이것이 움직이는 매질의 광학(Fresnel 끌림 계수 등)의 출발점이다.</p>
+<div class="alabel">감점 포인트</div>
+움직이는 매질에서 \(\vb{D}=\epsilon\vb{E}\)를 그대로 쓰는 것 — 구성관계는 <b>매질의 정지계에서만</b> 그 꼴이고, 다른 계에서는 위처럼 \(\vb{E},\vb{B}\)(및 \(\vb{D},\vb{H}\))가 섞인다.</div><!--/sol-->

@@ -1,0 +1,129 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 가속하는 전하가 에너지를 복사한다면 그 에너지는 어디선가 와야 한다. 그렇다면 장은 전하에 되돌이힘을 가해야 한다. 그 힘이 단순히 \(-(\text{상수})\vb{v}\) 꼴일 것 같은가, 아니면 \(\vb{a}\)에 비례할 것 같은가? 만약 \(\vb{a}\)에 비례한다면 그것은 질량 재정의에 흡수되어 <i>힘으로 보이지 않을</i> 것이다 — 그렇다면 남는 후보는 무엇인가? 그리고 그 답이 옳다면, 외력이 없을 때 Newton 제2법칙은 어떤 미분방정식이 되는가?</div>
+
+<h4>11.3.1 Abraham–Lorentz 공식 <span class="en">the Abraham–Lorentz formula</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>에너지 보존 + 부분적분 → \(\vb{F}_{\rm rad}=\muz q^2\dot{\vb{a}}/6\pi c\)</div><ol>
+<li>순진한 출발점: 복사로 잃는 에너지가 곧 반작용력이 하는 (음의) 일이라고 놓는다.
+\[ \vb{F}_{\rm rad}\cdot\vb{v}=-\frac{\muz q^2a^2}{6\pi c}. \tag{*} \]</li>
+<li><b>그런데 (*)는 순간적으로는 틀렸다.</b> 이유를 명확히 적을 것: Larmor 일률은 무한대 반지름의 구에서 계산한 것이라 <b>속도장의 기여가 빠져 있다</b>. 속도장도 에너지를 담고 있고, 입자가 가감속하면 그 근접장(near field)과 에너지를 주고받는다. 되돌이힘은 <b>순간적으로 잃는 총 에너지</b>에 대응하는데 (*)는 그중 무한대로 탈출하는 부분만 세고 있다. (그래서 "radiation reaction"은 사실 <b>field reaction</b>이라 부르는 편이 정확하다.)</li>
+<li>구제책: 계가 <b>처음 상태로 되돌아오는 시간 구간</b> \([t_1,t_2]\)에서만 적분한다(예: 주기운동의 정수 배 주기). 그러면 근접장에 저장된 에너지가 양 끝에서 같으므로 알짜 손실은 복사뿐이고, (*)는 <b>평균적으로는 옳다</b>:
+\[ \int_{t_1}^{t_2}\vb{F}_{\rm rad}\cdot\vb{v}\,\dd t=-\frac{\muz q^2}{6\pi c}\int_{t_1}^{t_2}a^2\,\dd t. \]</li>
+<li>우변을 부분적분한다 — 이것이 유도의 심장이다:
+\[ \int_{t_1}^{t_2}\vb{a}\cdot\vb{a}\,\dd t=\Big[\vb{v}\cdot\vb{a}\Big]_{t_1}^{t_2}-\int_{t_1}^{t_2}\dot{\vb{a}}\cdot\vb{v}\,\dd t. \]
+전제(양 끝에서 \(\vb{v},\vb{a}\)가 같다)에 의해 <b>경계항이 소멸</b>한다.</li>
+<li>따라서
+\[ \int_{t_1}^{t_2}\left(\vb{F}_{\rm rad}-\frac{\muz q^2}{6\pi c}\dot{\vb{a}}\right)\cdot\vb{v}\,\dd t=0. \]</li>
+<li>이 조건을 만족시키는 <b>가장 단순한</b> 선택:
+\[ \boxed{\;\vb{F}_{\rm rad}=\frac{\muz q^2}{6\pi c}\dot{\vb{a}}=m\tau\dot{\vb{a}},\qquad \tau\equiv\frac{\muz q^2}{6\pi mc}\;}\]
+<b>Abraham–Lorentz 공식</b>이다.</li>
+<li><b>정직한 유보</b>(시험 서술형에서 반드시 언급): 위 논증은 이 형태를 <b>증명하지 않는다</b>. \(\vb{v}\)에 수직한 성분에 대해서는 아무 말도 하지 않고, 평행 성분에 대해서도 매우 특수한 구간에서의 <b>시간평균</b>만 제약한다. 지금 단계에서 말할 수 있는 최대치는 "에너지 보존과 양립하는 가장 단순한 형태"이다. §11.3.2의 자기력 계산이 독립적인 근거를 제공한다.</li>
+<li>구조적 관찰: \(\vb{F}_{\rm rad}\propto\dot{\vb{a}}\)이지 \(\vb{a}\)가 아니라는 점이 결정적이다. 만약 \(\vb{a}\)에 비례했다면 그것은 Newton 제2법칙에서 좌변으로 옮겨져 <b>질량의 재정의</b>로 흡수되어 버렸을 것이다(유도 4에서 실제로 그런 항이 나온다).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>폭주해(runaway)와 시간 척도 \(\tau\)</div><ol>
+<li>외력이 전혀 없다고 하자. Newton 제2법칙:
+\[ m\tau\dot{\vb{a}}=m\vb{a}\ \Longrightarrow\ \dot{\vb{a}}=\frac{\vb{a}}{\tau}. \]</li>
+<li>\[ \vb{a}(t)=\vb{a}_0\,\ee^{\,t/\tau}. \]
+<b>아무 힘도 받지 않는 자유 입자의 가속도가 지수적으로 무한히 증가한다.</b> 명백히 물리적으로 용납 불가능한 해다.</li>
+<li>시간 척도를 계산하자. 전자의 경우 \(q=1.6\times10^{-19}\,\)C, \(m=9.11\times10^{-31}\,\)kg, \(\muz=4\pi\times10^{-7}\), \(c=3\times10^{8}\):
+\[ \tau=\frac{\muz q^2}{6\pi m c}=\frac{(4\pi\times10^{-7})(2.56\times10^{-38})}{6\pi(9.11\times10^{-31})(3\times10^{8})}. \]
+분자 \(\approx3.2\times10^{-44}\), 분모 \(\approx5.2\times10^{-21}\), 따라서
+\[ \boxed{\;\tau\approx6\times10^{-24}\ \mathrm{s}\;}\]</li>
+<li>이 시간의 의미: \(c\tau\approx1.8\times10^{-15}\,\)m로, <b>고전 전자 반지름</b> \(r_e=q^2/4\pi\eps mc^2\approx2.8\times10^{-15}\,\)m와 같은 규모다. 실제로 \(\tau=\tfrac23 r_e/c\), 즉 "빛이 전자의 고전적 크기를 가로지르는 시간". 이론이 자기 자신의 붕괴 척도를 스스로 알려주고 있는 셈이다.</li>
+<li>탈출구 1: \(\vb{a}_0=0\)을 <b>부과</b>하여 폭주해를 배제한다. 그러나 다음 유도가 보여주듯 공짜가 아니다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>선가속(preacceleration): 폭주해를 죽이면 인과율이 다친다</div><ol>
+<li>운동방정식을 표준형으로 쓴다:
+\[ \vb{a}=\tau\dot{\vb{a}}+\frac{\vb{F}}{m}. \]
+먼저 중요한 성질 하나: 이 방정식을 \((t-\epsilon,t+\epsilon)\)에서 적분하고 \(\epsilon\to0\)을 취하면, \(\vb{F}\)가 유한한 한 \(\vb{a}\)의 도약이 허용되지 않는다. 즉 <b>힘이 불연속이어도 가속도는 연속</b>이어야 한다(반작용이 급격한 \(\vb{a}\)의 변화를 감쇠시킨다). 중성 입자(\(\vb{a}=\vb{F}/m\))와 결정적으로 다른 점이다.</li>
+<li>시험 문제: \(0&lt;t&lt;T\) 동안만 일정한 힘 \(F\)가 작용한다. 세 구간의 일반해:
+<br>(i) \(t&lt;0\): \(a=A\,\ee^{\,t/\tau}\)
+<br>(ii) \(0&lt;t&lt;T\): \(a=\dfrac{F}{m}+B\,\ee^{\,t/\tau}\)
+<br>(iii) \(t&gt;T\): \(a=C\,\ee^{\,t/\tau}\)</li>
+<li><b>폭주해 제거</b>: (iii)에서 \(t\to\infty\)에 발산하지 않으려면 \(C=0\).</li>
+<li>\(t=T\)에서 연속: \(\dfrac{F}{m}+B\,\ee^{\,T/\tau}=0\ \Rightarrow\ B=-\dfrac{F}{m}\ee^{-T/\tau}\).</li>
+<li>\(t=0\)에서 연속: \(A=\dfrac{F}{m}+B=\dfrac{F}{m}\left(1-\ee^{-T/\tau}\right)\).</li>
+<li>따라서 \(t&lt;0\)에서
+\[ a(t)=\frac{F}{m}\left(1-\ee^{-T/\tau}\right)\ee^{\,t/\tau}\ \ne 0. \]
+<b>힘이 가해지기도 전에 입자가 가속하기 시작한다.</b> 이것이 <b>선가속(preacceleration)</b>이며, 명백한 인과율 위반이다.</li>
+<li><b>딜레마의 정확한 형태</b>: 폭주해를 없애거나(\(C=0\)) 선가속을 피하거나(\(A=0\)) 둘 중 하나는 할 수 있지만 <b>둘 다는 불가능</b>하다. 선가속이 앞서는 시간은 고작 \(\sim\tau\approx6\times10^{-24}\,\)s로, 어떤 실험으로도 검출할 수 없을 만큼 짧다. 그러나 이론이 원리적으로 이런 해를 허용한다는 사실 자체가 심각한 문제다.</li>
+<li>실용적 부산물(Ex. 11.4): 고유진동수 \(\omega_0\)인 용수철에 매달린 전하의 운동방정식은 \(m\ddot x=-m\omega_0^2x+m\tau\dddot x+F_{\rm drive}\). 진동수 \(\omega\)로 진동 중이면 \(\dddot x=-\omega^2\dot x\)이므로
+\[ m\ddot x+m\gamma\dot x+m\omega_0^2 x=F_{\rm drive},\qquad \boxed{\gamma=\omega^2\tau}. \]
+9장에서 "단순화를 위해" 도입했던 감쇠항 \(-\gamma m\vb{v}\)의 미시적 정체가 바로 복사 반작용이다.</li>
+</ol></div>
+
+<h4>11.3.2 자기력: 반작용의 실제 메커니즘 <span class="en">the self-force</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>아령 모형 — 질량 재규격화와 \(\dot a\) 항의 출현</div><ol>
+<li>동기: §11.3.1은 에너지 보존만 썼을 뿐 <b>메커니즘</b>을 밝히지 않았다. 실제 원인은 전하가 만든 장이 전하 자신에게 되미는 <b>자기력(self-force)</b>이다. 일반적으로 확장된 전하 분포의 한 부분 \(A\)가 다른 부분 \(B\)에 가하는 전자기력은 그 반대와 크기가 같지 않다 — <b>Newton 제3법칙이 내부적으로 깨지고</b>, 그 불균형의 합이 알짜 자기력으로 남는다.</li>
+<li>모형: 총전하 \(q\)를 반씩 나눠 거리 \(d\)만큼 <b>운동 방향에 수직으로</b> 떨어뜨린 "아령". 지연 시각에 순간정지, \(x\) 방향으로 운동. 점전하의 정확한 장 공식에서 \(\boldsymbol\rr=l\hat{\vb{x}}+d\hat{\vb{y}}\), \(\vb{u}=c\hat{\boldsymbol\rr}\)를 쓰면 (\(y\) 성분은 두 끝에서 상쇄되므로 \(x\) 성분만 필요)
+\[ \vb{F}_{\rm self}=\frac{q^2}{8\pi\eps c^2}\frac{(lc^2-ad^2)}{(l^2+d^2)^{3/2}}\hat{\vb{x}}. \]
+여기까지는 <b>정확</b>하다.</li>
+<li>이제 \(d\)의 거듭제곱으로 전개한다. \(T\equiv t-t_r\)로 두고 Taylor 전개하면 \(l=\tfrac12aT^2+\tfrac16\dot aT^3+\cdots\), 그리고 지연조건 \((cT)^2=l^2+d^2\)를 \(T\)에 대해 역으로 풀면(급수 역전)
+\[ T=\frac{d}{c}+\frac{a^2}{8c^5}d^3+\cdots\ \Longrightarrow\ l=\frac{a}{2c^2}d^2+\frac{\dot a}{6c^3}d^3+\cdots \]</li>
+<li>대입하고 \(t_r\)에서의 값을 현재 시각 \(t\)로 옮기면(\(a(t_r)=a(t)-\dot a(t)d/c+\cdots\))
+\[ \vb{F}_{\rm self}=\frac{q^2}{4\pi\eps}\left[-\frac{a(t)}{4c^2 d}+\frac{\dot a(t)}{3c^3}+O(d)\right]\hat{\vb{x}}. \]</li>
+<li><b>첫 항의 해석 — 질량 재규격화</b>. 이 항은 \(-(\text{양수})\times a\) 꼴이므로 Newton 제2법칙의 반대편으로 넘기면 그냥 <b>질량에 더해진다</b>:
+\[ m=2m_0+\frac{1}{4\pi\eps}\frac{q^2}{4dc^2}. \]
+물리적으로 자연스럽다 — 두 반쪽 전하의 정전 퍼텐셜 에너지 \(\frac{1}{4\pi\eps}\frac{(q/2)^2}{d}\)가 \(E=mc^2\)를 통해 관성에 기여한 것이다. 그러나 \(d\to0\)에서 <b>발산한다</b>. 이 곤란은 양자전기역학에서도 살아남으며, 거기서는 <b>질량 재규격화(mass renormalization)</b>라는 이름으로 처리된다(관측 가능한 것은 총 질량 \(m\)뿐이므로, \(m_0\)가 상쇄하는 무한대를 갖는다고 본다).</li>
+<li><b>둘째 항이 복사 반작용</b>이다. \(d\)에 무관하므로 점입자 극한에서 유일하게 살아남는다:
+\[ \vb{F}^{\rm int}_{\rm rad}=\frac{\muz q^2\dot{\vb{a}}}{12\pi c}. \]
+Abraham–Lorentz와 <b>정확히 인수 2만큼</b> 차이 난다.</li>
+<li>불일치의 해소: 위 계산은 양 끝 <b>사이의 상호작용</b>만 센 것이다(그래서 위첨자 "int"). 각 끝이 <b>자기 자신에게</b> 가하는 힘이 남아 있다. \(F(q)=F^{\rm int}(q)+2F(q/2)\)이고 자기력이 \(q^2\)에 비례하므로 \(F(q/2)=\tfrac14F(q)\), 따라서 \(F(q)=F^{\rm int}(q)+\tfrac12F(q)\Rightarrow F(q)=2F^{\rm int}(q)\):
+\[ \boxed{\;\vb{F}_{\rm rad}=\frac{\muz q^2\dot{\vb{a}}}{6\pi c}\;}\]
+Abraham–Lorentz 공식이 <b>완전히 독립적인 경로로 재현된다.</b></li>
+<li><b>결론</b>: 복사 반작용의 정체는 전하가 자기 자신에게 가하는 힘 — 더 정확히는, 전하 분포의 서로 다른 부분들이 만든 장이 서로에게 작용해 생기는 알짜힘이다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — Abraham–Lorentz 공식과 특성시간</div>
+\[ \boxed{\vb{F}_{\rm rad}=\frac{\muz q^2}{6\pi c}\dot{\vb{a}}=m\tau\dot{\vb{a}}},\qquad \boxed{\tau=\frac{\muz q^2}{6\pi mc}}\ \overset{e^-}{\approx}\ 6\times10^{-24}\,\mathrm{s} \]
+<p class="note">Larmor 공식 \(\muz q^2a^2/6\pi c\)와 계수 \(\muz q^2/6\pi c\)가 <b>완전히 같다</b> — 부분적분이 \(a^2\to-\dot a\cdot v\)로 바꿨을 뿐이기 때문이다. 이 한 가지만 기억하면 두 공식을 서로에게서 복원할 수 있다. \(c\tau\sim r_e\)(고전 전자 반지름)라는 점도 함께.</p></div>
+
+<div class="formula"><div class="ftitle">암기 — 복사 반작용을 포함한 운동방정식과 그 병리</div>
+\[ \vb{a}=\tau\dot{\vb{a}}+\frac{\vb{F}}{m}\quad\Longrightarrow\quad \begin{cases}\vb{F}=0:\ \vb{a}=\vb{a}_0\ee^{\,t/\tau}&\text{(폭주해)}\\[2pt] \vb{a}_0=0\ \text{강제}:\ a(t&lt;0)\ne0&\text{(선가속)}\end{cases} \]
+<p class="note">둘 중 하나만 제거할 수 있고 둘 다는 불가능하다는 것이 이 절의 최종 메시지. 그리고 진동계에서는 이 방정식이 감쇠상수 \(\gamma=\omega^2\tau\)를 낳는다.</p></div>
+
+<div class="callout"><b class="head">정직한 결론: 여기서 고전 이론이 끝난다.</b> \(\tau\approx6\times10^{-24}\,\)s는 빛이 고전 전자 반지름을 가로지르는 시간이고, 질량 항은 \(d\to0\)에서 발산한다. 두 사실이 같은 곳을 가리킨다 — <b>고전 전자기학 안에는 점전하라는 것이 일관되게 존재할 수 없다</b>. 병리는 상대론적 확장판(Liénard에서 출발해 얻는 방정식)에서도 사라지지 않는다. Lorentz(1892, 자기력 방법), Planck(에너지 보존 방법), Abraham(정리·확장), Dirac(1938, 완전 상대론적 처리)을 거쳐 한 세기가 넘도록 완전히 해결되지 않았다. 오늘날의 태도는 두 갈래다: (i) 이것은 점전하 모형의 한계를 알리는 신호다, (ii) 이것은 양자역학의 필요성을 예고한다. U22의 "고전 원자는 \(10^{-11}\)초 만에 붕괴한다"와 나란히 놓고 보면, 11장의 마지막 두 절은 고전 전자기학이 스스로 자신의 유효 범위를 선언하는 장면이다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u23-1"><div class="qq">(참/거짓 + 증명 또는 반례) "복사 반작용력은 항상 운동을 방해하는 제동력이며, 복사하고 있는 입자에는 반드시 0이 아닌 값을 갖는다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>두 부분 모두 거짓.</b> 반례를 각각 제시한다.<br><br>
+<b>(a) 제동이 아니라 가속이 되는 경우 (Ex. 11.5)</b>: 원점에 \(-q\)를 고정하고 \(z=d\)에 \(+q\)를 정지 상태로 두었다가 놓는다. 
+\[ a=-\frac{q^2}{4\pi\eps m}\frac{1}{z^2}\ \Rightarrow\ \dot a=-\frac{q^2}{4\pi\eps m}\left(-\frac{2}{z^3}\right)\frac{\dd z}{\dd t}=-\frac{2q^2}{4\pi\eps m}\frac{v}{z^3} \]
+(\(\dd z/\dd t=-v\)). 따라서 \(\vb{F}_{\rm rad}=m\tau\dot{\vb{a}}\)가 <b>운동 방향(즉 원래 힘과 같은 방향)</b>을 향한다. 계 전체는 복사로 에너지를 잃고 있지만, <b>입자 \(q\)는 오히려 에너지를 얻는다</b>. 그 에너지는 근접장에서 나온다 — 장이 양쪽으로 에너지를 흘려보내고 있는 것이다. "복사 반작용"이라는 이름이 오해를 부르는 이유다(field reaction이 더 정확).<br><br>
+<b>(b) 복사하는데 반작용이 0인 경우</b>: 균일한 중력장에서 자유낙하하는 전하. \(\vb{a}=\vb{g}=\)일정이므로 \(\dot{\vb{a}}=0\), 따라서 \(\vb{F}_{\rm rad}=0\). 그러나 \(a\ne0\)이므로 Larmor 공식에 의해 <b>복사는 계속 일어난다</b>. 역으로 \(\vb{a}=0\)인 순간에도 \(\dot{\vb{a}}\ne0\)이면 반작용은 0이 아니다.<br><br>
+<b>정리</b>: 복사 여부는 \(\vb{a}\)가, 반작용력은 \(\dot{\vb{a}}\)가 결정한다. 이 둘은 논리적으로 독립이며, (*)식이 순간적으로 성립하지 않는다는 §11.3.1의 경고가 바로 이 사실의 다른 표현이다.
+</div></div>
+
+<div class="qz" data-q="u23-2"><div class="qq">(차원·수치해석) \(\tau=\muz q^2/6\pi mc\)가 실제로 시간의 차원을 갖는지 확인하고, 전자에 대해 계산기 없이 \(\tau\)를 어림하라. 이어서 \(c\tau\)가 무엇과 비교되는지 밝혀라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>차원 확인</b>: \([\muz q^2]=\mathrm{kg\cdot m}\) (U22 Q2에서 확인). 나누는 것은 \([mc]=\mathrm{kg\cdot m\,s^{-1}}\). 따라서
+\[ [\tau]=\frac{\mathrm{kg\,m}}{\mathrm{kg\,m\,s^{-1}}}=\mathrm{s}. \ \checkmark \]
+<b>수치(어림)</b>: 분자 \(\muz q^2=4\pi\times10^{-7}\times(1.6\times10^{-19})^2\). \(1.6^2=2.56\)이므로 \(q^2\approx2.6\times10^{-38}\), \(4\pi\approx12.6\) → 분자 \(\approx12.6\times2.6\times10^{-45}\approx3.3\times10^{-44}\).<br>
+분모 \(6\pi mc\approx18.8\times9.1\times10^{-31}\times3\times10^{8}\). \(9.1\times3=27.3\)이므로 \(mc\approx2.7\times10^{-22}\), \(\times18.8\approx5.1\times10^{-21}\).<br>
+\[ \tau\approx\frac{3.3\times10^{-44}}{5.1\times10^{-21}}\approx6.5\times10^{-24}\ \mathrm{s}. \]
+<b>\(c\tau\)의 의미</b>: \(c\tau\approx3\times10^8\times6\times10^{-24}\approx1.9\times10^{-15}\,\)m. 고전 전자 반지름 \(r_e=\dfrac{q^2}{4\pi\eps mc^2}\approx2.8\times10^{-15}\,\)m와 같은 자릿수이며, 정확히는
+\[ \tau=\frac{2}{3}\frac{r_e}{c}. \]
+즉 \(\tau\)는 <b>빛이 전자의 "고전적 크기"를 가로지르는 시간</b>이다. 이론의 병리(폭주·선가속)가 나타나는 시간 척도가 곧 점전하 가정이 무너지는 척도와 일치한다는 것이 §11.3의 핵심 통찰이다.
+</div></div>
+
+<div class="qz" data-q="u23-3"><div class="qq">(Example 변형, 계산기 없이) 가시광 영역(\(\omega\approx4\times10^{15}\,\mathrm{rad/s}\))에서 진동하는 원자 쌍극자의 복사 감쇠상수 \(\gamma\)와 품질계수 \(Q=\omega/\gamma\)를 구하라. 이 결과는 무엇을 뜻하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+Ex. 11.4의 결과 \(\gamma=\omega^2\tau\)를 쓴다(유도: \(m\ddot x=-m\omega_0^2x+m\tau\dddot x\)에서 정현 진동 시 \(\dddot x=-\omega^2\dot x\)이므로 \(m\tau\dddot x=-m\omega^2\tau\,\dot x\), 즉 속도에 비례하는 감쇠항).<br><br>
+\[ \frac{\gamma}{\omega}=\omega\tau\approx(4\times10^{15})(6\times10^{-24})\approx2.4\times10^{-8}. \]
+\[ \Rightarrow\ Q=\frac{\omega}{\gamma}=\frac{1}{\omega\tau}\approx4\times10^{7}. \]
+\(\gamma\approx2.4\times10^{-8}\times4\times10^{15}\approx1\times10^{8}\,\mathrm{s^{-1}}\).<br><br>
+<b>해석</b>: (i) 극도로 <b>약한 감쇠</b>다 — 원자는 에너지의 대부분을 잃기까지 \(\sim10^7\)번 진동한다. \(\gamma\ll\omega\)이므로 9장에서 감쇠를 섭동으로 다룬 것이 정당화된다. (ii) \(\gamma\)는 곧 스펙트럼선의 <b>자연 선폭(natural linewidth)</b>이고, 수명은 \(1/\gamma\approx10^{-8}\,\)s — 실제 원자의 들뜬 상태 수명(나노초 규모)과 놀랍도록 잘 맞는다. 고전 모형이 여기서는 옳은 크기를 준다. (iii) \(\gamma\propto\omega^2\)이므로 X선 영역으로 가면 감쇠가 급격히 커진다.<br><br>
+<b>주의할 점</b>: 감쇠가 \(\dot v\)가 아니라 형식상 \(\ddot v\)에 비례하지만, 정현 진동에서는 \(\vb{v}\)의 <b>짝수 번 미분</b>이 모두 \(\vb{v}\)에 비례하므로 결과적으로 속도 비례 감쇠와 구별되지 않는다.
+</div></div>
+
+<div class="qz" data-q="u23-4"><div class="qq">(개념) 아령 자기력 계산에서 나온 두 항 \(-\dfrac{q^2 a}{16\pi\eps c^2 d}\)와 \(\dfrac{\muz q^2\dot a}{12\pi c}\)의 운명이 왜 그토록 다른가? 그리고 인수 2의 불일치는 어떻게 해소되는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>(i) 첫 항이 "힘"으로 보이지 않는 이유</b>: 이 항은 \(\propto a\)이므로 \(ma=F_{\rm ext}+F_{\rm self}\)에서 좌변으로 이항하면 \((m+\delta m)a=F_{\rm ext}\)가 된다. 즉 <b>측정 가능한 효과가 오직 관성(질량)의 증가</b>로만 나타나고, 독립적인 힘으로는 관측되지 않는다. \(\delta m=\frac{1}{4\pi\eps}\frac{q^2}{4dc^2}\)는 두 반쪽 전하의 정전 에너지 \(\frac{1}{4\pi\eps}\frac{(q/2)^2}{d}\)를 \(c^2\)로 나눈 것과 일치한다 — \(E=mc^2\)의 직접적 확인이다. 문제는 \(d\to0\)에서 <b>발산</b>한다는 것이고, 이것이 질량 재규격화 문제다. (덧붙여 이 "정확히 맞아떨어짐"은 이 배치의 운 좋은 특징일 뿐이며, 세로 방향 아령이나 구 모형에서는 계수가 어긋난다.)<br><br>
+<b>(ii) 둘째 항이 살아남는 이유</b>: \(d\)에 무관한 유일한 항이므로 점입자 극한 \(d\to0\)에서 유일하게 유한하게 남는다. 그리고 \(\dot a\)에 비례하므로 질량으로 흡수될 수 없다 — 진짜 새로운 힘이다.<br><br>
+<b>(iii) 인수 2 해소</b>: 위 계산은 양 끝 <b>사이의</b> 상호작용만 센 것이므로 각 끝이 <b>자기 자신에게</b> 주는 힘이 빠져 있다. 자기력이 \(q^2\)에 비례한다는 사실만으로 순환논법 없이 해결된다:
+\[ F(q)=F^{\rm int}(q)+2F(q/2),\qquad F(q/2)=\tfrac14 F(q) \]
+\[ \Rightarrow F(q)=F^{\rm int}(q)+\tfrac12F(q)\ \Rightarrow\ F(q)=2F^{\rm int}(q)=\frac{\muz q^2\dot a}{6\pi c}. \ \checkmark \]
+(Abraham–Lorentz 공식을 이미 안다고 가정하지 않는다는 점이 이 논증의 미덕이다.)
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> 에너지 보존 + 부분적분으로 \(\vb{F}_{\rm rad}=m\tau\dot{\vb{a}}\)를 유도하면서 (*)식이 왜 순간적으로 틀린지 설명할 수 있고, 폭주해와 선가속이 왜 동시에 제거될 수 없는지를 세 구간 풀이로 보일 수 있으며, \(\tau\approx6\times10^{-24}\,\)s와 \(c\tau\sim r_e\)의 의미를 말할 수 있다.</div>

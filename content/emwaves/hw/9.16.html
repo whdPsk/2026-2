@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+항등식이므로 \(x\)로 몇 번이든 미분해도 성립한다. \(x=0\)에서 0차·1차·2차 미분값을 취하면
+\[A+B=C,\qquad aA+bB=cC,\qquad a^2A+b^2B=c^2C .\]
+첫 식을 둘째에 대입: \(aA+bB=c(A+B)\Rightarrow A(a-c)=B(c-b)\) …(i)<br>
+첫 식을 셋째에 대입: \(a^2A+b^2B=c^2(A+B)\Rightarrow A(a-c)(a+c)=B(c-b)(c+b)\) …(ii)<br>
+(ii)를 (i)로 나누면 (\(A(a-c)\neq0\) 가정 시) \(a+c=c+b\Rightarrow a=b\).<br>
+그러면 (i)은 \(A(a-c)=B(c-a)\Rightarrow (a-c)(A+B)=0\). \(A+B=C\neq0\)이므로 \(a=c\).<br>
+만약 \(A(a-c)=0\)이면 \(a=c\)이고, 그때 (i)에서 \(B(c-b)=0\Rightarrow b=c\).
+\[\boxed{a=b=c,\qquad A+B=C}\]
+<b>물리적 의미:</b> 경계조건이 경계면의 <b>모든 점</b>·<b>모든 시각</b>에 대해 성립해야 하므로 세 파동의 지수 인자가 같아야 한다 → 이것이 반사의 법칙과 Snell의 법칙(Eq. 9.98~9.100)의 근원.
+<div class="alabel">감점 포인트</div>
+"\(x=0\)만 대입"으로는 부족하다. 항등식이라는 조건을 미분 또는 선형독립성(서로 다른 진동수의 지수함수는 일차독립)으로 활용할 것.</div><!--/sol-->

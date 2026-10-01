@@ -1,0 +1,22 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> \(k=\omega/c\), 위상 \(\varphi=kx-\omega t\)로 두면</p>
+\[ \vb{E}=E_0\cos(kx-\omega t)\hat{\vb{y}},\qquad \vb{B}=\frac{E_0}{c}\cos(kx-\omega t)\hat{\vb{z}}. \]
+
+<p><b>(b)</b> 장 변환(Eq. 12.111), \(\beta=v/c\):</p>
+\[ \bar E_y=\gamma(E_y-vB_z)=\gamma E_0(1-\beta)\cos\varphi,\qquad \bar B_z=\gamma\Big(B_z-\frac{v}{c^{2}}E_y\Big)=\frac{\gamma E_0}{c}(1-\beta)\cos\varphi. \]
+<p>\(\gamma(1-\beta)=\sqrt{\dfrac{1-\beta}{1+\beta}}\)이므로 진폭은 <b>Doppler 인자</b>만큼 줄어든다:</p>
+\[ \bar E_0=E_0\sqrt{\frac{1-\beta}{1+\beta}}. \]
+<p>위상은 스칼라라서 그대로 옮겨 적기만 하면 된다. \(x=\gamma(\bar x+v\bar t),\ t=\gamma(\bar t+v\bar x/c^{2})\)를 넣으면</p>
+\[ kx-\omega t=\gamma\Big(k-\frac{\omega v}{c^{2}}\Big)\bar x-\gamma(\omega-kv)\bar t\equiv \bar k\bar x-\bar\omega\bar t. \]
+\[ \boxed{\ \bar{\vb{E}}=E_0\sqrt{\tfrac{1-\beta}{1+\beta}}\cos(\bar k\bar x-\bar\omega\bar t)\hat{\vb{y}},\quad \bar{\vb{B}}=\frac{\bar E_0}{c}\cos(\bar k\bar x-\bar\omega\bar t)\hat{\vb{z}}\ } \]
+
+<p><b>(c)</b></p>
+\[ \boxed{\ \bar\omega=\gamma\omega(1-\beta)=\omega\sqrt{\frac{1-\beta}{1+\beta}}\ }\qquad \bar k=\frac{\bar\omega}{c},\qquad \bar\lambda=\lambda\sqrt{\frac{1+\beta}{1-\beta}} \]
+<p>이것이 <b>세로 상대론적 Doppler 이동</b>(파를 쫓아가므로 적색이동). 속력은 \(\bar\omega/\bar k=c\) — 당연히 \(c\)이며, 이것이 광속 불변성의 자기일관성 확인이다.</p>
+
+<p><b>(d)</b> 세기 \(I=\tfrac{1}{2}\eps cE_0^{2}\propto E_0^{2}\)이므로</p>
+\[ \boxed{\ \frac{\bar I}{I}=\frac{1-\beta}{1+\beta}\ } \]
+<p><b>Einstein에게 해줄 말:</b> \(v\to c\)에서 \(\bar E_0\to0,\ \bar\omega\to0,\ \bar I\to0\). 빛과 나란히 달릴수록 파동은 "정지한 파동"으로 보이는 게 아니라 <b>사라진다</b>. 광속 계는 존재하지 않으며, 그 극한에서 남는 것은 아무것도 없는 셈이다.</p>
+<div class="alabel">감점 포인트</div>
+장의 성분만 변환하고 위상을 \(S\)좌표로 남겨두는 것. 위상 \(k^\mu x_\mu\)가 불변임을 이용해 \(\bar\omega,\bar k\)를 뽑아내는 것이 (c)의 전부다.</div><!--/sol-->

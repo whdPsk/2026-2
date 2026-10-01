@@ -1,0 +1,64 @@
+<div class="exq"><b>상황.</b> 진동 전기 쌍극자 \(p(t)=p_0\cos\omega t\)의 복사 강도와 평균 일률은
+\[ \langle\vb{S}\rangle=\frac{\muz p_0^2\omega^4}{32\pi^2c}\frac{\sin^2\theta}{r^2}\hat{\vb{r}},\qquad \langle P\rangle=\frac{\muz p_0^2\omega^4}{12\pi c} \]
+이다. 여기서 물어야 할 것은 계산이 아니라 <b>이 공식이 자연에서 무엇을 설명하는가</b>이다. 대기 분자들이 햇빛에 의해 작은 쌍극자로 강제 진동한다고 보고, (ⅰ) 하늘이 파란 이유, (ⅱ) 태양과 90° 떨어진 하늘빛이 편광되어 있는 이유, (ⅲ) 노을이 붉은 이유를 이 한 공식에서 끌어내는 것이 목표다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(\omega^4\) → 파란 하늘, \(\sin^2\theta\) → 편광, "산란된 만큼 투과광에서 빠짐" → 붉은 노을.</div>
+<ol>
+<li><b>유도 쌍극자.</b> 9장의 분산 모형에서 전자는 복원력 \(-m\omega_0^2x\)에 묶여 있고 입사광 \(E_0\cos\omega t\)에 끌린다. 가시광 진동수는 원자 공명 진동수보다 훨씬 낮으므로(\(\omega\ll\omega_0\))
+\[ p_0=\alpha E_0,\qquad \alpha=\frac{q^2/m}{\omega_0^2-\omega^2}\approx\frac{q^2}{m\omega_0^2}\ \ (\text{진동수에 거의 무관}). \]
+핵심: 분극률 \(\alpha\)는 색깔에 거의 의존하지 않는다. <b>색 의존성은 전부 복사 공식의 \(\omega^4\)에서 온다.</b></li>
+
+<li><b>산란 단면적.</b> 입사 세기 \(I=\frac12 c\eps E_0^2\)로 나누면
+\[ \sigma\equiv\frac{\langle P\rangle}{I}=\frac{\muz\alpha^2E_0^2\omega^4/12\pi c}{\tfrac12 c\eps E_0^2}=\frac{\alpha^2\omega^4}{6\pi\eps^2c^4}\ \propto\ \omega^4\ \propto\ \frac{1}{\lambda^4}. \]
+이것이 <b>Rayleigh 산란</b> 법칙이다.</li>
+
+<li><b>파란 하늘.</b> 파란빛(\(\lambda\approx400\,\mathrm{nm}\))과 붉은빛(\(700\,\mathrm{nm}\))의 산란 비는
+\[ \frac{\sigma_{\rm blue}}{\sigma_{\rm red}}=\left(\frac{700}{400}\right)^4\approx 9.4. \]
+파란빛이 거의 10배 더 잘 흩어진다. 우리가 (태양을 직접 보지 않을 때) 하늘에서 보는 빛은 <em>재복사된</em> 빛이므로 파랗다.
+<br><em>왜 보라색이 아닌가?</em> 태양 스펙트럼 자체가 보라 영역에서 약하고, 사람 눈의 원뿔세포 감도도 보라에서 낮으며, 대기 상층에서 이미 산란·흡수된다. 공식은 "보라가 더 산란된다"고 옳게 말하지만, 지각되는 색은 스펙트럼 가중치의 문제다.</li>
+
+<li><b>편광.</b> 전자기파는 횡파이므로, 태양광선에 의해 흔들리는 쌍극자는 <b>광선에 수직인 평면 안에서만</b> 진동한다. 관측자가 태양광선과 90°를 이루는 하늘 방향을 볼 때, 그 평면 안의 진동 성분 중 <em>시선 방향</em>으로 놓인 쌍극자는 \(\sin^2\theta\) 인자 때문에 관측자에게 아무것도 보내지 않는다(\(\theta=0\)). 남는 것은 시선과 태양광선 둘 다에 수직인 성분뿐이다. 따라서 그 방향의 하늘빛은 <b>태양광선에 수직으로 강하게 선편광</b>되어 있다. (편광 선글라스로 하늘을 보며 고개를 돌리면 밝기가 변하는 이유.)</li>
+
+<li><b>붉은 노을.</b> 산란은 곧 투과광에서의 <em>제거</em>다. Beer 법칙으로 투과 세기는 \(I=I_0e^{-n\sigma L}\). 해가 머리 위에 있을 때 광선이 지나는 대기 두께는 \(\sim8\,\mathrm{km}\)이지만, 지평선 근처에서는 지구 곡률 때문에 \(\sqrt{2R_\oplus h}\approx320\,\mathrm{km}\), 즉 <b>약 40배</b>다. \(\sigma\propto\lambda^{-4}\)이므로 파란 성분이 지수적으로 제거되고 붉은 성분만 살아남는다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \sigma_{\rm Rayleigh}=\frac{\alpha^2\omega^4}{6\pi\eps^2c^4}\ \propto\ \lambda^{-4};\qquad \frac{\sigma_{400}}{\sigma_{700}}\approx9.4;\qquad \text{90°에서 완전 편광};\qquad I_{\rm sunset}=I_0e^{-n\sigma L},\ L_{\rm 지평선}/L_{\rm 천정}\approx40\ } \]
+<p class="note">파란 하늘과 붉은 노을은 같은 동전의 양면 — 하늘에서 더해진 파랑이 곧 태양에서 빼앗긴 파랑이다. <b>검산</b> ① 차원: \(\alpha=p/E\)는 \(\mathrm{C\,m/(V/m)}=\mathrm{C\,m^2/V}\); \(\alpha^2\omega^4/\eps^2c^4\)를 SI로 밀어 보면 \(\mathrm{m^2}\) ✓ (단면적). ② \(\omega\to0\) 극한: \(\sigma\to0\) — 정적 전기장은 분자를 분극시킬 뿐 산란하지 않는다 ✓. ③ 알려진 특수경우: 반지름 \(a\)의 작은 유전체 구는 \(\alpha=4\pi\eps a^3\)이고 대입하면 \(\sigma=\frac{8\pi}{3}k^4a^6\) — 교과서 Rayleigh 공식과 일치 ✓. ④ 유효범위: \(\omega\to\omega_0\)이면 \(\alpha\)가 발산해 이 근사가 깨진다(공명 산란). 또 산란체가 파장보다 크면(구름 물방울) Rayleigh가 아니라 Mie 산란이 되어 색 의존성이 사라진다 — 그래서 <b>구름은 하얗다</b> ✓.</p></div>
+
+<div class="qz" data-q="ex11.1-a"><div class="qq"><b>+α</b> 정량화하라. (ⅰ) 대기의 광학 깊이가 \(\lambda=550\,\mathrm{nm}\)에서 천정 방향으로 \(\tau_{550}=0.1\)이라 하자. \(450\,\mathrm{nm}\)와 \(650\,\mathrm{nm}\)에서 천정 및 지평선(40배 경로) 방향 투과율을 각각 구하고, 노을이 붉게 보이는 이유를 수치로 확인하라. (ⅱ) 하늘 전체를 통틀어 산란된 빛의 각분포는 어떤가?</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>(ⅰ) 광학 깊이 스케일링.</b> \(\tau\propto\lambda^{-4}\)이므로 \(\tau_\lambda=\tau_{550}\big(550/\lambda\big)^4\):
+<br>· \(450\,\mathrm{nm}\): \((550/450)^4=(1.222)^4=2.23\) → \(\tau=0.223\)
+<br>· \(650\,\mathrm{nm}\): \((550/650)^4=(0.846)^4=0.512\) → \(\tau=0.051\)</p>
+<p><b>천정(경로 1배), 투과율 \(e^{-\tau}\):</b>
+<br>· 450 nm: \(e^{-0.223}=0.80\)  · 650 nm: \(e^{-0.051}=0.95\)
+<br>파랑이 20% 빠지고 빨강은 5%만 빠진다 → 한낮의 태양은 아주 살짝 노랗다.</p>
+<p><b>지평선(경로 40배), 투과율 \(e^{-40\tau}\):</b>
+<br>· 450 nm: \(e^{-8.9}=1.4\times10^{-4}\)  · 650 nm: \(e^{-2.05}=0.13\)
+<br>비율 \(0.13/1.4\times10^{-4}\approx 9\times10^{2}\) — <b>빨강이 파랑보다 900배 강하게 살아남는다</b>. 노을이 붉은 이유가 숫자로 확인된다 ✓.</p>
+<p><b>파란 하늘 쪽 정합성.</b> 천정에서 산란되어 나온 빛의 세기 비는 대략 \((1-e^{-\tau_{450}})/(1-e^{-\tau_{650}})=0.20/0.050=4.0\) — 파랑이 4배 밝다. 산란 단면적 비 \(2.23/0.512=4.4\)와 잘 맞는다(광학 깊이가 얕아 \(1-e^{-\tau}\approx\tau\)이므로) ✓.</p>
+<p><b>(ⅱ) 각분포.</b> 단일 쌍극자의 강도는 \(\propto\sin^2\theta\)지만, 자연광(무편광)이 입사하면 입사 편광 방향을 평균해야 한다. 결과는 잘 알려진 Rayleigh 위상함수
+\[ \frac{\dd\sigma}{\dd\Omega}\propto \big(1+\cos^2\Theta\big), \]
+여기서 \(\Theta\)는 입사방향과 산란방향 사이 각. 즉 <b>앞뒤 산란(\(\Theta=0,\pi\))이 옆 산란(\(\Theta=\pi/2\))의 2배</b>이며, \(\Theta=\pi/2\)에서 편광도가 최대(이상적으로 100%)다. 이 \(1+\cos^2\Theta\)는 Example 11.2의 회전 쌍극자 각분포와 수학적으로 같은 꼴인데, 이유도 같다 — 서로 수직인 두 진동 쌍극자의 비간섭 합이기 때문이다.</p></div></div>
+
+<div class="qz" data-q="ex11.1-b"><div class="qq"><b>+α</b> 극한을 반대로 취해 보자. 이번엔 \(\omega\gg\omega_0\)인 경우(전자가 사실상 <b>자유 전자</b>). 산란 단면적을 구하고, 왜 이 경우엔 색깔 의존성이 사라지는지 설명하라. 수치도 계산하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 분극률의 고진동수 극한.</b>
+\[ \alpha=\frac{q^2/m}{\omega_0^2-\omega^2}\ \xrightarrow{\ \omega\gg\omega_0\ }\ -\frac{q^2}{m\omega^2}. \]
+음부호는 위상이 180° 뒤집힌다는 뜻(관성 지배). 크기가 \(\omega^{-2}\)로 <b>줄어든다</b>는 것이 결정적이다.</p>
+<p><b>2) 단면적.</b>
+\[ \sigma=\frac{\alpha^2\omega^4}{6\pi\eps^2c^4}=\frac{1}{6\pi\eps^2c^4}\cdot\frac{q^4}{m^2\omega^4}\cdot\omega^4 =\boxed{\ \frac{q^4}{6\pi\eps^2m^2c^4}\ } \]
+\(\omega\)가 <b>완전히 사라졌다</b>. \(\alpha^2\propto\omega^{-4}\)가 복사 공식의 \(\omega^{4}\)를 정확히 상쇄한다.</p>
+<p><b>3) 고전 전자 반지름으로 정리.</b> \(r_e\equiv\dfrac{q^2}{4\pi\eps mc^2}=2.82\times10^{-15}\,\mathrm{m}\)로 쓰면
+\[ \sigma=\frac{8\pi}{3}r_e^2=6.65\times10^{-29}\,\mathrm{m^2}=0.665\ \mathrm{barn} \]
+— 이것이 <b>Thomson 단면적</b> \(\sigma_T\)다.</p>
+<p><b>4) 물리적 의미.</b>
+<br>· 자유 전자는 "묶여 있지 않아" 어떤 진동수의 빛에도 똑같이 반응한다 → 산란이 <em>회색</em>(색 무관)이다.
+<br>· 그래서 완전히 이온화된 플라스마(항성 내부, 초기 우주)에서는 하늘이 파랗지 않다. 우주 마이크로파 배경(CMB)의 마지막 산란면이 바로 이 Thomson 산란으로 결정된다.
+<br>· \(\sigma_T\)가 \(m^{-2}\)에 비례하므로 양성자의 Thomson 단면적은 전자의 \((m_e/m_p)^2\approx3\times10^{-7}\)배 — 산란은 압도적으로 전자가 한다 ✓.</p>
+<p><b>5) 전체 그림.</b> 하나의 공식 \(\sigma=\alpha^2\omega^4/6\pi\eps^2c^4\)에서 세 영역이 나온다:
+\[ \sigma\propto\begin{cases}\omega^4 & \omega\ll\omega_0\ \text{(Rayleigh, 파란 하늘)}\\ \text{공명 피크} & \omega\approx\omega_0\ \text{(공명 산란, 감쇠 }\gamma=\omega^2\tau\text{가 높이를 제한 — Ex 11.4)}\\ \text{상수} & \omega\gg\omega_0\ \text{(Thomson)}\end{cases} \]
+Ex 11.4의 복사 감쇠가 공명 꼭대기의 높이를 결정한다는 점에서 세 Example이 하나로 이어진다.</p></div></div>

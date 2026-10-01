@@ -1,0 +1,62 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 우주 공간의 로켓이 배기가스를 로켓에 대해 속력 \(u\)로 뿜는다. 연료를 다 태웠을 때의 속도 증가량은 연료를 빨리 태우든 천천히 태우든 같을까? 질량이 \(1/e\)로 줄면 속도는 얼마나 늘까? 그리고 "\(\vb F=\dd\vb p/\dd t=m\dot{\vb v}+\dot m\vb v\)"를 로켓에 그대로 쓰면 왜 틀리는지 먼저 생각해 보라. (Hanaro 팀이라면 이 단원은 익숙할 것이다.)</div>
+
+<h4>9.11 로켓 운동 <span class="en">rocket motion</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>자유공간의 로켓 방정식 (Tsiolkovsky) <b>(필수)</b></div>
+<ol>
+<li><b>닫힌 계를 고른다</b>: 시각 \(t\)의 로켓 전체(질량 \(m\), 속도 \(v\)). \(\dd t\) 뒤 이 계는 "로켓(\(m-\dd m'\), \(v+\dd v\))" + "배기(\(\dd m'\), 속도 \(v-u\))"로 나뉜다. \(\dd m'&gt;0\), \(u\)는 로켓에 대한 배기 속력.</li>
+<li>외력 0 → 운동량 보존:
+\[ mv=(m-\dd m')(v+\dd v)+\dd m'(v-u). \]</li>
+<li>전개하고 2차 미소량 \(\dd m'\dd v\)를 버리면
+\[ m\,\dd v=u\,\dd m' . \]
+<b>배기의 절대 속도 \(v\)가 사라졌다</b> — 상대속도 \(u\)만 남는다(Galilei 불변성).</li>
+<li>로켓 질량 변화 \(\dd m=-\dd m'\) (음수)로 쓰면 \(\dd v=-u\,\dfrac{\dd m}{m}\). 적분:
+\[ \boxed{\ v=v_0+u\ln\frac{m_0}{m}\ } \]
+<b>연소 속도와 무관</b> — 예측의 답. 질량이 \(1/e\)로 줄 때마다 \(u\)만큼 빨라진다.</li>
+<li><b>추력</b>: \(m\,\dd v/\dd t=-u\,\dd m/\dd t\). 우변을 추력이라 부른다: \(\text{thrust}=-u\,\dot m&gt;0\).</li>
+</ol></div>
+
+<div class="callout warn"><b class="head">\(F=\dot mv+m\dot v\)가 틀리는 이유.</b> \(\vb F=\dd\vb p/\dd t\)는 <b>고정된 입자 집합</b>에 대한 법칙이다. 질량이 변하는 "로켓"만을 계로 잡고 \(\dd(mv)/\dd t\)를 쓰면 \(\dot mv\) 항이 기준계에 따라 달라져 Galilei 불변성이 깨진다. 올바른 방법은 항상 위처럼 <b>배기를 포함한 닫힌 계</b>를 세우는 것: \(F^{\rm ext}=m\dot v+u\dot m\) (여기서 \(u\)는 상대속도).</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>다단 로켓</div>
+<ol>
+<li>1단: 초기 질량 \(m_0\), 연소 후 \(m_1\) → \(v_1=v_0+u\ln(m_0/m_1)\). 빈 연료통 등을 버리고 2단 초기 질량 \(m_2\)로 시작, 연소 후 \(m_3\):
+\[ v_2=v_1+u\ln\frac{m_2}{m_3}=v_0+u\ln\frac{m_0m_2}{m_1m_3}. \]</li>
+<li>곱 \(\dfrac{m_0}{m_1}\cdot\dfrac{m_2}{m_3}\)은 한 단으로 같은 연료를 태울 때의 비 \(m_0/(\text{최종})\)보다 훨씬 클 수 있다 — 쓸모없어진 구조 질량을 계속 가속하지 않기 때문.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>중력하 수직 상승 — 교재 식 (9.158)–(9.168)</div>
+<ol>
+<li>외력 \(-mg\): \(F\,\dd t=p(t+\dd t)-p(t)=m\,\dd v+u\,\dd m\) → \(-mg=m\dot v+u\dot m\).</li>
+<li>연소율 일정 \(\dot m=-\alpha\) (\(\alpha&gt;0\)): \(\dd v=\left(-g+\dfrac{\alpha u}{m}\right)\dd t\). \(\dd t=-\dd m/\alpha\)로 시간을 없애고 \(m_0\to m\) 적분:
+\[ v=-\frac g\alpha(m_0-m)+u\ln\frac{m_0}{m}=-gt+u\ln\frac{m_0}{m},\qquad m=m_0-\alpha t . \]</li>
+<li><b>이륙 조건</b>: \(t=0\)에서 \(\dot v&gt;0\)이려면 \(\alpha u&gt;m_0g\) (추력 &gt; 무게). 그렇지 않으면 위 적분의 전제(처음부터 상승)가 틀려서 로켓은 땅에 머문다(Problem 9-59).</li>
+<li><b>연소 종료 고도</b> (Example 9.13): \(T=(m_0-m_b)/\alpha\)까지 \(v\)를 적분하고 \(\int\ln x\,\dd x=x\ln x-x\) 사용:
+\[ H_b=-\frac{g(m_0-m_b)^2}{2\alpha^2}+\frac{u}{\alpha}\left[m_b\ln\frac{m_b}{m_0}+m_0-m_b\right]. \]
+연소 후에도 관성으로 더 올라간다: 추가 높이 \(v_b^2/2g\).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 로켓</div>
+\[ v-v_0=u\ln\frac{m_0}{m}\ (\text{자유공간}),\qquad \text{thrust}=-u\dot m,\qquad v=-gt+u\ln\frac{m_0}{m}\ (\text{수직 상승, }\dot m=-\alpha) \]
+<p class="note">항상 "시각 \(t\)의 전체 = 시각 \(t+\dd t\)의 로켓 + 배기"로 운동량을 쓰고 \(\dd m'\dd v\)를 버린다.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u10-1"><div class="qq">로켓 방정식을 운동량 보존으로 유도하라. 배기의 지면 속도 \(v-u\)에서 \(v\)가 최종식에서 사라지는 단계를 짚어라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>전개: \(mv=mv+m\,\dd v-v\,\dd m'-\dd m'\dd v+v\,\dd m'-u\,\dd m'\). \(-v\,\dd m'\)(로켓이 잃은 질량이 원래 가졌던 운동량)과 \(+v\,\dd m'\)(배기가 가져간 운동량 중 \(v\) 부분)이 상쇄 → \(m\,\dd v=u\,\dd m'\). 즉 배기가 로켓과 같은 속도로 "떨어져 나가기만" 하면 아무 일도 없고, <b>상대속도 \(u\)만이 추진을 만든다</b>.</p></div></div>
+
+<div class="qz" data-q="u10-2"><div class="qq">Example 9.12 (Saturn V 1단): 초기 \(2.8\times10^6\) kg, 연료 \(2.1\times10^6\) kg, 평균 추력 \(37\times10^6\) N, \(u=2600\) m/s. (a) 연소율 (b) 연소 시간 (c) 연소 종료 속도를 구하라. (\(\ln4=1.386\))</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>(a) \(\alpha=\text{thrust}/u=37\times10^6/2600=1.42\times10^4\) kg/s.</p>
+<p>(b) \(T=2.1\times10^6/1.42\times10^4\approx148\) s (약 2.5분).</p>
+<p>(c) \(v_b=-gT+u\ln4=-9.8(148)+2600(1.386)=-1450+3604\approx2.16\times10^3\) m/s.</p>
+<p>(교재는 연소 종료 고도도 식 9.166으로 ≈100 km를 구하고, 실제는 그 2/3쯤이라고 덧붙인다 — 공기저항, 궤적의 기울기.)</p></div></div>
+
+<div class="qz" data-q="u10-3"><div class="qq">같은 총질량·같은 연료량으로, 단일 로켓(구조 질량 \(0.1m_0\), 연료 \(0.8m_0\), 탑재물 \(0.1m_0\))과 2단 로켓(각 단이 연료의 절반과 구조 질량의 절반을 가짐, 1단 연소 후 1단 구조를 버림)의 최종 속도를 비교하라. (\(\ln\) 값은 남겨 둬도 된다.)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>단일: \(m_0\to0.2m_0\), \(\Delta v=u\ln5\approx1.61u\).</p>
+<p>2단: 1단 연소 \(m_0\to0.6m_0\) (\(\Delta v_1=u\ln(1/0.6)\)). 1단 구조 \(0.05m_0\) 버림 → \(0.55m_0\). 2단 연소 \(0.55m_0\to0.15m_0\) (\(\Delta v_2=u\ln(0.55/0.15)\)). 합: \(u\ln\dfrac{0.55}{0.6\times0.15}=u\ln6.11\approx1.81u\).</p>
+<p>2단이 약 12% 빠르다 — 버린 \(0.05m_0\)을 더는 가속하지 않은 이득.</p></div></div>
+
+<div class="qz" data-q="u10-4"><div class="qq">빗방울이 정지한 구름 속을 떨어지며 물방울을 흡수해 질량이 늘어난다(흡수되는 물방울은 정지 상태). 운동방정식을 닫힌 계 방법으로 세워라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>시각 \(t\): 빗방울 \(m\) (속도 \(v\)) + 흡수될 물방울 \(\dd m\) (속도 0). 시각 \(t+\dd t\): \(m+\dd m\), 속도 \(v+\dd v\). 외력 중력:
+\[ (m+\dd m)g\,\dd t\approx mg\,\dd t=(m+\dd m)(v+\dd v)-mv\ \Rightarrow\ mg=m\dot v+\dot m v . \]
+여기서는 흡수되는 질량의 속도가 0이라 \(\dd(mv)/\dd t=mg\)가 <b>우연히</b> 맞는다. 로켓 식 \(F=m\dot v+u\dot m\)의 일반형 \(F=m\dot v-(\vb w-\vb v)\dot m\) (\(\vb w\): 드나드는 질량의 속도)에 \(\vb w=0\)을 넣은 것과 같다.</p></div></div>

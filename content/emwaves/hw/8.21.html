@@ -1,0 +1,20 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>Thomson 쌍극자 — Dirac 양자화 조건의 고전적 뿌리. 매우 유명한 결과.</b></p>
+<p>\(q_e\)를 원점, \(q_m\)을 \(\vb{a}=d\hat{\vb{z}}\)에 두면
+\[\vb{g}=\eps\vb{E}\times\vb{B}
+=\frac{\muz q_eq_m}{16\pi^{2}}\frac{\vb{r}\times\boldsymbol{\imath}}{r^{3}\imath^{3}},\qquad \boldsymbol{\imath}=\vb{r}-\vb{a}.\]
+\(\vb{r}\times(\vb{r}-\vb{a})=\vb{a}\times\vb{r}=d\,r\sin\theta\,\hat{\boldsymbol\varphi}\) 이므로
+\[\ell_z=[\vb{r}\times\vb{g}]_z=\frac{\muz q_eq_m d}{16\pi^{2}}\frac{r^{2}\sin^{2}\theta}{r^{3}\imath^{3}} .\]
+\[L_z=\frac{\muz q_eq_m d}{8\pi}\int_0^\infty\!\!\int_{-1}^{1}\frac{r(1-u^{2})}{(r^{2}+d^{2}-2rdu)^{3/2}}\,du\,dr .\]
+이중적분은 \(d\)에 무관하게 \(2/d\) 를 준다(치환 \(r\to dr\) 로 확인 가능). 따라서</p>
+<p>\[\boxed{\;\vb{L}_{em}=\frac{\muz}{4\pi}q_eq_m\,\hat{\vb{d}}\;}\]
+방향은 \(q_e\)에서 \(q_m\) 쪽. <b>거리 \(d\)에 전혀 의존하지 않는다.</b> 양자역학에서 각운동량이 \(\hbar/2\)의 정수배이므로
+\(\muz q_eq_m/4\pi=n\hbar/2\) — Dirac의 전하 양자화(1931).</p>
+<p><b>\(\vb{Q}\)의 의미.</b> Prob. 5.48의
+\(\vb{Q}=m(\vb{r}\times\vb{v})-\dfrac{\muz q_eq_m}{4\pi}\hat{\vb{r}}\) 에서
+첫 항은 입자의 역학적 각운동량, 둘째 항은 바로 위에서 구한 <b>장의 각운동량</b>이다(홀극이 원점, 전하가 \(\vb{r}\)에 있으므로 방향은 \(-\hat{\vb{r}}\)). 즉
+\[\boxed{\;\vb{Q}=\vb{L}_{\rm mech}+\vb{L}_{em}=\text{총 각운동량}\;}\]
+그래서 보존된다.</p>
+<div class="alabel">감점 포인트</div>
+\(\vb{L}_{em}\)이 \(d\)에 비례한다고 착각하는 것. 적분이 \(1/d\)를 주어 \(d\)가 정확히 상쇄된다.</div><!--/sol-->

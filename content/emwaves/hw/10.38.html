@@ -1,0 +1,31 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+(a) 연속방정식 \(\partial\rho/\partial t=-\divg\vb{J}=-\alpha\,\partial_z\delta^3(\vb{r})\), \(\rho(\vb{r},0)=0\):
+\[ \boxed{\rho(\vb{r},t)=-\alpha t\,\frac{\partial}{\partial z}\delta^3(\vb{r})} \]
+(b) 부분적분:
+\[ p_z=\int z\rho\,d\tau=-\alpha t\int z\,\partial_z\delta^3 d\tau=+\alpha t\int\delta^3\,\partial_z z\,d\tau=\alpha t,\qquad p_x=p_y=0 . \]
+\(\vb{p}=\alpha t\hat{\vb{z}}\)를 \(kt\hat{\vb{z}}\)와 비교 → \(\boxed{\alpha=k}\)
+
+(c) \(\rho\)가 \(t\)에 선형, \(\vb{J}\)는 상수 → Prob. 10.13, 10.14에 의해 <b>지연 없이</b> Coulomb·Biot–Savart가 성립. 따라서
+\[ \boxed{\vb{B}(\vb{r},t)=\frac{\muz}{4\pi}\frac{k\hat{\vb{z}}\times\hat{\vb{r}}}{r^2}=\frac{\muz k\sin\theta}{4\pi r^2}\hat{\boldsymbol\varphi}}\quad(\text{시간에 무관}) \]
+그리고 \(\vb{E}=\dfrac{1}{4\pi\eps r^3}\big[3(\vb{p}\cdot\hat{\vb{r}})\hat{\vb{r}}-\vb{p}\big]\), \(\vb{p}=kt\hat{\vb{z}}\).
+
+(d) 두 번째 쌍극자: \(\vb{p}_2=kt\hat{\vb{x}}\) at \(z=a\), \(\vb{J}_2=k\delta^3(\vb{r}-a\hat{\vb{z}})\hat{\vb{x}}\).
+<b>\(\vb{p}_1\to\vb{p}_2\):</b> 전기력 \((\vb{p}_2\cdot\nabla)\vb{E}_1\big|_{a\hat{\vb{z}}}=kt\,\partial_x\vb{E}_1\). \(\vb{E}_1=\frac{kt}{4\pi\eps}\big[\frac{3z\vb{r}}{r^5}-\frac{\hat{\vb{z}}}{r^3}\big]\)를 \(x\)로 미분해 \((0,0,a)\)에서 평가하면 \(\frac{kt}{4\pi\eps}\frac{3\hat{\vb{x}}}{a^4}\).
+자기력: \(\vb{B}_1(a\hat{\vb{z}})\propto\hat{\vb{z}}\times\hat{\vb{z}}=0\) → 0.
+\[ \boxed{\vb{F}_{1\to2}=\frac{3k^2t^2}{4\pi\eps a^4}\hat{\vb{x}}} \]
+<b>\(\vb{p}_2\to\vb{p}_1\):</b> 전기력 \(kt\,\partial_z\vb{E}_2\big|_{0}=-\frac{3k^2t^2}{4\pi\eps a^4}\hat{\vb{x}}\).
+자기력: \(\vb{B}_2(0)=\frac{\muz k}{4\pi a^2}\hat{\vb{x}}\times(-\hat{\vb{z}})=\frac{\muz k}{4\pi a^2}\hat{\vb{y}}\), 따라서
+\(\vb{F}_{\rm mag}=k\hat{\vb{z}}\times\vb{B}_2(0)=-\frac{\muz k^2}{4\pi a^2}\hat{\vb{x}}\).
+\[ \boxed{\vb{F}_{2\to1}=-\frac{3k^2t^2}{4\pi\eps a^4}\hat{\vb{x}}-\frac{\muz k^2}{4\pi a^2}\hat{\vb{x}}} \]
+\[ \vb{F}_{\rm net}=\vb{F}_{1\to2}+\vb{F}_{2\to1}=\boxed{-\frac{\muz k^2}{4\pi a^2}\hat{\vb{x}}\ne0\ \Rightarrow\ \text{Newton 제3법칙 위배}} \]
+(전기 부분은 정확히 상쇄되고, 자기 부분만 한쪽에 남는다.)
+
+(e) 상호작용 장 운동량:
+\[ \vb{p}_{\rm em}(t)=\eps\!\int\big[(\vb{E}_1\times\vb{B}_2)+(\vb{E}_2\times\vb{B}_1)\big]d\tau . \]
+구조: \(\vb{E}_i\propto t\), \(\vb{B}_i\)는 시간에 무관 → \(\vb{p}_{\rm em}\propto t\). 적분을 (컴퓨터로) 수행하면
+\[ \boxed{\vb{p}_{\rm em}(t)=\frac{\muz k^2 t}{4\pi a^2}\hat{\vb{x}}
+\ \Longrightarrow\ \frac{d\vb{p}_{\rm em}}{dt}=\frac{\muz k^2}{4\pi a^2}\hat{\vb{x}}=-\vb{F}_{\rm net}} \]
+즉 역학적 운동량의 순증가율이 장 운동량의 순감소율과 정확히 상쇄되어 <b>총 운동량은 보존</b>된다. (일반적으로 무한대에서의 Maxwell 응력 면적분이 사라지면 Eq. 8.30이 이를 보장한다.)
+<div class="alabel">감점 포인트</div>
+(d)에서 자기력을 빠뜨리는 것 — 3법칙 위배의 원인이 정확히 그 항이며, (e)의 장 운동량과 짝을 이룬다.</div><!--/sol-->

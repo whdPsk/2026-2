@@ -1,0 +1,13 @@
+<div class="exq"><b>상황.</b> 길이 \(b\)인 가벼운 막대 끝에 \(m_1\), 중간(\(b/2\))에 \(m_2\). 평면에서 흔들리는 진자의 작은 진동수를 관성 텐서와 \(\dot{\vb L}=\vb N\)으로 구한다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>원점 = 매단 점, \(\uv e_1\) 막대 방향, \(\uv e_3\) 회전면 수직.</div>
+<ol>
+<li>질량은 \(x_1\)축 위(\(x_1=b,\ b/2\)) → \(\I=\mathrm{diag}\left(0,\ m_1b^2+m_2\frac{b^2}4,\ m_1b^2+m_2\frac{b^2}4\right)\).</li>
+<li>\(\boldsymbol\omega=\dot\theta\uv e_3\) → \(L_3=\left(m_1+\frac{m_2}4\right)b^2\dot\theta\).</li>
+<li>토크: \(\vb r_1\times m_1\vb g=-m_1gb\sin\theta\,\uv e_3\), \(\vb r_2\times m_2\vb g=-m_2g\tfrac b2\sin\theta\,\uv e_3\).</li>
+<li>\(\left(m_1+\frac{m_2}4\right)b^2\ddot\theta=-\left(m_1+\frac{m_2}2\right)gb\sin\theta\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \omega_0^2=\frac gb\,\frac{m_1+m_2/2}{m_1+m_2/4}\ } \]
+<p class="note"><b>검산</b> \(m_1\gg m_2\): \(g/b\) ✓. \(m_2\gg m_1\): \(2g/b\) (길이 \(b/2\) 단진자) ✓. 중간값은 그 사이 ✓.</p></div>
+<div class="qz" data-q="ex11.4-a"><div class="qq"><b>+α</b> 같은 결과를 Lagrangian으로 얻어라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(T=\tfrac12I_{33}\dot\theta^2\), \(U=-(m_1b+m_2b/2)g\cos\theta\). E-L: \(I_{33}\ddot\theta=-(m_1+m_2/2)gb\sin\theta\) — 같다.</p></div></div>
+<div class="qz" data-q="ex11.4-b"><div class="qq"><b>+α</b> \(m_2\)의 위치를 \(x b\) (\(0&lt;x&lt;1\))로 옮기면 \(\omega_0^2\)는? \(m_1=m_2\)일 때 \(x\)에 대해 주기가 최소가 되는 곳이 있는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\omega_0^2=\frac gb\frac{m_1+m_2x}{m_1+m_2x^2}\). \(m_1=m_2\): \(f(x)=\frac{1+x}{1+x^2}\), \(f'=0\) → \(x^2+2x-1=0\) → \(x=\sqrt2-1\approx0.414\)에서 진동수 최대(주기 최소), \(f=\frac{\sqrt2}{4-2\sqrt2}=1.207\).</p></div></div>

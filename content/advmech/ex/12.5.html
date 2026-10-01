@@ -1,0 +1,13 @@
+<div class="exq"><b>상황.</b> 대칭 선형 3원자 분자(CO₂ 유사): 가운데 질량 \(M\), 양 끝 \(m\), 결합 용수철 \(\kappa_1\). 종진동과 횡진동의 고유진동수와 정규 모드.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>병진·회전 제거 → 동적 결합 제거 → 대각.</div>
+<ol>
+<li><b>종진동</b>: CM 고정 \(m(x_1+x_3)+Mx_2=0\). \(T=\tfrac12m(\dot x_1^2+\dot x_3^2)+\frac{m^2}{2M}(\dot x_1+\dot x_3)^2\).</li>
+<li>\(q_1=x_1+x_3\), \(q_2=x_3-x_1\): \(T=\frac{m(M+2m)}{4M}\dot q_1^2+\frac m4\dot q_2^2\), \(U=\frac{\kappa_1}4\left(\frac{2m+M}M\right)^2q_1^2+\frac{\kappa_1}4q_2^2\).</li>
+<li>대각 → \(\omega_1^2=\frac{\kappa_1(2m+M)}{mM}\) (끝 원자 같은 방향, 가운데 반대), \(\omega_2^2=\frac{\kappa_1}m\) (끝 원자 반대, 가운데 정지).</li>
+<li><b>횡진동</b>: \(y_1=y_3\), \(y_2=-\frac{2m}My_1\). 굽힘각 \(\alpha\), \(U=\tfrac12\kappa_2(b\alpha)^2\), \(T=\frac{mMb^2}{4(2m+M)}\dot\alpha^2\) → \(\omega_3^2=\frac{2\kappa_2(2m+M)}{mM}\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \omega_1^2=\frac{\kappa_1(2m+M)}{mM},\quad \omega_2^2=\frac{\kappa_1}m,\quad \omega_3^2=\frac{2\kappa_2(2m+M)}{mM}\ } \]
+<p class="note"><b>검산</b> ① \(M\to\infty\)(가운데 고정): \(\omega_1^2\to\kappa_1/m\), \(\omega_2^2=\kappa_1/m\) — 두 O가 독립 ✓. ② 적외선: 모드 1, 3은 쌍극자 진동 → 흡수·방출, 모드 2는 비활성 ✓.</p></div>
+<div class="qz" data-q="ex12.5-a"><div class="qq"><b>+α</b> 비대칭 선형 분자 A–B–A가 아니라 A–B–C(모든 질량 다름, 용수철 \(\kappa\) 두 개)라면 종진동수는 몇 개이고 어떻게 구하는가? (계산 없이 방법만.)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>종 자유도 3 − 병진 1 = 2개. \(3\times3\) 영년방정식 \(\det(A-\omega^2m)=0\)은 \(\omega^2\big[\omega^4-\left(\frac{\kappa}{\mu_{AB}}+\frac{\kappa}{\mu_{BC}}\right)\omega^2+\kappa^2\frac{m_A+m_B+m_C}{m_Am_Bm_C}\big]=0\) 꼴 — 0 근을 떼면 \(\omega^2\)의 이차방정식.</p></div></div>
+<div class="qz" data-q="ex12.5-b"><div class="qq"><b>+α</b> 12C¹⁶O₂의 두 종진동수 비 \(\omega_1/\omega_2\)를 이 모형으로 예측하고, 13C로 바꾸면 어느 모드의 진동수가 바뀌는지 말하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\omega_1/\omega_2=\sqrt{1+2m/M}=\sqrt{1+32/12}=1.91\). 13C: \(M\)만 바뀌므로 모드 2(C 정지)는 불변, 모드 1이 \(\sqrt{(1+32/13)/(1+32/12)}\approx0.972\)배로 낮아진다 — 동위원소 치환으로 모드를 식별하는 분광학 기법.</p></div></div>

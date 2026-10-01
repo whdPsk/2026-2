@@ -1,0 +1,11 @@
+<div class="exq"><b>상황.</b> Example 11.6에서 "CM 원점이면 축의 방향과 무관하게 관성 텐서가 같다"고 한 주장을 증명한다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>닮음 변환 \(I'=\lambda I\lambda^{\mathsf T}\).</div>
+<ol>
+<li>\(I=\tfrac16Mb^2\mathbb 1\).</li>
+<li>\(I'=\tfrac16Mb^2\lambda\mathbb 1\lambda^{\mathsf T}=\tfrac16Mb^2\lambda\lambda^{\mathsf T}=\tfrac16Mb^2\mathbb 1=I\) (직교성).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ I'=I\quad(\text{모든 회전 }\lambda)\ } \]
+<p class="note"><b>의미</b>: 등방 텐서(스칼라×항등)는 모든 방향이 주축. 반대로 한 원점에서 모든 방향이 주축이면 텐서는 등방. 정육면체·정사면체·정팔면체 등 입방 대칭 물체는 CM 기준으로 모두 "구형 팽이".</p></div>
+<div class="qz" data-q="ex11.7-a"><div class="qq"><b>+α</b> 대칭 팽이 텐서 \(\mathrm{diag}(A,A,C)\)는 어떤 회전에 대해 불변인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(x_3\) 둘레 임의 회전(그리고 \(x_3\to-x_3\) 뒤집기). \(\lambda=\begin{pmatrix}R_2&0\0&1\end{pmatrix}\)이면 \(R_2A\mathbb 1_2R_2^{\mathsf T}=A\mathbb 1_2\). 그래서 대칭 팽이의 가로 주축은 임의로 고를 수 있다.</p></div></div>
+<div class="qz" data-q="ex11.7-b"><div class="qq"><b>+α</b> 정사면체(꼭짓점에 같은 질점 4개)의 CM 관성 텐서가 등방임을 대칭 논증으로 보여라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>정사면체는 서로 수직이 아닌 여러 3회 대칭축을 가진다. 대칭 팽이라면 대칭축이 하나로 정해져야 하는데 3회 축이 여럿이면 모순 → 세 주모멘트가 같아야 한다(등방). 직접 계산: 꼭짓점 \((1,1,1),(1,-1,-1),(-1,1,-1),(-1,-1,1)\): \(\sum x_ix_j=4\delta_{ij}\) → \(I_{ij}=m\sum(3\delta_{ij}-x_ix_j)=m(12-4)\delta_{ij}=8m\delta_{ij}\) ✓.</p></div></div>

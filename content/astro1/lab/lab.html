@@ -1,0 +1,33 @@
+<h1 class="vh">개념 실험실</h1>
+<p class="vsub">식의 모양을 손으로 바꿔 보며 정성 질문에 답하는 작은 실험. 수치와 그래프는 가정이 명시된 모형이며 실제 관측자료가 아닙니다.</p>
+
+<section class="labcard">
+<h3>복사전달 · 밝아질까, 어두워질까? <a class="labu" href="#/u03">U03 흡수·방출과 복사전달 →</a></h3>
+<p>균일 source function: \(I(\tau)=I_0e^{-\tau}+S(1-e^{-\tau})\). 그래프는 \(\tau=0\)–5, 세로축은 임의 세기. 점선은 \(S\).</p>
+<div class="lab-control"><label for="labI">배경 \(I_0\)</label><input id="labI" type="range" min="0" max="10" value="8" step="0.1"><output id="outI">8</output></div>
+<div class="lab-control"><label for="labS">층의 \(S\)</label><input id="labS" type="range" min="0" max="10" value="3" step="0.1"><output id="outS">3</output></div>
+<div class="lab-control"><label for="labT">광학깊이 \(\tau\)</label><input id="labT" type="range" min="0" max="5" value="1" step="0.01"><output id="outT">1</output></div>
+<div id="transferPlot"></div>
+<div id="transferResult" class="metrics" aria-live="polite"></div>
+<p class="note">\(S=I_0\)이면 층이 있어도 대비가 없다. 두꺼워지면 \(I\)는 0이 아니라 \(S\)로 간다.</p>
+</section>
+
+<section class="labcard">
+<h3>산란각과 선편광도 <a class="labu" href="#/u14">U14 톰슨 산란과 편광 →</a></h3>
+<p>무편광 입사 · 단일 톰슨 산란: \(p=\dfrac{\sin^2\theta}{1+\cos^2\theta}\).</p>
+<div class="lab-control"><label for="labA">산란각 \(\theta\)</label><input id="labA" type="range" min="0" max="180" value="90"><output id="outA">90°</output></div>
+<div id="scatterPlot"></div>
+<div id="scatterResult" class="metrics" aria-live="polite"></div>
+</section>
+
+<section class="labcard">
+<h3>스펙트럼 모양을 구분하는 질문</h3>
+<div class="tblwrap"><table class="simple"><thead><tr><th>대상</th><th>모양/극한</th><th>혼동 금지</th></tr></thead><tbody>
+<tr><td><a href="#/u04">흑체 \(B_\nu\)</a></td><td>RJ \(\nu^2\) → 피크 → Wien 지수 감소</td><td>\(B_\lambda\) 피크와 다름</td></tr>
+<tr><td><a href="#/u07">열 도플러 선</a></td><td>Gaussian</td><td>선면적과 선폭은 다름</td></tr>
+<tr><td><a href="#/u07">자연/감쇠 선</a></td><td>Lorentz · 상대적으로 긴 날개</td><td>\(\Gamma\)(각주파수)와 \(\Gamma/2\pi\)(Hz)</td></tr>
+<tr><td><a href="#/u13">결합전자 산란</a></td><td>\(\omega^4\) → 공명 → \(\sigma_T\)</td><td>이 표는 단면적이지 광원 자체의 스펙트럼은 아님</td></tr>
+<tr><td><a href="#/u15">단일 충돌</a></td><td>저주파 비교적 평탄 → 고주파 감소</td><td>열적 전자 집단 전체와 다름</td></tr>
+<tr><td><a href="#/u18">싱크로트론</a>·<a href="#/u20">콤턴</a></td><td>단일전자 \(\nu^{1/3}\)·고주파 절단 / 집단 멱법칙</td><td>싱크로트론·콤턴 단원에서 조건별 확인</td></tr>
+</tbody></table></div>
+</section>

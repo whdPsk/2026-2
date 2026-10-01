@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>퍼텐셜은 \(u \equiv \omega(t-r/c)\)로 두면</p>
+\[ V=\frac{p_0\cos\theta}{4\pi\epsilon_0 r}\Big[-\frac{\omega}{c}\sin u+\frac{1}{r}\cos u\Big],\qquad
+\mathbf{A}=-\frac{\mu_0 p_0\omega}{4\pi r}\sin u\,\hat{\mathbf{z}} . \]
+<p>\(\mathbf{A}=A_z\hat{\mathbf{z}}\)이고 \(A_z\)는 \(r\)만의 함수이므로 \(\nabla\cdot\mathbf{A}=\partial A_z/\partial z=\cos\theta\,\partial A_z/\partial r\) (구면좌표에서 \(\partial_z=\cos\theta\,\partial_r-(\sin\theta/r)\partial_\theta\), 두 번째 항은 \(\theta\) 의존성이 없으니 0).</p>
+\[ \frac{\partial A_z}{\partial r}=\frac{\mu_0p_0\omega}{4\pi}\Big[\frac{\sin u}{r^2}+\frac{\omega}{c}\frac{\cos u}{r}\Big]
+\;\Rightarrow\; \nabla\cdot\mathbf{A}=\frac{\mu_0p_0\omega\cos\theta}{4\pi}\Big[\frac{\sin u}{r^2}+\frac{\omega\cos u}{cr}\Big]. \]
+<p>한편 \(\partial u/\partial t=\omega\)이므로</p>
+\[ \mu_0\epsilon_0\frac{\partial V}{\partial t}=\frac{\mu_0 p_0\cos\theta}{4\pi r}\Big[-\frac{\omega^2}{c}\cos u-\frac{\omega}{r}\sin u\Big]
+=-\frac{\mu_0p_0\omega\cos\theta}{4\pi}\Big[\frac{\omega\cos u}{cr}+\frac{\sin u}{r^2}\Big]. \]
+<p>두 식을 더하면 \(1/r\), \(1/r^2\) 항이 각각 정확히 상쇄된다.</p>
+\[ \boxed{\;\nabla\cdot\mathbf{A}+\mu_0\epsilon_0\frac{\partial V}{\partial t}=0\;\text{(근사 3 없이 엄밀히 성립)}\;} \]
+<div class="alabel">감점 포인트</div>
+<p>\(\nabla\cdot(A_z\hat{\mathbf z})\)를 구면좌표 발산 공식에 그대로 넣어 \(\hat{\mathbf z}\)를 \(\hat{\mathbf r},\hat{\boldsymbol\theta}\)로 분해하지 않고 계산하다 항을 빠뜨리는 실수.</p></div><!--/sol-->

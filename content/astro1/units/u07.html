@@ -1,0 +1,111 @@
+<div class="predict"><b>◈ 학습 목표.</b> ① 선 넓어짐 세 가지(도플러·자연·충돌)의 원인과 선윤곽(가우시안/로렌츠/Voigt)을 짝짓는다. ② Δν_D=(ν₀/c)√(2kT/m), FWHM=2√ln2·Δν_D, φ(ν₀)=1/(√πΔν_D), σ_ν0를 쓰고 선폭에서 운동온도를 읽는다(난류 주의). ③ Hα 자연 폭(10⁻⁴ Å)이 관측 불가인데도 배우는 이유(충돌 넓어짐과 같은 꼴)를 말한다. ④ HI 21 cm: g₂/g₁=3, κ_ν=2.6×10⁻¹⁵ n_H φ/T, N_H=1.82×10¹⁸ T∫τdv, 얇은 경우 N_H=1.82×10¹⁸∫T_B dv를 유도·적용한다. ⑤ (9/10 리뷰) Maxwell 방정식·Poynting·편광 질문에 답한다.</div>
+
+<h4>선 넓어짐의 세 가지 원인 <span class="en">Line Broadening</span></h4>
+
+<div class="slide"><div class="sh">L04 · 슬라이드 7 <span class="st">Line Broadening</span></div><ul>
+<li>Doppler broadening — Due to Doppler shift of each atom/ion that is in thermal motion [[L04.s7a]]</li>
+<li>Natural broadening — Due to uncertainty principle, the energy levels occupied by an electron have finite width (spread). [[L04.s7b]]</li>
+<li>Collisional broadening — If the atom suffers collisions with other particles while it is emitting, the phase of the emitted radiation can be altered suddenly. [[L04.s7c]]</li></ul></div>
+<div class="explain"><b>부가설명</b> 9/8에 먼저 예고: 선이 넓어지는 이유는 크게 natural, thermal(도플러), pressure 세 가지. <span class="hl">백색왜성과 주계열성의 스펙트럼선 윤곽을 보면 백색왜성 쪽이 훨씬 넓다</span> — 크기가 작아 대기 밀도가 높고, 압력이 높아 입자 간 상호작용이 많기 때문(pressure broadening). [[S0908.06]] 9/10: "지난 시간에 쫙 이야기했는데" 세 가지 — 도플러·내추럴·충돌 넓어짐을 살펴본다. [[S0910.17]]</div>
+
+<h4>도플러 넓어짐 <span class="en">Doppler Broadening</span></h4>
+
+<div class="slide"><div class="sh">L04 · 슬라이드 8 <span class="st">Doppler Broadening</span></div><ul>
+<li>The change in frequency associated with an atom with velocity component v along the line of sight is \({\nu-\nu_0\over\nu_0}={\delta\nu\over\nu_0}=-{v\over c}\) (v > 0 when the atoms move away) [[L04.s8a]]</li>
+<li>Maxwell-Boltzmann velocity distribution of gas \(f(v)=\left({m\over2\pi kT}\right)^{1/2}v^2\exp\left(-{mv^2\over2kT}\right)\) [[L04.s8b]]</li>
+<li>The associated line profile is \(\phi(\nu)={1\over\sqrt\pi\Delta\nu_D}e^{-(\nu-\nu_0)^2/\Delta\nu_D^2}\) where \(\Delta\nu_D={\nu_0\over c}\sqrt{2kT\over m}\) : Doppler line width [[L04.s8c]]</li>
+<li>Full width at half maximum (FWHM) \(\Delta\nu_{\rm FWHM}=2\sqrt{\ln2}\,\Delta\nu_D\) [그림: 가우시안, φ(ν₀)/2 높이의 빨간 선 = FWHM] [[L04.s8d]]</li></ul></div>
+<div class="explain"><b>부가설명 (9/10)</b> 기체가 관측자 쪽으로 다가오면 blueshift — 천문학에서는 <b>다가오는 속도를 음(−)</b>, 멀어지는 속도를 양(+, redshift)으로 정의한다. [[S0910.17]] 도플러 식 \(\delta\nu/\nu_0=-v/c\)의 음수는 진동수 증가를 음의 속도로 잡았기 때문. 보통 열평형이라 가정해도 문제없으니 Maxwell–Boltzmann 분포를 대입. [[S0910.18]] 정규화(전체 적분=1)하면 앞 계수가 나오고, 나머지를 묶어 Δν_D(Doppler line width)로 정의 — <span class="hl">같은 온도면 무거울수록 폭이 작고, 온도가 높을수록 크다</span>. [[S0910.18]] ν₀ 중심으로 그리면 가우시안. 폭은 최대의 절반 높이에서의 전체 폭 = FWHM. 2는 양쪽, √ln2는 높이 1/2에서 나온다(\(e^{-x^2}=1/2\to x=\sqrt{\ln2}\)). 스펙트럼에서 FWHM을 재고, 어떤 원소인지 알면 질량을 알므로 <b>온도(kinetic temperature)</b>를 구할 수 있다. [[S0910.19]] 관측자들은 FWHM을 그냥 <b>line width</b>라 부른다. [[S0910.20]]</div>
+<div class="trap"><b>함정 — 슬라이드의 v²는 오타</b><span class="star">강조</span>교수님(9/10): 시선방향 한 성분의 1차원 분포이므로 <span class="hl">"V제곱이 없어요… 다시 수정해서 올릴게요."</span> 올바른 식: \(f(v)=(m/2\pi kT)^{1/2}e^{-mv^2/2kT}\) (적분=1). v²가 붙은 것은 3차원 속력 분포(그때 계수는 \(4\pi(m/2\pi kT)^{3/2}\)). [[L04.s8b, S0910.18]]</div>
+<div class="trap"><b>함정 — Δν_D는 표준편차가 아니다</b>가우시안 표준편차 σ=Δν_D/√2, FWHM=2√(ln2)Δν_D=1.665Δν_D. [[L04.s8d]]</div>
+
+<h4>선중심 흡수 단면적 <span class="en">Line Center Cross Section</span></h4>
+
+<div class="slide"><div class="sh">L04 · 슬라이드 9 <span class="st">Line Center Cross Section</span></div><ul>
+<li>\(\phi(\nu)={1\over\sqrt\pi\Delta\nu_D}e^{-(\nu-\nu_0)^2/\Delta\nu_D^2}\). At the line center, the profile function becomes \(\phi(\nu_0)={1\over\sqrt\pi\Delta\nu_D}\) [[L04.s9a]]</li>
+<li>The absorption cross-section at the <b><i>line-center</i></b> for each atom, neglecting the stimulated emission (in optical), is therefore \(\kappa_\nu=n_1\sigma_\nu={h\nu\over4\pi}(n_1B_{12}-n_2B_{21}\ [\text{빨간 사선으로 지움}])\phi(\nu)\) ⟹ \(\sigma_{\nu_0}=B_{12}{h\nu_0\over4\pi}\phi(\nu_0)={1\over\sqrt\pi\Delta\nu_D}{h\nu_0\over4\pi}B_{12}\) — σ_ν0 can be calculated observationally if B₁₂ is known. [[L04.s9b]]</li></ul></div>
+<div class="explain"><b>부가설명 (9/10)</b> 선중심에서는 ν=ν₀이므로 지수가 1, 남는 건 \(1/\sqrt\pi\Delta\nu_D\) — 단위 Hz⁻¹. 흡수계수에서 유도방출 항은 지난 시간처럼 <b>전파에서는 강하지만 광학에서는 약하므로</b> 지우고(슬라이드의 빨간 사선), n₁으로 나누면 원자 하나의 흡수 단면적 σ_ν. B₁₂를 알면 σ_ν0 계산 가능 — B₁₂는 A₂₁로부터 아인슈타인 관계로. [[S0910.20]]</div>
+<div class="intuit"><b>직관</b>φ의 면적은 1이므로 폭이 넓어지면(T↑ 또는 m↓) 선중심 높이 φ(ν₀)와 σ_ν0가 줄어든다. 적분된 흡수 \(\int\sigma_\nu d\nu=(h\nu_0/4\pi)B_{12}\)는 폭과 무관. [[L04.s9b]]</div>
+
+<h4>자연 넓어짐 <span class="en">Natural Broadening</span></h4>
+
+<div class="slide"><div class="sh">L04 · 슬라이드 10 <span class="st">Natural Broadening</span></div><ul>
+<li>The uncertainty principle implies that the spread in energy ΔE and the duration Δt in an energy level must satisfy ΔEΔt ∼ ℏ. [[L04.s10a]]</li>
+<li>According the classical theory, the resulting line profile is described the Lorenz profile: \(\phi(\nu)={1\over\pi}{\gamma/4\pi\over(\nu-\nu_0)^2+(\gamma/4\pi)^2}\) — γ is the damping constant given by \(\gamma=\sum_{n''}A_{nn''}+\sum_{n''}A_{n'n''}\) — Its FWHM is \(\Delta\nu_L={\gamma\over2\pi},\ \Delta\lambda_L={\lambda_0\over\nu_0}\Delta\nu_L\) [[L04.s10b]]</li>
+<li>Example: For Hα 6563 Å lines, A₂₁ = 4.4×10⁷ s⁻¹ — Δν_L = 7.0×10⁶ Hz and Δλ_L = 1.0×10⁻⁴ Å. — cf. Δλ_FWHM = 0.35 Å due to Doppler effects in a cloud with T=10⁴ K [[L04.s10c]]</li></ul></div>
+<div class="explain"><b>부가설명 (9/10)</b> 불확정성 원리 ΔEΔt~ℏ. <span class="hl">아인슈타인 A의 역수가 Δt — 그 준위에 전자가 머물 수 있는 시간(수명)</span>. A가 유한하니 Δt도 유한 → 에너지 준위가 사실 퍼져 있다(가장 높은 확률을 중심으로 한 확률분포). 바닥 상태는 (완전 바닥이면) 델타 함수에 가깝다. [[S0910.21]] 퍼진 상위 준위의 높은 쪽에서 떨어지면 ν가 조금 크고, 낮은 쪽이면 작다 → 유한 폭. 고전 이론(로렌츠 진동자)은 몇 주 후에 다룬다. 결과는 <b>로렌츠 분포</b>; γ=damping constant ≈ ΔE/ℏ ≈ 1/Δt ≈ A — 상위 준위 n에서 아래로 가능한 모든 A의 합 + 하위 준위 n′에서 더 아래로의 모든 A의 합. [[S0910.22]] A가 클수록 수명이 짧고 에너지 퍼짐(damping)이 크다("왜 damping인지는 나중에"). FWHM = γ/2π, 파장으로는 \((\lambda_0/\nu_0)\Delta\nu_L\). Hα: A₂₁=4.4×10⁷ s⁻¹ 하나만 써서 γ를 잡으면 7×10⁶ Hz, 10⁻⁴ Å. <span class="hl">현재 기술로도 10⁻⁴ Å는 구별 불가</span>(아주 높은 분해능도 0.1–0.01 Å). 도플러는 항상 있고 10⁴ K에서 ~0.35 Å — 자연 폭은 있어도 관측적으로 확인이 안 된다. 그럼 왜 배우나? [[S0910.23]] → 다음 절: 충돌 넓어짐이 수학적으로 같은 꼴이기 때문.</div>
+<div class="trap"><b>수치 확인·의심</b>python: Δν_L=A/2π=7.00×10⁶ Hz, Δλ_L=1.0×10⁻⁴ Å — 슬라이드와 일치. 도플러: 순수 수소 T=10⁴ K면 Δλ_D=(λ/c)√(2kT/m_H)=0.28 Å, FWHM=0.47 Å. <b>슬라이드 0.35 Å / 녹음 "3.3" / 재계산 0.47 Å</b> — 어느 쪽이든 자연 폭의 ~10³–10⁴배라 결론은 같다(예제 2.13). 실제 γ는 n=3, n=2 준위의 모든 A를 더하므로 Hα 실제 자연 폭은 이보다 크다. [[L04.s10c, S0910.23]]</div>
+
+<h4>충돌(압력) 넓어짐 <span class="en">Collisional Broadening</span></h4>
+
+<div class="slide"><div class="sh">L04 · 슬라이드 11 <span class="st">Collisional Broadening</span></div><ul>
+<li>If an atom suffers collisions with other particles while it is emitting, the phase of the emitted radiation can be altered suddenly. If the phase changes completely randomly at the collision times, then information about the emitting frequency is lost. [[L04.s11a]]</li>
+<li>If the collisions occur with frequency ν_col, that is, each atom experiences ν_col collisions per unit time on average, then the profile can be shown to follow \(\phi(\nu)={1\over\pi}{\Gamma/4\pi\over(\nu-\nu_0)^2+(\Gamma/4\pi)^2}\) where \(\Gamma=\gamma+2\nu_{\rm col}\) [그림: (a) 연속 사인파, (b) t₁, t₂에서 위상이 끊긴 사인파] [[L04.s11b]]</li>
+<li>Also called pressure broadening — Important when density is high. [[L04.s11c]]</li></ul></div>
+<div class="explain"><b>부가설명 (9/10)</b> 원자 전이로 방출되는 전기장은 시간에 따라 쭉 이어지는 파 → 고유 진동수. 방출 중 충돌하면 파가 뚝뚝 끊기고 위상이 바뀌어 coherence를 잃는다. 본질적 진동수 정보는 어느 정도 남지만 퍼지고, <span class="hl">그 모양은 자연 넓어짐과 같은 로렌츠 꼴, 단지 γ 대신 대문자 Γ=γ+2ν_col</span>("좀 어려운 수학이니 받아들이자"). γ는 작아도 ν_col은 얼마든지 클 수 있다. [[S0910.24]] ν_col = nσv(n 수밀도, σ 충돌 단면적, v 상대속도) — 백색왜성 대기처럼 n이 크면 충돌이 많아 효과가 크다. 밀도가 높으면 압력이 크므로 <b>pressure broadening</b>. [[S0910.25]]</div>
+
+<h4>Voigt 함수 <span class="en">Voigt Function</span></h4>
+
+<div class="slide"><div class="sh">L04 · 슬라이드 12 <span class="st">Voigt Function</span></div><ul>
+<li>For real spectral lines, the Lorenz profile (due to natural/collisional broadening) must be convolved with the Gaussian distribution of particles \(\phi(\nu)^{\rm Voigt}=\int dv\,f(v)\,\phi_L\!\left(\nu-{v\over c}\nu_0\right)={1\over\sqrt\pi\Delta\nu_D}H(a,u)\) — f(v): Maxwell-Boltzmann velocity distribution — φ_L(ν): Lorenz profile [[L04.s12a]]</li>
+<li>Voigt function is defined as \(H(a,u)={a\over\pi}\int_{-\infty}^{\infty}{e^{-y^2}dy\over a^2+(u-y)^2}\), \(a={\Gamma\over4\pi\Delta\nu_D}\), \(u={\nu-\nu_0\over\Delta\nu_D}\) [그림: Gauss(실선)·Lorentz(점-쇄선)·Voigt(파선), x축 Δν/Δν_FWHM] [[L04.s12b]]</li></ul></div>
+<div class="explain"><b>부가설명 (9/10)</b> 실제로는 셋 다 있다. 자연·충돌은 같은 꼴(Γ)이라 하나로 묶고, 이것과 도플러를 합친다: 속도 0인 입자의 로렌츠 윤곽이 도플러로 청색·적색 이동한 것들이 가우시안(MB) 비율로 존재 → <span class="hl">로렌츠를 가우시안으로 convolution한 것이 최종 선윤곽</span>. [[S0910.26]] Voigt(사람 이름)가 처음 연구. a는 damping을 나타내는 무차원 양, u는 도플러 쪽 변수 — 수치적으로 계산. 그림: 가우시안은 중심에 집중, 가장자리에서 급격히 떨어짐; 로렌츠는 중심도 높지만 날개(wing)가 훨씬 강함; Voigt는 가우시안보다 날개가 강하다. [[S0910.27]] Γ가 크면 날개가 강한 넓은 선. 대부분(태양의 강하지 않은 선들)은 도플러만 고려해도 되고, 백색왜성처럼 강한 중력(고밀도)일 때 Voigt를 제대로 고려해야 한다. [[S0910.28]]</div>
+<div class="intuit"><b>직관 — 중심은 도플러, 날개는 로렌츠</b>가우시안은 e^{−u²}로 빨리 죽고 로렌츠는 1/u²로 천천히 죽는다. 그래서 선중심 근처 모양은 온도(도플러)가, 멀리 날개는 Γ(밀도·수명)가 결정한다. [[L04.s12b]]</div>
+
+<h4>선폭이 말해 주는 것 — 난류 <span class="en">Turbulence</span></h4>
+<div class="apply"><b>태양</b>표면 ~6000 K → 수소 열속도 √(2kT/m_H) ≈ 10 km/s(python 9.95; 녹음 "Qkm/s"). 그런데 선폭(FWHM)으로 온도를 추정하면 1만 도 이상 — <span class="hl">실제 스펙트럼선이 표면온도로 기대되는 것보다 넓다.</span> 사람들은 난류(turbulence) 때문이라고 설명. [[S0910.28]] 난류 속도가 열속도와 comparable — 정말인지는 아무도 모르지만, 현재는 열적 속도 외에 비열적(non-thermal) 속도까지 도플러 넓어짐에 넣어 설명한다. <b>성간 기체</b>도: 전파 관측 온도는 ~100 K인데 선폭은 ~10 km/s. 100 K 수소 열속도는 ~1–2 km/s(python √(2kT/m)=1.28 km/s; 녹음은 "2 km/s"·"1 km/s" 혼재) → 10배 넓다 → 난류. 열속도(≈음속)보다 빠르면 초음속 → 충격파(교실 음속 340 m/s, 1 km/s로 날면 충격파). [[S0910.29]] 충격파 = 운동에너지 → 열 → 복사로 빠져나감 → 10 km/s 난류는 금방 감쇠해야 하는데 어느 구름이나 거의 universal하게 갖고 있다 → <b>난류는 어떻게 유지되나?</b> "연구가 꼬리에 꼬리를 물고 이어진다." [[S0910.30]] → 예제 2.16</div>
+
+<h4>HI 21 cm 선 <span class="en">HI 21 cm Lines</span></h4>
+
+<div class="slide"><div class="sh">L04 · 슬라이드 13 <span class="st">HI 21 cm Lines</span></div><ul>
+<li>E₁₂ = 5.87 µeV; hν₁₂/k = 0.068 K — Since hν₁₂/kT ≪ 1, n₂/n₁ ~ g₂/g₁ = 3 under most situations. A₂₁ = 3×10⁻¹⁵ s⁻¹ [그림: n=1 바닥 상태가 g₂=3(↑↑)과 g₁=1(↑↓)로 갈라짐; λ₁₂ = 21 cm, ν₁₂ = 1.4 GHz] [[L04.s13a]]</li>
+<li>The absorption coefficient for HI 21 lines \(\kappa_\nu={h\nu\over4\pi}\phi(\nu)n_1B_{12}(1-e^{-h\nu/kT})={h\nu\over4\pi}\phi(\nu)\cdot{1\over4}n_{\rm H}\cdot{g_2\over g_1}{c^2\over2h\nu^3}A_{21}\cdot{0.068\over T}=2.6\times10^{-15}{n_{\rm H}\over T}\phi(\nu)\) [[L04.s13b]]</li>
+<li>Integrating κ_ν over the path length, \(\tau_\nu=\int\kappa_\nu dl=2.6\times10^{-15}{N_{\rm H}\over T}\phi(\nu)\) where \(N_{\rm H}=\int n_{\rm H}dl\) : HI column density [[L04.s13c]]</li></ul></div>
+<div class="explain"><b>부가설명 (9/10)</b> "다음 숙제를 할 때 필요한 내용." 수소 바닥 상태(이온화 13.6 eV, 첫 들뜬 상태는 10.2 eV 위)가 <b>전자와 양성자의 스핀</b>이 평행이면 에너지가 조금 높고 반평행이면 낮다(hyperfine). [[S0910.30]] 하위 g₁=1; 상위는 스핀 합 1 → m=1, 0, −1 세 상태 → g₂=3. 간격이 매우 작아 ν=1.4 GHz, λ=21 cm, E=5.87 µeV, E/k=0.068 K → 온도가 1 K만 돼도 hν/kT≪1 → \(n_2/n_1=(g_2/g_1)e^{-h\nu/kT}\approx3\): <span class="hl">4개 중 3개가 상위, 1개가 하위</span>. A=3×10⁻¹⁵ s⁻¹(역수가 수명 ~10⁷ yr). [[S0910.31]]<br>
+κ_ν 유도: 괄호 \((1-e^{-h\nu/kT})\)는 1로 놓으면 안 된다 — <span class="hl">여기서는 1과 지수가 거의 같아 빼면 사라져 버리므로</span> 테일러 전개해 hν/kT를 남긴다. n₁ = 전체 수소의 1/4 → \(n_{\rm H}/4\); B₁₂=(g₂/g₁)B₂₁, B₂₁=(c²/2hν³)A₂₁. [[S0910.32]] 다 아는 값(g, h, ν=1.4 GHz, c)을 넣으면 2.6×10⁻¹⁵ — 중성수소 21 cm 흡수계수. 경로 적분 → τ_ν; T 일정이면 \(N_{\rm H}=\int n_{\rm H}dl\) = 시선방향 기둥의 단위 면적당 수소 수 = 기둥밀도. [[S0910.32]]</div>
+<div class="trap"><b>수치 확인</b>python: A₂₁=2.87×10⁻¹⁵(표준값)이면 계수 2.60×10⁻¹⁵, 슬라이드의 반올림 A=3×10⁻¹⁵를 그대로 넣으면 2.72×10⁻¹⁵. 슬라이드 계수 2.6×10⁻¹⁵·3.85×10¹⁴·1.82×10¹⁸은 2.87×10⁻¹⁵ 기준. 녹음 "3 곱하기 20만원이 15승" → 3×10⁻¹⁵, "0.068kg" → 0.068 K. [[L04.s13b, S0910.31]] 예제 2.14.</div>
+
+<h4>HI 기둥밀도 <span class="en">HI Column Density</span></h4>
+
+<div class="slide"><div class="sh">L04 · 슬라이드 14 <span class="st">HI Column Density</span></div><ul>
+<li>Integrating τ_ν over the frequency, \(N_{\rm H}=3.85\times10^{14}T\int\tau_\nu d\nu\) (in cgs units) [[L04.s14a]]</li>
+<li>In radio astronomy, it is customary to express frequency in the velocity (km s⁻¹) using the Doppler relation \(d\nu={\nu\over c}dv={dv\over\lambda}\) ➔ \(N_{\rm H}=1.82\times10^{18}T\int\tau_\nu dv\) [[L04.s14b]]</li>
+<li>For <b>emission lines</b>, we use \(T_B=T(1-e^{-\tau_\nu})\) to obtain \(N_{\rm H}=-1.82\times10^{18}T\int\ln\left(1-{T_B(v)\over T}\right)dv\) [[L04.s14c]]</li>
+<li>When optically thick, the above integral is undefined. Need to use absorption lines as well. — When optically thin, \(T_B=T\tau_\nu\) and \({N_{\rm H}\over{\rm cm^{-2}}}=1.82\times10^{18}\int\left[{T_B(v)\over{\rm K}}\right]{dv\over{\rm km\,s^{-1}}}\) [[L04.s14d]]</li></ul></div>
+<div class="explain"><b>부가설명 (9/10)</b> 관측으로 τ와 T를 알면 N_H — 지난 시간 Q1처럼 τ와 T_ex를 구하고, T_ex=T_kin이라 가정. 더 잘하려면 φ의 진동수 의존을 없애기 위해 ν로 적분(φ 적분=1) → 3.85×10¹⁴는 2.6×10⁻¹⁵의 역수. 전파 천문학에서는 진동수 대신 도플러 속도를 쓰는 게 관례 — "왜 그런지 몰라요", 실제 모니터의 x축이 km/s로 나온다. [[S0910.33]] \(d\nu=(\nu/c)dv=dv/\lambda\)로 바꾸면(v를 km/s로: 3.85×10¹⁴×10⁵/21.1 = 1.82×10¹⁸). 배경이 없고 소스에서 만들어진 방출선이면 \(T_B=T(1-e^{-\tau})\) → \(\tau=-\ln(1-T_B/T)\) 대입 → 로그 식. x축 속도, 관측된 T_B(v) — <span class="star">강조</span><span class="hl">HI 관측으로 수소 기둥밀도를 구하는 식.</span> 광학적으로 두꺼우면 적분이 안 된다(발산). [[S0910.34]] 두꺼우면 T_B→T가 되어 ln 발산 → 흡수선이 필요(지난 시간 Q1처럼). 얇으면 \(T_B=T\tau\)(또는 테일러) → \(N_{\rm H}=1.82\times10^{18}\int T_Bdv\) — T가 사라져 관측량만으로 계산. 도플러 효과로 진동수가 변하는 것이라 속도 단위를 쓴다. 수업 끝: 남은 슬라이드(에너지 보존·Poynting 이용)는 다음 주에. [[S0910.35]]</div>
+<div class="trap"><b>함정</b>얇다고 가정한 \(1.82\times10^{18}\int T_Bdv\)를 두꺼운 구름에 쓰면 자기흡수·포화로 N_H를 <b>과소평가</b>한다. 또 N_H는 기둥(면)밀도[cm⁻²]이지 부피밀도가 아니다 — 경로 길이로 나눠야 n_H. [[L04.s14d]] 예제 2.2.</div>
+
+<h4>9/10 리뷰 — 전자기파 질문 (Lecture05 예습) <span class="en">Maxwell, Poynting, Polarization</span></h4>
+
+<div class="slide"><div class="sh">L04 · 슬라이드 3 <span class="st">Review Questions ④–⑧</span></div><ul>
+<li>Write down the four Maxwell’s equations. [[L04.s3d]]</li>
+<li>What is the Poynting flux (units)? [[L04.s3e]]</li>
+<li>Express energy density in terms of E and B. [[L04.s3f]]</li>
+<li>For linearly polarized waves, how are <b>E</b> and <b>B</b> related to the wave vector <b>k</b>? [[L04.s3g]]</li>
+<li>For more general waves described by \(E'_x=\epsilon_0\cos\beta\cos(kz-\omega t)\), \(E'_y=\epsilon_0\sin\beta\sin(kz-\omega t)\), discuss how the polarization of the waves changes for \(|\beta|\le\pi/2\) varies. [[L04.s3h]]</li></ul></div>
+<div class="explain"><b>모범답 (9/10 수업)</b>
+<b>① Maxwell 방정식</b> — 전자기학은 단위가 중요. MKS(ε₀, μ₀)를 쓰면 환산이 복잡하므로 <span class="hl">이 수업은 Gaussian(CGS) 단위</span>: \(\nabla\cdot\mathbf E=4\pi\rho\)(쿨롱·가우스 법칙), \(\nabla\cdot\mathbf B=0\)(자기 홀극 없음), \(\nabla\times\mathbf E=-{1\over c}{\partial\mathbf B\over\partial t}\)(패러데이 유도), \(\nabla\times\mathbf B={4\pi\over c}\mathbf J+{1\over c}{\partial\mathbf E\over\partial t}\)(앙페르–맥스웰). [[S0910.04]] 전하가 있으면 전기장, 전류가 있으면 자기장 — 그런데 전기장과 자기장은 사실 하나, 관점 차이: 전자와 같이 움직이는 좌표계에서는 전류가 없어 전기장만, 정지 좌표계에서는 자기장으로 보인다. [[S0910.04]]<br>
+<b>② Poynting flux</b> \(\mathbf S={c\over4\pi}\mathbf E\times\mathbf B\), 단위 erg s⁻¹ cm⁻² (에너지/면적/시간 = 플럭스; Poynting vector). <b>③ 에너지밀도</b> \(u=(E^2+B^2)/8\pi\); 특히 \(B^2/8\pi\) = magnetic energy density — 복사뿐 아니라 지구·성간 자기장에도. 성간 자기장은 ~µG(최근엔 ~10 µG까지). <span class="hl">유용하게 많이 쓰니 기억할 것.</span> [[S0910.05]]<br>
+<b>④ 선형 편광</b>: \(\mathbf E,\mathbf B,\mathbf k\)가 모두 수직 — \(\mathbf B=\hat{\mathbf k}\times\mathbf E\), \(\mathbf E=\mathbf B\times\hat{\mathbf k}\)(오른손). 평면파 해에서 나온다. 편광은 보통 E의 진동 방향으로 따진다(B는 자동으로 정해짐). 선형: 방향 고정, 크기만 진동. 원: 크기 일정, 방향 회전 — 진행방향을 엄지로 했을 때 왼손으로 감기면 left-handed(LCP), 오른손이면 RCP. <span class="hl">L+R을 합치면 선형 — 선형 기저로 보든 원 기저로 보든 관점 차이(자유도 2)</span>. [[S0910.06]]<br>
+<b>⑤ 일반 편광</b>: ε₀는 진폭, β는 x·y 성분 세기 조절, prime은 주축으로 회전한 좌표. \((E'_x/\cos\beta)^2+(E'_y/\sin\beta)^2=\epsilon_0^2\) → 타원. β=0: x 방향 선형; β=±π/2: y 방향 선형; β=±π/4: 원편광. [[S0910.07]] 그 외 β는 타원편광. 회전 방향: 관측자 평면 z=0에서 \(E'_x=\epsilon_0\cos\beta\cos\omega t\), \(E'_y=-\epsilon_0\sin\beta\sin\omega t\). t=0에 x축 방향, β>0이면 시간이 지나며 E′_y가 음으로 → (관측자 시점) 시계방향 회전 = 왼손(LCP); β&lt;0이면 반대(RCP). [[S0910.08]]</div>
+<div class="trap"><b>STT 교정</b>"응폐를 백업체" → 앙페르, "85분의 B제곱" → B²/8π, "마이크로 가고 싶" → micro-Gauss, "F-themic" → left-handed. 성간 자기장 에너지밀도 수치는 녹음 불명확 — B=3 µG면 B²/8π≈3.6×10⁻¹³ erg cm⁻³. [[S0910.05, S0910.08]]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u07-1"><div class="qq">온도 4배, 원자 질량 4배일 때 각각 열 선폭은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>온도만 4배면 폭 2배, 질량만 4배면 폭 1/2. Δν_D∝√(T/m). 두 변화가 동시에 있으면 그대로.</p></div></div>
+
+<div class="qz" data-q="u07-2"><div class="qq">도플러 폭이 커지면 선의 총 에너지도 반드시 증가하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. φ는 면적 1로 정규화되어 있어 폭이 넓어지면 중심 높이 φ(ν₀)=1/(√πΔν_D)가 낮아진다. 얇은 조건에서 적분 선세기 (hν/4π)N₂A₂₁는 폭과 무관.</p></div></div>
+
+<div class="qz" data-q="u07-3"><div class="qq">같은 방출선을 얇다고 가정해 구한 N_HI는 두꺼운 실제 구름에서 어떤 편향인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>자기흡수·포화로 숨은 원자를 놓쳐 과소평가한다. 두꺼우면 T_B→T가 되어 ln 식도 발산하므로 흡수선(배경 광원)으로 τ와 T를 따로 구해야 한다.</p></div></div>
+
+<div class="qz" data-q="u07-4"><div class="qq">Hα 자연 폭은 관측되지 않는데 왜 배우는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>자연 폭(10⁻⁴ Å)은 도플러(~0.3–0.5 Å)에 묻히지만, 충돌 넓어짐이 같은 로렌츠 꼴(Γ=γ+2ν_col)이고 ν_col=nσv는 고밀도(백색왜성)에서 매우 커서 날개를 지배하기 때문이다.</p></div></div>
+
+<div class="qz" data-q="u07-5"><div class="qq">Voigt 윤곽에서 선중심과 날개는 각각 무엇에 민감한가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>중심은 가우시안(도플러: T, m, 난류), 날개는 로렌츠(Γ: 수명과 충돌, 즉 밀도). a=Γ/(4πΔν_D)가 크면 날개가 강하다.</p></div></div>
+
+<div class="qz" data-q="u07-6"><div class="qq">21 cm에서 κ_ν 계산 시 (1−e^{−hν/kT})를 1로 놓으면 안 되는 이유와 그 결과의 T 의존성은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>hν/kT=0.068/T≪1이라 1−e^{−x}≈x로 매우 작다(유도방출이 흡수를 거의 상쇄). 그래서 κ∝n_H/T — 차가운 구름일수록 τ가 크다.</p></div></div>
+
+<div class="qz" data-q="u07-7"><div class="qq">Gaussian 단위의 Maxwell 방정식 4개와 Poynting flux, 에너지밀도를 쓰라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>∇·E=4πρ, ∇·B=0, ∇×E=−(1/c)∂B/∂t, ∇×B=(4π/c)J+(1/c)∂E/∂t. S=(c/4π)E×B [erg s⁻¹cm⁻²], u=(E²+B²)/8π.</p></div></div>
+
+<div class="qz" data-q="u07-8"><div class="qq">E′x=ε₀cosβcos(kz−ωt), E′y=ε₀sinβsin(kz−ωt)에서 β=0, π/4, −π/4, π/3의 편광은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>β=0: x 선형; π/4: 원편광(강의 convention으로 LCP); −π/4: RCP; π/3: 타원(β>0 → 왼손 감기, y축이 장축).</p></div></div>
+
+<p class="note">출처: Lecture04 슬라이드 3, 7–14 · 9/8 속기(선 넓어짐 예고) · 9/10 강의 속기(07:30–20:42, 41:28–1:12:44) · 예제 2.2, 2.13, 2.14, 2.16 · 상태: 장부 기준 전수 반영</p>

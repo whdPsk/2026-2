@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>재료.</b> 분리 4-벡터는 \(\rr^{\mu}=(c(t-t_r),\ \vb{r}-\vb{w}(t_r))=(\rr,\ \boldsymbol{\rr})\)이고, 지연조건 \(\rr=|\vb{r}-\vb{w}(t_r)|=c(t-t_r)\) 때문에 <b>영벡터(null)</b>이다: \(\rr^{\mu}\rr_\mu=-\rr^{2}+\rr^{2}=0\).</p>
+<p>전하의 고유속도는 \(\eta^{\nu}=\gamma(c,\vb{u})\)(모두 지연시간에서 평가). 분모를 계량으로 계산하면</p>
+\[ \eta^{\nu}\rr_\nu=-\eta^{0}\rr^{0}+\boldsymbol\eta\cdot\boldsymbol{\rr}=-\gamma c\,\rr+\gamma\,\vb{u}\cdot\boldsymbol{\rr}=-\gamma(\rr c-\boldsymbol{\rr}\cdot\vb{u}). \]
+<p>이것은 정확히 Liénard–Wiechert 퍼텐셜의 분모다. 대입하면</p>
+\[ A^{\mu}=-\frac{q}{4\pi\eps c}\frac{\gamma(c,\vb{u})}{-\gamma(\rr c-\boldsymbol{\rr}\cdot\vb{u})}=\frac{q}{4\pi\eps c}\frac{(c,\vb{u})}{\rr c-\boldsymbol{\rr}\cdot\vb{u}}. \]
+<p>성분별로 읽으면(\(A^{\mu}=(V/c,\vb{A})\))</p>
+\[ \frac{V}{c}=A^{0}=\frac{q}{4\pi\eps(\rr c-\boldsymbol{\rr}\cdot\vb{u})}\ \Rightarrow\ \boxed{\ V=\frac{1}{4\pi\eps}\frac{qc}{\rr c-\boldsymbol{\rr}\cdot\vb{u}}\ }\quad(\text{Eq. }10.46) \]
+\[ \vb{A}=\frac{q\vb{u}}{4\pi\eps c(\rr c-\boldsymbol{\rr}\cdot\vb{u})}=\boxed{\ \frac{\vb{u}}{c^{2}}V\ }\quad(\text{Eq. }10.47) \]
+<p><b>교훈:</b> \(V\)와 \(\vb{A}\)가 따로 노는 두 공식이 아니라 <b>하나의 4-벡터 식</b>이라는 것. \(\eta^{\mu}\)가 분자에 있으므로 \(\vb{A}=(\vb{u}/c^{2})V\)라는 관계가 자동으로 나온다.</p>
+<div class="alabel">감점 포인트</div>
+\(\eta^{\nu}\rr_\nu\)를 계산할 때 시간성분의 마이너스를 빼먹는 것 — 그러면 분모 부호가 뒤집혀 전체 앞부호 \(-\)의 이유를 설명하지 못한다.</div><!--/sol-->

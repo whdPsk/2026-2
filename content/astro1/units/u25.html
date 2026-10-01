@@ -1,0 +1,22 @@
+<div class="predict"><b>◈ 학습 목표.</b> 13.4 · 13.5 · 13.6 · 13.7의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.</div>
+
+<h4>기말 <span class="en">약 45분</span></h4>
+
+<p>정상유동의Euler식을유선을따라적분하면베르누이상수가나온다. 속도가커지면압력이낮아진다는익숙한문장은같은유선, 일정높이, 같은베르누이상수등의조건이필요하다. 압축성기체에서는P/ρ대신비엔탈피를사용한다.</p><p>소용돌이도ω=∇×v는국소회전을측정한다. 유선이휘었다고소용돌이도가반드시0이아닌것도, 반드시큰것도아니다. 비점성·barotropic·보존력조건에서물질폐곡선의순환이보존되는Kelvin정리는소용돌이의생성조건을알려준다.</p><p>∇ρ와∇P가평행하지않으면baroclinic항이소용돌이를만들수있다. 기존소용돌이는늘이거나압축하면서강해질수도있다. Helmholtz분해는적절한경계조건에서속도장을회전없는성분과발산없는성분으로나누는도구이지각성분의물리적원인을자동으로정해주는법칙은아니다.</p><p>난류에서는큰규모주입에너지가더작은규모로전달되고최종적으로소산된다. 비압축성·등방·균질한관성구간에서Kolmogorov스펙트럼을사용할수있지만충격파가많은압축성천체유동이나자화유동에무조건같은지수를적용하면안된다.</p>
+
+<div class="callout"><b class="head">강의·교재 강조점.</b> 목차 대응 · 본문 전수 대조 전 / 후속 강의·HW 강조점은 아직 미반영.</div>
+
+<div class="formula"><div class="ftitle">암기 — 베르누이·소용돌이·난류</div><p><b>베르누이 상수</b></p>\[ {v^2\over2}+h+\Phi=\mathrm{const},\quad h=\int {dP\over\rho}={\gamma\over\gamma-1}{P\over\rho} \]<p class="note">유선방향의운동·압력일·중력에너지교환. <i>조건: 정상·비점성·등엔트로피; 마지막h는일정γ이상기체</i></p><p><b>소용돌이 생성</b></p>\[ {D\boldsymbol\omega\over Dt}=(\boldsymbol\omega\cdot\nabla)\mathbf v-\boldsymbol\omega\nabla\cdot\mathbf v+{\nabla\rho\times\nabla P\over\rho^2} \]<p class="note">늘임,압축,baroclinic항을각각읽는다. <i>조건: 비점성·보존적외력</i></p><p><b>난류의 차원척도</b></p>\[ Re={UL\over\nu_{kin}},\quad E(k)\propto\varepsilon^{2/3}k^{-5/3} \]<p class="note">νkin는동점성계수로빛의주파수ν와다름. <i>조건: Kolmogorov관성구간의제한된모형</i></p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u25-1"><div class="qq">충격파를가로질러등엔트로피베르누이를그대로쓸수있는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>충격파에서는엔트로피가증가한다. 에너지보존은점프조건으로다루고등엔트로피관계P∝ρ^γ를양쪽에하나의상수로적용하지않는다.</p></div></div>
+
+
+<div class="qz" data-q="u25-2"><div class="qq">밀도와압력구배가엇갈리면어떤효과가가능한가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>baroclinic소용돌이생성이가능하다.</p></div></div>
+
+
+<div class="qz" data-q="u25-3"><div class="qq">모든난류의스펙트럼은k⁻⁵ᐟ³인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 압축성·자기장·기하·관성구간존재여부에따라달라질수있다.</p></div></div>
+
+
+<p class="note">출처: 교재 p.317–330 · 상태: 교재 선행 · 목차 대응 · 본문 전수 대조 전</p>

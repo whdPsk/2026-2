@@ -1,0 +1,12 @@
+<div class="exq"><span class="examtag">PPT Review Q① · 9/15 수업 문제</span><br>For the EM waves with \(E_x'=\epsilon_0\cos\beta\cos(kz-\omega t)\), \(E_y'=\epsilon_0\sin\beta\sin(kz-\omega t)\), discuss how the polarization of the waves changes as \(|\beta|\le\pi/2\) varies.<br>(번역) 위 전자기파에서 β가 \(|\beta|\le\pi/2\) 범위에서 변할 때 편광이 어떻게 달라지는지 논하라. [[L05.s3a]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>타원 방정식 → 특수각 → 회전 방향</div><ol>
+<li>z = 0에서 \(E_x'=\varepsilon_0\cos\beta\cos\omega t\), \(E_y'=-\varepsilon_0\sin\beta\sin\omega t\) (cos 우함수, sin 기함수). [[F11.08]]</li>
+<li>\((E_x'/\varepsilon_0\cos\beta)^2+(E_y'/\varepsilon_0\sin\beta)^2=1\) → 반축 \(\varepsilon_0|\cos\beta|\), \(\varepsilon_0|\sin\beta|\)인 타원. [[F11.09, S0915.03]]</li>
+<li>β = 0 → x′ 선편광, β = ±π/2 → y′ 선편광, β = ±π/4 → 원편광, 나머지 → 타원. [[F11.11, F12.06, F12.07]]</li>
+<li>β &gt; 0: t = 0에 x′축 끝 → t 증가 시 \(E_y'\) 음수 쪽으로 → 시계 방향(빛을 마주 볼 때). 엄지를 관측자 쪽(+z)으로 두면 왼손 → <b>LCP</b>. β &lt; 0 → 반시계 → <b>RCP</b>. [[F11.10, F12.10, S0915.03]]</li>
+<li>Stokes로 검산(χ = 0): \(I=\varepsilon_0^2,\ Q=\varepsilon_0^2\cos2\beta,\ U=0,\ V=-\varepsilon_0^2\sin2\beta\). β = 30° → (1, 0.5, 0, −0.866): V &lt; 0 = LCP ✓ (python 수치 적분으로 회전 방향과 부호 확인).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>|β| 0 → 45° → 90°: 선(x′) → 납작한 타원 → 원 → 타원 → 선(y′). 부호: β &gt; 0 = 시계 = LCP(V &lt; 0), β &lt; 0 = 반시계 = RCP(V &gt; 0). |β|는 ellipticity, 부호는 손잡이.</p></div>
+<div class="trap"><b>함정</b>fixed time(공간 나선)과 fixed space(z = 0, 시간 회전)의 회전 sense가 반대로 보인다 — 손잡이는 fixed space 기준. 교수님 "Left-handed, Right-handed 구별할 수 있어야." [[F12.09, S0915.03]]</div>
+<div class="qz" data-q="ex3.10-a"><div class="qq"><b>+α</b> β = 60°이면 장축:단축 비와 손잡이는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>cos60°:sin60° = 1:1.73 → 장축이 y′ 쪽(|sinβ| &gt; |cosβ|). β &gt; 0 → 시계 → LCP. V = −sin120° = −0.866ε₀².</p></div></div>
+<div class="qz" data-q="ex3.10-b"><div class="qq"><b>+α</b> β = −45°, χ = 0의 Stokes 벡터는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>(I, Q, U, V) = ε₀²(1, 0, 0, +1) — 순수 RCP.</p></div></div>

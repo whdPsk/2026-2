@@ -1,0 +1,24 @@
+{
+  "name": "notes-2026-2",
+  "private": true,
+  "version": "1.0.0",
+  "description": "2026-2 과목별 학습 콘솔 (GitHub Pages)",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "compile": "node scripts/compile.mjs",
+    "compile:loose": "node scripts/compile.mjs --loose",
+    "build": "node scripts/compile.mjs && vite build",
+    "preview": "vite preview",
+    "check": "node scripts/check-ledger.mjs",
+    "lint:tex": "node scripts/texlint.mjs",
+    "test": "node scripts/compile.mjs && node scripts/texlint.mjs"
+  },
+  "devDependencies": {
+    "mathjax-full": "3.2.2",
+    "vite": "^6.3.0"
+  }
+}

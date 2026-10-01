@@ -1,0 +1,22 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<b>(a)</b> \(\mathbf E\times\mathbf B\parallel\hat z\)여야 하므로 \(\hat y\times(-\hat x)=\hat z\):
+\[\boxed{\tilde{\mathbf E}=\tilde E_0e^{i(kz-\omega t)}\hat y,\qquad \tilde{\mathbf B}=-\frac{\tilde E_0}{c}e^{i(kz-\omega t)}\hat x}\]
+<b>(b)</b> \(x\)편광과 \(y\)편광을 \(\pm90^\circ\) 위상차로:
+\[\boxed{\tilde{\mathbf E}_\pm=E_0(\hat x\pm i\hat y)e^{i(kz-\omega t)},\qquad \tilde{\mathbf B}_\pm=\frac{E_0}{c}(\hat y\mp i\hat x)e^{i(kz-\omega t)}}\]
+실수형: \(\mathbf E_\pm=E_0[\cos(kz-\omega t)\hat x\mp\sin(kz-\omega t)\hat y]\).<br>
+<b>(c) 평면편광 정상파.</b> \(x\)편광 \(+z\)파와 \(-z\)파를 겹치면
+\[\mathbf E=2E_0\cos kz\cos\omega t\,\hat x,\qquad \mathbf B=\frac{2E_0}{c}\sin kz\sin\omega t\,\hat y .\]
+\[\boxed{u=2\epsilon_0E_0^2\left[\cos^2kz\cos^2\omega t+\sin^2kz\sin^2\omega t\right]}\]
+\[\boxed{\mathbf S=\frac{1}{\mu_0}\mathbf E\times\mathbf B=\frac{E_0^2}{\mu_0c}\sin(2kz)\sin(2\omega t)\,\hat z,\qquad \mathbf g=\frac{\mathbf S}{c^2}=\frac{\epsilon_0E_0^2}{c}\sin(2kz)\sin(2\omega t)\,\hat z}\]
+시간평균:
+\[\boxed{\langle u\rangle=\epsilon_0E_0^2,\qquad \langle\mathbf S\rangle=0,\qquad \langle\mathbf g\rangle=0}\]
+에너지는 마디 사이를 앞뒤로 출렁일 뿐 순 이동이 없다.<br>
+<b>(d) 원편광 정상파.</b> (b)의 \(+z\)파와 그에 대응하는 \(-z\)파를 겹치면
+\[\mathbf E=2E_0\cos kz\left[\cos\omega t\,\hat x+\sin\omega t\,\hat y\right],\qquad \mathbf B=\frac{2E_0}{c}\sin kz\left[\cos\omega t\,\hat x+\sin\omega t\,\hat y\right].\]
+\(\mathbf E\parallel\mathbf B\)(!)이므로
+\[\boxed{\mathbf S=0,\qquad \mathbf g=0\ \text{(항등적으로)}}\]
+\[u=\frac12\left[\epsilon_0\cdot4E_0^2\cos^2kz+\frac{1}{\mu_0}\frac{4E_0^2}{c^2}\sin^2kz\right]=\boxed{2\epsilon_0E_0^2\ \text{(시간·공간 모두 일정)}}\]
+아주 우아한 결과: 원편광 정상파는 에너지밀도가 균일하고 흐름이 전혀 없다.
+<div class="alabel">감점 포인트</div>
+(d)에서 \(\mathbf E\)와 \(\mathbf B\)가 평행해진다는 것을 놓치고 (c)처럼 \(\sin2kz\sin2\omega t\) 꼴을 쓰는 실수. 두 벡터를 실제로 써보고 외적을 계산할 것.</div><!--/sol-->

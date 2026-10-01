@@ -1,0 +1,36 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 같은 질량 두 개를 벽–용수철(\(\kappa\))–질량–용수철(\(\kappa_{12}\))–질량–용수철(\(\kappa\))–벽으로 연결했다. 두 질량이 <b>같이</b>(같은 위상으로) 움직이면 가운데 용수철은 늘거나 줄지 않는다 — 그 진동수는? <b>반대로</b> 움직이면 가운데 용수철이 두 배로 일한다 — 진동수가 올라갈까 내려갈까? 두 진동수를 유도 없이 먼저 적어 보라.</div>
+
+<h4>12.1–12.2 두 결합 조화진동자 <span class="en">two coupled harmonic oscillators</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>운동방정식과 영년방정식 — 교재 식 (12.1)–(12.8) <b>(필수)</b></div>
+<ol>
+<li>\(m_1=m_2=M\), 평형에서 잰 변위 \(x_1,x_2\). \(m_1\)에 작용하는 힘 \(-\kappa x_1-\kappa_{12}(x_1-x_2)\):
+\[ M\ddot x_1+(\kappa+\kappa_{12})x_1-\kappa_{12}x_2=0,\qquad M\ddot x_2+(\kappa+\kappa_{12})x_2-\kappa_{12}x_1=0 . \]
+\(x_2\) 항이 첫 식에 있다 → <b>결합</b>.</li>
+<li>시도해 \(x_j=B_je^{i\omega t}\) (\(B_j\) 복소, 마지막에 실수부):
+\[ \begin{pmatrix}\kappa+\kappa_{12}-M\omega^2&-\kappa_{12}\-\kappa_{12}&\kappa+\kappa_{12}-M\omega^2\end{pmatrix}\begin{pmatrix}B_1\B_2\end{pmatrix}=0 . \]</li>
+<li>자명하지 않은 해: 행렬식 0 → \((\kappa+\kappa_{12}-M\omega^2)^2=\kappa_{12}^2\) → \(\kappa+\kappa_{12}-M\omega^2=\pm\kappa_{12}\):
+\[ \boxed{\ \omega_1=\sqrt{\frac{\kappa+2\kappa_{12}}{M}},\qquad \omega_2=\sqrt{\frac{\kappa}{M}}\ } \]</li>
+<li>진폭 비: \(\omega_1\) → \(B_1=-B_2\) (반대 위상, <b>반대칭 모드</b>), \(\omega_2\) → \(B_1=B_2\) (같은 위상, <b>대칭 모드</b>). 예측의 답: 대칭 모드는 가운데 용수철이 쉬므로 \(\sqrt{\kappa/M}\), 반대칭은 가운데 용수철이 양쪽에서 \(2\kappa_{12}\)씩 일해 진동수 상승.</li>
+<li>일반해: 네 개의 임의 상수(2계 방정식 두 개) — \(x_1=B_1^+e^{i\omega_1t}+B_1^-e^{-i\omega_1t}+B_2^+e^{i\omega_2t}+B_2^-e^{-i\omega_2t}\), \(x_2\)는 \(\omega_1\) 항의 부호만 반대.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>정규 좌표 \(\eta_1=x_1-x_2\), \(\eta_2=x_1+x_2\) — 교재 식 (12.11)–(12.15)</div>
+<ol>
+<li>두 방정식을 빼고 더한다:
+\[ M\ddot\eta_1+(\kappa+2\kappa_{12})\eta_1=0,\qquad M\ddot\eta_2+\kappa\eta_2=0 . \]
+<b>결합이 풀렸다</b> — 각 좌표가 한 진동수로만 진동.</li>
+<li>초기조건 \(x_1(0)=-x_2(0)\), \(\dot x_1(0)=-\dot x_2(0)\)이면 \(\eta_2\equiv0\) → 반대칭 모드만 들뜸. 같은 부호면 대칭 모드만.</li>
+<li><b>일반 규칙(교재)</b>: 대칭성이 가장 높은 모드가 가장 낮은 진동수. 결합은 공통 진동수 \(\omega_0=\sqrt{(\kappa+\kappa_{12})/M}\)(상대를 고정했을 때)를 위아래로 <b>갈라놓는다</b>: \(\omega_1&gt;\omega_0&gt;\omega_2\). \(n\)개 동일 진동자면 \(n/2\)개 위, \(n/2\)개 아래(홀수면 하나는 \(\omega_0\)) — Zeeman 분리와 닮은 꼴.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 두 결합 진동자 (같은 질량, 같은 벽 용수철)</div>
+\[ \omega_{\rm 반대칭}=\sqrt{\frac{\kappa+2\kappa_{12}}{M}},\quad \omega_{\rm 대칭}=\sqrt{\frac\kappa M},\qquad \eta_{1,2}=x_1\mp x_2 \]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u26-1"><div class="qq">두 결합 진동자의 영년방정식을 세우고 두 진동수와 모드 모양을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 1. 흔한 실수: 대각 성분에 \(\kappa_{12}\)를 빼먹는 것 — 자기 쪽 결합 용수철도 복원력을 준다.</p></div></div>
+
+<div class="qz" data-q="u26-2"><div class="qq">벽 용수철이 없는 경우(\(\kappa=0\), 두 질량이 용수철 하나로만 연결)의 진동수는? 0 진동수 모드의 의미는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\omega_1=\sqrt{2\kappa_{12}/M}\) (= \(\sqrt{\kappa_{12}/\mu}\), \(\mu=M/2\)), \(\omega_2=0\). 0 진동수 = 복원력 없는 <b>병진</b>(CM 등속운동). 분자 진동(U30)에서 이런 0 모드를 제거하는 이유.</p></div></div>
+
+<div class="qz" data-q="u26-3"><div class="qq">질량이 다르면(\(m_1\ne m_2\)), \(\kappa_{12}\)만 있고 벽 용수철이 없을 때 진동수를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\det\begin{pmatrix}\kappa_{12}-m_1\omega^2&-\kappa_{12}\-\kappa_{12}&\kappa_{12}-m_2\omega^2\end{pmatrix}=0\) → \(\omega^2[m_1m_2\omega^2-\kappa_{12}(m_1+m_2)]=0\) → \(\omega=0\), \(\omega=\sqrt{\kappa_{12}/\mu}\). 이원자 분자 진동.</p></div></div>

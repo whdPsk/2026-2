@@ -1,0 +1,44 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 관성계에서는 \(\dot{\vb L}=\vb N\)이지만 \(\vb L=\I\boldsymbol\omega\)의 \(\I\)는 물체계에서만 상수다. 그러면 물체계에서 쓴 운동방정식에는 어떤 추가 항이 붙을까(U11의 연산자 공식을 떠올려라)? 외력이 없어도 \(\boldsymbol\omega\)의 물체계 성분이 시간에 따라 변할 수 있을까?</div>
+
+<h4>11.9 강체의 Euler 방정식 <span class="en">Euler's equations for a rigid body</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>토크 방정식에서 — 교재 식 (11.115)–(11.120) <b>(필수)</b></div>
+<ol>
+<li>관성계: \((\dd\vb L/\dd t)_{\rm fixed}=\vb N\). U11의 연산자 공식으로 물체계로:
+\[ \left(\od{\vb L}{t}\right)_{\rm body}+\boldsymbol\omega\times\vb L=\vb N . \]</li>
+<li>물체계 축 = 주축이면 \(L_i=I_i\omega_i\), \(I_i\)는 상수 → \((\dd\vb L/\dd t)_{\rm body}=(I_1\dot\omega_1,I_2\dot\omega_2,I_3\dot\omega_3)\).</li>
+<li>3성분: \(I_3\dot\omega_3+\omega_1L_2-\omega_2L_1=I_3\dot\omega_3+(I_2-I_1)\omega_1\omega_2=N_3\). 순환 치환:
+\[ \boxed{\ \begin{aligned}I_1\dot\omega_1-(I_2-I_3)\omega_2\omega_3&=N_1\\ I_2\dot\omega_2-(I_3-I_1)\omega_3\omega_1&=N_2\\ I_3\dot\omega_3-(I_1-I_2)\omega_1\omega_2&=N_3\end{aligned}\ } \]
+압축형: \((I_i-I_j)\omega_i\omega_j-\sum_k\epsilon_{ijk}(I_k\dot\omega_k-N_k)=0\).</li>
+<li><b>암기 요령</b>: \(I_1\dot\omega_1=(I_2-I_3)\omega_2\omega_3+N_1\) — 첨자가 1→2→3 순환, 괄호 안은 "다음 − 그다음".</li>
+<li>물체의 운동은 모양이 아니라 <b>세 주관성 모멘트</b>에만 의존 → 같은 \(I_i\)를 가진 균일 타원체로 대표 가능(Poinsot 작도).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>Lagrange 방정식에서 (외력 없음) — 교재 식 (11.107)–(11.114)</div>
+<ol>
+<li>\(L=T=\tfrac12\sum I_i\omega_i^2\), 일반화 좌표는 Euler 각. \(\psi\)에 대한 방정식:
+\[ \od{}{t}\pd{T}{\dot\psi}-\pd{T}{\psi}=0 . \]</li>
+<li>U21 공식에서 \(\partial\omega_1/\partial\psi=\omega_2\), \(\partial\omega_2/\partial\psi=-\omega_1\), \(\partial\omega_3/\partial\psi=0\), \(\partial\omega_3/\partial\dot\psi=1\), \(\partial\omega_{1,2}/\partial\dot\psi=0\).</li>
+<li>\(\pd T{\dot\psi}=I_3\omega_3\), \(\pd T\psi=I_1\omega_1\omega_2-I_2\omega_2\omega_1\). 따라서
+\[ I_3\dot\omega_3-(I_1-I_2)\omega_1\omega_2=0 . \]
+\(x_3\) 지정은 임의 → 순환하면 세 식. (단, 나머지 두 식은 \(\phi,\theta\)의 Lagrange 방정식 자체는 아니다 — 교재 주의.)</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>보존량으로 검산 — 에너지와 \(L^2\)</div>
+<ol>
+<li>자유 운동에서 첫 식에 \(I_1\omega_1\), 둘째에 \(I_2\omega_2\), 셋째에 \(I_3\omega_3\)를 곱해 더하면 \(\od{}{t}\tfrac12\sum I_i^2\omega_i^2=\omega_1\omega_2\omega_3[I_1(I_2-I_3)+I_2(I_3-I_1)+I_3(I_1-I_2)]=0\) → \(L^2\) 보존.</li>
+<li>\(\omega_i\)를 곱해 더하면 \(\od{}{t}\tfrac12\sum I_i\omega_i^2=\omega_1\omega_2\omega_3[(I_2-I_3)+(I_3-I_1)+(I_1-I_2)]=0\) → \(T\) 보존.</li>
+<li>\(\boldsymbol\omega\)의 끝은 두 타원체(\(\sum I_i^2\omega_i^2=L^2\), \(\sum I_i\omega_i^2=2T\))의 교선 위를 움직인다 — 폴호드(polhode). U25의 안정성 그림.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — Euler 방정식 (주축 물체계)</div>
+\[ \boxed{\ I_1\dot\omega_1=(I_2-I_3)\omega_2\omega_3+N_1\ \ (\text{순환})\ } \]
+<p class="note">출발: \((\dot{\vb L})_{\rm body}+\boldsymbol\omega\times\vb L=\vb N\). 자유 운동에서 \(T\)와 \(L^2\) 보존.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u22-1"><div class="qq">(시험형) \((\dd\vb L/\dd t)_{\rm fixed}=\vb N\)에서 Euler 방정식 세 개를 유도하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 1. \((\boldsymbol\omega\times\vb L)_1=\omega_2L_3-\omega_3L_2=(I_3-I_2)\omega_2\omega_3\) → \(I_1\dot\omega_1+(I_3-I_2)\omega_2\omega_3=N_1\) ✓.</p></div></div>
+
+<div class="qz" data-q="u22-2"><div class="qq">Euler 방정식으로 자유 강체의 운동에너지와 \(L^2\)가 보존됨을 보여라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 3. 순환합이 항등적으로 0이 되는 구조.</p></div></div>
+
+<div class="qz" data-q="u22-3"><div class="qq">비스듬한 아령(U17)에 Euler 방정식을 적용해 필요한 토크를 구하라. 좌표: \(\boldsymbol\omega=(0,\omega\sin\alpha,\omega\cos\alpha)\), \(I_1=I_2=(m_1+m_2)b^2\), \(I_3=0\), \(\dot{\boldsymbol\omega}=0\).</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(N_1=-(I_2-I_3)\omega_2\omega_3=-(m_1+m_2)b^2\omega^2\sin\alpha\cos\alpha\), \(N_2=-(I_3-I_1)\omega_3\omega_1=0\) (\(\omega_1=0\)), \(N_3=-(I_1-I_2)\omega_1\omega_2=0\). Example 11.10과 일치.</p></div></div>

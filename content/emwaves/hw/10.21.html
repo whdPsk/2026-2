@@ -1,0 +1,18 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+(a) 축 위에서는 \(\boldsymbol{\rr}\parallel\vb{v}\parallel\vb{a}\parallel\hat{\vb{x}}\). 따라서 \(\vb{u}\times\vb{a}=0\)이 되어 <b>가속도(복사) 항이 통째로 사라진다</b> — 그래서 \(v\)가 상수가 아니어도 된다.
+
+오른쪽(\(\rhat=\hat{\vb{x}}\)): \(\vb{u}=c\rhat-\vb{v}=(c-v)\hat{\vb{x}}\), \(\boldsymbol{\rr}\cdot\vb{u}=\rr(c-v)\).
+\[ \vb{E}=\frac{q}{4\pi\eps}\frac{\rr\,(c^2-v^2)(c-v)}{\rr^3(c-v)^3}\hat{\vb{x}}
+=\boxed{\frac{q}{4\pi\eps}\frac{1}{\rr^2}\frac{c+v}{c-v}\hat{\vb{x}}},\qquad \vb{B}=\frac1c\rhat\times\vb{E}=\boxed{0} \]
+왼쪽(\(\rhat=-\hat{\vb{x}}\)): \(\vb{u}=-(c+v)\hat{\vb{x}}\), \(\boldsymbol{\rr}\cdot\vb{u}=\rr(c+v)\),
+\[ \boxed{\vb{E}=-\frac{q}{4\pi\eps}\frac{1}{\rr^2}\frac{c-v}{c+v}\hat{\vb{x}},\quad \vb{B}=0} \]
+(즉 전하 뒤쪽에서는 약해지고 앞쪽에서는 강해진다 — 지연 거리 기준으로.)
+
+(b) <b>해소:</b> (a)는 <b>지연 거리 \(\rr\)</b>, Ex. 10.4는 <b>현재 거리 \(R\)</b>로 표현되어 있다. 신호가 오는 동안(\(t-t_r=\rr/c\)) 전하가 관측점 쪽으로 \(v\rr/c\)만큼 다가왔으므로
+\[ R=\rr-\frac{v\rr}{c}=\rr\frac{c-v}{c}\ \Longrightarrow\ \frac{1}{\rr^2}=\frac{(c-v)^2}{c^2R^2}. \]
+대입하면
+\[ E=\frac{q}{4\pi\eps}\frac{(c-v)^2}{c^2R^2}\frac{c+v}{c-v}=\frac{q}{4\pi\eps R^2}\left(1-\frac{v^2}{c^2}\right)\ \checkmark \]
+\(\boxed{\text{모순 없음 — 거리 변수의 차이일 뿐}}\)
+<div class="alabel">감점 포인트</div>
+\(\rr\)와 \(R\)을 구분하지 않는 것. 이 장 전체에서 가장 위험한 혼동이다.</div><!--/sol-->

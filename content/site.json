@@ -1,0 +1,26 @@
+{
+ "title": "2026-2 학습 노트",
+ "subtitle": "서울대학교 2026년 2학기 · 과목별 학습 콘솔",
+ "owner": "CYN",
+ "timezone": "Asia/Seoul",
+ "courses": [
+  {
+   "slug": "astro1",
+   "prof": "김웅태",
+   "schedule": "화·목 14:00–15:15",
+   "blurb": "복사과정과 기체역학 — 강의 PPT·속기·플립 영상 원자료를 빠짐없이 반영한 단원별 콘솔"
+  },
+  {
+   "slug": "emwaves",
+   "prof": "박철환",
+   "schedule": "월·수 9:00–10:15",
+   "blurb": "Griffiths 5판 8–12장 — 교과서 Example·과제 Problem 중심"
+  },
+  {
+   "slug": "advmech",
+   "prof": "최재원",
+   "schedule": "월·수 11:00–12:15 · 토 연습",
+   "blurb": "Thornton & Marion 5판 — 강의노트 유도 순서와 숙제 풀이"
+  }
+ ]
+}

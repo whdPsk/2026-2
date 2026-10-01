@@ -1,0 +1,66 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 금박에 α입자를 쏘면 대부분 거의 꺾이지 않지만 극소수가 뒤로 튕겨 나온다. Coulomb 퍼텐셜 \(U=k/r\)에서 \(\sigma(\theta)\)가 \(\theta\)에 대해 어떻게 행동할지 — 작은 각에서 발산할까? 에너지 \(E\)와 전하에는 어떻게 의존할까? 차원 분석만으로 \(\sigma\propto(k/E)^2\times f(\theta)\)임을 먼저 확인해 보라.</div>
+
+<h4>9.10 Rutherford 산란 공식 <span class="en">Rutherford scattering formula</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>\(b=\kappa\cot(\theta/2)\) — 강의 식 (9.64)–(9.70)의 치환 적분 <b>(필수 · 강의가 교재보다 자세함)</b></div>
+<ol>
+<li>퍼텐셜 \(U(r)=k/r\), \(k=\dfrac{q_1q_2}{4\pi\epsilon_0}\) (\(k&gt;0\) 척력, \(k&lt;0\) 인력). \(\kappa\equiv\dfrac{k}{2T'_0}\) (길이 차원: 정면충돌 최근접 거리의 절반).</li>
+<li>궤도적분(U8 유도 3):
+\[ \Theta(b)=\int_{r_{\min}}^\infty\frac{(b/r^2)\,\dd r}{\sqrt{1-\dfrac{b^2}{r^2}-\dfrac{2\kappa}{r}}} . \]</li>
+<li><b>치환</b> \(u=b/r\), \(\dd u=-(b/r^2)\dd r\). \(r:r_{\min}\to\infty\)는 \(u:u_{\max}\to0\), 부호가 적분 구간을 뒤집는다. \(2\kappa/r=2(\kappa/b)u\)이므로
+\[ \Theta=\int_0^{u_{\max}}\frac{\dd u}{\sqrt{1-2(\kappa/b)u-u^2}} . \]</li>
+<li><b>완전제곱</b>: \(1-2(\kappa/b)u-u^2=\left[1+(\kappa/b)^2\right]-\left[u+\kappa/b\right]^2\). 표준 적분 \(\int\frac{\dd w}{\sqrt{A^2-w^2}}=\sin^{-1}(w/A)\):
+\[ \Theta=\left[\sin^{-1}\frac{u+\kappa/b}{\sqrt{1+(\kappa/b)^2}}\right]_0^{u_{\max}} . \]</li>
+<li><b>선회점</b>: \(r_{\min}\)에서 \(\dot r=0\) — 에너지 보존 \(\tfrac12\mu\dot r^2=T'_0(1-2\kappa/r-b^2/r^2)=0\) (강의 식 9.65). 즉 \(1-2(\kappa/b)u_{\max}-u_{\max}^2=0\), 양의 근은
+\[ u_{\max}+\frac\kappa b=\sqrt{1+(\kappa/b)^2}. \]
+상한에서 \(\sin^{-1}(1)=\pi/2\). 따라서
+\[ \Theta=\frac\pi2-\sin^{-1}\frac{\kappa/b}{\sqrt{1+(\kappa/b)^2}} . \]</li>
+<li>코사인을 취하면 \(\cos\Theta=\sin\left[\sin^{-1}(\cdots)\right]=\dfrac{\kappa/b}{\sqrt{1+(\kappa/b)^2}}\), \(\sin\Theta=\dfrac{1}{\sqrt{1+(\kappa/b)^2}}\), 그러므로
+\[ \tan\Theta=\frac b\kappa\quad\Longleftrightarrow\quad b=\kappa\tan\Theta . \]</li>
+<li>\(\Theta=\pi/2-\theta/2\)이므로
+\[ \boxed{\ b=\kappa\cot\frac\theta2\ } \qquad(k&gt;0,\ 0&lt;\theta&lt;\pi). \]
+정면(\(b=0\))이면 \(\theta=\pi\) 되튐 ✓, \(b\to\infty\)이면 \(\theta\to0\) ✓.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>\(\sigma(\theta)=\dfrac{k^2}{(4T'_0)^2}\dfrac{1}{\sin^4(\theta/2)}\) — 강의 식 (9.71) <b>(필수)</b></div>
+<ol>
+<li>\(\left|\od b\theta\right|=\dfrac{\kappa}{2\sin^2(\theta/2)}\).</li>
+<li>\[ \sigma(\theta)=\frac{b}{\sin\theta}\left|\od b\theta\right|=\frac{\kappa\cot(\theta/2)}{2\sin(\theta/2)\cos(\theta/2)}\cdot\frac{\kappa}{2\sin^2(\theta/2)}=\frac{\kappa^2}{4}\frac{1}{\sin^4(\theta/2)} . \]
+(\(\cot(\theta/2)=\cos/\sin\)의 \(\cos\)이 분모의 \(\cos\)과 약분.)</li>
+<li>\(\kappa=k/2T'_0\)를 넣으면
+\[ \boxed{\ \sigma(\theta)=\left(\frac{k}{4T'_0}\right)^2\frac{1}{\sin^4(\theta/2)}=\left(\frac{q_1q_2}{16\pi\epsilon_0T'_0}\right)^2\frac{1}{\sin^4(\theta/2)}\ } \]</li>
+<li><b>읽을 것</b>: ① \(k^2\)에 비례 → 인력·척력 구별 없음. ② \(E^{-2}\) → 느린 입자일수록 크게 산란. ③ \(\sin^{-4}(\theta/2)\) → 작은 각에서 급격히 커짐. Geiger–Marsden(1913) 표가 이 각의존성을 확인(강의 그림 2). ④ 양자역학 결과와 <b>정확히 같다</b> — \(1/r\) 퍼텐셜의 특수성(Bohr).</li>
+<li>\(m_1=m_2\)이면 \(T'_0=T_0/2\): \(\sigma(\theta)=\dfrac{k^2}{4T_0^2\sin^4(\theta/2)}\), LAB으로 \(\sigma(\psi)=\dfrac{k^2\cos\psi}{T_0^2\sin^4\psi}\) (교재 9.141–9.142).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>전단면적의 발산과 차폐 — 강의 식 (9.72)–(9.73)</div>
+<ol>
+<li>\[ \sigma_t=\int_{4\pi}\sigma\,\dd\Omega'=2\pi\int_0^\pi\sigma(\theta)\sin\theta\,\dd\theta . \]</li>
+<li>작은 \(\theta\)에서 \(\sigma\sim16\kappa^2/\theta^4\cdot\tfrac14\), \(\sin\theta\sim\theta\) → 피적분함수 \(\sim\theta^{-3}\) → \(\int_0\theta^{-3}\dd\theta\) <b>발산</b>. 물리적 이유: \(1/r\)이 너무 천천히 줄어 아무리 먼(큰 \(b\)) 입자도 조금은 꺾인다. \(\sigma_t=\pi b_{\max}^2\)에서 \(b_{\max}=\infty\).</li>
+<li>실제 원자핵은 전자에 의해 <b>차폐</b>되어 원자 크기 밖에서 퍼텐셜이 사라진다. 차폐 Coulomb(Yukawa) 퍼텐셜
+\[ U(r)=\frac{q_1q_2}{4\pi\epsilon_0}\frac{e^{-r/a}}{r} \]
+에 대한 양자역학적 계산(Born 근사)은 유한한 \(\sigma_t\)를 준다(강의 식 9.73 — 교재에는 없음, 자세한 것은 양자역학에서). 차폐 길이 \(a\)가 \(b_{\max}\) 역할.</li>
+<li>강의 그림 3: Debye 모형에서 양전하 주위에 유도된 음전하 구름 → 선형화된 Poisson–Boltzmann 방정식의 해가 Yukawa 꼴.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — Rutherford</div>
+\[ \kappa=\frac{k}{2T'_0},\qquad b=\kappa\cot\frac\theta2,\qquad \boxed{\ \sigma(\theta)=\frac{k^2}{(4T'_0)^2}\frac{1}{\sin^4(\theta/2)}\ } \]
+<p class="note">\(\Theta(b)\) 적분: \(u=b/r\) → 완전제곱 → \(\sin^{-1}\) → \(\tan\Theta=b/\kappa\). 전단면적은 발산(차폐로 해결).</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u09-1"><div class="qq">(시험형) \(U=k/r\)에 대해 \(\Theta(b)\) 적분을 \(u=b/r\) 치환으로 수행해 \(b=\kappa\cot(\theta/2)\)를 유도하라. 선회점 조건을 어디서 쓰는지 명시할 것.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>유도 1의 3–7단계. 선회점 조건은 적분 <b>상한</b> \(u_{\max}\)을 정하는 데 쓰이며, 그 결과 상한의 \(\sin^{-1}\) 인자가 정확히 1이 되어 \(\pi/2\)를 준다. 이 한 줄이 계산의 핵심 — 여기서 막히면 완전제곱식 \(A^2-w^2\)의 \(A\)가 근호 안이 0이 되는 \(w\)와 같다는 것을 떠올려라.</p></div></div>
+
+<div class="qz" data-q="u09-2"><div class="qq">5 MeV α입자(\(q_1=2e\))가 금(\(Z=79\))에 산란된다. 금핵을 고정으로 보고 (a) 정면충돌 최근접 거리 \(d=2\kappa\) (b) \(\theta=90°\)에 해당하는 충돌 변수를 구하라. (\(e^2/4\pi\epsilon_0=1.44\ \mathrm{MeV\cdot fm}\))</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>(a) \(k=2\cdot79\cdot1.44=227.5\ \mathrm{MeV\,fm}\). \(d=k/T=227.5/5=45.5\ \mathrm{fm}\). (핵 반지름 ~7 fm보다 크다 → 순수 Coulomb 가정 OK.)</p>
+<p>(b) \(\kappa=d/2=22.8\ \mathrm{fm}\), \(b=\kappa\cot45°=22.8\ \mathrm{fm}\).</p>
+<p>의미: 90° 이상 산란되려면 \(b&lt;23\ \mathrm{fm}\) — 원자 크기(~\(10^5\) fm)에 비해 극히 작은 과녁. Rutherford가 "대포알이 종이에 튕겨 돌아왔다"고 놀란 이유.</p></div></div>
+
+<div class="qz" data-q="u09-3"><div class="qq">\(\sigma(\theta)=\dfrac{b}{\sin\theta}\left|\dfrac{\dd b}{\dd\theta}\right|\)에 \(b=\kappa\cot(\theta/2)\)를 넣어 \(\kappa^2/(4\sin^4(\theta/2))\)를 끝까지 계산하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(\dd b/\dd\theta=-\dfrac{\kappa}{2}\csc^2\dfrac\theta2\). 곱: \(\dfrac{\kappa\cos(\theta/2)/\sin(\theta/2)}{2\sin(\theta/2)\cos(\theta/2)}\cdot\dfrac{\kappa}{2\sin^2(\theta/2)}=\dfrac{\kappa^2}{4\sin^4(\theta/2)}\) ✓.</p></div></div>
+
+<div class="qz" data-q="u09-4"><div class="qq">Rutherford 전단면적이 발산함을 보이고, 적분 하한을 \(\theta_{\min}\)(차폐로 인한 최소 각)으로 자르면 \(\sigma_t\)가 어떻게 되는지 구하라. \(\theta_{\min}\)과 \(b_{\max}\)의 관계로 해석하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(\sigma_t=2\pi\int_{\theta_{\min}}^\pi\frac{\kappa^2}{4}\frac{\sin\theta}{\sin^4(\theta/2)}\dd\theta\). \(s=\sin(\theta/2)\), \(\sin\theta\,\dd\theta=4s\,\dd s\):
+\[ \sigma_t=2\pi\kappa^2\int_{s_{\min}}^1 s^{-3}\dd s=\pi\kappa^2\left(\frac{1}{s_{\min}^2}-1\right)=\pi\kappa^2\cot^2\frac{\theta_{\min}}2 . \]
+\(\kappa\cot(\theta_{\min}/2)=b_{\max}\)이므로 \(\sigma_t=\pi b_{\max}^2\) — 정확히 기하학적 원판 ✓. \(\theta_{\min}\to0\)이면 발산.</p></div></div>

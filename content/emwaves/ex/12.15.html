@@ -1,0 +1,56 @@
+<div class="exq"><b>상황.</b> 점전하 \(q\)가 일정한 속도 \(\vb v\)로 움직인다. 이 전하가 만드는 자기장 \(\vb B\)를 구하라. 핵심 관찰은 <b>전하의 정지계에서는 자기장이 어디에서나 정확히 0</b>이라는 것이다. 완전한 장 변환식에서 "\(S\)에서 \(\vb B=0\)"인 특수한 경우를 쓰면 계산이 극적으로 짧아진다. Example 12.14에서 구한 \(\vb E\)를 그대로 재활용한다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>한 계에서 \(\vb B=0\)이면 다른 계에서 \(\bar{\vb B}=-\dfrac{1}{c^2}(\vb v_{\text{frame}}\times\bar{\vb E})\) — 새 계의 장끼리만의 관계다.</div>
+<ol>
+<li><b>특수 경우 공식을 확인한다.</b> 일반 변환식
+\[ \bar{\vb B}^\perp=\gamma\left(\vb B^\perp-\frac{\vb v}{c^2}\times\vb E^\perp\right),\qquad \bar{\vb B}^\parallel=\vb B^\parallel \]
+에서 \(S\)의 \(\vb B=0\)을 넣고 \(\bar{\vb E}^\perp=\gamma(\vb E^\perp+\vb v\times\vb B^\perp)=\gamma\vb E^\perp\)를 이용하면
+\[ \bar{\vb B}=-\frac{1}{c^2}\,(\vb v_{\text{frame}}\times\bar{\vb E}). \]
+여기서 \(\vb v_{\text{frame}}\)은 <b>기준계</b>의 속도다.</li>
+<li><b>부호를 정리한다.</b> 우리는 전하가 정지한 계 \(S_0\)에서 출발한다. 관측계 \(S\)는 \(S_0\)에 대해 \(-\vb v\)로 움직이므로(그래야 \(S\)에서 전하가 \(+\vb v\)로 보인다), \(\vb v_{\text{frame}}=-\vb v\)를 넣으면
+\[ \vb B=\frac{1}{c^2}(\vb v\times\vb E), \]
+이제 \(\vb v\)는 <b>입자의 속도</b>다. (부호 혼동이 가장 잦은 지점이니 주의.)</li>
+<li><b>Example 12.14의 \(\vb E\)를 대입한다.</b> \(\vb E\)는 \(\hat{\vb R}\) 방향이므로 \(\vb v\times\hat{\vb R}=v\sin\theta\,\hat{\boldsymbol\phi}\):
+\[ \vb B=\frac{1}{c^2}\cdot\frac{q}{4\pi\eps}\frac{1-v^2/c^2}{[1-(v^2/c^2)\sin^2\theta]^{3/2}}\frac{v\sin\theta}{R^2}\hat{\boldsymbol\phi}. \]</li>
+<li><b>\(1/(\eps c^2)=\muz\)로 바꾼다.</b></li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \vb B=\frac{\muz}{4\pi}\,\frac{q\,v\,(1-v^2/c^2)\sin\theta}{\big[1-(v^2/c^2)\sin^2\theta\big]^{3/2}}\,\frac{\hat{\boldsymbol\phi}}{R^2} \qquad\left(=\frac{1}{c^2}\,\vb v\times\vb E\right)\ } \]
+<p>\(\hat{\boldsymbol\phi}\)는 다가오는 전하를 마주 보았을 때 반시계 방향이다.</p>
+<p class="note"><b>검산</b>: (i) <b>비상대론 극한</b> \(v^2\ll c^2\)에서 괄호 인자들이 1이 되어
+\[ \vb B\approx\frac{\muz}{4\pi}\frac{q\,\vb v\times\hat{\vb R}}{R^2}, \]
+이는 점전하에 Biot–Savart 법칙을 소박하게 적용한 결과(Eq. 5.43)와 정확히 일치한다 ✓ — 자기장이 "상대론적으로 보정된 전기장"임을 보여주는 가장 깔끔한 증거다. (ii) 차원: \(E/c^2\times v\)는 \(\dfrac{\mathrm{V/m}}{\mathrm{m^2/s^2}}\cdot\dfrac{\mathrm m}{\mathrm s}=\dfrac{\mathrm{V\,s}}{\mathrm{m^2}}=\mathrm T\) ✓. (iii) \(v\to0\)이면 \(\vb B\to0\) ✓(정지 전하는 자기장이 없다). (iv) \(\theta=0,\pi\)(운동축 위)에서 \(\vb B=0\) ✓ — \(\vb v\times\hat{\vb R}=0\). (v) \(|\vb B|/|\vb E|=v\sin\theta/c^2\le v/c^2\ll1/c\)이므로 자기력은 전기력보다 \(\sim v^2/c^2\)만큼 작다 — 자기 현상이 "약한 상대론적 효과"인 이유 ✓.</p></div>
+<div class="qz" data-q="ex12.15-a"><div class="qq"><b>+α</b> (불변량 연결) 이 \(\vb E,\vb B\)가 두 상대론적 불변량 \(\vb E\cdot\vb B\)와 \(E^2-c^2B^2\)에 대해 무엇을 주는지 계산하고, 그 값들이 <em>정지계에서의 값</em>과 같음을 확인하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) \(\vb E\cdot\vb B\).</b> \(\vb E\parallel\hat{\vb R}\)이고 \(\vb B\parallel\hat{\boldsymbol\phi}\)인데 이 둘은 직교한다:</p>
+\[ \boxed{\ \vb E\cdot\vb B=0\ } \]
+<p>정지계에서 \(\vb B_0=0\)이므로 \(\vb E_0\cdot\vb B_0=0\) ✓ 일치. 실제로 \(\vb B=\tfrac{1}{c^2}\vb v\times\vb E\)이면 항상 \(\vb B\perp\vb E\)이므로 자동이다.</p>
+<p><b>2) \(E^2-c^2B^2\).</b> \(|\vb B|=\dfrac{v\sin\theta}{c^2}|\vb E|\)이므로</p>
+\[ E^2-c^2B^2=E^2\left(1-\frac{v^2\sin^2\theta}{c^2}\right)=E^2\left(1-\beta^2\sin^2\theta\right). \]
+<p>여기에 Example 12.14의 \(E\)를 넣으면</p>
+\[ E^2-c^2B^2=\left(\frac{q}{4\pi\eps R^2}\right)^2\frac{(1-\beta^2)^2}{(1-\beta^2\sin^2\theta)^3}\cdot(1-\beta^2\sin^2\theta) =\left(\frac{q}{4\pi\eps}\right)^2\frac{(1-\beta^2)^2}{R^4(1-\beta^2\sin^2\theta)^2}. \]
+<p><b>정지계 값과 비교.</b> 정지계에서 같은 사건점까지의 거리는(Example 12.14의 5단계)</p>
+\[ r_0^2=\gamma^2R^2(1-\beta^2\sin^2\theta)\ \Longrightarrow\ r_0^4=\gamma^4R^4(1-\beta^2\sin^2\theta)^2. \]
+<p>따라서</p>
+\[ E_0^2-c^2B_0^2=E_0^2=\left(\frac{q}{4\pi\eps r_0^2}\right)^2=\left(\frac{q}{4\pi\eps}\right)^2\frac{1}{\gamma^4R^4(1-\beta^2\sin^2\theta)^2}. \]
+<p>\(\gamma^{-4}=(1-\beta^2)^2\)이므로 두 표현이 <b>정확히 같다</b>:</p>
+\[ \boxed{\ E^2-c^2B^2=E_0^2&gt;0\quad(\text{모든 계에서 동일})\ } \]
+<p><b>의미.</b> \(E^2-c^2B^2&gt;0\)이라는 것은 <b>자기장을 0으로 만드는 관성계가 존재</b>한다는 뜻이고(실제로 전하의 정지계가 그것), \(\vb E\cdot\vb B=0\)은 그런 계의 존재를 위한 필요조건이다. 반대로 \(E^2-c^2B^2&lt;0\)이면 전기장을 0으로 만드는 계가 존재한다.</p>
+<p><b>검산</b>: (i) \(\beta\to0\)이면 \(r_0\to R\), \(E\to E_0\), \(B\to0\)이라 항등식이 자명해진다 ✓. (ii) 두 불변량 모두 \(\theta\)와 \(\beta\)에 대한 복잡한 의존성이 <em>정확히 상쇄</em>되어 \(1/r_0^4\) 하나만 남는다 — 계산이 맞았다는 강력한 증거 ✓. (iii) 차원: \(E^2\)와 \(c^2B^2\)이 같은 차원 ✓.</p></div></div>
+<div class="qz" data-q="ex12.15-b"><div class="qq"><b>+α</b> (앞 결과와 연결) 두 전하 \(q\)가 나란히 같은 속도 \(v\)로, 운동 방향에 수직으로 거리 \(d\)만큼 떨어져 달린다. 서로 나란히 놓인 순간의 알짜 힘을 구하고, <b>두 전하의 공통 정지계</b>에서의 계산과 정합함을 보여라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>실험실계 계산.</b> 나란히 놓인 순간이므로 \(\theta=90^\circ\), \(R=d\).</p>
+<p>전기장(Example 12.14, \(\theta=90^\circ\)):</p>
+\[ E=\frac{q}{4\pi\eps}\frac{1-\beta^2}{(1-\beta^2)^{3/2}}\frac{1}{d^2}=\frac{q}{4\pi\eps}\frac{\gamma}{d^2}. \]
+<p>자기장:</p>
+\[ B=\frac{v}{c^2}E\qquad(\sin\theta=1). \]
+<p>힘: 전기력은 <b>척력</b>(같은 부호), 자기력은 평행 전류처럼 <b>인력</b>이다.</p>
+\[ F=qE-qvB=qE\left(1-\frac{v^2}{c^2}\right)=\frac{q^2}{4\pi\eps}\frac{\gamma}{d^2}\cdot\frac{1}{\gamma^2}, \]
+\[ \boxed{\ F=\frac{1}{\gamma}\cdot\frac{q^2}{4\pi\eps d^2}\quad(\text{척력})\ } \]
+<p><b>공통 정지계 계산.</b> 두 전하가 함께 정지해 있는 계 \(S_0\)에서는 자기장이 없고 거리도 \(d\) 그대로다(수직 방향은 수축하지 않는다!). 순수 Coulomb 척력:</p>
+\[ F_0=\frac{q^2}{4\pi\eps d^2}. \]
+<p><b>정합성 확인.</b> 힘의 <b>수직 성분</b> 변환 법칙은 \(F_\perp=F_{0\perp}/\gamma\)이다(운동 방향에 수직인 힘은 \(\gamma\)로 나뉜다 — \(dp_\perp\)는 불변인데 \(dt=\gamma\,d\tau\)로 늘어나므로). 따라서</p>
+\[ F=\frac{F_0}{\gamma}=\frac{1}{\gamma}\frac{q^2}{4\pi\eps d^2}\ \checkmark \]
+<p>두 계산이 <b>완벽히 일치</b>한다. 전기장이 \(\gamma\)배 세지는 효과와 자기력이 \((1-\beta^2)\)만큼 깎는 효과가 결합해 정확히 \(1/\gamma\)를 만든다.</p>
+<p><b>검산</b>: (i) \(v\ll c\)이면 \(\gamma\to1\)이라 \(F\to q^2/4\pi\eps d^2\) — 순수 Coulomb ✓. (ii) \(v\to c\)이면 \(F\to0\) — 전기 척력과 자기 인력이 거의 완전히 상쇄된다. 이것이 고에너지 하전입자 빔이 자기적 자체집속(self-focusing) 덕분에 잘 흩어지지 않는 이유다 ✓. (iii) 자기력/전기력 비율은 \(v^2/c^2\)로, Example 12.15의 note에서 예상한 크기와 일치 ✓. (iv) 만약 두 전하가 <em>반대 방향</em>으로 달린다면 자기력의 부호가 뒤집혀 \(F=qE(1+\beta^2)\)가 되어 오히려 커진다 — 조건 하나만 바꿔도 답이 달라지니 주의.</p></div></div>

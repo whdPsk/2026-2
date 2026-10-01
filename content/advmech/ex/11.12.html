@@ -1,0 +1,13 @@
+<div class="exq"><b>상황.</b> 외력 없는 대칭 팽이에서 대칭축 \(\uv e_3\)와 \(\boldsymbol\omega\)가 고정된 \(\vb L\) 둘레를 도는 각속도는?</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>세 벡터 공면 → 같은 각속도. Euler 각의 \(\dot\phi\)가 곧 그것.</div>
+<ol>
+<li>\(x'_3\parallel\vb L\)로 잡으면 \(\uv e_3\)가 \(\vb L\) 둘레를 도는 각속도 = \(\dot\phi\).</li>
+<li>\(\uv e_2\)가 공통 평면에 있는 순간 \(\psi=0\): U21에서 \(\omega_2=\dot\phi\sin\theta\).</li>
+<li>\(\omega_2=\omega\sin\alpha=L_2/I_1=L\sin\theta/I_1\).</li>
+<li>\(\dot\phi=\dfrac{\omega_2}{\sin\theta}=\dfrac{L}{I_1}\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \dot\phi=\frac{L}{I_1}=\frac{\omega\sin\alpha}{\sin\theta}\ } \]
+<p class="note"><b>검산</b> ① \(\theta\to0\)이면 \(\dot\phi\to L/I_1\approx(I_3/I_1)\omega_3\) — 물체계 세차 \(\Omega\)와의 관계: \(\dot\phi=\omega_3+\Omega\) (작은 각에서, 공간 세차 = 자전 + 물체계 세차) ✓: \(\omega_3+\frac{I_3-I_1}{I_1}\omega_3=\frac{I_3}{I_1}\omega_3\). ② \(\dot\phi\)는 상수 — 물체가 일정하게 세차.</p></div>
+<div class="qz" data-q="ex11.12-a"><div class="qq"><b>+α</b> \(\dot\psi\)(자전 각속도)를 구하고, \(\omega_3=\dot\phi\cos\theta+\dot\psi\)와 \(\Omega\)의 관계를 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\dot\psi=\omega_3-\dot\phi\cos\theta=\omega_3-\frac{L\cos\theta}{I_1}=\omega_3-\frac{I_3\omega_3}{I_1}=\frac{I_1-I_3}{I_1}\omega_3=-\Omega\). 물체계에서 \(\boldsymbol\omega\)가 \(\uv e_3\) 둘레를 \(\Omega\)로 도는 것 = 물체가 공통 평면에 대해 \(-\Omega\)로 자전하는 것 ✓.</p></div></div>
+<div class="qz" data-q="ex11.12-b"><div class="qq"><b>+α</b> 지구의 자유 세차(Chandler): \(\frac{I_3-I_1}{I_1}\approx\frac1{300}\), \(\omega_3=\)1 rad/day 단위. 공간에서 자전축이 \(\vb L\) 둘레를 도는 주기와 물체(지구 표면)에서 본 극의 이동 주기를 구분해 말하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>공간: \(\dot\phi=\frac{I_3}{I_1}\omega_3\approx1.0033\omega_3\) → 주기 약 1일(자전과 거의 같이 돈다). 지구 표면: \(\Omega=\omega_3/300\) → 약 300일(관측 Chandler 요동 약 433일 — 탄성 지구·해양 효과). 측지학에서 보는 것은 후자.</p></div></div>

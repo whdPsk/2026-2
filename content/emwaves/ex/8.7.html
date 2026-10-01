@@ -1,0 +1,59 @@
+<div class="exq"><b>상황.</b> Ex 8.5·8.6에서는 자석이 고정돼 있고 물체만 올라갔다(=자석 위에 클립을 띄우는 상황). 진짜 자기 크레인은 다르다 — 자석과 차가 <b>맞붙은 채</b> 함께 케이블에 매달려 올라간다. 모형: 위 상자에 큰 고리(전류 \(I_b\)), 아래 상자에 작은 고리(전류 \(I_a\)), 인력이 무게보다 훨씬 커서 두 상자가 딱 붙어 있다. 이 덩어리를 밧줄로 끌어올린다. 질문은 같다 — <b>누가 일을 했는가?</b> 그리고 전원은 이번에도 일을 해야 하는가?</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>두 고리의 <b>상대 거리 \(h\)가 변하지 않으므로</b> \(M\)이 변하지 않고, 따라서 기전력도 장 에너지 변화도 0.</div>
+<ol>
+<li><b>핵심 변수는 \(h\)이지 \(z\)가 아니다.</b> 상호 인덕턴스 \(M\)은 두 고리의 <em>상대 배치</em>에만 의존한다: \(M=M(h)\). 두 상자가 붙어 강체처럼 함께 올라가면 \(h=\)const, 즉 \(\dd M=0\).</li>
+
+<li><b>아래 고리의 자속.</b> \(\Phi_a=M(h)I_b\)에서 \(M\)과 \(I_b\) 모두 불변이므로
+\[ \frac{\dd\Phi_a}{\dd t}=0\;\Longrightarrow\;\mathcal E_a=0. \]
+개별적으로 보면 두 효과가 상쇄된 것이다: 아래 고리가 위로 움직여 더 센 장 속으로 들어가므로 자속이 <em>늘려는</em> 경향(운동기전력)과, 위 고리도 같이 올라가서 공간의 각 점에서 장이 <em>줄어드는</em> 경향(Faraday)이 정확히 맞물린다.</li>
+
+<li><b>전원이 할 일이 없다.</b> \(\mathcal E_a=\mathcal E_b=0\)이므로 전류를 유지하는 데 에너지가 들지 않는다. (초전도 고리라면 전원 자체가 불필요하다.)</li>
+
+<li><b>장 에너지도 불변.</b> \(U=\tfrac12L_aI_a^{2}+\tfrac12L_bI_b^{2}+MI_aI_b\)에서 모든 항이 상수 → \(\dd U=0\).</li>
+
+<li><b>그럼 위치에너지는 어디서?</b> 남은 것은 하나뿐 — 밧줄을 당기는 사람이다. 강체 덩어리(총질량 \(m_{\rm tot}\))가 \(\dd z\) 올라갈 때
+\[ \dd W_{\rm rope}=T\,\dd z=m_{\rm tot}g\,\dd z=\dd W_g. \]</li>
+
+<li><b>자기장의 역할.</b> 밧줄은 <em>위 상자</em>만 당긴다. 아래 상자를 위로 끌어올리는 힘은 자기 인력이다. 즉 자기장은 밧줄이 공급한 에너지를 아래 상자로 <b>전달</b>했다. 그러나 전달은 일이 아니다 — 아래 고리 전하들이 받는 힘 \(q\vb{v}\times\vb{B}\)는 여전히 속도에 수직이고, 위·아래 상자에 작용하는 자기력은 크기가 같고 방향이 반대(작용–반작용)라 총합은 0이다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \dd M=0\;\Rightarrow\;\mathcal E_a=\mathcal E_b=0,\quad \dd U=0,\quad \dd W_{\rm rope}=m_{\rm tot}g\,\dd z,\quad \dd W_{\rm mag}=0\ } \]
+<p class="note">세 Example(8.5·8.6·8.7)의 공통 결론: <b>자기력은 절대 일을 하지 않는다.</b> 다만 에너지의 출처는 상황마다 다르다 — 8.5에서는 고리의 회전에너지, 8.6에서는 전원, 8.7에서는 밧줄. 자기장은 언제나 "회계 담당"일 뿐 "자금원"이 아니다. <b>검산</b> ① 8.6과의 대조: 8.6은 \(h\)가 변해서 \(\dd M\ne0\)이었고 전원이 \(2mg\dd z\)를 냈다. 8.7은 \(\dd M=0\)이라 전원 몫이 0 — 두 결과가 같은 공식 \(\dd W_{\rm supply}=-I_aI_b\,\dd M\)의 서로 다른 값 ✓. ② 극한 확인: 만약 위 상자를 먼저 조금 올리고 아래가 늦게 따라온다면 순간적으로 \(h\)가 늘어나 \(\dd M\ne0\)이 되고 즉시 8.6의 회계로 되돌아간다 ✓ — 두 결과가 연속적으로 이어진다. ③ 힘의 균형: 밧줄 장력 \(T=m_{\rm tot}g\)이고 아래 상자에 대해 \(F_{\rm mag}=m_ag\), 위 상자에 대해 \(T=m_bg+F_{\rm mag}\) → \(T=(m_a+m_b)g\) ✓ 일관.</p></div>
+
+<div class="qz" data-q="ex8.7-a"><div class="qq"><b>+α</b> 정량 확인: 두 고리가 간격 \(h\)를 유지한 채 <em>함께</em> 속도 \(u\)로 올라간다고 하자. 아래 고리에 대해 (a) 운동기전력(motional emf) 항과 (b) Faraday 항을 <b>따로</b> 계산해 서로 정확히 상쇄됨을 보여라. \(M(h)\)를 이용해도 좋다.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>설정.</b> 위 고리의 높이를 \(z_b(t)\), 아래 고리의 높이를 \(z_a(t)\), 간격 \(h=z_b-z_a\). 아래 고리를 지나는 자속은
+\[ \Phi_a=M(h)\,I_b,\qquad h=z_b-z_a. \]</p>
+<p><b>(a) 운동기전력 항 (아래 고리가 움직여서).</b> 위 고리를 고정하고 아래만 \(u\)로 올린다면 \(\dot h=-u\):
+\[ \left(\frac{\dd\Phi_a}{\dd t}\right)_{\rm motional}=I_b\frac{\dd M}{\dd h}(-u)=+I_bu\left|\frac{\dd M}{\dd h}\right| \]
+(\(\dd M/\dd h&lt;0\)이므로 <b>양수</b> — 자속이 늘어난다. 아래 고리가 더 센 장으로 들어가니까.)</p>
+<p><b>(b) Faraday 항 (위 고리가 움직여서).</b> 아래 고리를 고정하고 위만 \(u\)로 올린다면 \(\dot h=+u\):
+\[ \left(\frac{\dd\Phi_a}{\dd t}\right)_{\rm Faraday}=I_b\frac{\dd M}{\dd h}(+u)=-I_bu\left|\frac{\dd M}{\dd h}\right| \]
+(<b>음수</b> — 자석이 멀어지니 공간 각 점의 장이 약해진다.)</p>
+<p><b>합.</b>
+\[ \frac{\dd\Phi_a}{\dd t}=I_b\frac{\dd M}{\dd h}\big(\dot z_b-\dot z_a\big)=I_b\frac{\dd M}{\dd h}(u-u)=0 \;\Longrightarrow\;\boxed{\mathcal E_a=0} \]
+두 항의 크기가 \(I_bu|\dd M/\dd h|\)로 같고 부호가 반대 ✓.</p>
+<p><b>물리적 해석.</b> 8.5에서는 (a)만 있었고(자석 고정), 그래서 고리가 제동을 받아 회전이 느려졌다. 8.7에서는 (b)가 (a)를 정확히 취소해 제동이 없다 — 그래서 전원도, 회전에너지도 소모되지 않는다. 자기력의 "수평 성분"이 사라진 것이 아니라, 두 상자 사이의 상대운동이 없어서 그 성분이 알짜로 0이 된 것.</p>
+<p><b>검산</b>: \(\dot z_a\ne\dot z_b\)인 일반 경우에도 \(\mathcal E_a=-I_b\frac{\dd M}{\dd h}(\dot z_b-\dot z_a)\)로 <b>상대속도에만</b> 의존한다 ✓ — Galilei 불변성과 일관. \(\dot z_b=0\)로 두면 Ex 8.6의 결과가 정확히 회복된다 ✓.</p>
+</div></div>
+
+<div class="qz" data-q="ex8.7-b"><div class="qq"><b>+α</b> 명제의 한계 시험: 만약 <b>자기 홀극</b>(magnetic monopole)이 존재해서 힘 법칙이 \(\vb{F}=q_e(\vb{E}+\vb{v}\times\vb{B})+q_m\!\left(\vb{B}-\eps\muz\,\vb{v}\times\vb{E}\right)\)로 바뀐다면, "자기장은 일을 하지 않는다"는 여전히 참인가? 단위시간당 일 \(P=\vb{F}\cdot\vb{v}\)를 계산해 판정하고, 홀극으로 만든 크레인은 어떻게 다른지 논하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 일률 계산.</b>
+\[ P=\vb{F}\cdot\vb{v}=q_e\vb{E}\cdot\vb{v}+q_e(\vb{v}\times\vb{B})\cdot\vb{v}+q_m\vb{B}\cdot\vb{v}-q_m\eps\muz(\vb{v}\times\vb{E})\cdot\vb{v}. \]
+외적 항은 둘 다 \(\vb{v}\)에 수직이므로 소멸:
+\[ \boxed{\ P=q_e\,\vb{E}\cdot\vb{v}+q_m\,\vb{B}\cdot\vb{v}\ } \]</p>
+<p><b>2) 판정.</b> 명제를 정밀하게 다시 쓰면 이렇다:
+<br>• <b>전기장</b>은 <em>전기</em>전하에만 일을 한다.
+<br>• <b>자기장</b>은 <em>자기</em>전하에만 일을 한다.
+<br>따라서 "자기장은 일을 하지 않는다"는 <b>전기전하만 존재하는 세계</b>에서의 명제다. 홀극이 있다면 \(\vb{B}\)는 얼마든지 일을 할 수 있다. 대칭적으로, \(-\eps\muz\vb{v}\times\vb{E}\) 항(홀극이 받는 "전기적 Lorentz 힘")은 일을 하지 않는다 — 전기·자기의 완전한 이중성(duality)이 보인다.</p>
+<p><b>3) 홀극 크레인.</b> 자기 홀극 \(q_m\)을 \(B_z\) 속에서 \(\dd z\)만큼 들어올린다면
+\[ \dd W=q_mB_z\,\dd z \]
+로 <b>장이 직접</b> 일을 한다. 이 경우엔 회전이 느려질 필요도, 전원이 에너지를 부을 필요도, 밧줄을 당길 사람도 없다 — 에너지는 자기장 자체에서 나온다(정확히는 자기장 에너지가 줄어든다). 반면 실제 폐차는 전자의 궤도·스핀 전류로 만들어진 것이므로 \(q_m=0\)이고, 본문의 결론이 그대로 유지된다.</p>
+<p><b>4) 또 다른 탈출구는?</b> "고유(intrinsic) 점 자기 쌍극자"가 전류고리가 아니라 그 자체로 존재하고 \(\vb{F}=\nabla(\vb{m}_i\cdot\vb{B})\)를 받는다면 역시 \(\vb{B}\)가 일을 할 수 있다(\(P=\nabla(\vb{m}_i\cdot\vb{B})\cdot\vb{v}\ne0\)). 하지만 이는 "모든 자기 현상은 움직이는 전하 때문"이라는 Ampère의 가정을 버리는 것이므로 <b>고전 전기역학이 아니다</b>. 고전 이론 안에서 점 쌍극자는 언제나 작은 전류고리의 극한으로 해석해야 한다.</p>
+<p><b>검산</b>: 홀극이 없으면(\(q_m=0\)) \(P=q_e\vb{E}\cdot\vb{v}\)로 표준 결과 회복 ✓. 차원: \(q_mB v\) — \(q_m\)의 단위를 A·m로 잡으면 (A·m)(T)(m/s)=W ✓. 이중성 확인: \(\vb{E}\to c\vb{B},\ c\vb{B}\to-\vb{E},\ q_e\to q_m/c\) 치환에서 힘 법칙이 자기 자신으로 옮겨간다 ✓.</p>
+</div></div>

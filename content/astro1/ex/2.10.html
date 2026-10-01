@@ -1,0 +1,12 @@
+<div class="exq"><span class="examtag">PPT Q1 · 9/8 수업 문제</span><br>We make H I 21 cm observations of a cloud which happens to have a 500 K continuum source behind it. We see the following sort of line profiles (off-source: 20 K emission peak; on-source: 500 K continuum dipping to 400 K). Find τ_ν0, the excitation temperature T_ex of the cloud.<br>(번역) 뒤에 500 K 연속광원(퀘이사)이 있는 구름을 21 cm로 관측: 광원 밖(off)에선 20 K 방출선, 광원 위(on)에선 500 K에서 400 K로 파인 흡수선. 선중심 광학깊이와 들뜸 온도는? [[L03.s9a]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>RT 해(RJ, 밝기온도) 두 식 [[S0908.29]]</div><ol>
+<li>\(T_B=T_{B0}e^{-\tau}+T_{\rm ex}(1-e^{-\tau})\) — 21 cm라 RJ로 세기↔온도 선형. [[S0908.30]]</li>
+<li>off(T_B0=0): \(20=T_{\rm ex}(1-e^{-\tau})\).</li>
+<li>on: \(400=500e^{-\tau}+T_{\rm ex}(1-e^{-\tau})\).</li>
+<li>빼기: \(380=500e^{-\tau}\) → \(\tau=\ln(500/380)=0.2744\).</li>
+<li>\(T_{\rm ex}=20/(1-0.76)=83.3\) K.</li></ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>τ_ν0 = 0.274 (PPT 답 0.273 — Q2 슬라이드는 0.274), T_ex = 83.3 K. [[L03.s9b]]</p></div>
+<div class="intuit"><b>수업</b>선윤곽 φ와 RT 해만으로 흡수선(on)·방출선(off) 모양이 저절로 나온다. 학생 답 "27.5"는 너무 작음. [[S0908.28]] CMB는 문제에 언급이 없어 무시(마이크로파면 중요할 수 있음). [[S0908.30]]</div>
+<div class="trap"><b>함정</b>방출선(off)만으로는 τ와 T_ex를 분리할 수 없다 — 배경 광원 앞의 흡수선이 반드시 필요한데 그런 광원이 드물다. [[S0908.31]]</div>
+<div class="qz" data-q="ex2.10-a"><div class="qq"><b>+α</b> CMB(2.7 K)를 배경으로 넣으면(off: T_B0=2.7 K, on: 502.7 K, 관측은 배경 차감 전 그대로 20 K·400 K라 가정) τ는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>빼면 (502.7−2.7)e^{−τ}=380 → τ 동일(0.274). off: 20=2.7e^{−τ}+T_ex(1−e^{−τ}) → T_ex=(20−2.08)/0.24=74.7 K.</p></div></div>
+<div class="qz" data-q="ex2.10-b"><div class="qq"><b>+α</b> on-source 바닥이 250 K였다면?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>500e^{−τ}=230 → τ=0.777, T_ex=20/(1−0.46)=37 K.</p></div></div>

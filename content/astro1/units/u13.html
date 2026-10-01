@@ -1,0 +1,179 @@
+<div class="predict"><b>◈ 학습 목표.</b> 같은 로렌츠 진동자 하나로 ① 방출: 복사 감쇠(\(\tau=2e^2/3m_ec^3\), \(\Gamma=\omega_0^2\tau\))로 진폭이 \(e^{-\Gamma t/2}\)로 줄고, 푸리에 변환하면 <b>로렌츠 선윤곽</b>과 <b>자연 선폭 \(\Delta\lambda=2\pi c\tau=1.18\times10^{-4}\)Å</b>이 나옴을, ② 흡수·산란: 구동 감쇠 진동자의 단면적 \(\sigma=\sigma_T\omega^4/[(\omega^2-\omega_0^2)^2+\Gamma^2\omega^2]\)의 세 영역(레일리·공명·톰슨)을, ③ 흡수선의 세기: 적분 단면적 \(\pi e^2/m_ec\)와 진동자 세기 \(f\)를 설명한다. 시험은 유도보다 "왜 그런 모양인가"와 수치 적용 위주.</div>
+
+<h4>1. 로렌츠 진동자 모형 <span class="en">Oscillator Model of an Atom</span></h4>
+<div class="slide"><div class="sh">L06 · 슬라이드 10 <span class="st">Oscillator Model of an Atom</span></div>
+<ul>
+<li>Line radiation from atoms and ions is quantum mechanical processes, but one can use classical theory using damped oscillators to obtain approximate expression for radiated power.</li>
+<li>In the <b>Lorentz oscillator</b> model, an electron <b>bound to a nucleus</b> by a spring is in simple harmonic oscillations with frequency \(\omega_0\).</li>
+<li>EOM: \(\ddot{\mathbf x}=-\omega_0^2\mathbf x\)
+<ul><li>Solution: \(\mathbf x(t)=\mathbf x_0\cos(\omega_0t)\)</li></ul></li>
+<li>The total power radiated over one cycle is
+\[ \langle P\rangle=\frac{2e^2}{3c^3}\langle|\ddot{\mathbf x}|^2\rangle=\frac{2e^2x_0^2\omega_0^4}{3c^3}\langle\cos^2\omega_0t\rangle=\frac{e^2\omega_0^4}{3c^3}x_0^2 \]</li>
+</ul> [[L06.s10]]</div>
+<div class="explain"><b>부가설명</b> 목표는 <b>흡수선·방출선의 선윤곽(line profile)</b>을 유도하는 것. 역사적으로 로렌츠는 전자가 알려지기 전에 이온 같은 하전입자가 복사장과 어떻게 상호작용하는지 연구하려고 이 모형을 생각했다. 새로운 원자 모형을 만든 것은 아니고, 전자가 원자핵에 용수철로 연결되어 단조화 진동(고유 진동수 \(\omega_0\))을 하는 <span class="hl">가장 단순한 모형</span>. 양자역학적 원자 모형은 복잡하지만, 진동 = 가속이므로 에너지 방출이 있고 그것을 계산할 수 있다. 흐름: 단조화 진동자의 운동방정식 → 가속도를 알면 → 복사 파워. [[S0917.27]]</div>
+<div class="explain"><b>부가설명 · 모형의 자기모순</b> 라모 공식에 해 \(x_0\cos\omega_0t\)를 두 번 미분해 넣으면 \(\omega_0^4\), \(\cos^2\) 평균 \(\tfrac12\) → 한 사이클 동안 방출되는 평균 파워. 그런데 복사가 나가면 시스템은 에너지를 잃어야 하는데 단조화 운동방정식은 영원히 같은 진폭으로 진동한다 → <span class="hl">self-consistent한 모형이 아니다</span>. 역학에서 에너지 손실은 감쇠항(damping term)으로 넣는다 — 감쇠는 위치·속도·가속도 중 무엇에 비례? <b>속도</b>. 그래서 복사로 인한 에너지 손실을 속도 항으로 설명해 보자는 것이 다음 이야기. [[S0917.28]]</div>
+<div class="trap"><b>STT 교정</b>"롤런츠"·"론츠" = 로렌츠(Lorentz), "Symphonymic Oscillator"·"Symphony Harmonic Modulator" = simple harmonic oscillator, "아모로폼라이드" = 라모 공식, "선종법" = 선윤곽. [[S0917.27, S0917.28]]</div>
+
+<h4>2. 복사 감쇠는 약하다 <span class="en">Radiation Damping</span></h4>
+<div class="slide"><div class="sh">L06 · 슬라이드 11 <span class="st">Radiation Damping</span></div>
+<ul>
+<li>Power from an oscillator means that it loses energy over time.
+<ul><li>The kinetic energy of an electron is \(E_0=m_e\omega_0^2x_0^2/2\).</li>
+<li>The radiated energy over one period is \(E_r=P/\omega_0=e^2\omega_0^3x_0^2/(3c^3)\).</li></ul></li>
+<li>If the radiation damping is weak (\(E_r\ll E_0\)), or \(\dfrac{e^2\omega_0^3x_0^2}{3c^3}\ll\dfrac12m_e\omega_0^2x_0^2\)<br>Or, if \(\omega_0\tau\ll1\), one can treat the damping as small perturbations on the particle's motion.
+\[ \tau\equiv\frac{2r_e}{3c}=\frac{2e^2}{3m_ec^3}=6.27\times10^{-24}\,\mathrm s\quad\text{= the timescale for radiation to cross a distance }r_e \]
+\[ r_e\equiv\frac{e^2}{m_ec^2}=2.82\times10^{-13}\,\mathrm{cm}\quad\text{= classical electron radius} \]</li>
+</ul> [[L06.s11]]</div>
+<div class="explain"><b>부가설명</b> 전자의 (최대) 운동에너지 \(\tfrac12m_ev^2\), \(v_{\max}=\omega_0x_0\) → \(E_0=\tfrac12m_e\omega_0^2x_0^2\). 한 주기 동안 잃는 에너지는 파워 × (주기 \(\sim1/\omega_0\)). 둘을 비교하면 \(E_r/E_0=\dfrac{2e^2\omega_0}{3m_ec^3}=\omega_0\tau\) — <span class="hl">감쇠는 굉장히 약하다</span>. \(\omega_0^3\)과 \(\omega_0^2\)에서 \(\omega_0\) 하나만 남기고 나머지를 모두 \(\tau\)로 묶은 것. \(\tau\)는 (2/3을 빼면) 빛이 전자 반지름 정도를 지나가는 데 걸리는 시간, \(6\times10^{-24}\) s로 매우 짧다. 광학 주파수는 대개 \(10^{15}\) Hz이니 곱해도 \(\omega_0\tau\ll1\)이 잘 성립. [[S0917.29]]</div>
+<div class="apply"><b>수치 (python 재계산)</b>\(\tau=6.27\times10^{-24}\) s, \(r_e=2.82\times10^{-13}\) cm. λ = 5000 Å이면 \(\omega_0=3.77\times10^{15}\,\mathrm{s^{-1}}\), \(\omega_0\tau=2.4\times10^{-8}\) — 한 주기에 잃는 에너지가 1억분의 2 수준, 진동자는 수천만 번 진동한 뒤에야 에너지를 다 잃는다(\(\omega_0/\Gamma=1/(\omega_0\tau)\approx4\times10^7\)). [[L06.s11, S0917.29]]</div>
+<div class="trap"><b>함정 · "one period"의 계수</b>슬라이드의 \(E_r=P/\omega_0\)은 엄밀히는 위상 1 rad 동안의 에너지(한 주기 \(2\pi/\omega_0\)이면 \(2\pi\)배). 결론 \(\omega_0\tau\ll1\)에는 영향 없음 — 차수 비교이므로. 녹음상 "…24승 초"는 STT로 계수가 불명확, PPT 6.27×10⁻²⁴ s가 재계산과 일치. [[L06.s11, S0917.29]]</div>
+
+<h4>3. 복사 반작용력 <span class="en">Radiation Reaction Force</span></h4>
+<div class="slide"><div class="sh">L06 · 슬라이드 12 <span class="st">Radiation Reaction Force</span></div>
+<ul>
+<li>There must be a force \(\mathbf F_{\rm rad}\), called the <b><i>radiation reaction force</i></b>, acting on a particle by virtue of the radiation it produces.</li>
+<li>Since the energy radiated must be compensated for by the work done against \(\mathbf F_{\rm rad}\), one is tempted to write \(\ -\langle\mathbf F_{\rm rad}\cdot\mathbf v\rangle=\left\langle\dfrac{2e^2\dot v^2}{3c^3}\right\rangle\)</li>
+<li>Since \[ \langle\dot v^2\rangle=\frac1T\int_0^T\dot{\mathbf v}\cdot\dot{\mathbf v}\,dT=\frac1T\int_0^T\left[\frac{d}{dt}(\mathbf v\cdot\dot{\mathbf v})-\mathbf v\cdot\ddot{\mathbf v}\right]dT=\frac1T[\mathbf v\cdot\dot{\mathbf v}]_0^T-\langle\mathbf v\cdot\ddot{\mathbf v}\rangle=-\langle\mathbf v\cdot\ddot{\mathbf v}\rangle \]
+one can write \[ \mathbf F_{\rm rad}=\frac{2e^2}{3c^3}\ddot{\mathbf v}=m_e\tau\ddot{\mathbf v}=-\Gamma m_e\mathbf v \]
+where the radiation damping constant is \[ \Gamma=\tau\omega_0^2=\frac{2r_e}{3c}\omega_0^2=\frac{2e^2}{3m_ec^3}\omega_0^2\ll\omega_0\quad\text{for }\omega_0\tau\ll1 \]</li>
+</ul> [[L06.s12]]</div>
+<div class="explain"><b>부가설명 · 단계별</b>
+<ol>
+<li>다음 할 일은 radiation damping을 일으키는 것을 <b>힘</b>으로 표현하는 것. 복사 반작용력 \(\mathbf F_{\rm rad}\)을 도입하고, 이 힘에 대해 한 일률(\(-\mathbf F\cdot\mathbf v\))이 복사 파워와 같도록 만든다 — "이건 그냥 \(F_{\rm rad}\)의 정의". [[S0917.29, S0917.30]]</li>
+<li>한 주기 평균 \(\langle\dot v^2\rangle\)을 부분적분: \(\dot{\mathbf v}\cdot\dot{\mathbf v}=\frac{d}{dt}(\mathbf v\cdot\dot{\mathbf v})-\mathbf v\cdot\ddot{\mathbf v}\). 첫 항은 적분이 바로 되어 경계값 \([\mathbf v\cdot\dot{\mathbf v}]_0^T/T\). [[S0917.30]]</li>
+<li>엄밀하게는 초기와 한 주기 후의 상태가 감쇠 때문에 약간 다르지만, 그 차이는 작으니 <span class="hl">무시</span> → \(\langle\dot v^2\rangle=-\langle\mathbf v\cdot\ddot{\mathbf v}\rangle\). 양변 비교로 \(\mathbf F_{\rm rad}=\frac{2e^2}{3c^3}\ddot{\mathbf v}=m_e\tau\ddot{\mathbf v}\). [[S0917.30]]</li>
+<li>완벽한 조화 진동은 아니지만 근사적으로 조화 진동자의 해를 쓰면 \(\ddot{\mathbf v}=-\omega_0^2\mathbf v\) → \(\mathbf F_{\rm rad}=-m_e\tau\omega_0^2\mathbf v=-\Gamma m_e\mathbf v\). <b>\(\Gamma\) = 감쇠 상수(damping constant)</b>, \(\omega_0\)보다 훨씬 작다. 속도에 비례하는 감쇠항이 생겼다. [[S0917.30]]</li>
+</ol></div>
+<div class="trap"><b>STT 교정</b>"fread"·"F 레드" = \(F_{\rm rad}\), "국산장" = 복사장, "100걸 미분" = 앞의 것을 미분, "한 줄기" = 한 주기, "하모늄" = 조화(harmonic). [[S0917.29, S0917.30]]</div>
+
+<h4>4. 감쇠 해와 수명 <span class="en">Decaying Solution</span></h4>
+<div class="slide"><div class="sh">L06 · 슬라이드 13 <span class="st">Decaying Solution</span></div>
+<ul>
+<li>Thus, the EOM with the radiation reaction force is \(\ddot x+\Gamma\dot x+\omega_0^2x=0\)</li>
+<li>Take \(x\equiv x_0e^{\alpha t}\) as a solution to obtain \(\alpha^2+\Gamma\alpha+\omega_0^2=0\), which for \(\Gamma\ll\omega_0\) gives \(\alpha\approx\pm i\omega_0-\dfrac\Gamma2\)</li>
+<li>For the initial conditions of \(x(0)=x_0\) and \(\dot x(0)=0\), the solution becomes \(x(t)=x_0\cos\omega_0t\cdot e^{-\Gamma t/2}\)</li>
+<li>That is, the energy of an electron decays as \(\propto\exp(-\Gamma t)\), with timescale of
+\[ \tau_{\rm life}\equiv\frac1\Gamma=\frac{3m_ec^3}{2e^2\omega_0^2}=\frac{1}{\omega_0^2\tau}\ (\gg1/\omega_0) \]</li>
+</ul> [[L06.s13]]</div>
+<div class="explain"><b>부가설명</b> \(F_{\rm rad}\)를 좌변으로 옮겨 \(m_e\)로 나누면 감쇠 진동자의 운동방정식. 가운데 항이 없을 때는 조화 진동자였지만, 이제 감쇠항이 들어가 <span class="hl">self-consistent한 진동자 모형</span>이 된다. 지수함수 \(e^{\alpha t}\)로 시도 → 특성방정식 → 근의 공식 \(\alpha=-\tfrac\Gamma2\pm i\sqrt{\omega_0^2-\Gamma^2/4}\), \(\Gamma\ll\omega_0\)이니 테일러 전개로 \(\pm i\omega_0-\Gamma/2\) — 역학에서 많이 풀었던 형태. 초기조건(\(t=0\)에 \(x_0\), 속도 0)으로 사인·코사인 중 코사인만 택한다. 에너지는 \(x^2\)(→ 가속도 제곱 = 파워)에 비례하므로 \(e^{-\Gamma t}\)로 감소, 감쇠 시간척도 = \(\Gamma\)의 역수 = <b>수명(lifetime)</b>. 이만큼 지나면 에너지가 충분히 줄었다고 볼 수 있다. 다음 목표: <b>스펙트럼</b>. [[S0917.31]]</div>
+<div class="apply"><b>수치 (python)</b>λ=5000 Å: \(\Gamma=8.9\times10^7\,\mathrm{s^{-1}}\), \(\tau_{\rm life}=1.1\times10^{-8}\) s. Hα(6563 Å): \(\Gamma=5.2\times10^7\,\mathrm{s^{-1}}\), \(\tau_{\rm life}=1.9\times10^{-8}\) s — 실제 Hα의 \(A_{32}=4.4\times10^7\,\mathrm{s^{-1}}\)(예제 4.3)과 같은 차수. Lyα(1216 Å): \(\tau_{\rm life}=6.7\times10^{-10}\) s. 원자 들뜬 상태 수명 \(\sim10^{-8}\) s라는 상식이 고전 모형에서 나온다. [[L06.s13]]</div>
+<div class="trap"><b>함정 · 진폭 vs 에너지</b>진폭은 \(e^{-\Gamma t/2}\)(e-folding \(2/\Gamma\)), 에너지는 \(e^{-\Gamma t}\)(e-folding \(1/\Gamma\)). 수명 \(\tau_{\rm life}\)는 <b>에너지</b> 기준. 또 \(\tau\)(\(6\times10^{-24}\) s, 빛이 \(r_e\)를 지나는 시간)와 \(\tau_{\rm life}\)(\(\sim10^{-8}\) s)를 혼동하지 말 것: \(\tau_{\rm life}=1/(\omega_0^2\tau)\). [[L06.s13, S0917.31]]</div>
+
+<h4>5. 방출 스펙트럼: 푸리에 변환 <span class="en">FT of x(t), FT of E(t)</span></h4>
+<div class="slide"><div class="sh">L06 · 슬라이드 14 <span class="st">FT of x(t)</span></div>
+<ul>
+<li>The EM radiation emitted does not have one frequency \(\nu_0=\omega_0/(2\pi)\), but has a frequency distribution.</li>
+<li>Let us write the solution \(x(t)\) as \(x(t)=x_0\cos(\omega_0t)e^{-\Gamma t/2}=\dfrac{x_0}{2}\left(e^{i\omega_0t}+e^{-i\omega_0t}\right)e^{-\Gamma t/2}\)</li>
+<li>Fourier transform of \(x(t)\) assuming that \(x(t)=0\) for \(t&lt;0\):
+\[ \tilde x(\omega)=\frac1{2\pi}\int_{-\infty}^{+\infty}x(t)e^{i\omega t}dt=\frac{x_0}{4\pi}\int_0^\infty dt\left[e^{(i\omega+i\omega_0-\Gamma/2)t}+e^{(i\omega-i\omega_0-\Gamma/2)t}\right] \]
+\[ =\frac{x_0}{4\pi}\left[\frac{1}{\Gamma/2-i(\omega+\omega_0)}+\frac{1}{\Gamma/2-i(\omega-\omega_0)}\right]\approx\frac{x_0}{4\pi}\frac{1}{\Gamma/2-i(\omega-\omega_0)}\quad\text{for }\omega&gt;0 \]
+\[ \Rightarrow\ |\tilde x|^2=\left(\frac{x_0}{4\pi}\right)^2\frac{1}{(\omega-\omega_0)^2+(\Gamma/2)^2} \]</li>
+</ul> [[L06.s14]]</div>
+<div class="explain"><b>부가설명</b> 복사 감쇠로 나오는 빛의 스펙트럼 = <b>방출선의 고전적 선윤곽</b>. 처음엔 \(\omega_0\) 하나였지만 결과적으로는 퍼진 <b>로렌츠 프로파일</b>이 된다. 지난 시간처럼 전기장 제곱의 푸리에 변환이 필요하고, 그러려면 먼저 \(x\)의 푸리에 변환. 오일러 식으로 \(\cos\)를 두 지수함수로 나누고, <span class="hl">\(t&lt;0\)에서는 \(x=0\)</span> — 방출은 들떴다 내려오는 것이므로, 시간 0에 전자가 들뜨고 그때부터 감쇠한다고 본다. \(2\pi\)는 \(\nu\)가 아니라 \(\omega\)로 정의했기 때문. 두 항은 \(\pm i\omega_0\)만 다르고, \(\Gamma\) 감쇠 덕분에 0부터 무한대까지 쉽게 적분된다(지수함수). 결과 두 항 — "시간이 짧으니 노트 참고해 직접 해 보세요." \(|\tilde x|^2\)을 \(\omega\)에 대해 그리면 \(-\omega_0\)와 \(+\omega_0\)에 봉우리가 하나씩: 음의 주파수는 물리적이지 않으므로 <span class="hl">\(\omega&gt;0\)에서 크게 기여하는 두 번째 항만 채택</span>. 제곱은 켤레복소수를 곱하는 것이니 (실수부)² + (허수부)²로 실수가 된다. 하지만 정말 필요한 건 전기장의 푸리에 변환. [[S0917.32]]</div>
+<div class="trap"><b>STT 교정</b>"플레이테스프"·"프레트랜스폼"·"프레드턴스법" = 푸리에 변환, "꽃사른 오메가키" = \(\cos\omega_0t\), "imagery" = negative frequency. 녹음 "그게 바로 absorption line" 은 문맥상 <b>emission line</b>(방출선) — 바로 뒤에 "Emission Line을 보는데…"로 이어지고, 흡수는 다음 시간(9/22). [[S0917.32, S0917.35]]</div>
+
+<div class="slide"><div class="sh">L06 · 슬라이드 15 <span class="st">FT of E(t)</span></div>
+<ul>
+<li>To obtain the emitted spectrum, we need to take FT of \(\mathbf E_{\rm rad}(\mathbf x,t)=\dfrac qc\left[\dfrac{\hat{\mathbf n}\times\{\hat{\mathbf n}\times\dot{\boldsymbol\beta}\}}{R}\right]_{\rm ret}\ \Rightarrow\ \mathbf E(t)=-\dfrac{e\,\hat{\mathbf n}\times[\hat{\mathbf n}\times\ddot{\mathbf x}(t)]}{c^2r}\)</li>
+<li>Since \(x(t)=\int\tilde x(\omega)e^{-i\omega t}d\omega\ \Rightarrow\ \ddot x(t)=-\omega^2\int\tilde x(\omega)e^{-i\omega t}d\omega\), we obtain \(\tilde{\mathbf E}(\omega)=\dfrac{e\omega^2}{c^2r}\,\hat{\mathbf n}\times[\hat{\mathbf n}\times\tilde{\mathbf x}(\omega)]\)</li>
+<li>Therefore, \(\tilde E(\omega)=\dfrac{e\omega^2}{c^2r}\tilde x(\omega)\sin\Theta\), where \(\Theta\) is an angle between \(\ddot{\mathbf p}\) and an observer.<br>[그림: 전하 \(q\)에서 위로 \(\ddot{\mathbf p}\) 화살표, \(\ddot{\mathbf p}\)와 각 \(\Theta\)를 이루는 \(\hat{\mathbf n}\) 방향 끝에 \(\mathbf E_{\rm rad}\)와 \(\mathbf B_{\rm rad}\)(지면 안팎)]</li>
+</ul> [[L06.s15]]</div>
+<div class="slide"><div class="sh">L06 · 슬라이드 16 <span class="st">Energy Spectrum</span></div>
+<ul>
+<li>Since the radiation energy per unit area per unit angular frequency is given by \(\dfrac{dW}{dA\,d\omega}=c|\tilde E(\omega)|^2\), we obtain the energy spectrum
+\[ \frac{dW}{d\omega}=\int c|\tilde E(\omega)|^2r^2d\Omega=\frac{e^2\omega^4}{c^3}|\tilde x|^2\int\sin^2\Theta\,d\Omega\simeq\frac{8\pi e^2\omega^4}{3c^3}\left(\frac{x_0}{4\pi}\right)^2\frac{1}{(\omega-\omega_0)^2+(\Gamma/2)^2} \]
+(옆에 다시 적힌 식: \(\tilde E(\omega)=\frac{e\omega^2}{c^2r}\tilde x(\omega)\sin\Theta\), \(|\tilde x|^2=\left(\frac{x_0}{4\pi}\right)^2\frac{1}{(\omega-\omega_0)^2+(\Gamma/2)^2}\))</li>
+</ul> [[L06.s16]]</div>
+<div class="explain"><b>부가설명</b> 비상대론 복사장에서 \(\dot{\boldsymbol\beta}=\dot{\mathbf v}/c\)라 \(c^2\)과 \(\ddot{\mathbf x}\)로 바꾼다. 푸리에 공간에서는 <span class="hl">시간 두 번 미분 = \(-\omega^2\) 곱하기</span>로 처리하면 된다(역변환 \(x=\int\tilde xe^{-i\omega t}d\omega\)를 미분). \(\sin\Theta\)는 외적 때문(방향은 동영상에서 설명). 필요한 것은 지난 시간의 \(dW/dA\,d\omega=c|\tilde E|^2\) — 단위면적·단위 각진동수당 에너지. 면적 적분 \(dA=r^2d\Omega\) → \(r^2\)이 없어지고, \(\sin^2\Theta\) 적분은 \(8\pi/3\), \(|\tilde x|^2\)는 앞 슬라이드 결과 → <b>주파수의 함수로 본 에너지 = 스펙트럼</b>. [[S0917.33]]</div>
+<div class="trap"><b>STT 교정</b>"Radiation Billy" = radiation field, "프레트니스폼" = 푸리에 변환, "필다" = tilde(\(\tilde E\)), "3분의 88이" = \(8\pi/3\). [[S0917.33]]</div>
+
+<h4>6. 고전 선폭 <span class="en">Classical Line Width</span></h4>
+<div class="slide"><div class="sh">L06 · 슬라이드 17 <span class="st">Classical Line Width</span></div>
+<ul>
+<li>Or by taking \(\omega\sim\omega_0\) in the numerator,
+\[ \frac{dW}{d\omega}=\frac{m_e\Gamma\omega_0^2x_0^2}{4\pi}\frac{1}{(\omega-\omega_0)^2+(\Gamma/2)^2}=\frac12m_e\omega_0^2x_0^2\,\phi(\omega) \]
+where \(\phi(\omega)\equiv\dfrac1\pi\dfrac{\Gamma/2}{(\omega-\omega_0)^2+(\Gamma/2)^2}\) with \(\int_{-\infty}^{+\infty}\phi(\omega)d\omega=1\) is a Lorenzian line shape function.</li>
+<li>Total energy radiated from an oscillator is \(W=\int_{-\infty}^{+\infty}\dfrac{dW}{d\omega}d\omega=\dfrac12m_e\omega_0^2x_0^2\) = the initial energy of the oscillator.</li>
+<li>FWHM: \(\Delta\omega_{\rm FWHM}=\Gamma\).</li>
+<li>Since \(\lambda=c/\nu=2\pi c/\omega\), \(\Delta\lambda_{\rm FWHM}=\dfrac{2\pi c\,\Delta\omega_{\rm FWHM}}{\omega_0^2}=\dfrac{2\pi c}{\omega_0^2\tau_{\rm life}}=2\pi c\tau=1.18\times10^{-4}\,\)Å &nbsp;<b>Natural line width</b></li>
+</ul> [[L06.s17]]</div>
+<div class="explain"><b>부가설명</b> 분모 \((\omega-\omega_0)^2+(\Gamma/2)^2\)는 \(\omega\)에 따라 급격히 변하지만, 분자의 \(\omega^4\)는 상대적으로 완만하다. \(\Gamma\)가 워낙 작아 봉우리 폭이 아주 좁으므로 그 범위에서 <span class="hl">\(\omega^4\approx\omega_0^4\) 상수</span>로 둬도 무리가 없다. 선윤곽 함수는 전체 적분이 1이 되도록 정규화해야 하므로 \(\Gamma/2\pi\) 인자를 붙여 \(\phi(\omega)\)를 정의 → \(\Gamma\)가 빠져나와 위 꼴 = <b>로렌츠 선윤곽 함수</b>. 전 주파수 적분하면 1이니 남는 값은 진동자의 초기 에너지: 오래 기다리면 올라갔던 에너지가 감쇠로 다 빠져나가고, 빠져나가는 것의 스펙트럼이 이 모양. FWHM은 지난번(선복사 단원)과 마찬가지로 \(\Gamma\) — 이것이 선폭. [[S0917.34]]</div>
+<div class="explain"><b>부가설명 · 파장 폭</b> 관측은 파장으로 하므로 \(\lambda=c/\nu=2\pi c/\omega\)를 미분: \(|\Delta\lambda|=2\pi c\,\Delta\omega/\omega_0^2\), \(\Delta\omega=\Gamma=1/\tau_{\rm life}\)이고 \(\Gamma=\omega_0^2\tau\)이므로 \(\Delta\lambda=2\pi c\tau\) — 아는 상수만 남는다. 계산하면 \(\sim10^{-4}\)Å: <span class="hl">예전에 배운 natural broadening(자연 선폭)의 값 \(10^{-4}\)Å이 이렇게 유도된다</span>. 다음 시간: 지금까지는 방출(emission), 다음은 흡수(absorption) — 복사장 안의 원자. [[S0917.35]]</div>
+<div class="trap"><b>수치 확인</b>녹음 "15-4승 공식품" = \(10^{-4}\)Å 규모(STT). python: \(2\pi c\tau=\tfrac{4\pi}{3}r_e=1.18\times10^{-12}\) cm \(=1.18\times10^{-4}\)Å — PPT와 일치. 9/22 복습에서 "≈1.2×10⁻⁴ Å"로 말해도 같은 값. [[S0917.35, L06.s17]]</div>
+<div class="intuit"><b>직관 · 자연 선폭은 파장과 무관</b>복사 감쇠 \(\Gamma=2e^2\omega_0^2/3m_ec^3\)를 넣고 파장 폭으로 바꾸면 \(\Delta\lambda=\lambda^2\Delta\nu/c=\tfrac{4\pi}{3}r_e\approx1.2\times10^{-4}\,\)Å. 어떤 선이든 고전 자연 선폭은 약 \(10^{-4}\)Å로 같다 — 실제 관측 선폭은 거의 항상 도플러가 지배하는 이유. 9/22 수업 첫머리에서 로렌츠 진동자·감쇠항·수명 \(1/\Gamma\)·푸리에 → 로렌츠 선윤곽·자연 선폭을 다시 정리하며 숫자를 대입해 "이게 natural linewidth"라고 정리(녹음상 수치는 불명확, 위 값으로 검산). [[S0922.01, S0917.34]]</div>
+<div class="apply"><b>천체 적용 · 도플러와 비교</b>T = 10⁴ K 수소의 Hα 도플러 폭 \(\Delta\lambda_D\sim\lambda\sqrt{2kT/m_Hc^2}\approx0.28\)Å — 자연 선폭의 2000배 이상. 자연 선폭(로렌츠 날개)은 선 중심에서 멀리 떨어진 <b>날개(wing)</b>에서야 드러난다(보이트 윤곽). [[L06.s17]]</div>
+
+<h4>7. 흡수: 복사장 속의 원자 <span class="en">Atoms in a Radiation Field — 9/22</span></h4>
+<div class="slide"><div class="sh">L06 · 슬라이드 18 <span class="st">Atoms in a Radiation Field</span></div>
+<ul>
+<li>Modeled by a driven damped oscillator</li>
+<li>EOM: \(\ddot x+\Gamma\dot x+\omega_0^2x=\dfrac{eE_0}{m_e}e^{i\omega t}\)</li>
+<li>Solution: \[ x(t)=\frac{(e/m_e)E_0}{\omega_0^2-\omega^2+i\Gamma\omega}e^{i\omega t}=\frac{(e/m_e)E_0}{\sqrt{(\omega_0^2-\omega^2)^2+(\Gamma\omega)^2}}e^{i(\omega t+\delta)},\quad\delta=-\tan^{-1}\!\left(\frac{\Gamma\omega}{\omega_0^2-\omega^2}\right) \]</li>
+<li>Time-averaged total power is
+\[ \langle P\rangle=\frac{2e^2}{3c^3}\langle|\dot v|^2\rangle=\frac{2e^2}{3c^3}\left(\frac{e}{m_e}\right)^2\frac{E_0^2\omega^4}{(\omega^2-\omega_0^2)^2+\Gamma^2\omega^2}\langle\cos^2(\omega t+\delta)\rangle=\frac{e^4E_0^2}{3m_e^2c^3}\frac{\omega^4}{(\omega^2-\omega_0^2)^2+\Gamma^2\omega^2} \]</li>
+</ul> [[L06.s18]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">판서 순서</span>구동 감쇠 진동자 풀기 [[S0922.02]]</div><ol>
+<li>원자를 복사장 \(E_0e^{i\omega t}\) 안에 둔다: \(\ddot x+\Gamma\dot x+\omega_0^2x=(e/m_e)E_0e^{i\omega t}\).</li>
+<li>시행해 \(x=x_0e^{i\omega t}\) 대입 → \(\ddot x\to-\omega^2x\), \(\dot x\to i\omega x\): \(x_0=\dfrac{(e/m_e)E_0}{\omega_0^2-\omega^2+i\Gamma\omega}\) (특수해).</li>
+<li>분모의 켤레를 곱해 실수화하고, 복소 평면 표기 \(re^{i\delta}\)로 크기와 위상 \(\tan\delta=\) 허수부/실수부를 분리: \(|x_0|=\dfrac{(e/m_e)E_0}{\sqrt{(\omega_0^2-\omega^2)^2+\Gamma^2\omega^2}}\).</li>
+<li>시간평균 파워: 라모 \(P=\tfrac{2e^2}{3c^3}\langle\ddot x^2\rangle\), 두 번 미분이 \(\omega^4\)을 만들고 \(\langle\cos^2\rangle=1/2\). [[S0922.03]]</li>
+<li>단면적 = 파워 ÷ 입사 포인팅 플럭스 \(\langle S\rangle=cE_0^2/8\pi\) (톰슨 산란 때와 같은 방법). [[S0922.03]]</li>
+</ol></div>
+<div class="trap"><b>함정 · 감쇠항 부호와 \(\delta\)</b>\(e^{i\omega t}\) 관례에서 \(\dot x\to i\omega x\)라 분모가 \(\omega_0^2-\omega^2+i\Gamma\omega\), 위상 \(\delta=-\tan^{-1}[\Gamma\omega/(\omega_0^2-\omega^2)]\) — 응답이 구동보다 뒤처진다(\(\delta&lt;0\)). 공명(\(\omega=\omega_0\))에서 \(\delta=-\pi/2\). 파워에는 \(|x_0|^2\)만 들어가서 부호 관례가 결과에 영향 없음. [[L06.s18]]</div>
+
+<h4>8. 단면적의 세 영역 — 그래프 하나로 <span class="en">Scattering Cross Section</span></h4>
+<div class="slide"><div class="sh">L06 · 슬라이드 19 <span class="st">Scattering Cross Section</span></div>
+<ul>
+<li>Since \(\langle S\rangle=(c/8\pi)E_0^2\), the scattering cross section by an oscillator is
+\[ \sigma=\frac{\langle P\rangle}{\langle S\rangle}=\frac{8\pi e^4}{3m_e^2c^4}\frac{\omega^4}{(\omega^2-\omega_0^2)^2+\Gamma^2\omega^2}=\sigma_T\frac{\omega^4}{(\omega^2-\omega_0^2)^2+\Gamma^2\omega^2} \]
+[그림: \(\sigma/\sigma_T\)(세로, 0–30) vs \(\omega/\omega_0\)(가로, 0–4) — \(\omega/\omega_0=1\)에서 뾰족한 피크(폭 \(\Gamma/\omega_0\) 표시), 저주파 쪽 '\(\propto\omega^4\)', 고주파에서 1로 수렴]</li>
+<li>For \(\omega\gg\omega_0\), \(\sigma\to\sigma_T\): <b>Thomson scattering</b>
+<ul><li>At high energy, the binding becomes negligible.</li></ul></li>
+<li>For \(\omega\ll\omega_0\), \(\sigma=\sigma_T(\omega/\omega_0)^4\): <b>Rayleigh scattering</b>
+<ul><li>Responsible for the blue color of the sky and the red color of the sun at sunrise and sunset.</li></ul></li>
+<li>For \(\omega\approx\omega_0\): <b>resonant scattering</b>
+<ul><li>Corresponding to the case in QM where an electron becomes excited by absorbing radiation and then de-excited back to the original level.</li></ul></li>
+</ul> [[L06.s19]]</div>
+<p>결과 \(\sigma(\omega)=\sigma_T\,\omega^4/[(\omega^2-\omega_0^2)^2+\Gamma^2\omega^2]\). 바닥 상태 전자가 이 단면적으로 복사를 받아 "들뜬다". [[S0922.03]]</p>
+<div class="intuit"><b>외우는 법 · 고전 전자 반지름</b>전자 표면의 정전 에너지 \(e^2/r_e\)를 정지 에너지 \(m_ec^2\)와 같게 두면 \(r_e=e^2/m_ec^2\approx2.82\times10^{-13}\)cm. \(\sigma_T=\tfrac{8\pi}{3}r_e^2\)의 \(8\pi/3\)은 \(\sin^2\)의 입체각 적분(U14). [[S0922.03]]</div>
+<p>\(\sigma/\sigma_T\)를 \(\omega/\omega_0\)에 대해 그리면: 저주파에서 아주 작다가 \(\omega_0\)에서 뾰족한 최대, 고주파에서 1로 수렴. [[S0922.04]]</p>
+<table class="simple"><tr><th>영역</th><th>근사</th><th>의미</th></tr>
+<tr><td>\(\omega\gg\omega_0\)</td><td>\(\sigma\to\sigma_T\)</td><td>빠른 진동에 비해 속박이 무시됨 → 자유전자처럼 = 톰슨 산란 [[S0922.04]]</td></tr>
+<tr><td>\(\omega\ll\omega_0\)</td><td>\(\sigma\simeq\sigma_T(\omega/\omega_0)^4\)</td><td>레일리 산란. 파란빛(높은 ω)이 훨씬 잘 산란 [[S0922.05]]</td></tr>
+<tr><td>\(\omega\approx\omega_0\)</td><td>로렌츠 꼴</td><td>공명 산란 = 흡수. 양자역학의 "들떴다 떨어짐"에 대응 [[S0922.06]]</td></tr></table>
+<div class="intuit"><b>직관 · 하늘은 왜 파랗고 노을은 왜 붉은가</b>대기 질소·산소 분자의 전자가 레일리 산란(분자의 \(\omega_0\)는 자외선에 있어 가시광은 \(\omega\ll\omega_0\)). 해 질 녘엔 긴 경로에서 파란빛이 옆으로 다 산란돼 빠지고 붉은빛만 남는다. 빠진 파란빛은 태양이 없는 방향의 하늘을 파랗게 만든다. python: 4500 Å 대 6500 Å의 레일리 단면적 비 \((6500/4500)^4=4.4\). [[S0922.05, L06.s19]]</div>
+<div class="trap"><b>함정 · 각 영역의 근사 조건</b>레일리 꼴 \(\sigma_T(\omega/\omega_0)^4\)은 \(\omega\ll\omega_0\)에서 분모 \(\approx\omega_0^4\)일 때. 공명 피크 높이는 \(\sigma(\omega_0)=\sigma_T\omega_0^2/\Gamma^2=\sigma_T/(\omega_0\tau)^2\) — 광학에서 \(\sim10^{15}\sigma_T\)로 엄청나다(그래프의 30은 보기 좋게 \(\Gamma\)를 크게 잡은 모식도). [[L06.s19]]</div>
+
+<h4>9. 공명 산란과 진동자 세기 <span class="en">Resonant Scattering</span></h4>
+<div class="slide"><div class="sh">L06 · 슬라이드 20 <span class="st">Resonant Scattering</span></div>
+<ul>
+<li>At \(\omega\approx\omega_0\), one can simplify the denominator by using \((\omega^2-\omega_0^2)^2=(\omega-\omega_0)^2(\omega+\omega_0)^2\approx4\omega_0^2(\omega-\omega_0)^2\) to obtain
+\[ \sigma\approx\frac{\sigma_T}{4}\frac{\omega_0^2}{(\omega-\omega_0)^2+(\Gamma/2)^2}=\frac{\pi e^2}{m_ec}\phi(\nu),\quad\text{with}\quad\phi(\nu)=\frac1\pi\left[\frac{\Gamma/4\pi}{(\nu-\nu_0)^2+(\Gamma/4\pi)^2}\right] \]</li>
+<li>Total (classical) cross section: \(\displaystyle\int_0^\infty\sigma\,d\nu=\frac{\pi e^2}{m_ec}=0.0265\ \mathrm{cm^2\,s^{-1}}\)</li>
+<li>In QM, \(\displaystyle\int_0^\infty\sigma(\nu)d\nu=\frac{\pi e^2}{m_ec}f_{12}\), where \(f_{12}\) is the <b>oscillator strength</b> (or <i>f</i>-value), representing the QM correction for the classical result for line transitions.</li>
+</ul> [[L06.s20]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">공명 근처</span>로렌츠 선윤곽 꺼내기 [[S0922.06]]</div><ol>
+<li>급격한 변화는 분모 때문. 분자는 \(\omega\approx\omega_0\)로 둔다.</li>
+<li>\(\omega^2-\omega_0^2=(\omega-\omega_0)(\omega+\omega_0)\simeq2\omega_0(\omega-\omega_0)\) → 제곱하면 \(4\omega_0^2(\omega-\omega_0)^2\).</li>
+<li>\(\sigma\simeq\dfrac{\sigma_T\omega_0^2/4}{(\omega-\omega_0)^2+(\Gamma/2)^2}\). 정규화(\(\int\phi\,d\nu=1\))된 선윤곽 함수로 다시 쓰면 \(\sigma(\nu)=\dfrac{\pi e^2}{m_ec}\,\phi(\nu)\), \(\phi=\dfrac{\Gamma/4\pi^2}{(\nu-\nu_0)^2+(\Gamma/4\pi)^2}\).</li>
+<li>검산: \(\Gamma=2e^2\omega_0^2/3m_ec^3\)로 \(\omega_0^2\)를 바꾸면 \(\sigma_T\omega_0^2/4=\pi e^2\Gamma/m_ec\), 또 \(\omega-\omega_0=2\pi(\nu-\nu_0)\)이라 분모가 \(4\pi^2[(\nu-\nu_0)^2+(\Gamma/4\pi)^2]\) → 슬라이드 식과 일치. [[L06.s20]]</li>
+</ol></div>
+<p>\(\phi\)가 정규화돼 있으니 적분하면 \(\int\sigma\,d\nu=\pi e^2/m_ec\approx0.0265\,\mathrm{cm^2\,Hz}\). 전하·전자 질량·광속만으로 정해지는 유한한 값이고, 단위는 단면적×주파수. [[S0922.07]]</p>
+<p>양자역학 계산은 차원·상수는 같고 값만 다르다. 그 보정 인자가 진동자 세기 \(f_{12}\)(1→2 흡수): \(\int\sigma\,d\nu=\dfrac{\pi e^2}{m_ec}f_{12}\). 대부분 1보다 작다. 결론: 고전 이론은 흡수·방출이 어떻게 일어나는지 이해하기 쉽고, 결과도 인자 차이 정도. [[S0922.07]]</p>
+<div class="trap"><b>수치 확인</b>교수님 발언(녹음): "Hα 같은 경우 0.4 정도인가?" — 표준값은 Lyα \(f_{12}=0.416\), Hα \(f_{23}=0.641\). 0.4는 Lyα 값에 가깝다. 시험에 수치가 나오면 문제에서 줄 가능성이 높으니 "f &lt; 1, 고전 결과의 보정 인자"라는 의미를 기억. python: \(\pi e^2/m_ec=0.02654\,\mathrm{cm^2\,s^{-1}}\). [[S0922.07, L06.s20]]</div>
+<div class="prof"><b>수업 중 질문</b>Q. 지금까지 유도한 게 수소 원자 전용인가? → 일반적인 모형. 수소는 전자가 하나라 양자 계산이 해석적으로 되지만, 다전자 원자는 수치 계산이고 정확도 검증이 어렵다. f 값만 계속 계산·갱신하는 그룹이 있을 만큼 기초적이고 중요(잘못된 f를 쓰면 결과가 크게 달라짐). [[S0922.09]]</div>
+
+<div class="formula"><div class="ftitle">암기 — 로렌츠 진동자와 선폭</div><p><b>복사 감쇠</b></p>\[ \tau={2e^2\over3m_ec^3}=6.27\times10^{-24}\,{\rm s},\quad \Gamma=\omega_0^2\tau,\quad \ddot x+\Gamma\dot x+\omega_0^2x=0,\quad x=x_0\cos\omega_0t\,e^{-\Gamma t/2} \]<p class="note">약한 감쇠 조건 \(\omega_0\tau\ll1\) (\(E_r/E_0=\omega_0\tau\)). 진폭 \(e^{-\Gamma t/2}\), 에너지 \(e^{-\Gamma t}\), 수명 \(\tau_{\rm life}=1/\Gamma\).</p><p><b>선윤곽과 자연 선폭</b></p>\[ \phi(\omega)={1\over\pi}{\Gamma/2\over(\omega-\omega_0)^2+(\Gamma/2)^2},\quad\Delta\omega_{\rm FWHM}=\Gamma,\quad\Delta\lambda_{\rm nat}=2\pi c\tau={4\pi\over3}r_e=1.18\times10^{-4}\,\text{Å} \]<p class="note">자연 선폭(고전 복사 감쇠)은 파장과 무관. 총 방출 에너지 = 초기 에너지 \(\tfrac12m_e\omega_0^2x_0^2\).</p><p><b>세 영역을 잇는 단면적</b></p>\[ \sigma(\omega)=\sigma_T{\omega^4\over(\omega_0^2-\omega^2)^2+\Gamma^2\omega^2} \]<p class="note">ω≪ω₀: 레일리 \(\sigma_T(\omega/\omega_0)^4\); ω≈ω₀: 공명(로렌츠); ω≫ω₀: 톰슨 σT. <i>조건: 고전 선형 진동자, Γ≪ω₀</i></p><p><b>적분 단면적·진동자 세기</b></p>\[ \int\sigma_\nu\,d\nu={\pi e^2\over m_ec}f_{12},\qquad {\pi e^2\over m_ec}=0.0265\ {\rm cm^2\,s^{-1}} \]<p class="note">고전 결과는 f=1. 양자역학 보정 인자 f(대개 &lt;1).</p></div>
+
+<h4>체크포인트</h4>
+<div class="qz" data-q="u13-1"><div class="qq">Rayleigh 영역에서 파장을 절반으로 하면 산란 단면적은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>ω가 2배이므로 16배. 단, 여전히 저주파 영역(\(\omega\ll\omega_0\)) 안에 있어야 한다. [[L06.s19]]</p></div></div>
+<div class="qz" data-q="u13-2"><div class="qq">전자 결합 고유주파수보다 훨씬 높으면 왜 자유전자처럼 되는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>매우 빠른 외부 강제력에 대해 복원력 항(\(\omega_0^2x\))의 상대적 영향이 작아지기 때문이다("at high energy, the binding becomes negligible"). [[S0922.04, L06.s19]]</p></div></div>
+<div class="qz" data-q="u13-3"><div class="qq">에너지 수명과 진폭의 e-folding 시간은 같은가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 에너지 \(1/\Gamma\), 진폭 \(2/\Gamma\)이다. [[L06.s13]]</p></div></div>
+<div class="qz" data-q="u13-4"><div class="qq">노을이 붉은 이유와 낮 하늘이 파란 이유를 같은 산란 하나로 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>분자 속 속박 전자의 레일리 산란 σ∝ω⁴. 파란빛이 더 잘 산란돼 시선에서 빠지고(긴 경로의 노을은 붉음), 빠진 파란빛이 다른 방향 하늘을 채운다. [[S0922.05]]</p></div></div>
+<div class="qz" data-q="u13-5"><div class="qq">흡수선의 "세기"를 고전 이론과 양자 이론이 어떻게 다르게 주는가? 한 문장으로.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>고전 적분 단면적 πe²/mₑc에 양자 보정 인자 f(진동자 세기, 보통 &lt;1)를 곱한다. 차원과 상수 구조는 같다. [[S0922.07]]</p></div></div>
+<div class="qz" data-q="u13-6"><div class="qq">Hα와 Lyα의 고전 자연 선폭(Å)은 어느 쪽이 넓은가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>같다. 고전 복사 감쇠에서 Δλ=2πcτ=4πr_e/3로 파장 무관(약 1.2×10⁻⁴ Å). 주파수 폭 Δν=Γ/2π는 ν₀²에 비례해 다르다. [[L06.s17]]</p></div></div>
+<div class="qz" data-q="u13-7"><div class="qq">단조화 진동자 모형이 self-consistent하지 않은 이유와, 이를 고치는 방법은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>진동(가속)하면 라모 공식대로 에너지를 내보내는데 \(\ddot x=-\omega_0^2x\)는 영원히 같은 진폭을 유지한다. 일률이 복사 파워와 같도록 복사 반작용력 \(F_{\rm rad}=m_e\tau\ddot v\approx-\Gamma m_ev\)(속도에 비례하는 감쇠항)를 넣어 \(\ddot x+\Gamma\dot x+\omega_0^2x=0\)으로 만든다. [[S0917.28, S0917.30, L06.s12]]</p></div></div>
+<div class="qz" data-q="u13-8"><div class="qq">\(\omega_0\tau\ll1\)이 무엇을 뜻하며 광학 영역에서 대략 얼마인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>한 주기(rad)당 잃는 복사 에너지/진동 에너지 \(=\omega_0\tau\) → 감쇠가 섭동으로 다룰 만큼 약하다. \(\omega_0\sim4\times10^{15}\,\mathrm{s^{-1}}\), \(\tau=6.27\times10^{-24}\) s → \(\sim2\times10^{-8}\). [[L06.s11, S0917.29]]</p></div></div>
+<div class="qz" data-q="u13-9"><div class="qq">방출 스펙트럼 유도에서 \(t&lt;0\)에 \(x=0\)으로 둔 이유와, 음의 주파수 항을 버리는 이유는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>t=0에 전자가 들뜨고 그때부터 감쇠하며 방출한다고 보기 때문(그 전엔 아무것도 없음). \(\tilde x(\omega)\)의 두 항 중 \(1/[\Gamma/2-i(\omega+\omega_0)]\)는 \(\omega=-\omega_0\)에 봉우리 — 물리적 주파수 \(\omega&gt;0\)에서는 무시할 만큼 작다. [[S0917.32, L06.s14]]</p></div></div>
+
+<p class="note">출처: Lecture06 슬라이드 10–20(Oscillator Model ~ Resonant Scattering) · 9/17 속기 51:52–01:12:32 · 9/22 속기(00:17–20:25, 복습·흡수·세 영역·f값) · 상태: PPT·속기 장부 기준 전수 반영</p>

@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<b>★ 고전문제 — 상대론적 동역학의 출발점.</b> \(\vb{F}=m\vb{a}\)가 왜 깨지는지 보여주는 문제다.
+
+<p>상대론적 운동량은 \(\vb{p}=\gamma m\vb{u}\), \(\gamma=(1-u^2/c^2)^{-1/2}\). 시간미분에서 \(\gamma\)도 함께 미분해야 한다:</p>
+\[ \frac{\dd\gamma}{\dd t}=\frac{\dd}{\dd t}\Big(1-\frac{u^2}{c^2}\Big)^{-1/2}=\gamma^{3}\frac{\vb{u}\cdot\vb{a}}{c^{2}} \]
+(\(u^2=\vb{u}\cdot\vb{u}\)이므로 \(\dd(u^2)/\dd t=2\vb{u}\cdot\vb{a}\).)
+
+<p>따라서</p>
+\[ \vb{F}=\frac{\dd}{\dd t}(\gamma m\vb{u})=m\gamma\vb{a}+m\vb{u}\frac{\dd\gamma}{\dd t}=m\gamma\Big[\vb{a}+\gamma^{2}\frac{\vb{u}(\vb{u}\cdot\vb{a})}{c^{2}}\Big]. \]
+<p>\(\gamma^{2}/c^{2}=1/(c^{2}-u^{2})\)이므로</p>
+\[ \boxed{\ \vb{F}=\frac{m}{\sqrt{1-u^{2}/c^{2}}}\Big[\vb{a}+\frac{\vb{u}(\vb{u}\cdot\vb{a})}{c^{2}-u^{2}}\Big]\ } \]
+<p>둘째 항 때문에 \(\vb{F}\parallel\vb{a}\)가 아니다. 두 극단만 기억하면 된다: \(\vb{a}\perp\vb{u}\)이면 \(F=\gamma ma\)(횡질량 \(\gamma m\)), \(\vb{a}\parallel\vb{u}\)이면 \(F=\gamma^{3}ma\)(종질량 \(\gamma^{3}m\)).</p>
+<div class="alabel">감점 포인트</div>
+\(\gamma\)를 상수로 보고 \(\vb{F}=\gamma m\vb{a}\)만 쓰는 것 — \(\dd\gamma/\dd t\) 항이 이 문제의 전부다.</div><!--/sol-->

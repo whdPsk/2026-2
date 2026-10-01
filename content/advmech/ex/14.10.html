@@ -1,0 +1,13 @@
+<div class="exq"><b>상황.</b> \(K'\)이 \(K\)에 대해 \(v_1\), \(K''\)이 \(K'\)에 대해 \(v_2\)로 같은 축을 따라 움직인다. \(K''\)의 \(K\)에 대한 속도를 Lorentz 행렬의 곱으로 구하라.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>두 부스트 행렬을 곱하고 표준형과 비교.</div>
+<ol>
+<li>\(x_1\)–\(x_4\) 블록만: \(\lambda_i=\begin{pmatrix}\gamma_i&amp;i\beta_i\gamma_i\\-i\beta_i\gamma_i&amp;\gamma_i\end{pmatrix}\).</li>
+<li>곱: \(\lambda_2\lambda_1=\begin{pmatrix}\gamma_1\gamma_2(1+\beta_1\beta_2)&amp;i\gamma_1\gamma_2(\beta_1+\beta_2)\\-i\gamma_1\gamma_2(\beta_1+\beta_2)&amp;\gamma_1\gamma_2(1+\beta_1\beta_2)\end{pmatrix}\).</li>
+<li>표준형 \(\begin{pmatrix}\gamma&amp;i\beta\gamma\\-i\beta\gamma&amp;\gamma\end{pmatrix}\)과 비교: \(\gamma=\gamma_1\gamma_2(1+\beta_1\beta_2)\), \(\beta\gamma=\gamma_1\gamma_2(\beta_1+\beta_2)\).</li>
+<li>나누면 \(\beta=\frac{\beta_1+\beta_2}{1+\beta_1\beta_2}\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ v=\frac{v_1+v_2}{1+v_1v_2/c^2}\ } \]
+<p class="note"><b>검산</b> ① \(v_1,v_2\ll c\): Galilei 합 ✓. ② \(v_2=c\): \(v=c\) ✓. ③ \(v_1,v_2&lt;c\)이면 \(v&lt;c\): \(c-v\propto(c-v_1)(c-v_2)&gt;0\). rapidity로는 \(\alpha=\alpha_1+\alpha_2\)(\(\tanh\) 덧셈 정리). 위상속도, 오실로스코프 점의 "쓰기 속도"처럼 신호를 나르지 않는 속도는 \(c\)를 넘을 수 있다.</p></div>
+<div class="qz" data-q="ex14.10-a"><div class="qq"><b>+α</b> 우주선(\(0.8c\))이 앞으로 \(0.8c\)(우주선 기준)의 탐사선을 쏜다. 지구에서 본 탐사선 속력과 rapidity 덧셈으로 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\beta=1.6/1.64=0.9756\). rapidity: \(\tanh^{-1}0.8=1.0986\), 두 배 2.197, \(\tanh2.197=0.9756\) ✓.</p></div></div>
+<div class="qz" data-q="ex14.10-b"><div class="qq"><b>+α</b> 입자 둘이 실험실에서 각각 \(0.9c\)로 정면으로 다가온다. 한 입자에서 본 다른 입자의 속력은? 실험실에서 본 "가까워지는 속도"와 구별하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>상대 속력 \(\frac{1.8}{1+0.81}c=0.9945c\). 실험실에서 간격이 줄어드는 비율(closing speed)은 \(1.8c\) — 어떤 물체의 속도도 아니므로 \(c\)를 넘어도 된다.</p></div></div>

@@ -1,0 +1,21 @@
+<div class="exq"><b>상황.</b> 9.6–9.7절의 탄성 정면충돌(\(m_2\) 정지)에 대해 반발계수가 \(\epsilon=1\)임을 보인다. 최종 속도는 모두 \(u_1\)과 같은 직선 위.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(v_2\)를 운동량으로 없애고, \(x=v_1/u_1\)의 이차방정식을 푼다.</div>
+<ol>
+<li>보존: \(m_1u_1=m_1v_1+m_2v_2\), \(\tfrac12m_1u_1^2=\tfrac12m_1v_1^2+\tfrac12m_2v_2^2\).</li>
+<li>반발계수: \(\epsilon=\dfrac{v_2-v_1}{u_1}\). 운동량으로 \(v_2=\dfrac{m_1}{m_2}(u_1-v_1)\)이므로
+\[ \epsilon=\frac{m_1}{m_2}(1-x)-x,\qquad x=\frac{v_1}{u_1}. \]</li>
+<li>에너지에 \(v_2\)를 넣고 \(m_1u_1^2\)으로 나누면 \(1=x^2+\frac{m_1}{m_2}(1-x)^2\), 즉
+\[ \left(1+\frac{m_1}{m_2}\right)x^2-2\frac{m_1}{m_2}x+\left(\frac{m_1}{m_2}-1\right)=0 . \]</li>
+<li>근: \(x=1\) (충돌하지 않음, 버림) 또는 \(x=\dfrac{m_1-m_2}{m_1+m_2}\).</li>
+<li>대입: \(1-x=\dfrac{2m_2}{m_1+m_2}\) → \(\epsilon=\dfrac{2m_1}{m_1+m_2}-\dfrac{m_1-m_2}{m_1+m_2}=\dfrac{m_1+m_2}{m_1+m_2}=1\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ v_1=\frac{m_1-m_2}{m_1+m_2}u_1,\quad v_2=\frac{2m_1}{m_1+m_2}u_1,\quad \epsilon=1\ } \]
+<p class="note"><b>검산</b> ① 등질량: \(v_1=0\), \(v_2=u_1\) — 당구공 정면충돌 ✓. ② \(m_2\to\infty\): \(v_1=-u_1\) (벽에서 되튐) ✓. ③ CM계 논증: 탄성충돌은 CM계 속도를 뒤집기만 하므로 상대속도의 크기가 그대로 → \(\epsilon=1\) (한 줄 증명).</p></div>
+<div class="qz" data-q="ex9.9-a"><div class="qq"><b>+α</b> 일반화: 반발계수가 \(\epsilon\)인 정면충돌(\(m_2\) 정지)에서 \(v_1,v_2\)와 운동에너지 손실 비율을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(v_2-v_1=\epsilon u_1\), \(m_1v_1+m_2v_2=m_1u_1\):
+\[ v_1=\frac{m_1-\epsilon m_2}{m_1+m_2}u_1,\qquad v_2=\frac{(1+\epsilon)m_1}{m_1+m_2}u_1 . \]
+손실: \(-Q=(1-\epsilon^2)T'_0=(1-\epsilon^2)\dfrac{m_2}{m_1+m_2}T_0\). \(\epsilon=1\)이면 0, \(\epsilon=0\)이면 \(T'_0\) 전부(U7 유도 1) ✓.</p></div></div>
+<div class="qz" data-q="ex9.9-b"><div class="qq"><b>+α</b> 측정 설계: 공을 높이 \(h_0\)에서 떨어뜨려 첫 번째 튐 높이 \(h_1\)을 쟀다. \(\epsilon\)을 구하고, 바닥(지구)의 질량이 무한대라는 가정이 어디에 쓰였는지 말하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>충돌 직전 \(\sqrt{2gh_0}\), 직후 \(\sqrt{2gh_1}\). 바닥의 속도는 전후 모두 0 → \(\epsilon=\sqrt{h_1/h_0}\).</p>
+<p>"바닥 속도가 충돌 후에도 0"이 \(m_2\to\infty\) 가정. 유한하면 지구가 \((1+\epsilon)m_1u_1/(m_1+m_2)\)로 반동하지만 무시 가능.</p></div></div>

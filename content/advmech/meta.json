@@ -1,0 +1,490 @@
+{
+ "today": "2026-09-29",
+ "course": {
+  "info": "2026-2 고급역학 (강의 3학점 + 연습 1학점) · 최재원 교수 (물리천문학부, 56동 324호) · 월·수 11:00–12:15, 28동 101호<br>교재: Thornton &amp; Marion <i>Classical Dynamics of Particles and Systems</i> 5판 (보조: Goldstein 3판) · 강의 노트는 eTL 업로드<br>평가: 숙제 40% (총 4회 예정, 교과서 연습문제 + 기타) · 중간 30% (<b>10/30(금) 19:00–22:00</b>) · 기말 30% (15 또는 16주차) · 전자출결 2/3 이상 필수<br><b>시험 난이도</b>: 숙제 문제와 강의에서 소개한 내용을 성실히 공부하면 A− 정도 · 9/14, 9/16, 9/21 휴강 → 보강기간(12/15–21) 및 동영상으로 보충 예정"
+ },
+ "exams": [
+  {
+   "name": "중간고사",
+   "date": "2026-10-30",
+   "tentative": false,
+   "note": "금 19:00–22:00 (확정)"
+  },
+  {
+   "name": "기말고사",
+   "date": "2026-12-09",
+   "tentative": true,
+   "note": "15 또는 16주차 (날짜 미정)"
+  }
+ ],
+ "rangeLabel": {
+  "1": "중간고사 범위(예상) · Ch.9–11",
+  "2": "기말고사 범위(예상) · Ch.12–14"
+ },
+ "rangeShort": {
+  "1": "중간(예상) · 9–11장",
+  "2": "기말(예상) · 12–14장"
+ },
+ "drive": {
+  "textbook": "https://drive.google.com/file/d/1-KGsd24uenfSFLuVs7lcD8g-5Kk42l7I/view",
+  "solution": "https://drive.google.com/file/d/1_P0snh19XVZk4sH8PIwKmPvQH7NvLB7F/view",
+  "folder": "https://drive.google.com/drive/folders/12R1_nxBLwIOPUfzOW7KB2dRoQqidPnx8"
+ },
+ "chapters": {
+  "9": {
+   "ko": "입자계의 동역학",
+   "en": "Dynamics of a System of Particles",
+   "range": 1
+  },
+  "10": {
+   "ko": "비관성 기준계",
+   "en": "Motion in a Noninertial Reference Frame",
+   "range": 1
+  },
+  "11": {
+   "ko": "강체의 동역학",
+   "en": "Dynamics of Rigid Bodies",
+   "range": 1
+  },
+  "12": {
+   "ko": "결합 진동",
+   "en": "Coupled Oscillations",
+   "range": 2
+  },
+  "13": {
+   "ko": "연속계와 파동",
+   "en": "Continuous Systems; Waves",
+   "range": 2
+  },
+  "14": {
+   "ko": "특수상대론",
+   "en": "Special Theory of Relativity",
+   "range": 2
+  }
+ },
+ "units": [
+  {
+   "id": "u01",
+   "ch": 9,
+   "secs": "9.1–9.2",
+   "page": 328,
+   "title": "입자계로의 확장 — Newton 제3법칙과 질량중심",
+   "en": "Newton's Third Law (weak/strong) & Center of Mass",
+   "sub": "한 입자의 법칙을 n입자계로 옮기기 위한 두 가지 가정과, 계 전체를 대표하는 점"
+  },
+  {
+   "id": "u02",
+   "ch": 9,
+   "secs": "9.3",
+   "page": 331,
+   "title": "계의 선운동량 — 내력은 왜 사라지는가",
+   "en": "Linear Momentum of the System",
+   "sub": "내력 합이 0이 되는 이중합 논법, MR̈ = F, 그리고 운동량으로 푸는 낙하 사슬"
+  },
+  {
+   "id": "u03",
+   "ch": 9,
+   "secs": "9.4",
+   "page": 336,
+   "title": "계의 각운동량 — 질량중심 분해와 내부 토크",
+   "en": "Angular Momentum of the System",
+   "sub": "L = R×P + Σr′×p′ 분해와, 내부 토크가 0이 되려면 '강한' 제3법칙이 필요한 이유"
+  },
+  {
+   "id": "u04",
+   "ch": 9,
+   "secs": "9.5",
+   "page": 339,
+   "title": "계의 에너지 — 운동에너지 분해와 내부 퍼텐셜",
+   "en": "Energy of the System",
+   "sub": "T = ½MV² + Σ½mv′², 그리고 내력의 일이 상쇄되지 않는 이유"
+  },
+  {
+   "id": "u05",
+   "ch": 9,
+   "secs": "9.6",
+   "page": 345,
+   "title": "두 입자의 탄성충돌 — LAB계와 CM계",
+   "en": "Elastic Collisions: LAB & CM Geometry",
+   "sub": "속도 원 그림 하나로 ψ–θ 관계, 등질량 90° 규칙, ψ_max까지",
+   "star": true
+  },
+  {
+   "id": "u06",
+   "ch": 9,
+   "secs": "9.7",
+   "page": 352,
+   "title": "탄성충돌의 운동학 — 에너지 비와 표적 분석",
+   "en": "Kinematics of Elastic Collisions",
+   "sub": "T₁/T₀를 θ와 ψ로, 그리고 90° 검출기로 표적 질량을 읽는 법"
+  },
+  {
+   "id": "u07",
+   "ch": 9,
+   "secs": "9.8",
+   "page": 358,
+   "title": "비탄성충돌과 충격량",
+   "en": "Inelastic Collisions & Impulse",
+   "sub": "Q값, 반발계수 ε(Newton의 규칙), 충격력과 떨어지는 밧줄"
+  },
+  {
+   "id": "u08",
+   "ch": 9,
+   "secs": "9.9",
+   "page": 363,
+   "title": "산란 단면적",
+   "en": "Scattering Cross Sections",
+   "sub": "σ(θ) = (b/sinθ)|db/dθ|, 궤도적분으로 b(θ) 얻기, CM→LAB 변환",
+   "star": true
+  },
+  {
+   "id": "u09",
+   "ch": 9,
+   "secs": "9.10",
+   "page": 369,
+   "title": "Rutherford 산란 공식",
+   "en": "Rutherford Scattering Formula",
+   "sub": "b = κ cot(θ/2) → σ ∝ 1/sin⁴(θ/2), 전단면적 발산과 차폐(Yukawa)",
+   "star": true
+  },
+  {
+   "id": "u10",
+   "ch": 9,
+   "secs": "9.11",
+   "page": 371,
+   "title": "로켓 운동",
+   "en": "Rocket Motion",
+   "sub": "자유공간의 로켓 방정식, 다단 로켓, 중력하 수직 상승"
+  },
+  {
+   "id": "u11",
+   "ch": 10,
+   "secs": "10.1–10.2",
+   "page": 387,
+   "title": "회전 좌표계 — 시간미분 연산자의 변환",
+   "en": "Rotating Coordinate Systems",
+   "sub": "(d/dt)_fixed = (d/dt)_rot + ω× — 비관성계 역학 전체의 출발식"
+  },
+  {
+   "id": "u12",
+   "ch": 10,
+   "secs": "10.3",
+   "page": 391,
+   "title": "원심력과 Coriolis 힘",
+   "en": "Centrifugal and Coriolis Forces",
+   "sub": "회전계에서의 유효 운동방정식과 네 개의 겉보기 힘",
+   "star": true
+  },
+  {
+   "id": "u13",
+   "ch": 10,
+   "secs": "10.4",
+   "page": 395,
+   "title": "지구에 대한 운동 — 유효 중력과 낙하 편향",
+   "en": "Motion Relative to the Earth: g_eff & Deflections",
+   "sub": "연직선의 기울기, 낙하체의 동쪽 편향, 수평 운동의 Coriolis 편향"
+  },
+  {
+   "id": "u14",
+   "ch": 10,
+   "secs": "10.4",
+   "page": 401,
+   "title": "Foucault 진자",
+   "en": "The Foucault Pendulum",
+   "sub": "진동면이 Ω sinλ로 도는 이유"
+  },
+  {
+   "id": "u15",
+   "ch": 11,
+   "secs": "11.1–11.2",
+   "page": 411,
+   "title": "강체의 단순 평면운동",
+   "en": "Simple Planar Motion",
+   "sub": "고정축 회전·굴림 — 텐서 이전에 익혀야 할 기본기"
+  },
+  {
+   "id": "u16",
+   "ch": 11,
+   "secs": "11.3",
+   "page": 415,
+   "title": "관성 텐서",
+   "en": "Inertia Tensor",
+   "sub": "T_rot = ½ Σ I_ij ω_i ω_j 로 가는 유도와 성분 계산",
+   "star": true
+  },
+  {
+   "id": "u17",
+   "ch": 11,
+   "secs": "11.4",
+   "page": 419,
+   "title": "강체의 각운동량",
+   "en": "Angular Momentum of a Rigid Body",
+   "sub": "L = I·ω — 왜 L과 ω는 평행하지 않은가"
+  },
+  {
+   "id": "u18",
+   "ch": 11,
+   "secs": "11.5",
+   "page": 424,
+   "title": "관성 주축",
+   "en": "Principal Axes of Inertia",
+   "sub": "고유값 문제로서의 주축, 영년방정식"
+  },
+  {
+   "id": "u19",
+   "ch": 11,
+   "secs": "11.6",
+   "page": 428,
+   "title": "좌표계 이동과 관성 텐서 — 평행축 정리",
+   "en": "Moments of Inertia for Different Body Coordinate Systems",
+   "sub": "일반화된 평행축 정리 J_ij = I_ij + M(a²δ_ij − a_i a_j)"
+  },
+  {
+   "id": "u20",
+   "ch": 11,
+   "secs": "11.7",
+   "page": 433,
+   "title": "관성 텐서의 추가 성질",
+   "en": "Further Properties of the Inertia Tensor",
+   "sub": "텐서의 좌표 변환 I′ = λIλᵀ, 대각화, 대칭성과 주축"
+  },
+  {
+   "id": "u21",
+   "ch": 11,
+   "secs": "11.8",
+   "page": 440,
+   "title": "Euler 각",
+   "en": "Eulerian Angles",
+   "sub": "세 번의 회전(φ, θ, ψ)과 물체축 성분의 각속도"
+  },
+  {
+   "id": "u22",
+   "ch": 11,
+   "secs": "11.9",
+   "page": 444,
+   "title": "강체의 Euler 방정식",
+   "en": "Euler's Equations for a Rigid Body",
+   "sub": "I₁ω̇₁ − (I₂ − I₃)ω₂ω₃ = N₁ — 물체계에서 본 회전 동역학",
+   "star": true
+  },
+  {
+   "id": "u23",
+   "ch": 11,
+   "secs": "11.10",
+   "page": 448,
+   "title": "외력 없는 대칭 팽이",
+   "en": "Force-Free Motion of a Symmetric Top",
+   "sub": "물체계 세차 진동수 Ω, 물체 원뿔과 공간 원뿔"
+  },
+  {
+   "id": "u24",
+   "ch": 11,
+   "secs": "11.11",
+   "page": 454,
+   "title": "한 점이 고정된 대칭 팽이",
+   "en": "Symmetric Top with One Point Fixed",
+   "sub": "Lagrangian, 유효 퍼텐셜, 세차와 장동"
+  },
+  {
+   "id": "u25",
+   "ch": 11,
+   "secs": "11.12",
+   "page": 460,
+   "title": "강체 회전의 안정성",
+   "en": "Stability of Rigid-Body Rotations",
+   "sub": "중간 주축 회전이 불안정한 이유 (테니스 라켓 정리)"
+  },
+  {
+   "id": "u26",
+   "ch": 12,
+   "secs": "12.1–12.2",
+   "page": 468,
+   "title": "두 결합 조화진동자",
+   "en": "Two Coupled Harmonic Oscillators",
+   "sub": "정규 진동수와 정규 모드의 원형"
+  },
+  {
+   "id": "u27",
+   "ch": 12,
+   "secs": "12.3",
+   "page": 473,
+   "title": "약한 결합과 맥놀이",
+   "en": "Weak Coupling",
+   "sub": "에너지가 두 진동자 사이를 오가는 현상"
+  },
+  {
+   "id": "u28",
+   "ch": 12,
+   "secs": "12.4",
+   "page": 475,
+   "title": "결합 진동의 일반 이론",
+   "en": "General Problem of Coupled Oscillations",
+   "sub": "T = ½ m_jk q̇_j q̇_k, U = ½ A_jk q_j q_k → |A − ω²m| = 0",
+   "star": true
+  },
+  {
+   "id": "u29",
+   "ch": 12,
+   "secs": "12.5–12.6",
+   "page": 481,
+   "title": "고유벡터의 직교성과 정규 좌표",
+   "en": "Orthogonality of Eigenvectors & Normal Coordinates",
+   "sub": "m-가중 직교성, 정규 좌표에서 Lagrangian의 분리"
+  },
+  {
+   "id": "u30",
+   "ch": 12,
+   "secs": "12.7",
+   "page": 490,
+   "title": "분자 진동",
+   "en": "Molecular Vibrations",
+   "sub": "선형 3원자 분자와 0-진동수 모드"
+  },
+  {
+   "id": "u31",
+   "ch": 12,
+   "secs": "12.8",
+   "page": 495,
+   "title": "선형 결합된 세 진자",
+   "en": "Three Linearly Coupled Plane Pendula",
+   "sub": "축퇴와 모드 선택"
+  },
+  {
+   "id": "u32",
+   "ch": 12,
+   "secs": "12.9",
+   "page": 498,
+   "title": "Loaded string — 이산에서 연속으로",
+   "en": "The Loaded String",
+   "sub": "n개 질점 줄의 정규 모드 ω_r = 2ω₀ sin(rπ/2(n+1))"
+  },
+  {
+   "id": "u33",
+   "ch": 13,
+   "secs": "13.1–13.2",
+   "page": 512,
+   "title": "연속 줄: loaded string의 극한",
+   "en": "Continuous String as a Limiting Case",
+   "sub": "n→∞ 극한에서 파동방정식과 정상파"
+  },
+  {
+   "id": "u34",
+   "ch": 13,
+   "secs": "13.3",
+   "page": 516,
+   "title": "진동하는 줄의 에너지",
+   "en": "Energy of a Vibrating String",
+   "sub": "모드별 에너지의 합, 뜯은 줄(Example 13.1)"
+  },
+  {
+   "id": "u35",
+   "ch": 13,
+   "secs": "13.4–13.5",
+   "page": 520,
+   "title": "파동방정식과 강제·감쇠 운동",
+   "en": "Wave Equation; Forced and Damped Motion",
+   "sub": "1차원 파동방정식의 도출과 구동된 줄"
+  },
+  {
+   "id": "u36",
+   "ch": 13,
+   "secs": "13.6–13.7",
+   "page": 524,
+   "title": "파동방정식의 일반해와 변수분리",
+   "en": "General Solutions & Separation of the Wave Equation",
+   "sub": "d'Alembert 해, 변수분리와 경계조건"
+  },
+  {
+   "id": "u37",
+   "ch": 13,
+   "secs": "13.8",
+   "page": 533,
+   "title": "위상속도, 분산, 감쇠",
+   "en": "Phase Velocity, Dispersion, and Attenuation",
+   "sub": "복소 파수와 분산관계"
+  },
+  {
+   "id": "u38",
+   "ch": 13,
+   "secs": "13.9",
+   "page": 538,
+   "title": "군속도와 파속",
+   "en": "Group Velocity and Wave Packets",
+   "sub": "v_g = dω/dk 와 파속의 폭–대역폭 관계"
+  },
+  {
+   "id": "u39",
+   "ch": 14,
+   "secs": "14.1–14.2",
+   "page": 546,
+   "title": "Galilei 불변성과 그 한계",
+   "en": "Galilean Invariance",
+   "sub": "역학은 불변, 전자기학은 불변이 아니다"
+  },
+  {
+   "id": "u40",
+   "ch": 14,
+   "secs": "14.3",
+   "page": 548,
+   "title": "Lorentz 변환",
+   "en": "Lorentz Transformation",
+   "sub": "두 가정에서 변환식까지, 시간 팽창·길이 수축",
+   "star": true
+  },
+  {
+   "id": "u41",
+   "ch": 14,
+   "secs": "14.4–14.5",
+   "page": 555,
+   "title": "실험적 검증과 상대론적 Doppler 효과",
+   "en": "Experimental Verification; Relativistic Doppler Effect",
+   "sub": "뮤온 수명, Doppler 공식"
+  },
+  {
+   "id": "u42",
+   "ch": 14,
+   "secs": "14.6",
+   "page": 561,
+   "title": "쌍둥이 역설",
+   "en": "Twin Paradox",
+   "sub": "비대칭은 가속에서 온다"
+  },
+  {
+   "id": "u43",
+   "ch": 14,
+   "secs": "14.7–14.8",
+   "page": 562,
+   "title": "상대론적 운동량과 에너지",
+   "en": "Relativistic Momentum and Energy",
+   "sub": "p = γmu, E = γmc², E² = p²c² + m²c⁴",
+   "star": true
+  },
+  {
+   "id": "u44",
+   "ch": 14,
+   "secs": "14.9",
+   "page": 569,
+   "title": "시공간과 4-벡터",
+   "en": "Spacetime and Four-Vectors",
+   "sub": "불변 간격, 광원뿔, 4-운동량"
+  },
+  {
+   "id": "u45",
+   "ch": 14,
+   "secs": "14.10",
+   "page": 578,
+   "title": "특수상대론의 Lagrangian",
+   "en": "Lagrangian Function in Special Relativity",
+   "sub": "L = −mc²/γ − U"
+  },
+  {
+   "id": "u46",
+   "ch": 14,
+   "secs": "14.11",
+   "page": 579,
+   "title": "상대론적 운동학",
+   "en": "Relativistic Kinematics",
+   "sub": "운동량중심계, 동질량 충돌의 끼인각, 불변 질량과 문턱 에너지"
+  }
+ ]
+}

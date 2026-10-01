@@ -1,0 +1,25 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+(a) \(45^\circ\)이므로 두 성분이 같다:
+\[ u_x=u_y=\frac{u}{\sqrt2}=\frac{2c}{\sqrt5\sqrt2}=\boxed{\sqrt{\tfrac25}\,c\approx0.632c} \]
+검산: \(u^2=2\cdot\frac25c^2=\frac45c^2\) ✓. \(\gamma=1/\sqrt{1-4/5}=\sqrt5\).
+
+<p>(b) \(\eta_i=\gamma u_i=\sqrt5\cdot\sqrt{2/5}\,c\):
+\[ \boxed{\eta_x=\eta_y=\sqrt2\,c} \]</p>
+<p>(c) \(\boxed{\eta^{0}=\gamma c=\sqrt5\,c}\) (검산: \(-\eta_0^2+\eta_x^2+\eta_y^2=-5c^2+2c^2+2c^2=-c^2\) ✓).</p>
+
+<p>(d) \(v=\sqrt{2/5}\,c=u_x\), \(\gamma_v=1/\sqrt{1-2/5}=\sqrt{5/3}\), \(1-u_xv/c^{2}=1-\frac25=\frac35\).
+\[ \bar u_x=\frac{u_x-v}{1-u_xv/c^{2}}=\boxed{0}, \]
+\[ \bar u_y=\frac{u_y}{\gamma_v(1-u_xv/c^{2})}=\frac{\sqrt{2/5}\,c}{\sqrt{5/3}\cdot\frac35}=\boxed{\sqrt{\tfrac23}\,c\approx0.816c} \]</p>
+
+<p>(e) 고유속도는 4-벡터이므로 그냥 로런츠 변환:
+\[ \bar\eta_x=\gamma_v(\eta_x-\beta_v\eta^{0})=\sqrt{\tfrac53}\Bigl(\sqrt2 c-\sqrt{\tfrac25}\cdot\sqrt5\,c\Bigr)=\sqrt{\tfrac53}(\sqrt2-\sqrt2)c=\boxed{0}, \]
+\[ \boxed{\bar\eta_y=\eta_y=\sqrt2\,c}\quad(\text{수직 성분은 4-벡터 변환에서 불변}) \]</p>
+
+<p>(f) \(\bar u=\sqrt{2/3}c\Rightarrow \sqrt{1-\bar u^{2}/c^{2}}=\sqrt{1/3}\).
+\[ \frac{\bar u}{\sqrt{1-\bar u^{2}/c^{2}}}=\frac{\sqrt{2/3}\,c}{1/\sqrt3}=\sqrt2\,c=\bar\eta\ \ \checkmark \]</p>
+
+<p>교훈: <b>일반 속도는 지저분한 비선형 규칙으로 변환되지만, 고유속도는 4-벡터라 행렬 곱 한 번으로 끝난다.</b> 이것이 상대론적 운동량을 \(m\boldsymbol\eta\)로 정의하는 이유다.</p>
+
+<div class="alabel">감점 포인트</div>
+(e)에서 \(\bar\eta_y=\eta_y/\gamma\) 같은 식을 쓰는 것 — 4-벡터의 수직 성분은 부스트에서 <b>전혀</b> 변하지 않는다. (d)의 \(\bar u_y\)에 \(\gamma\)가 붙는 것은 시간 성분이 섞이기 때문임을 구분할 것.</div><!--/sol-->

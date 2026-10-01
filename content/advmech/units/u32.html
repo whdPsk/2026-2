@@ -1,0 +1,45 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 장력 \(\tau\)인 줄에 질량 \(m\)인 구슬 \(n\)개를 간격 \(d\)로 꿴 "loaded string"(1차원 결정 격자 모형)의 정규 모드는 몇 개일까? \(j\)번째 구슬의 진폭이 \(\sin(j\gamma)\) 꼴이라면 줄 양 끝이 고정이라는 조건이 \(\gamma\)를 어떻게 제한할까? 모드 번호 \(r\)을 \(n\)보다 크게 잡으면 새 모드가 생길까?</div>
+
+<h4>12.9 Loaded string <span class="en">the loaded string</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>운동방정식 — 가장 가까운 이웃 결합 <b>(필수)</b></div>
+<ol>
+<li>횡변위 \(q_j\) 작음 → 장력 \(\tau\) 일정, \(\sin\approx\tan\). \(j\)번째 구슬에 대한 알짜 힘:
+\[ F_j=-\frac\tau d(q_j-q_{j-1})-\frac\tau d(q_j-q_{j+1}) . \]</li>
+<li>\[ m\ddot q_j=\frac\tau d\left(q_{j-1}-2q_j+q_{j+1}\right),\qquad q_0=q_{n+1}=0 . \]
+Lagrangian으로도: \(U=\frac\tau{2d}\sum_{j=1}^{n+1}(q_{j-1}-q_j)^2\) (줄 조각 \(n+1\)개가 늘어난 일), \(T=\tfrac12m\sum\dot q_j^2\).</li>
+<li>종진동이면 \(\tau/d\to\kappa\). \(n=1\): \(\omega=\sqrt{2\tau/md}\). \(n=2\): \(\omega^2=\frac{\tau}{md}(2\pm1)\) — U26과 같다(\(\kappa=\kappa_{12}=\tau/d\)).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>\(\omega_r=2\sqrt{\frac{\tau}{md}}\sin\frac{r\pi}{2(n+1)}\) — 교재 식 (12.139)–(12.152) <b>(필수)</b></div>
+<ol>
+<li>\(q_j=a_je^{i\omega t}\): \(-\frac\tau da_{j-1}+\left(\frac{2\tau}d-m\omega^2\right)a_j-\frac\tau da_{j+1}=0\) — 3중대각 영년행렬식.</li>
+<li>차분방정식에 \(a_j=ae^{i(j\gamma-\delta)}\)를 시도:
+\[ \omega^2=\frac{2\tau}{md}-\frac{\tau}{md}\left(e^{i\gamma}+e^{-i\gamma}\right)=\frac{2\tau}{md}(1-\cos\gamma)=\frac{4\tau}{md}\sin^2\frac\gamma2 . \]</li>
+<li>실수부 \(a_j=a\cos(j\gamma-\delta)\). 경계 \(a_0=0\) → \(\delta=\pi/2\) → \(a_j=a\sin j\gamma\).</li>
+<li>\(a_{n+1}=0\) → \((n+1)\gamma=r\pi\):
+\[ \gamma_r=\frac{r\pi}{n+1},\qquad a_{jr}=a_r\sin\frac{jr\pi}{n+1},\qquad \boxed{\ \omega_r=2\sqrt{\frac\tau{md}}\sin\frac{r\pi}{2(n+1)}\ },\ \ r=1,\ldots,n . \]</li>
+<li><b>모드 수</b>: \(r=0,\ n+1\)은 모든 진폭 0(null 모드). \(r=n+2,\ldots,2n+1\)은 \(r=1,\ldots,n\)의 반복(부호만 반대, 역순). → 정확히 \(n\)개(예측의 답, 교재 그림 12-11). 점선 사인 곡선은 구슬 위치의 값만 의미가 있다 — 고체물리의 Brillouin 영역, 에일리어싱의 원형.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>초기조건으로 모드 진폭 정하기 — 교재 식 (12.155)–(12.161)</div>
+<ol>
+<li>\(q_j(t)=\sum_r\sin\frac{jr\pi}{n+1}\left(\mu_r\cos\omega_rt-\nu_r\sin\omega_rt\right)\).</li>
+<li>직교성: \(\sum_{j=1}^n\sin\frac{jr\pi}{n+1}\sin\frac{js\pi}{n+1}=\frac{n+1}2\delta_{rs}\).</li>
+<li>\[ \mu_s=\frac{2}{n+1}\sum_jq_j(0)\sin\frac{js\pi}{n+1},\qquad \nu_s=-\frac{2}{(n+1)\omega_s}\sum_j\dot q_j(0)\sin\frac{js\pi}{n+1} . \]
+— 이산 사인 변환. \(n\to\infty\)에서 Fourier 급수(U33).</li>
+<li><b>Example 12.7</b> (\(n=3\), 가운데 구슬만 \(a\) 당겼다 놓음): \(\mu_1=\tfrac a2\), \(\mu_2=0\), \(\mu_3=-\tfrac a2\). 가운데 구슬은 모드 2의 마디라 모드 2는 들뜨지 않는다.
+\[ q_1=q_3=\tfrac{\sqrt2}4a(\cos\omega_1t-\cos\omega_3t),\qquad q_2=\tfrac a2(\cos\omega_1t+\cos\omega_3t). \]</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — loaded string</div>
+\[ m\ddot q_j=\frac\tau d(q_{j-1}-2q_j+q_{j+1}),\quad a_{jr}\propto\sin\frac{jr\pi}{n+1},\quad \omega_r=2\sqrt{\frac\tau{md}}\sin\frac{r\pi}{2(n+1)},\ r=1..n \]
+<p class="note">\(\sum_j\sin\frac{jr\pi}{n+1}\sin\frac{js\pi}{n+1}=\frac{n+1}2\delta_{rs}\). 종진동은 \(\tau/d\to\kappa\).</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u32-1"><div class="qq">(시험형) loaded string의 고유진동수 공식을 \(a_j=ae^{ij\gamma}\) 시도해와 경계조건으로 유도하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 2. 핵심: 차분방정식은 계수가 상수이므로 지수 시도해가 통하고, 두 경계조건이 \(\delta\)와 \(\gamma\)를 하나씩 정한다.</p></div></div>
+
+<div class="qz" data-q="u32-2"><div class="qq">\(n=3\)일 때 세 진동수를 \(\omega_0=\sqrt{\tau/md}\) 단위로 구하고 각 모드의 진폭 패턴 \((a_1,a_2,a_3)\)을 쓰라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\omega_r=2\omega_0\sin(r\pi/8)\): \(0.765\omega_0\), \(1.414\omega_0\), \(1.848\omega_0\). 패턴 \(\sin(jr\pi/4)\): \(r=1\): \((\tfrac{\sqrt2}2,1,\tfrac{\sqrt2}2)\); \(r=2\): \((1,0,-1)\); \(r=3\): \((\tfrac{\sqrt2}2,-1,\tfrac{\sqrt2}2)\).</p></div></div>
+
+<div class="qz" data-q="u32-3"><div class="qq">\(n\gg1\), \(r\ll n\)이면 \(\omega_r\approx\frac{r\pi}{L}\sqrt{\tau/\rho}\) (\(L=(n+1)d\), \(\rho=m/d\))임을 보여라. 이것이 연속 줄의 결과로 이어진다.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\sin x\approx x\): \(\omega_r\approx2\sqrt{\frac\tau{md}}\frac{r\pi}{2(n+1)}=\frac{r\pi}{(n+1)d}\sqrt{\frac{\tau d}{m}}=\frac{r\pi}{L}\sqrt{\frac\tau\rho}\). 파동 속도 \(v=\sqrt{\tau/\rho}\), 선형 분산 \(\omega=vk\) (U33). \(r\sim n\)에서는 \(\sin\)이 포화 — 분산(U37).</p></div></div>

@@ -1,0 +1,24 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>일반화된 Maxwell 방정식(Eq. 7.53):
+\[\divg\vb{E}=\rho_e/\eps,\quad \divg\vb{B}=\muz\rho_m,\quad
+\curl\vb{E}=-\muz\vb{J}_m-\frac{\partial\vb{B}}{\partial t},\quad
+\curl\vb{B}=\muz\vb{J}_e+\muz\eps\frac{\partial\vb{E}}{\partial t},\]
+Lorentz 힘(Eq. 8.44): \(\vb{F}=q_e(\vb{E}+\vb{v}\times\vb{B})+q_m(\vb{B}-\eps\muz\vb{v}\times\vb{E})\).</p>
+<p><b>에너지.</b> 단위부피당 일률은 \(\vb{E}\cdot\vb{J}_e+\vb{B}\cdot\vb{J}_m\). 두 항을 장으로 바꾸면
+\[\vb{E}\cdot\vb{J}_e+\vb{B}\cdot\vb{J}_m
+=-\frac{\partial}{\partial t}\Big[\tfrac{\eps}{2}E^{2}+\tfrac{1}{2\muz}B^{2}\Big]
+-\frac{1}{\muz}\divg(\vb{E}\times\vb{B}).\]
+즉 <b>형태가 전혀 바뀌지 않는다</b>:
+\[\boxed{\;u=\tfrac12\Big(\eps E^{2}+\tfrac{1}{\muz}B^{2}\Big),\qquad
+\vb{S}=\tfrac{1}{\muz}(\vb{E}\times\vb{B})\;}\]</p>
+<p><b>운동량.</b> 힘밀도
+\(\vb{f}=\rho_e\vb{E}+\vb{J}_e\times\vb{B}+\rho_m\vb{B}-\eps\muz\vb{J}_m\times\vb{E}\) 에 위 식들을 대입하면
+\[\vb{f}=\eps\big[(\divg\vb{E})\vb{E}-\vb{E}\times(\curl\vb{E})\big]
++\frac{1}{\muz}\big[(\divg\vb{B})\vb{B}-\vb{B}\times(\curl\vb{B})\big]
+-\eps\frac{\partial}{\partial t}(\vb{E}\times\vb{B}).\]
+\[\boxed{\;\vb{g}=\eps(\vb{E}\times\vb{B}),\qquad
+T_{ij}=\eps\Big(E_iE_j-\tfrac12\delta_{ij}E^{2}\Big)+\frac{1}{\muz}\Big(B_iB_j-\tfrac12\delta_{ij}B^{2}\Big)\;}\]
+네 양 모두 <b>그대로</b>다. 흥미로운 점: 통상 유도에서 대칭성을 위해 "인위적으로" 넣던 \((\divg\vb{B})\vb{B}\) 항이 여기서는 \(\rho_m\vb{B}\) 로 자연스럽게 정당화된다.</p>
+<div class="alabel">감점 포인트</div>
+\(q_m\) 항의 부호(\(\vb{B}-\eps\muz\vb{v}\times\vb{E}\))를 틀리면 상쇄가 안 되어 새로운 항이 생긴 것처럼 보인다.</div><!--/sol-->

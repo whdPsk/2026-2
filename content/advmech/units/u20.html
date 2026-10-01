@@ -1,0 +1,43 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 좌표축을 돌리면 벡터 성분은 \(x'=\lambda x\)로 바뀐다. 관성 텐서처럼 "벡터를 벡터로 보내는" 양은 어떻게 바뀌어야 \(\vb L=\I\boldsymbol\omega\)가 모든 좌표계에서 같은 꼴로 성립할까? 또 대칭 실수 행렬의 고유값이 항상 실수이고 고유벡터가 직교한다는 선형대수 정리는 역학에서 무슨 의미일까?</div>
+
+<h4>11.7 관성 텐서의 추가 성질 <span class="en">further properties of the inertia tensor</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>텐서의 변환 법칙 \(I'=\lambda I\lambda^{\mathsf T}\) <b>(필수)</b></div>
+<ol>
+<li>두 좌표계에서 \(L_k=\sum_lI_{kl}\omega_l\), \(L'_i=\sum_jI'_{ij}\omega'_j\). 벡터 변환: \(L_k=\sum_m\lambda_{mk}L'_m\), \(\omega_l=\sum_j\lambda_{jl}\omega'_j\).</li>
+<li>대입: \(\sum_m\lambda_{mk}L'_m=\sum_{l,j}I_{kl}\lambda_{jl}\omega'_j\). 양변에 \(\lambda_{ik}\)를 곱해 \(k\)로 합하면 \(\sum_k\lambda_{ik}\lambda_{mk}=\delta_{im}\):
+\[ L'_i=\sum_j\left(\sum_{k,l}\lambda_{ik}\lambda_{jl}I_{kl}\right)\omega'_j . \]</li>
+<li>따라서
+\[ \boxed{\ I'_{ij}=\sum_{k,l}\lambda_{ik}\lambda_{jl}I_{kl}\quad\Longleftrightarrow\quad I'=\lambda I\lambda^{\mathsf T}\ } \]
+— 2계 텐서의 정의. (벡터는 1계: \(T'_i=\sum\lambda_{ij}T_j\), 스칼라는 0계.) 직교 행렬이라 \(\lambda^{\mathsf T}=\lambda^{-1}\): <b>닮음 변환</b>.</li>
+<li>Example 11.7: \(I_{\rm CM}=\tfrac16Mb^2\mathbb 1\)이면 \(\lambda I\lambda^{\mathsf T}=\tfrac16Mb^2\lambda\lambda^{\mathsf T}=I\) — 어떤 회전에도 불변 ✓.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>대각화 = 영년방정식, 그리고 주축의 실수성·직교성</div>
+<ol>
+<li>회전 후 대각이 되려면 \(I'_{ij}=I_i\delta_{ij}\). 변환 법칙에 \(\lambda\)를 곱해 정리하면 \(\sum_l(I_{ml}-I_j\delta_{ml})\lambda_{jl}=0\) → \(\lambda\)의 <b>행</b>이 고유벡터, \(\det(I-I_j\mathbb 1)=0\) — U18과 같은 식.</li>
+<li><b>직교성</b>: \(I\boldsymbol\omega_m=I_m\boldsymbol\omega_m\), \(I\boldsymbol\omega_n=I_n\boldsymbol\omega_n\). 첫 식에 \(\boldsymbol\omega_n\cdot\), 둘째에 \(\boldsymbol\omega_m\cdot\)을 곱하고 빼면 \(I\)가 대칭이므로 좌변이 같아
+\[ (I_m-I_n)\,\boldsymbol\omega_m\cdot\boldsymbol\omega_n=0 . \]
+\(I_m\ne I_n\)이면 직교. 중근이면 그 평면 안에서 직교하게 고를 수 있다.</li>
+<li><b>실수성</b>: 고유값을 복소수로 허용하고 둘째 식의 켤레를 취해 같은 절차: \((I_m-I_m^*)|\boldsymbol\omega_m|^2=0\) → \(I_m\) 실수. (필요한 것은 \(I_{ij}=I_{ji}^*\), 즉 Hermite성 — 교재 각주의 "Hermitean"은 오타표대로 "Hermitian".)</li>
+<li><b>결론 (모든 실대칭 텐서에 대해)</b>: ① 회전으로 대각화 가능 ② 고유값 실수 ③ 고유벡터 실수·직교. 어떤 원점을 택하든 그 원점에 대한 주축은 반드시 존재. (Ch.12의 결합 진동에서 그대로 재사용.)</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>회전으로 직접 대각화 — Example 11.8</div>
+<ol>
+<li>정육면체(모서리 원점). \(x_1\)축을 대각선으로 보내는 회전을 두 단계로: ① \(x_3\) 둘레 45° ② 새 \(x_2\) 둘레 \(\cos^{-1}\sqrt{2/3}\).</li>
+<li>전체 \(\lambda=\lambda_2\lambda_1=\begin{pmatrix}\frac1{\sqrt3}&\frac1{\sqrt3}&\frac1{\sqrt3}\\-\frac1{\sqrt2}&\frac1{\sqrt2}&0\\-\frac1{\sqrt6}&-\frac1{\sqrt6}&\frac2{\sqrt6}\end{pmatrix}\) — 첫 행이 대각선 방향 ✓.</li>
+<li>\(\lambda I\lambda^{\mathsf T}=\mathrm{diag}\left(\tfrac16,\tfrac{11}{12},\tfrac{11}{12}\right)Mb^2\) — U18의 결과와 일치. 일반적인 경우 회전각 세 개를 맞추는 것은 "인내의 한계"(교재) — 대칭이 한 축 회전을 알려줄 때만 유용.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 텐서 변환</div>
+\[ I'_{ij}=\sum_{kl}\lambda_{ik}\lambda_{jl}I_{kl},\qquad I'=\lambda I\lambda^{\mathsf T},\qquad (I_m-I_n)\boldsymbol\omega_m\cdot\boldsymbol\omega_n=0 \]
+<p class="note">불변량: 대각합(\(I_1+I_2+I_3\)), 행렬식(\(I_1I_2I_3\)). 실대칭 → 실수 고유값, 직교 고유벡터.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u20-1"><div class="qq">\(\vb L=\I\boldsymbol\omega\)가 회전된 좌표계에서도 성립하려면 \(I'=\lambda I\lambda^{\mathsf T}\)여야 함을 보여라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>행렬로 한 줄: \(\vb L'=\lambda\vb L=\lambda I\boldsymbol\omega=\lambda I\lambda^{\mathsf T}\lambda\boldsymbol\omega=(\lambda I\lambda^{\mathsf T})\boldsymbol\omega'\). 따라서 \(I'=\lambda I\lambda^{\mathsf T}\).</p></div></div>
+
+<div class="qz" data-q="u20-2"><div class="qq">대칭 텐서의 서로 다른 고유값에 대응하는 고유벡터가 직교함을 증명하라. 어디서 대칭성을 쓰는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 2의 2번. \(\boldsymbol\omega_n^{\mathsf T}I\boldsymbol\omega_m=\boldsymbol\omega_m^{\mathsf T}I^{\mathsf T}\boldsymbol\omega_n=\boldsymbol\omega_m^{\mathsf T}I\boldsymbol\omega_n\) — 두 번째 등호에서 \(I^{\mathsf T}=I\).</p></div></div>
+
+<div class="qz" data-q="u20-3"><div class="qq">\(\I=\begin{pmatrix}A&C&0\\C&B&0\\0&0&D\end{pmatrix}\)를 \(x_3\) 둘레 각 \(\theta\) 회전으로 대각화하려면 \(\tan2\theta\)가 무엇이어야 하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\lambda=\begin{pmatrix}c&s\\-s&c\end{pmatrix}\): \(I'_{12}=(B-A)sc+C(c^2-s^2)=\tfrac12(B-A)\sin2\theta+C\cos2\theta=0\) → \(\tan2\theta=\dfrac{2C}{A-B}\). (\(A=B\)이면 \(\theta=45°\) — U18 체크포인트 1과 일치.)</p></div></div>

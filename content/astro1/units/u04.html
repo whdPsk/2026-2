@@ -1,0 +1,122 @@
+<div class="predict"><b>◈ 학습 목표.</b> ① 열복사와 열복사에 대한 키르히호프 법칙(\(S_\nu=B_\nu\), "먹은 만큼 뱉는다")을 복사전달 해로 증명할 수 있다. ② Planck 함수·Wien 변위·RJ/Wien 극한·Stefan–Boltzmann·에너지밀도·광자 수밀도를 슬라이드 식 그대로 쓰고 숫자(0.29 cm K, σ, a, 20.3T³, CMB 400 cm⁻³)를 기억한다. ③ 유효·색·밝기 온도를 "몇 개의 파장을 관측했나"로 구분한다. ④ PPT Q3(먼지 vs 별): 세기가 아니라 <b>플럭스 = 세기 × 입체각</b>으로 생각한다.</div>
+
+<h4>9/8 리뷰 ① — 열복사란? <span class="en">What is thermal radiation?</span></h4>
+
+<div class="slide"><div class="sh">L03 · 슬라이드 3 <span class="st">Review Questions ①</span></div>
+<ul><li>What is thermal radiation? [[L03.s3a]]</li></ul></div>
+<div class="explain"><b>부가설명</b> 열복사(thermal radiation)는 <span class="hl">복사의 특성이 매질을 이루는 입자들의 열적 운동(주어진 온도)과 연결된 복사</span>다. 주어진 온도에서 플라즈마의 전자가 열운동으로 움직이면 전기장이 변하고, 그 때문에 생기는 복사라고 보면 된다. 대비되는 예가 싱크로트론 복사 — 전자가 자기장 주위를 돌면서 생기는 복사로 열적 운동과 무관하다(뒤에서 배움). 열복사의 가장 극단적(이상적)인 경우가 흑체복사다. [[S0908.02]] 플립 영상도 "매질 입자들의 열적 운동 때문에 방출되는 복사 = thermal radiation, 여러분이 익숙한 black body radiation은 아주 특별한 경우"라고 정의한다. [[F06.04]]</div>
+<div class="trap"><b>함정 — 열복사 ≠ 흑체 스펙트럼</b>열복사라도 광학적으로 얇으면 \(I_\nu\approx B_\nu\tau_\nu\)로 흑체보다 약하고 모양도 \(\tau_\nu\)의 진동수 의존성을 따른다. 흑체 스펙트럼은 "열복사 + 광학적으로 두꺼움(τ≫1)"일 때다(플립: "Optical depth가 1보다 큰 경우에 …"). [[F06.04, F09.09]]</div>
+
+<h4>9/8 리뷰 ② — 열복사에 대한 키르히호프 법칙 <span class="en">Kirchhoff's law for thermal radiation</span></h4>
+
+<div class="slide"><div class="sh">L03 · 슬라이드 3 <span class="st">Review Questions ②</span></div>
+<ul><li>What is the Kirchhoff’s Law for thermal radiation? [[L03.s3b]]</li></ul></div>
+
+<div class="slide flip"><div class="sh">플립 06 · 0:00–1:48 <span class="st">복사전달식의 형식해 (앞 영상 이어서)</span></div>
+<ol>
+<li>해 \(I_\nu(\tau_\nu)=I_\nu(0)e^{-\tau_\nu}+\int_0^{\tau_\nu}S_\nu(\tau'_\nu)e^{-(\tau_\nu-\tau'_\nu)}d\tau'_\nu\). <b>첫 항</b>: 흡수만 있을 때 들어온 세기가 \(e^{-\tau_\nu}\)만큼 감소. <b>둘째 항</b>: 매질 안에서 새로 만들어진 것 — 광학깊이 \(\tau'_\nu\)인 지점에서 \(S_\nu(\tau'_\nu)d\tau'_\nu\)만큼 생긴 복사가 [[F06.01]]</li>
+<li>끝(\(\tau_\nu\))까지 가면서 \(e^{-(\tau_\nu-\tau'_\nu)}\)만큼 감쇠 — 이것을 0부터 끝까지 모두 더한 것이 적분. 즉 "앞 항 = 들어온 것이 흡수된 결과, 둘째 항 = 만들어진 것이 흡수되고 나온 최종 결과". [[F06.02]]</li>
+<li>둘을 더한 것이 최종 세기. 가장 간단한 경우 \(S_\nu\)=일정 → 적분 밖으로: \(S_\nu\int_0^{\tau_\nu}e^{-(\tau_\nu-\tau')}d\tau'=S_\nu(1-e^{-\tau_\nu})\) ⟹ \(I_\nu=I_\nu(0)e^{-\tau_\nu}+S_\nu(1-e^{-\tau_\nu})\). <span class="star">강조</span><span class="hl">"이 식은 아주 많이 사용하는 식이기 때문에 잘 기억해 두면 좋겠습니다."</span> [[F06.03]]</li>
+</ol></div>
+
+<div class="slide flip"><div class="sh">플립 06 · 2:46–6:09 <span class="st">열복사에 대한 키르히호프 법칙과 증명</span></div>
+<ol>
+<li>온도 T인 매질(방출계수 \(j_\nu\), 흡수계수 \(\kappa_\nu\))이 열복사를 내면 source function(정의 \(S_\nu\equiv j_\nu/\kappa_\nu\))이 [[F06.04]]</li>
+<li>Planck 함수 \(B_\nu(T)={2h\nu^3\over c^2}{1\over e^{h\nu/kT}-1}\)와 같다: \(S_\nu=B_\nu(T)\) ⟺ \(j_\nu=\kappa_\nu B_\nu(T)\) — "흡수된 만큼 방출된다". [[F06.05]]</li>
+<li>증명: 온도 T인 이상적 흑체(공동) 속 복사장은 \(B_\nu\). 같은 온도 T의 매질을 넣어도 온도가 같으므로 복사장 성질은 안 바뀐다 → 구멍으로 나오는 emergent intensity = \(B_\nu\). 이제 매질 하나를 통과하는 복사를 보면, 입사 복사는 \(B_\nu\). [[F06.06]]</li>
+<li>매질 통과: \(I_\nu=B_\nu e^{-\tau_\nu}+S_\nu(1-e^{-\tau_\nu})\). 그런데 열역학적 평형이므로 매질이 복사를 바꾸지 않아야 → \(I_\nu=B_\nu\). [[F06.07]]</li>
+<li>이항: \(B_\nu(1-e^{-\tau_\nu})=S_\nu(1-e^{-\tau_\nu})\) → \(\tau_\nu\neq0\)이면 \(S_\nu=B_\nu\). 증명 끝. [[F06.08]]</li>
+</ol></div>
+
+<div class="explain"><b>부가설명 (9/8 수업)</b> 교수님 답: "크게 source function이 Planck 함수와 같다. Source function은 \(j_\nu/\kappa_\nu\)로 정의된 것이고, thermal radiation에서는 그게 Planck 함수와 같다 — 원래의 Kirchhoff 법칙은 \(j_\nu=\kappa_\nu B_\nu\)." 해석은 <span class="hl">"먹은 만큼 뱉는다 — 흡수한 만큼 방출한다"</span>. 에너지 보존 때문에 들어온 만큼 내보내지만, <b>진동수는 바뀔 수 있다</b>. [[S0908.03]]</div>
+<div class="apply"><b>천체 적용 — 성간 먼지</b>성간 먼지는 성간복사장(ISRF, 대략 A0 별들의 평균 ≈ 1만 K짜리 복사 특성)을 흡수해 데워진다. 먼지 온도는 보통 ~20 K(차가우면 10 K, 따뜻하면 100 K까지). 그러면 20 K 흑체 복사를 낸다 — Wien 법칙 \(\lambda_{\max}T\approx0.3\) cm K에서 \(\lambda\approx0.3/20\approx0.015\) cm ≈ 0.1–0.15 mm(원적외선–서브밀리미터; 수업에선 "대략 100분의 1 cm, 0.1 mm, millimeter wave"). <span class="hl">흡수하는 복사장은 1만 K, 방출은 20 K — 에너지는 보존되지만 진동수가 달라진다.</span> [[S0908.04]] → 예제 1.32</div>
+<div class="trap"><b>STT 교정</b>"trigger/KUF 법칙" → Kirchhoff 법칙, "소스퐁찬" → source function, "플만트/불안감소 함수" → Planck 함수, "만도 에이제로스타" → 1만 도 A0 star. [[S0908.03, S0908.04]]</div>
+
+<h4>흑체복사 — Planck 함수와 두 극한 <span class="en">Black Body Radiation</span></h4>
+
+<div class="slide"><div class="sh">L03 · 슬라이드 4 <span class="st">Black Body Radiation</span></div>
+<ul>
+<li>An idealized body that absorbs all incident radiation, regardless of frequency or angle of incidence.</li>
+<li>Planck function for intensity
+\[ B_\nu(T)={2h\nu^3\over c^2}{1\over e^{h\nu/kT}-1},\qquad B_\lambda(T)=B_\nu(T)\left|{d\nu\over d\lambda}\right|={2hc^2\over\lambda^5}{1\over e^{hc/\lambda kT}-1} \]
+[그림: log–log \(B_\nu\) vs ν, 10~10⁵ K 곡선 — 온도가 높을수록 모든 진동수에서 위, 교차 없음] [[L03.s4a]]</li>
+<li>Wien’s displacement law — \(\lambda_{\max}T=0.5103\) cm K from \(B_\nu(T)\); \(\lambda_{\max}T=0.2898\) cm K from \(B_\lambda(T)\) [[L03.s4b]]</li>
+<li>For \(h\nu\ll kT\) (long wavelength limit), \(B_\nu\approx{2h\nu^3\over c^2}{kT\over h\nu}={2\nu^2\over c^2}kT={2kT\over\lambda^2}\) : Rayleigh-Jeans limit [[L03.s4c]]</li>
+<li>For \(h\nu\gg kT\) (short wavelength limit), \(B_\nu\approx{2h\nu^3\over c^2}e^{-h\nu/kT}\) : Wien approximation [[L03.s4d]]</li>
+</ul></div>
+<div class="explain"><b>부가설명</b> "천문학 실험부터 많이 배웠겠지만" — 흑체는 <b>모든 진동수·모든 각도</b>의 입사 복사를 흡수하는 이상적 물체이고, Planck 함수는 유도하지 않고 주어진 것으로 쓴다. 공지: <span class="star">공지</span>첫 번째 숙제(HW1)가 올라가 있다. \(B_\nu\)(진동수당)는 검출기가 진동수 단위로 재는 <b>전파</b>에서, \(B_\lambda\)(파장당)는 필터가 "몇 nm–몇 nm"로 정해진 <b>광학·UV</b>에서 주로 쓴다. [[S0908.17]]<br>
+\(B_\lambda=B_\nu|d\nu/d\lambda|\)에서 절댓값은 ν가 커지는 방향과 λ가 커지는 방향이 반대(\(d\nu/d\lambda=-c/\lambda^2&lt;0\))이기 때문이고, 결과적으로 \(c/\lambda^2\)가 곱해진다. 그래프에서 <span class="hl">온도가 높으면 모든 진동수에서 세기가 더 크다</span>(곡선이 교차하지 않음 — 뒤의 색온도가 유일하게 정해지는 근거). [[S0908.18]]<br>
+Wien 변위: \(B_\nu\) 기준 \(\lambda_{\max}T\approx0.51\) cm K, \(B_\lambda\) 기준 0.2898 cm K — 교수님 학창시절 "천문학과 사무실 전화번호 끝자리가 …2898"이라 외웠다는 일화. RJ: hν≪kT에서 지수를 테일러 전개(\(e^x-1\approx x\)) → h와 ν 약분 → \(2\nu^2kT/c^2=2kT/\lambda^2\). log–log 그래프에서 <b>기울기 2</b>로 일정, 전파에서 주로 사용. 반대로 짧은 파장에서는 \(e^{h\nu/kT}\gg1\)이라 −1을 버리고 지수를 올리면 Wien 근사. [[S0908.18]]</div>
+<div class="trap"><b>함정 — 두 Wien 상수</b>\(B_\nu\) 피크(\(x=h\nu/kT=2.821\))를 파장으로 바꾼 \(c/\nu_{\max}\)와 \(B_\lambda\)의 피크 파장은 다르다(0.510 vs 0.290 cm K). Jacobian \(c/\lambda^2\)가 곡선 모양을 바꾸기 때문. python 재계산: 0.5099 / 0.2898 cm K (슬라이드 0.5103은 반올림 차). STT "0.188 88022898" → 0.2898. [[L03.s4b, S0908.18]] → 예제 1.33</div>
+<div class="intuit"><b>직관 — 판단 기준은 x = hν/kT</b>"전파니까 RJ"가 아니라 x≪1인지 본다. 21 cm(0.068 K)를 2.73 K CMB에 쓰면 x=0.025 → RJ 오차 1.3%. 예제 1.7. [[L03.s4c]]</div>
+
+<h4>Stefan–Boltzmann 상수 유도 <span class="en">∫B_ν dν</span></h4>
+
+<div class="slide"><div class="sh">L03 · 슬라이드 5 <span class="st">Black Body Radiation</span></div>
+<ul><li>We want to evaluate
+\[ \int_0^\infty B_\nu d\nu={2h\over c^2}\int_0^\infty{\nu^3\over e^{h\nu/kT}-1}d\nu={2h\over c^2}\left({kT\over h}\right)^4\int_0^\infty{x^3\over e^x-1}dx,\qquad x={h\nu\over kT} \]
+Since \(\int_0^\infty{x^3\over e^x-1}dx={\pi^4\over15}\), we obtain
+\[ \int_0^\infty B_\nu d\nu={2(kT)^4\over h^3c^2}{\pi^4\over15}={\sigma\over\pi}T^4,\quad \sigma={2\pi^5k^4\over15h^3c^2}\approx5.6704\times10^{-5}\ \mathrm{erg\,cm^{-2}s^{-1}K^{-4}} \]
+: Stefan–Boltzmann constant [[L03.s5]]</li></ul></div>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>치환과 상수 (9/8 수업 설명)</div><ol>
+<li>지수를 \(x=h\nu/kT\)로 치환: \(\nu=(kT/h)x\), \(d\nu=(kT/h)dx\) → \(\nu^3d\nu=(kT/h)^4x^3dx\). "적분 변수만 바꾼 것". [[S0908.19]]</li>
+<li>\(\int x^3/(e^x-1)dx=\pi^4/15\) — 수리물리에서 해석적으로(=Γ(4)ζ(4)=6·π⁴/90), 또는 수치적으로. [[S0908.19]]</li>
+<li>정리하면 \((\sigma/\pi)T^4\). <span class="hl">σ를 "π를 뺀" 형태로 정의한 이유: 나중에 플럭스로 바꿀 때 π가 곱해지므로</span>. 이런 것은 현대물리에서 배운다. [[S0908.19]]</li>
+</ol></div>
+
+<h4>플럭스·에너지밀도·광자 수밀도 <span class="en">F, u, n_γ</span></h4>
+
+<div class="slide"><div class="sh">L03 · 슬라이드 6 <span class="st">Black Body Radiation</span></div>
+<ul>
+<li>Flux: \(F=\pi\int_0^\infty B_\nu d\nu=\sigma T^4\) : Stefan-Boltzmann law [[L03.s6a]]</li>
+<li>Energy density: \(u_\nu={1\over c}\int B_\nu d\Omega={4\pi\over c}B_\nu\); Total energy density: \(u=\int u_\nu d\nu={4\pi\over c}\int B_\nu d\nu={4\sigma\over c}T^4=aT^4\) (\(a=4\sigma/c\): radiation constant) [[L03.s6b]]</li>
+<li>Photon number density:
+\[ n_\gamma=\int{u_\nu\over h\nu}d\nu={8\pi\over c^3}\int{\nu^2d\nu\over e^{h\nu/kT}-1}=8\pi\left({kT\over hc}\right)^3\int_0^\infty{x^2dx\over e^x-1}=16\pi\zeta(3)\left({kT\over hc}\right)^3=20.3T^3 \]
+— \(n_\gamma\sim400\) for CMBR with T=2.73 K [[L03.s6c]]</li>
+</ul></div>
+<div class="explain"><b>부가설명</b> <b>플럭스</b>: 지난 시간의 플럭스–세기 관계에서, 흑체 표면에서는 나가는 쪽(반구)만 보므로 \(F=\pi B\) — emergent flux를 진동수 적분하면 \(\sigma T^4\), 이것이 Stefan–Boltzmann 법칙. [[S0908.19]]<br>
+<b>에너지밀도</b>: \(u_\nu=(1/c)\int I d\Omega\). 흑체복사는 isotropic(방향 무관)이므로 입체각 적분은 4π → \(4\pi B_\nu/c\). 진동수 적분하면 \((4\pi/c)(\sigma/\pi)T^4=(4\sigma/c)T^4\) — π가 사라진다. 앞의 \(4\sigma/c\equiv a\)를 radiation constant라 한다. [[S0908.20]]<br>
+<b>광자 수밀도</b>: 단위 부피당 광자 몇 개? 에너지밀도를 광자 하나 에너지 hν로 나누고 진동수 적분. 아까와 같은 치환을 하면 차이는 분모의 hν 하나 → \(x^3\) 대신 \(x^2\). 이 적분이 Riemann zeta 함수 \(\zeta(3)\)(=1.202)를 준다(\(\int x^2/(e^x-1)=2\zeta(3)\)). 수치 넣으면 앞 계수 ≈ 20 → \(n_\gamma\approx20T^3\) cm⁻³. CMB 2.73 K면 ≈ 400. <span class="hl">"우리 교실에도 1 cm³에 우주배경복사 광자가 400개 정도 들어 있어요"</span> — 파장이 길어 못 느낄 뿐. 우주 전체로 하면 엄청난 양. [[S0908.21]]</div>
+<div class="apply"><b>수치 확인 (python)</b>σ = 5.6704×10⁻⁵ erg cm⁻² s⁻¹ K⁻⁴, a = 4σ/c = 7.566×10⁻¹⁵ erg cm⁻³ K⁻⁴, \(16\pi\zeta(3)(k/hc)^3\) = 20.29 cm⁻³ K⁻³, CMB(2.73 K) \(n_\gamma\) = 413 cm⁻³ ("~400"). 예제 1.31. [[L03.s6c]]</div>
+<div class="trap"><b>STT 교정</b>"liman zeta" → Riemann zeta, "IC Tropic" → isotropic, "포트 넘버 데이터" → photon number density. [[S0908.20, S0908.21]]</div>
+
+<h4>세 가지 온도 <span class="en">Effective · Color · Brightness Temperature</span></h4>
+
+<div class="slide"><div class="sh">L03 · 슬라이드 7 <span class="st">Temperatures</span></div>
+<ul>
+<li><b>Effective temperature</b>: temperature of a perfect blackbody emitting the same amount of energy per unit area per unit time. \(F=\sigma T_{\rm eff}^4\) [그림: 태양 스펙트럼(노랑, total area 1367 W/m²)과 5777 K 흑체(회색)] [[L03.s7a]]</li>
+<li><b>Color temperature</b>: temperature of a blackbody emitting the same ratio of the intensities at two wavelength as the observed ratio \({I_{\lambda_1}\over I_{\lambda_2}}={B_{\lambda_1}(T_c)\over B_{\lambda_2}(T_c)}\) [그림: blue B, visible V 필터] [[L03.s7b]]</li>
+<li><b>Brightness temperature</b>: temperature of a blackbody emitting the same intensity as observed at the same frequency: \(I_\nu=B_\nu(T_b)\approx{2kT_b\over\lambda^2}\) [[L03.s7c]]</li>
+</ul></div>
+<div class="explain"><b>부가설명 — "관측에 드는 비용" 순서로</b>
+<b>① 유효온도</b>: 태양의 실제 관측 스펙트럼(노란색)과 같은 면적(같은 총 플럭스)을 주는 흑체(회색) = 5777 K. 태양은 흑체와 비슷하지만 완전한 흑체는 아니다 — 장파장에서는 흑체보다 빛이 더 나오고 UV에서는 덜 나온다. 금속선들이 UV를 흡수(큰 에너지로 높이 뜀) → 단계적으로 내려오며(cascade) 에너지가 작은, 긴 파장으로 재방출. 이를 <b>line blanketing</b>(선 담요 효과)이라 한다. [[S0908.22]]<br>
+같은 단위면적·단위시간 에너지(총 bolometric 플럭스)를 내는 흑체 온도를 하나 assign한 것이 \(T_{\rm eff}\) — 그런데 이를 구하려면 <b>모든 파장의 정보</b>가 필요하다(가시광·UV·전파 다 관측해 합쳐야 하므로 "굉장히 비싸다"). [[S0908.23]]<br>
+<b>② 색온도</b>: 천체가 너무 많아 매번 비싼 관측을 할 수 없으니 <b>두 파장</b>만 — B 필터, V 필터(UBV 시스템 등) — 관측해 비 \(I_{\lambda_1}/I_{\lambda_2}\)를 잰다. 파장 고정, 같은 Planck 함수로 이 비를 설명하는 온도 하나가 정의된다. [[S0908.23]] <span class="hl">Planck 곡선들이 서로 겹치지(교차하지) 않기 때문에 그 온도가 유일(unique)하다</span> — 겹친다면 해가 여러 개. 많은 별·은하에 이런 관측을 한다. [[S0908.24]]<br>
+<b>③ 밝기온도</b>: "두 점도 아깝다" → <b>한 진동수</b>(대개 전파)에서 관측한 세기를 주는 흑체 온도. 전파이므로 RJ 근사로 \(I_\nu\approx2kT_b/\lambda^2\) — 세기와 온도가 선형. [[S0908.24]]</div>
+<div class="trap"><b>함정</b>세 온도는 흑체일 때만 모두 같다. 비흑체(예: 광학적으로 얇은 기체, line blanketing된 별)에서는 다를 수 있고, 특히 \(T_b\)는 "세기의 다른 표현"일 뿐 물질의 운동온도가 아닐 수 있다(얇으면 \(T_b=T\tau&lt;T\)). STT: "greatest temperature" → brightness temperature, "칼라톤 브러치" → color temperature, "펠빈" → 켈빈. [[S0908.24, S0908.22]]</div>
+<div class="apply"><b>적용</b>반지름 고정, \(T_{\rm eff}\) 10% 증가 → \(L\propto T^4\) → 1.1⁴ = 1.464배 (예제 1.8). [[L03.s7a]]</div>
+
+<h4>PPT Q3 — 뜨거운 별보다 차가운 먼지가 IR에서 밝은 이유 <span class="en">Q3</span></h4>
+
+<div class="slide"><div class="sh">L03 · 슬라이드 11 <span class="st">Q3</span></div>
+<ul><li>The Planck curves show that a hot object is brighter than a cool object at all frequencies when both emit a Planck spectrum. Yet, observations of the ISM in <b>infrared</b> show mostly cool dust emission while the hotter stellar emission is negligible in comparison. How can these two statements be reconciled?</li>
+<li>To answer this question, consider a cubic region of volume, 1 pc³ in the Galaxy some distance, D, away. Assume that there is one star within this volume and that this star is equivalent to the Sun. Assume that all dust grains are spherical, evenly distributed, with temperature T = 100 K, radius a = 0.2 µm, density ρ = 2.5 g cm⁻³, and the total dust mass in the volume is \(M_d=2.65\times10^{-4}M_\odot\). Find the ratio of the stellar flux to the dust flux at IR (100 µm) and visible (550 nm) wavelengths, assuming both emit perfect Planck spectra. [[L03.s11a]]</li></ul>
+<div class="ans"><b>ANSWER</b> \({f_{\lambda\,100\,\mu m}({\rm star})\over f_{\lambda\,100\,\mu m}({\rm dust})}\approx10^{-10},\quad{f_{\lambda\,550\,nm}({\rm star})\over f_{\lambda\,550\,nm}({\rm dust})}\approx10^{100}\)</div> [[L03.s11b]]</div>
+<div class="explain"><b>부가설명</b> <span class="star">강조</span>교수님: "세 번째 문제는 <span class="hl">꽤 중요한 문제</span>." Planck 곡선상 뜨거울수록 모든 파장에서 더 밝은데, 성간물질을 IR로 보면 별은 안 보이고 10–20 K짜리 먼지 방출만 강하다 — 직관과 다른 모순. [[S0908.32]] 별빛이 흡수돼서? 그런 경우도 있지만 근본 이유는 아니다. <span class="hl">세기(intensity)는 온도가 높으면 강하지만, 플럭스 = 세기 × 입체각이고 먼지는 개수가 많아 입체각이 크다.</span> 별의 입체각은 \(\pi R_\odot^2/D^2\). [[S0908.33]] 먼지 입체각 = 알갱이 하나의 입체각 × 개수(겹침 무시), 개수 = 총질량 / (4/3 πa³ρ). 계산하면 \(N\pi a^2\approx8\times10^{33}\) cm² vs \(\pi R_\odot^2\approx10^{22}\) cm² → 약 10¹¹배. <b>IR로 보면 먼지만, 가시광(optical)으로 보면 별만 보인다</b>. [[S0908.34]] 풀이 전체는 예제 1.30.</div>
+<div class="trap"><b>STT·수치 의심</b>녹음상 ρ "2.3 g", 질량 "2.7×10⁻⁴" → PPT는 2.5 g cm⁻³, 2.65×10⁻⁴ M☉. 녹음상 "100 µm에서 10의 100승", "옵티컬에서는 도스트만 보이고" → PPT·재계산: 100 µm에서 별/먼지 ≈ 2.5×10⁻¹⁰(먼지 우세), 550 nm에서 ≈ 8.5×10⁹⁹(별 우세). [[S0908.33]]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u04-1"><div class="qq">온도가 2배인 흑체의 총 표면 플럭스, 에너지밀도, 광자 수밀도, 고정 주파수의 RJ 세기는 각각 몇 배?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>F=σT⁴ → 16배, u=aT⁴ → 16배, n_γ=20.3T³ → 8배, RJ 세기 2kT/λ² → 2배. 총량과 주파수별 세기를 구분한다.</p></div></div>
+
+<div class="qz" data-q="u04-2"><div class="qq">차가운 먼지가 별보다 적외선에서 밝을 수 있는가? 한 문장 핵심은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>가능하다. 관측량은 세기가 아니라 플럭스=세기×입체각이고, 먼지 알갱이 전체의 입체각이 별보다 ~5×10¹¹배 크다(PPT Q3). 100 µm에서는 Planck 세기 차이가 그만큼 크지 않아 먼지가 이기고, 550 nm에서는 100 K 먼지의 Wien 꼬리(e⁻²⁶²)가 너무 작아 별이 이긴다.</p></div></div>
+
+<div class="qz" data-q="u04-3"><div class="qq">Bλ 피크의 파장을 ν=c/λ로 바꾸면 Bν 피크인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. Bλ=Bν|dν/dλ|=Bν c/λ²의 Jacobian이 모양과 최대 위치를 바꾼다. λmaxT = 0.2898 cm K(Bλ) vs 0.51 cm K(Bν).</p></div></div>
+
+<div class="qz" data-q="u04-4"><div class="qq">열복사에 대한 키르히호프 법칙을 쓰고, 흑체 공동 논증으로 증명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>S_ν=j_ν/κ_ν=B_ν(T) (j_ν=κ_νB_ν, 먹은 만큼 뱉는다). 온도 T 흑체 공동에 같은 온도 매질을 넣으면 복사장은 B_ν 그대로여야 한다. 매질 통과 후 I=B e^{−τ}+S(1−e^{−τ})=B → S=B.</p></div></div>
+
+<div class="qz" data-q="u04-5"><div class="qq">유효·색·밝기 온도를 각각 몇 개의 파장(진동수) 관측이 필요한지로 구분하라. 색온도가 유일하게 정해지는 이유는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유효온도: 전 파장(총 플럭스=σT⁴), 색온도: 두 파장의 세기 비, 밝기온도: 한 진동수의 세기(I=B(T_b), 전파는 RJ). Planck 곡선은 서로 교차하지 않으므로 주어진 비를 주는 온도가 하나뿐이다.</p></div></div>
+
+<div class="qz" data-q="u04-6"><div class="qq">20 K 먼지의 방출 피크 파장은 대략? 흡수한 복사(~10⁴ K)와 비교하면?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>λ≈0.29/20≈0.015 cm≈145 µm(원적외~서브mm). 흡수는 ~0.3 µm(가시·UV) — 에너지는 보존, 진동수는 크게 바뀐다.</p></div></div>
+
+<p class="note">출처: Lecture03 슬라이드 3–7, 11 · 플립 06(복사전달 해·열복사의 키르히호프 법칙) · 9/8 강의 속기(00:17–41:34, 1:08:54–1:14:22) · 예제 1.7, 1.8, 1.30–1.33 · 상태: 장부 기준 전수 반영(PPT·플립·속기)</p>

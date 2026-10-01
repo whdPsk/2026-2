@@ -1,0 +1,216 @@
+[
+ {
+  "id": "L04.s1",
+  "loc": "슬라이드 1",
+  "raw": "Line Radiation + EM Waves — Introduction to Astrophysics I, 2026 Fall, Woong-Tae Kim (2026-09-11 표기)",
+  "skip": "표지"
+ },
+ {
+  "id": "L04.s2",
+  "loc": "슬라이드 2",
+  "raw": "Questions? • Feel free to ask any questions you had while watching the flipped-learning animations.",
+  "skip": "질문 안내(내용 없음)"
+ },
+ {
+  "id": "L04.s3a",
+  "loc": "슬라이드 3 ①",
+  "raw": "Review Questions • Write the absorption coefficient κ_ν in terms of B₁₂ and B₂₁."
+ },
+ {
+  "id": "L04.s3b",
+  "loc": "슬라이드 3 ②",
+  "raw": "Review Questions • What are Kirchhoff’s three laws of line radiation?"
+ },
+ {
+  "id": "L04.s3c",
+  "loc": "슬라이드 3 ③",
+  "raw": "Review Questions • Use the solution of the RT equation to explain the Kirchhoff’s three laws."
+ },
+ {
+  "id": "L04.s3d",
+  "loc": "슬라이드 3 ④",
+  "raw": "Review Questions • Write down the four Maxwell’s equations."
+ },
+ {
+  "id": "L04.s3e",
+  "loc": "슬라이드 3 ⑤",
+  "raw": "Review Questions • What is the Poynting flux (units)?"
+ },
+ {
+  "id": "L04.s3f",
+  "loc": "슬라이드 3 ⑥",
+  "raw": "Review Questions • Express energy density in terms of E and B."
+ },
+ {
+  "id": "L04.s3g",
+  "loc": "슬라이드 3 ⑦",
+  "raw": "Review Questions • For linearly polarized waves, how are E and B related to the wave vector k?"
+ },
+ {
+  "id": "L04.s3h",
+  "loc": "슬라이드 3 ⑧",
+  "raw": "Review Questions • For more general waves described by E′_x = ε₀ cosβ cos(kz − ωt), E′_y = ε₀ sinβ sin(kz − ωt), discuss how the polarization of the waves changes for |β| ≤ π/2 varies."
+ },
+ {
+  "id": "L04.s4",
+  "loc": "슬라이드 4",
+  "raw": "(빈 슬라이드)",
+  "skip": "빈 슬라이드(내용 없음)"
+ },
+ {
+  "id": "L04.s5a",
+  "loc": "슬라이드 5 ①",
+  "raw": "Source Function • Using the expressions for the emission/absorption coefficients j_ν = (hν/4π)φ(ν)n₂A₂₁, κ_ν = (hν/4π)φ(ν)(n₁B₁₂ − n₂B₂₁), one can write an expression for the source function S_ν = j_ν/κ_ν = n₂A₂₁/(n₁B₁₂ − n₂B₂₁) = (A₂₁/B₂₁)·1/(n₁B₁₂/n₂B₂₁ − 1) = (2hν³/c²)·1/((n₁/g₁)/(n₂/g₂) − 1)"
+ },
+ {
+  "id": "L04.s5b",
+  "loc": "슬라이드 5 ②",
+  "raw": "• In LTE, S_ν becomes equal to the Planck function B_ν(T)."
+ },
+ {
+  "id": "L04.s5c",
+  "loc": "슬라이드 5 ③",
+  "raw": "• In general, n₂/n₁ does not follow the Boltzmann equation. In this case, one can define the excitation temperature T_ex such that n₂/n₁ = (g₂/g₁)e^{−hν/kT_ex} – Then, S_ν = B_ν(T_ex)."
+ },
+ {
+  "id": "L04.s6a",
+  "loc": "슬라이드 6 ①",
+  "raw": "Maser • The absorption coefficient can be written as κ_ν = n₁σ_ν = (hν/4π)φ(ν)n₁B₁₂(1 − (n₂/g₂)/(n₁/g₁))"
+ },
+ {
+  "id": "L04.s6b",
+  "loc": "슬라이드 6 ②",
+  "raw": "• Usual situations, (n₂/g₂)/(n₁/g₁) = (n₂/n₁)(g₁/g₂) = exp(−E₁₂/kT_ex) < 1 ➔ κ_ν > 0"
+ },
+ {
+  "id": "L04.s6c",
+  "loc": "슬라이드 6 ③",
+  "raw": "• If (n₂/g₂)/(n₁/g₁) > 1 (inverted populations), κ_ν < 0 – Results in radiation amplification: maser! (OH, H₂O, SiO, etc.) Microwave Amplification by Stimulated Emission of Radiation [그림: 에너지 준위 — ground state에서 pumping으로 short-lived state로 올라감 → rapid decay로 metastable state에 많이(빨간 점 7개) 쌓임 → metastable→ground(점 2개) 전이로 Maser light]"
+ },
+ {
+  "id": "L04.s7a",
+  "loc": "슬라이드 7 ①",
+  "raw": "Line Broadening • Doppler broadening – Due to Doppler shift of each atom/ion that is in thermal motion"
+ },
+ {
+  "id": "L04.s7b",
+  "loc": "슬라이드 7 ②",
+  "raw": "• Natural broadening – Due to uncertainty principle, the energy levels occupied by an electron have finite width (spread)."
+ },
+ {
+  "id": "L04.s7c",
+  "loc": "슬라이드 7 ③",
+  "raw": "• Collisional broadening – If the atom suffers collisions with other particles while it is emitting, the phase of the emitted radiation can be altered suddenly."
+ },
+ {
+  "id": "L04.s8a",
+  "loc": "슬라이드 8 ①",
+  "raw": "Doppler Broadening • The change in frequency associated with an atom with velocity component v along the line of sight is (ν − ν₀)/ν₀ = δν/ν₀ = −v/c (v > 0 when the atoms move away)"
+ },
+ {
+  "id": "L04.s8b",
+  "loc": "슬라이드 8 ②",
+  "raw": "• Maxwell-Boltzmann velocity distribution of gas f(v) = (m/2πkT)^{1/2} v² exp(−mv²/2kT)",
+  "note": "9/10 수업에서 교수님: 시선방향 1차원 분포이므로 v² 없어야 함 — 수정 예정"
+ },
+ {
+  "id": "L04.s8c",
+  "loc": "슬라이드 8 ③",
+  "raw": "• The associated line profile is φ(ν) = (1/(√π Δν_D)) e^{−(ν−ν₀)²/Δν_D²} where Δν_D = (ν₀/c)√(2kT/m) : Doppler line width"
+ },
+ {
+  "id": "L04.s8d",
+  "loc": "슬라이드 8 ④",
+  "raw": "• Full width at half maximum (FWHM) Δν_FWHM = 2√(ln2) Δν_D [그림: ν₀(line center)에 피크 φ(ν₀)인 가우시안, φ(ν₀)/2 높이에 빨간 수평선 = FWHM]"
+ },
+ {
+  "id": "L04.s9a",
+  "loc": "슬라이드 9 ①",
+  "raw": "Line Center Cross Section φ(ν) = (1/(√πΔν_D))e^{−(ν−ν₀)²/Δν_D²} • At the line center, the profile function becomes φ(ν₀) = 1/(√πΔν_D)"
+ },
+ {
+  "id": "L04.s9b",
+  "loc": "슬라이드 9 ②",
+  "raw": "• The absorption cross-section at the line-center for each atom, neglecting the stimulated emission (in optical), is therefore κ_ν = n₁σ_ν = (hν/4π)(n₁B₁₂ − n₂B₂₁[빨간 사선으로 지움])φ(ν) ⟹ σ_ν0 = B₁₂(hν₀/4π)φ(ν₀) = (1/(√πΔν_D))(hν₀/4π)B₁₂ – σ_ν0 can be calculated observationally if B₁₂ is known."
+ },
+ {
+  "id": "L04.s10a",
+  "loc": "슬라이드 10 ①",
+  "raw": "Natural Broadening • The uncertainty principle implies that the spread in energy ΔE and the duration Δt in an energy level must satisfy ΔEΔt ∼ ℏ."
+ },
+ {
+  "id": "L04.s10b",
+  "loc": "슬라이드 10 ②",
+  "raw": "• According the classical theory, the resulting line profile is described the Lorenz profile: φ(ν) = (1/π)(γ/4π)/[(ν − ν₀)² + (γ/4π)²] – γ is the damping constant given by γ = Σ_{n″} A_{nn″} + Σ_{n″} A_{n′n″} – Its FWHM is Δν_L = γ/2π, Δλ_L = (λ₀/ν₀)Δν_L"
+ },
+ {
+  "id": "L04.s10c",
+  "loc": "슬라이드 10 ③",
+  "raw": "• Example: For Hα 6563 Å lines, A₂₁ = 4.4×10⁷ s⁻¹ – Δν_L = 7.0×10⁶ Hz and Δλ_L = 1.0×10⁻⁴ Å. – cf. Δλ_FWHM = 0.35 Å due to Doppler effects in a cloud with T=10⁴ K",
+  "note": "계산: Δν_L=7.00×10⁶ Hz, Δλ_L=1.0×10⁻⁴ Å 일치. 도플러: 순수 수소 열운동 T=10⁴ K이면 Δλ_D=0.28 Å, FWHM=0.47 Å — PPT 0.35 Å와 차이"
+ },
+ {
+  "id": "L04.s11a",
+  "loc": "슬라이드 11 ①",
+  "raw": "Collisional Broadening • If an atom suffers collisions with other particles while it is emitting, the phase of the emitted radiation can be altered suddenly. • If the phase changes completely randomly at the collision times, then information about the emitting frequency is lost."
+ },
+ {
+  "id": "L04.s11b",
+  "loc": "슬라이드 11 ②",
+  "raw": "• If the collisions occur with frequency ν_col, that is, each atom experiences ν_col collisions per unit time on average, then the profile can be shown to follow φ(ν) = (1/π)(Γ/4π)/[(ν − ν₀)² + (Γ/4π)²] where Γ = γ + 2ν_col [그림: (a) 끊김 없는 사인파, (b) 시각 t₁, t₂에서 위상이 갑자기 바뀌는 사인파]"
+ },
+ {
+  "id": "L04.s11c",
+  "loc": "슬라이드 11 ③",
+  "raw": "• Also called pressure broadening – Important when density is high."
+ },
+ {
+  "id": "L04.s12a",
+  "loc": "슬라이드 12 ①",
+  "raw": "Voigt Function • For real spectral lines, the Lorenz profile (due to natural/collisional broadening) must be convolved with the Gaussian distribution of particles φ(ν)^Voigt = ∫dv f(v) φ_L(ν − (v/c)ν₀) = (1/(√πΔν_D)) H(a,u) – f(v) : Maxwell-Boltzmann velocity distribution – φ_L(ν): Lorenz profile"
+ },
+ {
+  "id": "L04.s12b",
+  "loc": "슬라이드 12 ②",
+  "raw": "• Voigt function is defined as H(a,u) = (a/π)∫_{−∞}^{∞} e^{−y²}dy/(a² + (u − y)²), a = Γ/(4πΔν_D), u = (ν − ν₀)/Δν_D [그림: φ(ν)/Δν_FWHM vs Δν/Δν_FWHM — Gauss(실선, 중심 가장 높고 날개 빨리 떨어짐), Lorentz(점-쇄선, 날개 강함), Voigt(파선); 중앙 회색 띠가 Δν_FWHM]"
+ },
+ {
+  "id": "L04.s13a",
+  "loc": "슬라이드 13 ①",
+  "raw": "HI 21 cm Lines • E₁₂ = 5.87 µeV; hν₁₂/k = 0.068 K – Since hν₁₂/kT ≪ 1, n₂/n₁ ~ g₂/g₁ = 3 under most situations. • A₂₁ = 3×10⁻¹⁵ s⁻¹ [그림: 수소 준위 n=1,2,3,∞; n=1 바닥 상태가 g₂=3(스핀 평행 ↑↑)과 g₁=1(반평행 ↑↓)로 갈라짐; λ₁₂ = 21 cm, ν₁₂ = 1.4 GHz]",
+  "note": "계산 E=5.874 µeV, hν/k=0.0682 K. 표준 A₂₁=2.87×10⁻¹⁵"
+ },
+ {
+  "id": "L04.s13b",
+  "loc": "슬라이드 13 ②",
+  "raw": "• The absorption coefficient for HI 21 lines κ_ν = (hν/4π)φ(ν)n₁B₁₂(1 − e^{−hν/kT}) = (hν/4π)φ(ν)·(1/4)n_H·(g₂/g₁)(c²/2hν³)A₂₁·(0.068/T) = 2.6×10⁻¹⁵ (n_H/T) φ(ν)",
+  "note": "계산: A=2.87×10⁻¹⁵ → 2.60×10⁻¹⁵ (A=3×10⁻¹⁵이면 2.72×10⁻¹⁵)"
+ },
+ {
+  "id": "L04.s13c",
+  "loc": "슬라이드 13 ③",
+  "raw": "• Integrating κ_ν over the path length, τ_ν = ∫κ_ν dl = 2.6×10⁻¹⁵ (N_H/T) φ(ν) where N_H = ∫n_H dl : HI column density"
+ },
+ {
+  "id": "L04.s14a",
+  "loc": "슬라이드 14 ①",
+  "raw": "HI Column Density • Integrating τ_ν over the frequency, N_H = 3.85×10¹⁴ T∫τ_ν dν (in cgs units)",
+  "note": "1/2.6×10⁻¹⁵=3.85×10¹⁴"
+ },
+ {
+  "id": "L04.s14b",
+  "loc": "슬라이드 14 ②",
+  "raw": "• In radio astronomy, it is customary to express frequency in the velocity (km s⁻¹) using the Doppler relation dν = (ν/c)dv = dv/λ ➔ N_H = 1.82×10¹⁸ T∫τ_ν dv",
+  "note": "3.85×10¹⁴×10⁵/21.1=1.82×10¹⁸"
+ },
+ {
+  "id": "L04.s14c",
+  "loc": "슬라이드 14 ③",
+  "raw": "• For emission lines, we use T_B = T(1 − e^{−τ_ν}) to obtain N_H = −1.82×10¹⁸ T∫ln(1 − T_B(v)/T) dv"
+ },
+ {
+  "id": "L04.s14d",
+  "loc": "슬라이드 14 ④",
+  "raw": "– When optically thick, the above integral is undefined. Need to use absorption lines as well. – When optically thin, T_B = Tτ_ν and N_H/cm⁻² = 1.82×10¹⁸ ∫[T_B(v)/K] dv/(km s⁻¹)"
+ }
+]

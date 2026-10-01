@@ -1,0 +1,14 @@
+<div class="exq"><b>상황.</b> 북위 \(\lambda\), 높이 \(h\)에서 정지 상태로 놓은 입자가 자유낙하한다. Coriolis 힘에 의한 연직선(다림추)으로부터의 수평 편향.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>0차 속도 \(\vb v\approx-gt\,\uv z\)를 Coriolis 항에 넣는다 (\(\omega^2\) 무시).</div>
+<ol>
+<li>\(\vb S=0\) → \(\vb a_r=\vb g-2\boldsymbol\omega\times\vb v_r\). \(\vb g\)는 유효 중력(연직선 방향).</li>
+<li>좌표: \(\uv z\) 위(\(-\vb g\)), \(\uv x\) 남, \(\uv y\) 동. \(\boldsymbol\omega=(-\omega\cos\lambda,0,\omega\sin\lambda)\).</li>
+<li>\(\boldsymbol\omega\times\vb v_r=(0\cdot(-gt)-\omega\sin\lambda\cdot0,\ \omega\sin\lambda\cdot0-(-\omega\cos\lambda)(-gt),\ 0)=(0,-\omega gt\cos\lambda,0)\).</li>
+<li>\(\ddot x=0\), \(\ddot y=2\omega gt\cos\lambda\), \(\ddot z=-g\). 초기 조건 0으로 적분: \(y=\tfrac13\omega gt^3\cos\lambda\), \(z=h-\tfrac12gt^2\).</li>
+<li>낙하 시간 \(t=\sqrt{2h/g}\) 대입.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ d=\frac13\,\omega\cos\lambda\sqrt{\frac{8h^3}{g}}\quad(\text{동쪽})\ } \]
+<p class="note"><b>검산</b> ① \(h=100\) m, \(\lambda=45°\): \(\tfrac13(7.29\times10^{-5})(0.707)\sqrt{8\times10^6/9.8}=\tfrac13(5.16\times10^{-5})(903)=1.55\) cm ✓ (교재). ② 극(\(\lambda=90°\)) 0 — 자전축 위에서는 탑 꼭대기와 바닥의 속도가 같다 ✓. ③ 역사: Reich(1831)가 188 m 광산에서 평균 28 mm 측정 — 계산값보다 작음은 공기저항 탓. ④ Example 10.4(관성계 궤도 계산)와 일치 ✓.</p></div>
+<div class="qz" data-q="ex10.3-a"><div class="qq"><b>+α</b> Problem 10-22: 북위 42°, 높이 27 m 탄환 제조탑에서 떨어진 납 방울은 어디에, 얼마나 떨어진 곳에 떨어지는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(8(27)^3=157464\), \(157464/9.8=16068\), \(\sqrt{16068}=126.8\ \mathrm{s}\cdot\mathrm{m}\). \(d=\tfrac13(7.29\times10^{-5})(0.743)(126.8)\approx2.3\times10^{-3}\) m → <b>동쪽 약 2.3 mm</b>.</p></div></div>
+<div class="qz" data-q="ex10.3-b"><div class="qq"><b>+α</b> Problem 10-14: 이번엔 지표에서 깊이 \(h\)인 광산 수직갱 아래로 떨어뜨린다. 동쪽 편향은 같은 공식인가? (1차 근사, \(g\) 일정)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>1차(\(\omega\)에 선형)에서는 출발점만 다를 뿐 같은 계산 → \(d=\tfrac13\omega\cos\lambda\sqrt{8h^3/g}\) (동쪽). 남쪽 편향(\(\omega^2\) 차수)에서만 차이가 나서, 광산에서는 중력 변화 기여가 없어져 \(\tfrac32\frac{h^2\omega^2}{g}\sin\lambda\cos\lambda\)만 남는다(교재 문제의 결론).</p></div></div>

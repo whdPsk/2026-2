@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(\vb{B}=\frac{1}{c^2}\vb{v}\times\vb{E}\)이므로
+\[ \vb{S}=\frac{1}{\muz}\vb{E}\times\vb{B}=\frac{1}{\muz c^2}\vb{E}\times(\vb{v}\times\vb{E})=\eps\big[v E^2-\vb{E}(\vb{E}\cdot\vb{v})\big]. \]
+평면 \(x=a\)를 통과하는 성분은
+\[ S_x=\eps v\big(E^2-E_x^2\big)=\eps v\,E_\perp^2 . \]
+원통좌표 \((a,s)\): \(R=\sqrt{a^2+s^2}\), \(\sin\theta=s/R\), \(E_\perp=E\,s/R\), \(E=\frac{q}{4\pi\eps}\frac{1-\beta^2}{(1-\beta^2s^2/R^2)^{3/2}R^2}\).
+\[ P=\int_0^\infty \eps v\,E^2\frac{s^2}{R^2}\,2\pi s\,ds
+=\frac{q^2v}{8\pi\eps}(1-\beta^2)^2\int_0^\infty\frac{s^3\,ds}{(R^2-\beta^2s^2)^3}. \]
+\(R^2-\beta^2s^2=a^2+s^2(1-\beta^2)\). \(u=s^2\)로 치환하면
+\[ \int_0^\infty\frac{s^3ds}{(A+Bu\!\to\!)^3}=\frac{1}{4AB^2}\bigg|_{A=a^2,\;B=1-\beta^2}=\frac{1}{4a^2(1-\beta^2)^2}. \]
+\((1-\beta^2)^2\)가 <b>정확히 상쇄</b>되어
+\[ \boxed{P=\frac{q^2v}{32\pi\eps a^2}}\qquad(\beta\text{에 무관 — 정확한 결과}) \]
+<div class="alabel">감점 포인트</div>
+\(\vb{S}\)의 \(x\)성분을 구할 때 \(-E_x(\vb{E}\cdot\vb{v})\) 항을 빼먹어 \(E^2\) 전체를 쓰는 실수(그러면 적분이 발산한다).</div><!--/sol-->

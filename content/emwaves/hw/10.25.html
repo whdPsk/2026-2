@@ -1,0 +1,17 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+중심에서는 모든 전하요소가 같은 거리 \(a\)에 있으므로 <b>지연이 모두 동일</b>: \(t_r=t-a/c\). 이것이 이 문제를 "정확히" 풀 수 있게 하는 이유.
+
+<b>스칼라 퍼텐셜:</b> 총 전하는 회전해도 불변,
+\[ Q=\int_0^{2\pi}\lambda_0\sin(\theta/2)\,a\,d\theta=\lambda_0a\big[-2\cos(\theta/2)\big]_0^{2\pi}=4\lambda_0a . \]
+\[ \boxed{V=\frac{1}{4\pi\eps}\frac{Q}{a}=\frac{\lambda_0}{\pi\eps}}\quad(\text{시간에 무관}) \]
+
+<b>벡터 퍼텐셜:</b> 시각 \(t_r\)에 각 \(\theta\)에 있는 전하밀도는 \(\lambda_0|\sin[(\theta-\omega t_r)/2]|\), 속도는 \(a\omega\hat{\boldsymbol\varphi}(\theta)\).
+\[ \vb{A}=\frac{\muz}{4\pi a}\int_0^{2\pi}\lambda_0\Big|\sin\tfrac{\theta-\omega t_r}{2}\Big|(a\omega)\big(-\sin\theta\,\hat{\vb{x}}+\cos\theta\,\hat{\vb{y}}\big)a\,d\theta . \]
+\(\psi=\theta-\omega t_r,\ \Phi=\omega t_r\)로 치환. 필요한 적분:
+\[ \int_0^{2\pi}\!\sin\tfrac\psi2\sin\psi\,d\psi=0,\qquad \int_0^{2\pi}\!\sin\tfrac\psi2\cos\psi\,d\psi=4-2\cdot\tfrac83=-\tfrac43 . \]
+따라서 \(\int|\sin\frac\psi2|\sin(\psi+\Phi)d\psi=-\frac43\sin\Phi\), \(\int|\sin\frac\psi2|\cos(\psi+\Phi)d\psi=-\frac43\cos\Phi\). 정리하면
+\[ \boxed{\vb{A}=\frac{\muz\lambda_0\omega a}{3\pi}\Big\{\sin\big[\omega(t-\tfrac ac)\big]\hat{\vb{x}}-\cos\big[\omega(t-\tfrac ac)\big]\hat{\vb{y}}\Big\}} \]
+크기가 일정하고 각속도 \(\omega\)로 회전하는 벡터 — 회전 전기쌍극자의 전형적 결과.
+<div class="alabel">감점 포인트</div>
+\(|\sin(\theta/2)|\)에서 \(\theta\in[0,2\pi)\)이면 \(\sin(\theta/2)\ge0\)이라 절댓값이 필요 없다는 점을 놓치고 구간을 잘못 나누는 것.</div><!--/sol-->

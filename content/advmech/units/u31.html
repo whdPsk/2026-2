@@ -1,0 +1,34 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 약간 휘는 지지대에 똑같은 진자 세 개를 매달면 지지대를 통해 서로 결합된다. 세 진자가 모두 같이 흔들리는 모드가 하나 있을 것이다. 나머지 두 모드는? 세 진자가 대칭적으로 결합되어 있다면 그 둘의 진동수는 같을까(축퇴)? 축퇴되면 "모드 모양"은 유일하게 정해질까?</div>
+
+<h4>12.8 선형 결합된 세 진자 — 축퇴의 예 <span class="en">three coupled pendula — degeneracy</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>영년방정식과 이중근 — Example 12.6 <b>(필수)</b></div>
+<ol>
+<li>자연 단위(\(M=l=g=1\)), 모든 쌍의 결합 \(\varepsilon\):
+\[ T=\tfrac12(\dot\theta_1^2+\dot\theta_2^2+\dot\theta_3^2),\quad U=\tfrac12\left(\theta_1^2+\theta_2^2+\theta_3^2-2\varepsilon\theta_1\theta_2-2\varepsilon\theta_1\theta_3-2\varepsilon\theta_2\theta_3\right). \]</li>
+<li>\(m=\mathbb 1\), \(A=\begin{pmatrix}1&-\varepsilon&-\varepsilon\-\varepsilon&1&-\varepsilon\-\varepsilon&-\varepsilon&1\end{pmatrix}\).</li>
+<li>\(\det(A-\omega^2\mathbb 1)=(1-\omega^2)^3-2\varepsilon^3-3\varepsilon^2(1-\omega^2)=0\) → \((\omega^2-1-\varepsilon)^2(\omega^2-1+2\varepsilon)=0\):
+\[ \omega_1=\omega_2=\sqrt{1+\varepsilon},\qquad \omega_3=\sqrt{1-2\varepsilon}. \]
+(U18 정육면체와 같은 "대각 \(a\), 비대각 \(c\)" 구조: 고유값 \(a+2c\) (한 번), \(a-c\) (두 번).)</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>비축퇴 모드는 유일, 축퇴 모드는 선택의 자유</div>
+<ol>
+<li>\(\omega_3\): \(\varepsilon(2a_{13}-a_{23}-a_{33})=0\) 등 → \(a_{13}=a_{23}=a_{33}\), 정규화 \(\vb a_3=\frac1{\sqrt3}(1,1,1)\) — 세 진자 동위상. <b>비축퇴 모드의 고유벡터는 항상 유일</b>.</li>
+<li>\(\omega_{1,2}\): 모든 방정식이 \(a_{1r}+a_{2r}+a_{3r}=0\) 하나로 줄어든다(\(\vb a_3\)에 수직). 직교·정규화 조건을 다 써도 5개 식에 미지수 6개 → 하나의 자유.</li>
+<li>예: \(a_{31}=0\)으로 고르면
+\[ \vb a_1=\tfrac1{\sqrt2}(1,-1,0),\qquad \vb a_2=\tfrac1{\sqrt6}(1,1,-2). \]
+\(\vb a_1\): 하나는 정지, 둘이 반대로. \(\vb a_2\): 둘이 같이, 셋째가 두 배 진폭으로 반대. 이것은 무수히 많은 선택 중 하나 — 대칭 팽이의 가로 주축을 임의로 고르는 것(U18)과 똑같은 상황.</li>
+<li><b>물리</b>: 동위상 모드는 지지대를 가장 많이 흔들어(결합을 통해) 진동수가 \(\sqrt{1-2\varepsilon}\)로 달라지고, 합이 0인 모드들은 지지대에 알짜 힘을 주지 않아 모두 같은 진동수.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 대칭 결합 3체</div>
+\[ \omega_{\rm in\text{-}phase}=\sqrt{1-2\varepsilon},\ \ \vb a_3=\tfrac1{\sqrt3}(1,1,1);\qquad \omega_{\rm deg}=\sqrt{1+\varepsilon},\ \ \vb a\perp(1,1,1)\ (\text{선택 자유}) \]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u31-1"><div class="qq">세 진자 문제의 영년방정식을 인수분해해 세 진동수를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(x=1-\omega^2\): \(x^3-3\varepsilon^2x-2\varepsilon^3=(x+\varepsilon)^2(x-2\varepsilon)\). \(x=-\varepsilon\) → \(\omega^2=1+\varepsilon\) (이중), \(x=2\varepsilon\) → \(\omega^2=1-2\varepsilon\).</p></div></div>
+
+<div class="qz" data-q="u31-2"><div class="qq">축퇴 부분공간에서 \(\vb a_1'=\tfrac1{\sqrt2}(1,0,-1)\)을 하나 고르면 이것에 직교하는 다른 하나는? 이 새 쌍도 정당한 고유벡터인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\((1,1,1)\)과 \((1,0,-1)\)에 모두 수직: \((1,-2,1)/\sqrt6\). 둘 다 성분합 0이므로 고유값 \(1+\varepsilon\)의 고유벡터 ✓. 축퇴 부분공간의 어떤 정규직교 기저도 정당하다.</p></div></div>
+
+<div class="qz" data-q="u31-3"><div class="qq">진자 1만 \(\theta_0\) 당겼다 놓았다. 각 진자의 운동을 쓰라. (힌트: \((1,0,0)=\tfrac13(1,1,1)+\tfrac13(2,-1,-1)\).)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\theta_1=\tfrac{\theta_0}3(\cos\omega_3t+2\cos\omega_1t)\), \(\theta_2=\theta_3=\tfrac{\theta_0}3(\cos\omega_3t-\cos\omega_1t)\). \(\varepsilon\) 작으면 에너지가 진자 1과 (2, 3 공동) 사이를 오가는 맥놀이 — 진동수 차 \(\omega_1-\omega_3\approx\tfrac32\varepsilon\).</p></div></div>

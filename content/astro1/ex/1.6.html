@@ -1,0 +1,11 @@
+<div class="exq"><span class="examtag">개념 계산 · 9/3 Review ⑧ 응용</span><br><b>상황.</b> 배경 없이(\(I_0=0\)) 원천함수 \(S=10\)(임의 단위)인 균일 층. τ=0.1과 τ=3에서 나오는 세기를 비교하고, 얇은 근사 \(I\approx S\tau\)의 오차를 보라. [[S0903.13]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>숫자로 보는 얇음과 두꺼움</div><ol>
+<li>균일 층의 해 \(I=I_0e^{-\tau}+S(1-e^{-\tau})\)에서 \(I_0=0\) → \(I=S(1-e^{-\tau})\). [[S0903.12]]</li>
+<li>τ=0.1: \(I=10(1-e^{-0.1})=0.952\). 얇은 근사 \(S\tau=1\) — 오차 5%. 이때 \(S\tau=j L\): 방출만 있을 때 \(\int j\,ds\)와 같다. [[F05.01, S0903.09]]</li>
+<li>τ=3: \(I=10(1-e^{-3})=9.50\) → S에 접근(95%). 근사 Sτ=30은 완전히 틀림 — 포화. [[S0903.13, F05.02]]</li>
+<li>참고: τ=1 → 6.32, τ=10 → 9.9995.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>τ=0.1: I≈0.952 (근사 1). τ=3: I≈9.50 (S에 접근). 두꺼우면 \(e^{-\tau}\to0\), I=S. [[S0903.13]]</p></div>
+<div class="intuit"><b>직관</b> 얇을 때는 층의 모든 원자가 내는 빛이 다 빠져나오므로 길이에 비례해 밝아진다. 두꺼우면 깊은 곳의 빛은 생존확률 \(e^{-\tau'}\)로 다 깎이고 <b>τ≈1 근처 표면층</b>만 보인다 → 더 두꺼워져도 밝아지지 않는다. [[F05.02, F05.04]]</div>
+<div class="qz" data-q="ex1.6-a"><div class="qq"><b>+α</b> 얇은 근사 Sτ의 오차가 10%가 되는 τ는 대략?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>(Sτ−I)/I≈τ/2 → τ≈0.2 (정확히 풀면 τ≈0.19).</p></div></div>
+<div class="qz" data-q="ex1.6-b"><div class="qq"><b>+α</b> S=10인 층 뒤에 I₀=20인 배경이 있고 τ=3이면 I는? 방출/흡수 어느 쪽인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>20e^{−3}+10(1−e^{−3})=1.00+9.50=10.5 → 배경 20보다 어두움 → 흡수.</p></div></div>

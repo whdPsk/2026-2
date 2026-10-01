@@ -1,0 +1,126 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 전자기장이 에너지를 나른다면, 그 에너지 흐름을 나타내는 벡터는 \(\vb{E}\)와 \(\vb{B}\)만으로 만들어져야 하고 단위는 \(\mathrm{W/m^2}\)여야 한다. \(\vb{E}\)와 \(\vb{B}\)로 만들 수 있는 벡터 조합은 사실상 \(\vb{E}\times\vb{B}\) 하나뿐이다 — 계수는 무엇이 붙어야 차원이 맞을까? 또 하나: 정전기 에너지 \(\frac{\eps}{2}\int E^2\,d\tau\)와 정자기 에너지 \(\frac{1}{2\muz}\int B^2\,d\tau\)를 이미 알고 있으니, 에너지 밀도 \(u\)의 형태는 유도를 시작하기 전에 이미 짐작이 된다. 마지막으로 Lorentz 힘 중 자기항 \(q\vb{v}\times\vb{B}\)는 일률 계산에서 살아남을 수 있을까?</div>
+
+<h4>8.1.1 연속방정식 <span class="en">the continuity equation</span></h4>
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 1</span>국소적 전하 보존 → 연속방정식, 그리고 그것이 Maxwell 방정식에 이미 들어 있음을 확인</div>
+<ol>
+<li><b>전역(global) 보존과 국소(local) 보존을 구분한다.</b> "우주 전체의 전하량이 일정하다"는 약한 진술이다. 물리적으로 의미 있는 것은 "어떤 영역의 전하가 줄었다면 정확히 그만큼이 경계면을 통과해 빠져나갔다"는 강한 진술이다. 이 문장을 그대로 수식으로 옮기는 것이 목표다.</li>
+<li><b>부피 \(\mathcal{V}\) 안의 전하와 경계 \(\mathcal{S}\)를 통해 나가는 전류를 쓴다.</b>
+\[ Q(t)=\int_{\mathcal V}\rho(\vb{r},t)\,d\tau,\qquad I_{\text{out}}=\oint_{\mathcal S}\vb{J}\cdot d\vb{a}. \]
+국소 보존은 이 둘이 부호만 반대인 같은 양이라는 뜻이다:
+\[ \frac{dQ}{dt}=-\oint_{\mathcal S}\vb{J}\cdot d\vb{a}. \]</li>
+<li><b>양변을 같은 종류의 적분으로 만든다.</b> 좌변은 시간 미분을 적분 안으로 넣고(적분 영역이 고정된 부피이므로 편미분이 된다), 우변은 발산 정리로 부피적분으로 바꾼다:
+\[ \int_{\mathcal V}\frac{\partial\rho}{\partial t}\,d\tau=-\int_{\mathcal V}(\nabla\cdot\vb{J})\,d\tau. \]</li>
+<li><b>영역의 임의성을 이용한다.</b> 이 등식이 <em>모든</em> 부피에 대해 성립하므로 피적분함수가 같아야 한다. (이 논리는 앞으로도 계속 쓰인다: "임의의 부피 ⇒ 국소 미분방정식".)
+\[ \boxed{\ \frac{\partial\rho}{\partial t}=-\nabla\cdot\vb{J}\ } \]</li>
+<li><b>이것이 독립 가정이 아님을 확인한다.</b> Ampère–Maxwell 법칙 \(\nabla\times\vb{B}=\muz\vb{J}+\muz\eps\,\partial\vb{E}/\partial t\)의 양변에 발산을 취하면 좌변은 항등적으로 0이므로
+\[ 0=\muz(\nabla\cdot\vb{J})+\muz\eps\frac{\partial}{\partial t}(\nabla\cdot\vb{E})=\muz\!\left(\nabla\cdot\vb{J}+\frac{\partial\rho}{\partial t}\right), \]
+Gauss 법칙 \(\nabla\cdot\vb{E}=\rho/\eps\)를 썼다. 즉 <em>전하 보존은 Maxwell 방정식이 이미 강제하는 제약조건</em>이며, \(\rho\)와 \(\vb{J}\)를 아무렇게나 줄 수 없다는 뜻이다. Maxwell이 변위전류 항을 넣은 이유가 바로 이것이다.</li>
+</ol>
+</div>
+
+<div class="callout"><b class="head">"밀도 + 흐름" 문법.</b> 이 장 전체는 딱 하나의 문장 구조를 세 번 반복한다: \(\dfrac{\partial(\text{밀도})}{\partial t}=-\nabla\cdot(\text{흐름})+(\text{원천})\). 전하에서는 \((\rho,\vb{J},0)\), 에너지에서는 \((u,\vb{S},-\vb{E}\cdot\vb{J})\), 운동량에서는 \((\vb{g},-\overleftrightarrow{T},-\vb{f})\). 새 절을 시작할 때마다 "밀도는 무엇이고 흐름은 무엇인가"만 물으면 된다.</div>
+
+<h4>8.1.2 Poynting 정리 <span class="en">Poynting's theorem</span></h4>
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 2</span>장이 전하에 해주는 일률을 장만의 양으로 바꾸기 — Poynting 정리</div>
+<ol>
+<li><b>Lorentz 힘으로 일률을 계산한다.</b> 전하 \(q\)가 \(d\vb{l}=\vb{v}\,dt\)만큼 움직일 때
+\[ dW=\vb{F}\cdot d\vb{l}=q(\vb{E}+\vb{v}\times\vb{B})\cdot\vb{v}\,dt=q\,\vb{E}\cdot\vb{v}\,dt. \]
+자기항은 \((\vb{v}\times\vb{B})\cdot\vb{v}=0\)이므로 <em>처음부터 사라진다</em>. (U4의 주제가 여기서 이미 예고된다.)</li>
+<li><b>연속체로 넘어간다.</b> \(q\to\rho\,d\tau\), \(\rho\vb{v}\to\vb{J}\)로 치환하면
+\[ \frac{dW}{dt}=\int_{\mathcal V}(\vb{E}\cdot\vb{J})\,d\tau. \]
+따라서 \(\vb{E}\cdot\vb{J}\)는 <b>단위 부피당 전달 일률</b>이다.</li>
+<li><b>원천을 장으로 바꾼다(이 장의 표준 수법).</b> Ampère–Maxwell로 \(\vb{J}\)를 제거한다:
+\[ \vb{J}=\frac{1}{\muz}(\nabla\times\vb{B})-\eps\frac{\partial\vb{E}}{\partial t}
+\ \Longrightarrow\ \vb{E}\cdot\vb{J}=\frac{1}{\muz}\vb{E}\cdot(\nabla\times\vb{B})-\eps\,\vb{E}\cdot\frac{\partial\vb{E}}{\partial t}. \]</li>
+<li><b>곱셈 규칙 6으로 \(\vb{E}\cdot(\nabla\times\vb{B})\)를 발산으로 바꾼다.</b>
+\[ \nabla\cdot(\vb{E}\times\vb{B})=\vb{B}\cdot(\nabla\times\vb{E})-\vb{E}\cdot(\nabla\times\vb{B}). \]
+여기에 Faraday 법칙 \(\nabla\times\vb{E}=-\partial\vb{B}/\partial t\)를 대입하면
+\[ \vb{E}\cdot(\nabla\times\vb{B})=-\vb{B}\cdot\frac{\partial\vb{B}}{\partial t}-\nabla\cdot(\vb{E}\times\vb{B}). \]
+<i>왜 이 이동을 하는가?</i> 발산 형태로 만들어야 나중에 발산 정리로 "표면을 통한 흐름"으로 해석할 수 있기 때문이다.</li>
+<li><b>시간 미분을 완전미분으로 묶는다.</b>
+\[ \vb{B}\cdot\frac{\partial\vb{B}}{\partial t}=\frac12\frac{\partial}{\partial t}(B^2),\qquad
+\vb{E}\cdot\frac{\partial\vb{E}}{\partial t}=\frac12\frac{\partial}{\partial t}(E^2). \]
+이 한 줄이 "에너지 밀도"라는 개념을 만들어낸다 — 시간 미분 밖으로 뽑히는 스칼라가 곧 \(u\)다.</li>
+<li><b>모아 쓴다.</b>
+\[ \vb{E}\cdot\vb{J}=-\frac12\frac{\partial}{\partial t}\!\left(\eps E^2+\frac{1}{\muz}B^2\right)-\frac{1}{\muz}\nabla\cdot(\vb{E}\times\vb{B}). \]</li>
+<li><b>부피 적분 후 발산 정리를 적용한다.</b>
+\[ \frac{dW}{dt}=-\frac{d}{dt}\int_{\mathcal V}\frac12\!\left(\eps E^2+\frac{1}{\muz}B^2\right)d\tau-\frac{1}{\muz}\oint_{\mathcal S}(\vb{E}\times\vb{B})\cdot d\vb{a}. \]
+<b>해석:</b> 전하에 해준 일 = (장에 남아 있던 에너지의 감소) − (표면 밖으로 흘러나간 에너지).</li>
+</ol>
+</div>
+
+<div class="formula">
+<div class="ftitle">암기 — 에너지 밀도와 Poynting 벡터</div>
+\[ u=\frac12\left(\eps E^2+\frac{1}{\muz}B^2\right),\qquad
+\boxed{\ \vb{S}\equiv\frac{1}{\muz}(\vb{E}\times\vb{B})\ } \]
+\[ \frac{dW}{dt}=-\frac{d}{dt}\int_{\mathcal V}u\,d\tau-\oint_{\mathcal S}\vb{S}\cdot d\vb{a} \]
+<p class="note">\(\vb{S}\cdot d\vb{a}\)는 면적 요소를 단위 시간당 통과하는 에너지(에너지 flux). 단위는 \(\mathrm{W/m^2}\). 주의: \(\vb{S}\)는 <em>닫힌</em> 면에 대해서만 엄밀히 증명된 양이며, 열린 면에 대한 해석은 자연스럽지만 논리적으로는 추가 가정이다(발산이 0인 항을 더해도 닫힌 면 적분은 변하지 않는다). 전기역학에서 에너지의 "정확한 위치"는 원리적으로 확정되지 않는다.</p>
+</div>
+
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 3</span>에너지의 연속방정식과 원천항이 있는 일반형</div>
+<ol>
+<li>\(dW/dt=\int \vb{E}\cdot\vb{J}\,d\tau\)이므로, 유도 2의 6단계를 부피 적분 없이 국소 형태로 그대로 읽으면
+\[ \frac{\partial u}{\partial t}=-\nabla\cdot\vb{S}-\vb{E}\cdot\vb{J}. \]</li>
+<li><b>원천항의 의미.</b> \(\vb{E}\cdot\vb{J}\)는 장이 물질에 넘겨주는 에너지, 즉 장 입장에서의 <em>손실</em>이다. 그러므로 전자기 에너지만 따로 보면 일반적으로 보존되지 않는다. 역학 에너지도 마찬가지다. <em>둘의 합만이</em> 보존된다.</li>
+<li><b>진공 영역(전하·전류 없음)의 특수화.</b> \(\vb{J}=0\)이면
+\[ \boxed{\ \frac{\partial u}{\partial t}=-\nabla\cdot\vb{S}\ } \]
+로 유도 1의 연속방정식과 형태가 완전히 같아진다: \(u\leftrightarrow\rho\), \(\vb{S}\leftrightarrow\vb{J}\). 이것이 <b>전자기 에너지의 국소 보존</b>이다.</li>
+<li><b>차원 점검(항상 하라).</b> \([\vb{E}\cdot\vb{J}]=(\mathrm{V/m})(\mathrm{A/m^2})=\mathrm{W/m^3}\), \([\nabla\cdot\vb{S}]=(\mathrm{W/m^2})/\mathrm{m}=\mathrm{W/m^3}\), \([\partial u/\partial t]=(\mathrm{J/m^3})/\mathrm{s}=\mathrm{W/m^3}\). 세 항이 모두 일치한다.</li>
+</ol>
+</div>
+
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 4</span>Example 8.1 — 저항 도선의 Joule 열을 Poynting 벡터로 다시 계산</div>
+<ol>
+<li><b>설정.</b> 길이 \(L\), 반지름 \(a\)인 저항 도선에 전위차 \(V\)가 걸려 전류 \(I\)가 흐른다. 도선 내부 전기장은 축 방향으로 균일하다고 두면 \(E=V/L\).</li>
+<li><b>도선 표면의 자기장.</b> Ampère 법칙으로 \(B=\dfrac{\muz I}{2\pi a}\), 방향은 도선을 감아 도는 \(\hat{\phi}\).</li>
+<li><b>Poynting 벡터의 크기와 방향.</b> \(\vb{E}\)는 축 방향(\(\hat z\)), \(\vb{B}\)는 \(\hat\phi\)이므로 \(\hat z\times\hat\phi=-\hat s\), 즉 <b>반지름 방향 안쪽</b>을 향한다:
+\[ S=\frac{1}{\muz}\frac{V}{L}\frac{\muz I}{2\pi a}=\frac{VI}{2\pi aL}. \]</li>
+<li><b>측면 전체로 들어오는 일률.</b> 옆면 넓이가 \(2\pi aL\)이므로
+\[ \int \vb{S}\cdot d\vb{a}=S\,(2\pi a L)=VI. \]
+정확히 Joule 열 \(P=VI=I^2R\)이다.</li>
+<li><b>물리적 충격 포인트.</b> 이 계산에 따르면 에너지는 도선 <em>내부를 따라 축 방향으로 흘러오는 것이 아니라</em>, 도선 주변의 장에서 옆면을 통해 <em>반지름 방향으로 스며든다</em>. 회로 에너지는 전선 속이 아니라 전선 <em>바깥의 장</em>에 실려 이동한다. (Example 8.3의 동축 케이블에서 이 그림이 완성된다.)</li>
+</ol>
+</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u1-1"><div class="qq">[참/거짓+증명] "전자기장의 에너지 밀도 \(u\)는 중첩 원리를 만족한다. 즉 두 원천이 만드는 전체 장의 에너지는 각각의 에너지의 합이다." 참이면 증명하고, 거짓이면 반례를 들어라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>거짓.</b> 장 자체는 중첩된다(\(\vb{E}=\vb{E}_1+\vb{E}_2\))지만 \(u\)는 장에 대해 <em>이차식</em>이다:
+\[ u_E=\frac{\eps}{2}(\vb{E}_1+\vb{E}_2)^2=u_1+u_2+\eps\,\vb{E}_1\cdot\vb{E}_2. \]
+교차항 \(\eps\vb{E}_1\cdot\vb{E}_2\) 때문에 등식이 깨진다.
+<b>구체적 반례:</b> 전하 \(Q\)인 반지름 \(R\) 껍질의 장 에너지는 \(W=\frac{1}{4\pi\eps}\frac{Q^2}{2R}\). 동일한 껍질 두 개를 겹쳐 전하 \(2Q\)로 만들면 장은 2배지만 에너지는 \(4W\)이지 \(2W\)가 아니다. 교차항이 \(2W\)만큼 기여한 것이다.
+<b>확장:</b> \(\vb{S},\ \vb{g},\ \boldsymbol\ell,\ \overleftrightarrow{T}\) 모두 장에 대해 이차식이므로 똑같이 중첩 원리를 만족하지 않는다. 반면 \(\vb{E},\vb{B}\) 자체와 Maxwell 방정식은 선형이다.
+</div></div>
+
+<div class="qz" data-q="u1-2"><div class="qq">[점근·차원 분석] 길이 \(L\), 반지름 \(a\)인 저항 도선에 전위차 \(V\), 전류 \(I\)가 고정되어 있다. 도선 표면에서의 Poynting 벡터 크기가 \(S\propto V^{p}I^{q}a^{m}L^{n}\)이라 할 때 \(p,q,m,n\)을 구하고, 그럼에도 총 유입 일률이 \(a,L\)에 무관한 이유를 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+Example 8.1에서 \(S=\dfrac{VI}{2\pi aL}\)이므로 \(\boxed{p=1,\ q=1,\ m=-1,\ n=-1}\).
+<b>총 일률이 무관한 이유:</b> 유입 일률은 \(S\)에 <em>측면 넓이</em> \(2\pi a L\)를 곱한 것인데, 이 넓이가 정확히 \(a^{+1}L^{+1}\)로 스케일하여 \(S\)의 \(a^{-1}L^{-1}\)을 상쇄한다. 결과는 \(P=VI\)로 기하에 무관.
+<b>차원 점검:</b> \([VI/(aL)]=\mathrm{W/m^2}\) ✓.
+<b>덧붙임:</b> 도선을 가늘게 만들면(\(a\downarrow\)) 표면에서의 에너지 flux 밀도는 커지지만 총 소산 일률은 \(V,I\)가 고정된 한 변하지 않는다. 이는 \(P=VI\)가 기하가 아니라 경계조건이 결정하는 양임을 보여준다.
+</div></div>
+
+<div class="qz" data-q="u1-3"><div class="qq">[교과서 Example 변형] 반지름 \(a\), 간격이 매우 좁은 평행판 축전기가 일정한 전류 \(I\)로 충전되고 있다(가장자리 효과 무시, 시각 \(t=0\)에 전하 0). 극판 사이 반지름 \(s\)에서의 \(\vb{E},\vb{B},\vb{S}\)를 구하고, \(\partial u/\partial t=-\nabla\cdot\vb{S}\)가 만족됨을 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>(1) 전기장.</b> 전하 \(Q=It\), 면전하 \(\sigma=It/(\pi a^2)\)이므로
+\[ \vb{E}=\frac{It}{\eps\pi a^2}\,\hat z. \]
+<b>(2) 자기장.</b> 간극에는 전도전류가 없고 변위전류만 있다. 반지름 \(s\)의 Ampère 고리에 대해
+\[ B(2\pi s)=\muz\eps\frac{d}{dt}\!\left(\frac{It}{\eps\pi a^2}\right)\pi s^2 \ \Rightarrow\ \vb{B}=\frac{\muz I s}{2\pi a^2}\,\hat\phi. \]
+<b>(3) Poynting 벡터.</b> \(\hat z\times\hat\phi=-\hat s\)이므로
+\[ \vb{S}=\frac{1}{\muz}EB\,(-\hat s)=-\frac{I^2 t\,s}{2\pi^2\eps a^4}\,\hat s, \]
+즉 <b>안쪽</b>을 향한다 — 에너지가 옆에서 간극으로 밀려 들어온다.
+<b>(4) 연속방정식 확인.</b> \(u=\frac{\eps}{2}E^2+\frac{1}{2\muz}B^2\)에서 지배항인 전기 부분을 포함해
+\[ \frac{\partial u}{\partial t}=\eps E\dot E+\frac{1}{\muz}B\dot B=\frac{I^2t}{\eps\pi^2a^4}\ \ (\text{자기항은 }\dot B=0). \]
+원기둥 좌표 발산 \(\nabla\cdot\vb{S}=\frac1s\frac{\partial}{\partial s}(sS_s)\), \(S_s=-\frac{I^2ts}{2\pi^2\eps a^4}\):
+\[ \nabla\cdot\vb{S}=\frac1s\frac{\partial}{\partial s}\!\left(-\frac{I^2ts^2}{2\pi^2\eps a^4}\right)=-\frac{I^2t}{\pi^2\eps a^4}. \]
+따라서 \(\partial u/\partial t=-\nabla\cdot\vb{S}\) ✓ (간극에 전하가 없어 \(\vb{E}\cdot\vb{J}=0\)).
+<b>(5) 총량 확인.</b> 반지름 \(a\), 두께 \(d\)의 옆면으로 들어오는 일률 \(=|S(a)|\,2\pi a d=\frac{I^2td}{\eps\pi a^2}\)이고, 이는 \(\frac{d}{dt}\!\int u\,d\tau\)와 일치한다.
+</div></div>
+
+<div class="qz" data-q="u1-4"><div class="qq">[개념 설명] Poynting 정리의 출발점 \(dW/dt=\int\vb{E}\cdot\vb{J}\,d\tau\)에 \(\vb{B}\)가 전혀 등장하지 않는다. 그런데 최종 결과에는 \(\vb{B}\)가 에너지 밀도와 \(\vb{S}\) 양쪽에 나타난다. 모순인가? 두 문장으로 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+모순이 아니다. <b>자기력은 전하에 일을 하지 않으므로</b> 일률 표현에 \(\vb{B}\)가 직접 들어갈 자리는 없다(\((\vb{v}\times\vb{B})\cdot\vb{v}=0\)). 그러나 \(\vb{J}\)를 Ampère–Maxwell 법칙으로 <em>장으로 치환</em>하는 순간 \(\nabla\times\vb{B}\)가 들어오고, 이어서 Faraday 법칙 \(\partial\vb{B}/\partial t=-\nabla\times\vb{E}\)가 \(B^2\)의 시간 변화율을 만들어낸다. 즉 \(\vb{B}\)는 <em>일을 하는 주체</em>로서가 아니라 <em>에너지를 저장하고 운반하는 저장고·통로</em>로서 등장한다. 이 구분이 §8.3(U4)의 핵심 주제다.
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> 백지에서 Maxwell 방정식만 놓고 시작해 \(u\)와 \(\vb{S}\)의 형태를 유도해내고, 저항 도선의 Joule 열이 옆면으로 들어오는 \(\vb{S}\)의 flux와 같음을 계산까지 마칠 수 있다.</div>

@@ -1,0 +1,20 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> 단위부피당 일률 \(\vb{E}\cdot\vb{J}_f\), \(\vb{J}_f=\curl\vb{H}-\partial\vb{D}/\partial t\):
+\[\vb{E}\cdot\vb{J}_f=\vb{E}\cdot(\curl\vb{H})-\vb{E}\cdot\dot{\vb{D}} .\]
+곱셈규칙 \(\divg(\vb{E}\times\vb{H})=\vb{H}\cdot(\curl\vb{E})-\vb{E}\cdot(\curl\vb{H})\) 와 Faraday \(\curl\vb{E}=-\dot{\vb{B}}\):
+\[\vb{E}\cdot\vb{J}_f=-\big[\vb{E}\cdot\dot{\vb{D}}+\vb{H}\cdot\dot{\vb{B}}\big]-\divg(\vb{E}\times\vb{H}).\]
+\[\boxed{\;\vb{S}=\vb{E}\times\vb{H},\qquad \frac{\partial u}{\partial t}=\vb{E}\cdot\frac{\partial\vb{D}}{\partial t}+\vb{H}\cdot\frac{\partial\vb{B}}{\partial t}\;}\]
+선형 매질 \(\vb{D}=\epsilon\vb{E},\ \vb{B}=\mu\vb{H}\) 이면
+\(\vb{E}\cdot\dot{\vb{D}}=\tfrac12\partial_t(\vb{E}\cdot\vb{D})\) 등이므로
+\[\boxed{\;u=\tfrac12(\vb{E}\cdot\vb{D}+\vb{B}\cdot\vb{H})\;}\]</p>
+<p><b>(b)</b> 힘밀도 \(\vb{f}=\rho_f\vb{E}+\vb{J}_f\times\vb{B}\) 에 \(\rho_f=\divg\vb{D}\), \(\vb{J}_f=\curl\vb{H}-\dot{\vb{D}}\) 대입.
+\(\dot{\vb{D}}\times\vb{B}=\partial_t(\vb{D}\times\vb{B})-\vb{D}\times\dot{\vb{B}}
+=\partial_t(\vb{D}\times\vb{B})+\vb{D}\times(\curl\vb{E})\) 를 쓰면
+\[\vb{f}=\big[(\divg\vb{D})\vb{E}-\vb{D}\times(\curl\vb{E})\big]
++\big[(\divg\vb{B})\vb{H}-\vb{B}\times(\curl\vb{H})\big]-\frac{\partial}{\partial t}(\vb{D}\times\vb{B}).\]
+대괄호는 어떤 응력텐서의 발산이므로, 남는 시간미분항이 운동량 밀도를 정의한다:
+\[\boxed{\;\vb{g}=\vb{D}\times\vb{B}\;}\quad(\text{Minkowski})\]</p>
+<p><b>맥락.</b> 매질 속 운동량이 Minkowski \(\vb{D}\times\vb{B}\)인지 Abraham \(\eps\muz(\vb{E}\times\vb{H})\)인지는 100년 넘게 논쟁된 주제다(Griffiths, AJP 80, 7 (2012)).</p>
+<div class="alabel">감점 포인트</div>
+비선형·분산 매질에서도 \(u=\tfrac12(\vb{E}\cdot\vb{D}+\vb{B}\cdot\vb{H})\) 라고 일반화하는 것. 선형 매질에서만 적분이 가능하다.</div><!--/sol-->

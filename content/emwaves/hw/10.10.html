@@ -1,0 +1,17 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(\divg\vb{A}=\frac{\muz}{4\pi}\int\divg\!\left(\frac{\vb{J}}{\rr}\right)d\tau'\). 항등식(\(\nabla(1/\rr)=-\nabla'(1/\rr)\) 이용)
+\[ \divg\!\left(\frac{\vb{J}}{\rr}\right)=\frac{1}{\rr}(\divg\vb{J})+\frac{1}{\rr}(\nabla'\!\cdot\vb{J})-\nabla'\!\cdot\!\left(\frac{\vb{J}}{\rr}\right). \]
+<b>핵심: 지연시간에 대한 연쇄율.</b> \(\vb{J}(\vb{r}',t-\rr/c)\)는 \(\vb{r}\)에 대해서는 오직 \(\rr\)를 통해서만 의존한다:
+\[ \divg\vb{J}=\sum_i\dot J_i\frac{\partial t_r}{\partial x_i}=\dot{\vb{J}}\cdot\nabla t_r=-\frac1c\dot{\vb{J}}\cdot(\nabla\rr). \]
+반면 \(\vb{r}'\)에 대해서는 <b>명시적으로도</b> 의존하므로
+\[ \nabla'\!\cdot\vb{J}=\underbrace{(\nabla'\!\cdot\vb{J})_{\rm expl}}_{=-\dot\rho\ (\text{연속방정식})}+\dot{\vb{J}}\cdot\nabla't_r=-\dot\rho-\frac1c\dot{\vb{J}}\cdot(\nabla'\rr). \]
+그런데 \(\nabla\rr=\rhat=-\nabla'\rr\)이므로 두 연쇄율 항이 <b>정확히 상쇄</b>되어
+\[ \divg\vb{J}+\nabla'\!\cdot\vb{J}=-\dot\rho . \]
+따라서
+\[ \divg\vb{A}=\frac{\muz}{4\pi}\left[-\int\frac{\dot\rho}{\rr}d\tau'-\oint\frac{\vb{J}}{\rr}\cdot d\vb{a}'\right]. \]
+국소적 소스에서는 면적분이 0이고, 남은 항은
+\[ -\muz\eps\frac{\partial}{\partial t}\left[\frac{1}{4\pi\eps}\int\frac{\rho(\vb{r}',t_r)}{\rr}d\tau'\right]=-\muz\eps\frac{\partial V}{\partial t}. \]
+\[ \boxed{\divg\vb{A}=-\muz\eps\frac{\partial V}{\partial t}}\ \ \text{✓ Lorenz 조건} \]
+<div class="alabel">감점 포인트</div>
+\(\nabla'\cdot\vb{J}\)에서 "명시적 부분(연속방정식)"과 "\(t_r\)를 통한 부분"을 분리하지 않는 것 — 여기서 점수가 갈린다.</div><!--/sol-->

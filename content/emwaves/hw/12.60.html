@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>\(x\)방향 부스트의 <b>역변환</b>: \(x^{0}=\gamma(\bar x^{0}+\beta\bar x^{1}),\ x^{1}=\gamma(\bar x^{1}+\beta\bar x^{0}),\ x^{2}=\bar x^{2},\ x^{3}=\bar x^{3}\).</p>
+<p>연쇄법칙 \(\dfrac{\partial}{\partial\bar x^{\mu}}=\dfrac{\partial x^{\nu}}{\partial\bar x^{\mu}}\dfrac{\partial}{\partial x^{\nu}}\)를 적용하면</p>
+\[ \bar\partial_0=\gamma(\partial_0+\beta\partial_1),\qquad \bar\partial_1=\gamma(\partial_1+\beta\partial_0),\qquad \bar\partial_2=\partial_2,\qquad \bar\partial_3=\partial_3. \]
+<p>이것을 4-벡터 규칙과 비교한다. 반변벡터는 \(\bar a^{0}=\gamma(a^{0}-\beta a^{1})\), \(\bar a^{1}=\gamma(a^{1}-\beta a^{0})\)이고, 공변벡터 \(a_\mu=(-a^{0},\vb{a})\)는</p>
+\[ \bar a_0=-\bar a^{0}=\gamma(a_0+\beta a_1),\qquad \bar a_1=\bar a^{1}=\gamma(a_1+\beta a_0). \]
+<p>\(\bar\partial_\mu\)의 변환식과 <b>정확히 같은 꼴</b>이다. 따라서</p>
+\[ \boxed{\ \partial_\mu\equiv\frac{\partial}{\partial x^{\mu}}\ \text{는 공변 4-벡터},\qquad \partial^{\mu}\equiv\frac{\partial}{\partial x_{\mu}}=g^{\mu\nu}\partial_\nu\ \text{는 반변 4-벡터}\ } \]
+<p>(\(\phi\)가 스칼라라 \(\bar\phi(\bar x)=\phi(x)\)이므로 변환은 오직 미분 연산자에서만 온다.)</p>
+<p><b>왜 중요한가:</b> 그래야 \(\partial_\mu J^{\mu}\)(연속방정식), \(\partial_\nu F^{\mu\nu}\)(Maxwell), \(\Box^{2}=\partial^{\mu}\partial_\mu\)(d'Alembertian)가 모두 올바른 텐서 방정식이 된다. "위·아래 첨자가 짝지어져야 한다"는 규칙의 근거가 바로 이 문제다.</p>
+<div class="alabel">감점 포인트</div>
+\(\partial/\partial x^{\mu}\)의 위첨자만 보고 반변벡터라 단정하는 것 — 미분은 <b>분모</b>에 있으므로 위치가 뒤집힌다.</div><!--/sol-->

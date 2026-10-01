@@ -1,0 +1,13 @@
+<div class="exq"><b>상황.</b> \(x&lt;0\)에서 선밀도 \(\rho_1\), \(x&gt;0\)에서 \(\rho_2\)인 줄(장력 \(\tau\) 공통). 왼쪽에서 연속 파열이 입사한다. 반사·투과파의 진폭 제곱 비.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>같은 \(\omega\), 다른 \(k\); 경계조건 두 개.</div>
+<ol>
+<li>\(\Psi_1=Ae^{i(\omega t-k_1x)}+Be^{i(\omega t+k_1x)}\), \(\Psi_2=Ce^{i(\omega t-k_2x)}\), \(k_i=\omega\sqrt{\rho_i/\tau}\) → \(k_2=k_1\sqrt{\rho_2/\rho_1}\).</li>
+<li>\(x=0\): \(\Psi\) 연속 → \(A+B=C\). \(\partial_x\Psi\) 연속 → \(-k_1A+k_1B=-k_2C\).</li>
+<li>풀면 \(B=\frac{k_1-k_2}{k_1+k_2}A\), \(C=\frac{2k_1}{k_1+k_2}A\) — 둘 다 실수.</li>
+<li>\(R=|B/A|^2\), \(T=\frac{k_2}{k_1}|C/A|^2\) (에너지 흐름 \(\propto k|{\rm amp}|^2\)).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ R=\left(\frac{k_1-k_2}{k_1+k_2}\right)^2,\qquad T=\frac{4k_1k_2}{(k_1+k_2)^2},\qquad R+T=1\ } \]
+<p class="note"><b>위상</b>: \(C&gt;0\) 항상(투과파 동위상). \(\rho_2&gt;\rho_1\)이면 \(B&lt;0\) — 반사파 뒤집힘. <b>검산</b> ① \(\rho_2=\rho_1\): \(R=0\) ✓. ② \(\rho_2\to\infty\): \(R\to1\), \(B=-A\) (고정단) ✓. ③ \(\rho_2\to0\): \(B=A\) (자유단) ✓. 전자기파의 수직 입사 Fresnel 공식과 같은 꼴(\(k\leftrightarrow n\)).</p></div>
+<div class="qz" data-q="ex13.3-a"><div class="qq"><b>+α</b> \(\rho_2=4\rho_1\)일 때 \(R\), \(T\)와 반사파의 위상은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(k_2=2k_1\): \(B/A=-\tfrac13\), \(C/A=\tfrac23\). \(R=\tfrac19\), \(T=2\cdot\tfrac49=\tfrac89\) ✓. 반사파 반전(무거운 줄로).</p></div></div>
+<div class="qz" data-q="ex13.3-b"><div class="qq"><b>+α</b> 두 줄 사이에 점질량 \(M\)이 달려 있다면 둘째 경계조건은 어떻게 바뀌는가? (\(\rho_1=\rho_2\)로 두고 반사 진폭을 구하라.)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>기울기 연속 대신 질점의 운동방정식: \(M\ddot\Psi(0)=\tau[\Psi'_2(0)-\Psi'_1(0)]\). \(k_1=k_2=k\): \(-M\omega^2C=\tau(-ikC+ikA-ikB)\), \(A+B=C\) → \(\frac BA=\frac{-M\omega^2}{M\omega^2-2i\tau k}\)… 정리하면 \(\frac BA=\frac{-i\alpha}{1+i\alpha}\), \(\alpha=\frac{M\omega^2}{2\tau k}=\frac{M\omega v}{2\tau}\). \(R=\frac{\alpha^2}{1+\alpha^2}\) — 고진동수일수록 질점이 벽처럼 작용.</p></div></div>

@@ -1,0 +1,119 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 완전 도체 벽 안에서는 \(\vb E^\parallel=0\), \(B^\perp=0\)이 강제된다(U11의 마지막 결과). 줄의 양 끝을 고정하면 아무 진동수나 살지 못하고 배음만 남듯이, 도파관도 <b>이산적인 모드</b>와 <b>최저 진동수</b>를 가질 것이다. 그리고 한 가지 놀라운 결과를 예고하자면 — 속이 빈 도관 안에서는 진공에서처럼 \(\vb E\)와 \(\vb B\)가 <b>둘 다</b> 진행 방향 성분이 없는 파동이 존재할 수 없다. 왜 그럴지, 1학기의 유일성 정리를 떠올리며 생각해 보라.</div>
+
+<h4>9.5.1 일반 구조 <span class="en">the general guided-wave problem</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>횡성분은 세로 성분이 전부 결정한다</div>
+<ol>
+<li><b>가정.</b> 단면 모양이 \(z\)에 무관한 도관. 파동은 \(z\)로 진행하되 단면 구조는 자유:
+\[ \tilde{\vb E}(x,y,z,t)=\tilde{\vb E}_0(x,y)\,\ee^{\ii(kz-\omega t)},\qquad \tilde{\vb B}=\tilde{\vb B}_0(x,y)\,\ee^{\ii(kz-\omega t)} \]
+진공 평면파와 달리 \(\tilde{\vb E}_0\)가 <b>위치의 함수</b>인 것이 전부의 차이다.</li>
+<li>Maxwell 방정식 4개를 성분별로 쓴다. Faraday \(\curl\vb E=-\partial_t\vb B\)의 세 성분:
+\[ \partial_yE_z-\ii kE_y=\ii\omega B_x,\quad \ii kE_x-\partial_xE_z=\ii\omega B_y,\quad \partial_xE_y-\partial_yE_x=\ii\omega B_z \]
+Ampère \(\curl\vb B=\tfrac{1}{c^2}\partial_t\vb E\)도 같은 방식으로 세 개.</li>
+<li>여섯 식 중 네 개를 \(E_x,E_y,B_x,B_y\)에 대한 연립으로 보고 풀면, 이들이 모두 \(E_z,B_z\)의 <b>횡방향 도함수</b>로 표현된다:
+\[ E_x=\frac{\ii}{(\omega/c)^2-k^2}\Big(k\,\partial_xE_z+\omega\,\partial_yB_z\Big),\quad E_y=\frac{\ii}{(\omega/c)^2-k^2}\Big(k\,\partial_yE_z-\omega\,\partial_xB_z\Big) \]
+\[ B_x=\frac{\ii}{(\omega/c)^2-k^2}\Big(k\,\partial_xB_z-\frac{\omega}{c^2}\partial_yE_z\Big),\quad B_y=\frac{\ii}{(\omega/c)^2-k^2}\Big(k\,\partial_yB_z+\frac{\omega}{c^2}\partial_xE_z\Big) \]</li>
+<li><b>전략적 의미:</b> 6개 미지 함수 문제가 <b>2개(\(E_z,B_z\))</b> 문제로 줄었다. 남은 두 식(Gauss 법칙 둘)은 \(E_z,B_z\)에 대한 2차원 Helmholtz 방정식을 준다:
+\[ \left[\partial_x^2+\partial_y^2+\left(\frac{\omega^2}{c^2}-k^2\right)\right]\begin{Bmatrix}E_z\\ B_z\end{Bmatrix}=0 \]</li>
+<li><b>분류.</b>
+<br>• \(E_z=0\) : <b>TE</b> (transverse electric)
+<br>• \(B_z=0\) : <b>TM</b> (transverse magnetic)
+<br>• 둘 다 0 : <b>TEM</b></li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>속이 빈 단일 도체 관에서 TEM이 불가능한 이유 (유일성 정리의 재등장)</div>
+<ol>
+<li>TEM이라 가정하자: \(E_z=B_z=0\).</li>
+<li>\(\divg\vb E=0\)에서 \(z\) 성분이 없으므로 \(\partial_xE_x+\partial_yE_y=0\) — 단면에서 <b>2차원 발산이 0</b>.</li>
+<li>Faraday의 \(z\) 성분에서 \(\partial_xE_y-\partial_yE_x=\ii\omega B_z=0\) — 단면에서 <b>2차원 회전도 0</b>.</li>
+<li>발산과 회전이 모두 0인 2차원 장은 \(\vb E_\perp=-\nabla_\perp V\)이고 \(\nabla_\perp^2V=0\) — 즉 <b>2차원 라플라스 방정식</b>을 만족한다.</li>
+<li>경계 조건: 도체 벽에서 \(\vb E^\parallel=0\)이므로 벽 전체가 <b>등퍼텐셜</b>이다. 도체가 하나뿐이면 경계 전체가 <b>같은 상수 값</b>을 갖는다.</li>
+<li>유일성 정리(1학기 §3.1.5): 경계에서 상수인 라플라스 해는 내부에서도 그 상수다. 따라서 \(V=\)const \(\Rightarrow\vb E_\perp=0\Rightarrow\) 파동이 없다. ∎</li>
+<li><b>예외가 언제 생기는가.</b> 도체가 <b>둘</b>이면(동축선의 안쪽 심선과 바깥 도체) 두 경계가 서로 <b>다른</b> 상수를 가질 수 있고, 그 사이에 0이 아닌 라플라스 해가 존재한다. 그래서 동축선에는 TEM 모드가 산다(U14).</li>
+<li><b>답안 요령:</b> "TEM 불가"는 전자기학 고유의 사실이 아니라 <b>2차원 라플라스 문제 + 단일 등퍼텐셜 경계</b>라는 순수 수학의 결과임을 명시하면 만점 답안이 된다.</li>
+</ol></div>
+
+<h4>9.5.2 직사각형 도파관의 TE 모드 <span class="en">TE modes in a rectangular guide</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>변수분리와 TE\(_{mn}\) 모드</div>
+<ol>
+<li>단면 \(0\le x\le a\), \(0\le y\le b\) (\(a\ge b\)). TE이므로 \(E_z=0\), \(B_z\)만 풀면 된다:
+\[ \left[\partial_x^2+\partial_y^2+\left(\frac{\omega^2}{c^2}-k^2\right)\right]B_z=0 \]</li>
+<li>변수분리 \(B_z=X(x)Y(y)\):
+\[ \frac{X''}{X}+\frac{Y''}{Y}+\left(\frac{\omega^2}{c^2}-k^2\right)=0 \]
+각 항이 상수여야 하므로 \(X''=-k_x^2X\), \(Y''=-k_y^2Y\), \(k_x^2+k_y^2+k^2=\omega^2/c^2\).</li>
+<li><b>경계 조건이 코사인을 고른다.</b> 벽에서 \(B^\perp=0\)이다. \(x=0,a\) 벽의 법선은 \(\hat x\)이므로 \(B_x=0\)이어야 하고, 유도 1의 표현에서 TE(\(E_z=0\))일 때 \(B_x\propto\partial_xB_z\)이므로
+\[ \left.\frac{\partial B_z}{\partial x}\right|_{x=0,a}=0 \]
+이것은 Dirichlet가 아니라 <b>Neumann 조건</b>이다. 따라서 \(X=\cos(k_xx)\), \(k_x=m\pi/a\). 같은 논리로 \(Y=\cos(k_yy)\), \(k_y=n\pi/b\).
+<br><b>여기서 사인이 아니라 코사인이 나오는 것이 이 절의 최대 함정이다.</b> (TM 모드라면 \(E_z\)에 Dirichlet가 걸려 사인이 된다.)</li>
+<li>따라서
+\[ \boxed{\;B_z=B_0\cos\!\frac{m\pi x}{a}\cos\!\frac{n\pi y}{b}\;}\qquad(m,n=0,1,2,\dots;\ m=n=0\ \text{제외}) \]
+\(m=n=0\)이면 \(B_z\)가 상수가 되어 모든 횡성분이 0이 되므로 물리적 파동이 아니다.</li>
+<li><b>분산 관계.</b>
+\[ k=\sqrt{\frac{\omega^2}{c^2}-\pi^2\left(\frac{m^2}{a^2}+\frac{n^2}{b^2}\right)} \equiv\frac{1}{c}\sqrt{\omega^2-\omega_{mn}^2} \]
+\[ \boxed{\;\omega_{mn}=c\pi\sqrt{\left(\frac{m}{a}\right)^2+\left(\frac{n}{b}\right)^2}\;}\qquad(\text{차단 진동수}) \]</li>
+<li><b>차단의 의미.</b> \(\omega&lt;\omega_{mn}\)이면 \(k\)가 순허수 \(\Rightarrow\ee^{\ii kz}=\ee^{-|k|z}\) — 진행하지 못하고 지수 감쇠한다(<b>evanescent</b>). 최저 모드는 \(a\ge b\)이므로 <b>TE\(_{10}\)</b>, \(\omega_{10}=c\pi/a\).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>위상 속도·군속도와 지그재그 그림</div>
+<ol>
+<li>\(k=\frac{1}{c}\sqrt{\omega^2-\omega_{mn}^2}\)에서
+\[ v_p=\frac{\omega}{k}=\frac{c}{\sqrt{1-(\omega_{mn}/\omega)^2}}\;&gt;\;c \]
+\[ v_g=\frac{\dd\omega}{\dd k}=c\sqrt{1-(\omega_{mn}/\omega)^2}\;&lt;\;c \]
+\[ \boxed{\;v_pv_g=c^2\;} \]</li>
+<li><b>초광속 위상 속도가 문제되지 않는 이유</b>는 U12 Q4와 동일하다 — 에너지와 신호는 \(v_g\)로 간다.</li>
+<li><b>지그재그 해석.</b> TE\(_{10}\) 모드를 두 개의 평면파가 벽 사이를 각 \(\theta\)로 비스듬히 반사하며 겹친 것으로 볼 수 있다. 축 방향 파수는 \(k=(\omega/c)\cos\theta\), 횡방향은 \((\omega/c)\sin\theta=\pi/a\)가 정상파 조건을 만든다. 그러면
+\[ v_g=c\cos\theta,\qquad v_p=\frac{c}{\cos\theta} \]
+로 위 결과가 즉시 재현된다. 차단은 \(\theta\to90^\circ\)(벽 사이를 수직으로 튕기기만 하고 앞으로 못 감), 고주파 극한은 \(\theta\to0\)(벽을 못 느끼는 자유 평면파).</li>
+<li><b>단일 모드 대역.</b> 실용 도파관은 TE\(_{10}\)만 전파되는 구간에서 쓴다:
+\[ \omega_{10}&lt;\omega&lt;\min(\omega_{20},\omega_{01})=\min\!\left(\frac{2c\pi}{a},\frac{c\pi}{b}\right) \]
+\(b\le a/2\)로 만들면 \(\omega_{20}\)이 먼저 오므로 대역은 정확히 <b>한 옥타브</b>(\(\omega_{10}\)에서 \(2\omega_{10}\))가 된다. 표준 도파관의 가로:세로가 대략 2:1인 이유가 이것이다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 직사각형 도파관 TE 모드</div>
+\[ B_z=B_0\cos\frac{m\pi x}{a}\cos\frac{n\pi y}{b},\qquad \omega_{mn}=c\pi\sqrt{\frac{m^2}{a^2}+\frac{n^2}{b^2}},\qquad k=\frac1c\sqrt{\omega^2-\omega_{mn}^2} \]
+\[ v_p=\frac{c}{\sqrt{1-(\omega_{mn}/\omega)^2}},\qquad v_g=c\sqrt{1-(\omega_{mn}/\omega)^2},\qquad v_pv_g=c^2 \]
+<p class="note">TE는 \(B_z\)에 <b>Neumann</b> 조건 → 코사인. TM은 \(E_z\)에 <b>Dirichlet</b> 조건 → 사인이고 \(m,n\ge1\)이라 TM\(_{10}\)은 존재하지 않는다.</p></div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u13-1"><div class="qq">(참/거짓 + 증명 또는 반례) "속이 빈 직사각형 도파관에서는 어떤 진동수의 TEM 파도 진행할 수 없다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>참.</b> 유도 2의 6단계 증명이 그대로 답이다. 요점만 재구성하면:
+\(E_z=B_z=0\Rightarrow\) 단면에서 \(\nabla_\perp\cdot\vb E_\perp=0\)이고 \(\nabla_\perp\times\vb E_\perp=0\) \(\Rightarrow\vb E_\perp=-\nabla_\perp V\), \(\nabla_\perp^2V=0\). 도체 벽에서 \(\vb E^\parallel=0\)이므로 경계가 등퍼텐셜이고, 경계가 하나로 연결되어 있으므로 경계 전체가 같은 상수. 유일성 정리에 의해 내부에서도 그 상수 \(\Rightarrow\vb E_\perp=0\). ∎
+<b>진동수와 무관</b>하다는 점이 중요하다 — 차단처럼 "낮으면 안 되고 높으면 된다"가 아니라 아예 존재 자체가 금지된다. 논증 어디에도 \(\omega\)가 등장하지 않은 것이 그 증거다.
+<b>대비:</b> 도체가 둘인 동축선에서는 두 경계가 서로 다른 퍼텐셜을 가질 수 있어 TEM이 존재하고, 그래서 차단 진동수가 없다(U14).
+</div></div>
+
+<div class="qz" data-q="u13-2"><div class="qq">(점근 분석) TE\(_{10}\) 모드에서 \(\omega\to\omega_{10}^+\)와 \(\omega\to\infty\) 극한의 \(v_p,v_g\)를 구하고, 각각을 지그재그 그림으로 해석하라. 또 \(\omega=\omega_{10}(1+\delta)\), \(\delta\ll1\)일 때 \(v_g\)가 \(\delta\)의 몇 승으로 0에 가는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>극한.</b>
+<br>• \(\omega\to\omega_{10}^+\): \(v_g\to0\), \(v_p\to\infty\). 지그재그 각 \(\theta\to90^\circ\) — 파동이 벽 사이를 거의 수직으로 왕복만 하고 축 방향으로 나아가지 못한다.
+<br>• \(\omega\to\infty\): \(v_g\to c\), \(v_p\to c\). \(\theta\to0\) — 파장이 관 크기보다 훨씬 짧아 벽을 느끼지 못하는 자유 평면파.
+<b>지수.</b> \(\omega=\omega_{10}(1+\delta)\)이면
+\[ 1-\left(\frac{\omega_{10}}{\omega}\right)^2=1-(1+\delta)^{-2}\approx2\delta \]
+\[ v_g=c\sqrt{2\delta}\ \propto\ \boxed{\delta^{1/2}} \]
+제곱근으로 0에 접근한다. \(v_p\propto\delta^{-1/2}\)로 발산.
+<b>실용적 함의:</b> 차단 근처에서는 \(v_g\)가 급격히 변하므로 <b>분산이 극심하다</b> — 펄스가 심하게 퍼진다. 통신용 도파관을 차단 바로 위가 아니라 대역 중앙(\(\approx1.5\omega_{10}\))에서 쓰는 이유다.
+</div></div>
+
+<div class="qz" data-q="u13-3"><div class="qq">(계산, 계산기 없이) \(a=2.28\) cm, \(b=1.01\) cm인 표준 도파관에서 (a) TE\(_{10}\) 차단 주파수, (b) 단일 모드 대역, (c) 9 GHz에서의 \(v_g\)를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>(a)</b> \(\nu_{10}=\dfrac{c}{2a}=\dfrac{3\times10^8}{2\times0.0228}=\dfrac{3\times10^8}{0.0456}\approx6.6\) GHz.
+<b>(b)</b> 다음 모드 후보:
+\(\nu_{20}=c/a=13.2\) GHz, \(\nu_{01}=c/2b=\dfrac{3\times10^8}{0.0202}\approx14.9\) GHz.
+작은 쪽이 13.2 GHz이므로 단일 모드 대역은 <b>6.6 – 13.2 GHz</b>. (\(b&lt;a/2\)이므로 정확히 한 옥타브.) 실무에서는 끝단을 피해 8.2–12.4 GHz(X-band)로 쓴다.
+<b>(c)</b> \(\nu=9\) GHz에서
+\[ \frac{\nu_{10}}{\nu}=\frac{6.6}{9}=0.733,\qquad \left(\frac{\nu_{10}}{\nu}\right)^2\approx0.538 \]
+\[ v_g=c\sqrt{1-0.538}=c\sqrt{0.462}\approx0.68\,c\approx2.0\times10^8\ \mathrm{m/s} \]
+검산: \(v_p=c/0.68\approx1.47c\), \(v_pv_g=c^2\) ✓.
+</div></div>
+
+<div class="qz" data-q="u13-4"><div class="qq">(개념) TE 모드에서는 \(B_z\)가 코사인, TM 모드에서는 \(E_z\)가 사인이 되는 이유를 경계 조건의 종류로 설명하고, 그 결과 TM\(_{10}\) 모드가 존재하지 않는 이유를 답하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>경계 조건의 차이.</b>
+<br>• <b>TE</b>: 벽에서 \(B^\perp=0\). 유도 1에서 TE일 때 \(B_x\propto\partial_xB_z\)이므로 조건은 \(\partial_xB_z|_{0,a}=0\) — <b>Neumann</b>. Neumann 조건을 만족하는 해는 \(\cos(m\pi x/a)\)이고, \(m=0\)도 허용된다(상수 함수도 도함수가 0이므로).
+<br>• <b>TM</b>: 벽에서 \(\vb E^\parallel=0\)이고 \(E_z\)는 벽에 평행하므로 \(E_z|_{0,a}=0\) — <b>Dirichlet</b>. 해는 \(\sin(m\pi x/a)\)이고 \(m=0\)이면 항등적으로 0이 되어 버린다.
+<b>따라서 TM\(_{10}\)은 없다.</b> TM은 \(m\ge1\)이고 <b>동시에</b> \(n\ge1\)이어야 하므로 최저 모드는 TM\(_{11}\)이다:
+\[ \omega_{11}=c\pi\sqrt{\frac{1}{a^2}+\frac{1}{b^2}}\;&gt;\;\omega_{10} \]
+<b>결론:</b> 직사각형 도파관의 <b>절대 최저 모드는 언제나 TE\(_{10}\)</b>이며, 실무에서 도파관을 "TE\(_{10}\) 도파관"이라 부르는 이유가 이것이다.
+<b>기억법:</b> "E는 벽에 붙으면 죽는다(사인), B는 벽을 뚫지 못할 뿐이다(코사인)."
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> 횡성분을 세로 성분으로 환원하는 구조를 설명하고, TEM 불가 증명과 TE\(_{mn}\) 차단 진동수·속도 관계를 유도할 수 있다.</div>

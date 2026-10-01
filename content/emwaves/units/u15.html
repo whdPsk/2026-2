@@ -1,0 +1,110 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 정전기학에서 \(\vb{E}=-\nabla V\)를 쓸 수 있었던 근거는 \(\curl\vb{E}=0\)이었다. 전기역학에서는 이 조건이 깨진다. 그렇다면 무엇이 살아남아 퍼텐셜 표현을 계속 가능하게 하는가? 살아남은 방정식은 Maxwell 방정식 네 개 중 어느 것들인지, 그리고 그 두 개를 "자동으로" 만족시키고 나면 남는 방정식은 몇 개인지 먼저 세어 보라. 마지막으로, 퍼텐셜 4개가 장 6개를 표현한다면 정보가 부족한 것이 아니라 오히려 남는다는 사실이 무엇을 뜻할지 추측해 보라.</div>
+
+<h4>10.1.1 퍼텐셜 표현과 결합 방정식 <span class="en">the potential formulation</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>\(\vb{E}=-\nabla V-\partial\vb{A}/\partial t\)의 필연성</div>
+<ol>
+<li>Maxwell 방정식 중 <b>동차(homogeneous)</b> 두 개, \(\divg\vb{B}=0\)와 \(\curl\vb{E}=-\partial\vb{B}/\partial t\)에는 원천 \(\rho,\vb{J}\)가 들어 있지 않다. 이 둘은 "장이 반드시 가져야 할 구조"를 규정하므로, 구조를 미리 심어 놓은 표현을 찾으면 방정식 두 개를 공짜로 없앨 수 있다.</li>
+<li>\(\divg\vb{B}=0\)은 시간에 무관하게 항상 성립한다. 발산이 0인 벡터장은 (단순연결 영역에서) 어떤 벡터장의 회전으로 쓸 수 있으므로 \(\boxed{\vb{B}=\curl\vb{A}}\). 자기정역학과 형태가 완전히 같다 — 여기서 새로운 물리가 들어오지 않는다는 점이 중요하다.</li>
+<li>이제 이것을 Faraday 법칙에 대입한다. \(\curl\vb{E}=-\dfrac{\partial}{\partial t}(\curl\vb{A})\). 매끄러운 장에 대해 공간 미분과 시간 미분은 교환되므로 우변 \(=-\curl\left(\dfrac{\partial\vb{A}}{\partial t}\right)\).</li>
+<li>양변을 모으면 \(\curl\!\left(\vb{E}+\dfrac{\partial\vb{A}}{\partial t}\right)=0\). <b>\(\vb{E}\) 혼자서는 회전이 0이 아니지만, 이 조합은 회전이 0이다.</b> 이것이 핵심이다.</li>
+<li>회전이 0인 장은 스칼라의 그래디언트로 쓸 수 있다. 정전기학과 부호를 맞추기 위해 \(-\nabla V\)로 놓으면
+\[ \vb{E}+\frac{\partial\vb{A}}{\partial t}=-\nabla V \;\Longrightarrow\; \boxed{\vb{E}=-\nabla V-\frac{\partial\vb{A}}{\partial t}} \]</li>
+<li>검산: \(\vb{A}\)가 시간에 무관하면 두 번째 항이 사라져 \(\vb{E}=-\nabla V\)로 환원된다. 즉 새 항 \(-\partial\vb{A}/\partial t\)가 정확히 "유도 전기장(induced field)"을 담당한다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>남은 두 Maxwell 방정식 → 결합된 퍼텐셜 방정식</div>
+<ol>
+<li>동차 방정식 두 개는 이미 자동 만족된다. 남은 것은 원천을 가진 (i) Gauss와 (iv) Ampère–Maxwell뿐이다.</li>
+<li><b>(i)에 대입.</b> \(\divg\vb{E}=\divg\!\left(-\nabla V-\dfrac{\partial\vb{A}}{\partial t}\right)=-\nabla^2V-\dfrac{\partial}{\partial t}(\divg\vb{A})=\dfrac{\rho}{\eps}\). 정리하면
+\[ \nabla^2V+\frac{\partial}{\partial t}(\divg\vb{A})=-\frac{1}{\eps}\rho \]
+이것이 Poisson 방정식의 일반화다. \(\vb{A}\)가 정적이면 정확히 \(\nabla^2V=-\rho/\eps\)로 돌아간다.</li>
+<li><b>(iv)에 대입.</b> \(\curl(\curl\vb{A})=\muz\vb{J}+\muz\eps\dfrac{\partial}{\partial t}\!\left(-\nabla V-\dfrac{\partial\vb{A}}{\partial t}\right)\).</li>
+<li>좌변에 벡터 항등식 \(\curl(\curl\vb{A})=\nabla(\divg\vb{A})-\nabla^2\vb{A}\)를 쓴다. 이 항등식을 쓰는 <i>이유</i>는 \(\nabla^2\vb{A}\)를 끄집어내어 파동 연산자 모양을 만들기 위해서다.</li>
+<li>\(\nabla^2\vb{A}\)와 \(-\muz\eps\,\partial^2\vb{A}/\partial t^2\)를 한 괄호로, \(\divg\vb{A}\)와 \(\muz\eps\,\partial V/\partial t\)를 다른 괄호로 묶으면
+\[ \left(\nabla^2\vb{A}-\muz\eps\frac{\partial^2\vb{A}}{\partial t^2}\right)-\nabla\!\left(\divg\vb{A}+\muz\eps\frac{\partial V}{\partial t}\right)=-\muz\vb{J} \]</li>
+<li><b>결산.</b> 원래 미지수 6개(\(\vb{E},\vb{B}\) 각 3성분) + 방정식 4개 → 미지수 4개(\(V\) 1개, \(\vb{A}\) 3개) + 방정식 2세트. 다만 두 방정식이 \(\divg\vb{A}\)를 통해 <b>서로 얽혀(coupled)</b> 있어 아직 풀 수 있는 형태가 아니다. 이 얽힘을 푸는 열쇠가 게이지 자유도다.</li>
+</ol></div>
+
+<h4>10.1.2 게이지 변환 <span class="en">gauge transformations</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>게이지 변환의 완전한 형태 — 왜 \(V\to V-\partial\lambda/\partial t\)가 강제되는가</div>
+<ol>
+<li><b>질문을 정확히 세우자.</b> 서로 다른 두 쌍 \((V,\vb{A})\)와 \((V',\vb{A}')\)가 <i>동일한</i> \(\vb{E},\vb{B}\)를 준다고 하자. 차이를 \(\vb{A}'=\vb{A}+\boldsymbol{\alpha}\), \(V'=V+\beta\)로 놓고 \(\boldsymbol{\alpha},\beta\)가 얼마나 자유로운지 끝까지 추적한다.</li>
+<li><b>\(\vb{B}\) 조건.</b> \(\curl\vb{A}'=\curl\vb{A}\Rightarrow\curl\boldsymbol{\alpha}=0\). 따라서 어떤 스칼라 \(\lambda(\vb{r},t)\)에 대해 \(\boldsymbol{\alpha}=\nabla\lambda\). 여기까지는 자기정역학과 같다.</li>
+<li><b>\(\vb{E}\) 조건이 결정적이다.</b> \(-\nabla V'-\partial\vb{A}'/\partial t=-\nabla V-\partial\vb{A}/\partial t\)에서
+\[ \nabla\beta+\frac{\partial\boldsymbol{\alpha}}{\partial t}=0 \;\Longrightarrow\; \nabla\beta+\frac{\partial}{\partial t}(\nabla\lambda)=0 \;\Longrightarrow\; \nabla\!\left(\beta+\frac{\partial\lambda}{\partial t}\right)=0 \]
+즉 \(\beta\)는 자유롭지 않다. \(\vb{A}\)를 \(\nabla\lambda\)만큼 바꾸는 순간 \(V\)도 <b>반드시</b> 따라 바뀌어야 \(\vb{E}\)가 보존된다.</li>
+<li>그래디언트가 0인 양은 위치에 무관하지만 시간에는 의존할 수 있다. 그것을 \(k(t)\)라 하면 \(\beta=-\dfrac{\partial\lambda}{\partial t}+k(t)\).</li>
+<li><b>\(k(t)\)를 흡수한다.</b> \(\lambda\to\tilde\lambda\equiv\lambda+\displaystyle\int_0^t k(t')\,\dd t'\)로 재정의하면 \(\nabla\tilde\lambda=\nabla\lambda\)이므로 \(\vb{A}'\)는 그대로이고, \(\partial\tilde\lambda/\partial t=\partial\lambda/\partial t+k(t)\)이므로 \(\beta=-\partial\tilde\lambda/\partial t\)가 된다. 결국 \(k(t)\)는 물리적 자유도가 아니라 \(\lambda\)의 재정의로 없앨 수 있는 겉보기 자유도다.</li>
+<li><b>결론.</b> 임의의 스칼라 함수 \(\lambda(\vb{r},t)\)에 대해
+\[ \boxed{\;\vb{A}'=\vb{A}+\nabla\lambda,\qquad V'=V-\frac{\partial\lambda}{\partial t}\;} \]
+이 <b>동시</b> 변환만이 \(\vb{E},\vb{B}\)를 불변으로 남긴다. 부호와 시간미분은 선택이 아니라 유도의 산물이다.</li>
+<li><b>자유도 세기.</b> 퍼텐셜 4개 − 게이지 함수 1개 = 3. 그런데 \(\vb{E},\vb{B}\)는 6성분이다. 모순이 아닌 이유: \(\vb{E},\vb{B}\)는 동차 Maxwell 방정식 4개의 구속을 이미 받고 있다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>대칭 형태로 정리 — 달랑베르시안과 게이지 함수 \(L\)</div>
+<ol>
+<li>결합 항을 한 덩어리로 정의한다: \(L\equiv\divg\vb{A}+\muz\eps\dfrac{\partial V}{\partial t}\), 그리고 \(\Box^2\equiv\nabla^2-\muz\eps\dfrac{\partial^2}{\partial t^2}\).</li>
+<li>유도 2의 \(\vb{A}\) 방정식은 정의상 즉시 \(\Box^2\vb{A}-\nabla L=-\muz\vb{J}\)가 된다.</li>
+<li>\(V\) 방정식은 손이 조금 간다. \(\nabla^2 V+\dfrac{\partial}{\partial t}(\divg\vb{A})\)에서 \(\divg\vb{A}=L-\muz\eps\dfrac{\partial V}{\partial t}\)를 대입하면
+\[ \nabla^2V+\frac{\partial L}{\partial t}-\muz\eps\frac{\partial^2V}{\partial t^2}=-\frac{\rho}{\eps} \;\Longrightarrow\; \Box^2V+\frac{\partial L}{\partial t}=-\frac{\rho}{\eps} \]</li>
+<li><b>구조가 드러났다.</b>
+\[ \Box^2V+\frac{\partial L}{\partial t}=-\frac{1}{\eps}\rho,\qquad \Box^2\vb{A}-\nabla L=-\muz\vb{J} \]
+\(V\)와 \(\vb{A}\)가 완전히 대칭적이며, 방해되는 것은 오직 \(L\) 하나다. 다음 절의 전략은 자명해진다 — <b>게이지를 골라 \(L\)을 0으로 만든다.</b></li>
+<li>여기서 \(L\)이 게이지 변환 아래 어떻게 변하는지 미리 계산해 두면 좋다: \(L'=L+\nabla^2\lambda-\muz\eps\,\partial^2\lambda/\partial t^2=L+\Box^2\lambda\). U16에서 그대로 쓴다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 퍼텐셜 표현과 결합 방정식</div>
+\[ \vb{B}=\curl\vb{A},\qquad \vb{E}=-\nabla V-\frac{\partial\vb{A}}{\partial t} \]
+\[ \nabla^2V+\frac{\partial}{\partial t}(\divg\vb{A})=-\frac{\rho}{\eps} \]
+\[ \left(\nabla^2\vb{A}-\muz\eps\frac{\partial^2\vb{A}}{\partial t^2}\right)-\nabla\!\left(\divg\vb{A}+\muz\eps\frac{\partial V}{\partial t}\right)=-\muz\vb{J} \]
+<p class="note">이 두 방정식에 Maxwell 방정식 네 개의 정보가 <b>전부</b> 들어 있다. 앞의 두 개(동차)는 표현 자체에 이미 흡수되었다.</p></div>
+
+<div class="formula"><div class="ftitle">암기 — 게이지 변환</div>
+\[ \boxed{\;\vb{A}\to\vb{A}+\nabla\lambda,\qquad V\to V-\frac{\partial\lambda}{\partial t}\;} \]
+<p class="note">\(\lambda\)는 임의의 스칼라 함수. 차원: \([\lambda]=[\vb{A}]\cdot[\text{길이}]=\mathrm{V\!\cdot\!s}\). 그래야 \(\partial\lambda/\partial t\)가 볼트가 되어 \(V\)와 더해진다.</p></div>
+
+<div class="callout"><b class="head">시험에서 가장 자주 나오는 함정.</b> "\(\vb{A}\)에 \(\nabla\lambda\)를 더해도 \(\vb{B}\)는 안 변한다"까지만 외운 학생은 반드시 틀린다. 시간에 의존하는 문제에서는 \(V\)를 <b>동시에</b> 고치지 않으면 \(\vb{E}\)가 바뀌어 버린다. 게이지 변환은 언제나 <b>쌍(pair)</b>이다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u15-1"><div class="qq">(참/거짓 + 증명 또는 반례) "\(\divg\vb{B}=0\)이 성립하는 임의의 영역에서 \(\vb{B}=\curl\vb{A}\)를 만족하는 \(\vb{A}\)가 항상 존재한다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>거짓 — 단, 국소적으로는 참.</b> 영역의 위상(topology)이 문제가 된다.</p>
+<p><b>반례.</b> 원점을 제외한 공간 \(\mathbb{R}^3\setminus\{0\}\)에서 \(\vb{B}=g\,\hat{\vb{r}}/r^2\) (자기 홀극 형태)를 생각하자. \(r\neq0\)에서 \(\divg(\hat{\vb{r}}/r^2)=0\)이므로 조건은 만족한다. 그러나 원점을 감싸는 구면 \(S\)에 대해 \(\oint_S\vb{B}\cdot\dd\vb{a}=4\pi g\neq0\)이다. 만약 \(\vb{B}=\curl\vb{A}\)라면 닫힌 곡면에 대한 회전의 플럭스는 항상 0이어야 하므로(구면을 두 반구로 나누어 Stokes를 적용하면 경계 적분이 서로 상쇄) 모순이다.</p>
+<p><b>정확한 조건.</b> 영역의 2차 de Rham 코호몰로지가 자명해야 한다(직관적으로 "속이 빈 껍질형 구멍"이 없어야 한다). 공 모양, 별 모양(star-shaped) 영역, \(\mathbb{R}^3\) 전체에서는 항상 존재한다. 유도 1의 3단계에서 \(\curl(\vb{E}+\partial\vb{A}/\partial t)=0\Rightarrow\) 그래디언트로 쓰는 단계도 마찬가지로 <b>단순연결(simply connected)</b> 조건이 필요하다. Griffiths는 전 공간을 다루므로 이 조건이 자동으로 만족되어 언급하지 않지만, 도넛 모양 영역을 다루는 문제에서는 반드시 짚어야 한다.</p>
+</div></div>
+
+<div class="qz" data-q="u15-2"><div class="qq">(차원·지수 분석) 게이지 함수 \(\lambda\)의 SI 차원을 구하고, 게이지 변환식의 두 항이 차원적으로 정합함을 보여라. 또 \(\Box^2\lambda\)의 차원이 \(L\)의 차원과 같음을 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>1) \([\lambda]\).</b> \(\vb{A}\)의 차원은 \(\mathrm{T\cdot m}=\mathrm{Wb/m}=\mathrm{V\cdot s/m}\). \(\nabla\lambda\)가 \(\vb{A}\)와 같아야 하므로 \([\lambda]=\mathrm{V\cdot s/m}\times\mathrm{m}=\mathrm{V\cdot s}=\mathrm{Wb}\) (자기선속과 같은 차원!).</p>
+<p><b>2) 정합성.</b> \([\partial\lambda/\partial t]=\mathrm{V\cdot s/s}=\mathrm{V}=[V]\). ✓ 두 식이 동시에 성립한다.</p>
+<p><b>3) \(L\)의 차원.</b> \([\divg\vb{A}]=\mathrm{(V\cdot s/m)/m}=\mathrm{V\cdot s/m^2}\). 한편 \(\muz\eps=1/c^2\)이므로 \([\muz\eps\,\partial V/\partial t]=\mathrm{(s^2/m^2)(V/s)}=\mathrm{V\cdot s/m^2}\). ✓ 같다.</p>
+<p><b>4) \(\Box^2\lambda\).</b> \([\nabla^2\lambda]=\mathrm{V\cdot s/m^2}\), \([\muz\eps\,\partial^2\lambda/\partial t^2]=\mathrm{(s^2/m^2)(V\cdot s/s^2)}=\mathrm{V\cdot s/m^2}\). ✓ \(L\)과 같다. 따라서 U16에서 쓸 \(\Box^2\lambda=-L\)은 차원적으로 무모순이다.</p>
+<p><b>지수로 요약.</b> \(\lambda\sim[\text{길이}]^{+1}\times\vb{A}\), \(L\sim[\text{길이}]^{-1}\times\vb{A}\), \(\Box^2\lambda\sim[\text{길이}]^{-2}\times\lambda=[\text{길이}]^{-1}\times\vb{A}\). 지수가 정확히 맞는다.</p>
+</div></div>
+
+<div class="qz" data-q="u15-3"><div class="qq">(Example 10.1 변형 계산) \(V=0\), \(\vb{A}=\dfrac{\muz k}{4c}(ct-|x|)^2\hat{\vb{z}}\) (\(|x|&lt;ct\)), \(|x|&gt;ct\)에서는 \(\vb{A}=0\). (a) \(\vb{E},\vb{B}\)를 구하라. (b) \(|x|&lt;ct\) 영역의 \(\rho,\vb{J}\)가 0임을 확인하라. (c) \(x=0\)의 표면전류 \(\vb{K}\)를 구하라. (d) 이 퍼텐셜은 어느 게이지에 속하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>(a)</b> \(\vb{E}=-\dfrac{\partial\vb{A}}{\partial t}=-\dfrac{\muz k}{4c}\cdot2(ct-|x|)\cdot c\,\hat{\vb{z}}=-\dfrac{\muz k}{2}(ct-|x|)\hat{\vb{z}}\).</p>
+<p>\(\vb{B}=\curl\vb{A}=-\dfrac{\partial A_z}{\partial x}\hat{\vb{y}}\). \(\dfrac{\partial}{\partial x}(ct-|x|)^2=-2\,\mathrm{sgn}(x)(ct-|x|)\)이므로
+\[ \vb{B}=+\frac{\muz k}{2c}\,\mathrm{sgn}(x)\,(ct-|x|)\hat{\vb{y}} \]
+(\(x&gt;0\)에서 \(+\), \(x&lt;0\)에서 \(-\)). \(|x|&gt;ct\)에서는 둘 다 0 — "소식"이 아직 도달하지 않았다.</p>
+<p><b>(b)</b> \(\vb{E}\)는 \(\hat{\vb{z}}\) 방향이고 \(x\)에만 의존하므로 \(\divg\vb{E}=\partial E_z/\partial z=0\Rightarrow\rho=0\).<br>
+\(\vb{B}=B_y(x)\hat{\vb{y}}\)이므로 \((\curl\vb{B})_z=\partial B_y/\partial x=\dfrac{\muz k}{2c}\mathrm{sgn}(x)\cdot(-\mathrm{sgn}(x))=-\dfrac{\muz k}{2c}\).<br>
+한편 \(\muz\eps\dfrac{\partial\vb{E}}{\partial t}=\dfrac{1}{c^2}\left(-\dfrac{\muz kc}{2}\right)\hat{\vb{z}}=-\dfrac{\muz k}{2c}\hat{\vb{z}}\). 두 값이 정확히 일치하므로 \(\vb{J}=0\). ✓</p>
+<p><b>(c)</b> \(x=0\)에서 \(\vb{B}\)가 불연속이다. \(\vb{B}(0^+)-\vb{B}(0^-)=2\cdot\dfrac{\muz k}{2c}(ct)\hat{\vb{y}}=\muz kt\,\hat{\vb{y}}\). 경계조건 \(\vb{B}_{\text{above}}-\vb{B}_{\text{below}}=\muz(\vb{K}\times\hat{\vb{n}})\), \(\hat{\vb{n}}=\hat{\vb{x}}\):
+\[ kt\,\hat{\vb{y}}=\vb{K}\times\hat{\vb{x}} \]
+\(\hat{\vb{z}}\times\hat{\vb{x}}=\hat{\vb{y}}\)이므로 \(\boxed{\vb{K}=kt\,\hat{\vb{z}}}\). 즉 \(t=0\)에 켜져 선형으로 증가하는 균일 표면전류, 그리고 그 소식은 정확히 \(c\)로 양방향 전파한다.</p>
+<p><b>(d)</b> \(\vb{A}\)가 \(\hat{\vb{z}}\)이고 \(x,t\)에만 의존 ⇒ \(\divg\vb{A}=\partial A_z/\partial z=0\) ⇒ <b>Coulomb 게이지</b>. 동시에 \(V=0\)이므로 \(\muz\eps\partial V/\partial t=0\), 즉 \(L=0\) ⇒ <b>Lorenz 게이지</b>이기도 하다. 두 게이지는 <b>배타적이지 않다.</b></p>
+</div></div>
+
+<div class="qz" data-q="u15-4"><div class="qq">(개념) \(V\)와 \(\vb{A}\)는 "물리적"인가? 게이지 자유도가 있음에도 퍼텐셜 형식을 쓰는 이유를 세 가지로 정리하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>고전 전자기학의 답:</b> \(V\)와 \(\vb{A}\)는 개별적으로 측정 가능한 양이 <b>아니다</b>. 게이지 변환으로 임의로 바꿀 수 있고, 오직 게이지 불변 조합 \(\vb{E},\vb{B}\)만이 힘을 통해 측정된다. 그러나:</p>
+<ol>
+<li><b>미지수 감소.</b> 6 → 4. 게다가 동차 Maxwell 방정식 두 개를 자동으로 만족시키므로 풀어야 할 방정식이 절반이 된다.</li>
+<li><b>게이지 선택의 힘.</b> 남은 자유도 하나를 전략적으로 소비하면(U16) 얽힌 방정식이 <b>비동차 파동방정식</b> 두 개로 완전히 분리된다. 장 \(\vb{E},\vb{B}\)로는 이렇게 깔끔하게 분리되지 않는다.</li>
+<li><b>상대론·양자론에서의 지위.</b> \((V/c,\vb{A})\)는 4-벡터를 이루고 \(\Box^2\)는 로런츠 불변 연산자다. 양자역학에서는 \(\vb{p}\to\vb{p}-q\vb{A}\) (최소 결합)로 <b>퍼텐셜이 직접</b> 등장하며, Aharonov–Bohm 효과는 \(\vb{B}=0\)인 영역에서도 \(\oint\vb{A}\cdot\dd\boldsymbol{\ell}\)(게이지 불변량!)이 관측 가능한 위상을 만든다는 것을 보여준다.</li>
+</ol>
+<p><b>정확한 표현:</b> "\(\vb{A}\)는 물리적이 아니다"가 아니라 "\(\vb{A}\)의 <b>게이지 불변 조합</b>만이 물리적이다"가 맞다. 이 미묘한 차이가 서술형에서 갈린다.</p>
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> 백지에서 \(\divg\vb{B}=0\)과 Faraday만으로 \(\vb{E}=-\nabla V-\partial\vb{A}/\partial t\)를 유도하고, 게이지 변환에서 \(V\)의 \(-\partial\lambda/\partial t\)가 <b>선택이 아니라 강제</b>임을 \(k(t)\) 흡수까지 포함해 설명할 수 있다.</div>

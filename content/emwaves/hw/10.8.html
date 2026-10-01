@@ -1,0 +1,16 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(\vb{B}\)가 상수이므로 \(\partial\vb{A}/\partial t=0\). 대류미분은
+\[ \frac{d\vb{A}}{dt}=\frac{\partial\vb{A}}{\partial t}+(\vb{v}\cdot\nabla)\vb{A}
+=-\tfrac12(\vb{v}\cdot\nabla)(\vb{r}\times\vb{B})=-\tfrac12\big[(\vb{v}\cdot\nabla)\vb{r}\big]\times\vb{B}=\boxed{-\tfrac12(\vb{v}\times\vb{B})} \]
+(\((\vb{v}\cdot\nabla)\vb{r}=\vb{v}\)를 사용.)
+
+Eq. 10.20: \(\dfrac{d}{dt}(\vb{p}+q\vb{A})=-\nabla\big[q(V-\vb{v}\cdot\vb{A})\big]\). 우변의 \(\nabla(\vb{v}\cdot\vb{A})\)를 계산하면, \(\vb{v}\cdot(\vb{r}\times\vb{B})=\vb{r}\cdot(\vb{B}\times\vb{v})\)이므로
+\[ \nabla(\vb{v}\cdot\vb{A})=-\tfrac12\nabla\big[\vb{r}\cdot(\vb{B}\times\vb{v})\big]=-\tfrac12(\vb{B}\times\vb{v})=\tfrac12(\vb{v}\times\vb{B}). \]
+따라서
+\[ \frac{d\vb{p}}{dt}=-q\frac{d\vb{A}}{dt}-q\nabla V+q\nabla(\vb{v}\cdot\vb{A})
+=\tfrac{q}{2}(\vb{v}\times\vb{B})-q\nabla V+\tfrac{q}{2}(\vb{v}\times\vb{B}) \]
+\[ \boxed{\frac{d\vb{p}}{dt}=q\big(\vb{E}+\vb{v}\times\vb{B}\big)}\qquad(\vb{E}=-\nabla V) \]
+정상적인 Lorentz 힘이 복원된다. ∎
+<div class="alabel">감점 포인트</div>
+\(\tfrac12\)이 두 번(대류미분에서 한 번, \(\nabla(\vb{v}\cdot\vb{A})\)에서 한 번) 나와야 합쳐서 1이 되는데, 한쪽을 빠뜨려 계수 \(1/2\)가 남는 실수.</div><!--/sol-->

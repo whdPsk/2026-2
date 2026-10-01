@@ -1,0 +1,22 @@
+<div class="exq"><b>상황.</b> 선밀도 \(\rho\), 질량 \(m\)인 밧줄이 반지름 \(R\), 질량 \(M\)인 속 빈 원통에 정확히 한 바퀴 감겨 있다(\(\rho=m/2\pi R\)). 원통은 축 둘레로 자유롭게 돈다. 밧줄 한 끝은 원통에 고정, 다른 끝은 느슨하며 처음에 두 끝이 모두 꼭대기(\(x=0\))에 있고 계는 불안정 평형에서 살짝 벗어나 정지 출발한다. 회전각 \(\theta\)의 함수로 \(\dot\theta\)를 구한다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>중력이 한 일 = 운동에너지. 일은 "각 조각이 내려온 거리"의 합.</div>
+<ol>
+<li>\(\theta\)만큼 돌면 길이 \(R\theta\)가 풀려 수직으로 늘어진다(원통 옆면 접점에서 아래로).</li>
+<li>늘어진 부분에서 풀린 점으로부터 \(x\) 아래의 조각 \(\dd x\)를 생각한다. 이 조각을 원통에 다시 감으면 원주 위 호 길이 \(x\) 지점, 즉 기준 높이 아래 \(R\sin(x/R)\)에 놓인다. 늘어진 상태에서는 \(x\) 아래. 따라서 이 조각이 감긴 상태에서 늘어진 상태로 가며 내려간 거리는 \(x-R\sin(x/R)\).</li>
+<li>(감긴 부분은 원통과 함께 돌 뿐 전체적으로는 같은 모양이므로 퍼텐셜 변화 없음 — 원통 옆 접점을 기준으로 잡는 이유.)</li>
+<li><b>일</b>:
+\[ W=\int_0^{R\theta}\rho g\left[x-R\sin\frac xR\right]\dd x=\rho g\left[\frac{x^2}{2}+R^2\cos\frac xR\right]_0^{R\theta}=\rho gR^2\left(\frac{\theta^2}{2}+\cos\theta-1\right). \]</li>
+<li><b>운동에너지</b>: 밧줄의 모든 부분(감긴 부분·늘어진 부분)과 원통 테두리가 속력 \(R\dot\theta\):
+\[ T=\tfrac12m(R\dot\theta)^2+\tfrac12MR^2\dot\theta^2=\tfrac12(m+M)R^2\dot\theta^2 . \]</li>
+<li>\(W=T\), \(\rho=m/2\pi R\):
+\[ \frac{mgR}{2\pi}\left(\frac{\theta^2}{2}+\cos\theta-1\right)=\tfrac12(m+M)R^2\dot\theta^2 . \]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \dot\theta^2=\frac{mg\,(\theta^2+2\cos\theta-2)}{2\pi R\,(m+M)}\ } \]
+<p class="note"><b>검산</b> ① 차원: \([mg/(R\cdot\text{mass})]=\mathrm{s^{-2}}\) ✓. ② \(\theta\to0\): \(\theta^2+2\cos\theta-2\approx\theta^4/12\ge0\) ✓ (실수 해, 매우 느린 출발). ③ \(M\to\infty\): \(\dot\theta\to0\) ✓. ④ 적용 범위: \(\theta\le2\pi\) (한 바퀴 다 풀리면 밧줄이 떨어진다).</p></div>
+<div class="qz" data-q="ex9.5-a"><div class="qq"><b>+α</b> 다른 양 묻기: 밧줄이 완전히 풀리는 순간(\(\theta=2\pi\)) 원통 테두리의 속력을 구하고, 같은 밧줄이 원통 없이(\(M=0\)) 풀릴 때와 비교하라. \(\pi^2\approx9.87\).</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(\theta=2\pi\): \(\theta^2+2\cos\theta-2=4\pi^2\). \(v^2=R^2\dot\theta^2=\dfrac{mgR\cdot4\pi^2}{2\pi(m+M)}=\dfrac{2\pi mgR}{m+M}\).</p>
+<p>\(M=0\): \(v^2=2\pi gR\) — 길이 \(2\pi R\)인 밧줄의 CM이 \(\pi R\)만큼 내려온 것과 같은 에너지 (\(\tfrac12mv^2=mg\pi R\)) ✓. (감긴 상태의 밧줄 CM은 원통 중심 높이. 완전히 풀리면 옆면 이탈점(역시 중심 높이)에서 길이 \(2\pi R\)로 늘어지므로 CM은 \(\pi R\) 아래 → 강하량 \(\pi R\) ✓.)</p></div></div>
+<div class="qz" data-q="ex9.5-b"><div class="qq"><b>+α</b> 방법 바꾸기: 같은 결과를 원통 축에 대한 각운동량 방정식 \(\dot L=N\)으로 얻어 보라. 늘어진 밧줄(길이 \(R\theta\))의 중력이 만드는 토크만 남는 이유는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(L=(m+M)R^2\dot\theta\) (늘어진 부분도 속력 \(R\dot\theta\), 모멘트 팔 \(R\)). 토크는 두 부분: ① 늘어진 부분(질량 \(\rho R\theta\), 팔 \(R\)): \(+\rho gR^2\theta\). ② 감긴 부분(호 \(2\pi-\theta\)) = "꽉 찬 한 바퀴(토크 0)" − "막 풀려 나간 호 \(\theta\)". 풀려 나간 호를 이탈점(옆면)에서 각 \(\phi\in[0,\theta]\)로 재면 그 토크는 \(\int_0^\theta\rho gR\cos\phi\cdot R\,\dd\phi=\rho gR^2\sin\theta\), 따라서 감긴 부분의 토크는 \(-\rho gR^2\sin\theta\). 합: \(N=\rho gR^2(\theta-\sin\theta)\).</p>
+<p>그러면 \((m+M)R^2\ddot\theta=\rho gR^2(\theta-\sin\theta)\). 양변에 \(\dot\theta\)를 곱해 적분: \(\tfrac12(m+M)\dot\theta^2=\rho g(\tfrac12\theta^2+\cos\theta-1)\) — 에너지 방법과 같은 결과 ✓. 에너지 방법이 토크의 부호 정리보다 훨씬 덜 헷갈린다는 것이 이 예제의 요점.</p></div></div>

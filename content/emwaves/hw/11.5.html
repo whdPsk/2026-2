@@ -1,0 +1,16 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>정확한 벡터퍼텐셜 (Eq. 11.33), \(u=\omega(t-r/c)\):</p>
+\[ \mathbf A=\frac{\mu_0m_0}{4\pi}\sin\theta\Big[\frac{\cos u}{r^2}-\frac{\omega\sin u}{cr}\Big]\hat{\boldsymbol\varphi}\equiv\frac{\mu_0m_0}{4\pi}\sin\theta\,f(r)\,\hat{\boldsymbol\varphi}. \]
+<p>스칼라 퍼텐셜은 0이므로 \(\mathbf E=-\partial\mathbf A/\partial t\):</p>
+\[ \boxed{\;\mathbf E=\frac{\mu_0m_0\omega}{4\pi}\frac{\sin\theta}{r}\Big[\frac{\sin u}{r}+\frac{\omega}{c}\cos u\Big]\hat{\boldsymbol\varphi}\;} \]
+<p>\(\mathbf B=\nabla\times\mathbf A\)는 \(A_\varphi(r,\theta)\)에 대한 컬 공식으로:</p>
+\[ \mathbf B=\frac{1}{r\sin\theta}\frac{\partial(\sin\theta A_\varphi)}{\partial\theta}\hat{\mathbf r}-\frac1r\frac{\partial(rA_\varphi)}{\partial r}\hat{\boldsymbol\theta} \]
+\[ \boxed{\;\mathbf B=\frac{\mu_0m_0}{4\pi}\Big\{2\cos\theta\Big[\frac{\cos u}{r^3}-\frac{\omega\sin u}{cr^2}\Big]\hat{\mathbf r}
++\sin\theta\Big[\frac{\cos u}{r^3}-\frac{\omega\sin u}{cr^2}-\frac{\omega^2\cos u}{c^2r}\Big]\hat{\boldsymbol\theta}\Big\}\;} \]
+<p>이것은 전기 쌍극자의 정확한 장(Prob. 9.37 / Eq. 10.79)에서 \(\mathbf E\leftrightarrow c\mathbf B\)를 맞바꾼 <b>쌍대(dual) 구조</b>와 완전히 같다.</p>
+<p>Poynting: \(\mathbf S=\frac1{\mu_0}\mathbf E\times\mathbf B\). \(\hat{\boldsymbol\varphi}\times\hat{\boldsymbol\theta}=-\hat{\mathbf r}\)이고, \(1/r^2\) 로 살아남는(=복사) 항은 \(E_\varphi\)의 \(\omega^2/c\) 항과 \(B_\theta\)의 \(\omega^2/c^2\) 항의 곱뿐이다. 나머지 조합은 \(1/r^3\) 이상으로 떨어지거나 시간평균이 0이다.</p>
+\[ \mathbf S_{\rm rad}=\frac{\mu_0}{c}\Big[\frac{m_0\omega^2}{4\pi c}\frac{\sin\theta}{r}\Big]^2\cos^2u\;\hat{\mathbf r}\quad\text{(Eq. 11.38과 동일)} \]
+\[ \boxed{\;\langle\mathbf S\rangle=\frac{\mu_0m_0^2\omega^4}{32\pi^2c^3}\frac{\sin^2\theta}{r^2}\hat{\mathbf r}\;\text{— 근사 3의 결과와 정확히 일치}\;} \]
+<div class="alabel">감점 포인트</div>
+<p>\(1/r^3\times1/r\) 같은 교차항을 "복사"에 포함시키는 것. \(r\to\infty\)에서 \(r^2 S\)가 유한한 항만 복사다.</p></div><!--/sol-->

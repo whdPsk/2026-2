@@ -1,0 +1,10 @@
+<div class="exq"><span class="examtag">PPT 슬라이드 17 · 9/17 수업</span><br>\(\Delta\omega_{\rm FWHM}=\Gamma\)에서 출발해 파장 폭 \(\Delta\lambda_{\rm FWHM}\)을 구하고 수치를 계산하라. 9/17 녹음의 "10의 −4승"과 대조하라. [[L06.s17]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>λ = 2πc/ω 미분</div><ol>
+<li>\(|d\lambda/d\omega|=2\pi c/\omega^2\) → \(\Delta\lambda=2\pi c\,\Delta\omega/\omega_0^2\). [[S0917.35]]</li>
+<li>\(\Delta\omega=\Gamma=1/\tau_{\rm life}=\omega_0^2\tau\) → \(\Delta\lambda=2\pi c\tau\). [[S0917.34]]</li>
+<li>\(\tau=2r_e/3c\) → \(\Delta\lambda=\tfrac{4\pi}{3}r_e=1.18\times10^{-12}\) cm \(=1.18\times10^{-4}\)Å (python).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>Δλ_nat = 1.18×10⁻⁴ Å, 모든 선에서 동일(고전). 녹음 "15-4승"은 10⁻⁴ Å의 STT 오인식 — 예전에 배운 natural broadening 값이 이렇게 유도된다. [[S0917.35]]</p></div>
+<div class="apply"><b>비교</b>T = 10⁴ K 수소 Hα 도플러 폭 ≈ 0.28 Å — 자연 선폭의 약 2400배. 자연 선폭은 선의 날개에서만 드러난다.</div>
+<div class="qz" data-q="ex4.18-a"><div class="qq"><b>+α</b> Hα(6563 Å)의 고전 자연 선폭을 주파수(Hz)로 쓰면?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>Δν = cΔλ/λ² = 3×10¹⁰ × 1.18×10⁻¹² / (6.563×10⁻⁵)² ≈ 8.2×10⁶ Hz (= Γ/2π).</p></div></div>
+<div class="qz" data-q="ex4.18-b"><div class="qq"><b>+α</b> 같은 Δλ인데 Lyα의 Δν는 Hα의 몇 배?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>Δν ∝ 1/λ² → (6563/1216)² ≈ 29배.</p></div></div>

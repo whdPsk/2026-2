@@ -1,0 +1,13 @@
+<div class="exq"><b>상황.</b> 정육면체(모서리 원점)의 텐서를, 좌표를 돌려 \(x_1\)축을 대각선에 맞춤으로써 대각화한다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>두 회전의 곱 → 닮음 변환.</div>
+<ol>
+<li>① \(x_3\) 둘레 45°: \(\lambda_1=\begin{pmatrix}\frac1{\sqrt2}&\frac1{\sqrt2}&0\-\frac1{\sqrt2}&\frac1{\sqrt2}&0\0&0&1\end{pmatrix}\) — 새 \(x_1\)이 \((1,1,0)/\sqrt2\).</li>
+<li>② 새 \(x_2\) 둘레로 \(x_1\)을 \(x_3\) 쪽으로 \(\cos^{-1}\sqrt{2/3}\approx35.3°\) 기울임 → \(x_1\)이 \((1,1,1)/\sqrt3\).</li>
+<li>\(\lambda=\lambda_2\lambda_1=\begin{pmatrix}\frac1{\sqrt3}&\frac1{\sqrt3}&\frac1{\sqrt3}\-\frac1{\sqrt2}&\frac1{\sqrt2}&0\-\frac1{\sqrt6}&-\frac1{\sqrt6}&\frac2{\sqrt6}\end{pmatrix}\).</li>
+<li>\(\lambda I\lambda^{\mathsf T}\)을 계산(\(I\lambda^{\mathsf T}\)의 각 열 = \(I\)×고유벡터이므로 빠르다): 첫 행 \((1,1,1)/\sqrt3\)은 고유값 \(\tfrac16\), 나머지 두 행은 \((1,1,1)\)에 수직이라 고유값 \(\tfrac{11}{12}\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \lambda I\lambda^{\mathsf T}=Mb^2\,\mathrm{diag}\left(\tfrac16,\tfrac{11}{12},\tfrac{11}{12}\right)\ } \]
+<p class="note">Example 11.5(영년방정식)와 같은 결과. <b>교훈</b>: \(\lambda\)의 행이 고유벡터이면 닮음 변환이 대각화한다 — 두 방법은 같은 것.</p></div>
+<div class="qz" data-q="ex11.8-a"><div class="qq"><b>+α</b> \(\lambda\)가 직교 행렬(행들이 정규직교)이고 \(\det\lambda=+1\)임을 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>각 행 크기 1, 서로 내적 0 (예: 행1·행3 \(=\frac{-1-1+2}{\sqrt{18}}=0\)). 행렬식: 행3 = 행1 × 행2? \((\frac1{\sqrt3},\frac1{\sqrt3},\frac1{\sqrt3})\times(-\frac1{\sqrt2},\frac1{\sqrt2},0)=\frac1{\sqrt6}(-1,-1,2)\) = 행3 ✓ → 오른손계, \(\det=+1\).</p></div></div>
+<div class="qz" data-q="ex11.8-b"><div class="qq"><b>+α</b> 행렬식과 대각합이 회전에 불변임을 이용해 이 계산을 검산하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>대각합: 원래 \(3\cdot\tfrac23=2\), 대각화 후 \(\tfrac16+\tfrac{11}{6}=2\) ✓. 행렬식: 원래 \(a^3+2c^3-3ac^2\) with \(a=\tfrac23,c=-\tfrac14\): \(\tfrac8{27}-\tfrac1{32}-\tfrac18=0.2963-0.03125-0.125=0.1400\); 대각화 후 \(\tfrac16\cdot\left(\tfrac{11}{12}\right)^2=0.1400\) ✓.</p></div></div>

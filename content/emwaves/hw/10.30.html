@@ -1,0 +1,21 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(t&lt;0\)이므로 \(d\equiv-vt&gt;0\)로 두면 \(q_1\)은 \((d,0,0)\)에서 \(\vb{v}_1=-v\hat{\vb{x}}\), \(q_2\)는 \((0,d,0)\)에서 \(\vb{v}_2=-v\hat{\vb{y}}\).
+분리벡터 \(\vb{R}_{1\to2}=(-d,d,0)\), \(R=\sqrt2\,d\), \(\hat{\vb{R}}=(-\hat{\vb{x}}+\hat{\vb{y}})/\sqrt2\).
+\(\hat{\vb{R}}\)와 \(\vb{v}_1\) 사이 각은 \(45°\) → \(\sin^2\theta=1/2\).
+
+공통 상수:
+\[ K\equiv\frac{q_1q_2}{4\pi\eps}\frac{(1-\beta^2)}{2d^2\,(1-\beta^2/2)^{3/2}},\qquad \beta=v/c . \]
+<b>전기력</b> (Eq. 10.75):
+\[ q_2\vb{E}_1=\frac{K}{\sqrt2}(-\hat{\vb{x}}+\hat{\vb{y}}),\qquad q_1\vb{E}_2=\frac{K}{\sqrt2}(\hat{\vb{x}}-\hat{\vb{y}})=-q_2\vb{E}_1 \]
+전기 부분은 3법칙을 만족한다.
+<b>자기력</b>: \(\vb{B}_1=\frac{1}{c^2}\vb{v}_1\times\vb{E}_1\)이므로
+\[ q_2(\vb{v}_2\times\vb{B}_1)=\frac{\beta^2K}{\sqrt2}\hat{\vb{x}},\qquad q_1(\vb{v}_1\times\vb{B}_2)=\frac{\beta^2K}{\sqrt2}\hat{\vb{y}}\quad(\text{대칭 } x\leftrightarrow y). \]
+합치면
+\[ \boxed{\vb{F}_2=\frac{K}{\sqrt2}\big[(\beta^2-1)\hat{\vb{x}}+\hat{\vb{y}}\big],\qquad
+\vb{F}_1=\frac{K}{\sqrt2}\big[\hat{\vb{x}}+(\beta^2-1)\hat{\vb{y}}\big]} \]
+\[ \vb{F}_1+\vb{F}_2=\frac{\beta^2K}{\sqrt2}(\hat{\vb{x}}+\hat{\vb{y}})\ne 0 \]
+\[ \boxed{\text{Newton 제3법칙 위배 — 자기력 부분이 서로 수직이라 상쇄되지 않는다}} \]
+차이는 전자기장이 가져가는 운동량으로 보상된다(Ch. 8의 field momentum).
+<div class="alabel">감점 포인트</div>
+자기력만 보고 "전기력도 안 맞다"고 하거나, \(\hat{\vb{R}}\)와 \(\vb{v}\)의 각을 \(90°\)로 잘못 잡는 것.</div><!--/sol-->

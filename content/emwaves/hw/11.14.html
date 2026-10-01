@@ -1,0 +1,12 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>반지름 \(r\)의 원궤도: \(\dfrac{1}{4\pi\epsilon_0}\dfrac{e^2}{r^2}=\dfrac{mv^2}{r}\Rightarrow v=\sqrt{\dfrac{e^2}{4\pi\epsilon_0 mr}}\).</p>
+<p>\(r_0=5\times10^{-11}\)m에서 \(v=2.2\times10^6\,\mathrm{m/s}\), \(\beta=v/c=0.0075\ll1\) ✓. \(v\propto r^{-1/2}\)이므로 \(\beta\sim1\)이 되려면 \(r\sim r_0\beta_0^2\approx3\times10^{-15}\)m — 핵 크기다. 즉 <b>여정의 거의 전부</b>에서 Larmor 공식이 유효하다.</p>
+<p>총 에너지 \(E=-\dfrac{e^2}{8\pi\epsilon_0 r}\), 가속도 \(a=\dfrac{e^2}{4\pi\epsilon_0 mr^2}\). 에너지 손실률을 Larmor와 같다고 놓으면</p>
+\[ \frac{dE}{dt}=\frac{e^2}{8\pi\epsilon_0r^2}\frac{dr}{dt}=-\frac{\mu_0e^2a^2}{6\pi c}
+\;\Longrightarrow\; r^2\frac{dr}{dt}=-\frac{\mu_0}{3\pi c}\frac{e^4}{(4\pi\epsilon_0)m^2}\equiv-\kappa . \]
+<p>수치: \(\kappa=3.15\times10^{-21}\ \mathrm{m^3/s}\). 적분하면</p>
+\[ t=\frac{r_0^3}{3\kappa}=\frac{(5\times10^{-11})^3}{3(3.15\times10^{-21})}=\boxed{\;\approx1.3\times10^{-11}\ \mathrm{s}\;} \]
+<p>고전 원자는 100억분의 1초 만에 붕괴한다 — 양자역학이 필요한 결정적 증거.</p>
+<div class="alabel">감점 포인트</div>
+<p>\(E=-e^2/8\pi\epsilon_0 r\)에서 인수 \(\tfrac12\)(비리얼 정리)를 놓치고 \(E=-e^2/4\pi\epsilon_0 r\)로 쓰면 수명이 2배로 틀린다.</p></div><!--/sol-->

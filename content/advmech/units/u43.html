@@ -1,0 +1,63 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 정지한 공에 일정한 힘을 계속 주면 Newton 역학에서는 속도가 한없이 커져 결국 \(c\)를 넘는다. 상대론에서는 \(c\)를 넘을 수 없으니 \(F=\dd\vb p/\dd t\)를 버려야 할까, 아니면 \(\vb p=m\vb u\)를 고쳐야 할까? 그리고 고친 운동량으로 계산한 운동에너지는 \(\tfrac12mu^2\)가 될까?</div>
+
+<h4>14.7 상대론적 운동량 <span class="en">relativistic momentum</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>\(m\vb u\)로는 운동량이 보존되지 않는다 — 교재 식 (14.35)–(14.40)</div>
+<ol>
+<li>\(K\)의 A와 \(K'\)(속도 \(v\))의 B가 같은 공을 각자 \(x_2\) 방향으로 속력 \(u_0\)로 던져 완전 탄성 충돌(A는 위로, B는 아래로).</li>
+<li>\(K\)에서 A 공: \(\Delta p_{A2}=-2mu_0\).</li>
+<li>B 공의 \(K\)에서의 속도: \(u_{B1}=v\), \(u_{B2}=-u_0\sqrt{1-v^2/c^2}\) (횡방향 속도 변환). → \(\Delta p_{B2}=+2mu_0\sqrt{1-v^2/c^2}\).</li>
+<li>합이 0이 아니다 → \(m\vb u\)로는 보존 법칙이 깨진다. 보존 법칙을 지키려면 운동량의 정의를 바꿔야 한다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>\(\vb p=\gamma m\vb u\) — 고유 시간으로 미분 <b>(필수)</b></div>
+<ol>
+<li>관측자마다 \(\dd x/\dd t\)는 다르지만 \(\dd x/\dd\tau\)(물체 자신의 시계)는 분모가 불변량이다.</li>
+<li>\(\dd t/\dd\tau=\gamma_u=1/\sqrt{1-u^2/c^2}\) (여기 \(\gamma\)는 <b>입자의 속력 \(u\)</b>, 계 사이 속도 \(v\)가 아님!):
+\[ \vb p=m\od{\vb x}\tau=\frac{m\vb u}{\sqrt{1-u^2/c^2}}=\gamma m\vb u . \]</li>
+<li>Example 14.6: 이 정의로는 유도 1의 충돌에서 \(x_2\) 운동량이 정확히 보존된다.</li>
+<li>"상대론적 질량 \(\gamma m_0\)" 표기는 구식. 질량 \(m\)은 불변량이고 \(\gamma\)는 운동량에 붙는다. 고전식에 \(\gamma m\)을 끼워 넣으면(예: \(\tfrac12\gamma mu^2\)) 틀린다.</li>
+</ol></div>
+
+<h4>14.8 에너지 <span class="en">energy</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>운동에너지 \(T=(\gamma-1)mc^2\) — 교재 식 (14.53)–(14.58) <b>(필수)</b></div>
+<ol>
+<li>\(\vb F=\dd\vb p/\dd t\)는 유지. 정지 상태에서 힘 방향으로 가속: \(T=W=\int F\,\dd x=\int\od{(\gamma mu)}t\,u\,\dd t=\int_0^u u\,\dd(\gamma mu)\).</li>
+<li>부분적분: \(T=\gamma mu^2-m\int_0^u\frac{u\,\dd u}{\sqrt{1-u^2/c^2}}=\gamma mu^2+mc^2\sqrt{1-u^2/c^2}-mc^2\).</li>
+<li>\(\gamma mu^2+mc^2/\gamma=\gamma mc^2(\beta^2+1-\beta^2)=\gamma mc^2\):
+\[ \boxed{\ T=\gamma mc^2-mc^2\ } \]</li>
+<li>저속 전개(Example 14.7): \(\gamma\approx1+\tfrac12\beta^2+\tfrac38\beta^4\) → \(T\approx\tfrac12mu^2+\tfrac38mu^4/c^2\). 첫 항 = 고전.</li>
+<li>정의: 정지 에너지 \(E_0=mc^2\), 전체 에너지 \(E=\gamma mc^2=T+E_0\). 질량–에너지 등가; 보존되는 것은 질량과 에너지 따로가 아니라 <b>총 에너지</b>.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>\(E^2=p^2c^2+m^2c^4\) — 교재 식 (14.65)–(14.67) <b>(필수)</b></div>
+<ol>
+<li>\(p^2c^2=\gamma^2m^2u^2c^2=\gamma^2m^2c^4\beta^2\).</li>
+<li>\(\gamma^2\beta^2=\gamma^2-1\) → \(p^2c^2=\gamma^2m^2c^4-m^2c^4=E^2-E_0^2\):
+\[ \boxed{\ E^2=p^2c^2+m^2c^4\ } \]</li>
+<li>유용한 부산물: \(\beta=\dfrac{pc}{E}\), \(\gamma=\dfrac{E}{mc^2}\). 광자(\(m=0\)): \(E=pc\), 항상 \(u=c\) — 정지한 광자는 없다.</li>
+<li>"상대론 삼각형": 빗변 \(E\), 두 변 \(pc\)와 \(mc^2\). \(\sin\phi=\beta\)로 두면 \(pc=E\sin\phi\), \(mc^2=E\cos\phi\).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 5</span>힘과 가속도는 평행하지 않다 (+α)</div>
+<ol>
+<li>\(\vb F=\od{}{t}(\gamma m\vb u)=\gamma m\dot{\vb u}+m\dot\gamma\vb u\), \(\dot\gamma=\gamma^3\vb u\cdot\dot{\vb u}/c^2\).</li>
+<li>\(\vb u\)에 평행: \(F_\parallel=\gamma^3ma_\parallel\) ("종질량"). 수직: \(F_\perp=\gamma ma_\perp\) ("횡질량"). 구식 "질량 증가" 개념이 혼란스러운 이유 — 방향마다 다르다.</li>
+<li>일률: \(\vb F\cdot\vb u=\dd E/\dd t\) (\(E=\gamma mc^2\)). 일정한 힘을 계속 주면 \(p\)는 한없이 커지지만 \(u=pc^2/E\to c\).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 운동량과 에너지</div>
+\[ \vb p=\gamma m\vb u,\quad E=\gamma mc^2,\quad T=(\gamma-1)mc^2,\quad E^2=p^2c^2+m^2c^4 \]
+\[ \beta=\frac{pc}E,\quad \gamma=\frac E{mc^2},\quad 1\,{\rm u}\cdot c^2=931.5\,{\rm MeV},\quad m_ec^2=0.511\,{\rm MeV},\quad m_pc^2=938.3\,{\rm MeV} \]
+<p class="note">결합 에너지 = (구성 입자 질량 합 − 결합 상태 질량)\(\times c^2\). 원자 질량을 쓰면 전자 질량이 상쇄된다(Example 14.8).</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u43-1"><div class="qq">(시험형) 일–에너지 정리와 \(F=\dd p/\dd t\), \(p=\gamma mu\)로부터 \(T=(\gamma-1)mc^2\)를 유도하고, 저속 극한을 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 3. \(T=\int_0^u u\,\dd(\gamma mu)\) → 부분적분 → \(\gamma mu^2+mc^2/\gamma-mc^2=\gamma mc^2-mc^2\). 저속: \(\gamma\approx1+\beta^2/2\) → \(T\approx\tfrac12mu^2\).</p></div></div>
+
+<div class="qz" data-q="u43-2"><div class="qq">운동에너지가 정지 에너지와 같은 전자의 \(\gamma\), \(\beta\), \(pc\)는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(T=mc^2\) → \(\gamma=2\), \(\beta=\sqrt{1-1/4}=\sqrt3/2\approx0.866\). \(pc=\sqrt{E^2-m^2c^4}=\sqrt{4-1}\,mc^2=\sqrt3\times0.511\approx0.885\,\)MeV.</p></div></div>
+
+<div class="qz" data-q="u43-3"><div class="qq">\(\tfrac12\gamma mu^2\)도 \(\tfrac12mu^2\)도 상대론적 운동에너지가 아니다. \(\beta=0.9\)에서 세 값을 \(mc^2\) 단위로 비교하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\gamma=2.294\). 정답 \(T=(\gamma-1)=1.294\). \(\tfrac12\beta^2=0.405\), \(\tfrac12\gamma\beta^2=0.929\). 둘 다 크게 작다.</p></div></div>
+
+<div class="qz" data-q="u43-4"><div class="qq">\(^4\)He 원자 질량 4.002603 u, \(^1\)H 1.007825 u, 중성자 1.008665 u. \(^4\)He의 결합 에너지는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(2(1.007825)+2(1.008665)=4.032980\,\)u. 차 \(0.030377\,\)u \(\times931.5=28.3\,\)MeV (핵자당 약 7.1 MeV).</p></div></div>

@@ -1,0 +1,49 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> loaded string의 운동방정식 \(m\ddot q_j=\frac\tau d(q_{j-1}-2q_j+q_{j+1})\)에서 오른쪽 괄호는 \(d\to0\)에서 무엇의 이산 근사일까? 그리고 줄의 한가운데를 진동수 \(\omega\)로 흔들면 어떤 모드들이 크게 반응할까 — 가운데가 마디인 모드는?</div>
+
+<h4>13.4 파동방정식 <span class="en">the wave equation</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>loaded string의 극한에서 <b>(필수)</b></div>
+<ol>
+<li>\(\frac md\ddot q_j=\tau\left[\frac{q_{j-1}-q_j}{d}-\frac{q_j-q_{j+1}}d\right]\frac1d\).</li>
+<li>\(\frac{q_{j+1}-q_j}d\to\pd qx\big|_{x+d/2}\), \(\frac{q_j-q_{j-1}}d\to\pd qx\big|_{x-d/2}\). 그 차를 \(d\)로 나누면 \(x\)에서의 2계 미분 \(\frac{\partial^2q}{\partial x^2}\).</li>
+<li>\(m/d\to\rho\):
+\[ \boxed{\ \frac{\partial^2q}{\partial x^2}=\frac\rho\tau\frac{\partial^2q}{\partial t^2}\ } \]
+1차원 파동방정식, \(v=\sqrt{\tau/\rho}\).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>줄 조각에 대한 힘으로 — 교재 식 (13.34)–(13.36)</div>
+<ol>
+<li>길이 \(\dd s\approx\dd x\)인 조각, 질량 \(\rho\,\dd x\). 양 끝 장력 크기 \(\tau\), 방향만 다르다(각 \(\theta_1,\theta_2\)). 수평 성분은 거의 상쇄(\(\cos\theta\approx1\)) → 가로 운동만.</li>
+<li>가로 힘: \(\tau\sin\theta_2-\tau\sin\theta_1\approx\tau(\tan\theta_2-\tan\theta_1)=\tau\left(\pd qx\big|_{x+\dd x}-\pd qx\big|_x\right)=\tau\frac{\partial^2q}{\partial x^2}\dd x\).</li>
+<li>\(\rho\,\dd x\,\ddot q=\tau q''\dd x\) → 같은 파동방정식. (정규 좌표 방법이 주는 정보(모드·진동수)는 주지 않지만 가장 빠른 유도.)</li>
+</ol></div>
+
+<h4>13.5 강제·감쇠 운동 <span class="en">forced and damped motion</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>정규 좌표로 분해된 구동 방정식 — 교재 식 (13.39)–(13.45)</div>
+<ol>
+<li>단위 길이당 외력 \(F(x,t)\), 속도에 비례하는 감쇠 \(D\):
+\[ \rho\ddot q+D\dot q-\tau q''=F(x,t) . \]</li>
+<li>\(q=\sum\eta_r\sin\frac{r\pi x}b\) (\(b\): 줄 길이)를 넣고 \(\sin\frac{s\pi x}b\)를 곱해 적분:
+\[ \ddot\eta_s+\frac D\rho\dot\eta_s+\omega_s^2\eta_s=\frac{2}{\rho b}f_s(t),\qquad f_s(t)=\int_0^bF(x,t)\sin\frac{s\pi x}b\dd x . \]
+<b>각 모드는 독립적인 감쇠 구동 진동자</b>(3장), 구동력은 외력의 \(s\)번째 Fourier 성분.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>가운데를 흔드는 줄 — Example 13.2</div>
+<ol>
+<li>\(x=b/2\)에 집중된 힘 \(F_0\cos\omega t\) (δ함수): \(f_s=F_0\cos\omega t\sin\frac{s\pi}2\) — <b>짝수 모드는 구동되지 않는다</b>(예측의 답).</li>
+<li>정상 상태(3장 식 3.60):
+\[ \eta_s=\frac{2F_0\sin(s\pi/2)}{\rho b}\,\frac{\cos(\omega t-\delta_s)}{\sqrt{(\omega_s^2-\omega^2)^2+(D\omega/\rho)^2}},\quad \tan\delta_s=\frac{D\omega/\rho}{\omega_s^2-\omega^2} . \]</li>
+<li>구동 진동수가 어떤 홀수 모드의 \(\omega_s\)에 가까우면 그 모드가 공명으로 지배. 감쇠 무시 시 공명 조건 \(\omega^2=\omega_r^2=\frac{r^2\pi^2\tau}{\rho b^2}\), \(r\) 홀수.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 파동방정식과 구동된 줄</div>
+\[ q''=\frac1{v^2}\ddot q,\ \ v=\sqrt{\tau/\rho};\qquad \ddot\eta_s+\frac D\rho\dot\eta_s+\omega_s^2\eta_s=\frac2{\rho b}\int_0^bF\sin\frac{s\pi x}b\dd x \]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u35-1"><div class="qq">줄 조각에 대한 Newton 법칙으로 파동방정식을 유도하라. 작은 진폭 근사를 어디서 쓰는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 2. ① 장력 크기 일정(늘어남 무시) ② \(\sin\theta\approx\tan\theta=\partial q/\partial x\) ③ 수평 운동 무시(\(\cos\theta\approx1\)) ④ \(\dd s\approx\dd x\).</p></div></div>
+
+<div class="qz" data-q="u35-2"><div class="qq">길이 65 cm, 선밀도 1.0 g/m, 기본 진동수 440 Hz인 줄의 장력은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(f_1=\frac{v}{2L}\) → \(v=2(0.65)(440)=572\) m/s. \(\tau=\rho v^2=10^{-3}\times572^2\approx327\) N.</p></div></div>
+
+<div class="qz" data-q="u35-3"><div class="qq">Example 13.2에서 구동점을 \(x=b/4\)로 옮기면 구동되지 않는 모드는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(f_s\propto\sin\frac{s\pi}4\) = 0 ⟺ \(s=4,8,12,\ldots\) — 그 모드들은 \(b/4\)에 마디.</p></div></div>

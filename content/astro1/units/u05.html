@@ -1,0 +1,52 @@
+<div class="predict"><b>◈ 학습 목표.</b> (1) 진짜 흡수(absorption)와 산란(scattering)이 복사장·물질에 하는 일을 구분한다. (2) 등방·탄성 산란이 있을 때 원천함수 \(S_\nu=\epsilon_\nu B_\nu+(1-\epsilon_\nu)J_\nu\)를 유도하고, "두꺼우면 흑체"가 왜 성립하지 않을 수 있는지 말한다. (3) 평균자유행로·무작위 보행으로 광자 확산 시간을 차수 추정한다. (4) 산란도 운동량을 전달한다 — 전자 산란 opacity와 복사력(에딩턴 한계)을 연결한다.</div>
+
+<div class="callout"><b class="head">이 단원의 위치.</b> 9/3 수업·Lecture02 PPT는 <b>흡수와 방출만</b> 있는 복사전달을 다뤘고, 산란은 아직 수업에서 직접 다루지 않았다(교재 1.4 예습 단원). 아래는 9/3에 배운 평균자유행로·opacity·복사력 개념을 산란으로 확장한 정리이며, 수업 원자료 칩은 그 연결 지점에만 붙였다. 교재 문장 인용은 하지 않는다. [[F05.04, L02.s7d]]</div>
+
+<h4>1. 흡수와 산란은 무엇이 다른가 <span class="en">Absorption vs. scattering</span></h4>
+
+<p>9/3에서 흡수는 "\(\kappa_\nu ds\) = ds를 지나는 동안 흡수될 확률"이었고, 흡수된 광자의 에너지는 <b>물질에 넘어간다</b>(가열·들뜸). [[F04.08]] 반면 탄성 산란(예: 자유전자에 의한 Thomson 산란)은 광자를 없애지 않고 <b>방향만 바꾼다</b> — 에너지는 그대로 복사장에 남는다.</p>
+<p>그런데 한 줄기 빔(한 방향 \(\hat{\mathbf k}\))만 보고 있으면 두 과정은 똑같이 보인다: 둘 다 그 방향의 광자를 빼 간다. 그래서 빔에서 빠져나가는 정도를 나타내는 <b>소광계수</b>는 \(\kappa_\nu=\kappa_{a,\nu}+\kappa_{s,\nu}\)이고, 평균자유행로도 이 합으로 정해진다: \(\ell_\nu=1/(\kappa_{a,\nu}+\kappa_{s,\nu})\). [[F05.04]]</p>
+<div class="intuit"><b>비유 — 안개와 먹물</b> 먹물(흡수)은 빛을 삼켜 버려 어둡게 한다. 안개(산란)는 빛을 삼키지 않지만 사방으로 흩뜨려 <b>뒤쪽 풍경(배경)은 안 보이게</b> 하면서도 전체는 뿌옇게 밝다. 둘 다 "τ가 크다"지만 보이는 모습이 전혀 다르다.</div>
+<div class="trap"><b>함정 — 산란을 흡수처럼만 처리하면</b> 빔에서 빠져나간 것만 세면 산란은 흡수와 같아 보이지만, <span class="hl">다른 방향에서 산란되어 이 방향으로 들어오는 광자</span>도 있다. 이 "들어오는 항"을 빼면 에너지 보존이 깨진다.</div>
+
+<h4>2. 산란이 있는 복사전달식 <span class="en">Transfer with isotropic coherent scattering</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>원천함수 = 열적 방출과 산란의 가중평균</div><ol>
+<li>9/3의 식 \(dI_\nu/ds=j_\nu-\kappa_\nu I_\nu\)에서 출발. 빼 가는 항은 흡수+산란: \(-(\kappa_{a,\nu}+\kappa_{s,\nu})I_\nu\). [[F05.09]]</li>
+<li>더해 주는 항(방출계수)도 두 가지. ① 열적 방출: LTE에서 키르히호프 \(j^{\rm th}_\nu=\kappa_{a,\nu}B_\nu(T)\). ② 산란으로 들어오는 것: 등방·탄성 산란이면 모든 방향에서 들어와 산란된 에너지가 고르게 다시 퍼지므로 \(j^{\rm sc}_\nu=\kappa_{s,\nu}\dfrac{1}{4\pi}\displaystyle\int I_\nu d\Omega=\kappa_{s,\nu}J_\nu\).</li>
+<li>합치면 \[{dI_\nu\over ds}=-(\kappa_{a,\nu}+\kappa_{s,\nu})(I_\nu-S_\nu),\qquad S_\nu={\kappa_{a,\nu}B_\nu+\kappa_{s,\nu}J_\nu\over\kappa_{a,\nu}+\kappa_{s,\nu}} .\]</li>
+<li>\(\epsilon_\nu\equiv\kappa_{a,\nu}/(\kappa_{a,\nu}+\kappa_{s,\nu})\)(한 번 상호작용할 때 진짜 흡수일 확률)로 쓰면 \[S_\nu=\epsilon_\nu B_\nu+(1-\epsilon_\nu)J_\nu .\]</li>
+<li>\(d\tau_\nu=-(\kappa_a+\kappa_s)ds\)로 바꾸면 9/3과 같은 모양 \(dI_\nu/d\tau_\nu=I_\nu-S_\nu\) — 형식해도 그대로 쓸 수 있다. 단, <b>S가 J를 통해 I 자신에 의존</b>하므로 적분방정식이 된다(쉽게 풀리지 않는 이유). [[F05.12]]</li>
+</ol></div>
+<div class="explain"><b>부가설명 — 두 극한</b> 진짜 흡수가 우세(\(\epsilon\to1\)): \(S\to B_\nu(T)\), 9/3의 "두꺼우면 흑체" 그림 그대로. 산란이 우세(\(\epsilon\to0\)): \(S\to J_\nu\) — 원천함수가 그 자리의 <b>온도가 아니라 주변 복사장</b>으로 정해진다. 그래서 산란 광학깊이가 크다는 것만으로 복사가 물질과 열평형이라고 말할 수 없다.</div>
+
+<h4>3. 무작위 보행과 확산 시간 <span class="en">Random walk &amp; diffusion</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>몇 번 산란해야 빠져나오나</div><ol>
+<li>한 걸음 길이 = 평균자유행로 \(\ell=1/\kappa\) (τ=1이 되는 거리, 9/3 플립 05). [[F05.03, F05.04]]</li>
+<li>방향이 매번 무작위면 N걸음 후 변위의 제곱평균은 \(\langle d^2\rangle=N\ell^2\) (교차항은 평균 0) → \(d\sim\sqrt N\,\ell\).</li>
+<li>크기 L(\(\tau=L/\ell\gg1\))을 빠져나오려면 \(\sqrt N\ell=L\) → \(N\sim\tau^2\).</li>
+<li>이동 시간 \(t_{\rm diff}\sim N\ell/c=\tau^2\ell/c=\tau\,L/c\) — 직선으로 가는 \(L/c\)의 τ배. (τ≪1이면 N≈τ, 대부분 산란 없이 통과.)</li>
+</ol></div>
+<div class="apply"><b>수치 감각 — 태양 (차수 추정)</b> 전자 산란만 고려, 평균밀도 1.41 g cm⁻³, \(\kappa'_{es}=0.2(1+X)=0.34\) cm² g⁻¹(X=0.7): \(\ell=1/(\kappa'\rho)\approx2\) cm, \(\tau\approx R_\odot/\ell\approx3\times10^{10}\), \(N\sim10^{21}\), \(t\sim R_\odot^2/(\ell c)\approx2\times10^3\) 년 (직선이면 2.3초). 실제 내부는 밀도·opacity가 더 커서 이보다 길다 — 차수 감각용. (python 재계산) 예제 1.9.</div>
+<div class="explain"><b>부가설명 — 열화 깊이</b> 한 번 상호작용에서 진짜 흡수일 확률이 ε이면, 광자가 흡수되기까지 평균 \(1/\epsilon\)번 산란 → 그 사이 무작위 보행 변위 \(\sim\ell/\sqrt\epsilon\). 이 깊이(유효 광학깊이 \(\tau_*\sim\sqrt{\tau_a(\tau_a+\tau_s)}\approx1\))보다 깊은 곳의 광자는 물질과 에너지를 주고받아 \(S\to B\)로 열화된다. \(\tau_*\ll1\)인 순수 산란층은 두꺼워도 흑체가 아니다.</div>
+
+<h4>4. 산란도 운동량을 준다 <span class="en">Scattering &amp; radiation force</span></h4>
+
+<div class="explain"><b>부가설명</b> 9/3: 흡수된 flux \(\kappa_\nu\mathbf F_\nu\)를 c로 나누면 단위 부피당 복사력, 밀도로 나누면 질량당 \(\mathbf f=\frac1c\int\kappa'_\nu\mathbf F_\nu d\nu\). [[L02.s7c, L02.s7d]] 등방(또는 앞뒤 대칭) 산란에서는 들어온 광자의 운동량을 받고, 다시 나가는 광자는 평균 운동량이 0이므로 <span class="hl">산란도 흡수와 똑같이 \(\kappa_s F/c\)만큼 밀어낸다</span>. 그래서 복사력 식의 κ에는 산란 opacity도 들어간다. 완전히 이온화된 수소에서 Thomson 단면적 \(\sigma_T=6.65\times10^{-25}\) cm² → \(\kappa'_{es}=\sigma_T/m_p=0.40\) cm² g⁻¹(진동수 무관). 이 값을 \(L_{\rm Edd}=4\pi GMc/\kappa'\)에 쓰는 것이 표준 에딩턴 한계(예제 1.4).</div>
+
+<div class="formula"><div class="ftitle">암기 — 산란이 있는 복사전달</div><p><b>열적 방출과 산란의 혼합</b></p>\[ S_\nu=\epsilon_\nu B_\nu+(1-\epsilon_\nu)J_\nu,\quad \epsilon_\nu={\kappa_{a,\nu}\over\kappa_{a,\nu}+\kappa_{s,\nu}},\quad \ell_\nu={1\over\kappa_{a,\nu}+\kappa_{s,\nu}} \]<p class="note">κa는 진정한 흡수, κs는 산란 소광계수. <i>조건: 등방·탄성 산란, 열적 흡수/방출의 LTE</i></p><p><b>확산과 열화의 척도</b></p>\[ N\sim\tau^2,\quad t_{\rm diff}\sim\tau L/c,\quad\tau_{*}\sim\sqrt{\tau_a(\tau_a+\tau_s)} \]<p class="note">ετ²가 1을 넘을 때(τ*≳1) 흡수로 열화될 가능성이 커진다. <i>조건: τ≫1, 균일 매질의 차수 추정; 기하에 따른 계수 생략</i></p><p><b>전자 산란 opacity</b></p>\[ \kappa'_{es}=\sigma_T/m_p\approx0.40\ {\rm cm^2\,g^{-1}}\ (\text{순수 수소}),\qquad 0.2(1+X) \]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u05-1"><div class="qq">광학적으로 두꺼운 순수 산란층은 흑체인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 광자 수·주파수 분포를 열적 분포로 바꾸는 진정한 흡수/방출이 없다면 S≈J이고 일반적으로 B와 다르다. 유효 광학깊이 τ*≈√(τa(τa+τs))가 1보다 커야 열화된다.</p></div></div>
+
+
+<div class="qz" data-q="u05-2"><div class="qq">산란을 흡수로만 처리하면 무엇을 놓치는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>다른 방향으로 재분배된 광자가 다시 시선으로 들어오는 항(κs J)과 전체 에너지 보존을 놓친다.</p></div></div>
+
+<div class="qz" data-q="u05-3"><div class="qq">τ=100인 층을 광자가 빠져나오는 데 대략 몇 번 산란하고, 시간은 직선 통과의 몇 배인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>N∼τ²=10⁴번, t∼τL/c → 직선 L/c의 약 100배.</p></div></div>
+
+<div class="qz" data-q="u05-4"><div class="qq">탄성 산란은 광자 에너지를 물질에 주지 않는데 왜 복사력(에딩턴 한계)에는 들어가는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>들어온 광자의 운동량은 받고, 등방으로 다시 나가는 광자의 평균 운동량은 0이라 순 운동량 κsF/c가 전달되기 때문. 완전 이온화 수소에서 κ′es=σT/mp≈0.40 cm² g⁻¹.</p></div></div>
+
+
+<p class="note">출처: 교재 1.4 대응(예습 정리 — 교재 문장 미인용) · 9/3 연결: 플립 04·05(흡수 확률·평균자유행로·형식해) · Lecture02 슬라이드 7(복사력·opacity) · 상태: 수업 미진행 — 산란은 강의에서 다룰 때 갱신</p>

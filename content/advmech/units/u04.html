@@ -1,0 +1,81 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 운동량에서는 내력의 합이 0이어서 내력이 "보이지 않았다". 그렇다면 내력이 한 <b>일</b>의 합도 0일까? 두 입자가 용수철로 연결되어 서로 가까워졌다 멀어졌다 하는 상황을 떠올리고 판단해 보라. 또 계의 운동에너지를 \(\tfrac12MV^2\)와 "나머지"로 나눌 수 있다면, 그 나머지는 무엇일까?</div>
+
+<h4>9.5 계의 에너지 <span class="en">energy of the system</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>일-에너지 정리의 계 버전</div>
+<ol>
+<li>배치 1(모든 \(\vb r_\alpha\)가 정해진 상태)에서 배치 2로 옮길 때 계에 한 총일:
+\[ W_{12}=\sum_\alpha\int_1^2\vb F_\alpha\cdot\dd\vb r_\alpha . \]</li>
+<li>각 입자에 대해 U1의 한 입자 계산을 반복하면
+\[ W_{12}=\sum_\alpha\int_1^2 m_\alpha\dot{\vb v}_\alpha\cdot\vb v_\alpha\,\dd t=\sum_\alpha\int_1^2\dd\!\left(\tfrac12m_\alpha v_\alpha^2\right)=T_2-T_1,\qquad T=\sum_\alpha\tfrac12m_\alpha v_\alpha^2. \]
+여기까지는 입자 하나하나의 정리를 더한 것에 불과하다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>\(T=\tfrac12MV^2+\sum\tfrac12m_\alpha v'^2_\alpha\) (요약 7번) <b>(필수)</b></div>
+<ol>
+<li>\(\vb v_\alpha=\vb v'_\alpha+\vb V\) (\(\vb V=\dot{\vb R}\))를 제곱:
+\[ v_\alpha^2=v'^2_\alpha+V^2+2\,\vb v'_\alpha\cdot\vb V . \]</li>
+<li>질량을 곱해 합한다:
+\[ T=\sum_\alpha\tfrac12m_\alpha v'^2_\alpha+\tfrac12\Big(\sum_\alpha m_\alpha\Big)V^2+\vb V\cdot\od{}{t}\Big(\sum_\alpha m_\alpha\vb r'_\alpha\Big). \]</li>
+<li>마지막 항은 U3의 항등식 \(\sum m_\alpha\vb r'_\alpha=0\)으로 사라진다:
+\[ \boxed{\ T=\tfrac12MV^2+\sum_\alpha\tfrac12m_\alpha v'^2_\alpha\ } \]
+<b>교차항이 사라지는 것은 CM을 기준으로 골랐기 때문</b>이다. 임의의 점 \(Q\) 기준으로 나누면 교차항 \(M\vb V_Q\cdot(\dot{\vb R}-\vb V_Q)\) 류가 남는다. (Ch.11의 강체 운동에너지 \(T=T_{\rm trans}+T_{\rm rot}\)의 뿌리.)</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>내력의 일 → 내부 퍼텐셜, 그리고 \(E\) 보존 (요약 8번) <b>(필수)</b></div>
+<ol>
+<li>일을 외력 부분과 내력 부분으로 나눈다:
+\[ W_{12}=\sum_\alpha\int_1^2\vb F^{(\rm ext)}_\alpha\cdot\dd\vb r_\alpha+\sum_\alpha\sum_{\beta\ne\alpha}\int_1^2\vb f_{\alpha\beta}\cdot\dd\vb r_\alpha . \]</li>
+<li>보존력 가정: \(\vb F^{(\rm ext)}_\alpha=-\nabla_\alpha U_\alpha\), \(\vb f_{\alpha\beta}=-\nabla_\alpha u_{\alpha\beta}\). 첫 항은 바로
+\[ \sum_\alpha\int_1^2\vb F^{(\rm ext)}_\alpha\cdot\dd\vb r_\alpha=-\sum_\alpha U_\alpha\Big|_1^2 . \]</li>
+<li><b>내력 항 — 여기가 운동량과 다른 점.</b> 짝지으면
+\[ \sum_{\alpha&lt;\beta}\int(\vb f_{\alpha\beta}\cdot\dd\vb r_\alpha+\vb f_{\beta\alpha}\cdot\dd\vb r_\beta)=\sum_{\alpha&lt;\beta}\int\vb f_{\alpha\beta}\cdot(\dd\vb r_\alpha-\dd\vb r_\beta)=\sum_{\alpha&lt;\beta}\int\vb f_{\alpha\beta}\cdot\dd\vb r_{\alpha\beta}. \]
+\(\dd\vb r_\alpha\ne\dd\vb r_\beta\)이므로 <b>0이 되지 않는다</b>. (교재 각주: 운동량의 \(\sum\sum\vb f_{\alpha\beta}\)는 반대칭이라 사라지지만, 이 합은 반대칭이 아니다.)</li>
+<li>\(u_{\alpha\beta}\)는 두 입자의 좌표 6개의 함수이므로 전미분은
+\[ \dd u_{\alpha\beta}=(\nabla_\alpha u_{\alpha\beta})\cdot\dd\vb r_\alpha+(\nabla_\beta u_{\alpha\beta})\cdot\dd\vb r_\beta . \]
+\(\nabla_\alpha u_{\alpha\beta}=-\vb f_{\alpha\beta}\), 그리고 \(u_{\alpha\beta}=u_{\beta\alpha}\)이므로 \(\nabla_\beta u_{\alpha\beta}=\nabla_\beta u_{\beta\alpha}=-\vb f_{\beta\alpha}=+\vb f_{\alpha\beta}\). 따라서
+\[ \dd u_{\alpha\beta}=-\vb f_{\alpha\beta}\cdot(\dd\vb r_\alpha-\dd\vb r_\beta)=-\vb f_{\alpha\beta}\cdot\dd\vb r_{\alpha\beta}. \]</li>
+<li>내력 항 \(=-\sum_{\alpha&lt;\beta}u_{\alpha\beta}\big|_1^2\). 합치면
+\[ W_{12}=-U\Big|_1^2,\qquad U\equiv\sum_\alpha U_\alpha+\sum_{\alpha&lt;\beta}u_{\alpha\beta}. \]</li>
+<li>\(W_{12}=T_2-T_1\)과 같다고 놓으면
+\[ \boxed{\ T_1+U_1=T_2+U_2\ } \]
+<b>합의 범위 주의</b>: 내부 퍼텐셜은 \(\alpha&lt;\beta\)로 각 쌍을 <em>한 번만</em> 센다. \(\sum_{\alpha\ne\beta}\)로 쓰면 \(\tfrac12\)을 붙여야 한다.</li>
+</ol></div>
+
+<div class="callout"><b class="head">Note 4 (강의) — 강체의 내부 퍼텐셜.</b> 강체는 모든 \(r_{\alpha\beta}\)가 고정이므로 \(\sum_{\alpha&lt;\beta}u_{\alpha\beta}(r_{\alpha\beta})\)는 상수다. 에너지는 차이만 의미가 있으므로 이 상수는 버려도 된다 — 강체 문제에서 "중력 퍼텐셜 + 운동에너지"만 쓰는 근거. 반대로 폭발(Example 9.4)은 내부 퍼텐셜(화학에너지)이 운동에너지로 바뀌는 과정이고, 이때는 내부 에너지 변화가 문제에 \(E\)로 주어진다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>Example 9.5의 핵심 — 감긴 밧줄에 중력이 한 일</div>
+<ol>
+<li>질량 \(m\), 선밀도 \(\rho=m/2\pi R\)인 밧줄이 반지름 \(R\)인 속 빈 원통(질량 \(M\))에 한 바퀴 감겨 있다. 원통이 \(\theta\)만큼 돌면 길이 \(R\theta\)가 풀려 늘어진다.</li>
+<li>풀린 부분의 조각 \(\dd x\)(풀린 점에서 \(x\)만큼 아래)를 "다시 감아 올린다"고 상상한다. 감겨 있을 때 그 조각은 기준점 아래 \(R\sin(x/R)\)에 있었다. 따라서 풀리면서 내려간 거리는 \(x-R\sin(x/R)\).</li>
+<li>중력이 한 일:
+\[ W=\int_0^{R\theta}\rho g\left[x-R\sin\frac xR\right]\dd x=\rho gR^2\left(\frac{\theta^2}{2}+\cos\theta-1\right). \]</li>
+<li>운동에너지(밧줄 전체와 원통 테두리가 모두 속력 \(R\dot\theta\)): \(T=\tfrac12(m+M)R^2\dot\theta^2\). \(W=T\)에서
+\[ \dot\theta^2=\frac{mg(\theta^2+2\cos\theta-2)}{2\pi R(m+M)}. \]
+<b>검산</b>: 작은 \(\theta\)에서 \(\theta^2+2\cos\theta-2\approx\theta^4/12\) — 처음엔 거의 늘어진 부분이 없어 매우 천천히 시작 ✓. 한 바퀴(\(\theta=2\pi\))면 \(4\pi^2\)로 커진다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 계의 에너지 (요약 7–8)</div>
+\[ T=\tfrac12MV^2+\sum_\alpha\tfrac12m_\alpha v'^2_\alpha,\qquad U=\sum_\alpha U_\alpha+\sum_{\alpha&lt;\beta}u_{\alpha\beta},\qquad T+U=\text{const} \]
+\[ \dd u_{\alpha\beta}=-\vb f_{\alpha\beta}\cdot\dd\vb r_{\alpha\beta},\qquad \vb r_{\alpha\beta}=\vb r_\alpha-\vb r_\beta \]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u04-1"><div class="qq">두 입자가 용수철(상수 \(k\), 자연길이 \(\ell_0\))로 연결되어 매끄러운 수평면에서 움직인다. 외력이 없다. (a) 계의 운동량 (b) 운동에너지 (c) 역학적 에너지 중 보존되는 것은? 내력이 한 총일을 입자 간 거리 \(r\)로 표현하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>(a) 보존 (약한 형태). (b) <b>보존 안 됨</b> — 용수철이 늘어나면 운동에너지가 퍼텐셜로 간다. (c) 보존: \(T+\tfrac12k(r-\ell_0)^2\).</p>
+<p>내력의 총일 \(=\int\vb f_{12}\cdot\dd\vb r_{12}=-\Delta u_{12}=-\tfrac12k[(r_2-\ell_0)^2-(r_1-\ell_0)^2]\). 두 입자가 같이 평행이동만 하면(\(\dd\vb r_{12}=0\)) 0이지만 상대 거리가 바뀌면 0이 아니다 — 예측의 답.</p>
+<p>또한 \(\tfrac12MV^2\)은 따로 보존된다(\(V\) 일정). 따라서 \(\sum\tfrac12m v'^2+\tfrac12k(r-\ell_0)^2\)도 보존 — 상대운동만의 에너지 보존.</p></div></div>
+
+<div class="qz" data-q="u04-2"><div class="qq">Example 9.4: 질량 \(M\), 속도 \(v\)인 포탄이 \(m_1=M/2\)(앞으로), \(m_2=M/6\)(뒤로), \(m_3=M/3\)(정지)로 쪼개진다. 방출된 에너지 \(E=5\times\)(폭발 순간 포탄의 운동에너지)일 때 속도를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(v_1=k_1v\), \(v_2=-k_2v\) (\(k_{1,2}&gt;0\)). 운동량: \(Mv=\tfrac M2k_1v-\tfrac M6k_2v\Rightarrow k_2=3k_1-6\).</p>
+<p>에너지: \(E+\tfrac12Mv^2=6\cdot\tfrac12Mv^2=\tfrac12\tfrac M2k_1^2v^2+\tfrac12\tfrac M6k_2^2v^2\). 정리하면 \(6=\tfrac{k_1^2}{2}+\tfrac{(3k_1-6)^2}{6}\Rightarrow k_1^2-3k_1=0\).</p>
+<p>\(k_1=0\)이면 \(k_2=-6&lt;0\) 모순. \(k_1=3\)이면 \(k_2=3\). 따라서 \(\boxed{v_1=3v,\ v_2=-3v,\ v_3=0}\).</p>
+<p><b>검산</b>: 운동량 \(\tfrac M2(3v)-\tfrac M6(3v)=Mv\) ✓. 에너지 \(\tfrac12\tfrac M2 9v^2+\tfrac12\tfrac M6 9v^2=3Mv^2=6\cdot\tfrac12Mv^2\) ✓.</p></div></div>
+
+<div class="qz" data-q="u04-3"><div class="qq">\(T=\tfrac12MV^2+\sum\tfrac12m v'^2\)는 CM을 기준으로 했기 때문에 교차항이 없다. 기준을 CM이 아닌 임의 점 \(Q\)(속도 \(\vb V_Q\))로 잡으면 \(T\)는 어떻게 쓰이는가? 교차항이 사라지는 조건은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+\[ T=\tfrac12MV_Q^2+\sum\tfrac12m_\alpha|\vb v_\alpha-\vb V_Q|^2+\vb V_Q\cdot\sum m_\alpha(\vb v_\alpha-\vb V_Q)=\ldots+M\vb V_Q\cdot(\vb V-\vb V_Q). \]
+<p>교차항 \(M\vb V_Q\cdot(\vb V-\vb V_Q)\)이 사라지려면 \(Q\)가 CM이거나(\(\vb V_Q=\vb V\)), \(Q\)가 정지해 있거나(\(\vb V_Q=0\)), 둘이 수직이어야 한다. 강체에서 "고정점 기준 순수 회전"으로 \(T=\tfrac12I_Q\omega^2\)을 쓰는 것이 \(\vb V_Q=0\)인 경우다.</p></div></div>
+
+<div class="qz" data-q="u04-4"><div class="qq">내부 퍼텐셜을 \(\sum_{\alpha\neq\beta}u_{\alpha\beta}\)로 쓰면 무엇이 잘못되는가? 세 입자가 서로 중력으로 묶인 계의 퍼텐셜을 올바르게 써라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(\sum_{\alpha\ne\beta}\)는 각 쌍을 \((\alpha,\beta)\)와 \((\beta,\alpha)\)로 <b>두 번</b> 센다 → 퍼텐셜이 2배. 올바른 형태는 \(\sum_{\alpha&lt;\beta}=\tfrac12\sum_{\alpha\ne\beta}\).</p>
+\[ U=-G\left(\frac{m_1m_2}{r_{12}}+\frac{m_1m_3}{r_{13}}+\frac{m_2m_3}{r_{23}}\right). \]</div></div>

@@ -1,0 +1,136 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> U15에서 \(L\equiv\divg\vb{A}+\muz\eps\,\partial V/\partial t\)를 없애면 방정식이 분리된다는 것을 보았다. 그런데 자기정역학에서는 \(\divg\vb{A}=0\)이 표준이었다. 전기역학에서 \(\divg\vb{A}=0\)을 고집하면 \(V\) 방정식은 어떤 모양이 될까? 그 해는 지연(retardation)을 담고 있을까, 아닐까? 만약 담고 있지 않다면 상대성이론과 충돌하는 것 아닌가 — 이 충돌이 진짜인지 겉보기인지 미리 판단해 보라.</div>
+
+<h4>10.1.3 Coulomb 게이지 <span class="en">the Coulomb gauge</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>Coulomb 게이지의 \(V\)는 즉각적이다 — 그리고 인과율 역설의 해소</div>
+<ol>
+<li><b>선택.</b> \(\divg\vb{A}=0\).</li>
+<li>U15 유도 2의 \(V\) 방정식 \(\nabla^2V+\dfrac{\partial}{\partial t}(\divg\vb{A})=-\rho/\eps\)에서 둘째 항이 사라져 <b>정확히 Poisson 방정식</b>이 된다:
+\[ \nabla^2V=-\frac{1}{\eps}\rho \]</li>
+<li>무한대에서 \(V=0\)이면 해는 우리가 이미 아는 그 형태다:
+\[ \boxed{\,V(\vb{r},t)=\frac{1}{4\pi\eps}\int\frac{\rho(\vb{r}',t)}{\rr}\,\dd\tau'\,} \]
+<b>주목:</b> 적분 안의 시간이 \(t\)다. \(t_r\)이 아니다. 지금 이 순간의 전하 분포가 지금 이 순간의 \(V\)를 결정한다.</li>
+<li><b>역설.</b> 내가 서울 실험실에서 전자 하나를 옮기면 달 위의 \(V\)가 즉시 변한다. 상대성이론은 어떤 신호도 \(c\)보다 빠를 수 없다고 하는데?</li>
+<li><b>1차 해소 (Griffiths의 답).</b> \(V\) 자체는 측정 가능한 양이 아니다. 달 위의 관측자가 측정할 수 있는 것은 \(\vb{E}=-\nabla V-\partial\vb{A}/\partial t\)뿐이고, 여기엔 \(\vb{A}\)가 함께 들어온다. Coulomb 게이지에서는 <b>\(\vb{A}\) 안에 상쇄용 비인과항이 숨어 있어</b>, 두 항의 비인과 부분이 정확히 상쇄되고 \(\vb{E}\)는 정상적으로 \(\rr/c\)만큼 늦게 변한다.</li>
+<li><b>2차 해소 (정량적 증명 — 여기까지 쓰면 만점).</b> Coulomb 게이지에서 \(\vb{A}\) 방정식은
+\[ \nabla^2\vb{A}-\muz\eps\frac{\partial^2\vb{A}}{\partial t^2}=-\muz\vb{J}+\muz\eps\nabla\!\left(\frac{\partial V}{\partial t}\right) \]
+전류를 Helmholtz 분해한다: \(\vb{J}=\vb{J}_\parallel+\vb{J}_\perp\), \(\curl\vb{J}_\parallel=0\), \(\divg\vb{J}_\perp=0\).</li>
+<li>2단계에서 \(\rho=-\eps\nabla^2V\)이므로 연속 방정식 \(\divg\vb{J}=-\partial\rho/\partial t\)는
+\[ \divg\vb{J}_\parallel=\eps\nabla^2\!\left(\frac{\partial V}{\partial t}\right)=\divg\!\left[\eps\nabla\!\left(\frac{\partial V}{\partial t}\right)\right] \]
+좌우 두 벡터장은 모두 회전이 0이고 발산이 같으며 무한대에서 0이다 ⇒ <b>동일하다</b>: \(\eps\nabla(\partial V/\partial t)=\vb{J}_\parallel\).</li>
+<li>대입하면 우변 \(=-\muz\vb{J}+\muz\vb{J}_\parallel=-\muz\vb{J}_\perp\). 즉
+\[ \boxed{\;\Box^2\vb{A}=-\muz\vb{J}_\perp\;}\]
+Coulomb 게이지가 <b>transverse gauge</b>라고도 불리는 이유다. \(\vb{A}\)는 오직 횡전류에만 반응하며, \(V\)의 즉각성은 \(\vb{J}_\parallel\)의 형태로 \(\vb{A}\) 방정식에 되돌아와 물리적 장에서는 완전히 지워진다.</li>
+<li><b>장부 정리.</b> 장점 — \(V\)가 Poisson 방정식이라 계산이 쉽다(플라스마·양자광학에서 애용). 단점 — \(\vb{A}\)가 비국소적 원천 \(\vb{J}_\perp\)에 의해 구동되어 오히려 훨씬 어렵다.</li>
+</ol></div>
+
+<h4>10.1.3 Lorenz 게이지 <span class="en">the Lorenz gauge</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>Lorenz 게이지 — 완전히 분리된 파동방정식</div>
+<ol>
+<li><b>선택.</b> \(\divg\vb{A}=-\muz\eps\dfrac{\partial V}{\partial t}\), 즉 U15에서 정의한 \(L=0\). 이 선택의 <i>동기</i>는 명확하다: \(\vb{A}\) 방정식의 중간 괄호를 통째로 지우는 것.</li>
+<li>\(\vb{A}\) 방정식에서 \(\nabla(\cdot)\) 항이 사라져
+\[ \nabla^2\vb{A}-\muz\eps\frac{\partial^2\vb{A}}{\partial t^2}=-\muz\vb{J} \]</li>
+<li>\(V\) 방정식: \(\nabla^2V+\dfrac{\partial}{\partial t}(\divg\vb{A})=\nabla^2V-\muz\eps\dfrac{\partial^2V}{\partial t^2}=-\dfrac{\rho}{\eps}\).</li>
+<li>달랑베르시안 \(\Box^2\equiv\nabla^2-\muz\eps\dfrac{\partial^2}{\partial t^2}=\nabla^2-\dfrac{1}{c^2}\dfrac{\partial^2}{\partial t^2}\)을 도입하면
+\[ \boxed{\;\Box^2V=-\frac{1}{\eps}\rho,\qquad \Box^2\vb{A}=-\muz\vb{J}\;} \]</li>
+<li><b>구조적 의미.</b> 네 개의 동일한 방정식. \(V\)와 \(\vb{A}\)를 완전히 대등하게 취급하며, \(\Box^2\)는 Laplacian의 4차원 일반화다. 즉 이 식들은 "4차원 Poisson 방정식"이고, 상대론적 표기 \(\partial_\mu A^\mu=0\), \(\Box A^\mu=\muz J^\mu\)로 바로 넘어간다.</li>
+<li><b>전략적 결론.</b> 이제 전기역학 전체가 <b>"주어진 원천에 대해 비동차 파동방정식을 푸는 문제"</b> 하나로 환원되었다. §10.2는 그 해(지연 퍼텐셜)를 구하는 일이다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>Lorenz 게이지는 <b>항상</b> 도달 가능하다 (\(\Box^2\lambda=-L\))</div>
+<ol>
+<li>임의의 출발 퍼텐셜 \((V,\vb{A})\)가 있고 \(L=\divg\vb{A}+\muz\eps\,\partial V/\partial t\neq0\)이라 하자.</li>
+<li>게이지 변환 \(\vb{A}'=\vb{A}+\nabla\lambda\), \(V'=V-\partial\lambda/\partial t\)를 가하고 새 \(L'\)을 계산한다:
+\[ L'=\divg\vb{A}+\nabla^2\lambda+\muz\eps\frac{\partial V}{\partial t}-\muz\eps\frac{\partial^2\lambda}{\partial t^2}=L+\Box^2\lambda \]</li>
+<li>따라서 \(L'=0\)이 되려면 \(\boxed{\Box^2\lambda=-L}\). 이것은 원천이 \(L\)인 <b>비동차 파동방정식</b>이며, 국소화된 \(L\)에 대해 항상 해(지연 해)가 존재한다. ⇒ Lorenz 게이지는 항상 도달 가능하다.</li>
+<li><b>같은 논리로 Coulomb 게이지.</b> \(\divg\vb{A}'=\divg\vb{A}+\nabla^2\lambda=0\Rightarrow\nabla^2\lambda=-\divg\vb{A}\). Poisson 방정식이므로 역시 항상 해가 있다.</li>
+<li><b>잔여 자유도.</b> Lorenz 게이지에 들어온 뒤에도 \(\Box^2\lambda=0\)을 만족하는 \(\lambda\)(자유 파동 해)를 더할 수 있다. 게이지는 완전히 고정되지 않았다.</li>
+<li><b>\(V=0\)은 가능한가?</b> \(V'=V-\partial\lambda/\partial t=0\Rightarrow\lambda(\vb{r},t)=\int_0^t V(\vb{r},t')\,\dd t'\). 항상 구성 가능하다 ⇒ <b>가능</b>(temporal/Weyl 게이지). 단, 이때 일반적으로 Lorenz 조건은 깨진다.</li>
+<li><b>\(\vb{A}=0\)은 가능한가?</b> <b>불가능.</b> \(\vb{A}=0\)이면 \(\vb{B}=\curl\vb{A}=0\)이 되어 자기장이 있는 모든 상황을 표현할 수 없다. \(\vb{A}\)를 지우는 것은 게이지 변환이 아니라 물리를 지우는 것이다. (형식적으로도 \(\nabla\lambda=-\vb{A}\)는 \(\curl\vb{A}=0\)일 때만 풀린다.)</li>
+</ol></div>
+
+<h4>10.1.4 퍼텐셜 형태의 로런츠 힘 <span class="en">Lorentz force law in potential form</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>정준 운동량 \(\vb{p}_{\rm can}=\vb{p}+q\vb{A}\)의 유도</div>
+<ol>
+<li>출발: \(\dfrac{\dd\vb{p}}{\dd t}=q(\vb{E}+\vb{v}\times\vb{B})=q\left[-\nabla V-\dfrac{\partial\vb{A}}{\partial t}+\vb{v}\times(\curl\vb{A})\right]\).</li>
+<li><b>핵심 도구: 곱 규칙 4.</b> \(\nabla(\vb{v}\cdot\vb{A})=\vb{v}\times(\curl\vb{A})+(\vb{v}\cdot\nabla)\vb{A}+\vb{A}\times(\curl\vb{v})+(\vb{A}\cdot\nabla)\vb{v}\).<br>
+<b>왜 단순해지나:</b> \(\vb{v}\)는 <b>입자의</b> 속도로 시간의 함수일 뿐 <b>위치의 함수가 아니다</b>. 따라서 \(\curl\vb{v}=0\), \((\vb{A}\cdot\nabla)\vb{v}=0\). 남는 것은
+\[ \vb{v}\times(\curl\vb{A})=\nabla(\vb{v}\cdot\vb{A})-(\vb{v}\cdot\nabla)\vb{A} \]</li>
+<li>대입: \(\dfrac{\dd\vb{p}}{\dd t}=-q\left[\dfrac{\partial\vb{A}}{\partial t}+(\vb{v}\cdot\nabla)\vb{A}+\nabla(V-\vb{v}\cdot\vb{A})\right]\).</li>
+<li><b>대류 미분(convective derivative) 인식.</b> 입자가 시간 \(t\)에 \(\vb{r}\), \(t+\dd t\)에 \(\vb{r}+\vb{v}\,\dd t\)에 있으므로
+\[ \dd\vb{A}=\left(\frac{\partial\vb{A}}{\partial x}\right)v_x\dd t+\left(\frac{\partial\vb{A}}{\partial y}\right)v_y\dd t+\left(\frac{\partial\vb{A}}{\partial z}\right)v_z\dd t+\frac{\partial\vb{A}}{\partial t}\dd t \]
+\[ \Longrightarrow\quad \frac{\dd\vb{A}}{\dd t}=\frac{\partial\vb{A}}{\partial t}+(\vb{v}\cdot\nabla)\vb{A} \]
+물리적 의미: 입자가 "느끼는" \(\vb{A}\)의 변화는 두 원인 — (i) 장 자체가 시간에 따라 변해서, (ii) 입자가 \(\vb{A}\)가 다른 새 위치로 이동해서.</li>
+<li>따라서
+\[ \boxed{\;\frac{\dd}{\dd t}(\vb{p}+q\vb{A})=-\nabla\big[q(V-\vb{v}\cdot\vb{A})\big]\;} \]</li>
+<li><b>해석.</b> 이것은 역학의 \(\dd\vb{p}/\dd t=-\nabla U\)와 형태가 같다. 대응은
+\[ \vb{p}_{\rm can}=\vb{p}+q\vb{A},\qquad U_{\rm vel}=q(V-\vb{v}\cdot\vb{A}) \]
+\(\vb{p}_{\rm can}\)이 정준 운동량, \(U_{\rm vel}\)이 속도에 의존하는 "퍼텐셜 역할"의 양이다.</li>
+<li><b>에너지 짝.</b> 위 식에 \(\vb{v}\)를 내적하는 방식으로 평행하게 계산하면
+\[ \frac{\dd}{\dd t}(T+qV)=\frac{\partial}{\partial t}\big[q(V-\vb{v}\cdot\vb{A})\big],\qquad T=\tfrac12 mv^2 \]
+(우변의 미분은 \(V,\vb{A}\)에만 작용하고 \(\vb{v}\)에는 작용하지 않는다.) 운동량 식과 에너지 식의 <b>우변에 똑같은 \(U_{\rm vel}\)이 나타난다</b>는 것이 이 절의 백미다.</li>
+<li><b>결론적 관점.</b> \(V\)가 "단위 전하당 퍼텐셜 에너지"라면, \(\vb{A}\)는 "단위 전하당 퍼텐셜 <b>운동량</b>"으로 읽을 수 있다. 양자역학의 최소 결합 \(\vb{p}\to\vb{p}-q\vb{A}\)가 여기서 이미 예고된다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 두 게이지와 그 방정식</div>
+\[ \textbf{Coulomb: }\divg\vb{A}=0 \;\Rightarrow\; \nabla^2V=-\frac{\rho}{\eps},\quad \Box^2\vb{A}=-\muz\vb{J}_\perp \]
+\[ \textbf{Lorenz: }\divg\vb{A}=-\muz\eps\frac{\partial V}{\partial t} \;\Rightarrow\; \Box^2V=-\frac{\rho}{\eps},\quad \Box^2\vb{A}=-\muz\vb{J} \]
+\[ \Box^2\equiv\nabla^2-\muz\eps\frac{\partial^2}{\partial t^2}=\nabla^2-\frac{1}{c^2}\frac{\partial^2}{\partial t^2} \]
+<p class="note">도달 가능성: Coulomb은 \(\nabla^2\lambda=-\divg\vb{A}\), Lorenz는 \(\Box^2\lambda=-L\)을 풀면 된다. 둘 다 항상 해가 있다.</p></div>
+
+<div class="formula"><div class="ftitle">암기 — 정준 운동량과 속도 의존 퍼텐셜</div>
+\[ \frac{\dd}{\dd t}(\underbrace{\vb{p}+q\vb{A}}_{\vb{p}_{\rm can}})=-\nabla\big[\underbrace{q(V-\vb{v}\cdot\vb{A})}_{U_{\rm vel}}\big],\qquad \frac{\dd}{\dd t}(T+qV)=\frac{\partial U_{\rm vel}}{\partial t} \]
+<p class="note">\(\dfrac{\dd\vb{A}}{\dd t}=\dfrac{\partial\vb{A}}{\partial t}+(\vb{v}\cdot\nabla)\vb{A}\) (대류 미분). \(\partial/\partial t\)와 \(\dd/\dd t\)를 섞어 쓰면 반드시 틀린다.</p></div>
+
+<div class="callout"><b class="head">Lorenz인가 Lorentz인가.</b> 게이지 조건 \(\divg\vb{A}=-\muz\eps\,\partial V/\partial t\)는 덴마크 물리학자 <b>L. V. Lorenz</b>의 것이다. 로런츠 힘·로런츠 변환의 네덜란드 물리학자 <b>H. A. Lorentz</b>와는 다른 사람이다. 오랫동안 "Lorentz gauge"로 잘못 표기되어 왔으나 현재는 Lorenz로 정정되었다. 시험 답안에 <b>Lorenz 게이지 / Lorentz 힘</b>을 정확히 구분해 쓰면 인상이 좋다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u16-1"><div class="qq">(참/거짓 + 증명 또는 반례) "Coulomb 게이지와 Lorenz 게이지는 상호 배타적이다. 어떤 퍼텐셜도 두 조건을 동시에 만족할 수 없다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>거짓.</b> 두 조건을 동시에 부과하면 \(\divg\vb{A}=0\)과 \(\divg\vb{A}=-\muz\eps\,\partial V/\partial t\)에서 \(\partial V/\partial t=0\)이 따라 나온다. 이는 모순이 아니라 단지 <b>추가 조건</b>일 뿐이다.</p>
+<p><b>반례 1 (Example 10.1).</b> \(V=0\), \(\vb{A}=\dfrac{\muz k}{4c}(ct-|x|)^2\hat{\vb{z}}\). \(\divg\vb{A}=\partial A_z/\partial z=0\) ✓ Coulomb. \(V=0\Rightarrow\partial V/\partial t=0\) ✓ Lorenz. 두 게이지 <b>모두</b>에 속한다.</p>
+<p><b>반례 2 (Prob. 10.3).</b> \(V=0,\ \vb{A}=-\dfrac{1}{4\pi\eps}\dfrac{qt}{r^2}\hat{\vb{r}}\). \(\divg\vb{A}=\dfrac{1}{r^2}\dfrac{\partial}{\partial r}\!\left(r^2\cdot\left(-\dfrac{qt}{4\pi\eps r^2}\right)\right)=\dfrac{1}{r^2}\dfrac{\partial}{\partial r}\!\left(-\dfrac{qt}{4\pi\eps}\right)=0\) ✓. 역시 둘 다 만족.</p>
+<p><b>반례 3 (가장 단순).</b> 모든 <b>정적</b> 상황. \(\partial V/\partial t=0\)이고 \(\divg\vb{A}=0\)을 고르면 두 조건이 동일해진다. 정전기학·자기정역학은 통째로 두 게이지의 교집합에 있다.</p>
+<p><b>정리:</b> 두 게이지의 교집합은 \(\{\divg\vb{A}=0\ \text{및}\ \partial V/\partial t=0\}\)로 비어 있지 않다.</p>
+</div></div>
+
+<div class="qz" data-q="u16-2"><div class="qq">(점근·차수 분석) 정지해 있던 점전하 \(q\)가 \(t=0\)에 갑자기 조금 움직였다. Coulomb 게이지에서, 거리 \(r\gg\) (변위)인 관측점에 대해 \(t&gt;0\)의 \(-\nabla V\)와 \(\vb{E}\)의 \(r\) 의존 지수를 각각 밝히고, \(r&gt;ct\) 영역에서 \(\partial\vb{A}/\partial t\)가 반드시 가져야 할 항의 크기와 지수를 명시하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>1) \(-\nabla V\)의 지수.</b> Coulomb 게이지에서 \(V(\vb{r},t)=\dfrac{1}{4\pi\eps}\displaystyle\int\frac{\rho(\vb{r}',t)}{\rr}\dd\tau'\)는 <b>현재 시각</b>의 전하 분포로 결정된다. 전하가 \(\boldsymbol{\delta}\)만큼 움직였다면 쌍극자 보정이 즉시 나타난다:
+\[ V\simeq\frac{1}{4\pi\eps}\left[\frac{q}{r}+\frac{q\,\boldsymbol{\delta}(t)\cdot\hat{\vb{r}}}{r^2}\right] \;\Rightarrow\; -\nabla V \text{ 의 변화분}\ \sim r^{-3},\ \text{주항은 } r^{-2} \]
+핵심은 지수가 아니라 <b>시각</b>이다. 변화분이 \(t&gt;0\)이면 <b>모든 \(r\)</b>에서 즉시 0이 아니다.</p>
+<p><b>2) \(\vb{E}\)의 요구 조건.</b> 인과율에 의해 \(r&gt;ct\)에서는 \(\vb{E}\)가 변하면 안 된다. 즉 \(\vb{E}(r&gt;ct,t)=\dfrac{q\hat{\vb{r}}}{4\pi\eps r^2}\) (원래 Coulomb 장) 그대로여야 한다.</p>
+<p><b>3) 따라서 \(\partial\vb{A}/\partial t\)가 해야 할 일.</b> \(\vb{E}=-\nabla V-\partial\vb{A}/\partial t\)이므로 \(r&gt;ct\)에서는
+\[ \frac{\partial\vb{A}}{\partial t}\bigg|_{r&gt;ct}=-\nabla V-\vb{E}=-\big(\text{쌍극자 보정항}\big)\sim -\frac{q\,\dot{\boldsymbol{\delta}}\text{-유래 항}}{4\pi\eps r^{3}} \]
+즉 \(\partial\vb{A}/\partial t\)는 \(r&gt;ct\) 영역에서 \(-\nabla V\)의 변화분을 <b>지수까지 정확히(\(r^{-3}\))</b>, 부호까지 반대로 가진 항을 반드시 포함해야 한다.</p>
+<p><b>4) 구조적 확인.</b> 이는 유도 1의 8단계와 정확히 일치한다. Coulomb 게이지 \(\vb{A}\) 방정식의 원천에 \(\muz\eps\nabla(\partial V/\partial t)=\muz\vb{J}_\parallel\)이 들어 있고, 이 항이 정확히 \(V\)의 즉각성을 되돌려 놓는다. 남는 진짜 원천은 \(\vb{J}_\perp\)뿐이며, \(\Box^2\vb{A}=-\muz\vb{J}_\perp\)의 해는 인과적이다.</p>
+<p><b>결론:</b> 비인과성은 \(V\)와 \(\vb{A}\)에 각각 \(r^{-2},r^{-3}\) 차수로 존재하지만, 게이지 불변 조합 \(\vb{E}\)에서는 <b>모든 차수에서</b> 상쇄된다. 물리는 안전하다.</p>
+</div></div>
+
+<div class="qz" data-q="u16-3"><div class="qq">(Prob. 10.3 변형 계산) \(V=0,\ \vb{A}(\vb{r},t)=-\dfrac{1}{4\pi\eps}\dfrac{qt}{r^2}\hat{\vb{r}}\). (a) \(\vb{E},\vb{B}\)와 \(\rho,\vb{J}\)를 구하라. (b) \(\lambda=-\dfrac{1}{4\pi\eps}\dfrac{qt}{r}\)로 게이지 변환하고 결과를 해석하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>(a) 장.</b>
+\[ \vb{E}=-\nabla V-\frac{\partial\vb{A}}{\partial t}=-\left(-\frac{1}{4\pi\eps}\frac{q}{r^2}\hat{\vb{r}}\right)=\frac{1}{4\pi\eps}\frac{q}{r^2}\hat{\vb{r}} \]
+정지 점전하의 Coulomb 장이다!
+\[ \vb{B}=\curl\vb{A}=0 \]
+(\(\vb{A}\)가 순수 지름 방향이고 \(r\)에만 의존하므로 회전이 0.)</p>
+<p><b>원천.</b> \(\divg\vb{E}=\dfrac{q}{\eps}\delta^3(\vb{r})\Rightarrow\rho=q\,\delta^3(\vb{r})\). \(\vb{E}\)가 시간에 무관하고 \(\vb{B}=0\)이므로 \(\curl\vb{B}=0=\muz\vb{J}+\muz\eps\partial\vb{E}/\partial t=\muz\vb{J}\Rightarrow\vb{J}=0\).</p>
+<p>즉 이것은 <b>원점에 정지한 점전하 \(q\)</b>를 기술하는, 겉보기에 이상해 보이는 퍼텐셜이다.</p>
+<p><b>(b) 게이지 변환.</b> \(\nabla\left(\dfrac{1}{r}\right)=-\dfrac{\hat{\vb{r}}}{r^2}\)이므로
+\[ \nabla\lambda=-\frac{qt}{4\pi\eps}\nabla\!\left(\frac{1}{r}\right)=+\frac{1}{4\pi\eps}\frac{qt}{r^2}\hat{\vb{r}} \]
+\[ \vb{A}'=\vb{A}+\nabla\lambda=-\frac{1}{4\pi\eps}\frac{qt}{r^2}\hat{\vb{r}}+\frac{1}{4\pi\eps}\frac{qt}{r^2}\hat{\vb{r}}=\boxed{0} \]
+\[ V'=V-\frac{\partial\lambda}{\partial t}=0-\left(-\frac{1}{4\pi\eps}\frac{q}{r}\right)=\boxed{\frac{1}{4\pi\eps}\frac{q}{r}} \]</p>
+<p><b>해석.</b> 게이지 변환 한 번으로 우리에게 익숙한 정전기 퍼텐셜 \((V=q/4\pi\eps r,\ \vb{A}=0)\)로 돌아왔다. 같은 물리(정지 점전하)를 두 개의 전혀 다른 얼굴로 쓸 수 있다는 게이지 자유도의 가장 깔끔한 실증이다. 특히 원래 퍼텐셜은 \(t\)에 명시적으로 의존하는데도 장은 완전히 정적이다 — <b>퍼텐셜의 시간 의존성이 곧 물리의 시간 의존성은 아니다.</b></p>
+<p><b>게이지 소속.</b> 원래 퍼텐셜: \(\divg\vb{A}=0\), \(\partial V/\partial t=0\) ⇒ Coulomb ∩ Lorenz. 변환 후: \(\vb{A}'=0\Rightarrow\divg\vb{A}'=0\) ✓, \(\partial V'/\partial t=0\) ✓ ⇒ 역시 둘 다.</p>
+</div></div>
+
+<div class="qz" data-q="u16-4"><div class="qq">(개념) \(\vb{p}_{\rm can}=\vb{p}+q\vb{A}\)는 게이지 의존적이다. 그렇다면 이 양은 무의미한가? 물리적으로 무엇이 보존되는지 정확히 서술하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 게이지 의존성 확인.</b> \(\vb{A}\to\vb{A}+\nabla\lambda\) 아래 \(\vb{p}_{\rm can}\to\vb{p}_{\rm can}+q\nabla\lambda\). 역학적 운동량 \(\vb{p}=m\vb{v}\)는 게이지 불변이지만 \(\vb{p}_{\rm can}\)은 그렇지 않다.</p>
+<p><b>2) 그럼에도 유용한 이유 — 보존 법칙.</b> \(U_{\rm vel}=q(V-\vb{v}\cdot\vb{A})\)가 어떤 방향(예: \(x\))으로 균일하면, 즉 \(\partial U_{\rm vel}/\partial x=0\)이면 유도 4의 결과에 의해 \(\dfrac{\dd}{\dd t}(p_x+qA_x)=0\). 보존되는 것은 \(p_x\)가 아니라 <b>\(p_{{\rm can},x}\)</b>다. 이것이 실제 계산에서의 힘이다(예: 균일 \(\vb{B}\) 속 사이클로트론 운동, 도파관 내 전자).</p>
+<p><b>3) 게이지 의존을 정확히 다루는 법.</b> 물리적으로 의미 있는 것은
+<br>• 게이지 불변 조합: \(\oint\vb{p}_{\rm can}\cdot\dd\boldsymbol{\ell}=\oint\vb{p}\cdot\dd\boldsymbol{\ell}+q\Phi_B\) (닫힌 경로에서 \(\oint\nabla\lambda\cdot\dd\boldsymbol{\ell}=0\)이므로 게이지 불변!). 이것이 Bohr–Sommerfeld 양자화와 플럭스 양자화의 출발점이다.
+<br>• 각운동량의 경우: 양자화되는 것은 역학적 각운동량이 아니라 \(\vb{r}\times\vb{p}_{\rm can}\)로부터 유도되는 <b>정준</b> 각운동량이다.</p>
+<p><b>4) 한 줄 요약.</b> "\(\vb{p}_{\rm can}\)은 게이지 의존적이지만, 주어진 게이지 안에서 보존 법칙을 만들어 주고, 닫힌 경로 적분 형태에서는 게이지 불변량이 된다." 이것이 \(\vb{A}\)를 '단위 전하당 퍼텐셜 운동량'으로 읽는 관점의 정당화다.</p>
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> Coulomb 게이지 \(V\)의 즉각성을 \(\vb{J}=\vb{J}_\parallel+\vb{J}_\perp\) 분해로 정량적으로 해소할 수 있고, \(\Box^2\lambda=-L\)로 Lorenz 게이지 도달 가능성을 증명하며, \(\dd(\vb{p}+q\vb{A})/\dd t=-\nabla U_{\rm vel}\)을 대류 미분까지 포함해 백지에서 유도할 수 있다.</div>

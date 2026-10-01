@@ -1,0 +1,21 @@
+<div class="exq"><b>상황.</b> 선밀도 \(\rho\), 길이 \(b\), 질량 \(M=\rho b\)인 사슬의 두 끝 A, B를 같은 높이에 나란히 걸어 U자로 늘어뜨렸다. \(t=0\)에 끝 B를 놓는다. B가 \(x\)만큼 떨어졌을 때 A의 장력 \(T\)를 (a) 자유낙하 가정 (b) 에너지 보존 가정으로 구한다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>계 전체에 \(\dot P=Mg-T\) (아래가 +). 차이는 \(\dot x\)를 무엇으로 두느냐뿐.</div>
+<ol>
+<li><b>운동량</b>: 고정된 왼쪽 가닥 길이 \((b+x)/2\)는 정지, 오른쪽 가닥 \((b-x)/2\)는 속력 \(\dot x\). 바닥의 굽은 부분은 무시.
+\[ P=\frac\rho2(b-x)\dot x,\qquad \dot P=\frac\rho2\left[(b-x)\ddot x-\dot x^2\right]. \]</li>
+<li><b>(a) 자유낙하</b>: \(\ddot x=g\), \(\dot x^2=2gx\):
+\[ \dot P=\frac{\rho g}{2}(b-3x),\qquad T=Mg-\dot P=\frac{Mg}{2}\left(1+\frac{3x}{b}\right). \]</li>
+<li><b>(b) 에너지 보존</b>: A를 기준으로 퍼텐셜 \(U=-\frac{\rho g}{4}(b^2+2bx-x^2)\) (초기 \(-\rho gb^2/4\)), 운동에너지 \(K=\frac\rho4(b-x)\dot x^2\). \(K+U=U_0\):
+\[ \dot x^2=\frac{g(2bx-x^2)}{b-x}. \]
+이를 미분해 \(\ddot x\)를 얻고 \(\dot P\)에 넣어 정리하면
+\[ T=\frac{Mg}{4b}\,\frac{2b^2+2bx-3x^2}{b-x}. \]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \text{(a)}\ T=\frac{Mg}{2}\left(1+\frac{3x}{b}\right)\xrightarrow{x\to b}2Mg,\qquad \text{(b)}\ T=\frac{Mg}{4b}\frac{2b^2+2bx-3x^2}{b-x}\xrightarrow{x\to b}\infty \]
+<p class="note"><b>검산</b> ① \(x=0\): (a) \(Mg/2\), (b) \(\frac{Mg}{4b}\cdot\frac{2b^2}{b}=Mg/2\) — 둘 다 일치 ✓ (출발 순간은 같은 물리). ② (b)의 발산은 끝 부분에서 에너지를 가진 짧은 가닥이 급격히 빨라지는 것(채찍 효과). 실험(Calkin–March)은 무게의 약 25배까지 치솟음 → (b)가 실제. ③ (b)에서 사슬은 자유낙하보다 약 15% 빨리 떨어진다 — 굽은 부분의 장력이 아래로 끌어당기기 때문.</p></div>
+<div class="qz" data-q="ex9.2-a"><div class="qq"><b>+α</b> 다른 양 묻기: (a) 자유낙하 가정에서 B가 바닥(\(x=b\))까지 가는 동안 A가 받은 충격량 \(\int T\,\dd t\)를 구하고, 사슬 전체의 운동량 변화와 중력 충격량으로 검산하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(t_f=\sqrt{2b/g}\), \(x=\tfrac12gt^2\). \(\int T\,\dd t=\frac{Mg}{2}\int_0^{t_f}\left(1+\frac{3g t^2}{2b}\right)\dd t=\frac{Mg}{2}\left(t_f+\frac{g t_f^3}{2b}\right)=\frac{Mg}{2}(t_f+t_f)=Mg\,t_f\).</p>
+<p>검산: \(\Delta P=\int(Mg-T)\dd t=0\). 실제로 \(P(t_f)=\frac\rho2(b-b)\dot x=0\), \(P(0)=0\) ✓. 즉 끝에서 사슬 운동량은 0(움직이는 가닥 길이가 0) — 모든 운동량이 A를 통해 빠져나갔다. (에너지는 보존되지 않음: (a)는 굽은 곳에서 에너지를 잃는 모형.)</p></div></div>
+<div class="qz" data-q="ex9.2-b"><div class="qq"><b>+α</b> 조건 바꾸기: 같은 사슬을 한 끝만 매달아 똑바로 늘어뜨렸다가 위 끝을 놓아 테이블 위로 떨어뜨린다(Example 9.10과 연결). 떨어진 길이가 \(x\)일 때 테이블이 받는 힘은? 사슬 전체에 \(\dot P=F_{\rm ext}\)를 적용해 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>공중 부분(길이 \(b-x\))은 자유낙하 \(\dot x=\sqrt{2gx}\). \(P=\rho(b-x)\dot x\) (아래 +). \(\dot P=\rho[(b-x)g-\dot x^2]=\rho g(b-3x)\).</p>
+<p>외력: 중력 \(\rho bg\)(아래) − 테이블 힘 \(N\)(위). \(N=\rho bg-\rho g(b-3x)=3\rho xg\) ✓ — Example 9.10과 같은 결과를 <b>계 전체의 운동량</b>으로 얻었다.</p></div></div>

@@ -1,0 +1,20 @@
+<div class="exq"><b>상황.</b> 길이 \(a\)인 가벼운 줄 양 끝에 추 \(m_1\), \(m_2\) (\(m_2&gt;m_1\)). \(m_1\) 쪽을 손에 쥐고 \(m_2\)를 머리 위에서 반시계로 세게 돌리다 놓는다. 이후 운동과 줄의 장력.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>놓은 뒤 외력은 중력뿐 → CM은 포물선, CM에 대한 토크 0 → 스핀 보존.</div>
+<ol>
+<li><b>CM 위치</b>: \(m_2\)에서 \(b=\dfrac{m_1}{m_1+m_2}a\), \(m_1\)에서 \(a-b=\dfrac{m_2}{m_1+m_2}a\).</li>
+<li><b>병진</b>: \(M\ddot{\vb R}=M\vb g\) → CM은 놓은 순간 속도 \(\vb v_0\)로 포물선.</li>
+<li><b>회전</b>: 균일 중력의 CM 토크 \(\sum\vb r'_\alpha\times m_\alpha\vb g=(\sum m_\alpha\vb r'_\alpha)\times\vb g=0\). 스핀 각운동량 보존 → 두 추는 CM 둘레를 일정한 \(\dot\theta\)로 돈다. (손에 쥐고 있을 땐 \(m_1\) 주위를 돌았지만 놓은 뒤엔 CM 주위를 돈다.)</li>
+<li><b>장력</b>: \(m_2\)의 원운동 반지름 \(b\):
+\[ T=m_2b\dot\theta^2=\frac{m_1m_2}{m_1+m_2}\,a\,\dot\theta^2 . \]
+\(m_1\)으로 계산해도 \(m_1(a-b)\dot\theta^2\) — 같은 값 ✓ (장력은 줄 양끝에서 같아야 함).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ T=\mu a\dot\theta^2,\qquad \mu=\frac{m_1m_2}{m_1+m_2}\ } \]
+<p class="note"><b>검산</b> ① \(m_1\to\infty\)(고정점): \(T\to m_2a\dot\theta^2\) — 고정점 둘레 원운동 ✓. ② 상대좌표 \(\vb r=\vb r_2-\vb r_1\)의 원운동(반지름 \(a\))에 환산질량을 쓴 것과 동일 — 2체 문제의 환산 ✓. ③ 중력은 장력에 영향 없음 — 두 추가 같이 자유낙하하는 계에서 보면 중력이 사라진다(등가원리).</p></div>
+<div class="qz" data-q="ex9.3-a"><div class="qq"><b>+α</b> 초기조건에서 \(\dot\theta\) 구하기: 놓기 직전 \(m_1\)은 손에 쥐여 정지, \(m_2\)는 \(m_1\) 둘레를 속력 \(v_0\)로 돌고 있었다. 놓은 직후 (a) CM 속도 (b) \(\dot\theta\) (c) 장력을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>(a) \(\vb V=\dfrac{m_2\vb v_0}{m_1+m_2}\).</p>
+<p>(b) 놓는 순간 상대속도 \(\dot{\vb r}=\vb v_2-\vb v_1=\vb v_0\) (줄에 수직). 상대좌표는 반지름 \(a\)의 원운동 → \(\dot\theta=v_0/a\). (손에 쥐고 있을 때와 같은 각속도! 두 추의 상대운동이 연속이기 때문.)</p>
+<p>(c) \(T=\mu a\dot\theta^2=\dfrac{m_1m_2}{m_1+m_2}\dfrac{v_0^2}{a}\) — 놓기 전 장력 \(m_2v_0^2/a\)보다 \(\dfrac{m_1}{m_1+m_2}\)배로 <b>줄어든다</b>.</p></div></div>
+<div class="qz" data-q="ex9.3-b"><div class="qq"><b>+α</b> 에너지 관점: 놓은 뒤 계의 운동에너지를 \(\tfrac12MV^2+T_{\rm spin}\)으로 나누고, 놓기 직전 운동에너지 \(\tfrac12m_2v_0^2\)와 비교하라. 손을 놓는 행위가 에너지를 바꾸는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(\tfrac12MV^2=\dfrac{m_2^2v_0^2}{2M}\). \(T_{\rm spin}=\tfrac12\mu v_0^2=\dfrac{m_1m_2v_0^2}{2M}\). 합 \(=\dfrac{m_2v_0^2(m_2+m_1)}{2M}=\tfrac12m_2v_0^2\) ✓.</p>
+<p>놓는 순간에는 속도가 불연속적으로 바뀌지 않으므로 에너지도 그대로. 분배만 달라진다: 비율 \(m_2:m_1\)로 병진:회전.</p></div></div>
