@@ -75,21 +75,18 @@ export function compileCourse(slug, { today = todayKST(), log = console.log } = 
   // ── 강의 로그 ──
   const lectures = [...lects].sort((a, b) => b.date.localeCompare(a.date)).map((L) => C.deep(L, `lecture ${L.id}`));
 
-  // ── 과제: 마감 전 풀이는 데이터에 넣지 않는다 (AI 정책) ──
-  const locked = new Set();
-  for (const S of hw) if (S.due && today <= S.due) for (const P of S.probs) locked.add(P.num);
+  // ── 과제: 풀이는 마감과 무관하게 항상 포함한다 ──
   const probmap = {};
   const hwSets = hw.map((S) => {
-    const open = !S.due || today > S.due;
+    const open = true;
     const probs = S.probs.map((P) => {
       probmap[P.num] = P.unit;
       const body = readText(path.join(R, 'hw', `${P.num}.html`)) || '';
       const stmt = (body.match(/<div class="stmt">([\s\S]*?)<\/div>\s*<!--\/stmt-->/) || [])[1] || '';
       const sol = (body.match(/<div class="sol">([\s\S]*)<\/div>\s*<!--\/sol-->/) || [])[1] || '';
-      const show = (open || S.kind === 'lecture') && !locked.has(P.num);
       return {
         num: P.num, ch: P.ch, unit: P.unit, tag: P.tag || '', title: C.sub(P.title, `hw ${P.num}`),
-        stmt: C.sub(stmt, `hw ${P.num}`), sol: show && sol ? C.sub(sol, `hw ${P.num}`) : null,
+        stmt: C.sub(stmt, `hw ${P.num}`), sol: sol ? C.sub(sol, `hw ${P.num}`) : null,
       };
     });
     return { id: S.id, kind: S.kind, title: C.sub(S.title, 'hw'), meta: C.sub(S.meta || '', 'hw'), due: S.due || null, open, probs };

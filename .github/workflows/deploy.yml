@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-  # 매일 00:05 KST에 다시 빌드 → 마감 지난 과제 풀이가 자동 공개되고 D-day가 갱신된다
+  # 매일 00:05 KST에 다시 빌드 → D-day가 갱신된다
   schedule:
     - cron: '5 15 * * *'
   workflow_dispatch:

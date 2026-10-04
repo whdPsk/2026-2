@@ -5,7 +5,7 @@
 - 허브: `https://<github-id>.github.io/notes-2026-2/`
 - 과목: `…/notes-2026-2/astro1/` (천체물리학개론1) · `…/emwaves/` (전자기파와 광학) · `…/advmech/` (고급역학)
 
-`main`에 push하면 GitHub Actions가 빌드해서 자동으로 다시 배포한다. 매일 00:05 KST에도 한 번 다시 빌드한다(마감 지난 과제 풀이 공개, D-day 갱신).
+`main`에 push하면 GitHub Actions가 빌드해서 자동으로 다시 배포한다. 매일 00:05 KST에도 한 번 다시 빌드한다(D-day 갱신).
 
 ## 구조
 
@@ -83,7 +83,7 @@ Node 22 이상.
 | 새 강의 반영 | `content/<slug>/lectures.json`에 항목 추가 + 해당 `units/uNN.html` 본문 수정 |
 | 단원 본문 수정 | `content/<slug>/units/uNN.html` |
 | 예제 추가 | `content/<slug>/examples.json`에 메타 + `ex/<num>.html` |
-| 과제 추가 | `content/<slug>/hw.json`에 세트(`due` 넣으면 마감 다음 날부터 풀이 공개) + `hw/<num>.html` |
+| 과제 추가 | `content/<slug>/hw.json`에 세트(`due`는 마감일 표시용, 풀이는 항상 공개) + `hw/<num>.html` |
 | 원자료 추가 | `sources.json`에 ID + `ledger/<ID>.json` 장부 → 본문에 `[[ID.항목]]` 인용 |
 | 시험 일정 | `content/<slug>/meta.json`의 `exams` |
 | 과목 추가 | `content/<새 slug>/` 폴더 + `content/site.json`의 `courses`에 한 줄 |

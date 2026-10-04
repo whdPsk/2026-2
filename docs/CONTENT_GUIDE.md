@@ -40,10 +40,10 @@
 { "id": "hw2", "kind": "hw", "title": "HW2", "meta": "eTL 과제", "due": "2026-10-06",
   "probs": [{ "num": "2.3", "ch": 2, "unit": "u07", "tag": "req", "title": "문항 제목" }] }
 ```
-- `kind`: `hw`(마감 후 풀이 공개) · `lecture`(강의 지정 연습, 항상 공개) · `bank`
+- `kind`: `hw`(과제) · `lecture`(강의 지정 연습, 항상 공개) · `bank`
 - `tag`: `req` 필수 · `opt` 선택 · `ex` 강의 Exercise · `hw` 과제
 - 문항 파일: `<div class="stmt">문제</div><!--/stmt--> <div class="sol">풀이</div><!--/sol-->`
-- **마감일까지는 풀이가 빌드 결과에 아예 들어가지 않는다**(강좌 AI 정책). 매일 자정 재빌드로 자동 공개.
+- 풀이는 마감과 무관하게 항상 빌드 결과에 들어간다(2026-10-04 잠금 기능 제거). `due`는 마감일 표시에만 쓴다.
 
 ### `sources.json` + `ledger/<ID>.json` (원자료 무누락 장부)
 ```json

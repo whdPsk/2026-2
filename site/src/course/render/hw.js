@@ -1,4 +1,4 @@
-// 과제 · 문제 뷰. 마감 전 풀이는 컴파일 단계에서 이미 빠져 있다(sol=null).
+// 과제 · 문제 뷰. 풀이는 마감과 무관하게 항상 표시한다(풀이 원고가 없으면 sol=null).
 const TAGS = {
   req: '<span class="hwst req">필수</span>',
   opt: '<span class="hwst">선택</span>',
@@ -16,10 +16,10 @@ export function renderHwView(D, chBtns) {
   if (!D.hw.length) out.push(`<div class="soon">${D.hwEmpty}</div>`);
   for (const S of D.hw) {
     let hm = S.meta;
-    if (S.due) hm += ` · 마감 ${S.due}` + (S.open ? ' · 풀이 공개됨' : ' · 풀이는 마감 후 공개');
+    if (S.due) hm += ` · 마감 ${S.due}`;
     out.push(`<section class="hwset" id="hw-${S.id}"><h3>${S.title}</h3><div class="hm">${hm}</div>`);
     for (const P of S.probs) {
-      const ans = P.sol ? `<div class="ans">${P.sol}</div>` : '<div class="lock">풀이는 마감 후 공개됩니다. 먼저 관련 단원을 보고 스스로 풀어보세요.</div>';
+      const ans = P.sol ? `<div class="ans">${P.sol}</div>` : '<div class="lock">풀이가 아직 작성되지 않았습니다.</div>';
       out.push(`<details class="prob" data-num="${P.num}" data-ch="${P.ch}"><summary>${TAGS[P.tag] || ''}<span class="ub">${P.unit.toUpperCase()}</span><b>${P.num}</b>${P.title}</summary><div class="stmt">${P.stmt}</div>${ans}</details>`);
     }
     out.push('</section>');
