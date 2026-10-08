@@ -340,5 +340,54 @@
     "전단면적 \\(\\sigma_{\\rm tot}=2\\pi\\int_0^\\pi\\sigma(\\theta)\\sin\\theta\\,\\dd\\theta\\)는 Rutherford에서 θ→0 때문에 발산. 실제 원자핵은 전자에 의해 <b>차폐</b>되므로 Yukawa형 \\(U=\\frac{q_1q_2}{4\\pi\\epsilon_0}\\frac{e^{-r/a}}{r}\\)를 쓰면 (양자역학적 근사로) 유한한 \\(\\sigma_{\\rm tot}\\)가 나온다 (강의 식 9.73, 교재에 없음). 그림 3: Debye 차폐와 Yukawa vs 맨 Coulomb 비교."
    ]
   }
+ },
+ {
+  "id": "0930",
+  "date": "2026-09-30",
+  "dow": "수",
+  "kind": "note",
+  "title": "Ch.9 §9.10 마무리 — Rutherford 산란과 미분 단면적",
+  "file": "다글로 녹음 「러더퍼드스캐터링과미분크로스섹션해설」",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/L3G8Haf5gafyZrZV?fileMetaId=36d9c44a-43f9-4c8b-98a0-135bdeae7095",
+  "summary": [
+   "9/28 노트의 미분 단면적과 Rutherford 산란을 다시 설명한 녹음. 충돌 변수 b와 산란각의 관계에서 \\(\\sigma(\\theta)=\\frac{b}{\\sin\\theta}|db/d\\theta|\\)를 얻는 경로를 복습한다.",
+   "정확한 강조점·지정 예제는 다글로 강의 노트 생성 완료 후 대조할 예정. 녹음 STT만으로 판서 식을 확정하지 않는다."
+  ],
+  "unitNotes": {
+   "u08": [
+    "<b>9/30 복습 녹음</b>: 충돌 변수와 미분 단면적 정의를 다시 확인한다. 산란각별 입자 수를 입사 선속으로 나눌 때 면적의 차원이 생긴다."
+   ],
+   "u09": [
+    "<b>9/30 복습 녹음</b>: Rutherford 산란의 \\(b(\\theta)\\)와 \\(\\sin^{-4}(\\theta/2)\\) 의존성을 다시 연결한다."
+   ]
+  }
+ },
+ {
+  "id": "1007",
+  "date": "2026-10-07",
+  "dow": "수",
+  "kind": "note",
+  "title": "Ch.10 §10.1–10.3 — 비관성 좌표계와 겉보기힘",
+  "file": "Lecture_Note_Chapter_10_20261007.pdf · 다글로 10/7 녹음",
+  "url": "https://drive.google.com/file/d/1WRnuJvT3wi90qIs6bajHH_9RncLOT6p3/view",
+  "summary": [
+   "§10.1: 갈릴레이 변환에서 가속하는 병진 좌표계로 옮기면 \\(-m\\dot{\\mathbf V}\\)가 겉보기힘으로 나타난다. 관성계에서의 뉴턴 법칙과 구분한다.",
+   "§10.2: 회전 좌표계에서 벡터의 시간미분은 \\((d\\mathbf Q/dt)_f=(d\\mathbf Q/dt)_r+\\boldsymbol\\omega\\times\\mathbf Q\\). 이를 위치·속도에 적용해 \\(\\mathbf v_f=\\mathbf V+\\mathbf v_r+\\boldsymbol\\omega\\times\\mathbf r\\)를 구한다.",
+   "§10.3: 가속도식을 한 번 더 미분하면 병진·Euler·원심·Coriolis 겉보기힘이 분리된다. 각 항의 발생 조건과 방향을 구분한다.",
+   "강의노트가 지정한 교재 예제는 <b>Example 10.2</b>. 다글로 녹음의 세부 강조점은 요약 완료 후 추가 확인한다."
+  ],
+  "examples": [
+   "10.2"
+  ],
+  "unitNotes": {
+   "u11": [
+    "<b>10/7 강의노트</b>: §10.1의 가속 병진계부터 출발한다. 원점의 가속만으로도 \\(-m\\dot{\\mathbf V}\\)라는 겉보기힘이 생긴다. 회전 벡터 미분 공식은 물체의 운동과 무관하게 좌표축 자체가 변하는 효과다.",
+    "속도 변환은 원점 병진 속도, 상대 속도, 회전에 따른 \\(\\boldsymbol\\omega\\times\\mathbf r\\)의 합으로 해석한다."
+   ],
+   "u12": [
+    "<b>10/7 강의노트</b>: 상대 가속도를 풀면 병진·Euler·원심·Coriolis 항이 따로 나온다. Coriolis 항은 회전계에서 움직이는 물체에만 나타나므로 정지한 물체에도 생기는 원심항과 구별한다.",
+    "지정: <b>Example 10.2</b>."
+   ]
+  }
  }
 ]

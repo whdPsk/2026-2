@@ -1,0 +1,38 @@
+[
+  {
+    "id": "L11.s1",
+    "loc": "슬라이드 1",
+    "raw": "Compton — title",
+    "skip": "표지"
+  },
+  {
+    "id": "L11.s2",
+    "loc": "슬라이드 2",
+    "raw": "Review: Doppler, aberration, inverse Compton boost and power"
+  },
+  {
+    "id": "L11.s3",
+    "loc": "슬라이드 3",
+    "raw": "Inverse Compton scattering rate and energy transfer"
+  },
+  {
+    "id": "L11.s4",
+    "loc": "슬라이드 4",
+    "raw": "Inverse Compton power derivation"
+  },
+  {
+    "id": "L11.s5",
+    "loc": "슬라이드 5",
+    "raw": "Thomson condition and inverse Compton power"
+  },
+  {
+    "id": "L11.s6",
+    "loc": "슬라이드 6",
+    "raw": "Synchrotron self-Compton and thermal electron scattering"
+  },
+  {
+    "id": "L11.s7",
+    "loc": "슬라이드 7",
+    "raw": "Sunyaev–Zel'dovich effect and cluster distance"
+  }
+]

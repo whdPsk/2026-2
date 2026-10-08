@@ -1,0 +1,53 @@
+[
+  {
+    "id": "L10.s1",
+    "loc": "슬라이드 1",
+    "raw": "Synchrotron and Compton — title",
+    "skip": "표지"
+  },
+  {
+    "id": "L10.s2",
+    "loc": "슬라이드 2",
+    "raw": "Review: power-law synchrotron spectrum and Compton vs inverse Compton"
+  },
+  {
+    "id": "L10.s3",
+    "loc": "슬라이드 3",
+    "raw": "Received electric field, Fourier transform, convolution and sampling"
+  },
+  {
+    "id": "L10.s4",
+    "loc": "슬라이드 4",
+    "raw": "Single-electron synchrotron spectrum: envelope, low-frequency slope, characteristic frequency"
+  },
+  {
+    "id": "L10.s5",
+    "loc": "슬라이드 5",
+    "raw": "Synchrotron cooling and Cygnus A luminosity"
+  },
+  {
+    "id": "L10.s6",
+    "loc": "슬라이드 6",
+    "raw": "Minimum energy and equipartition with frequency cutoff"
+  },
+  {
+    "id": "L10.s7",
+    "loc": "슬라이드 7",
+    "raw": "Compton scattering energy and momentum conservation"
+  },
+  {
+    "id": "L10.s8",
+    "loc": "슬라이드 8",
+    "raw": "SN1993J question 1: electron index"
+  },
+  {
+    "id": "L10.s9",
+    "loc": "슬라이드 9",
+    "raw": "SN1993J questions 2–3: solid angle and brightness temperature"
+  },
+  {
+    "id": "L10.s10",
+    "loc": "슬라이드 10",
+    "raw": "SN1993J question 4: emissivity constraint"
+  }
+]

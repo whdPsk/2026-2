@@ -353,5 +353,53 @@
     "<b>10/1</b>: 본문 전면 재작성 — Review Questions 전부, 운동방정식·나선운동·pitch angle, 단일 전자 파워, 펄스 → \\(\\gamma^3\\omega_B\\), 수업 문제 Q1–Q4 [[L09.s3a, L09.s3g, L09.s3h, F20.13]]."
    ]
   }
+ },
+ {
+  "id": "1006",
+  "date": "2026-10-06",
+  "dow": "화",
+  "kind": "note",
+  "title": "10/6 강의 — 싱크로트론 집단 스펙트럼과 Compton 산란",
+  "file": "Lecture10 Synchro-Compton PPT · 다글로 10/6 녹음",
+  "url": "https://drive.google.com/file/d/1xajWzGRMQHr1rCxkeHCDtijc_Wc3UEMj/view",
+  "summary": [
+   "복습 질문: 전자 에너지 분포 \\(n(\\gamma)=n_0\\gamma^{-p}\\)에서 방출 스펙트럼을 얻는 법, \\(p\\)와 관측 스펙트럼 기울기 \\(\\alpha\\)의 관계, Compton과 역Compton의 에너지 전달 방향. [[L10.s2]]",
+   "관측 전기장의 Fourier 변환과 표본화 관계를 이용해 시간 신호와 방출 스펙트럼을 연결한다. [[L10.s3]]",
+   "단일 전자 스펙트럼의 조화선은 넓은 포락선으로 보이며, 저주파 \\(\\nu^{1/3}\\), 피크 \\(0.29\\nu_c\\), \\(\\nu_c\\propto\\gamma^2B\\)를 구별한다. 전자 냉각 시간과 집단 스펙트럼의 연결도 다룬다. [[L10.s4]]",
+   "Cygnus A 예에서 같은 관측 세기를 만들려면 \\(n_0\\propto B^{-(p+1)/2}\\). 최소 에너지·등분배 추정은 적분 하한을 고정 \\(\\gamma_{min}\\)으로 둘지 고정 관측 최저 주파수로 둘지에 따라 결과가 달라진다. [[L10.s5, L10.s6]]",
+   "Compton 산란은 광자·전자 에너지와 운동량 보존에서 recoil을 얻는다. 역Compton은 고에너지 전자가 광자에 에너지를 넘기는 경우다. [[L10.s7]]",
+   "수업 문제 Q1–Q4: SN1993J의 스펙트럼에서 \\(p=3\\), 각지름으로 입체각 \\(3.67\\times10^{-17}\\,sr\\), 밝기온도 \\(4.2\\times10^7\\,K\\), \\(n_0B^2=73\\) (cgs)를 순서대로 계산한다. 입력값은 거리 3.6 Mpc, 23 GHz에서 25 mJy, 반지름 0.0123 pc, \\(\\gamma_{min}=100\\). [[L10.s8, L10.s9, L10.s10]]"
+  ],
+  "unitNotes": {
+   "u19": [
+    "<b>10/6 PPT</b>: \\(n(\\gamma)=n_0\\gamma^{-p}\\)인 전자 집단에서 \\(j_\\nu\\propto n_0 B^{(p+1)/2}\\nu^{-(p-1)/2}\\). 따라서 \\(\\alpha=(p-1)/2\\)이며 Cygnus A의 추정에서 \\(n_0\\)와 \\(B\\)가 독립적으로 정해지지 않는다.",
+    "최소 에너지 논의에서는 적분 하한의 가정을 먼저 확인한다. 관측 최저 주파수를 고정하면 강의 슬라이드의 \\(U_{cr}=\\tfrac43 U_B\\) 조건이 나온다.",
+    "SN1993J Q1–Q4는 지수 판독 → 입체각 → 밝기온도 → 방출률 제약의 순서로 풀어야 한다."
+   ],
+   "u20": [
+    "<b>10/6 도입</b>: Compton 산란에서 에너지·운동량 보존과 반동(recoil)을 먼저 세운다. 광자가 전자로부터 에너지를 얻는 역Compton과 구분한다."
+   ]
+  }
+ },
+ {
+  "id": "1008",
+  "date": "2026-10-08",
+  "dow": "목",
+  "kind": "note",
+  "title": "10/8 자료 — 역Compton 파워, 자기 Compton, Sunyaev–Zel'dovich 효과",
+  "file": "Lecture11 Compton FlippedLearning PPT · 강의 녹음 처리 대기",
+  "url": "https://drive.google.com/file/d/1lD7r2zX1ay7x3be01qbRovyDT9jmk0GW/view",
+  "summary": [
+   "<b>현재 PPT 기준</b>: 상대론적 Doppler·광행차, 등방 광자장의 평균 역Compton 에너지 증폭, 단일 전자의 역Compton 파워와 싱크로트론 파워 비교가 복습 질문이다. [[L11.s2]]",
+   "Thomson 영역의 역Compton 손실률은 \\(P_{IC}=\\tfrac43\\sigma_T cU_{ph}\\gamma^2\\beta^2\\). 싱크로트론과 같은 형태에서 에너지 밀도 \\(U_B\\)를 광자 에너지 밀도 \\(U_{ph}\\)로 바꾼다. [[L11.s3, L11.s4, L11.s5]]",
+   "싱크로트론 자체 광자를 다시 산란시키는 synchrotron self-Compton, 고온 전자의 CMB 산란이 만드는 Sunyaev–Zel'dovich 스펙트럼 왜곡을 소개한다. SZ 효과는 표면밝기의 거리 의존성 및 광학 깊이 가정을 함께 검토한다. [[L11.s6, L11.s7]]",
+   "10/8 다글로 녹음은 목록에 00:00으로 표시되어 본문 확인 전이다. 이 항목은 <b>수업 완료 내용이 아니라 배포된 슬라이드의 학습 범위</b>다."
+  ],
+  "unitNotes": {
+   "u20": [
+    "<b>10/8 배포 PPT</b>: 등방 광자장·Thomson 영역에서 \\(P_{IC}=\\tfrac43\\sigma_TcU_{ph}\\gamma^2\\beta^2\\). 싱크로트론 손실과 비율을 취하면 \\(P_{IC}/P_{syn}=U_{ph}/U_B\\) (같은 전자, 등방 pitch-angle 평균).",
+    "자기 Compton과 열적 전자에 의한 CMB 산란(SZ 효과)을 응용으로 연결한다. 녹음이 완성되면 교수의 강조점과 지정 예제를 확인할 것."
+   ]
+  }
  }
 ]

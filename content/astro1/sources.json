@@ -270,5 +270,61 @@
   "kind": "transcript",
   "date": "2026-10-01",
   "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+ },
+ "L10": {
+  "title": "Lecture10 Synchrotron·Compton (PPT)",
+  "short": "L10",
+  "kind": "ppt",
+  "date": "2026-10-06",
+  "url": "https://drive.google.com/file/d/1xajWzGRMQHr1rCxkeHCDtijc_Wc3UEMj/view"
+ },
+ "D1006": {
+  "title": "10/6 강의 녹음 (다글로 「싱크로트론 방사와 역컴턴 산란의 에너지 스펙트럼」)",
+  "short": "녹음10/6",
+  "kind": "transcript",
+  "date": "2026-10-06",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/mFO3CvaULCh5YrFf?fileMetaId=943286ed-0546-4e7c-9534-3f9e72958769"
+ },
+ "F21": {
+  "title": "플립 21 · 복사스펙트럼",
+  "short": "플립21",
+  "kind": "video",
+  "date": "2026-10-07",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/WpZbVTE_mftAkjuZ?fileMetaId=e1919f45-16ab-4b80-a436-370418d3c1db"
+ },
+ "F22": {
+  "title": "플립 22 · 컴프턴 산란",
+  "short": "플립22",
+  "kind": "video",
+  "date": "2026-10-07",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/LYN8_6NcK6aX0Geb?fileMetaId=a22ab811-76d2-4328-b524-1f75b7d66935"
+ },
+ "F23": {
+  "title": "플립 23 · 역컴프턴 진동수 변화",
+  "short": "플립23",
+  "kind": "video",
+  "date": "2026-10-07",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/139vMQRYHbnEQHfE?fileMetaId=76fe4e4a-1c72-4c4b-83a1-08a32d83f8dd"
+ },
+ "F24": {
+  "title": "플립 24 · 역컴프턴 파워",
+  "short": "플립24",
+  "kind": "video",
+  "date": "2026-10-07",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/DXtooMfLInqGW3Gc?fileMetaId=5dd6a5ed-e7e1-4aa6-bdbc-0f2e4ec02128"
+ },
+ "L11": {
+  "title": "Lecture11 Compton (PPT)",
+  "short": "L11",
+  "kind": "ppt",
+  "date": "2026-10-08",
+  "url": "https://drive.google.com/file/d/1lD7r2zX1ay7x3be01qbRovyDT9jmk0GW/view"
+ },
+ "HW3": {
+  "title": "HW3 eTL assignment",
+  "short": "HW3",
+  "kind": "hw",
+  "date": "2026-10-08",
+  "url": "https://myetl.snu.ac.kr/courses/305248/assignments/383621"
  }
 }

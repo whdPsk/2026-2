@@ -1,0 +1,14 @@
+<div class="stmt"><p>10/7 eTL 필수: 강의의 도파관에서 Maxwell 방정식으로 \(E_x,E_y,B_x,B_y\)를 종방향 장 \(E_z,B_z\)로 표현하고, 속이 빈 진공 도파관에는 TEM 파가 없음을 증명하라.</p></div><!--/stmt-->
+<div class="sol">
+<p>시간·진행 방향을 \(e^{i(kz-\omega t)}\)로 두고 \(q^2=\omega^2/c^2-k^2\)라 쓰자. Faraday와 Ampère 법칙의 횡방향 성분을 연립하면</p>
+\[
+E_x=\frac{i}{q^2}(k\partial_xE_z+\omega\partial_yB_z),\qquad
+E_y=\frac{i}{q^2}(k\partial_yE_z-\omega\partial_xB_z),
+\]
+\[
+B_x=\frac{i}{q^2}\left(k\partial_xB_z-\frac{\omega}{c^2}\partial_yE_z\right),\qquad
+B_y=\frac{i}{q^2}\left(k\partial_yB_z+\frac{\omega}{c^2}\partial_xE_z\right).
+\]
+<p>따라서 TE는 \(E_z=0\), TM은 \(B_z=0\), TEM은 둘 다 0이다. TEM이라 가정하면 횡방향 전기장은 \(\nabla_\perp\cdot\mathbf E_\perp=0\)이고 \((\nabla_\perp\times\mathbf E_\perp)_z=0\)이다. 즉 \(\mathbf E_\perp=-\nabla_\perp V\), \(\nabla_\perp^2V=0\). 한 개의 완전도체 벽은 전체가 같은 퍼텐셜이므로 유일성 정리에 의해 내부의 \(V\)도 상수다. 그러면 \(\mathbf E=0\)이고 진행하는 TEM 파가 없다. 동축선처럼 서로 다른 두 도체가 있으면 이 결론의 경계조건이 달라진다.</p>
+<p>자세한 성분별 출발식과 경계조건은 U13의 유도 1·2에 정리했다.</p>
+</div><!--/sol-->
