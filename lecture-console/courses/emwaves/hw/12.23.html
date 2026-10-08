@@ -1,0 +1,20 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(\beta=3/5,\ \gamma=5/4\).
+
+<p>(a) <b>\(\bar x=\)일정 선(\(\bar S\)의 시간축들):</b> \(\bar x=\gamma(x-\beta ct)=\text{const}\Rightarrow ct=\dfrac{x}{\beta}-\dfrac{\bar x}{\gamma\beta}\). 기울기 \(\dfrac{d(ct)}{dx}=\dfrac1\beta=\dfrac53\) (가파름). \(ct=0\)에서의 절편은 \(x=\bar x/\gamma=0.8\,\bar x\). 즉 \(\bar x=1,2,3\)은 \(x=0.8,1.6,2.4\)를 지나는 기울기 \(5/3\) 직선.</p>
+<p><b>\(c\bar t=\)일정 선(\(\bar S\)의 동시선):</b> \(c\bar t=\gamma(ct-\beta x)=\text{const}\Rightarrow ct=\beta x+\dfrac{c\bar t}{\gamma}\). 기울기 \(\beta=3/5\) (완만), \(x=0\)에서 절편 \(ct=0.8\,c\bar t\).</p>
+<p>두 선족은 \(45^\circ\) 광선 \(ct=x\)에 대해 서로 <b>거울 대칭</b>이며 (기울기 \(5/3\)과 \(3/5\)), 이것이 광속 불변의 도표상 표현이다.</p>
+
+<p>(b) \(\bar S\)에서 \(\Delta\bar x=4,\ c\Delta\bar t=5\Rightarrow \bar u=\frac45 c\). 도표에서는 \(\bar S\)-격자로 두 점을 찍고 잇는 세계선을 \(S\)-축으로 읽으면 된다. 로런츠 변환으로 두 끝점을 \(S\)로 옮기면
+\[ (x,ct)_1=\gamma(\bar x+\beta c\bar t,\ c\bar t+\beta\bar x)=\tfrac54(-2-1.2,\ -2-1.2)=(-4,-4), \]
+\[ (x,ct)_2=\tfrac54(2+1.8,\ 3+1.2)=(4.75,\ 5.25). \]
+\[ u=c\frac{\Delta x}{\Delta(ct)}=c\frac{8.75}{9.25}=\boxed{\tfrac{35}{37}c\approx0.946\,c} \]
+(도표에서 그 선의 기울기 \(\approx 9.25/8.75=1.057\), 즉 \(1/\beta\)로부터 같은 값을 읽는다.)</p>
+
+<p>(c) 속도 덧셈:
+\[ u=\frac{\bar u+v}{1+\bar u v/c^{2}}=\frac{\frac45+\frac35}{1+\frac{12}{25}}c=\frac{7/5}{37/25}c=\boxed{\tfrac{35}{37}c} \]
+그래프 결과와 일치.</p>
+
+<div class="alabel">감점 포인트</div>
+\(\bar x\)-축과 \(c\bar t\)-축의 기울기를 바꿔 그리는 것. 기억법: <b>\(\bar S\)의 시간축(\(\bar x=0\))은 물체의 세계선이므로 기울기 \(1/\beta\gt1\), \(\bar S\)의 공간축(\(c\bar t=0\))은 기울기 \(\beta\lt1\)</b>. 또 민코프스키 도표에서는 눈금 간격이 유클리드적이지 않으므로(\(\sqrt{(1+\beta^2)/(1-\beta^2)}\)배) 자로 잰 길이를 그대로 거리로 읽으면 안 된다.</div><!--/sol-->

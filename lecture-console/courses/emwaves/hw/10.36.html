@@ -1,0 +1,21 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+(a) Faraday에 curl:
+\[ \curl(\curl\vb{E})=\nabla(\divg\vb{E})-\nabla^2\vb{E}=-\frac{\partial}{\partial t}(\curl\vb{B})=-\muz\frac{\partial\vb{J}}{\partial t}-\muz\eps\frac{\partial^2\vb{E}}{\partial t^2} \]
+\[ \Rightarrow\ \boxed{\Box^2\vb{E}=\frac{1}{\eps}\nabla\rho+\muz\frac{\partial\vb{J}}{\partial t}} \]
+Ampère–Maxwell에 curl (그리고 \(\divg\vb{B}=0\)):
+\[ \nabla(\divg\vb{B})-\nabla^2\vb{B}=\muz\curl\vb{J}+\muz\eps\frac{\partial}{\partial t}(\curl\vb{E})=\muz\curl\vb{J}-\muz\eps\frac{\partial^2\vb{B}}{\partial t^2} \]
+\[ \Rightarrow\ \boxed{\Box^2\vb{B}=-\muz(\curl\vb{J})} \]
+(b) \(\Box^2f=-s\Rightarrow f=\frac{1}{4\pi}\int\frac{s(\vb{r}',t_r)}{\rr}d\tau'\)를 그대로 적용(소스는 <b>먼저 \(\vb{r}'\)에서 미분한 뒤</b> 지연시간에서 평가):
+\[ \boxed{\vb{E}=-\frac{1}{4\pi}\int\frac{\big[\frac{1}{\eps}\nabla'\rho+\muz\dot{\vb{J}}\big]_{t_r}}{\rr}d\tau',\qquad
+\vb{B}=\frac{\muz}{4\pi}\int\frac{\big[\curl'\vb{J}\big]_{t_r}}{\rr}d\tau'} \]
+(c) 핵심 항등식(<b>연쇄율!</b>): \(\nabla'\big[\rho(\vb{r}',t_r)\big]=[\nabla'\rho]_{t_r}+\dot\rho\,\nabla't_r\), 그리고 \(\nabla't_r=-\frac1c\nabla'\rr=+\frac{\rhat}{c}\). 따라서
+\[ [\nabla'\rho]_{t_r}=\nabla'\big[\rho(t_r)\big]-\frac{\dot\rho}{c}\rhat . \]
+부분적분(\(\nabla'(1/\rr)=\rhat/\rr^2\), 표면항 소멸):
+\[ \int\frac{\nabla'[\rho(t_r)]}{\rr}d\tau'=-\int\rho(t_r)\frac{\rhat}{\rr^2}d\tau' . \]
+그러므로
+\[ \vb{E}=\frac{1}{4\pi\eps}\int\left[\frac{\rho(t_r)}{\rr^2}\rhat+\frac{\dot\rho(t_r)}{c\rr}\rhat-\frac{\dot{\vb{J}}(t_r)}{c^2\rr}\right]d\tau'\ \checkmark\ \text{(Eq. 10.36)} \]
+같은 방식으로 \([\curl'\vb{J}]_{t_r}=\curl'[\vb{J}(t_r)]-\frac{\rhat}{c}\times\dot{\vb{J}}\)이고 \(\int\frac{\curl'[\vb{J}(t_r)]}{\rr}d\tau'=\int\frac{\vb{J}\times\rhat}{\rr^2}d\tau'\)이므로
+\[ \vb{B}=\frac{\muz}{4\pi}\int\left[\frac{\vb{J}(t_r)}{\rr^2}+\frac{\dot{\vb{J}}(t_r)}{c\rr}\right]\times\rhat\,d\tau'\ \checkmark\ \text{(Eq. 10.38)} \]
+<div class="alabel">감점 포인트</div>
+\([\nabla'\rho]_{t_r}\)(먼저 미분 후 지연)와 \(\nabla'[\rho(t_r)]\)(지연 후 미분)를 구분하지 않는 것 — 이 문제의 존재 이유가 바로 그 차이다.</div><!--/sol-->

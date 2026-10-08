@@ -1,0 +1,16 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+입자는 \(z\approx0\)에 있고 \(\mathbf E=E_0\cos(\omega t)\hat x\), \(\mathbf B=\frac{E_0}{c}\cos(\omega t)\hat y\).<br>
+<b>(a)</b> \(m\dot v_x=qE_0\cos\omega t\) →
+\[\boxed{\mathbf v=\frac{qE_0}{m\omega}\sin(\omega t)\,\hat x}\]
+(평균속도 0 조건으로 적분상수 제거.) \(\mathbf v\)는 \(\mathbf E\)보다 \(90^\circ\) 뒤진다.<br>
+<b>(b)</b>
+\[\mathbf F_{\text{mag}}=q\mathbf v\times\mathbf B=\frac{q^2E_0^2}{m\omega c}\sin\omega t\cos\omega t\ (\hat x\times\hat y) =\boxed{\frac{q^2E_0^2}{2m\omega c}\sin(2\omega t)\,\hat z}\]
+<b>(c)</b> \(\langle\sin2\omega t\rangle=0\) → \(\langle\mathbf F_{\text{mag}}\rangle=0\). 이 순진한 모형으로는 복사압이 설명되지 않는다(속도가 장과 \(90^\circ\) 위상차라 에너지도 흡수되지 않는다).<br>
+<b>(d)</b> \(m\dot v_x+m\gamma v_x=qE_0e^{-i\omega t}\) → \(\tilde v_0=\dfrac{qE_0}{m(\gamma-i\omega)}\), 실수부
+\[v_x=\frac{qE_0}{m}\frac{\gamma\cos\omega t+\omega\sin\omega t}{\gamma^2+\omega^2}.\]
+\[F_z=qv_xB_y=\frac{q^2E_0^2}{mc}\frac{\gamma\cos^2\omega t+\omega\sin\omega t\cos\omega t}{\gamma^2+\omega^2}\]
+\[\boxed{\langle\mathbf F_{\text{mag}}\rangle=\frac{q^2E_0^2\gamma}{2mc(\gamma^2+\omega^2)}\,\hat z\ \neq 0}\]
+저항(에너지 흡수)이 있을 때 비로소 진행 방향으로 평균 힘 = 복사압이 생긴다.
+<div class="alabel">감점 포인트</div>
+(d)에서 과도항(\(e^{-\gamma t}\))을 버리고 정상상태만 취해야 한다. 또 \(\langle\cos^2\rangle=1/2\), \(\langle\sin\cos\rangle=0\)을 구분해 쓸 것.</div><!--/sol-->

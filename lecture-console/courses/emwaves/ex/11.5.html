@@ -1,0 +1,67 @@
+<div class="exq"><b>상황.</b> 전기 쌍극자를 이렇게 만든다: 음전하 \(-q\)를 원점에 <em>못박아</em> 고정하고, 질량 \(m\)인 양전하 \(+q\)를 \(z\)축 위 \(z=d\)에 정지시켜 잡고 있다. \(t=0\)에 손을 놓으면 \(+q\)는 Coulomb 인력으로 원점을 향해 가속한다. 복사 반작용은 작은 섭동이므로 우선 무시하고 운동을 구한 뒤, 그 운동에 대한 <b>Abraham–Lorentz 힘 \(\vb{F}_{\rm rad}=\frac{\muz q^2}{6\pi c}\dot{\vb{a}}\)의 방향과 크기</b>를 계산하는 것이 목표다. 놀랍게도 답의 <em>부호</em>가 상식을 배반한다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(a\propto-1/z^2\)이고 \(z\)가 줄어들므로 \(|a|\)가 커진다 → \(\dot a\)는 가속과 같은 방향 → \(\vb{F}_{\rm rad}\)도 같은 방향.</div>
+<ol>
+<li><b>가속도.</b> 복사 반작용을 빼면 \(+q\)가 받는 힘은 Coulomb 인력뿐:
+\[ \vb{F}=-\frac{1}{4\pi\eps}\frac{q^2}{z^2}\hat{\vb{z}}=m\vb{a}\ \Longrightarrow\ \vb{a}=-\frac{q^2}{4\pi\eps m}\frac{1}{z^2}\hat{\vb{z}}. \]</li>
+
+<li><b>가가속도(jerk).</b> 시간 미분:
+\[ \dot{\vb{a}}=-\frac{q^2}{4\pi\eps m}\left(-\frac{2}{z^3}\right)\frac{\dd z}{\dd t}\hat{\vb{z}}=\frac{q^2}{2\pi\eps m}\frac{\dot z}{z^3}\hat{\vb{z}}. \]
+전하는 원점을 향해 내려오므로 \(\dot z=-v\ (v&gt;0)\). 따라서
+\[ \dot{\vb{a}}=-\frac{q^2}{2\pi\eps m}\frac{v}{z^3}\hat{\vb{z}}\qquad(-\hat{\vb{z}}\ \text{방향}). \]</li>
+
+<li><b>복사 반작용.</b>
+\[ \vb{F}_{\rm rad}=\frac{\muz q^2}{6\pi c}\dot{\vb{a}}=-\frac{\muz q^4}{12\pi^2\eps m c}\frac{v}{z^3}\hat{\vb{z}}. \]</li>
+
+<li><b>부호가 말하는 것.</b> \(\vb{F}_{\rm rad}\)는 \(-\hat{\vb{z}}\), 즉 <b>Coulomb 힘 \(\vb{F}\)와 같은 방향</b>이다. 브레이크가 아니라 <em>가속기</em>다! 전하는 복사를 내면서도 복사 반작용 덕분에 (그것이 없을 때보다) <b>더 많은</b> 에너지를 얻는다.</li>
+
+<li><b>에너지는 어디서 오나.</b> 계 전체는 분명히 복사로 에너지를 잃고 있다. 그런데 <em>입자</em>는 얻는다. 답: 근접장(near field)에서 온다. 붕괴하는 쌍극자 주변에서는 Poynting 벡터가 가까운 곳에서는 <b>안쪽</b>을, 먼 곳에서는 바깥쪽을 향한다. 장이 양쪽으로 에너지를 뱉으면서, 그중 일부가 입자에게 되돌아가는 것이다.</li>
+
+<li><b>교훈.</b> "복사 반작용(radiation reaction)"이라는 이름이 오해를 부른다. Griffiths의 지적대로 <b>장 반작용(field reaction)</b>이 정확한 이름이다. \(\vb{F}_{\rm rad}\propto\dot{\vb{a}}\)이므로, 가속도가 순간적으로 0이어도(따라서 복사가 없어도) 이 힘은 0이 아닐 수 있고, 반대로 등가속도(\(\dot a=0\))처럼 <em>복사는 하는데 반작용은 0</em>인 경우도 있다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \vb{F}_{\rm rad}=\frac{\muz q^2}{6\pi c}\dot{\vb{a}}=-\frac{\muz q^4}{12\pi^2\eps m c}\frac{v}{z^3}\hat{\vb{z}}\quad(\vb{F}\text{와 같은 방향 — 가속시킨다})\ } \]
+<p class="note">\(\vb{F}_{\rm rad}\)는 순간 복사 일률과 무관하다. 에너지 보존은 <em>계가 초기 상태로 돌아오는 구간에 걸쳐 평균</em>했을 때만 \(\int\vb{F}_{\rm rad}\cdot\vb{v}\,\dd t=-\int P_{\rm Larmor}\dd t\)를 보장한다. <b>검산</b> ① 차원: \(\muz q^2\dot a/c=(\mathrm{T\,m/A})(\mathrm{C^2})(\mathrm{m/s^3})/(\mathrm{m/s})\)를 풀면 N ✓. ② 섭동 크기: \(\left|\frac{F_{\rm rad}}{F}\right|=\tau\left|\frac{\dot a}{a}\right|=\frac{2\tau v}{z}\), 전자에서 \(\tau\sim10^{-23}\,\mathrm{s}\)이므로 \(z\gg\tau v\)인 한 무시할 수 있다 ✓ — 원자 크기(\(10^{-10}\,\mathrm{m}\))에 \(v\sim10^6\,\mathrm{m/s}\)면 \(\sim10^{-7}\). ③ \(q\to0\) 또는 \(v\to0\): \(F_{\rm rad}\to0\) ✓. ④ \(z\to\infty\): \(F_{\rm rad}\to0\) — 멀리 있으면 가속도 변화가 느려 반작용이 없다 ✓.</p></div>
+
+<div class="qz" data-q="ex11.5-a"><div class="qq"><b>+α</b> Abraham–Lorentz 공식의 <b>병리</b>를 직접 확인하라. (ⅰ) 외력이 전혀 없을 때 \(ma=m\tau\dot a\)를 풀어 <em>runaway solution</em>을 보이고, (ⅱ) runaway를 배제하면 왜 <em>preacceleration</em>(힘이 걸리기 <b>전에</b> 가속이 시작됨)이 생기는지, \(t&lt;0\)에 0, \(t&gt;0\)에 \(F_0\)인 계단 힘에 대해 정확히 풀어라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>(ⅰ) Runaway.</b> 외력이 없으면 Newton 제2법칙은 \(F_{\rm rad}=ma\), 즉
+\[ m\tau\dot a=ma\ \Longrightarrow\ \dot a=\frac{a}{\tau}\ \Longrightarrow\ \boxed{\ a(t)=a_0\,\ee^{t/\tau}\ } \]
+아무 힘도 없는데 가속도가 시간규모 \(\tau\)로 <b>지수적으로 폭발한다</b>. 전자의 경우 \(\tau=6\times10^{-24}\,\mathrm{s}\)이므로 \(10^{-22}\,\mathrm{s}\) 안에 우주적 규모가 된다. 명백히 비물리적이다. 이를 피하려면 \(a_0=0\)을 강제해야 한다.</p>
+<p><b>(ⅱ) Preacceleration.</b> 외력이 있으면
+\[ a=\tau\dot a+\frac{F(t)}{m}. \]
+이것은 1계 선형 미분방정식이다. \(\ee^{-t/\tau}\)를 적분인자로 쓰되, 발산하지 않는 해를 고르면(즉 \(t\to+\infty\)에서 \(a\ee^{-t/\tau}\to0\)) 유일한 해는
+\[ a(t)=\frac{1}{\tau}\ee^{t/\tau}\int_t^{\infty}\ee^{-t'/\tau}\frac{F(t')}{m}\,\dd t'. \]
+<b>적분 상한이 미래</b>라는 점을 눈여겨보라 — 지금의 가속도가 <em>앞으로 받을 힘</em>으로 결정된다.</p>
+<p><b>계단 힘에 적용.</b> \(F=0\ (t&lt;0)\), \(F=F_0\ (t&gt;0)\):
+<br>· \(t&gt;0\): \(\displaystyle a=\frac{F_0}{m\tau}\ee^{t/\tau}\int_t^\infty \ee^{-t'/\tau}\dd t'=\frac{F_0}{m\tau}\ee^{t/\tau}\cdot\tau\ee^{-t/\tau}=\frac{F_0}{m}\) — 정상 ✓.
+<br>· \(t&lt;0\): \(\displaystyle a=\frac{F_0}{m\tau}\ee^{t/\tau}\int_0^\infty \ee^{-t'/\tau}\dd t'=\frac{F_0}{m}\ee^{t/\tau}\).
+\[ \boxed{\ a(t)=\begin{cases}\dfrac{F_0}{m}\ee^{t/\tau}, & t&lt;0\\[6pt]\dfrac{F_0}{m}, & t&gt;0\end{cases}\ } \]</p>
+<p><b>해석.</b> 힘이 걸리기도 전에 입자가 이미 가속하고 있다 — <b>인과성 위반</b>이다. 다만 "미리 아는" 시간이 \(\tau\sim10^{-24}\,\mathrm{s}\)뿐이라, 빛이 전자의 고전 반지름을 건너는 시간 규모다. 이 규모에서는 고전 전기역학 자체가 이미 무효(양자역학 영역)라고 보는 것이 표준적 태도다.</p>
+<p><b>덧붙임 — 왜 \(a\)가 연속인가.</b> 중성 입자라면 \(a=F/m\)이라 힘이 튈 때 \(a\)도 튄다. 그러나 전하가 있으면 \(a\)는 위 적분식에서 보듯 언제나 <b>연속</b>이다: 복사 반작용이 \(a\)의 급변을 감쇠시킨다. 문제는 그 대가가 preacceleration이라는 점이다. 두 병리(runaway와 preacceleration)는 동전의 양면이며, "점전하"라는 개념 자체가 고전 전기역학에서 무리라는 신호로 읽는 것이 보통이다.</p></div></div>
+
+<div class="qz" data-q="ex11.5-b"><div class="qq"><b>+α</b> "복사 반작용 ≠ 복사 일률"을 세 가지 운동에서 정면으로 확인하라. (ⅰ) 반지름 \(R\), 속력 \(v\)의 <b>등속원운동</b>, (ⅱ) 진폭 \(A\), 진동수 \(\omega\)의 <b>단순조화운동</b>, (ⅲ) 중력장 속 <b>등가속도 자유낙하</b>. 각각에 대해 \(\vb{F}_{\rm rad}\), 그것을 상쇄하려 추가로 넣어야 할 힘의 일률 \(P_e\), 그리고 Larmor 일률 \(P\)를 비교하라. (\(m\tau=\muz q^2/6\pi c\))</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>(ⅰ) 등속원운동.</b> \(\vb{w}=R(\cos\omega t,\sin\omega t,0)\), \(\vb{a}=-\omega^2\vb{w}\)이므로
+\[ \dot{\vb{a}}=-\omega^2\dot{\vb{w}}=-\omega^2\vb{v}\ \Longrightarrow\ \vb{F}_{\rm rad}=m\tau\dot{\vb{a}}=-m\tau\omega^2\vb{v}. \]
+<b>속도에 정확히 반대</b> — 진짜 브레이크다. 이를 상쇄하려면 \(\vb{F}_e=+m\tau\omega^2\vb{v}\)를 걸어야 하고
+\[ P_e=\vb{F}_e\cdot\vb{v}=m\tau\omega^2v^2. \]
+한편 Larmor: \(P=m\tau a^2=m\tau\omega^4R^2=m\tau\omega^2(\omega R)^2=m\tau\omega^2v^2\).
+\[ \boxed{\ P_e=P\quad(\text{순간적으로도 정확히 일치})\ }\ \checkmark \]
+이유: 원운동은 매 순간 "같은 상태"의 반복이라 근접장에 저장되는 에너지가 변하지 않는다.</p>
+<p><b>(ⅱ) 단순조화운동.</b> \(w=A\cos\omega t\), \(v=-A\omega\sin\omega t\), \(a=-\omega^2 w\), \(\dot a=-\omega^2 v\). 역시 \(\vb{F}_{\rm rad}=-m\tau\omega^2\vb{v}\), \(\vb{F}_e=+m\tau\omega^2\vb{v}\):
+\[ P_e=m\tau\omega^2v^2=m\tau\omega^4A^2\sin^2\omega t,\qquad P=m\tau a^2=m\tau\omega^4A^2\cos^2\omega t. \]
+<b>순간적으로는 완전히 어긋난다</b>(\(\sin^2\) vs \(\cos^2\)) — 심지어 \(P_e=0\)인 순간에 복사는 최대다! 그러나 한 주기 평균은
+\[ \langle P_e\rangle=\langle P\rangle=\tfrac12 m\tau\omega^4A^2\ \checkmark \]
+차이는 근접장에 에너지가 들락날락하는 것으로 설명된다. 이것이 Abraham–Lorentz 공식이 "주기 하나에 대한 평균에서만" 유도되는 이유다.</p>
+<p><b>(ⅲ) 등가속도 자유낙하.</b> \(a=g=\)상수 \(\Rightarrow\dot a=0\):
+\[ \vb{F}_{\rm rad}=0,\qquad P_e=0,\qquad\text{그러나}\qquad P=m\tau g^2\neq0. \]
+<b>반작용은 전혀 없는데 복사는 하고 있다.</b> 가장 극단적인 역설이다. "그 에너지는 어디서 오나?"에 대한 고전적 답은 다시 근접장이다 — 그러나 상태가 초기로 돌아오지 않으므로 Eq. (11.78)의 평균 논증 자체가 적용되지 않고, 엄밀한 처리는 상대론적 Abraham–Lorentz–Dirac 방정식과 등가원리 논쟁(등가속 관측자에게 이 복사가 보이는가?)으로 이어진다. 학부 수준의 정답은 <b>"Abraham–Lorentz 공식은 주기적(혹은 초기 상태로 복귀하는) 운동에 대해서만 신뢰할 수 있다"</b>이다.</p>
+<p><b>정리표.</b>
+<br>· 원운동: \(P_e=P\) (순간적으로도) — 정상상태.
+<br>· 조화진동: \(P_e\neq P\) 순간적으로, \(\langle P_e\rangle=\langle P\rangle\) — 주기 평균에서만.
+<br>· 등가속: \(P_e=0\neq P\) — 평균 논증 자체가 무효.
+<br>이 세 줄이 Example 11.5의 메시지("radiation reaction은 misnomer")를 정량적으로 뒷받침한다.</p></div></div>

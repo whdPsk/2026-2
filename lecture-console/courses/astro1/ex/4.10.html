@@ -1,0 +1,13 @@
+<div class="exq"><span class="examtag">PPT Review Q① · 9/17 수업</span><br>The electric field of a moving charge can be separated into
+\[ \mathbf E(\mathbf x,t)=q\left[\frac{\hat{\mathbf n}-\boldsymbol\beta}{\gamma^2\kappa^3R^2}\right]_{\rm ret}+\frac qc\left[\frac{\hat{\mathbf n}\times\{(\hat{\mathbf n}-\boldsymbol\beta)\times\dot{\boldsymbol\beta}\}}{\kappa^3R}\right]_{\rm ret} \]
+Identify the <b>velocity field term</b> and explain why it falls off as \(\sim R^{-2}\).<br>(움직이는 전하의 전기장에서 속도장 항을 찾고 왜 \(R^{-2}\)로 감소하는지 설명하라.) [[L06.s3a]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>첫 항 = 속도장</div><ol>
+<li>첫 항은 \(\dot{\boldsymbol\beta}\)를 포함하지 않고 \(\boldsymbol\beta\)(속도)에만 의존 → 속도장(velocity field). [[F14.04, F14.05]]</li>
+<li>분모 \(R^2\): β→0이면 \(\gamma=\kappa=1\) → \(q\hat{\mathbf n}/R^2\) = 정지 전하의 쿨롱 장. 즉 속도장은 "움직이는 쿨롱 장"이고, 쿨롱 법칙처럼 \(R^{-2}\). [[S0917.03, S0917.06]]</li>
+<li>분자 \(\hat{\mathbf n}-\boldsymbol\beta\)는 등속 외삽된 현재 위치를 향함. [[F14.07, S0917.04]]</li>
+<li>에너지 관점: \(S\propto E^2\propto R^{-4}\), 구면 넓이 \(\propto R^2\) → 통과 파워 \(\propto R^{-2}\to0\). 속도장은 전하에 "붙어 다니는" 장이고 멀리 에너지를 운반하지 않는다.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>속도장 = \(q(\hat{\mathbf n}-\boldsymbol\beta)/(\gamma^2\kappa^3R^2)\). 차원상 쿨롱 장의 일반화라 \(R^{-2}\); 가속도와 무관하므로 등속 전하도 갖는다. κ→0(관측자 향해 β→1)이면 강해짐(비밍). [[S0917.05]]</p></div>
+<div class="trap"><b>함정</b>"속도장이니 v=0이면 0"은 오답 — v=0에서도 쿨롱 장이 남는다. [[S0917.07]]</div>
+<div class="qz" data-q="ex4.10-a"><div class="qq"><b>+α</b> β = 0.5로 관측자를 향해 정면으로 다가오는 전하(n̂∥β)의 속도장은 같은 R의 정지 전하 쿨롱 장의 몇 배?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>κ = 1−0.5 = 0.5, γ² = 1/(1−0.25) = 4/3, |n̂−β| = 0.5 → 0.5/(4/3 × 0.125) = 3배.</p></div></div>
+<div class="qz" data-q="ex4.10-b"><div class="qq"><b>+α</b> β ⊥ n̂(옆으로 지나감, κ=1)이면 β=0.5에서 속도장 크기는 쿨롱 장의 몇 배?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>|n̂−β| = √(1+0.25) = 1.118, γ² = 4/3 → 1.118/(4/3) ≈ 0.84배.</p></div></div>

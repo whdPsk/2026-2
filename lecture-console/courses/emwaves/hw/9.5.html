@@ -1,0 +1,16 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(z=0\)에서 변위 연속:
+\[g_I(-v_1t)+h_R(v_1t)=g_T(-v_2t).\]
+\(u\equiv -v_1t\)로 두면 \(g_I(u)+h_R(-u)=g_T\!\left(\tfrac{v_2}{v_1}u\right)\) … (1)<br>
+기울기 연속 \(\partial_z f|_{0^-}=\partial_z f|_{0^+}\):
+\[g_I'(u)+h_R'(-u)=g_T'\!\left(\tfrac{v_2}{v_1}u\right) … (2)\]
+(1)을 \(u\)로 미분: \(g_I'(u)-h_R'(-u)=\frac{v_2}{v_1}g_T'\left(\frac{v_2}{v_1}u\right)\) … (3)<br>
+(2)+(3): \(2g_I'(u)=\left(1+\frac{v_2}{v_1}\right)g_T'\left(\frac{v_2}{v_1}u\right)\). 적분(적분상수는 무한대에서 0이므로 0):
+\[g_T\!\left(\tfrac{v_2}{v_1}u\right)=\frac{2v_2}{v_1+v_2}\,g_I(u).\]
+\(w=\frac{v_2}{v_1}u\)로 바꾸고, (1)에 되대입하면
+\[\boxed{\;g_T(w)=\frac{2v_2}{v_1+v_2}\,g_I\!\left(\frac{v_1}{v_2}w\right),\qquad h_R(w)=\frac{v_2-v_1}{v_2+v_1}\,g_I(-w)\;}\]
+즉 \(h_R(z+v_1t)=\frac{v_2-v_1}{v_2+v_1}g_I[-(z+v_1t)]\), \(g_T(z-v_2t)=\frac{2v_2}{v_1+v_2}g_I\!\left[\frac{v_1}{v_2}(z-v_2t)\right]\).<br>
+사인파 극한에서 Eq. 9.30의 진폭비 \(\frac{v_2-v_1}{v_2+v_1}\), \(\frac{2v_2}{v_1+v_2}\)와 일치.
+<div class="alabel">감점 포인트</div>
+반사파는 파형이 좌우 반전(\(g_I(-w)\))되고, 투과파는 인수 \(v_1/v_2\)만큼 가로로 늘어난다(폭 변화). 진폭만 바꾸고 끝내면 감점.</div><!--/sol-->

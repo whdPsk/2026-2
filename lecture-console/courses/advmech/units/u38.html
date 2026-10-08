@@ -1,0 +1,45 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 무한히 긴 단색파는 신호를 전달할 수 없다 — 언제 시작하고 끝났는지 정보가 없으므로. 신호는 파속(wave packet)으로 보낸다. 진동수가 조금 다른 두 파동을 더하면 맥놀이 포락선이 생기는데(U27과 같은 수학), 그 포락선은 위상속도로 움직일까? \(\Delta\omega/\Delta k\)라는 다른 속도로 움직일까?</div>
+
+<h4>13.9 군속도와 파속 <span class="en">group velocity and wave packets</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>두 파동의 합: 포락선의 속도 <b>(필수)</b></div>
+<ol>
+<li>\(\Psi_1=Ae^{i(\omega t-kx)}\), \(\Psi_2=Ae^{i[(\omega+\Delta\omega)t-(k+\Delta k)x]}\).</li>
+<li>합의 실수부:
+\[ \Psi=2A\cos\left(\frac{\Delta\omega}2t-\frac{\Delta k}2x\right)\cos\left[\left(\omega+\frac{\Delta\omega}2\right)t-\left(k+\frac{\Delta k}2\right)x\right]. \]
+빠른 진동 × 느린 포락선 = 공간의 맥놀이.</li>
+<li>포락선 위상 일정 → <b>군속도</b>
+\[ U=\frac{\Delta\omega}{\Delta k}\ \longrightarrow\ \boxed{\ U=\od\omega k\bigg|_{k_0}\ } \]
+비분산 매질(\(\omega=vk\))이면 \(U=V\).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>파속 적분과 군속도 — 교재 식 (13.111)–(13.117)</div>
+<ol>
+<li>연속 스펙트럼: \(\Psi(x,t)=\int A(k)e^{i(\omega t-kx)}\dd k\), \(A(k)\)가 \(k_0\) 근처 좁은 대역에서만 크다 = <b>파속</b>(Schrödinger의 용어).</li>
+<li>\(\omega(k)\approx\omega_0+\omega'_0(k-k_0)\). 지수를 정리하면
+\[ \omega t-kx=(\omega_0t-k_0x)+(k-k_0)(\omega'_0t-x) . \]</li>
+<li>\[ \Psi\approx e^{i(\omega_0t-k_0x)}\underbrace{\int A(k)e^{i(k-k_0)(\omega'_0t-x)}\dd k}_{\text{포락선: }x-\omega'_0t\text{의 함수}} \]
+포락선이 모양을 유지하며 \(U=\omega'_0\)로 이동. 빠른 인자 \(e^{i(\omega_0t-k_0x)}\)는 위상속도 \(V=\omega_0/k_0\).</li>
+<li>\(U\)와 \(V\)의 관계: \(k=\omega/v\)에서 \(\frac1U=\od k\omega=\frac{v-\omega\,\dd v/\dd\omega}{v^2}\) →
+\[ U=\frac{v_0}{1-\dfrac{\omega_0}{v_0}\left(\od v\omega\right)_0} . \]
+정상 분산(\(\dd v/\dd\omega&lt;0\))이면 \(U&lt;V\).</li>
+<li><b>신호 속도</b>: 정보는 파속으로만 → 신호는 군속도로(비분산·정상 분산 매질에서). "이상(anomalous)" 분산 영역에서는 군속도가 신호 속도보다 커지거나 음수가 될 수 있다(Sommerfeld–Brillouin, 1914) — 상대론 위반 아님.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>loaded string의 군속도</div>
+<ol>
+<li>\(\omega=\omega_c\sin(kd/2)\) (\(0\le k\le\pi/d\)). \(U=\frac{\omega_cd}2\cos\frac{kd}2\), \(V=\frac{\omega_c\sin(kd/2)}{k}\).</li>
+<li>장파장: \(U=V=\sqrt{\tau/\rho}\). 경계 \(k=\pi/d\): \(U=0\) — 차단 진동수에서 에너지가 전달되지 않는다(정상파). \(V=\omega_cd/\pi\ne0\)인데도.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 군속도</div>
+\[ U=\od\omega k\Big|_{k_0},\qquad V=\frac\omega k,\qquad U=\frac{v_0}{1-(\omega_0/v_0)(\dd v/\dd\omega)_0} \]
+<p class="note">포락선(정보·에너지)은 \(U\), 마루는 \(V\). loaded string: \(U=\frac{\omega_cd}2\cos\frac{kd}2\), 차단에서 0.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u38-1"><div class="qq">(시험형) 파속 적분을 \(\omega(k)\)의 1차 전개로 근사해 군속도 \(U=\dd\omega/\dd k\)를 유도하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 2의 2–3단계. 핵심 항등식: \(\omega t-kx=(\omega_0t-k_0x)+(k-k_0)(\omega'_0t-x)\) (\(k_0x\)를 더하고 빼기).</p></div></div>
+
+<div class="qz" data-q="u38-2"><div class="qq">깊은 물의 표면 중력파는 \(\omega=\sqrt{gk}\)이다. 군속도와 위상속도의 비는? 배가 만든 파속 안에서 마루들은 어느 쪽으로 이동해 보이는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(V=\sqrt{g/k}\), \(U=\tfrac12\sqrt{g/k}\) → \(U/V=1/2\). 마루가 포락선보다 두 배 빨라서, 파속의 뒤에서 생긴 마루가 앞으로 이동해 앞쪽에서 사라진다.</p></div></div>
+
+<div class="qz" data-q="u38-3"><div class="qq">상대론적 자유 입자의 de Broglie 파 \(\hbar\omega=\sqrt{(\hbar k)^2c^2+m^2c^4}\)에 대해 \(UV=c^2\)임을 보여라. \(V&gt;c\)는 문제인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\omega^2=c^2k^2+\mu^2\) → \(2\omega\,\dd\omega=2c^2k\,\dd k\) → \(U=c^2k/\omega=c^2/V\). \(U=\frac{pc^2}{E}=u\) (입자 속도) \(&lt;c\), 따라서 \(V=c^2/u&gt;c\). 위상속도는 정보를 나르지 않으므로 문제없다(U43 연결).</p></div></div>

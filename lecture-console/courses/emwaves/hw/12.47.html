@@ -1,0 +1,17 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> \(S\)에서 \(q_A\)는 정지 → 순수 Coulomb 장, \(\vb{B}=0\). \(q_B\)의 위치 \((0,d,0)\)에서</p>
+\[ \vb{E}=\frac{q_A}{4\pi\eps d^{2}}\hat{\vb{y}},\qquad \boxed{\ \vb{F}=q_B\vb{E}=\frac{q_Aq_B}{4\pi\eps d^{2}}\hat{\vb{y}}\ } \]
+<p>(\(q_B\)가 움직여도 \(\vb{B}=0\)이라 자기력은 없다.)</p>
+
+<p><b>(b)-(i) 힘 변환으로.</b> \(\bar S\)는 \(+x\)로 \(v\), 입자 \(q_B\)는 \(S\)에서 \(u_x=v\). 일반 변환식 Eq. 12.66:</p>
+\[ \bar F_y=\frac{F_y}{\gamma(1-\beta u_x/c)}=\frac{F_y}{\gamma(1-v^{2}/c^{2})}=\gamma F_y \]
+\[ \boxed{\ \bar{\vb{F}}=\frac{\gamma q_Aq_B}{4\pi\eps d^{2}}\hat{\vb{y}}\ } \]
+
+<p><b>(b)-(ii) 장으로 직접.</b> \(\bar S\)에서 \(q_B\)는 정지, \(q_A\)는 \(-v\hat{\vb{x}}\)로 움직인다. 등속 점전하의 장(Ex. 12.14):</p>
+\[ \bar{\vb{E}}=\frac{q_A}{4\pi\eps}\frac{1-v^{2}/c^{2}}{[1-(v^{2}/c^{2})\sin^{2}\theta]^{3/2}}\frac{\hat{\vb{R}}}{R^{2}}. \]
+<p>\(q_A\)가 \(\bar y\)축을 지나는 순간 관측점은 \(\theta=90^{\circ}\)이므로 인자는 \((1-v^{2}/c^{2})/(1-v^{2}/c^{2})^{3/2}=\gamma\):</p>
+\[ \bar{\vb{E}}=\frac{\gamma q_A}{4\pi\eps d^{2}}\hat{\vb{y}}. \]
+<p>\(q_B\)가 정지해 있으므로 자기장은 힘을 주지 못하고 \(\bar{\vb{F}}=q_B\bar{\vb{E}}=\gamma q_Aq_B/(4\pi\eps d^{2})\,\hat{\vb{y}}\) — (i)과 일치 ✓.</p>
+<div class="alabel">감점 포인트</div>
+(b)에서 Eq. 12.68(\(\bar F_\perp=F_\perp/\gamma\))을 그대로 쓰는 것. 그 식은 <b>입자가 \(S\)에서 정지</b>할 때만 유효하다. 여기선 \(S\)에서 움직이므로 일반식 12.66을 써야 하고, 그 결과 \(\gamma\)로 나누는 게 아니라 <b>곱한다</b>.</div><!--/sol-->

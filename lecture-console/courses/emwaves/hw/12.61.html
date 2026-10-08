@@ -1,0 +1,10 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>12.57에 의해 \(\partial_\nu G^{\mu\nu}=0\)은 순환 항등식과 동치이므로, 그것만 확인하면 된다. \(F^{\mu\nu}=\partial^{\mu}A^{\nu}-\partial^{\nu}A^{\mu}\)를 대입:</p>
+\[ \partial^{\lambda}F^{\mu\nu}+\partial^{\mu}F^{\nu\lambda}+\partial^{\nu}F^{\lambda\mu} \]
+\[ =\underbrace{\partial^{\lambda}\partial^{\mu}A^{\nu}}_{(1)}-\underbrace{\partial^{\lambda}\partial^{\nu}A^{\mu}}_{(2)}+\underbrace{\partial^{\mu}\partial^{\nu}A^{\lambda}}_{(3)}-\underbrace{\partial^{\mu}\partial^{\lambda}A^{\nu}}_{(1)}+\underbrace{\partial^{\nu}\partial^{\lambda}A^{\mu}}_{(2)}-\underbrace{\partial^{\nu}\partial^{\mu}A^{\lambda}}_{(3)}=0 \]
+<p>편미분이 교환하므로(\(\partial^{\lambda}\partial^{\mu}=\partial^{\mu}\partial^{\lambda}\)) 같은 번호끼리 짝지어 <b>완전히 상쇄</b>된다.</p>
+\[ \boxed{\ F^{\mu\nu}=\partial^{\mu}A^{\nu}-\partial^{\nu}A^{\mu}\ \Longrightarrow\ \partial_\nu G^{\mu\nu}=0\ \text{(항등적으로)}\ } \]
+<p><b>의미:</b> 4-퍼텐셜을 도입하는 순간 <b>동차(homogeneous) Maxwell 방정식 두 개</b>(\(\divg\vb{B}=0\), Faraday)는 공짜로 만족된다. 남는 것은 비동차 방정식 \(\partial_\nu F^{\mu\nu}=\muz J^{\mu}\)뿐이고, Lorenz 게이지 \(\partial_\mu A^{\mu}=0\)에서 그것이 \(\Box^{2}A^{\mu}=-\muz J^{\mu}\)로 정리된다. 이것이 퍼텐셜 형식을 쓰는 이유다.</p>
+<div class="alabel">감점 포인트</div>
+\(G^{\mu\nu}\)를 직접 성분별로 계산하려고 시간을 쓰는 것 — 12.57의 결과를 인용하면 세 줄이면 끝난다.</div><!--/sol-->

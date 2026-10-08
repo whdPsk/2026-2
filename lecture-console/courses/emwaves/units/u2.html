@@ -1,0 +1,142 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 부피 안의 전하 전체가 받는 힘을 <em>부피적분 없이</em> 경계면 적분만으로 계산할 수 있다면, 그 피적분량은 "단위 넓이당 힘", 즉 압력·전단응력의 차원 \(\mathrm{N/m^2}\)을 가져야 한다. 장으로 만들 수 있는 그런 양은 \(\eps E^2\), \(B^2/\muz\) 꼴이어야 하고, 방향 정보를 담으려면 벡터로는 부족하고 <em>지표 두 개</em>가 필요할 것이다. 또 \(\eps E_iE_j\)와 \(\eps E^2\delta_{ij}\)의 상대 계수는 어떤 대칭이 결정할까? 그리고 U1에서 자기항이 일률 계산에서 사라졌던 것과 달리, 운동량 계산에서는 \(\vb{J}\times\vb{B}\)가 살아남는다 — 왜 그런지 먼저 스스로 말해 보라.</div>
+
+<h4>8.2.1 전기동역학에서의 뉴턴 제3법칙 <span class="en">Newton's third law in electrodynamics</span></h4>
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 1</span>제3법칙이 깨지는 명시적 배열 (Fig. 8.3)</div>
+<ol>
+<li><b>배열.</b> 동일한 전하 \(q\) 두 개. \(q_1\)은 \(x\)축을 따라 원점을 향해 속력 \(v\)로, \(q_2\)는 \(y\)축을 따라 원점을 향해 같은 속력으로 접근한다(레일에 물려 방향·속력이 고정되어 있다고 가정).</li>
+<li><b>전기력.</b> 등속으로 움직이는 점전하의 \(\vb{E}\)는 Coulomb 법칙 그대로는 아니지만(10장) <em>순간 위치에서 방사 방향</em>을 향한다는 사실은 유지된다. 따라서 전기력은 두 전하를 잇는 선을 따라 작용하고, 이 성분만 보면 제3법칙이 성립한다.</li>
+<li><b>자기력 — 여기가 핵심.</b> 움직이는 점전하의 \(\vb{B}\)는 Biot–Savart로 주어지지 않지만, 운동축을 <em>감아 도는</em> 방향이라는 사실은 유지된다.
+<br>· \(q_2\)의 위치에서 \(q_1\)이 만드는 \(\vb{B}_1\)은 지면 <em>안쪽</em> ⇒ \(q_2\)가 받는 자기력은 \(+x\) 쪽(오른쪽).
+<br>· \(q_1\)의 위치에서 \(q_2\)가 만드는 \(\vb{B}_2\)는 지면 <em>바깥쪽</em> ⇒ \(q_1\)이 받는 자기력은 \(+y\) 쪽(위쪽).</li>
+<li><b>결론.</b> 두 자기력은 크기가 같더라도 <em>서로 반대 방향이 아니다</em>(하나는 \(+x\), 다른 하나는 \(+y\)). 즉 \(\vb{F}_{12}\neq-\vb{F}_{21}\).
+\[ \boxed{\ \text{정전기·정자기에서는 제3법칙이 성립하지만, 전기동역학에서는 깨진다.}\ } \]</li>
+<li><b>왜 심각한가.</b> 입자계의 운동량 보존 증명은 "내부 힘들이 쌍으로 상쇄된다"는 제3법칙에 의존한다. 제3법칙이 깨지면 \(\sum_i \vb{F}_i^{\text{int}}\neq0\)이 되어 \(d\vb{p}_{\text{mech}}/dt\neq0\)이다.</li>
+<li><b>구제 방법.</b> 이미 장에 <em>에너지</em>를 부여했으므로 <em>운동량</em>도 부여하는 것이 자연스럽다. 입자가 잃은 운동량은 장이 가져간다. 장의 운동량까지 합쳐야 비로소 총 운동량이 보존된다. §8.2.3(U3)에서 이를 정량화한다.</li>
+</ol>
+</div>
+
+<h4>8.2.2 Maxwell 변형력 텐서 <span class="en">the Maxwell stress tensor</span></h4>
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 2</span>힘 밀도 \(\vb{f}=\rho\vb{E}+\vb{J}\times\vb{B}\)를 순수 장 표현으로 (Eq. 8.14 → 8.16)</div>
+<ol>
+<li><b>출발.</b> 부피 \(\mathcal V\) 안 전하가 받는 총 전자기력과 힘 밀도:
+\[ \vb{F}=\int_{\mathcal V}(\rho\vb{E}+\vb{J}\times\vb{B})\,d\tau,\qquad \vb{f}=\rho\vb{E}+\vb{J}\times\vb{B}. \]
+U1과 달리 자기항이 살아남는다 — 자기력은 <em>일</em>은 하지 않지만 <em>운동량</em>은 확실히 전달하기 때문이다(힘은 \(\vb{v}\)에 수직일 뿐, 0이 아니다).</li>
+<li><b>원천 제거(표준 수법).</b> Maxwell (i) \(\rho=\eps\nabla\cdot\vb{E}\), (iv) \(\vb{J}=\frac{1}{\muz}\nabla\times\vb{B}-\eps\frac{\partial\vb{E}}{\partial t}\)를 대입:
+\[ \vb{f}=\eps(\nabla\cdot\vb{E})\vb{E}+\left(\frac{1}{\muz}\nabla\times\vb{B}-\eps\frac{\partial\vb{E}}{\partial t}\right)\times\vb{B}. \]</li>
+<li><b>시간 미분항을 완전미분으로 정리한다.</b> 곱의 미분에서
+\[ \frac{\partial}{\partial t}(\vb{E}\times\vb{B})=\frac{\partial\vb{E}}{\partial t}\times\vb{B}+\vb{E}\times\frac{\partial\vb{B}}{\partial t}, \]
+Faraday \(\partial\vb{B}/\partial t=-\nabla\times\vb{E}\)를 넣으면
+\[ \frac{\partial\vb{E}}{\partial t}\times\vb{B}=\frac{\partial}{\partial t}(\vb{E}\times\vb{B})+\vb{E}\times(\nabla\times\vb{E}). \]
+<i>왜?</i> \(\partial_t(\vb{E}\times\vb{B})\)를 따로 떼어내야 나중에 "장 운동량 밀도"로 해석할 수 있다.</li>
+<li><b>정리하면</b>
+\[ \vb{f}=\eps\big[(\nabla\cdot\vb{E})\vb{E}-\vb{E}\times(\nabla\times\vb{E})\big]-\frac{1}{\muz}\big[\vb{B}\times(\nabla\times\vb{B})\big]-\eps\frac{\partial}{\partial t}(\vb{E}\times\vb{B}). \]</li>
+<li><b>대칭성을 위해 \(\frac{1}{\muz}(\nabla\cdot\vb{B})\vb{B}\)를 더한다.</b> \(\nabla\cdot\vb{B}=0\)이므로 <em>공짜</em>다. 이 한 수가 \(\vb{E}\)와 \(\vb{B}\)의 형태를 완전히 대칭으로 만들어 텐서를 한 줄로 쓸 수 있게 해준다.</li>
+<li><b>곱셈 규칙 4를 쓴다.</b>
+\[ \nabla(E^2)=2(\vb{E}\cdot\nabla)\vb{E}+2\,\vb{E}\times(\nabla\times\vb{E})
+\ \Rightarrow\ \vb{E}\times(\nabla\times\vb{E})=\tfrac12\nabla(E^2)-(\vb{E}\cdot\nabla)\vb{E}, \]
+\(\vb{B}\)에 대해서도 동일. 이로써 \(-\vb{E}\times(\nabla\times\vb{E})\)가 \((\vb{E}\cdot\nabla)\vb{E}\)와 기울기 항으로 쪼개진다.</li>
+<li><b>최종 형태 (Eq. 8.16).</b>
+\[ \vb{f}=\eps\big[(\nabla\cdot\vb{E})\vb{E}+(\vb{E}\cdot\nabla)\vb{E}\big]+\frac{1}{\muz}\big[(\nabla\cdot\vb{B})\vb{B}+(\vb{B}\cdot\nabla)\vb{B}\big]-\frac12\nabla\!\left(\eps E^2+\frac{1}{\muz}B^2\right)-\eps\frac{\partial}{\partial t}(\vb{E}\times\vb{B}). \]
+보기에는 흉하지만, 앞의 네 항이 정확히 어떤 텐서의 <em>발산</em>임을 알아채면 끝난다.</li>
+</ol>
+</div>
+
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 3</span>텐서 정의 → \(\vb{f}=\nabla\cdot\overleftrightarrow{T}-\eps\muz\,\partial\vb{S}/\partial t\) → 표면적분 공식</div>
+<ol>
+<li><b>정의 (Eq. 8.17).</b>
+\[ T_{ij}\equiv\eps\left(E_iE_j-\tfrac12\delta_{ij}E^2\right)+\frac{1}{\muz}\left(B_iB_j-\tfrac12\delta_{ij}B^2\right). \]
+지표 \(i,j\in\{x,y,z\}\)이므로 성분은 9개. \(\delta_{ij}\)는 Kronecker 델타. 예:
+\[ T_{xx}=\tfrac12\eps(E_x^2-E_y^2-E_z^2)+\tfrac{1}{2\muz}(B_x^2-B_y^2-B_z^2),\qquad
+T_{xy}=\eps E_xE_y+\frac{1}{\muz}B_xB_y. \]</li>
+<li><b>벡터와의 축약.</b> 지표가 두 개이므로 벡터와 좌·우 두 방식으로 내적할 수 있다:
+\[ (\vb{a}\cdot\overleftrightarrow{T})_j=\sum_i a_iT_{ij},\qquad (\overleftrightarrow{T}\cdot\vb{a})_j=\sum_i T_{ji}a_i. \]
+\(T_{ij}=T_{ji}\)(대칭)이므로 실제로는 둘이 같다.</li>
+<li><b>발산 성분을 직접 계산한다.</b>
+\[ (\nabla\cdot\overleftrightarrow{T})_j=\eps\Big[(\nabla\cdot\vb{E})E_j+(\vb{E}\cdot\nabla)E_j-\tfrac12\nabla_jE^2\Big]+\frac{1}{\muz}\Big[(\nabla\cdot\vb{B})B_j+(\vb{B}\cdot\nabla)B_j-\tfrac12\nabla_jB^2\Big]. \]
+이는 유도 2의 7단계 앞부분과 <em>정확히</em> 일치한다.</li>
+<li><b>따라서 (Eq. 8.19)</b>
+\[ \boxed{\ \vb{f}=\nabla\cdot\overleftrightarrow{T}-\eps\muz\frac{\partial\vb{S}}{\partial t}\ },\qquad \vb{S}=\frac{1}{\muz}(\vb{E}\times\vb{B}). \]
+\(\eps\,\partial_t(\vb{E}\times\vb{B})=\eps\muz\,\partial_t\vb{S}\)를 썼다.</li>
+<li><b>부피 적분 + 발산 정리 (Eq. 8.20).</b>
+\[ \vb{F}=\oint_{\mathcal S}\overleftrightarrow{T}\cdot d\vb{a}-\eps\muz\frac{d}{dt}\int_{\mathcal V}\vb{S}\,d\tau. \]</li>
+<li><b>정적인 경우 (Eq. 8.21).</b> 둘째 항이 사라져
+\[ \boxed{\ \vb{F}=\oint_{\mathcal S}\overleftrightarrow{T}\cdot d\vb{a}\quad(\text{정적})\ } \]
+<b>부피적분이 표면적분으로 바뀌었다.</b> 내부에서 무슨 일이 벌어지는지 몰라도 경계에서의 장만 알면 총 힘이 나온다.</li>
+<li><b>물리적 해석.</b> \(T_{ij}\)는 "\(j\)방향을 향한 면 요소에 작용하는 \(i\)방향의 단위 넓이당 힘". 대각 성분 \(T_{xx},T_{yy},T_{zz}\)는 <b>압력(pressure)</b>, 비대각 성분은 <b>전단응력(shear)</b>이다. 부호 규약: 장선 방향으로는 장력(당김), 장선에 수직 방향으로는 밀어냄 — Faraday의 "고무줄 같은 장선" 직관과 정확히 일치한다.</li>
+</ol>
+</div>
+
+<div class="formula">
+<div class="ftitle">암기 — 변형력 텐서와 정적 힘 공식</div>
+\[ T_{ij}=\eps\left(E_iE_j-\tfrac12\delta_{ij}E^2\right)+\frac{1}{\muz}\left(B_iB_j-\tfrac12\delta_{ij}B^2\right) \]
+\[ \vb{f}=\nabla\cdot\overleftrightarrow{T}-\eps\muz\frac{\partial\vb{S}}{\partial t},\qquad
+\vb{F}=\oint_{\mathcal S}\overleftrightarrow{T}\cdot d\vb{a}-\eps\muz\frac{d}{dt}\int_{\mathcal V}\vb{S}\,d\tau \]
+<p class="note">시험 실전 팁: 정적 문제에서 \(\vb{F}=\oint\overleftrightarrow{T}\cdot d\vb{a}\)를 쓸 때 필요한 것은 보통 한 성분뿐이다. 대칭에 의해 힘의 방향이 \(\hat z\)임을 먼저 논증하고 \((\overleftrightarrow{T}\cdot d\vb{a})_z=T_{zx}da_x+T_{zy}da_y+T_{zz}da_z\)만 계산하라. \(\varphi\) 적분에서 \(\cos\varphi,\sin\varphi\) 항이 죽는 것을 이용하면 계산이 절반으로 준다.</p>
+</div>
+
+<div class="derive">
+<div class="dtitle"><span class="tag">유도 4</span>Example 8.2 — 균일하게 대전된 구의 "북반구"에 작용하는 힘</div>
+<ol>
+<li><b>설정.</b> 반지름 \(R\), 총전하 \(Q\)가 부피에 균일하게 분포한 정지한 구. 북반구(\(z&gt;0\) 부분)가 받는 총 힘을 구한다. 경계면은 두 조각: 반지름 \(R\)의 반구 껍질("bowl")과 \(\theta=\pi/2\)의 원판("disk").</li>
+<li><b>Bowl 조각.</b> \(d\vb{a}=R^2\sin\theta\,d\theta\,d\varphi\,\hat r\), 표면에서 \(\vb{E}=\frac{1}{4\pi\eps}\frac{Q}{R^2}\hat r\). 데카르트 성분 \(\hat r=(\sin\theta\cos\varphi,\sin\theta\sin\varphi,\cos\theta)\)를 써서
+\[ T_{zx}=\eps E_zE_x,\quad T_{zy}=\eps E_zE_y,\quad T_{zz}=\tfrac{\eps}{2}(E_z^2-E_x^2-E_y^2). \]</li>
+<li><b>세 항을 합치면 놀랍게 단순해진다.</b>
+\[ (\overleftrightarrow{T}\cdot d\vb{a})_z=\frac{\eps}{2}\left(\frac{Q}{4\pi\eps R}\right)^2\sin\theta\cos\theta\,d\theta\,d\varphi. \]
+(각도 항이 \(\sin^2\theta\cos^2\varphi+\sin^2\theta\sin^2\varphi+\frac12(\cos^2\theta-\sin^2\theta)\to\frac12\)로 모이는 것을 직접 확인하라 — 이 계산이 시험에 그대로 나온다.)</li>
+<li><b>적분.</b> \(\int_0^{2\pi}d\varphi=2\pi\), \(\int_0^{\pi/2}\sin\theta\cos\theta\,d\theta=\tfrac12\):
+\[ F_{\text{bowl}}=\frac{1}{4\pi\eps}\frac{Q^2}{8R^2}. \]</li>
+<li><b>Disk 조각.</b> 바깥 법선이 아래를 향하므로 \(d\vb{a}=-r\,dr\,d\varphi\,\hat z\). 구 <em>내부</em>이므로
+\[ \vb{E}=\frac{1}{4\pi\eps}\frac{Q}{R^3}\vb{r}=\frac{1}{4\pi\eps}\frac{Q}{R^3}r(\cos\varphi\,\hat x+\sin\varphi\,\hat y)\quad(E_z=0\ \text{on the disk}). \]
+따라서 \(T_{zz}=-\frac{\eps}{2}\left(\frac{Q}{4\pi\eps R^3}\right)^2r^2\)이고, \(da_z&lt;0\)이므로 부호가 뒤집혀
+\[ (\overleftrightarrow{T}\cdot d\vb{a})_z=+\frac{\eps}{2}\left(\frac{Q}{4\pi\eps R^3}\right)^2r^3\,dr\,d\varphi. \]</li>
+<li><b>적분.</b> \(\int_0^R r^3dr=R^4/4\):
+\[ F_{\text{disk}}=\frac{1}{4\pi\eps}\frac{Q^2}{16R^2}. \]</li>
+<li><b>합.</b>
+\[ \boxed{\ F=\frac{1}{4\pi\eps}\frac{3Q^2}{16R^2}\ \hat z\ } \]</li>
+<li><b>경계면의 자유도.</b> 문제의 전하를 <em>모두</em> 감싸고 <em>다른</em> 전하는 포함하지 않는 어떤 곡면을 잡아도 결과는 같다. 예컨대 \(z&gt;0\) 반공간 전체(무한 \(xy\) 평면 + 무한대의 반구, 후자는 \(E\to0\)이라 기여 없음)를 잡으면, \(r&gt;R\)인 평면 부분의 기여가
+\[ \frac{\eps}{2}\left(\frac{Q}{4\pi\eps}\right)^2 2\pi\int_R^\infty\frac{dr}{r^3}=\frac{1}{4\pi\eps}\frac{Q^2}{8R^2} \]
+로 bowl의 값과 정확히 같다. <b>교훈:</b> 변형력 텐서는 곡면 위의 장만 보고도 내부에서 벌어지는 일을 "냄새 맡는다".</li>
+</ol>
+</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u2-1"><div class="qq">[참/거짓+증명] "정전기 상황에서 \(\vb{F}=\oint_{\mathcal S}\overleftrightarrow{T}\cdot d\vb{a}\)는 곡면 \(\mathcal S\)를 어떻게 잡아도 항상 같은 값을 준다." 참이면 증명하고, 거짓이면 반례를 제시하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>거짓 — 조건부로만 참이다.</b> 정확한 진술은 "<em>관심 있는 전하를 모두 감싸고, 다른 전하는 하나도 포함하지 않는</em> 곡면이면 어떤 것을 잡아도 같다"이다.
+<b>증명(조건 하에서).</b> 정적일 때 \(\vb{f}=\nabla\cdot\overleftrightarrow{T}\)이고 \(\vb{f}=\rho\vb{E}\)는 전하가 있는 곳에서만 0이 아니다. 두 곡면 \(\mathcal S_1,\mathcal S_2\)가 같은 전하 집합을 감싸면 그 사이 껍질 영역에는 \(\rho=0\)이므로 \(\nabla\cdot\overleftrightarrow{T}=0\), 따라서 발산 정리에 의해 두 표면적분이 같다.
+<b>반례(조건이 깨질 때).</b> Example 8.2의 구에서 북반구만 감싸는 대신 <em>구 전체</em>를 감싸는 곡면(반지름 \(r&gt;R\)의 큰 구)을 잡으면 적분은 0이 된다 — 구 전체는 자기 자신에게 알짜 힘을 주지 않으므로. 이는 북반구가 받는 힘 \(3Q^2/(16\pi\cdot 4\pi\eps R^2)\ne0\)과 다르다. 즉 "감싸는 전하가 무엇인가"가 답을 결정한다.
+</div></div>
+
+<div class="qz" data-q="u2-2"><div class="qq">[점근·차원 분석] Example 8.2를 <em>속이 빈 균일 대전 구 껍질</em>(전하 \(Q\), 반지름 \(R\))로 바꾸면 북반구가 받는 힘은 \(F=C\cdot\frac{1}{4\pi\eps}Q^{m}R^{n}\)이다. \(m,n,C\)를 구하고, 솔리드 구의 결과 \(3/16\)과 비교해 어느 쪽이 큰지 <em>계산 전에</em> 물리적으로 예측한 뒤 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>지수:</b> 힘은 장에 대해 이차식이므로 \(m=2\), 차원상 \(\mathrm{N}=\frac{1}{4\pi\eps}\frac{\mathrm{C}^2}{\mathrm m^2}\)이므로 \(n=-2\). \(\boxed{m=2,\ n=-2}\).
+<b>계수 \(C\).</b> 껍질에서는 disk 조각이 기여하지 않는다 — 내부에 \(\vb{E}=0\)이므로 \(\overleftrightarrow{T}=0\). 남는 것은 bowl 기여뿐인데(적분 껍질을 \(r=R^+\)로 잡으면) 유도 4의 4단계 결과 그대로
+\[ F=\frac{1}{4\pi\eps}\frac{Q^2}{8R^2}\ \Rightarrow\ \boxed{C=\tfrac18}. \]
+동등하게 정전기 압력 \(P=\sigma^2/(2\eps)\)에 적도 원판 넓이 \(\pi R^2\)를 곱해도 같다: \(\sigma=Q/4\pi R^2\)이므로 \(P\pi R^2=Q^2/(32\pi\eps R^2)\) ✓.
+<b>비교:</b> \(\frac18=\frac{2}{16}&lt;\frac{3}{16}\) — 솔리드 구가 더 크다.
+<b>물리적 예측의 근거:</b> 껍질은 전하가 모두 반지름 \(R\)에 몰려 있어 서로 최대한 멀리 떨어져 있지만, 솔리드 구는 안쪽에도 전하가 있어 평균 분리 거리가 짧고 그만큼 반발이 세다. 실제로 솔리드 구의 자체 에너지 \(\frac{3}{5}\frac{Q^2}{4\pi\eps R}\)가 껍질의 \(\frac12\frac{Q^2}{4\pi\eps R}\)보다 큰 것과 같은 이유다.
+</div></div>
+
+<div class="qz" data-q="u2-3"><div class="qq">[교과서 Example 변형] 같은 부호의 점전하 \(q\) 두 개가 거리 \(2a\)만큼 떨어져 있다. 두 전하의 중간 평면 위에서 \(\overleftrightarrow{T}\)를 적분하여 한 전하가 다른 전하에 작용하는 힘을 구하고 Coulomb 법칙과 비교하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>(1) 중간 평면 위의 장.</b> 두 전하를 \(z=\pm a\)에 두면, 평면(\(z=0\)) 위 축에서 거리 \(s\)인 점에서 \(z\)성분은 상쇄되고 지름 방향만 남는다:
+\[ E=2\cdot\frac{1}{4\pi\eps}\frac{q}{s^2+a^2}\cdot\frac{s}{\sqrt{s^2+a^2}}\quad(\hat s\ \text{방향}),\qquad E_z=0. \]
+<b>(2) 필요한 성분.</b> 위쪽 전하를 감싸는 부피(\(z&gt;0\))를 잡으면 평면에서 바깥 법선은 \(-\hat z\)이므로 \(da_z=-da\). \(E_z=0\)이라 \(T_{zx}=T_{zy}=0\)이고
+\[ T_{zz}=\frac{\eps}{2}(E_z^2-E_x^2-E_y^2)=-\frac{\eps}{2}E^2. \]
+\[ F_z=\int T_{zz}\,da_z=\int\left(-\frac{\eps}{2}E^2\right)(-da)=\frac{\eps}{2}\int E^2\,da. \]
+부호가 \(+\)이므로 <b>척력</b> — 예상대로.
+<b>(3) 적분.</b> \(da=2\pi s\,ds\), \(E^2=4\left(\frac{q}{4\pi\eps}\right)^2\frac{s^2}{(s^2+a^2)^3}\):
+\[ \int E^2\,da=8\pi\left(\frac{q}{4\pi\eps}\right)^2\int_0^\infty\frac{s^3\,ds}{(s^2+a^2)^3},\qquad \int_0^\infty\frac{s^3ds}{(s^2+a^2)^3}=\frac{1}{4a^2}. \]
+\[ F_z=\frac{\eps}{2}\cdot\frac{8\pi}{4a^2}\left(\frac{q}{4\pi\eps}\right)^2=\boxed{\frac{1}{4\pi\eps}\frac{q^2}{(2a)^2}} \]
+분리 거리 \(2a\)의 Coulomb 법칙과 정확히 일치 ✓.
+<b>(4) 반대 부호일 때.</b> 중간 평면에서 지름 성분이 상쇄되고 \(z\)성분만 남아 \(T_{zz}=+\frac{\eps}{2}E_z^2\)가 되어 부호가 뒤집힌다 — <b>인력</b>. 크기는 같다. 이것이 "장선 방향으로는 장력, 수직 방향으로는 압력"이라는 해석의 가장 깨끗한 예다.
+</div></div>
+
+<div class="qz" data-q="u2-4"><div class="qq">[개념 설명] U1에서는 Lorentz 힘의 자기항이 곧바로 사라졌는데, U2의 힘 밀도 \(\vb{f}=\rho\vb{E}+\vb{J}\times\vb{B}\)에서는 살아남는다. 이 차이를 정확히 설명하고, 그 결과 U1과 U2에서 \(\vb{S}\)가 맡는 역할이 어떻게 달라지는지 서술하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>차이의 근원:</b> 일률은 \(\vb{F}\cdot\vb{v}\)라는 <em>스칼라 사영</em>이므로 \(\vb{v}\)에 수직한 자기력은 기여가 0이다. 그러나 힘 자체는 <em>벡터</em>이고, \(\vb{v}\)에 수직하다는 것이 0이라는 뜻은 아니다. 자기력은 에너지는 옮기지 않으면서 운동량은 옮긴다.
+<b>\(\vb{S}\)의 이중 역할:</b> U1에서 \(\vb{S}\) 자체는 <em>단위 넓이·단위 시간당 에너지 flux</em> \((\mathrm{W/m^2})\)다. U2/U3에서 \(\eps\muz\vb{S}=\vb{S}/c^2\)는 <em>단위 부피당 운동량</em> \((\mathrm{kg\,m^{-2}s^{-1}})\)이다. 같은 벡터가 전혀 다른 두 물리량을 나타낸다. 마찬가지로 \(\overleftrightarrow{T}\)도 이중 역할을 한다: \(\overleftrightarrow{T}\)는 면에 작용하는 응력, \(-\overleftrightarrow{T}\)는 운동량 흐름 밀도(운동량의 "전류밀도").
+<b>차원 확인:</b> \([\vb{S}/c^2]=\frac{\mathrm{J/(m^2 s)}}{\mathrm{m^2/s^2}}=\frac{\mathrm{J\,s}}{\mathrm{m^4}}=\frac{\mathrm{kg\,m/s}}{\mathrm{m^3}}\) ✓ 운동량 밀도.
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> \(\vb{f}=\rho\vb{E}+\vb{J}\times\vb{B}\)에서 출발해 (곱셈 규칙 4·6과 \((\nabla\cdot\vb{B})\vb{B}\) 삽입 트릭을 포함하여) \(T_{ij}\)의 정의를 스스로 만들어내고, Example 8.2를 참고 없이 끝까지 적분할 수 있다.</div>

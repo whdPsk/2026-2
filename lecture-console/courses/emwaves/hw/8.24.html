@@ -1,0 +1,26 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>회전하는 대전 원통은 그 자체로 솔레노이드다:
+\(K_a=\dfrac{Q\omega_a}{2\pi l}\), \(K_b=-\dfrac{Q\omega_b}{2\pi l}\).
+겹쳐 놓으면
+\[\vb{B}=\begin{cases}\dfrac{\muz Q(\omega_a-\omega_b)}{2\pi l}\hat{\vb{z}}, & s&lt;a\\[4pt]
+-\dfrac{\muz Q\omega_b}{2\pi l}\hat{\vb{z}}, & a&lt;s&lt;b\\[4pt]
+0,& s&gt;b\end{cases}\]
+\(\vb{E}\)는 \(a&lt;s&lt;b\) 에서만 \(\dfrac{Q}{2\pi\eps l s}\hat{\vb{s}}\).</p>
+<p><b>(a)</b> 겹치는 영역은 \(a&lt;s&lt;b\) 뿐:
+\[\vb{g}=\frac{\muz Q^{2}\omega_b}{4\pi^{2}l^{2}s}\hat{\boldsymbol\varphi},\quad
+\ell_z=\frac{\muz Q^{2}\omega_b}{4\pi^{2}l^{2}},\quad \mathcal{V}=\pi(b^{2}-a^{2})l\]
+\[\boxed{\;\vb{L}_{\rm final}=\frac{\muz Q^{2}\omega_b(b^{2}-a^{2})}{4\pi l}\,\hat{\vb{z}}\;}\]
+(\(\omega_a\)는 들어오지 않는다 — 안쪽 원통의 장은 \(\vb{E}\)가 없는 \(s&lt;a\) 에만 새로 기여하기 때문.)</p>
+<p><b>(b)</b> \(B_1\equiv\muz Q(\omega_a-\omega_b)/2\pi l\), \(B_2\equiv-\muz Q\omega_b/2\pi l\) 가 0에서 최종값으로 커질 때
+\[E_\varphi(a)=-\frac{\dot B_1a}{2},\qquad
+E_\varphi(b)=-\frac{\dot B_1a^{2}+\dot B_2(b^{2}-a^{2})}{2b}.\]
+토크를 시간적분하면
+\[L^{(a)}_z=-\frac{Qa^{2}B_1}{2},\qquad
+L^{(b)}_z=+\frac{Q}{2}\big[a^{2}B_1+(b^{2}-a^{2})B_2\big].\]
+합하면 \(B_1\) 항이 정확히 상쇄되어
+\[\boxed{\;\vb{L}_{\rm extra}=\frac{Q(b^{2}-a^{2})B_2}{2}\hat{\vb{z}}
+=-\frac{\muz Q^{2}\omega_b(b^{2}-a^{2})}{4\pi l}\,\hat{\vb{z}}\;}\]</p>
+<p>즉 (b) \(=-\)(a). 원통이 얻는 여분의 각운동량이 장에 남은 각운동량과 정확히 상쇄되어, Ex. 8.4의 결론 \(\vb{L}_{\rm total}\)은 그대로 유지된다 ✓</p>
+<div class="alabel">감점 포인트</div>
+회전하는 대전 원통 자체가 자기장을 만든다는 사실을 잊는 것. 이것이 문제 전체의 출발점이다.</div><!--/sol-->

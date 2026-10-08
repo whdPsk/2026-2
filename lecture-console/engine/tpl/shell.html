@@ -1,0 +1,114 @@
+<title>%%TITLE%% 학습 콘솔</title>
+<style>
+%%CSS%%
+</style>
+<script>
+window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']],processEscapes:true,
+ macros:{dd:'\\mathrm{d}',ee:'\\mathrm{e}',ii:'\\mathrm{i}',vb:['\\mathbf{#1}',1],uv:['\\hat{\\mathbf{#1}}',1],
+  curl:'\\nabla\\times',divg:'\\nabla\\cdot',grad:'\\nabla',pd:['\\frac{\\partial #1}{\\partial #2}',2],
+  od:['\\frac{\\mathrm{d} #1}{\\mathrm{d} #2}',2],tr:'\\operatorname{tr}',
+  Lag:'\\mathcal{L}'%%MACROS%%}},
+ svg:{fontCache:'global'},startup:{typeset:false},
+ options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg-full.js" defer></script>
+<header>
+  <div class="mark"><i>%%MARK%%</i><div><b>%%TITLE%%</b><s>%%MARKSUB%%</s></div></div>
+  <nav class="modes" id="modes">
+    <button data-view="study" aria-current="true">학습</button>
+    <button data-view="lecture">강의</button>
+    <button data-view="examples">Example</button>
+    <button data-view="formulas">공식집</button>
+    <button data-view="hw">과제</button>
+    <button data-view="status">현황</button>
+%%XNAV%%
+  </nav>
+  <span class="spacer"></span>
+  <span class="dday" id="dday"></span>
+  <span id="tex"></span>
+  <span id="sync"></span>
+  <button class="tool" id="t-help" aria-label="사용법">?</button>
+  <button class="tool" id="t-dark" aria-label="테마 전환">◐</button>
+</header>
+<div class="shell">
+<aside class="rail" id="rail">
+  <input id="q" class="tool" style="width:100%;padding:7px 10px;font-size:12.5px;margin-bottom:6px" type="search" placeholder="단원 검색  /" autocomplete="off">
+  <div class="rangesel" id="rsel"><button data-r="all" aria-pressed="true">전체</button><button data-r="lec" title="강의에서 다룬 단원만">강의 진도</button><button data-r="1" title="%%R1%%">중간</button><button data-r="2" title="%%R2%%">기말</button></div>
+  %%FRONTIER%%
+</aside>
+<main>
+
+<div class="view active" id="v-study"><div class="page">
+%%UNITS%%
+</div></div>
+
+<div class="view" id="v-lecture"><div class="page wide">
+%%LECTURE%%
+</div></div>
+
+<div class="view" id="v-examples"><div class="page">
+  <h1 class="vh">교과서 Example</h1>
+  <p class="vsub">%%EXINTRO%%</p>
+  <div class="filters" id="ef">
+    <button data-ch="all" aria-pressed="true">전체</button>
+    <button data-ch="lec" aria-pressed="false">★ 강의 지정</button>
+    %%EXCHBTN%%
+    <input id="eq" type="search" placeholder="번호·키워드 (예: 9.6)" autocomplete="off">
+    <span class="cnt" id="ecnt"></span>
+  </div>
+%%EXAMPLES%%
+</div></div>
+
+<div class="view" id="v-formulas"><div class="page">
+  <h1 class="vh">공식집</h1>
+  <p class="vsub">각 단원의 <b>암기</b> 상자를 장별로 모았습니다. 항목을 누르면 그 단원으로 이동합니다.</p>
+  <div id="fx-out"></div>
+</div></div>
+
+<div class="view" id="v-hw"><div class="page">
+%%HW%%
+</div></div>
+
+<div class="view" id="v-status"><div class="page wide">
+  <h1 class="vh">현황</h1>
+  <p class="vsub">단원별 진도와, 체크포인트에서 <b>더 볼 것</b>으로 표시한 항목을 모읍니다. 보라색 밑줄은 강의에서 이미 다룬 단원입니다.</p>
+  <div class="kpis">
+    <div class="kpi"><b id="k-lec">0</b><span>강의 진도 단원 숙달</span></div>
+    <div class="kpi"><b id="k-mid">0</b><span>중간범위 숙달 / %%NMID%%</span></div>
+    <div class="kpi"><b id="k-fin">0</b><span>기말범위 숙달 / %%NFIN%%</span></div>
+    <div class="kpi"><b id="k-read">0</b><span>본 단원 / %%NU%%</span></div>
+    <div class="kpi"><b id="k-weak">0</b><span>다시 볼 체크포인트</span></div>
+    <div class="kpi"><b id="k-done">0</b><span>맞힌 체크포인트</span></div>
+  </div>
+  <h3 style="font:700 15px/1.4 var(--sans);margin:0 0 8px">단원 진도</h3>
+  <div class="grid" id="st-grid"></div>
+  <h3 style="font:700 15px/1.4 var(--sans);margin:0 0 8px">다시 볼 체크포인트</h3>
+  <div class="weak" id="st-weak"></div>
+  %%LEDGER%%
+  <p style="margin-top:22px;display:flex;gap:10px;align-items:center;flex-wrap:wrap"><button class="tool" id="t-reset">진도 초기화</button>
+  <span class="confirmrow" id="reset-confirm" hidden>진도와 체크포인트 기록을 지웁니다(메모는 유지). <button class="tool" id="reset-yes" style="border-color:var(--bad);color:var(--bad)">지우기</button><button class="tool" id="reset-no">취소</button></span></p>
+  <p class="note">마지막 업데이트: %%BUILT%% · 반영된 강의자료 %%NLEC%%건 · 진도·메모는 계정에 저장되어 다른 기기에서도 이어집니다(로그인 상태일 때).</p>
+</div></div>
+%%XVIEW%%
+
+</main>
+</div>
+
+<dialog id="dlg-help">
+  <h3>사용법</h3>
+  <div class="tblwrap"><table class="simple">
+    <tr><td><kbd>←</kbd> <kbd>→</kbd></td><td>이전 / 다음 단원</td></tr>
+    <tr><td><kbd>/</kbd></td><td>단원 검색</td></tr>
+    <tr><td><kbd>1</kbd>–<kbd>6</kbd></td><td>학습 · 강의 · Example · 공식집 · 과제 · 현황</td></tr>
+    <tr><td><kbd>Esc</kbd></td><td>검색 해제 / 창 닫기</td></tr>
+  </table></div>
+  <p class="note" style="margin:12px 0 0">%%HELPNOTE%%%%EXAMSTYLE%%</p>
+  <div style="text-align:right;margin-top:14px"><button class="tool" id="help-close">닫기</button></div>
+</dialog>
+<div id="citepop" role="dialog" aria-label="원자료" hidden><div class="cph"><b id="cp-t"></b><button class="tool" id="cp-x" aria-label="닫기">✕</button></div><div class="cpl" id="cp-l"></div><div class="cpr" id="cp-r"></div><div class="cpn" id="cp-n"></div><a class="srclink" id="cp-a" target="_blank" rel="noopener">원본 파일 열기 ↗</a></div>
+
+<script type="application/json" id="amdata">%%DATA%%</script>
+<script>
+%%JS%%
+%%XJS%%
+</script>

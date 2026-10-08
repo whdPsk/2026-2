@@ -1,0 +1,148 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> Snell 법칙은 빛의 파동성만으로 나오는가, 아니면 전자기학의 세부 사항이 필요한가? 힌트: 물 위의 파도나 소리도 굴절한다. 다음으로, 특정 각도에서 반사광이 완전히 사라질 수 있다면 그것은 두 편광 모두에 대해서일까, 한쪽만일까? 마지막으로 조밀한 매질에서 성긴 매질로 갈 때 "굴절각이 90도를 넘는" 상황을 수학이 어떻게 처리할지 상상해 보라.</div>
+
+<h4>9.3.3 위상 정합에서 기하광학으로 <span class="en">phase matching → geometrical optics</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>위상 정합 → 입사면 · 반사법칙 · Snell 법칙 <b>(필수 암기 유도)</b></div>
+<ol>
+<li>세 파를 일반 방향으로 쓴다:
+\[ \tilde{\vb{E}}_I=\tilde{\vb{E}}_{0I}\ee^{\ii(\vb{k}_I\cdot\vb{r}-\omega t)},\quad \tilde{\vb{E}}_R=\tilde{\vb{E}}_{0R}\ee^{\ii(\vb{k}_R\cdot\vb{r}-\omega t)},\quad \tilde{\vb{E}}_T=\tilde{\vb{E}}_{0T}\ee^{\ii(\vb{k}_T\cdot\vb{r}-\omega t)} \]
+각 파의 \(\vb{B}\)는 \(\vb{B}=\frac1v\hat{\vb{k}}\times\vb{E}\).</li>
+<li>진동수는 광원이 정하므로 셋 다 같다. 속도는 매질에 따라 다르므로 파수가 다르다:
+\[ k_Iv_1=k_Rv_1=k_Tv_2=\omega \;\Longrightarrow\; k_I=k_R=\frac{n_1}{n_2}k_T \]</li>
+<li><b>핵심 논리.</b> 어떤 경계조건이든 그 구조는
+\[ (\;\;)\,\ee^{\ii\vb{k}_I\cdot\vb{r}}+(\;\;)\,\ee^{\ii\vb{k}_R\cdot\vb{r}}=(\;\;)\,\ee^{\ii\vb{k}_T\cdot\vb{r}}\qquad (z=0) \]
+이다. 이 등식이 <b>경계면 위 모든 점 \((x,y)\)에서, 모든 시각에</b> 성립해야 한다. 지수가 서로 다르면 \(x\)를 조금만 움직여도 등식이 깨진다(Prob. 9.16이 이를 엄밀히 증명). 따라서
+\[ \vb{k}_I\cdot\vb{r}=\vb{k}_R\cdot\vb{r}=\vb{k}_T\cdot\vb{r}\qquad(z=0) \]</li>
+<li>\(y=0\)로 놓고 모든 \(x\)에 대해 성립하려면 \(x\)성분이 같아야 하고, \(x=0\)로 놓으면 \(y\)성분이 같아야 한다:
+\[ (k_I)_x=(k_R)_x=(k_T)_x,\qquad (k_I)_y=(k_R)_y=(k_T)_y \]</li>
+<li><b>제1법칙(입사면).</b> 좌표축을 \(\vb{k}_I\)가 \(xz\)평면에 놓이도록 잡으면 \((k_I)_y=0\)이고, 위 관계에 의해 \(\vb{k}_R,\vb{k}_T\)도 \(y\)성분이 0이다. 즉 <b>세 파수 벡터와 법선이 한 평면(입사면)에 놓인다.</b></li>
+<li><b>제2법칙(반사법칙).</b> \(x\)성분 등식은
+\[ k_I\sin\theta_I=k_R\sin\theta_R=k_T\sin\theta_T \]
+그런데 \(k_I=k_R\)(같은 매질)이므로
+\[ \boxed{\theta_I=\theta_R} \]</li>
+<li><b>제3법칙(Snell).</b> \(k_I\sin\theta_I=k_T\sin\theta_T\)에 \(k=n\omega/c\)를 넣으면
+\[ n_1\sin\theta_I=n_2\sin\theta_T \quad\Longleftrightarrow\quad \boxed{\frac{\sin\theta_T}{\sin\theta_I}=\frac{n_1}{n_2}} \]</li>
+<li><b>가장 중요한 관찰:</b> 여기까지 전자기학의 <b>구체적</b> 경계조건은 전혀 쓰지 않았다. 오직 "경계면 위에서 지수가 맞아야 한다"는 것만 썼다. 그래서 물결파·음파도 같은 법칙을 따른다. 기하광학은 파동의 보편적 성질이지 전자기학 고유의 것이 아니다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>Fresnel 식 I — 편광이 입사면에 <b>나란한</b> 경우 (\(\parallel\), p-편광) <b>(필수 암기 유도)</b></div>
+<ol>
+<li>지수가 모두 소거되었으므로 경계조건은 진폭에 대한 대수식이 된다(Eq. 9.102):
+\[ \text{(i)}\;\epsilon_1(\tilde{\vb{E}}_{0I}+\tilde{\vb{E}}_{0R})_z=\epsilon_2(\tilde{\vb{E}}_{0T})_z,\qquad \text{(iii)}\;(\tilde{\vb{E}}_{0I}+\tilde{\vb{E}}_{0R})_{x,y}=(\tilde{\vb{E}}_{0T})_{x,y} \]
+\[ \text{(ii)}\;(\tilde{\vb{B}}_{0I}+\tilde{\vb{B}}_{0R})_z=(\tilde{\vb{B}}_{0T})_z,\qquad \text{(iv)}\;\frac{1}{\mu_1}(\tilde{\vb{B}}_{0I}+\tilde{\vb{B}}_{0R})_{x,y}=\frac{1}{\mu_2}(\tilde{\vb{B}}_{0T})_{x,y} \]</li>
+<li>편광이 입사면(\(xz\)평면) 안에 있으면 \(\vb{B}\)는 \(\pm\hat{\vb{y}}\)를 향하므로 \(B_z=0\) → 조건 (ii)는 \(0=0\)으로 무의미.</li>
+<li>조건 (i) (\(z\)성분, Griffiths 그림 9.15의 부호 규약):
+\[ \epsilon_1(-\tilde E_{0I}\sin\theta_I+\tilde E_{0R}\sin\theta_R)=\epsilon_2(-\tilde E_{0T}\sin\theta_T) \]</li>
+<li>조건 (iii) (\(x\)성분):
+\[ \tilde E_{0I}\cos\theta_I+\tilde E_{0R}\cos\theta_R=\tilde E_{0T}\cos\theta_T \]
+\(\theta_I=\theta_R\)를 쓰면
+\[ \tilde E_{0I}+\tilde E_{0R}=\alpha\,\tilde E_{0T},\qquad \boxed{\alpha\equiv\frac{\cos\theta_T}{\cos\theta_I}} \]</li>
+<li>조건 (iv) (\(y\)성분), \(B=E/v\):
+\[ \frac{1}{\mu_1v_1}(\tilde E_{0I}-\tilde E_{0R})=\frac{1}{\mu_2v_2}\tilde E_{0T} \;\Longrightarrow\; \tilde E_{0I}-\tilde E_{0R}=\beta\,\tilde E_{0T},\qquad \boxed{\beta\equiv\frac{\mu_1v_1}{\mu_2v_2}=\frac{\mu_1n_2}{\mu_2n_1}} \]
+Snell 법칙을 쓰면 조건 (i)도 이것과 <b>같은 식</b>으로 환원된다 — 즉 독립 조건은 두 개뿐이다.</li>
+<li>두 식을 연립한다. 더하면 \(2\tilde E_{0I}=(\alpha+\beta)\tilde E_{0T}\), 빼면 \(2\tilde E_{0R}=(\alpha-\beta)\tilde E_{0T}\):
+\[ \boxed{\;\tilde E_{0R}=\left(\frac{\alpha-\beta}{\alpha+\beta}\right)\tilde E_{0I},\qquad \tilde E_{0T}=\left(\frac{2}{\alpha+\beta}\right)\tilde E_{0I}\;}\qquad(\parallel) \]</li>
+<li>\(\alpha\)를 \(\theta_I\)만으로 쓰면(Snell 이용)
+\[ \alpha=\frac{\sqrt{1-\sin^2\theta_T}}{\cos\theta_I}=\frac{\sqrt{1-[(n_1/n_2)\sin\theta_I]^2}}{\cos\theta_I} \]
+수직 입사(\(\theta_I=0\))에서 \(\alpha=1\)이 되어 U9의 결과 \((1-\beta)/(1+\beta)\)로 정확히 환원된다 ✓.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>Fresnel 식 II — 편광이 입사면에 <b>수직인</b> 경우 (\(\perp\), s-편광, Prob. 9.17)</div>
+<ol>
+<li>이제 \(\vb{E}\)가 \(\hat{\vb{y}}\)를 향한다. \(E_z=0\)이므로 조건 (i)이 자명해지고, 대신 \(\vb{B}\)가 \(xz\)평면 안에 놓인다.</li>
+<li>조건 (iii): \(\vb{E}\)가 통째로 접선 성분이므로
+\[ \tilde E_{0I}+\tilde E_{0R}=\tilde E_{0T} \]</li>
+<li>조건 (iv)를 위해 \(\vb{B}\)의 \(x\)성분을 구한다. \(\hat{\vb{k}}_I=(\sin\theta_I,0,\cos\theta_I)\)에 대해
+\[ \hat{\vb{k}}_I\times\hat{\vb{y}}=(-\cos\theta_I,\,0,\,\sin\theta_I) \]
+따라서 \((B_I)_x=-\dfrac{\tilde E_{0I}}{v_1}\cos\theta_I\). 반사파는 \(\hat{\vb{k}}_R=(\sin\theta_I,0,-\cos\theta_I)\)이므로 \(\hat{\vb{k}}_R\times\hat{\vb{y}}=(\cos\theta_I,0,\sin\theta_I)\), 즉 \((B_R)_x=+\dfrac{\tilde E_{0R}}{v_1}\cos\theta_I\). 투과파는 \((B_T)_x=-\dfrac{\tilde E_{0T}}{v_2}\cos\theta_T\).</li>
+<li>조건 (iv)의 \(x\)성분:
+\[ \frac{1}{\mu_1}\left(-\frac{\tilde E_{0I}}{v_1}+\frac{\tilde E_{0R}}{v_1}\right)\cos\theta_I=-\frac{1}{\mu_2}\frac{\tilde E_{0T}}{v_2}\cos\theta_T \]
+부호를 정리하면
+\[ \tilde E_{0I}-\tilde E_{0R}=\frac{\mu_1v_1}{\mu_2v_2}\cdot\frac{\cos\theta_T}{\cos\theta_I}\,\tilde E_{0T}=\alpha\beta\,\tilde E_{0T} \]
+<b>\(\parallel\) 경우와의 유일한 차이:</b> \(\beta\)가 \(\alpha\beta\)로 바뀌고 \(\alpha\)가 1로 바뀐다.</li>
+<li>연립하면
+\[ \boxed{\;\tilde E_{0R}=\left(\frac{1-\alpha\beta}{1+\alpha\beta}\right)\tilde E_{0I},\qquad \tilde E_{0T}=\left(\frac{2}{1+\alpha\beta}\right)\tilde E_{0I}\;}\qquad(\perp) \]
+수직 입사에서 \(\alpha=1\)이므로 역시 U9 결과로 환원된다 ✓.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>Brewster 각 — 그리고 \(\perp\) 편광에는 왜 없는가</div>
+<ol>
+<li><b>\(\parallel\) 편광:</b> \(\tilde E_{0R}=0\)이려면 \(\alpha=\beta\). \(\alpha^2=\beta^2\)로 제곱해서 풀면
+\[ \frac{1-(n_1/n_2)^2\sin^2\theta_B}{1-\sin^2\theta_B}=\beta^2 \;\Longrightarrow\; \sin^2\theta_B=\frac{1-\beta^2}{(n_1/n_2)^2-\beta^2} \]</li>
+<li>보통의 경우 \(\mu_1\approx\mu_2\)이므로 \(\beta\approx n_2/n_1\). 대입하면 분모가 \((n_1/n_2)^2-(n_2/n_1)^2\), 정리 후
+\[ \sin^2\theta_B\approx\frac{\beta^2}{1+\beta^2} \;\Longrightarrow\; \tan^2\theta_B\approx\beta^2 \;\Longrightarrow\; \boxed{\tan\theta_B\approx\frac{n_2}{n_1}} \]</li>
+<li>기하학적 해석: \(\tan\theta_B=n_2/n_1\)와 Snell을 결합하면 \(\theta_B+\theta_T=90^\circ\)임을 보일 수 있다. 즉 <b>반사 방향과 투과 방향이 직각</b>일 때 반사가 사라진다. 투과파를 만드는 매질 속 쌍극자들이 자기 진동축 방향(반사 방향)으로는 복사하지 못하기 때문이다.</li>
+<li><b>\(\perp\) 편광에는 Brewster 각이 없다</b>(\(n_1=n_2\)인 자명한 경우 제외). 증명: \(\tilde E_{0R}=0\)이려면 \(\alpha\beta=1\), 즉 \(\mu_1=\mu_2\)일 때
+\[ \frac{\cos\theta_T}{\cos\theta_I}\cdot\frac{n_2}{n_1}=1 \;\Longrightarrow\; n_2\cos\theta_T=n_1\cos\theta_I \]
+양변 제곱: \(n_2^2\cos^2\theta_T=n_1^2\cos^2\theta_I\). 한편 Snell을 제곱하면 \(n_2^2\sin^2\theta_T=n_1^2\sin^2\theta_I\). <b>두 식을 더하면</b>
+\[ n_2^2=n_1^2 \]
+즉 두 매질이 광학적으로 구별되지 않는 경우뿐이다. □</li>
+<li><b>따라서 자연광(무편광)을 Brewster 각으로 입사시키면 반사광은 입사면에 수직한 편광만 남는다 — 완전 편광된 빛이다.</b></li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 5</span>강도 계수 \(R,T\)와 전반사·증발파</div>
+<ol>
+<li>경계면에 도달하는 단위면적당 일률은 \(\vb{S}\cdot\hat{\vb{z}}\)이므로 \(\cos\theta\) 인수가 붙는다:
+\[ I_I=\tfrac12\epsilon_1v_1E_{0I}^2\cos\theta_I,\quad I_R=\tfrac12\epsilon_1v_1E_{0R}^2\cos\theta_R,\quad I_T=\tfrac12\epsilon_2v_2E_{0T}^2\cos\theta_T \]</li>
+<li>\(\parallel\) 편광에 대해
+\[ R=\left(\frac{\alpha-\beta}{\alpha+\beta}\right)^2,\qquad T=\alpha\beta\left(\frac{2}{\alpha+\beta}\right)^2 \]
+검산: \(R+T=\dfrac{(\alpha-\beta)^2+4\alpha\beta}{(\alpha+\beta)^2}=1\) ✓ (Prob. 9.43의 에너지 보존).</li>
+<li>\(\theta_I\to90^\circ\)(스침 입사): \(\cos\theta_I\to0\)이므로 \(\alpha\to\infty\), 따라서 \(R\to1\). <b>어떤 매질이든 스치듯 보면 거울이 된다</b> — 밤에 젖은 도로가 반사하는 이유.</li>
+<li><b>전반사(total internal reflection).</b> \(n_1\gt n_2\)이면 Snell에서 \(\sin\theta_T=(n_1/n_2)\sin\theta_I\)가 1을 넘을 수 있다. 임계각은
+\[ \boxed{\theta_c=\sin^{-1}\!\left(\frac{n_2}{n_1}\right)} \]
+\(\theta_I\gt\theta_c\)이면
+\[ \cos\theta_T=\sqrt{1-\sin^2\theta_T}=\ii\sqrt{\sin^2\theta_T-1} \]
+가 <b>순허수</b>가 된다. 따라서 \(\alpha\)가 순허수이고, \(\left|\dfrac{\alpha-\beta}{\alpha+\beta}\right|=1\)(분자·분모가 켤레 관계) → \(R=1\), <b>100% 반사</b>. 도체 거울보다도 완벽하다.</li>
+<li>그렇다고 매질 2에 장이 없는 것은 아니다. \(\vb{k}_T\cdot\vb{r}=k_T(x\sin\theta_T+z\cos\theta_T)\)에서 \(z\) 항의 지수가 실수 감쇠가 되어
+\[ \tilde{\vb{E}}_T=\tilde{\vb{E}}_{0T}\,\ee^{-\kappa z}\ee^{\ii(kx-\omega t)},\qquad \kappa=\frac{\omega}{c}\sqrt{(n_1\sin\theta_I)^2-n_2^2},\quad k=\frac{\omega n_1}{c}\sin\theta_I \]
+이것이 <b>증발파(evanescent wave)</b>다. 경계면에 <b>나란히</b> 진행하며 수직 방향으로 지수적으로 죽고, 평균적으로 \(z\)방향 에너지를 전혀 나르지 않는다(Prob. 9.41). 광섬유·전반사 현미경·양자 터널링의 광학적 유비가 모두 여기서 나온다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 기하광학 3법칙과 Fresnel 식</div>
+\[ \theta_I=\theta_R,\qquad n_1\sin\theta_I=n_2\sin\theta_T,\qquad \alpha=\frac{\cos\theta_T}{\cos\theta_I},\quad \beta=\frac{\mu_1n_2}{\mu_2n_1} \]
+\[ \boxed{\;\left(\frac{\tilde E_{0R}}{\tilde E_{0I}}\right)_{\parallel}=\frac{\alpha-\beta}{\alpha+\beta},\qquad \left(\frac{\tilde E_{0R}}{\tilde E_{0I}}\right)_{\perp}=\frac{1-\alpha\beta}{1+\alpha\beta}\;} \]
+\[ \tan\theta_B\approx\frac{n_2}{n_1}\quad(\parallel \text{에만 존재}),\qquad \sin\theta_c=\frac{n_2}{n_1}\quad(n_1\gt n_2) \]
+<p class="note">외우는 요령: \(\parallel\)은 "\(\alpha\)와 \(\beta\)가 <b>따로</b>", \(\perp\)는 "\(\alpha\beta\)가 <b>한 덩어리</b>, 앞자리는 1". 두 경우 모두 \(\theta_I=0\)에서 \(\alpha=1\)이 되어 같은 식으로 만난다. 투과는 언제나 \(2/(\text{분모})\).</p></div>
+
+<div class="callout"><b class="head">편광 선글라스가 물 위 눈부심을 지우는 이유.</b> 호수·젖은 아스팔트·자동차 보닛에서 오는 반사광은 수평면에서 비스듬히 튀어나오므로, 입사면이 수직면이고 "입사면에 수직한 편광"은 곧 <b>수평 편광</b>이다. 유도 4에 따르면 반사광에는 이 수평 편광 성분이 압도적으로 많고, Brewster 각(물의 경우 \(\tan\theta_B=1.33\to\theta_B\approx53^\circ\)) 근처에서는 사실상 100% 수평 편광이다. 그래서 선글라스의 투과축을 <b>수직</b>으로 두면 이 눈부심만 골라 지운다. 낚시꾼이 편광 선글라스로 수면 아래를 볼 수 있는 것도 같은 원리다. 레이저 공동의 Brewster 창(Brewster window)은 이 사실을 역으로 이용해 한 편광만 손실 없이 통과시킨다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u10-1"><div class="qq">(참/거짓 + 증명 또는 반례) "Brewster 각으로 빛을 입사시키면 반사광이 완전히 사라진다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>거짓</b>(입사광이 무편광이거나 \(\perp\) 성분을 가질 경우). 사라지는 것은 <b>\(\parallel\) 편광 성분뿐</b>이다.
+<b>증명:</b> \(\theta_I=\theta_B\)에서 \(\alpha=\beta\)이므로 \(\left(\frac{\tilde E_{0R}}{\tilde E_{0I}}\right)_{\parallel}=\frac{\beta-\beta}{\beta+\beta}=0\) ✓. 그러나 같은 각에서 \(\perp\) 성분은
+\[ \left(\frac{\tilde E_{0R}}{\tilde E_{0I}}\right)_{\perp}=\frac{1-\beta^2}{1+\beta^2}\neq 0\qquad (n_1\neq n_2) \]
+예: 공기→유리(\
+\(\beta=1.5\))에서 \(\theta_B=\tan^{-1}1.5\approx56.3^\circ\)일 때 \(\left|\frac{1-\beta^2}{1+\beta^2}\right|=\frac{1.25}{3.25}\approx0.38\), 즉 \(R_\perp\approx0.15\)로 오히려 상당히 크다.
+<b>결론:</b> 무편광 빛을 Brewster 각으로 쏘면 반사광은 사라지지 않고, 대신 <b>입사면에 수직한 방향으로 100% 편광</b>된다. "반사광이 사라진다"가 참이 되려면 입사광 자체가 \(\parallel\) 편광이어야 한다.
+</div></div>
+
+<div class="qz" data-q="u10-2"><div class="qq">(점근 분석, 지수 명시) 스침 입사 극한 \(\theta_I\to90^\circ\)에서 \(1-R_\parallel\)이 \((\pi/2-\theta_I)\)의 몇 승으로 0에 가는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+\(\epsilon\equiv\pi/2-\theta_I\to0\)로 두면 \(\cos\theta_I=\sin\epsilon\approx\epsilon\). \(\theta_T\)는 \(\sin^{-1}(n_1/n_2)\)로 유한한 값에 접근하므로 \(\cos\theta_T\)는 유한. 따라서
+\[ \alpha=\frac{\cos\theta_T}{\cos\theta_I}\approx\frac{\cos\theta_T}{\epsilon}\propto\epsilon^{-1}\to\infty \]
+\[ R_\parallel=\left(\frac{\alpha-\beta}{\alpha+\beta}\right)^2=\left(\frac{1-\beta/\alpha}{1+\beta/\alpha}\right)^2\approx\left(1-\frac{2\beta}{\alpha}\right)^2\approx 1-\frac{4\beta}{\alpha} \]
+그러므로
+\[ 1-R_\parallel \approx \frac{4\beta}{\alpha}=\frac{4\beta}{\cos\theta_T}\,\epsilon \;\propto\; \epsilon^{1} \]
+<b>지수는 \(+1\)</b> — 선형으로 0에 접근한다. \(\perp\) 편광도 \(\alpha\beta\to\infty\)이므로 같은 지수 \(+1\)이다.
+<b>물리:</b> 어떤 투명 매질도 스치듯 보면 완전 반사체가 된다. 밤에 젖은 도로가 눈부시게 반짝이는 이유, 잔잔한 호수 건너편 풍경이 선명히 비치는 이유가 이 지수 1 수렴이다. 각도가 법선에서 \(1^\circ\)(=0.017 rad) 이내면 유리(\(\beta=1.5,\cos\theta_T\approx0.75\))의 투과는 \(4\times1.5/0.75\times0.017\approx13\%\)에 불과하다.
+</div></div>
+
+<div class="qz" data-q="u10-3"><div class="qq">(Prob. 9.18 변형, 계산기 없이) 공기→다이아몬드(\(n=2.42\))에 대해 (a) Brewster 각, (b) 다이아몬드→공기의 임계각, (c) 그리고 물(\(n=4/3\))의 \(\theta_B,\theta_c\)를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>(a) 다이아몬드 Brewster 각:</b> \(\tan\theta_B=n_2/n_1=2.42\). \(\tan60^\circ=1.73\), \(\tan70^\circ=2.75\)이므로 그 사이. 실제 \(\theta_B\approx 67.5^\circ\). 이때 굴절각은 \(\theta_T=90^\circ-67.5^\circ=22.5^\circ\)(직각 관계 검산).
+<b>(b) 다이아몬드→공기 임계각:</b>
+\[ \sin\theta_c=\frac{1}{2.42}\approx0.413 \]
+\(\sin24^\circ\approx0.407\)이므로 \(\theta_c\approx24.4^\circ\). <b>매우 작다</b> — 다이아몬드 안으로 들어온 빛은 \(24^\circ\)만 넘어도 전부 갇혀 여러 면에서 반사되다가 특정 면으로 몰려 나온다. 이것이 다이아몬드의 "불꽃"이고, 세공사가 각도를 정밀하게 깎는 이유다.
+<b>(c) 물:</b> \(\tan\theta_B=4/3\approx1.333\)이므로 \(\theta_B\approx53.1^\circ\) (3-4-5 삼각형!). 임계각은 \(\sin\theta_c=3/4=0.75\), \(\sin48.6^\circ\approx0.75\)이므로 \(\theta_c\approx48.6^\circ\).
+<b>비교:</b> 굴절률이 클수록 \(\theta_B\)는 커지고 \(\theta_c\)는 작아진다. 두 각은 \(\tan\theta_B=n_2/n_1\), \(\sin\theta_c=n_2/n_1\)로 <b>같은 비를 서로 다른 삼각함수에 넣은</b> 것임에 주목하라. 단, \(\theta_B\)는 성긴→조밀 방향에서, \(\theta_c\)는 조밀→성긴 방향에서만 의미가 있다.
+</div></div>
+
+<div class="qz" data-q="u10-4"><div class="qq">(개념) 기하광학의 세 법칙을 유도할 때 전자기학의 구체적 경계조건(Eq. 9.75)을 전혀 쓰지 않았다. 그렇다면 무엇이 그 법칙들을 결정했는가? 이 사실의 함의는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>결정한 것:</b> (1) 세 파가 모두 <b>같은 진동수</b>를 갖는다는 사실(선형 매질이므로 진동수가 섞이지 않음), (2) 경계조건이 <b>경계면 위 모든 점에서 항상</b> 성립해야 한다는 요구. 이 둘만으로 지수부가 일치해야 하고, 그로부터 \(\vb{k}\)의 접선 성분 보존이 나온다:
+\[ \vb{k}_{I\parallel}=\vb{k}_{R\parallel}=\vb{k}_{T\parallel} \]
+<b>함의 셋.</b>
+(i) <b>보편성.</b> 물결파·음파·물질파도 같은 법칙을 따른다. 실제로 결정 표면에서의 전자 회절, 지진파의 굴절이 모두 Snell 법칙을 쓴다.
+(ii) <b>대칭성의 언어로 재해석.</b> 경계면은 접선 방향으로 <b>병진 대칭</b>이다. Noether식으로 말하면 그 대칭이 접선 운동량(\(\hbar\vb{k}_\parallel\))을 보존시킨다. 법선 방향 대칭이 깨져 있으므로 \(k_z\)는 보존되지 않고, 그래서 굴절이 일어난다.
+(iii) <b>역할 분담.</b> 구체적 전자기 경계조건은 "어디로 가는가"(각도)가 아니라 <b>"얼마나 가는가"(진폭)</b>를 결정한다. 그것이 Fresnel 식이며, 편광 의존성·Brewster 각처럼 기하광학이 예측할 수 없는 모든 현상이 여기서 나온다. 시험에서 "각도" 문제와 "진폭·강도" 문제를 이 기준으로 분류하면 접근이 명확해진다.
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> 위상 정합에서 3법칙을 유도하고, 두 편광의 Fresnel 식을 경계조건에서 직접 세우며, Brewster 각과 임계각·증발파를 설명할 수 있다.</div>

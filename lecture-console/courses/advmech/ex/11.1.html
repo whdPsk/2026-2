@@ -1,0 +1,13 @@
+<div class="exq"><b>상황.</b> 천장에 고정된 실이 균일 원통(질량 \(M\), 반지름 \(R\))에 감겨 있다. \(t=0\)에 정지 상태에서 놓으면 실이 풀리며 원통이 떨어지고 돈다. 장력 \(T\), 병진·각가속도, 각속도를 구한다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>병진 + CM 회전 + 구속.</div>
+<ol>
+<li>아래 +: \(M\ddot y=Mg-T\).</li>
+<li>CM 둘레: \(I\ddot\theta=RT\), \(I=\tfrac12MR^2\).</li>
+<li>구속: \(y=R\theta\) → \(\ddot y=R\ddot\theta\). 2번에서 \(T=\frac{I\ddot y}{R^2}=\tfrac12M\ddot y\).</li>
+<li>1번에 대입: \(\tfrac32M\ddot y=Mg\) → \(\ddot y=\tfrac23g\), \(\ddot\theta=\frac{2g}{3R}\), \(T=\tfrac13Mg\), \(\omega=\frac{2gt}{3R}\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \ddot y=\tfrac23g,\quad T=\tfrac13Mg,\quad \omega(t)=\frac{2g}{3R}t\ } \]
+<p class="note"><b>검산</b> ① 에너지: \(Mgy=\tfrac12M\dot y^2+\tfrac12I\omega^2=\tfrac34M\dot y^2\) → \(\dot y^2=\tfrac43gy=2(\tfrac23g)y\) ✓. ② \(I\to0\)이면 자유낙하, \(T\to0\) ✓. ③ 장력 \(&lt;Mg\) ✓.</p></div>
+<div class="qz" data-q="ex11.1-a"><div class="qq"><b>+α</b> 실을 손으로 잡고 위로 끌어 원통의 CM이 <b>제자리에 떠 있게</b> 하려면 손은 어떤 가속도로 끌어올려야 하는가? 장력은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>CM 정지 → \(T=Mg\). 회전: \(\tfrac12MR^2\ddot\theta=RMg\) → \(\ddot\theta=2g/R\). 실이 풀리는 속도 = 손의 상승 속도 → 손의 가속도 \(R\ddot\theta=2g\) (위로).</p></div></div>
+<div class="qz" data-q="ex11.1-b"><div class="qq"><b>+α</b> 같은 원통이 경사각 \(\alpha\)인 면을 미끄러지지 않고 구를 때 가속도와 필요한 최소 정지마찰계수는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(Ma=Mg\sin\alpha-f\), \(\tfrac12MR^2(a/R)=fR\) → \(f=\tfrac12Ma\) → \(a=\tfrac23g\sin\alpha\), \(f=\tfrac13Mg\sin\alpha\le\mu Mg\cos\alpha\) → \(\mu\ge\tfrac13\tan\alpha\).</p></div></div>

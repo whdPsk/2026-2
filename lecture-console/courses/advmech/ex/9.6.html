@@ -1,0 +1,18 @@
+<div class="exq"><b>상황.</b> 정지 표적(\(m_2\))에 대한 탄성 산란에서 \(V&gt;v'_1\) (즉 \(m_1&gt;m_2\))인 경우, \(m_1\)의 LAB 산란각 \(\psi\)가 가질 수 있는 최댓값은? \(m_1\gg m_2\)와 \(m_1=m_2\)일 때는? (강의노트는 이 예제를 본문 식 (9.37)로 직접 풀었다.)</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>속도 원 그림(교재 그림 9-14)에서 원점이 원 밖에 있다 → 접선.</div>
+<ol>
+<li>\(\vb v_1=\vb V+\vb v'_1\), \(\vb v'_1\)의 끝은 \(\vb V\) 끝점을 중심으로 한 반지름 \(v'_1\)인 원 위.</li>
+<li>원점에서 원 위의 점으로 그은 직선 중 입사 방향과의 각이 가장 큰 것은 <b>접선</b>. 접점에서 반지름(\(\vb v'_1\))과 접선(\(\vb v_1\))은 수직.</li>
+<li>빗변 \(V\), 대변 \(v'_1\)인 직각삼각형:
+\[ \sin\psi_{\max}=\frac{v'_1}{V}=\frac{m_2}{m_1}\qquad(\text{U5 유도 1: }V/v'_1=m_1/m_2). \]</li>
+<li>극한: \(m_1\gg m_2\) → \(\psi_{\max}\to0\) (산란 없음). \(m_1=m_2\) → \(\psi_{\max}=90°\). 일반적으로 \(m_1&gt;m_2\)이면 \(m_1\)은 90°보다 뒤로 산란될 수 없다.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \psi_{\max}=\sin^{-1}\frac{m_2}{m_1}\quad(m_1\ge m_2)\ } \]
+<p class="note"><b>검산</b> ① \(\tan\psi=\sin\theta/(\cos\theta+x)\), \(x=m_1/m_2\)를 \(\theta\)로 미분해 0으로 두면 \(\cos\theta=-1/x\), 그때 \(\tan\psi=\dfrac{\sqrt{1-1/x^2}}{x-1/x}=\dfrac{1}{\sqrt{x^2-1}}\) → \(\sin\psi=1/x\) ✓ (접선 논증과 일치). ② 그때 CM 각 \(\theta^*=\cos^{-1}(-m_2/m_1)&gt;90°\) — CM에서 뒤로 튄 입자가 LAB 최대각을 만든다. ③ U6 유도 3의 근호 \(\sqrt{(m_2/m_1)^2-\sin^2\psi}\)가 실수일 조건과 같다 ✓.</p></div>
+<div class="qz" data-q="ex9.6-a"><div class="qq"><b>+α</b> 수치 + 에너지: 중양성자(\(m_1\approx2\)u)가 정지한 양성자(\(m_2\approx1\)u)에 탄성 산란한다. (a) \(\psi_{\max}\) (b) \(\psi=\psi_{\max}\)에서 \(T_1/T_0\)를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>(a) \(\sin\psi_{\max}=1/2\) → \(\psi_{\max}=30°\).</p>
+<p>(b) 접점에서 근호 = 0: \(\dfrac{T_1}{T_0}=\dfrac{m_1^2}{M^2}\cos^2\psi_{\max}=\dfrac49\cdot\dfrac34=\dfrac13\). 또는 직각삼각형으로 \(v_1^2=V^2-v'^2_1\), \(V=\tfrac23u_1\), \(v'_1=\tfrac13u_1\): \(v_1^2/u_1^2=\tfrac49-\tfrac19=\tfrac13\) ✓.</p></div></div>
+<div class="qz" data-q="ex9.6-b"><div class="qq"><b>+α</b> 반대 질문: \(m_1&lt;m_2\)일 때 반동 입자 \(m_2\)의 최대 LAB 각 \(\zeta_{\max}\)와, \(m_1\)이 정확히 되튀는(\(\psi=180°\)) 경우의 반동각을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(2\zeta=\pi-\theta\) (질량 무관): \(\theta\to0\)일 때 \(\zeta\to90°\) — 반동각은 90° 미만의 모든 값이 가능하고 질량비가 최대각을 제한하지 않는다(\(\theta=0\) 극한에서 반동 에너지 0).</p>
+<p>\(\psi=180°\): \(m_1&lt;m_2\)이면 \(\theta=180°\) (정면충돌) → \(\zeta=0\): 표적은 정면으로 밀려 나간다 ✓.</p></div></div>

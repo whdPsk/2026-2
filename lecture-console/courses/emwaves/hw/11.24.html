@@ -1,0 +1,23 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>\(z=+d/2\)에 \(+p_0\cos\omega t\,\hat{\mathbf z}\), \(z=-d/2\)에 \(-p_0\cos\omega t\,\hat{\mathbf z}\). 총 쌍극자모멘트는 0.</p>
+<p><b>(a)</b> \(z_0\hat{\mathbf z}\)에 놓인 쌍극자의 복사대 퍼텐셜에서 \(r\to r-z_0\cos\theta\)(위상만 중요)로 놓고 \(f(d/2)-f(-d/2)\approx d\,f'(0)\):</p>
+\[ \sin\!\big[\omega(t-r/c)+\tfrac{\omega z_0\cos\theta}{c}\big]\approx\sin u+\frac{\omega z_0\cos\theta}{c}\cos u,\quad u\equiv\omega(t-r/c) \]
+\[ \boxed{\;V=-\frac{p_0d\,\omega^2}{4\pi\epsilon_0c^2}\frac{\cos^2\theta}{r}\cos u,\qquad
+\mathbf A=-\frac{\mu_0p_0d\,\omega^2}{4\pi c}\frac{\cos\theta}{r}\cos u\;\hat{\mathbf z}\;} \]
+<p><b>(b)</b> 복사대에서는 위상을 미분하는 항만 남는다(\(\partial_r\to-(\omega/c)\partial_u\)):</p>
+\[ \nabla V\to-\frac{p_0d\omega^3}{4\pi\epsilon_0c^3}\frac{\cos^2\theta}{r}\sin u\,\hat{\mathbf r},\qquad
+\frac{\partial\mathbf A}{\partial t}=\frac{\mu_0p_0d\omega^3}{4\pi c}\frac{\cos\theta}{r}\sin u\,\hat{\mathbf z}. \]
+<p>\(\hat{\mathbf z}=\cos\theta\hat{\mathbf r}-\sin\theta\hat{\boldsymbol\theta}\), \(1/\epsilon_0c^3=\mu_0/c\)를 쓰면 \(\hat{\mathbf r}\) 성분이 상쇄되고</p>
+\[ \boxed{\;\mathbf E=\frac{\mu_0p_0d\,\omega^3}{4\pi c}\frac{\sin\theta\cos\theta}{r}\sin[\omega(t-r/c)]\,\hat{\boldsymbol\theta},\qquad
+\mathbf B=\frac1c\hat{\mathbf r}\times\mathbf E=\frac{\mu_0p_0d\omega^3}{4\pi c^2}\frac{\sin\theta\cos\theta}{r}\sin u\,\hat{\boldsymbol\varphi}\;} \]
+<p><b>(c)</b></p>
+\[ \mathbf S=\frac1{\mu_0c}E^2\hat{\mathbf r}=\frac{\mu_0p_0^2d^2\omega^6}{16\pi^2c^3}\frac{\sin^2\theta\cos^2\theta}{r^2}\sin^2u\;\hat{\mathbf r},\qquad
+\langle\mathbf S\rangle=\frac{\mu_0p_0^2d^2\omega^6}{32\pi^2c^3}\frac{\sin^2\theta\cos^2\theta}{r^2}\hat{\mathbf r}. \]
+<p>각적분: \(x=\cos\theta\),</p>
+\[ \int_0^\pi\sin^2\theta\cos^2\theta\,\sin\theta\,d\theta=\int_{-1}^{1}(1-x^2)x^2dx=\Big[\frac{x^3}{3}-\frac{x^5}{5}\Big]_{-1}^{1}=2\Big(\frac13-\frac15\Big)=\frac4{15}. \]
+\[ \langle P\rangle=\frac{\mu_0p_0^2d^2\omega^6}{32\pi^2c^3}\cdot2\pi\cdot\frac4{15}
+=\boxed{\;\frac{\mu_0p_0^2d^2\omega^6}{60\pi c^3}\;} \]
+<p>세기 분포: \(\sin^2\theta\cos^2\theta=\tfrac14\sin^22\theta\) → <b>네 잎(four-lobe)</b> 패턴. \(\theta=45^\circ,135^\circ\)에서 최대, 축(\(\theta=0,\pi\))과 적도면(\(\theta=90^\circ\))에서 0. 주파수 의존성이 \(\omega^4\)가 아니라 \(\omega^6\)인 점에 주목(사중극자 복사가 훨씬 약한 이유).</p>
+<div class="alabel">감점 포인트</div>
+<p>\(d\)의 1차 전개에서 진폭 \(1/r\)의 변화(→\(1/r^2\), 복사 아님)까지 남기는 것. 복사대에서는 <b>위상</b>의 \(d\) 의존성만 살린다.</p></div><!--/sol-->

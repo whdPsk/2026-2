@@ -1,0 +1,14 @@
+<div class="exq"><b>상황.</b> Example 11.3의 정육면체(모서리 원점). 주관성 모멘트와 주축을 구한다. 먼저 \(x_1\)축 둘레로 돌리면 \(\vb L=Mb^2\omega\left(\tfrac23\uv e_1-\tfrac14\uv e_2-\tfrac14\uv e_3\right)\) — \(\boldsymbol\omega\)와 평행하지 않으므로 좌표축은 주축이 아니다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>영년방정식 → 행 빼기로 인수분해 → 고유벡터.</div>
+<ol>
+<li>\(\det\begin{pmatrix}\frac23\beta-I&-\frac14\beta&-\frac14\beta\-\frac14\beta&\frac23\beta-I&-\frac14\beta\-\frac14\beta&-\frac14\beta&\frac23\beta-I\end{pmatrix}=0\).</li>
+<li>둘째 행 − 첫째 행: \(\left(-\tfrac{11}{12}\beta+I,\ \tfrac{11}{12}\beta-I,\ 0\right)\) → 인수 \(\left(\tfrac{11}{12}\beta-I\right)\).</li>
+<li>전개하면 \(\left(\tfrac16\beta-I\right)\left(\tfrac{11}{12}\beta-I\right)^2=0\).</li>
+<li>\(I_1=\tfrac16\beta\): \(2\omega_1-\omega_2-\omega_3=0\), \(-\omega_1+2\omega_2-\omega_3=0\) → \(\omega_1=\omega_2=\omega_3\) — 대각선.</li>
+<li>\(I_2=I_3=\tfrac{11}{12}\beta\): \(\omega_1+\omega_2+\omega_3=0\) — 대각선에 수직인 평면 전체.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ I_1=\tfrac16Mb^2\ (\text{대각선}),\qquad I_2=I_3=\tfrac{11}{12}Mb^2\ (\text{대각선에 수직인 평면})\ } \]
+<p class="note"><b>검산</b> ① 대각합 \(\tfrac16+\tfrac{11}{6}=2=3\cdot\tfrac23\) ✓. ② 대각선 모멘트 \(\tfrac16Mb^2\)는 CM 축 모멘트와 같다 — 대각선은 CM을 지나고 CM 텐서가 등방이므로 ✓ (Example 11.6). ③ 중근 → 대칭축(3회 대칭).</p></div>
+<div class="qz" data-q="ex11.5-a"><div class="qq"><b>+α</b> 한 변 \(b\)인 정사각형 판(질량 \(M\), 두께 무시)을 한 꼭짓점을 원점으로 \(xy\)평면에 두었다. 주관성 모멘트와 주축은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(I_{11}=I_{22}=\tfrac13Mb^2\), \(I_{33}=\tfrac23Mb^2\), \(I_{12}=-\tfrac14Mb^2\). 2×2 블록: \(\tfrac13\mp\tfrac14\) → \(\tfrac1{12}Mb^2\) (대각선 \((1,1)\)), \(\tfrac7{12}Mb^2\) (\((1,-1)\)), 그리고 \(\tfrac23Mb^2\) (판에 수직). 검산: 수직축 정리 \(\tfrac1{12}+\tfrac7{12}=\tfrac23\) ✓.</p></div></div>
+<div class="qz" data-q="ex11.5-b"><div class="qq"><b>+α</b> 정육면체를 대각선 둘레로 \(\omega\)로 돌리는 것과 한 모서리 둘레로 같은 \(\omega\)로 돌리는 것 중 어느 쪽 운동에너지가 큰가? 모서리 회전에서 \(\vb L\)과 \(\boldsymbol\omega\)의 각은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>대각선: \(\tfrac1{12}Mb^2\omega^2\). 모서리(\(x_1\)): \(\tfrac12\cdot\tfrac23Mb^2\omega^2=\tfrac13Mb^2\omega^2\) — 4배. 모서리 회전에서 \(\vb L\)과 \(\boldsymbol\omega\)의 각 ≈ 27.9° (U17 체크포인트 2).</p></div></div>

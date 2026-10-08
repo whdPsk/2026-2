@@ -1,0 +1,20 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+점쌍극자 소스: \(\rho(\vb{r},t)=-\vb{p}(t)\cdot\nabla\delta^3(\vb{r})\), \(\vb{J}(\vb{r},t)=\dot{\vb{p}}(t)\delta^3(\vb{r})\).
+
+<b>\(\vb{A}\):</b> 즉시
+\[ \boxed{\vb{A}(\vb{r},t)=\frac{\muz}{4\pi}\frac{[\dot{\vb{p}}]}{r}}\qquad([\ ]\equiv t_r=t-r/c\text{ 에서 평가}) \]
+<b>\(V\):</b> 부분적분하되, \(\vb{p}(t_r)\)가 \(\vb{r}'\)에 의존함(\(t_r=t-\rr/c\))을 반드시 살려야 한다:
+\[ V=\frac{1}{4\pi\eps}\int\frac{-\vb{p}(t_r)\cdot\nabla'\delta^3(\vb{r}')}{\rr}d\tau'
+=\frac{1}{4\pi\eps}\int\delta^3(\vb{r}')\,\nabla'\!\cdot\!\left[\frac{\vb{p}(t_r)}{\rr}\right]d\tau' . \]
+\[ \nabla'\!\cdot\!\left[\frac{\vb{p}(t_r)}{\rr}\right]=\frac{1}{\rr}\underbrace{\dot{\vb{p}}\cdot\nabla't_r}_{=\dot{\vb{p}}\cdot\rhat/c}+\vb{p}\cdot\underbrace{\nabla'\frac{1}{\rr}}_{=\rhat/\rr^2} \]
+\(\vb{r}'=0\)에서 평가하면 \(\rr=r,\ \rhat=\hat{\vb{r}}\):
+\[ \boxed{V(\vb{r},t)=\frac{1}{4\pi\eps}\frac{\hat{\vb{r}}}{r^2}\cdot\Big[\vb{p}+\frac rc\dot{\vb{p}}\Big]} \]
+<b>\(\vb{B}\):</b> \(\curl\big(f(t_r)\vb{F}\big)\) 계산에 \(\nabla t_r=-\hat{\vb{r}}/c\)를 쓴다. \(\curl\dot{\vb{p}}(t_r)=\nabla t_r\times\ddot{\vb{p}}=-\frac1c\hat{\vb{r}}\times\ddot{\vb{p}}\), \(\nabla(1/r)\times\dot{\vb{p}}=-\frac{1}{r^2}\hat{\vb{r}}\times\dot{\vb{p}}\):
+\[ \boxed{\vb{B}=-\frac{\muz}{4\pi}\frac{\hat{\vb{r}}\times\big[\dot{\vb{p}}+(r/c)\ddot{\vb{p}}\big]}{r^2}} \]
+<b>\(\vb{E}=-\nabla V-\partial\vb{A}/\partial t\):</b> \(\nabla(\vb{r}\cdot\vb{p}(t_r))=\vb{p}-\frac rc\hat{\vb{r}}(\hat{\vb{r}}\cdot\dot{\vb{p}})\)를 이용해 두 항을 미분하면
+\[ \boxed{\vb{E}=-\frac{\muz}{4\pi}\left\{\frac{\ddot{\vb{p}}-\hat{\vb{r}}(\hat{\vb{r}}\cdot\ddot{\vb{p}})}{r}
++c^2\frac{\big[\vb{p}+(r/c)\dot{\vb{p}}\big]-3\hat{\vb{r}}\big(\hat{\vb{r}}\cdot[\vb{p}+(r/c)\dot{\vb{p}}]\big)}{r^3}\right\}} \]
+모든 \(\vb{p}\) 도함수는 \(t_r\)에서 평가. \(1/r\) 항(\(\ddot{\vb{p}}\)에 비례)이 <b>복사장</b>이며 Ch. 11의 출발점이다.
+<div class="alabel">감점 포인트</div>
+\(V\)를 구할 때 \(\nabla'\)이 \(1/\rr\)뿐 아니라 \(\vb{p}(t_r)\)에도 작용한다는 것을 놓쳐 \((r/c)\dot{\vb{p}}\) 항을 잃는 것.</div><!--/sol-->

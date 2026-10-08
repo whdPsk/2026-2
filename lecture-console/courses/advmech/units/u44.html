@@ -1,0 +1,50 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 회전 변환에서 좌표는 바뀌어도 거리 \(x^2+y^2+z^2\)은 변하지 않는다. Lorentz 변환에서 시간과 거리가 둘 다 바뀐다면, 모든 관성계가 동의하는 "거리" 같은 양이 있을까? 있다면 에너지와 운동량도 그렇게 한 쌍으로 묶일까?</div>
+
+<h4>14.9 시공간과 4-벡터 <span class="en">spacetime and four-vectors</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>불변 간격과 고유 시간 — 교재 식 (14.69)–(14.73) <b>(필수)</b></div>
+<ol>
+<li>두 사건의 간격 \(\Delta s^2=\sum_j(\Delta x_j)^2-c^2\Delta t^2\). Lorentz 변환으로 직접 확인: \(\gamma^2(\Delta x-v\Delta t)^2-c^2\gamma^2(\Delta t-v\Delta x/c^2)^2=\gamma^2(1-\beta^2)(\Delta x^2-c^2\Delta t^2)\) ✓ (문제 14-34).</li>
+<li>미분형 \(\dd s^2=\dd\vb x^2-c^2\dd t^2\). 입자가 순간 정지한 계에서는 \(\dd\vb x'=0\), \(\dd t'=\dd\tau\) → \(\dd s^2=-c^2\dd\tau^2\).</li>
+<li>\[ \dd\tau=\dd t\sqrt{1-u^2/c^2}=\frac{\dd t}\gamma \]
+고유 시간은 \(\dd s\)에 비례하므로 불변량(4-스칼라).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>광원뿔과 인과율</div>
+<ol>
+<li>\((x,ct)\) 평면에 \(x=\pm ct\) 두 직선 = 과거·미래 <b>광원뿔</b>. 물체의 궤적 = <b>세계선</b>, 기울기는 항상 광선보다 가파르다(\(u&lt;c\)).</li>
+<li>\(\Delta s^2&lt;0\): <b>시간꼴</b>. 두 사건이 같은 장소에서 일어나는 계가 있다. 시간 순서는 모든 계에서 같다 → 인과 관계 가능.</li>
+<li>\(\Delta s^2>0\): <b>공간꼴</b>. 두 사건이 동시인 계가 있다; 순서가 계마다 뒤집힐 수 있다 → 인과 관계 불가("elsewhere").</li>
+<li>\(\Delta s^2=0\): <b>빛꼴</b>. 광신호로 연결.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>Minkowski 공간과 Lorentz 행렬 — 교재 식 (14.74)–(14.80)</div>
+<ol>
+<li>\(x_4=ict\)로 두면 \(\sum_{\mu=1}^4x_\mu^2=\vb x^2-c^2t^2\). Lorentz 변환 = 이 "길이"를 보존하는 <b>직교 변환</b>(4차원 회전), \(x_\mu'=\sum_\nu\lambda_{\mu\nu}x_\nu\):
+\[ \lambda=\begin{pmatrix}\gamma&amp;0&amp;0&amp;i\beta\gamma\\0&amp;1&amp;0&amp;0\\0&amp;0&amp;1&amp;0\\-i\beta\gamma&amp;0&amp;0&amp;\gamma\end{pmatrix} . \]
+확인: 1행과 4행에서 \(x_1'=\gamma x_1+i\beta\gamma(ict)=\gamma(x_1-vt)\) ✓, \(ict'=-i\beta\gamma x_1+\gamma ict\) → \(t'=\gamma(t-vx_1/c^2)\) ✓.</li>
+<li><b>4-벡터</b>: \(A_\mu'=\sum\lambda_{\mu\nu}A_\nu\)로 변환하는 네 성분 양. 예: \(\mathbb X=(\vb x,ict)\), \(\dd\mathbb X=(\dd\vb x,ic\,\dd t)\).</li>
+<li>허수 \(i\)는 계산 편의일 뿐 물리량은 모두 실수다. 현대 교재는 계량 \(\eta=\mathrm{diag}(-1,1,1,1)\) 또는 \((+,-,-,-)\)와 위·아래 첨자를 쓴다 — 결과는 같다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>4-속도와 4-운동량 — 교재 식 (14.83)–(14.92) <b>(필수)</b></div>
+<ol>
+<li>4-속도 \(\mathbb V=\od{\mathbb X}\tau=\gamma(\vb u,ic)\) (\(\dd\tau\)가 불변이므로 4-벡터).</li>
+<li>4-운동량 \(\mathbb P=m\mathbb V=(\gamma m\vb u,\ i\gamma mc)=\left(\vb p,\ \frac{iE}c\right)\). 에너지와 운동량은 한 4-벡터의 성분 — 시간과 공간처럼.</li>
+<li>변환(\(\lambda\) 적용):
+\[ p_1'=\gamma\left(p_1-\frac{\beta E}{c}\right),\quad p_{2,3}'=p_{2,3},\quad E'=\gamma(E-vp_1) . \]</li>
+<li>불변 크기(Example 14.9): \(\mathbb V^2=\gamma^2(u^2-c^2)=-c^2\) → \(\mathbb P^2=p^2-E^2/c^2=-m^2c^2\) → \(E^2=p^2c^2+m^2c^4\). 여러 입자계에서는 \(\left(\sum E\right)^2-\left(\sum\vb p\right)^2c^2\)가 불변 — U46 문턱 에너지 계산의 핵심.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 4-벡터</div>
+\[ \dd s^2=\dd\vb x^2-c^2\dd t^2,\quad \dd\tau=\frac{\dd t}\gamma,\quad \mathbb P=\left(\vb p,\frac{iE}c\right),\quad \mathbb P^2=-m^2c^2 \]
+\[ p_\parallel'=\gamma(p_\parallel-\beta E/c),\qquad E'=\gamma(E-vp_\parallel) \]
+<p class="note">\((x,ct)\)와 \((p,E/c)\)는 <b>같은 모양</b>으로 변환한다. 속도 덧셈(Example 14.10), 임의 각도 Doppler(Example 14.11)가 이 한 줄에서 나온다.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u44-1"><div class="qq">(시험형) \(\Delta s^2=\Delta x^2-c^2\Delta t^2\)이 Lorentz 변환에서 불변임을 보이고, 공간꼴 간격의 두 사건은 인과적으로 연결될 수 없음을 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 1의 1단계: \(\gamma^2(1-\beta^2)=1\). 공간꼴이면 \(|\Delta x|&gt;c|\Delta t|\) — 연결하려면 \(c\)보다 빠른 신호가 필요하다. 또 \(\Delta t'=\gamma(\Delta t-v\Delta x/c^2)\)의 부호가 \(v&gt;c^2\Delta t/\Delta x\)(\(&lt;c\))인 계에서 뒤집히므로, 원인이 결과보다 나중인 계가 생긴다.</p></div></div>
+
+<div class="qz" data-q="u44-2"><div class="qq">\(K\)에서 \(E=5\,\)GeV, \(p_1c=4\,\)GeV인 입자. \(\beta=0.8\)로 움직이는 \(K'\)에서의 \(E'\), \(p_1'\)과 질량은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\gamma=5/3\). \(E'=\gamma(E-\beta p_1c)=\tfrac53(5-3.2)=3\,\)GeV. \(p_1'c=\gamma(p_1c-\beta E)=\tfrac53(4-4)=0\). \(mc^2=\sqrt{25-16}=3\,\)GeV ✓ — \(K'\)이 입자의 정지계이다.</p></div></div>
+
+<div class="qz" data-q="u44-3"><div class="qq">두 사건: \(K\)에서 \((x,t)=(0,0)\)과 \((600\,{\rm m},\ 1\,\mu{\rm s})\). 시간꼴인가 공간꼴인가? 두 사건이 동시인 계 또는 같은 장소인 계의 속도를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(c\Delta t=300\,\)m &lt; \(\Delta x=600\,\)m → 공간꼴. 동시인 계: \(\Delta t'=0\) → \(v=c^2\Delta t/\Delta x=c\cdot300/600=0.5c\).</p></div></div>

@@ -1,0 +1,19 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<b>양 끝의 지연시간/지연위치.</b> 뒤끝: \(vt_1=c(t-t_1)\Rightarrow t_1=\dfrac{ct}{c+v},\ x_1=\dfrac{cvt}{c+v}\).
+앞끝: \(vt_2+L=c(t-t_2)\Rightarrow t_2=\dfrac{ct-L}{c+v},\ x_2=\dfrac{c(vt+L)}{c+v}\).
+
+<b>퍼텐셜.</b> 공간점 \(x'\)이 기여하려면 시각 \(t_r=t-x'/c\)에 막대가 그 점을 덮고 있어야 한다:
+\[ v\!\left(t-\frac{x'}{c}\right)&lt;x'&lt;v\!\left(t-\frac{x'}{c}\right)+L
+\ \Longleftrightarrow\ x_1&lt;x'&lt;x_2 . \]
+그 구간에서 \(\rho\)는 \(\lambda\)이므로
+\[ V(0,t)=\frac{1}{4\pi\eps}\int_{x_1}^{x_2}\frac{\lambda\,dx'}{x'}=\frac{\lambda}{4\pi\eps}\ln\frac{x_2}{x_1},\qquad \frac{x_2}{x_1}=\frac{vt+L}{vt}. \]
+\[ \boxed{V(0,t)=\frac{\lambda}{4\pi\eps}\ln\!\left(1+\frac{L}{vt}\right)} \]
+흥미롭게도 \(c\)가 사라진다.
+
+<b>점전하 극한 검증</b> (\(L\ll vt\), \(q=\lambda L\)): \(V\approx\dfrac{\lambda L}{4\pi\eps vt}=\dfrac{q}{4\pi\eps vt}\).
+L–W: 전하가 \(x=vt\)에서 \(+x\)로 움직이고 관측점은 왼쪽이므로 \(\boldsymbol{\rr}\cdot\vb{v}=-\rr v\), \(\rr=\dfrac{cvt}{c+v}\):
+\[ V=\frac{1}{4\pi\eps}\frac{qc}{\rr(c+v)}=\frac{1}{4\pi\eps}\frac{qc(c+v)}{cvt(c+v)}=\frac{q}{4\pi\eps vt}\ \checkmark \]
+\(\boxed{\text{일치 — L--W의 } (1-\rhat\cdot\vb{v}/c)^{-1} \text{ 인자가 정확히 재현된다}}\)
+<div class="alabel">감점 포인트</div>
+"막대의 지연 이미지 길이"를 \(L\)로 놓고 적분하는 것 — 실제 기여 구간은 \([x_1,x_2]\)로 늘어난다(다가오는 기차 효과).</div><!--/sol-->

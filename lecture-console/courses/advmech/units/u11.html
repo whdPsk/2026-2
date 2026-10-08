@@ -1,0 +1,130 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> ① 일정한 속도로 달리는 열차 안에서는 창밖을 보지 않고 "내가 움직이는지" 알 수 있을까? 열차가 가속하면? 그때 열차 안의 관찰자가 Newton 법칙을 그대로 쓰려면 무엇을 더해야 할까. ② 회전하는 회전목마 위에 고정된 점을 바닥(관성계)에서 보면 속도 \(\vb v=\boldsymbol\omega\times\vb r\)로 움직인다. 그 점이 회전목마 위에서도 움직인다면 바닥에서 본 속도는 무엇과 무엇의 합일까? 이 규칙이 위치벡터뿐 아니라 <em>모든</em> 벡터에 적용된다면 가속도에는 어떤 항들이 생길지 추측해 보라.</div>
+
+<h4>10.1 병진 좌표계 — Galilei 불변성과 겉보기힘 <span class="en">translating coordinate systems</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">준비</span>Galilei 변환과 Galilei 불변성 — 강의 식 (10.1)</div>
+<ol>
+<li>두 기준계 \(K\), \(K'\)이 한 축 방향으로 <b>일정한</b> 상대속도 \(V\)로 움직인다. 같은 사건의 좌표는
+\[ x'_1=x_1-Vt,\qquad x'_2=x_2,\qquad x'_3=x_3,\qquad t'=t . \]
+시간은 두 계에서 공통이고 위치와 섞이지 않는다.</li>
+<li>벡터로 쓰면 \(\vb r'=\vb r-\vb Vt\). \(\vb V\)가 상수이므로 두 번 미분하면 \(\ddot{\vb r}'=\ddot{\vb r}\). 따라서
+\[ \vb F'=m\ddot{\vb r}'=m\ddot{\vb r}=\vb F . \]</li>
+<li>결론: 등속으로 움직이는 어느 관성계에서 써도 Newton 제2법칙의 <b>꼴이 같다</b> — Newton 상대성 원리(Galilei 불변성). 상대성 이론의 첫째 가정 "물리 법칙은 모든 관성계에서 같다"에 해당한다.</li>
+<li>강의노트 Note 1: 둘째 가정(진공 중 광속은 광원·관찰자의 운동과 무관한 보편 상수)은 Einstein의 특수 상대론 — 이 장과는 무관하고 마지막 장(U25–26)에서 다룬다.</li>
+</ol></div>
+
+<div class="prof"><b>교수님 말 (10/7 녹음 08:46–12:33)</b> — <b>KTX 예.</b> 등속으로 달리는 KTX·버스 안에서는 내가 움직이는지 바깥이 움직이는지 구별할 수 없다. 알 수 있는 것은 두 관성계 사이의 <em>상대</em>속도뿐이고 절대적인 운동 상태는 알 수 없으니, 힘의 법칙은 어느 계에서 써도 같아야 한다. Galilei 변환이 깨지는 경우는 둘: ① Maxwell 방정식(→ 위치와 시간이 섞이는 Lorentz 변환, 마지막 장), ② <b>\(V\)가 상수가 아닐 때</b> — 이번 장의 주제. "열차에서 자다가 역에 도착하면 깨는 이유"가 바로 가속도가 생겨 등속 상태가 깨졌기 때문이다.</div>
+
+<div class="prof"><b>교수님 말 (10/7 녹음 00:01–03:00, 13:37–15:23)</b> — 고급역학은 일반역학의 이상화를 하나씩 푸는 과목이다. 9장은 "입자 하나"라는 가정을, 10장은 "관성계"라는 가정을 푼다. 이 장의 결론을 먼저 말하면 \(\vb F_{\rm eff}=\vb F+\vb F_{\rm fictitious}\). 굳이 하는 이유는 ① 지구는 자전·공전하므로 우리가 사는 곳은 관성계로 <em>근사</em>될 뿐인 비관성계이고, ② 가끔은 겉보기힘을 넣는 편이 운동을 기술하기 더 쉽기 때문.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 A</span>병진 가속 좌표계의 겉보기힘 \(-m\dot{\vb V}\) — 강의 식 (10.2)–(10.4)</div>
+<ol>
+<li><b>준비.</b> \(K'\): 고정계(관성계), 좌표 \(x'_i\). \(K\): \(K'\)에 대해 속도 \(\vb V(t)\)로 <b>병진</b>만 하는 비관성계, 좌표 \(x_i\). \(\vb R(t)\)는 \(K'\)에서 본 \(K\) 원점의 위치, \(\dot{\vb R}=\vb V\).</li>
+<li>① Newton 법칙은 관성계 \(K'\)에서만 성립한다:
+\[ m\frac{\dd^2\vb r'}{\dd t'^2}=\vb F . \qquad\text{(10.2)} \]</li>
+<li>② 비상대론적(\(v\ll c\))이면 같은 입자의 위치·속도는
+\[ \vb r'=\vb r+\vb R(t),\qquad \vb v'=\vb v+\vb V(t). \qquad\text{(10.3)} \]</li>
+<li>③ \(t=t'\)이므로 한 번 더 미분하면
+\[ \od{\vb v'}{t'}=\od{\vb v}{t}+\od{\vb V}{t},\qquad \frac{\dd^2\vb r'}{\dd t'^2}=\frac{\dd^2\vb r}{\dd t^2}+\frac{\dd^2\vb R}{\dd t^2}. \]</li>
+<li>④ (10.2)에 넣고 \(K\)에서 잰 가속도만 좌변에 남기면
+\[ \boxed{\ m\frac{\dd^2\vb r}{\dd t^2}=\vb F-m\od{\vb V}{t}\ } \qquad\text{(10.4)} \]</li>
+<li><b>읽기.</b> \(\vb A\equiv\dot{\vb V}\)(좌표계의 병진 가속도)라 하면 \(\vb F_{\rm eff}=\vb F-m\vb A\). \(\vb A=0\)이면 Galilei 불변성으로 돌아간다. \(-m\vb A\)는 상호작용에서 온 힘이 아니라 <b>가속하는 계에서 재기 때문에</b> 나타나는 항 — 겉보기힘(fictitious/apparent force).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 B</span>Lagrangian으로 같은 결과 확인 — 강의노트 Note 2, 식 (10.5)–(10.8) <b>(교재에 없음)</b></div>
+<ol>
+<li><b>준비.</b> 관성계 \(K'\)에서는 최소작용 원리가 주는 운동방정식이 그대로 성립한다:
+\[ \od{}{t}\left(\pd{\Lag'}{\vb v'}\right)-\pd{\Lag'}{\vb r'}=0,\qquad \Lag'=\tfrac12mv'^2-U . \qquad\text{(10.5)} \]</li>
+<li>① \(\vb v'=\vb v+\vb V\)를 대입해 전개:
+\[ \Lag'=\tfrac12m(\vb v+\vb V)^2-U=\tfrac12mv^2+m\vb v\cdot\vb V+\tfrac12mV^2-U . \]</li>
+<li>② 가운데 항을 곱의 미분으로 고쳐 쓴다. \(\od{}{t}(m\vb V\cdot\vb r)=m\dot{\vb V}\cdot\vb r+m\vb V\cdot\vb v\)이므로
+\[ \Lag'=\tfrac12mv^2+\left[\od{}{t}\left(m\vb V\cdot\vb r\right)-m\dot{\vb V}\cdot\vb r\right]+\tfrac12mV^2(t)-U . \qquad\text{(10.6)} \]</li>
+<li>③ <b>버려도 되는 두 항.</b> (i) \(\tfrac12mV^2(t)\)는 시간만의 함수 — \(q\)도 \(\dot q\)도 들어 있지 않으니 Euler–Lagrange 방정식에 기여가 없다. (ii) \(\od{}{t}(m\vb V\cdot\vb r)\)은 전미분항. 일반적으로 \(F(q,t)\)에 대해 \(\od Ft=\sum_j\pd{F}{q_j}\dot q_j+\pd Ft\)이므로
+\[ \pd{}{\dot q_i}\left(\od Ft\right)=\pd{F}{q_i}\ \Rightarrow\ \od{}{t}\left[\pd{}{\dot q_i}\od Ft\right]=\od{}{t}\pd{F}{q_i},\qquad \pd{}{q_i}\left(\od Ft\right)=\od{}{t}\pd{F}{q_i}, \]
+두 항이 빼져서 0. 그래서 \(\Lag\to\Lag+\dd F/\dd t\)는 운동방정식을 바꾸지 않는다.</li>
+<li>④ 남는 것:
+\[ \Lag=\tfrac12mv^2-m\od{\vb V}{t}\cdot\vb r-U(\vb r). \qquad\text{(10.7)} \]
+추가된 \(-m\dot{\vb V}\cdot\vb r\)은 균일한 "중력장" \(-\dot{\vb V}\) 속의 퍼텐셜에너지 \(m\dot{\vb V}\cdot\vb r\)과 같은 꼴.</li>
+<li>⑤ Euler–Lagrange: \(\pd{\Lag}{\vb v}=m\vb v\), \(\pd{\Lag}{\vb r}=-\pd{U}{\vb r}-m\dot{\vb V}\) →
+\[ m\od{\vb v}{t}=-\pd{U}{\vb r}-m\od{\vb V}{t}=\vb F-m\od{\vb V}{t}, \qquad\text{(10.8)} \]
+(10.4)와 일치 ✓. 퍼텐셜 \(U\)는 같은 물리량을 \(K\)의 좌표로 쓴 것일 뿐이다.</li>
+</ol></div>
+
+<div class="prof"><b>교수님 말 (10/7 녹음 21:55–23:13, 27:09–32:50)</b> — 1학기 내내 "힘으로 세우나 Lagrangian으로 세우나 운동방정식은 같다"고 배웠으니 비관성계에서도 그런지 확인한 것(교과서에는 없는 것 같다고 언급). 핵심 도구는 Lagrangian의 두 성질: <b>시간만의 함수를 더해도</b>, <b>어떤 함수의 전미분을 더해도</b> 운동방정식은 그대로다. 전미분항이 상쇄되는 것은 수업에서 직접 계산해 보였다.</div>
+
+<div class="formula"><div class="ftitle">암기 — 병진 가속계</div>
+\[ \vb r'=\vb r+\vb R(t),\qquad m\ddot{\vb r}=\vb F-m\ddot{\vb R}\quad(\vb F_{\rm eff}=\vb F-m\vb A),\qquad \Lag=\tfrac12mv^2-m\dot{\vb V}\cdot\vb r-U \]
+<p class="note">Lagrangian에서 전미분항 \(\dd F(q,t)/\dd t\)와 시간만의 함수는 버려도 운동방정식 불변.</p></div>
+
+<h4>10.2 회전 좌표계 <span class="en">rotating coordinate systems</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>연산자 공식 \(\left(\frac{\dd\vb Q}{\dd t}\right)_{f}=\left(\frac{\dd\vb Q}{\dd t}\right)_{r}+\boldsymbol\omega\times\vb Q\) — 강의 식 (10.9)–(10.11) <b>(필수 · 이 장 전체의 출발점)</b></div>
+<ol>
+<li><b>준비.</b> \(O'\): 고정계(관성계), 좌표 \(x'_i\). \(O\): \(O'\)에 대해 각속도 \(\boldsymbol\omega(t)\equiv\dd\boldsymbol\theta(t)/\dd t\)로 도는 비관성계(강의 그림에서는 병진 \(\vb V(t)\)도 함께 한다). 임의의 미소 변위는 어떤 축 — <b>순간 회전축</b> — 둘레의 순수한 미소 회전으로 나타낼 수 있다.</li>
+<li>① 임의의 벡터 \(\vb Q\)를 <b>회전계의 단위벡터</b>로 전개한다. 성분뿐 아니라 단위벡터도 시간의 함수로 둔다:
+\[ \vb Q(t)=\sum_{i=1}^3Q_i(t)\,\uv e_i(t). \qquad\text{(10.9)} \]</li>
+<li>② 고정계에서 본 변화율은 곱의 미분:
+\[ \left(\od{\vb Q}{t}\right)_f=\sum_i\od{Q_i(t)}{t}\uv e_i(t)+\sum_iQ_i(t)\od{\uv e_i(t)}{t}. \]</li>
+<li>③ 첫 합은 단위벡터를 고정된 것으로 보는 관찰자, 즉 회전계에서 잰 변화율이다: \(\sum_i\dot Q_i\uv e_i=\left(\od{\vb Q}{t}\right)_r\).</li>
+<li>④ 둘째 합에 필요한 \(\dd\uv e_i\). 시간 \(\dd t\) 동안 좌표축이 \(\boldsymbol\omega\) 방향 축 둘레로 \(\dd\theta\) 돌면 \(\uv e_i\)의 끝은 축 둘레의 원 위를 움직인다. \(\uv e_i\)와 축 사이 각을 \(\alpha\)라 하면 원의 반지름은 \(\sin\alpha\), 끝이 움직인 거리는 \(\sin\alpha\,\dd\theta\), 방향은 축과 \(\uv e_i\) 모두에 수직(접선)이다. 크기와 방향을 한꺼번에 쓰면
+\[ \dd\uv e_i=\dd\boldsymbol\theta\times\uv e_i\quad\Rightarrow\quad \od{\uv e_i}{t}=\od{\boldsymbol\theta}{t}\times\uv e_i=\boldsymbol\omega\times\uv e_i . \]</li>
+<li>⑤ 대입하고 \(\boldsymbol\omega\)를 합 밖으로 꺼낸다(\(\boldsymbol\omega\)에는 첨자 \(i\)가 없다):
+\[ \left(\od{\vb Q}{t}\right)_f=\left(\od{\vb Q}{t}\right)_r+\sum_iQ_i\,\boldsymbol\omega\times\uv e_i=\left(\od{\vb Q}{t}\right)_r+\boldsymbol\omega\times\sum_iQ_i\uv e_i . \qquad\text{(10.10)} \]</li>
+<li>⑥ \(\sum_iQ_i\uv e_i=\vb Q\)이므로
+\[ \boxed{\ \left(\od{\vb Q}{t}\right)_f=\left(\od{\vb Q}{t}\right)_r+\boldsymbol\omega(t)\times\vb Q\ } \qquad\text{(10.11)} \]
+<b>임의의 벡터</b>에 성립. 연산자로 \(\left(\frac{\dd}{\dd t}\right)_{f}=\left(\frac{\dd}{\dd t}\right)_{r}+\boldsymbol\omega\times\).</li>
+</ol></div>
+
+<div class="prof"><b>교수님 말 (10/7 녹음 39:54–42:31, 46:25)</b> — 이 유도는 교과서 순서가 마음에 들지 않아 직접 만든 것(수학적으로 엄밀하지 않거나 틀린 곳이 있으면 알려 달라고 함). <b>\(\uv e_i\)를 굳이 \(t\)의 함수로 쓰는 것이 핵심</b>이다 — \(Q_i(t)\)만 시간에 따라 변한다고 해도 될 것 같지만, \(\uv e_i(t)\)가 "우리가 잡은 좌표축이 고정계에 대해 어떻게 움직이는가"라는 정보를 담고 있다. \(\boldsymbol\omega\)도 엄밀히는 \(t\)의 함수지만 미소 시간 \(\dd t\) 동안은 1차 근사로 일정하게 취급한다.</div>
+
+<div class="apply"><b>교재 방식 대조 (Example 10.1)</b> — 교재는 먼저 회전계에 붙박인 점에 대해 \((\dd\vb r)_{\rm fixed}=\dd\boldsymbol\theta\times\vb r\) (미소 회전은 벡터처럼 더할 수 있다, 유한 회전은 안 된다)를 세운 뒤 성분으로 확인한다. 예: \(\omega_3\)는 \(\uv e_1\)을 \(+\uv e_2\) 쪽으로, \(\omega_2\)는 \(-\uv e_3\) 쪽으로 돌리므로 \(\dot{\uv e}_1=\omega_3\uv e_2-\omega_2\uv e_3=\boldsymbol\omega\times\uv e_1\) ✓ (교재 식 10.9). 도함수가 원래 단위벡터에 수직인 것은 길이가 보존되기 때문. 결론은 강의 방식의 ④와 같다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>두 따름정리 — 강의노트 Note 3 (10.12), Note 4 (10.13)</div>
+<ol>
+<li><b>Note 3 — 고정계에서 변하지 않는 벡터.</b> (10.11)에서 좌변이 0이면
+\[ \left(\od{\vb Q}{t}\right)_f=0\quad\Rightarrow\quad\left(\od{\vb Q}{t}\right)_r=-\boldsymbol\omega\times\vb Q . \qquad\text{(10.12)} \]
+관성계에서 가만히 있는 벡터는 회전계의 관찰자에게 <b>반대 방향으로</b>(각속도 \(-\boldsymbol\omega\)) 도는 것으로 보인다.</li>
+<li><b>Note 4 — 각가속도.</b> \(\vb Q=\boldsymbol\omega\)를 넣으면 \(\boldsymbol\omega\times\boldsymbol\omega=0\)(평행한 벡터의 외적)이므로
+\[ \left(\od{\boldsymbol\omega}{t}\right)_f=\left(\od{\boldsymbol\omega}{t}\right)_r+\boldsymbol\omega\times\boldsymbol\omega=\left(\od{\boldsymbol\omega}{t}\right)_r\equiv\dot{\boldsymbol\omega}. \qquad\text{(10.13)} \]
+각가속도는 두 계에서 같아서 아래첨자 없이 \(\dot{\boldsymbol\omega}\)라 쓴다(교재 식 10.13).</li>
+</ol></div>
+
+<div class="prof"><b>교수님 말 (10/7 녹음 49:36–51:13)</b> — <b>회전목마에서 반대로 뛰는 사람.</b> 돌고 있는 회전목마 위에 사람이 있는데 밖(고정계)에서 보니 제자리에 가만히 있다. 그 사람은 회전목마 위에서 회전과 <em>반대 방향으로 같은 빠르기로</em> 뛰고 있는 것이다. 그 사람의 위치벡터를 \(\vb Q\)로 보면 이것이 \((\dd\vb Q/\dd t)_f=0\)의 뜻이고, 회전계에서는 \(-\boldsymbol\omega\times\vb Q\)로 움직인다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>속도의 변환 \(\vb v_f=\vb V+\vb v_r+\boldsymbol\omega\times\vb r\) — 강의 식 (10.14)–(10.16), 교재 식 (10.17)</div>
+<ol>
+<li><b>준비.</b> 좌표계가 관성계든 아니든 위치의 관계 \(\vb r'=\vb R+\vb r\) (10.3)은 기하학적으로 항상 성립한다. \(\vb R\): 고정계에서 본 움직이는 계의 원점.</li>
+<li>① 고정계에서 미분: \(\left(\od{\vb r'}{t}\right)_f=\left(\od{\vb R}{t}\right)_f+\left(\od{\vb r}{t}\right)_f\).</li>
+<li>② 마지막 항에만 (10.11)을 적용(\(\vb r\)은 회전계 성분으로 쓰는 벡터):
+\[ \left(\od{\vb r'}{t}\right)_f=\left(\od{\vb R}{t}\right)_f+\left(\od{\vb r}{t}\right)_r+\boldsymbol\omega(t)\times\vb r . \qquad\text{(10.14)} \]</li>
+<li>③ 이름을 붙이면
+\[ \boxed{\ \vb v_f=\vb V+\vb v_r+\boldsymbol\omega\times\vb r\ } \qquad\text{(10.15)} \]</li>
+<li>④ 각 항 (10.16): \(\vb v_f=\left(\od{\vb r'}{t}\right)_f\) 고정축에 대한 속도 · \(\vb V=\left(\od{\vb R}{t}\right)_f\) 움직이는 원점의 선속도 · \(\vb v_r=\left(\od{\vb r}{t}\right)_r\) 회전축에 대한(회전계에서 잰) 속도 · \(\boldsymbol\omega\times\vb r\) 좌표축의 회전 때문에 생기는 속도.</li>
+<li>예(교재): 미끄러지지 않고 구르는 원판 — 접촉점을 순간 회전축으로 보면 \(\vb v=\boldsymbol\omega\times\vb r_{\rm 접촉점\to P}\).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 회전계의 미분 연산자</div>
+\[ \boxed{\ \left(\od{}{t}\right)_{f}=\left(\od{}{t}\right)_{r}+\boldsymbol\omega\times\ },\qquad \dot{\uv e}_i=\boldsymbol\omega\times\uv e_i,\qquad \dot{\boldsymbol\omega}_{f}=\dot{\boldsymbol\omega}_{r} \]
+\[ \left(\od{\vb Q}{t}\right)_f=0\ \Rightarrow\ \left(\od{\vb Q}{t}\right)_r=-\boldsymbol\omega\times\vb Q,\qquad \vb v_f=\vb V+\vb v_r+\boldsymbol\omega\times\vb r \]
+<p class="note">유도 순서: \(\vb Q=\sum Q_i(t)\uv e_i(t)\) → 곱의 미분 → \(\dot{\uv e}_i=\boldsymbol\omega\times\uv e_i\) → \(\boldsymbol\omega\)를 합 밖으로.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u11-1"><div class="qq">연산자 공식을 회전계 기저벡터의 미분으로 유도하라. \(\dot{\uv e}_2\)를 \(\omega_1,\omega_3\)로 직접 써서 \(\boldsymbol\omega\times\uv e_2\)와 일치함을 확인할 것.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>유도 1(강의 방식)과 "교재 방식 대조" 상자. \(\omega_3\)는 \(\uv e_2\)를 \(-\uv e_1\) 쪽으로, \(\omega_1\)은 \(+\uv e_3\) 쪽으로 돌린다: \(\dot{\uv e}_2=-\omega_3\uv e_1+\omega_1\uv e_3\). 한편 \(\boldsymbol\omega\times\uv e_2=(\omega_1\uv e_1+\omega_2\uv e_2+\omega_3\uv e_3)\times\uv e_2=\omega_1\uv e_3-\omega_3\uv e_1\) ✓.</p></div></div>
+
+<div class="qz" data-q="u11-2"><div class="qq">반지름 \(a\)인 원판이 수평면에서 미끄러지지 않고 속력 \(v\)로 굴러간다. 원판의 꼭대기 점과 중심 높이의 앞쪽 점의 지면 속도를 "접촉점을 순간 회전축으로" 하는 방법으로 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(\omega=v/a\). 꼭대기: 접촉점에서 거리 \(2a\), 그 선분(연직)에 수직 → 속력 \(2v\), 전진 방향. 앞쪽 점: 접촉점에서 거리 \(\sqrt2a\), 45° 기울어진 선분에 수직 → 속력 \(\sqrt2v\), 방향은 <b>전진 방향에서 45° 아래</b>, 즉 \((v,-v)\). 검산: 중심 속도 \(v\uv x\) + 중심에 대한 회전 속도(시계방향 회전, 앞쪽 점은 아래로 \(v\)) = \((v,-v)\) ✓.</p></div></div>
+
+<div class="qz" data-q="u11-3"><div class="qq">(참/거짓) "각속도 벡터의 시간 변화율은 고정계와 회전계에서 다르게 측정된다." 이유와 함께.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>거짓.</b> \(\vb Q=\boldsymbol\omega\)를 연산자 공식에 넣으면 \(\boldsymbol\omega\times\boldsymbol\omega=0\) → 같다. (단 회전계가 <em>그 \(\boldsymbol\omega\)로</em> 도는 계일 때. 강체의 Euler 방정식(U22)에서 물체계 성분으로 쓴 \(\dot\omega_i\)가 그대로 \(\dot{\boldsymbol\omega}\)의 성분인 이유.)</p></div></div>
+
+<div class="qz" data-q="u11-4"><div class="qq">원점이 같은 두 좌표계에서, 고정계의 벡터 \(\vb Q\)가 일정하다(\((\dd\vb Q/\dd t)_f=0\))면 회전계의 관찰자는 \(\vb Q\)가 어떻게 변한다고 보는가? 별이 밤하늘에서 도는 현상과 연결하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\((\dd\vb Q/\dd t)_r=-\boldsymbol\omega\times\vb Q\) — 회전계 관찰자에게 \(\vb Q\)는 각속도 \(-\boldsymbol\omega\)로 돈다. 지구(\(\boldsymbol\omega\): 북쪽)에서 보면 "고정된" 별들이 천구의 북극 둘레로 반대 방향(동→서)으로 하루에 한 바퀴 돈다.</p></div></div>
+
+<div class="qz" data-q="u11-5"><div class="qq">가속도 \(\vb A\)(일정)로 직선 가속하는 열차 안 천장에 길이 \(l\)인 진자가 매달려 있다. 열차계의 Lagrangian (10.7)을 이용해 평형각과 작은 진동의 각진동수를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(\Lag=\tfrac12mv^2-m\vb A\cdot\vb r-U\), \(U=mgz\). 즉 열차 안에서는 유효 중력 \(\vb g_{\rm eff}=\vb g-\vb A\)가 작용하는 것과 같다. 평형: 줄이 \(\vb g_{\rm eff}\) 방향 → 연직에서 <b>가속 반대쪽으로</b> \(\tan\theta_0=A/g\). 작은 진동: \(\omega_0=\sqrt{g_{\rm eff}/l}\), \(g_{\rm eff}=\sqrt{g^2+A^2}\).</p>
+<p>검산: \(A=0\)이면 \(\theta_0=0\), \(\omega_0=\sqrt{g/l}\) ✓. 힘으로 풀어도(겉보기힘 \(-m\vb A\)) 같은 결과 — 유도 A와 B의 일치.</p></div></div>
+
+<div class="qz" data-q="u11-6"><div class="qq">\(\Lag'=\tfrac12m(\vb v+\vb V)^2-U\)에서 출발해 \(\Lag=\tfrac12mv^2-m\dot{\vb V}\cdot\vb r-U\)에 이르는 과정을 쓰고, 버린 두 항이 왜 운동방정식에 영향을 주지 않는지 각각 한 줄로 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>유도 B ①–④. \(m\vb v\cdot\vb V=\od{}{t}(m\vb V\cdot\vb r)-m\dot{\vb V}\cdot\vb r\). (i) \(\tfrac12mV^2(t)\): 좌표·속도를 포함하지 않으니 \(\partial/\partial q\), \(\partial/\partial\dot q\)가 모두 0. (ii) \(\dd F/\dd t\), \(F=m\vb V\cdot\vb r\): \(\od{}{t}\pd{}{\dot q_i}\left(\od Ft\right)=\od{}{t}\pd F{q_i}=\pd{}{q_i}\left(\od Ft\right)\)이라 Euler–Lagrange 식에서 상쇄(작용이 양 끝점의 상수만큼만 달라진다).</p></div></div>

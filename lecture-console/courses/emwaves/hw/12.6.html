@@ -1,0 +1,22 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+별이 점 \(a\)에서 \(b\)까지 실제 시간 \(T\) 동안 이동한다. 이 동안
+<ul>
+<li>하늘을 가로지른 거리(횡단): \(\Delta s = vT\sin\theta\)</li>
+<li>지구 쪽으로 다가온 거리: \(vT\cos\theta\) → 두 번째 신호는 빛 경로가 그만큼 <b>짧다</b>.</li>
+</ul>
+따라서 지구에 도착하는 두 신호의 <b>시간 간격</b>은
+\[ \Delta t = T-\frac{vT\cos\theta}{c}=T\Bigl(1-\frac{v}{c}\cos\theta\Bigr). \]
+겉보기 속도는
+\[ \boxed{u=\frac{\Delta s}{\Delta t}=\frac{v\sin\theta}{1-(v/c)\cos\theta}} \]
+
+<p>최댓값: \(\dfrac{d}{d\theta}\) 분자 \(=\cos\theta\,(1-\beta\cos\theta)-\sin\theta(\beta\sin\theta)=\cos\theta-\beta=0\),
+\[ \boxed{\cos\theta_{\max}=\beta=v/c} \]
+이때 \(\sin\theta=\sqrt{1-\beta^2}=1/\gamma\), 분모 \(=1-\beta^2=1/\gamma^2\)이므로
+\[ u_{\max}=\frac{v/\gamma}{1/\gamma^{2}}=\boxed{\gamma v=\frac{v}{\sqrt{1-v^2/c^2}}} \]
+\(v\to c\)이면 \(\gamma\to\infty\)이므로 겉보기 속도는 얼마든지 커진다. 예: \(v=0.99c\Rightarrow u_{\max}\approx 7c\).</p>
+
+<p>즉 초광속 "발견" 기사들은 대부분 <b>빛 전파 시간을 보정하지 않은</b> 겉보기 효과이며, 실제 \(v\lt c\)이다. 상대론 위반이 아니다.</p>
+
+<div class="alabel">감점 포인트</div>
+\(\Delta t\)를 그냥 \(T\)로 두는 것(=문제의 핵심을 통째로 놓침). 그리고 이 문제는 순수 <b>광행 지연(light travel time)</b> 효과이지 시간 팽창 문제가 아니다 — \(\gamma\)가 답에 나오는 건 결과이지 가정이 아니다.</div><!--/sol-->

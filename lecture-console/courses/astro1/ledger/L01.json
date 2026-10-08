@@ -1,0 +1,175 @@
+[
+ {
+  "id": "L01.s1",
+  "loc": "슬라이드 1",
+  "raw": "Chapter 1 Radiation Basics — Introduction to Astrophysics I, 2026 Fall, Woong-Tae Kim",
+  "skip": "표지"
+ },
+ {
+  "id": "L01.s2a",
+  "loc": "슬라이드 2 · RQ ①",
+  "raw": "Review Questions? • What is radiation?"
+ },
+ {
+  "id": "L01.s2b",
+  "loc": "슬라이드 2 · RQ ②",
+  "raw": "Review Questions? • What are the sources of continuum emission?"
+ },
+ {
+  "id": "L01.s2c",
+  "loc": "슬라이드 2 · RQ ③",
+  "raw": "Review Questions? • What are the sources of line radiation?"
+ },
+ {
+  "id": "L01.s2d",
+  "loc": "슬라이드 2 · RQ ④",
+  "raw": "Review Questions? • What is luminosity (units)?"
+ },
+ {
+  "id": "L01.s2e",
+  "loc": "슬라이드 2 · RQ ⑤",
+  "raw": "Review Questions? • What is flux (units)?"
+ },
+ {
+  "id": "L01.s2f",
+  "loc": "슬라이드 2 · RQ ⑥",
+  "raw": "Review Questions? • What is specific intensity (units)?"
+ },
+ {
+  "id": "L01.s2g",
+  "loc": "슬라이드 2 · RQ ⑦",
+  "raw": "Review Questions? • What is the mean intensity?"
+ },
+ {
+  "id": "L01.s2h",
+  "loc": "슬라이드 2 · RQ ⑧",
+  "raw": "Review Questions? • Why does the specific intensity remain independent of distance in a vacuum?"
+ },
+ {
+  "id": "L01.s3",
+  "loc": "슬라이드 3 · Q1",
+  "raw": "Q1 • Determine the fraction of the Sun's luminosity that is intercepted by the Earth. • What luminosity does this correspond to? [주어진 값] L⊙ = 3.85 × 10³³ erg s⁻¹, R⊙ = 6.96 × 10¹⁰ cm, au = 1.50 × 10¹³ cm, R⊕ = 6.37 × 10⁸ cm"
+ },
+ {
+  "id": "L01.s4a",
+  "loc": "슬라이드 4 · A1 ①",
+  "raw": "A1 • The fraction of the Sun's luminosity that is intercepted by the Earth is f = πR⊕² / (4π (au)²) = 4.5 × 10⁻¹⁰"
+ },
+ {
+  "id": "L01.s4b",
+  "loc": "슬라이드 4 · A1 ②",
+  "raw": "• The intercepted luminosity is L_int = f L⊙ = 1.73 × 10²⁴ erg s⁻¹"
+ },
+ {
+  "id": "L01.s4c",
+  "loc": "슬라이드 4 · A1 ③",
+  "raw": "• The total primary power consumption on Earth is approximately 2 × 10²⁰ erg s⁻¹."
+ },
+ {
+  "id": "L01.s5a",
+  "loc": "슬라이드 5 · Q2 ①",
+  "raw": "Q2 • What is the astrophysical flux of the Sun?"
+ },
+ {
+  "id": "L01.s5b",
+  "loc": "슬라이드 5 · Q2 ②",
+  "raw": "• What is the (frequency-integrated) intensity of the Sun?"
+ },
+ {
+  "id": "L01.s5c",
+  "loc": "슬라이드 5 · Q2 ③",
+  "raw": "• What is the solar constant, which is the flux of the Sun at a distance of 1au?"
+ },
+ {
+  "id": "L01.s6a",
+  "loc": "슬라이드 6 · A2 ①",
+  "raw": "A2 • Astrophysical flux of the Sun F⊙ = L⊙ / (4πR⊙²) = 6.33 × 10¹⁰ erg s⁻¹ cm⁻²"
+ },
+ {
+  "id": "L01.s6b",
+  "loc": "슬라이드 6 · A2 ②",
+  "raw": "• Using F = πI, I⊙ = F⊙/π = 2 × 10¹⁰ erg s⁻¹ cm⁻² sr⁻¹"
+ },
+ {
+  "id": "L01.s6c",
+  "loc": "슬라이드 6 · A2 ③",
+  "raw": "• Solar constant is S⊙ = L⊙ / (4π (au)²) = 1.367 × 10⁶ erg s⁻¹ cm⁻² = 1.367 × 10³ W m⁻²"
+ },
+ {
+  "id": "L01.s6d",
+  "loc": "슬라이드 6 · A2 그림",
+  "raw": "[그림: 태양상수(W/m²) 시계열 1978–2013+, 세로축 1365–1368.5 W/m², 약 11년 주기로 오르내리는 진동(극대 ~1981, ~1990, ~2001, ~2013 부근)]"
+ },
+ {
+  "id": "L01.s7",
+  "loc": "슬라이드 7 · Q3",
+  "raw": "Q3 [그림: Cas A 두 장 — (a) 붉은/노란 색의 전파(radio) 영상, (b) 광학·X선 합성 영상] • Cas A is an SNR. It is located 3.4 kpc away and has a linear diameter of 4 pc. What is the solid angle subtended by Cas A?"
+ },
+ {
+  "id": "L01.s8a",
+  "loc": "슬라이드 8 · A3 ①",
+  "raw": "A3 • Cas A subtends a linear angle, θ = d/D = 4/3.4e3 = 1.18 × 10⁻³ rad"
+ },
+ {
+  "id": "L01.s8b",
+  "loc": "슬라이드 8 · A3 ②",
+  "raw": "• For an ellipse on the sky of angular major axis and minor axis diameters of θ₁ and θ₂, respectively, the two-dimensional solid angle, in steradians, is Ω = πθ₁θ₂/4. Thus, Ω = 1.09 × 10⁻⁶ sr"
+ },
+ {
+  "id": "L01.s9",
+  "loc": "슬라이드 9 · Q4",
+  "raw": "Q4 • Cas A has L_radio = 3 × 10³⁵ erg s⁻¹ in the radio band. Assuming that Cas A has a spectral luminosity between ν₁ = 10⁷ Hz and ν₂ = 2 × 10¹⁰ Hz of the form, L_ν = K ν^−0.7, where K is a constant, determine the value of K and specify its units. Also find L_ν and L_λ at ν = 1900 MHz."
+ },
+ {
+  "id": "L01.s10a",
+  "loc": "슬라이드 10 · A4 ①",
+  "raw": "A4 • Units: L_ν = K ν^−0.7 ; erg s⁻¹ Hz⁻¹ = [K] Hz^−0.7 ➔ [K] = erg s⁻¹ Hz^−0.3"
+ },
+ {
+  "id": "L01.s10b",
+  "loc": "슬라이드 10 · A4 ②",
+  "raw": "• The value of K: L_radio = ∫_{ν1}^{ν2} L_ν dν = ∫_{ν1}^{ν2} K ν^−0.7 dν = 3 × 10³⁵ erg s⁻¹ ➔ K = 8.36 × 10³¹ erg s⁻¹ Hz^−0.3",
+  "note": "python 재계산: K = 0.3·L/(ν₂^0.3−ν₁^0.3) = 8.14×10³¹ (슬라이드 8.36×10³¹과 약 2.7% 차이)"
+ },
+ {
+  "id": "L01.s10c",
+  "loc": "슬라이드 10 · A4 ③",
+  "raw": "• L_ν and L_λ at ν = 1900 MHz: L_ν = Kν^−0.7 = 2.67 × 10²⁵ erg s⁻¹ Hz⁻¹ ; L_λ = L_ν |dν/dλ| = (ν²/c) L_ν = 3.22 × 10³³ erg s⁻¹ cm⁻¹",
+  "note": "K=8.14×10³¹이면 Lν=2.60×10²⁵, Lλ=3.14×10³³"
+ },
+ {
+  "id": "L01.s11a",
+  "loc": "슬라이드 11 · Q5 ①",
+  "raw": "Q5 • Determine the flux density (in Jy = 10⁻²³ erg cm⁻² s⁻¹ Hz⁻¹) of a cell phone that emits 2 mW cm⁻² at a frequency of 1900 MHz over a bandwidth of 30 kHz (assume a flat spectrum) and of the Sun, as measured at the Earth, at the same frequency."
+ },
+ {
+  "id": "L01.s11b",
+  "loc": "슬라이드 11 · Q5 ②",
+  "raw": "• Compare these to the flux density of Cas A, which is the strongest radio source in the sky after the Sun."
+ },
+ {
+  "id": "L01.s11c",
+  "loc": "슬라이드 11 · Q5 ③",
+  "raw": "• Comment on the potential of cell phones to interfere with the detection of astronomical signals."
+ },
+ {
+  "id": "L01.s12a",
+  "loc": "슬라이드 12 · A5 ①",
+  "raw": "A5 • Flux from the cell phone is f_ν^c = 2 × 10⁻³ W cm⁻² = 2 × 10⁴ erg s⁻¹ cm⁻². – Assuming a flat spectrum, the flux density is f_ν(cell) = f(cell)/Δν = 0.67 erg s⁻¹ cm⁻² Hz⁻¹ = 6.7 × 10²² Jy"
+ },
+ {
+  "id": "L01.s12b",
+  "loc": "슬라이드 12 · A5 ②",
+  "raw": "• From the Sun, by adopting T_eff = 5800 K, B_ν^S = 2ν²kT/c² = 6.42 × 10⁻¹⁵ erg cm⁻² Hz⁻¹ sr⁻¹. The flux density at the Earth will be f_ν^S = B_ν^S πθ⊙²/4 = 4.36 × 10⁴ Jy"
+ },
+ {
+  "id": "L01.s12c",
+  "loc": "슬라이드 12 · A5 ③",
+  "raw": "• The flux density of Cas A is f_ν^CasA = L_ν/(4πD²) = 1.93 × 10³ Jy"
+ },
+ {
+  "id": "L01.s12d",
+  "loc": "슬라이드 12 · A5 ④",
+  "raw": "• It is quite clear that the cell phone signal will swamp the brightest radio emitter (the Sun) as well as the brightest nighttime radio emitter (Cas A), and therefore every other radio source in the sky at this frequency."
+ }
+]

@@ -1,0 +1,22 @@
+<div class="predict"><b>◈ 학습 목표.</b> 12.5의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.</div>
+
+<h4>기말 <span class="en">약 45분</span></h4>
+
+<p>유체역학의 출발점은 작은 상자에 들어오고 나가는 양을 세는 것이다. 질량은ρv로, 운동량은벌크수송ρvv와압력PI로, 에너지는운동·내부에너지에압력일을더한플럭스로이동한다. 적분형보존식을발산정리로미분형으로바꾸면기본방정식이된다.</p><p>Euler 방정식은압력구배와중력이유체입자를가속한다는식이다. 압력이높다는사실보다압력의공간구배가중요하다. 연속방정식과함께쓰면물질미분형과보존형은매끄러운유동에서동등하지만충격파에서는보존형적분관계가특히중요하다.</p><p>냉각함수ℒ는여기서단위질량당순에너지손실률로정의한다. 양수는냉각, 음수는순가열이다. 문헌마다부피당냉각률을쓰기도하므로ρ인자와부호를확인하자. 방정식을닫으려면상태방정식과중력퍼텐셜, 냉각·가열모형이더필요하다.</p><p>자기장·점성·열전도·외력은필요할때추가한다. 단순Euler식에없는물리를상황설명에서이미중요하다고말했다면그모형은불완전하다. 식을풀기전에포함/무시항을적는습관이중요하다.</p>
+
+<div class="callout"><b class="head">강의·교재 강조점.</b> 교재305쪽 물질미분·엔트로피·보존형에너지식 직접 확인 / 후속 강의·HW 강조점은 아직 미반영.</div>
+
+<div class="formula"><div class="ftitle">암기 — 질량·운동량·에너지 보존</div><p><b>연속방정식</b></p>\[ \partial_t\rho+\nabla\cdot(\rho\mathbf v)=0,\quad {D\rho\over Dt}=-\rho\nabla\cdot\mathbf v \]<p class="note">양의발산은팽창이므로따라가는입자의밀도가감소. <i>조건: 질량원천/소멸없음</i></p><p><b>Euler와Poisson</b></p>\[ {D\mathbf v\over Dt}=-{\nabla P\over\rho}-\nabla\Phi,\quad\nabla^2\Phi=4\pi G\rho \]<p class="note">Poisson식은기체자체중력의경우; 외부퍼텐셜은별도추가. <i>조건: 비점성·비자화유체</i></p><p><b>총에너지 보존형</b></p>\[ E={1\over2}\rho v^2+{P\over\gamma-1},\quad\partial_tE+\nabla\cdot[(E+P)\mathbf v]=-\rho\mathbf v\cdot\nabla\Phi-\rho\mathcal L \]<p class="note">E는부피당운동+열에너지, 중력퍼텐셜에너지는이정의에포함하지않음. <i>조건: 이상기체; 열전도·점성·자기장무시</i></p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u23-1"><div class="qq">균일한큰압력은유체를한방향으로가속하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>압력구배가없으면순압력가속도는0이다.</p></div></div>
+
+
+<div class="qz" data-q="u23-2"><div class="qq">에너지플럭스가Ev만이아닌이유는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>움직이는유체가인접유체에압력일을하기때문에Pv가추가된다.</p></div></div>
+
+
+<div class="qz" data-q="u23-3"><div class="qq">비압축성은항상ρ가공간적으로일정하다는뜻인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>정확히는따라가는요소의밀도가변하지않아∇·v=0인조건이다. 여러밀도유체가각각비압축성일수있다.</p></div></div>
+
+
+<p class="note">출처: 교재 p.294–305 · 상태: 교재 선행 · 교재305쪽 물질미분·엔트로피·보존형에너지식 직접 확인</p>

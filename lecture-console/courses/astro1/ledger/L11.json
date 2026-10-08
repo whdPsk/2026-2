@@ -1,0 +1,107 @@
+[
+{
+"id": "L11.s1",
+"loc": "슬라이드 1",
+"raw": "Compton Scattering — Introduction to Astrophysics I, 2026 Fall, Woong-Tae Kim",
+"note": "",
+"skip": "표지"
+},
+{
+"id": "L11.s2",
+"loc": "슬라이드 2",
+"raw": "Questions? • Feel free to ask any questions you had while watching the flipped-learning animations.",
+"note": "",
+"skip": "질문 안내(내용 없음)"
+},
+{
+"id": "L11.s3a",
+"loc": "슬라이드 3 ①",
+"raw": "Review Questions • What is the relativistic Doppler effect formula?",
+"note": ""
+},
+{
+"id": "L11.s3b",
+"loc": "슬라이드 3 ②",
+"raw": "• What is the aberration formula? [그림: K계의 각 θ, 속도 v로 움직이는 K′계의 각 θ′]",
+"note": ""
+},
+{
+"id": "L11.s3c",
+"loc": "슬라이드 3 ③",
+"raw": "• What is the average energy boost of a photon by inverse Compton scattering when the photons are isotropic?",
+"note": ""
+},
+{
+"id": "L11.s3d",
+"loc": "슬라이드 3 ④",
+"raw": "• What is the inverse Compton power radiated by a single electron in an isotropic photon field with energy density U_γ? – How does it compare to synchrotron power?",
+"note": ""
+},
+{
+"id": "L11.s3e",
+"loc": "슬라이드 3 ⑤",
+"raw": "• What is the inverse Compton catastrophe? – At what brightness temperature does this occur?",
+"note": ""
+},
+{
+"id": "L11.s4",
+"loc": "슬라이드 4",
+"raw": "(빈 슬라이드)",
+"note": "",
+"skip": "빈 슬라이드"
+},
+{
+"id": "L11.s5",
+"loc": "슬라이드 5",
+"raw": "Inverse Compton Power for Single Scattering • Consider a situation in which an electron with energy γ m_e c² moves through a space filled with isotropic photons with frequency ν. – Energy lost by the electron is ⟨hν1⟩ − hν. • The inverse Compton power is then P_IC = (⟨hν1⟩ − hν) × dN_scatt/dt, where dN_scatt/dt is the number scattering per unit time. • It is difficult to calculate dN_scatt/dt directly in the K frame. – We calculate dN′_scatt/dt′ in the K′ frame first and convert it to dN_scatt/dt in the K frame. – Since N_scatt is Lorentz invariant and dt = γ dt′ (time dilation), we obtain dN_scatt/dt = (1/γ) dN′_scatt/dt′",
+"note": ""
+},
+{
+"id": "L11.s6",
+"loc": "슬라이드 6",
+"raw": "dN′_scatt/dt′ • Let f′_γ(p′)d³p′ denote the number density of the photons with momentum between p′ and p′+dp′ in the K′ frame. • For Thomson scatterings, dN′_scatt/dt′ = cσ_T ∫ f′_γ(p′) d³p′ • It is convenient to evaluate the above integral in the K frame where the photons are isotropic. – The photon distribution function is Lorentz invariant: f′_γ(p′)=f_γ(p). – Since p² = p_x² + p_y² + p_z², we obtain dp = (p_x/p)dp_x = cosθ dp_x. – Lorentz transformation for the photon momentum is p′_x = γ(p_x − pβ), p′_y = p_y, p′_z = p_z ⇒ dp′_x = γ(1 − β cosθ)dp_x, dp′_y = dp_y, dp′_z = dp_z, so that d³p′ = γ(1 − β cosθ) d³p",
+"note": ""
+},
+{
+"id": "L11.s7",
+"loc": "슬라이드 7",
+"raw": "dN_scatt/dt • Therefore, dN′_scatt/dt′ becomes cσ_T ∫ f_γ(p) γ(1 − β cosθ) d³p • For isotropic photons in the K frame, = cσ_T ∫ f_γ(p)γ(1 − β cosθ)p² dp dΩ = cγσ_T ∫ f_γ(p)p² dp ∫∫(1 − β cosθ) sinθ dθ dφ = cγσ_T · (n_γ/4π) · 4π = n_γ γ c σ_T, where n_γ = ∫4πp² f(p)dp is the photon number density. • Therefore, the number of scatterings in the K frame is dN_scatt/dt = (1/γ) dN′_scatt/dt′ = n_γ c σ_T",
+"note": ""
+},
+{
+"id": "L11.s8",
+"loc": "슬라이드 8",
+"raw": "Inverse Compton Power • If we take ⟨ν1⟩ = γ²(1 + β²/3) ν ⇒ ⟨hν1⟩ − hν = (4/3)γ²β² hν, the “net power” lost by the electron, converted into increased radiation, is P_IC = (⟨hν1⟩ − hν) × n_γ σ_T c = (4/3) c σ_T U_γ γ² β², where the photon energy density is defined as U_γ = hν n_γ • Note that this result is based on the assumption that the electron undergoes Thomson scatterings in the K′ frame.",
+"note": "검산: γ²(1+β²/3)−1 = γ²−1+γ²β²/3 = (4/3)γ²β² ✓"
+},
+{
+"id": "L11.s9",
+"loc": "슬라이드 9",
+"raw": "⟨hν1⟩? • Let P be the inverse Compton power (without correcting for the initial photon energy). Then P = ⟨hν1⟩ dN_scatt/dt = P′, since the power is Lorentz invariant for any emitter that emits with front-back symmetry in its instantaneous rest frame. • In the K′ frame, the energy of the photon after a scattering is ε′1 = ε′ for the Thomson scattering, so that P′ = cσ_T ∫ ε′ f′_γ(p′) d³p′ • Using d³p′ = γ(1 − β cosθ)d³p and ε′ = εγ(1 − β cosθ), this becomes in the K frame P′ = cσ_T ∫ γ²(1 − β cosθ)² ε f_γ(p) p² dp dΩ = cγ²σ_T ∫ ε f_γ(p)p² dp ∫∫ (1 − β cosθ)² sinθ dθ dφ",
+"note": ""
+},
+{
+"id": "L11.s10",
+"loc": "슬라이드 10",
+"raw": "⟨hν1⟩? • Thus, the power in the K frame becomes P = cγ²σ_T · (U_γ/4π) · 4π (1 + β²/3) = cσ_T U_γ γ² (1 + β²/3), where U_γ = 4π∫ε f_γ(p)p² dp is the photon energy density. • Since dN_scatt/dt = n_γ c σ_T = (U_γ/hν) c σ_T, we obtain ⟨hν1⟩ = P/(dN_scatt/dt) = γ²(1 + β²/3) hν",
+"note": ""
+},
+{
+"id": "L11.s11",
+"loc": "슬라이드 11",
+"raw": "Synchrotron Self-Compton • In the SSC, ultrarelativistic electrons accelerated in a magnetic field generate synchrotron photons. – The typical field strength is ~10² μG, and resulting synchrotron photons spans a broad frequency range, from radio to X-rays, depending on the electron energy distribution. • These photons in turn interact via inverse Compton scattering with their own parent electron population. – Ultrarelativistic electrons boost the energy of the rescattered photons to GeV–TeV energies. [그림: 자기장 속 전자가 싱크로트론 광자를 내고 그 광자가 다시 역콤프턴 산란; E² dN/dE 스펙트럼에 싱크로트론 봉우리(~1 keV 부근)와 역콤프턴 봉우리(~100 GeV, 50 TeV까지), 합(Total)은 쌍봉]",
+"note": ""
+},
+{
+"id": "L11.s12",
+"loc": "슬라이드 12",
+"raw": "Scattering by Thermal Electrons • Recall that the average photon energy after inverse Compton scattering is ⟨ν1⟩ = γ²(1 + β²/3) ν • The fractional energy gain per scattering is Δε/ε ≡ (⟨hν1⟩ − hν)/hν = (4/3)γ²β² • For (non-relativistic) thermal electrons that obey the MB velocity distribution, ⟨β²⟩ = ⟨v²⟩/c² = 3kT_e/(m_e c²) • In an optically thin plasma, a photon has a probability (τ = n_e σ_T L) of being scattered. Thus, the average fractional energy gain is Δε/ε = (4kT_e/(m_e c²)) τ",
+"note": ""
+},
+{
+"id": "L11.s13",
+"loc": "슬라이드 13",
+"raw": "Sunyaev-Zeldovich Effect • Galaxy clusters contain X-ray emitting hot gas which can scatter CMB photons, causing spectral distortion. k_B T_e ~ 5 keV; k_B T_e/(m_e c²) ~ 0.01 : non-relativistic; τ ~ 0.02; Scattered radiation Δν/ν = (4k_B T_e/(m_e c²)) τ ~ 10⁻⁴ [그림: 은하단 X선 영상; Sunyaev & Zeldovich (1980) — CMB 세기 스펙트럼이 산란 뒤 고주파 쪽으로 이동(저주파에서 감소, 고주파에서 증가)] – This effect is independent of cluster distance, but depends on the optical depth τ = n_e σ_T L, where n_e is the electron number density and L is the cluster diameter. – X-ray luminosity is due to Bremsstrahlung and thus depends on n_e² L. • Comparison of spectral distortion and X-ray luminosity gives L, and measurement of the cluster angular size gives the distance to the cluster.",
+"note": "수치: 4×0.01×0.02 = 8×10⁻⁴. 슬라이드 표기는 ~10⁻⁴ — 확인 필요."
+}
+]

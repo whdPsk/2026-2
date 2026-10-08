@@ -1,0 +1,146 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 진공에는 전하도 전류도 없다. 그런데도 장이 스스로 진동하며 퍼져 나갈 수 있는 이유는 무엇인가? 힌트: Faraday 법칙은 "변하는 \(\vb{B}\)가 \(\vb{E}\)를 만든다"이고 Ampère–Maxwell 법칙은 그 역이다. 이 상호 되먹임이 어떻게 2계 방정식을 낳는지 예측해 보라. 또, 파동방정식이 나온다는 것만으로 \(\vb{E}\)의 방향까지 정해지는가? 아니라면 무엇이 더 필요한가?</div>
+
+<h4>9.2.1 진공에서의 \(\vb{E}\)·\(\vb{B}\) 파동방정식 <span class="en">the wave equation for E and B</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>Maxwell 방정식 → 파동방정식 <b>(필수 암기 유도)</b></div>
+<ol>
+<li>전하도 전류도 없는 영역에서 Maxwell 방정식은
+\[ \text{(i)}\;\divg\vb{E}=0,\quad \text{(ii)}\;\divg\vb{B}=0,\quad \text{(iii)}\;\curl\vb{E}=-\frac{\partial\vb{B}}{\partial t},\quad \text{(iv)}\;\curl\vb{B}=\muz\eps\frac{\partial\vb{E}}{\partial t} \]
+(iii)과 (iv)는 \(\vb{E}\)와 \(\vb{B}\)가 <b>결합된</b> 1계 방정식이다. 목표는 이를 <b>분리된</b> 2계 방정식으로 바꾸는 것.</li>
+<li>(iii)의 양변에 컬을 한 번 더 취한다. 좌변에 벡터 항등식
+\[ \curl(\curl\vb{E})=\grad(\divg\vb{E})-\nabla^2\vb{E} \]
+를 쓴다. <b>이 항등식이 유도 전체의 엔진이다.</b></li>
+<li>(i)에 의해 \(\divg\vb{E}=0\)이므로 첫 항이 <b>사라진다</b>. 여기서 Gauss 법칙이 결정적으로 쓰인다는 점에 주목하라. 전하가 있으면 이 항이 살아남아 파동방정식이 비제차가 된다.
+\[ -\nabla^2\vb{E}=\curl\!\left(-\frac{\partial\vb{B}}{\partial t}\right)=-\frac{\partial}{\partial t}(\curl\vb{B}) \]
+(공간 미분과 시간 미분의 순서를 바꿀 수 있음을 이용.)</li>
+<li>우변의 \(\curl\vb{B}\)에 (iv)를 대입한다:
+\[ -\nabla^2\vb{E}=-\frac{\partial}{\partial t}\left(\muz\eps\frac{\partial\vb{E}}{\partial t}\right)=-\muz\eps\frac{\partial^2\vb{E}}{\partial t^2} \]</li>
+<li>부호를 정리하면
+\[ \boxed{\;\nabla^2\vb{E}=\muz\eps\frac{\partial^2\vb{E}}{\partial t^2}\;} \]
+완전히 같은 절차를 (iv)에서 시작하면 (ii)와 (iii)을 써서
+\[ \nabla^2\vb{B}=\muz\eps\frac{\partial^2\vb{B}}{\partial t^2} \]
+가 나온다. <b>네 방정식을 모두 썼다</b>는 점이 중요하다.</li>
+<li>이는 각 Cartesian 성분이 3차원 파동방정식 \(\nabla^2 f=\dfrac{1}{v^2}\dfrac{\partial^2 f}{\partial t^2}\)를 만족한다는 뜻이다. (성분별로 보아야 하는 이유: \(\nabla^2\)를 벡터에 적용한다는 것은 Cartesian 좌표에서만 "성분마다 라플라시안"과 같다.)</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>\(c=1/\sqrt{\eps\muz}\) — 전자기학이 광학을 낳는 순간</div>
+<ol>
+<li>유도 1의 결과를 표준형과 비교하면 전파 속도는
+\[ v=\frac{1}{\sqrt{\eps\muz}} \]</li>
+<li>수치를 넣는다. \(\eps=8.85\times10^{-12}\ \mathrm{C^2/N\,m^2}\), \(\muz=4\pi\times10^{-7}\ \mathrm{N/A^2}\):
+\[ \eps\muz \approx (8.85\times10^{-12})(1.257\times10^{-6})\approx 1.11\times10^{-17}\ \mathrm{s^2/m^2} \]
+\[ v=(1.11\times10^{-17})^{-1/2}\approx 3.00\times10^{8}\ \mathrm{m/s} \]</li>
+<li>이 값은 측정된 광속과 일치한다. 따라서
+\[ \boxed{\,c=\frac{1}{\sqrt{\eps\muz}}\,} \]
+<b>논리적 충격을 음미하라.</b> \(\eps\)는 Coulomb 법칙(정지 전하 실험)에서, \(\muz\)는 Biot–Savart 법칙(도선 실험)에서 나온 상수다. 빛과 아무 상관 없는 두 실험의 결과를 조합했더니 광속이 나왔다.</li>
+<li>결정적 기여자는 Maxwell이 Ampère 법칙에 추가한 변위전류 \(\muz\eps\,\partial\vb{E}/\partial t\)다. 이 항이 없으면 유도 1의 4단계에서 우변이 0이 되어 \(\nabla^2\vb{E}=0\), 즉 <b>파동이 아니라 정적 Laplace 방정식</b>만 남는다. 빛의 전자기 이론은 통째로 사라진다.</li>
+</ol></div>
+
+<h4>9.2.2 단색 평면파 <span class="en">monochromatic plane waves</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>횡파성(transversality) — Maxwell이 부과하는 추가 구속</div>
+<ol>
+<li><b>핵심 논리:</b> Maxwell 방정식의 모든 해는 파동방정식을 만족하지만, <b>역은 성립하지 않는다</b>. 파동방정식은 (i)~(iv)에서 유도되는 과정에서 정보를 잃는다. 따라서 파동방정식의 해 중에서 Maxwell 방정식을 만족하는 것만 골라내야 한다.</li>
+<li>\(z\)방향으로 진행하며 \(x,y\)에 의존하지 않는 해를 시도한다(평면파):
+\[ \tilde{\vb{E}}(z,t)=\tilde{\vb{E}}_0\ee^{\ii(kz-\omega t)},\qquad \tilde{\vb{B}}(z,t)=\tilde{\vb{B}}_0\ee^{\ii(kz-\omega t)},\qquad \omega=ck \]
+(\(\omega=ck\)는 이 꼴을 파동방정식에 넣어 얻는다: \(-k^2 = -\omega^2/c^2\).)</li>
+<li>\(\divg\vb{E}=0\)을 적용한다. \(x,y\) 의존성이 없으므로 \(\partial_x=\partial_y=0\)이고
+\[ \divg\tilde{\vb{E}}=\frac{\partial \tilde E_z}{\partial z}=\ii k(\tilde E_0)_z\,\ee^{\ii(kz-\omega t)}=0 \]
+\(k\neq0\)이므로
+\[ (\tilde E_0)_z=0 \]</li>
+<li>같은 논리를 \(\divg\vb{B}=0\)에 적용하면 \((\tilde B_0)_z=0\).</li>
+<li>결론:
+\[ \boxed{\;(\tilde E_0)_z=(\tilde B_0)_z=0\;}\qquad\text{— 전자기파는 횡파다.} \]
+일반 방향 \(\vb{k}\)에 대해서는 \(\ee^{\ii\vb{k}\cdot\vb{r}}\)에 \(\divg\)를 취하면 \(\ii\vb{k}\cdot\tilde{\vb{E}}_0=0\), 즉
+\[ \hat{\vb{k}}\cdot\hat{\vb{n}}=0 \]
+이 나온다. 여기서 \(\hat{\vb{n}}\)은 편광 벡터다. <b>Gauss 법칙 두 개가 곧 횡파성이다</b>라고 외워라.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>\(\vb{B}=\dfrac1c\,\hat{\vb{k}}\times\vb{E}\) — Faraday 법칙이 정하는 \(\vb{E}\)와 \(\vb{B}\)의 관계 <b>(필수 암기 유도)</b></div>
+<ol>
+<li>Faraday 법칙 \(\curl\tilde{\vb{E}}=-\partial\tilde{\vb{B}}/\partial t\)를 성분으로 쓴다. \(\partial_x=\partial_y=0\), \(\tilde E_z=0\)이므로 컬은
+\[ \curl\tilde{\vb{E}}=\left(-\frac{\partial \tilde E_y}{\partial z}\right)\hat{\vb{x}}+\left(\frac{\partial \tilde E_x}{\partial z}\right)\hat{\vb{y}} \]</li>
+<li>\(\partial_z \to \ii k\), \(\partial_t \to -\ii\omega\)이므로 각 성분은
+\[ -\ii k(\tilde E_0)_y = \ii\omega(\tilde B_0)_x,\qquad \ii k(\tilde E_0)_x=\ii\omega(\tilde B_0)_y \]
+즉
+\[ (\tilde B_0)_x=-\frac{k}{\omega}(\tilde E_0)_y,\qquad (\tilde B_0)_y=\frac{k}{\omega}(\tilde E_0)_x \]</li>
+<li>이 두 식은 \(\hat{\vb{z}}\times\tilde{\vb{E}}_0=-(\tilde E_0)_y\hat{\vb{x}}+(\tilde E_0)_x\hat{\vb{y}}\)와 정확히 일치한다. 따라서 압축해서
+\[ \tilde{\vb{B}}_0=\frac{k}{\omega}\,(\hat{\vb{z}}\times\tilde{\vb{E}}_0)=\frac1c\,(\hat{\vb{z}}\times\tilde{\vb{E}}_0) \]
+(\(\omega=ck\) 사용.)</li>
+<li>임의 방향으로 일반화하면
+\[ \boxed{\;\tilde{\vb{B}}=\frac1c\,\hat{\vb{k}}\times\tilde{\vb{E}}\;} \]
+여기서 읽어낼 것 <b>세 가지</b>: (i) \(\vb{E}\perp\vb{B}\), (ii) 둘 다 \(\hat{\vb{k}}\)에 수직, (iii) 비례상수가 <b>실수</b> \(1/c\)이므로 \(\vb{E}\)와 \(\vb{B}\)는 <b>동위상</b>이다. 크기는
+\[ B_0=\frac{E_0}{c} \]
+(iii)의 "동위상"은 진공/유전체에서만 성립한다. 도체에서는 이 상수가 복소수가 되어 위상차가 생긴다(U11).</li>
+<li><b>(iv)는 새 정보를 주는가?</b> Ampère–Maxwell 법칙에 같은 시늉을 하면 \((\tilde E_0)_y=-\dfrac{\omega}{k c^2}(\tilde B_0)_x\) 등이 나오는데, \(\omega/(kc^2)=1/(kc)\cdot(k/\omega)\cdot\omega/c\ldots\) 정리하면 2단계 식과 동일하다. 즉 <b>독립적인 조건을 주지 않는다</b>. 이는 우연이 아니라 \(\omega=ck\)라는 분산관계를 이미 썼기 때문이다.</li>
+<li>\(\vb{E}\times\vb{B}\)의 방향을 확인하면 \(\hat{\vb{n}}\times(\hat{\vb{k}}\times\hat{\vb{n}})=\hat{\vb{k}}\) — 진행 방향이다. 에너지가 흐르는 방향과 파동이 가는 방향이 일치한다(U8).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 5</span>표준형 정리 — Example 9.2의 패러다임</div>
+<ol>
+<li><b>Example 9.2</b>가 제시하는 기준 상황: \(\vb{E}\)가 \(\hat{\vb{x}}\)를 향하면 \(\vb{B}\)는 \(\hat{\vb{y}}\)를 향한다.
+\[ \tilde{\vb{E}}(z,t)=\tilde E_0\ee^{\ii(kz-\omega t)}\hat{\vb{x}},\qquad \tilde{\vb{B}}(z,t)=\frac1c\tilde E_0\ee^{\ii(kz-\omega t)}\hat{\vb{y}} \]</li>
+<li>실수부를 취하면
+\[ \vb{E}(z,t)=E_0\cos(kz-\omega t+\delta)\hat{\vb{x}},\qquad \vb{B}(z,t)=\frac{E_0}{c}\cos(kz-\omega t+\delta)\hat{\vb{y}} \]
+관례상 전자기파의 <b>편광 방향은 \(\vb{E}\)의 방향</b>으로 정의한다. 위 파동은 \(x\)방향 편광이다.</li>
+<li>임의 방향 \(\vb{k}\)와 편광 \(\hat{\vb{n}}\)에 대한 일반형:
+\[ \vb{E}(\vb{r},t)=E_0\cos(\vb{k}\cdot\vb{r}-\omega t+\delta)\,\hat{\vb{n}} \]
+\[ \vb{B}(\vb{r},t)=\frac{E_0}{c}\cos(\vb{k}\cdot\vb{r}-\omega t+\delta)\,(\hat{\vb{k}}\times\hat{\vb{n}}),\qquad \hat{\vb{n}}\cdot\hat{\vb{k}}=0 \]</li>
+<li>\(\vb{k}\cdot\vb{r}\)이 \(kz\)의 자연스러운 일반화인 이유: 위상이 일정한 면 \(\vb{k}\cdot\vb{r}=\text{const}\)는 \(\vb{k}\)에 수직한 평면이고, 이 평면이 속도 \(\omega/k=c\)로 \(\hat{\vb{k}}\) 방향으로 밀려간다. 그래서 "평면파"다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 단색 평면파의 완전한 처방</div>
+\[ \nabla^2\vb{E}=\frac{1}{c^2}\frac{\partial^2\vb{E}}{\partial t^2},\qquad c=\frac{1}{\sqrt{\eps\muz}},\qquad \omega=ck \]
+\[ \boxed{\;\hat{\vb{k}}\cdot\tilde{\vb{E}}_0=0,\qquad \tilde{\vb{B}}=\frac1c\hat{\vb{k}}\times\tilde{\vb{E}},\qquad B_0=\frac{E_0}{c}\;} \]
+<p class="note">\((\hat{\vb{n}},\ \hat{\vb{k}}\times\hat{\vb{n}},\ \hat{\vb{k}})\)가 오른손 직교 정규 삼중항을 이룬다는 그림 하나로 세 식을 모두 복원할 수 있다. 시험에서 방향을 묻는 문제는 예외 없이 이 삼중항으로 풀린다.</p></div>
+
+<div class="callout"><b class="head">변위전류가 없었다면.</b> Ampère 법칙의 원형 \(\curl\vb{B}=\muz\vb{J}\)만 있었다면 진공에서 \(\curl\vb{B}=0\)이고, 유도 1의 4단계에서 \(\nabla^2\vb{E}=0\)이 된다. Laplace 방정식은 국소적 최대·최소를 허용하지 않으므로 무한대에서 0인 해는 항등적으로 0뿐이다 — 즉 <b>진공에 장이 존재할 수 없다</b>. Maxwell이 연속방정식과의 정합성을 맞추려고 넣은 한 항이 라디오, 빛, 우주배경복사 전부를 설명한다. 이론적 일관성 요구가 새로운 물리를 예언한 물리학사상 가장 극적인 사례다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u7-1"><div class="qq">(참/거짓 + 증명 또는 반례) "진공에서 파동방정식 \(\nabla^2\vb{E}=c^{-2}\partial_t^2\vb{E}\)를 만족하는 벡터장 \(\vb{E}\)는 반드시 Maxwell 방정식의 해다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>거짓.</b> 명시적 반례:
+\[ \vb{E}(z,t)=E_0\cos(kz-\omega t)\,\hat{\vb{z}},\qquad \omega=ck \]
+각 성분이 파동방정식을 만족하는지 확인: \(\nabla^2 E_z=-k^2E_z\), \(\partial_t^2E_z=-\omega^2E_z=-c^2k^2E_z\). 따라서 \(\nabla^2\vb{E}=c^{-2}\partial_t^2\vb{E}\) ✓.
+그러나 Gauss 법칙을 확인하면
+\[ \divg\vb{E}=\frac{\partial E_z}{\partial z}=-kE_0\sin(kz-\omega t)\neq 0 \]
+전하가 없는데 발산이 0이 아니다 — Maxwell 방정식 (i) 위반. 이 반례는 <b>종파(longitudinal wave)</b>이며, 진공 전자기파에는 종파 모드가 존재하지 않음을 보여 준다.
+<b>교훈:</b> 유도 1에서 컬을 한 번 더 취하는 순간 발산 정보가 소실된다. 그래서 파동방정식을 푼 뒤 반드시 (i),(ii)로 횡파성을, (iii)으로 \(\vb{B}\)를 되돌려 부과해야 한다. "파동방정식은 필요조건이지 충분조건이 아니다"가 이 단원 최대의 함정이다.
+</div></div>
+
+<div class="qz" data-q="u7-2"><div class="qq">(차원·크기 분석, 지수 명시) 실험실에서 \(E_0=3.0\times10^{2}\ \mathrm{V/m}\)인 평면파를 만들었다. \(B_0\)는 몇 T인가? 지구 자기장(\(\sim5\times10^{-5}\ \mathrm{T}\))과 비교하라. 또 \(\vb{E}\)에 의한 힘과 \(\vb{B}\)에 의한 힘의 비를 속도 \(v\)의 지수로 나타내라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>크기:</b> \(B_0=E_0/c\)이므로
+\[ B_0=\frac{3.0\times10^{2}}{3.0\times10^{8}}=1.0\times10^{-6}\ \mathrm{T} \]
+지구 자기장의 약 \(1/50\)에 불과하다. 즉 <b>전자기파의 자기장 성분은 수치적으로 매우 작다.</b>
+<b>차원 확인:</b> \([E]/[B]=(\mathrm{V/m})/(\mathrm{T})=(\mathrm{V/m})/(\mathrm{V\,s/m^2})=\mathrm{m/s}\) ✓ — 속도의 차원.
+<b>힘의 비:</b> 속도 \(v\)로 움직이는 전하 \(q\)에 대해
+\[ \frac{F_{\text{mag}}}{F_{\text{elec}}}=\frac{qvB_0}{qE_0}=\frac{v}{c}\propto v^{1} \]
+지수는 \(+1\). 비상대론적 전하(\(v\ll c\))에 대해서는 자기력이 무시할 만하다는 뜻이고, 이것이 U12의 Lorentz 진동자 모형에서 자기력을 빼는 정당화다. 단, 이 "무시할 만한" 자기력이 시간평균되면서 복사압을 만든다(U8) — 작다고 없는 게 아니다.
+</div></div>
+
+<div class="qz" data-q="u7-3"><div class="qq">(Ex. 9.2 변형, 계산기 없이) 원점에서 점 \((1,1,1)\)을 향해 진행하고, 편광이 \(xz\)평면에 나란한 진폭 \(E_0\), 위상 0인 평면파의 \(\hat{\vb{k}},\ \hat{\vb{n}}\), 그리고 \(\vb{B}\)의 방향을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>1) 진행 방향:</b> \(\hat{\vb{k}}=\dfrac{1}{\sqrt3}(1,1,1)\).
+<b>2) 편광 벡터:</b> 두 조건이 필요하다 — (a) \(xz\)평면 안에 있을 것: \(\hat{\vb{n}}=(a,0,c)\); (b) 횡파 조건 \(\hat{\vb{n}}\cdot\hat{\vb{k}}=0\):
+\[ \frac{1}{\sqrt3}(a+0+c)=0 \;\Rightarrow\; c=-a \]
+규격화하면
+\[ \hat{\vb{n}}=\frac{1}{\sqrt2}(1,0,-1) \]
+(부호는 위상 \(\pi\) 이동과 구별되지 않으므로 반대 부호도 정답.)
+<b>3) 자기장 방향:</b> \(\hat{\vb{k}}\times\hat{\vb{n}}\)를 계산한다. 규격화를 잠깐 빼고
+\[ (1,1,1)\times(1,0,-1)=\big(1\cdot(-1)-1\cdot0,\;\;1\cdot1-1\cdot(-1),\;\;1\cdot0-1\cdot1\big)=(-1,\,2,\,-1) \]
+크기 \(\sqrt{1+4+1}=\sqrt6\), 앞의 규격화 인수 \(1/(\sqrt3\sqrt2)=1/\sqrt6\)와 맞물려
+\[ \hat{\vb{k}}\times\hat{\vb{n}}=\frac{1}{\sqrt6}(-1,2,-1) \]
+검산: \((-1,2,-1)\cdot(1,1,1)=0\) ✓, \((-1,2,-1)\cdot(1,0,-1)=-1+0+1=0\) ✓ — 두 벡터 모두에 수직.
+<b>4) 최종 답:</b> \(\vb{k}=\dfrac{\omega}{c\sqrt3}(1,1,1)\)이라 두면
+\[ \vb{E}=E_0\cos(\vb{k}\cdot\vb{r}-\omega t)\frac{(1,0,-1)}{\sqrt2},\qquad \vb{B}=\frac{E_0}{c}\cos(\vb{k}\cdot\vb{r}-\omega t)\frac{(-1,2,-1)}{\sqrt6} \]
+여기서 \(\vb{k}\cdot\vb{r}=\dfrac{\omega}{c\sqrt3}(x+y+z)\).
+</div></div>
+
+<div class="qz" data-q="u7-4"><div class="qq">(개념) Maxwell 방정식 (iv)가 단색 평면파에 대해 "새로운 조건을 주지 않는" 것은 우연인가? 어느 단계에서 이미 그 정보를 썼는지 짚어라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>우연이 아니다.</b> 순서를 되짚어 보자.
+(1) 파동방정식 자체가 (i)~(iv) <b>전부</b>를 써서 유도되었다. 특히 \(\omega=ck\)라는 분산관계는 \(c^2=1/\eps\muz\), 즉 변위전류 항 (iv)에서 온 것이다.
+(2) 우리는 해의 꼴 \(\ee^{\ii(kz-\omega t)}\)에 \(\omega=ck\)를 <b>이미 넣은 채로</b> 시작했다. 그러니 (iv)를 다시 적용해도 같은 관계가 재확인될 뿐이다.
+(3) 자유도 세기로도 확인된다. \(\tilde{\vb{E}}_0,\tilde{\vb{B}}_0\)는 복소 성분 6개. (i),(ii)가 2개를 죽여 4개, (iii)이 \(\tilde{\vb{B}}_0\)를 \(\tilde{\vb{E}}_0\)로 완전히 결정하여 2개가 남는다. 남은 2개가 바로 <b>두 개의 편광 자유도</b>다(U6). 물리적으로 옳은 개수이므로 (iv)가 더 조건을 부과하면 오히려 과잉 결정되어 해가 사라질 것이다.
+<b>단, 조건부다.</b> 도체(U11)나 분산 매질(U12)에서는 \(\omega\)와 \(k\)의 관계가 달라지므로 (iv)를 다시 확인해야 하며, 실제로 \(\tilde k^2=\mu\eps\omega^2+\ii\mu\sigma\omega\)라는 새 분산관계가 그 (iv)에서 나온다.
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> 백지에서 Maxwell 방정식 네 개로부터 파동방정식·\(c=1/\sqrt{\eps\muz}\)·횡파성·\(\vb{B}=\hat{\vb{k}}\times\vb{E}/c\)를 한 번에 유도하고, 파동방정식이 충분조건이 아님을 반례로 설명할 수 있다.</div>

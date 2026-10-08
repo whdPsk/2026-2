@@ -1,0 +1,18 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+입자를 위치 \(\mathbf r\)에 있는 전하 \(-q\)와 \(\mathbf r+\boldsymbol\epsilon\)에 있는 \(+q\)의 쌍극자로 본다. 입자 전체는 정지(\(d\mathbf r/dt\approx0\))하지만 내부 변위는 빠르게 변하므로 \(\dot{\boldsymbol\epsilon}\)은 유지한다. Lorentz 힘:
+\[\mathbf F=q\left[\mathbf E(\mathbf r+\boldsymbol\epsilon)+\dot{\boldsymbol\epsilon}\times\mathbf B(\mathbf r+\boldsymbol\epsilon)\right]-q\,\mathbf E(\mathbf r).\]
+\(\boldsymbol\epsilon\)이 작으므로 1차까지 전개:
+\[\mathbf F\approx q(\boldsymbol\epsilon\cdot\nabla)\mathbf E+q\dot{\boldsymbol\epsilon}\times\mathbf B .\]
+쌍극자모멘트 \(\mathbf p=q\boldsymbol\epsilon=\alpha\mathbf E\)이므로 \(q\boldsymbol\epsilon=\alpha\mathbf E\), \(q\dot{\boldsymbol\epsilon}=\alpha\,\partial\mathbf E/\partial t\):
+\[\mathbf F=\alpha\left[(\mathbf E\cdot\nabla)\mathbf E+\frac{\partial\mathbf E}{\partial t}\times\mathbf B\right].\]
+이제 벡터 항등식
+\[\tfrac12\nabla(E^2)=(\mathbf E\cdot\nabla)\mathbf E+\mathbf E\times(\nabla\times\mathbf E)=(\mathbf E\cdot\nabla)\mathbf E-\mathbf E\times\frac{\partial\mathbf B}{\partial t}\]
+(Faraday 법칙 사용)에서 \((\mathbf E\cdot\nabla)\mathbf E=\tfrac12\nabla E^2+\mathbf E\times\dfrac{\partial\mathbf B}{\partial t}\). 대입하면
+\[\mathbf F=\alpha\left[\tfrac12\nabla E^2+\mathbf E\times\frac{\partial\mathbf B}{\partial t}+\frac{\partial\mathbf E}{\partial t}\times\mathbf B\right]\]
+\[\boxed{\mathbf F=\alpha\left[\frac12\nabla E^2+\frac{\partial}{\partial t}\left(\mathbf E\times\mathbf B\right)\right]}\]
+레이저 빔에서 둘째 항은 빠르게 진동하여 평균 0이므로
+\[\boxed{\langle\mathbf F\rangle=\frac{\alpha}{2}\nabla\langle E^2\rangle}\]
+정전기장에서는 Earnshaw 논법(Prob. 4.33)으로 \(E^2\)의 극대가 불가능하지만, 시간의존 장(레이저 초점)에서는 \(\langle E^2\rangle\)의 국소 최대가 존재할 수 있어 <b>광학적 포획(optical tweezers)</b>이 가능하다.
+<div class="alabel">감점 포인트</div>
+\(d\mathbf r/dt\)는 버리되 \(d\boldsymbol\epsilon/dt\)는 반드시 남겨야 한다(이 항이 \(\partial_t(\mathbf E\times\mathbf B)\)를 만든다). 또 Faraday 법칙을 쓰는 항등식 변형이 핵심 단계.</div><!--/sol-->

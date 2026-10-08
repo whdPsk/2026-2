@@ -1,0 +1,35 @@
+<div class="exq"><b>상황.</b> 21번째 생일에 우주비행사가 \(\tfrac{12}{13}c\)로 지구를 떠난다. 자기 손목시계로 5년이 지난 뒤 방향을 돌려 같은 속력으로 지구로 돌아와 지구에 남았던 쌍둥이 형제와 만난다. 재회 시점에 두 사람은 각각 몇 살인가? 또, 여행자 입장에서는 형제가 움직인 것처럼 보이는데 왜 <em>대칭</em>이 아닌지 설명해야 한다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>여행자의 시간은 두 관성 구간의 고유시간 합이고, 지구 시간은 각 구간에서 \(\gamma\)배다.</div>
+<ol>
+<li>여행자의 고유시간을 센다. 갈 때 5년, 올 때 5년이므로 \(\Delta\tau=10\)년. 그녀는 31세가 되어 도착한다.</li>
+<li>지구 기준계에서 그녀의 시계는 \(\gamma\)배 느리게 간다. \(\beta=12/13\)이므로
+\[ \gamma=\frac{1}{\sqrt{1-(12/13)^2}}=\frac{1}{\sqrt{(169-144)/169}}=\frac{13}{5}=2.6. \]</li>
+<li>지구 시계로 흐른 시간은 \(\Delta t=\gamma\,\Delta\tau=\tfrac{13}{5}\times10=26\)년. 형제는 \(21+26=47\)세.</li>
+<li><b>왜 대칭이 아닌가.</b> 여행자는 <em>하나의</em> 관성계에 계속 머물지 않는다. 갈 때의 관성계와 올 때의 관성계는 서로 다른 계이며, 회항 순간 가속을 겪는다. 지구 쪽 형제는 처음부터 끝까지 한 관성계에 있다. "움직이는 시계가 느리다"는 규칙은 <b>관성계 관측자</b>만 쓸 수 있으므로, 여행자가 같은 논리를 그대로 뒤집어 적용할 자격이 없다.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \Delta\tau_{\text{여행}}=10\ \text{년}\ (31\text{세}),\qquad \Delta t_{\text{지구}}=\gamma\,\Delta\tau=26\ \text{년}\ (47\text{세})\ } \]
+<p class="note">차이는 16년. 여행자가 "젊음의 샘"을 찾은 것은 아니다 — 그녀의 신진대사·맥박·사고까지 모두 같은 비율로 느려졌으므로 <em>덜 살았을</em> 뿐이다. <b>검산</b>: \(\beta\to0\)이면 \(\gamma\to1\)이라 두 쌍둥이 나이가 같아진다(뉴턴적 결과). \(\gamma\ge1\)이므로 항상 지구 쪽이 더 늙는다 — 부호도 옳다. 두 사건(출발·재회)이 지구에서 같은 장소에 있으므로 <b>지구 시간이 이 여정의 고유시간</b>이고, 세계선 중 직선(지구)의 고유시간이 최대라는 일반 정리와도 일치한다.</p></div>
+<div class="qz" data-q="ex12.2-a"><div class="qq"><b>+α</b> (역방향) 여행자가 자기 시계로 총 10년 여행하되, 재회 때 형제가 자기보다 <b>4년만</b> 더 늙어 있게 하려면 속력을 얼마로 잡아야 하는가?</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p>여행자 10년, 형제는 14년이어야 하므로</p>
+\[ \gamma=\frac{\Delta t}{\Delta\tau}=\frac{14}{10}=\frac75. \]
+<p>\(\gamma=1/\sqrt{1-\beta^2}\)를 뒤집으면</p>
+\[ \beta=\sqrt{1-\frac{1}{\gamma^2}}=\sqrt{1-\frac{25}{49}}=\sqrt{\frac{24}{49}}=\frac{2\sqrt6}{7}. \]
+\[ \boxed{\ \beta=\frac{2\sqrt6}{7}\approx0.700,\qquad v\approx2.10\times10^{8}\,\mathrm{m/s}\ } \]
+<p><b>확인</b>: \(\gamma=1/\sqrt{1-0.49}=1/\sqrt{0.51}=1.400\) ✓, 지구 시간 \(=1.4\times10=14\)년 ✓, 나이 차 4년 ✓.</p>
+<p><b>물리적 감</b>: \(\tfrac{12}{13}c=0.923c\)에서 0.700c로 겨우 24% 줄였는데 나이 차는 16년→4년으로 급감한다. \(\gamma\)가 \(\beta\to1\) 근처에서 폭발적으로 커지기 때문이다.</p></div></div>
+<div class="qz" data-q="ex12.2-b"><div class="qq"><b>+α</b> (여행자 시점으로 다시 묻기) 본문 속력 \(\tfrac{12}{13}c\)에서, <em>여행자의 관성계들</em>에서 지구 시계는 각 구간마다 얼마나 흐르는가? 회항 순간의 "동시성 도약"까지 포함해 26년이 정확히 복원됨을 보여라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 나가는 관성계 \(\bar S_1\)에서.</b> 지구가 \(\tfrac{12}{13}c\)로 멀어지므로 지구 시계가 \(\gamma=2.6\)배 느리다. 그녀의 5년 동안 지구 시계는</p>
+\[ \frac{5}{\gamma}=\frac{5}{2.6}=\frac{25}{13}\approx1.92\ \text{년}. \]
+<p><b>2) 돌아오는 관성계 \(\bar S_2\)에서.</b> 마찬가지로 마지막 5년 동안 지구 시계는 \(25/13\approx1.92\)년만 흐른다.</p>
+<p><b>3) 회항 순간의 동시성 도약.</b> 지구 시간 총 26년 중 위 두 조각을 빼면</p>
+\[ \Delta t_{\text{jump}}=26-2\times\frac{25}{13}=26-\frac{50}{13}=\frac{338-50}{13}=\frac{288}{13}\approx22.15\ \text{년}. \]
+<p>이 22.15년은 어디서 왔나? 회항 순간 그녀가 \(\bar S_1\)에서 \(\bar S_2\)로 갈아타면서 "지금 지구는 몇 년도인가"라는 질문의 답이 통째로 바뀐 것이다. Lorentz 변환으로 직접 확인하자. 지구 기준계에서 회항 사건은 \((x,t)=(12\ \text{ly},\,13\ \text{yr})\)이다(\(v\Delta t=\tfrac{12}{13}c\times13\,\text{yr}=12\) ly). 이 사건과 <b>\(\bar S_1\)에서 동시인</b> 지구 위 사건은 \(\bar t\)가 같은 점이므로</p>
+\[ t^{(1)}_{\text{지구}}=\gamma\Big(\bar t_{\text{turn}}+\frac{v}{c^2}\cdot 0\Big)\cdot\frac{1}{\gamma^2}\ \ \text{대신 간단히}\ \ t^{(1)}_{\text{지구}}=\frac{\Delta\tau_{\text{out}}}{\gamma}=\frac{5}{2.6}=\frac{25}{13}\ \text{yr}, \]
+<p>대칭성에 의해 \(\bar S_2\)에서 회항 사건과 동시인 지구 시각은 \(26-\tfrac{25}{13}=24.08\) yr이다. 즉 회항 직전 그녀는 "지금 지구는 1.92년"이라 말하고, 회항 직후에는 "지금 지구는 24.08년"이라 말한다. 도약폭은</p>
+\[ \boxed{\ \Delta t_{\text{jump}}=24.08-1.92=22.15\ \text{년}=\frac{288}{13}\ \text{년}\ } \]
+<p><b>합산 검산</b>: \(\dfrac{25}{13}+\dfrac{288}{13}+\dfrac{25}{13}=\dfrac{338}{13}=26\) 년 ✓ — 지구 시계가 정확히 26년 흐른다. 역설이 사라졌다: 여행자가 지구 시계를 "느리다"고 본 것은 맞지만, 관성계를 바꾸는 순간 22년어치를 한꺼번에 건너뛴 것을 빠뜨렸을 뿐이다.</p></div></div>

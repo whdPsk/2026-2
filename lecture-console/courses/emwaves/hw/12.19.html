@@ -1,0 +1,14 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+(a) \(\beta=\tanh\theta\)이면
+\[ \gamma=\frac1{\sqrt{1-\tanh^{2}\theta}}=\cosh\theta,\qquad \gamma\beta=\sinh\theta. \]
+\[ \boxed{\Lambda=\begin{pmatrix}\cosh\theta&-\sinh\theta&0&0\\-\sinh\theta&\cosh\theta&0&0\\0&0&1&0\\0&0&0&1\end{pmatrix}} \]
+회전 행렬 \(\begin{pmatrix}\cos\phi&\sin\phi\\-\sin\phi&\cos\phi\end{pmatrix}\)와 비교하면, 로런츠 부스트는 \((ct,x)\) 평면에서의 <b>쌍곡 "회전"</b>이다. 원 \(x^2+y^2\)이 보존되는 대신 쌍곡선 \(-(ct)^2+x^2\)(불변간격)이 보존된다.
+
+<p>(b) 아인슈타인 덧셈에 \(v_{AB}=c\tanh\theta_{AB}\) 등을 대입:
+\[ \frac{v_{AC}}{c}=\frac{\tanh\theta_{AB}+\tanh\theta_{BC}}{1+\tanh\theta_{AB}\tanh\theta_{BC}}=\tanh(\theta_{AB}+\theta_{BC}). \]
+\[ \boxed{\theta_{AC}=\theta_{AB}+\theta_{BC}} \]
+라피디티는 <b>단순히 더해진다</b>(같은 방향 부스트에 한해). \(\theta\in(-\infty,\infty)\)이고 \(\tanh\)의 치역이 \((-1,1)\)이므로 \(|v|\lt c\)가 자동 보장된다 — 문제 12.3(c)의 우아한 재해석.</p>
+
+<div class="alabel">감점 포인트</div>
+\(\gamma=\cosh\theta\)와 \(\gamma\beta=\sinh\theta\)를 혼동하는 것. 검산: \(\cosh^2-\sinh^2=1 \Leftrightarrow \gamma^2-\gamma^2\beta^2=1\). 그리고 라피디티 덧셈은 <b>동일 직선상</b> 부스트에만 성립함을 단서로 달 것(12.18 참조).</div><!--/sol-->

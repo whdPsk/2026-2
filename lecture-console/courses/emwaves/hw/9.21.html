@@ -1,0 +1,20 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+출발점(Eq. 9.128):
+\[\kappa=\omega\sqrt{\frac{\epsilon\mu}{2}}\left[\sqrt{1+\left(\frac{\sigma}{\omega\epsilon}\right)^2}-1\right]^{1/2},\qquad k=\omega\sqrt{\frac{\epsilon\mu}{2}}\left[\sqrt{1+\left(\frac{\sigma}{\omega\epsilon}\right)^2}+1\right]^{1/2}.\]
+<b>(a)</b> \(x\equiv\sigma/\omega\epsilon\ll1\)이면 \(\sqrt{1+x^2}-1\approx x^2/2\):
+\[\kappa\approx\omega\sqrt{\frac{\epsilon\mu}{2}}\cdot\frac{x}{\sqrt2}=\frac{\omega\sqrt{\epsilon\mu}}{2}\frac{\sigma}{\omega\epsilon}=\frac{\sigma}{2}\sqrt{\frac{\mu}{\epsilon}}\]
+\[\boxed{d=\frac1\kappa=\frac{2}{\sigma}\sqrt{\frac{\epsilon}{\mu}}\quad(\omega\ \text{무관})}\]
+순수한 물: \(\epsilon=80.1\epsilon_0\), \(\mu\approx\mu_0\), \(\sigma\approx4\times10^{-6}\,(\Omega\!\cdot\!\mathrm m)^{-1}\):
+\[d=\frac{2}{4\times10^{-6}}\sqrt{\frac{80.1\times8.85\times10^{-12}}{1.26\times10^{-6}}}\approx\boxed{1.2\times10^{4}\ \mathrm m\ (\sim12\ \mathrm{km})}\]
+<b>(b)</b> \(x\gg1\)이면 \(\sqrt{1+x^2}\approx x\)이므로 \(k\approx\kappa\approx\sqrt{\omega\mu\sigma/2}\). 도체 내부 파장은 \(\lambda=2\pi/k\)이므로
+\[\boxed{d=\frac1\kappa=\frac1k=\frac{\lambda}{2\pi}}\]
+전형적 금속(\(\sigma=10^7\), \(\omega=10^{15}\); \(\omega\epsilon_0\approx8.9\times10^{3}\ll\sigma\ \checkmark\)):
+\[\kappa=\sqrt{\tfrac{10^{15}\cdot1.26\times10^{-6}\cdot10^7}{2}}=7.9\times10^{7}\ \mathrm{m^{-1}}\ \Rightarrow\ \boxed{d\approx13\ \mathrm{nm}}\]
+가시광은 금속 속으로 \(\sim10\,\mathrm{nm}\)밖에 못 들어가고 그 안에서 자유전자가 에너지를 소산·재복사한다 → <b>금속은 불투명하고 잘 반사한다</b>.<br>
+<b>(c)</b> \(\tilde{\mathbf B}=\frac{\tilde k}{\omega}\tilde{\mathbf E}\), \(\tilde k=k+i\kappa=Ke^{i\phi}\), \(\phi=\tan^{-1}(\kappa/k)\). 좋은 도체는 \(k=\kappa\) →
+\[\boxed{\phi=45^\circ\ (\mathbf B\text{가 }\mathbf E\text{보다 }45^\circ\ \text{뒤짐})}\]
+\[\frac{B_0}{E_0}=\frac{K}{\omega}=\frac{\sqrt{k^2+\kappa^2}}{\omega}=\frac{\sqrt2\,k}{\omega}=\boxed{\sqrt{\frac{\mu\sigma}{\omega}}}\]
+위 금속: \(\sqrt{1.26\times10^{-6}\cdot10^{7}/10^{15}}=1.1\times10^{-7}\ \mathrm{s/m}\) — 진공값 \(1/c=3.3\times10^{-9}\)의 약 34배. 즉 도체 안에서는 자기장이 상대적으로 훨씬 강하다.
+<div class="alabel">감점 포인트</div>
+(b)의 \(d=\lambda/2\pi\)에서 \(\lambda\)는 <b>도체 내부</b> 파장이지 진공 파장이 아니다. 가시광 진공 파장 500 nm를 넣으면 80 nm라는 틀린 답이 나온다.</div><!--/sol-->

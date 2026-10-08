@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>이 계에서 도선은 선전하 \(\lambda\)와 전류 \(I=\lambda v\)(\(+z\))를 동시에 갖는다. 점 \((x,0,0)\)에서</p>
+\[ \vb{E}=\frac{\lambda}{2\pi\eps x}\hat{\vb{x}},\qquad \vb{B}=\frac{\muz\lambda v}{2\pi x}\hat{\boldsymbol\phi}=\frac{\muz\lambda v}{2\pi x}\hat{\vb{y}} \]
+<p>(\(x&gt;0\)인 점에서 \(\hat{\boldsymbol\phi}=\hat{\vb{y}}\)). 편의상</p>
+\[ a\equiv\frac{E_x}{c}=\frac{\lambda}{2\pi\eps cx}=\frac{\muz\lambda c}{2\pi x},\qquad b\equiv B_y=\frac{\muz\lambda v}{2\pi x}\quad\Big(\frac{b}{a}=\frac{v}{c}=\beta\Big). \]
+<p>0이 아닌 성분은 \(F^{01}=a\), \(F^{31}=b\)뿐이다:</p>
+\[ F^{\mu\nu}=\begin{pmatrix}0&a&0&0\\-a&0&0&-b\\0&0&0&0\\0&b&0&0\end{pmatrix} \]
+<p>쌍대텐서는 \(\vb{E}/c\to\vb{B},\ \vb{B}\to-\vb{E}/c\), 즉 \(G^{02}=B_y=b\), \(G^{23}=-E_x/c=-a\):</p>
+\[ G^{\mu\nu}=\begin{pmatrix}0&0&b&0\\0&0&0&-a\\-b&0&0&0\\0&a&0&0\end{pmatrix} \]
+<p><b>검산(불변량):</b> \(F^{\mu\nu}F_{\mu\nu}=2(B^{2}-E^{2}/c^{2})=2(b^{2}-a^{2})=2a^{2}(\beta^{2}-1)&lt;0\) — "전기적" 장이다. 실제로 전하의 정지계로 가면 전류가 사라져 \(\bar{\vb{B}}=0\)이 된다. 또 \(\vb{E}\cdot\vb{B}=0\)(\(\hat{\vb{x}}\perp\hat{\vb{y}}\)) ✓ — 이는 \(F^{\mu\nu}G_{\mu\nu}=0\)과 일치한다.</p>
+<div class="alabel">감점 포인트</div>
+\(F^{31}=B_y\)인데 \(F^{13}=B_y\)로 적는 것. 규약은 \(F^{12}=B_z,\ F^{23}=B_x,\ F^{31}=B_y\)의 <b>순환</b> 순서다.</div><!--/sol-->

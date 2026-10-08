@@ -1,0 +1,22 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> \(xy\)평면의 무한 면전류 \(\vb{K}=K\hat{\vb{x}}\)가 \(z&gt;0\)에서 만드는 장은 \(\vb{B}=-\dfrac{\muz K}{2}\hat{\vb{y}}\). 따라서</p>
+\[ \boxed{\ \vb{N}=\vb{m}\times\vb{B}=m\hat{\vb{z}}\times\Big(-\frac{\muz K}{2}\hat{\vb{y}}\Big)=\frac{\muz mK}{2}\hat{\vb{x}}\ } \]
+
+<p><b>(b)</b> \(\bar S\)(\(+x\)로 \(v\))로 간다. 면전하는 <b>정지</b>하므로 자기장을 만들지 않고, 대신 전기장만 남는다. \(\sigma=\gamma\bar\sigma\)이므로 \(\bar\sigma=\sigma/\gamma\):</p>
+\[ \bar{\vb{E}}=\frac{\bar\sigma}{2\eps}\hat{\vb{z}}=\frac{\sigma}{2\gamma\eps}\hat{\vb{z}}\qquad(z&gt;0). \]
+<p><b>고리가 전기쌍극자를 얻는다.</b> 정사각 고리(\(xy\)평면, 한 변 \(l\))의 네 변 중 \(x\)에 나란한 두 변만 따진다. \(\vb{m}=m\hat{\vb{z}}\)이려면 아래변(\(y=-l/2\))의 전하가 \(+v\hat{\vb{x}}\), 위변(\(y=+l/2\))의 전하가 \(-v\hat{\vb{x}}\)로 흐른다.</p>
+<ul>
+<li>아래변: \(\bar S\)에서 전하가 <b>정지</b> → \(\bar\lambda_-=\lambda/\gamma\).</li>
+<li>위변: \(\bar S\)에서 속력 \(w=\dfrac{2v}{1+\beta^{2}}\), \(\gamma_w=\gamma^{2}(1+\beta^{2})\) → \(\bar\lambda_+=\gamma_w(\lambda/\gamma)=\gamma(1+\beta^{2})\lambda\).</li>
+</ul>
+<p>변의 길이는 둘 다 \(l/\gamma\)(도선 자체가 \(S\)에서 정지)이므로</p>
+\[ Q_-=\frac{\lambda l}{\gamma^{2}}=(1-\beta^{2})\lambda l,\qquad Q_+=(1+\beta^{2})\lambda l,\qquad Q_+-Q_-=2\beta^{2}\lambda l. \]
+<p>\(y\)에 나란한 두 변은 대칭이라 기여가 상쇄된다. 따라서</p>
+\[ \bar{\vb{p}}=\frac{l}{2}(Q_+-Q_-)\hat{\vb{y}}=\beta^{2}\lambda l^{2}\hat{\vb{y}}=\frac{v^{2}}{c^{2}}\frac{m}{v}\hat{\vb{y}}=\frac{mv}{c^{2}}\hat{\vb{y}}\qquad(m=\lambda vl^{2}) \]
+<p>(12.68의 \(\vb{p}=(\vb{u}\times\vb{m})/c^{2}\)에 \(\vb{u}=-v\hat{\vb{x}}\)를 넣은 것과 일치 ✓)</p>
+<p>이제 Eq. 4.4로</p>
+\[ \boxed{\ \bar{\vb{N}}=\bar{\vb{p}}\times\bar{\vb{E}}=\frac{mv}{c^{2}}\frac{\sigma}{2\gamma\eps}(\hat{\vb{y}}\times\hat{\vb{z}})=\frac{\muz m\sigma v}{2\gamma}\hat{\vb{x}}=\frac{1}{\gamma}\frac{\muz mK}{2}\hat{\vb{x}}=\frac{\vb{N}}{\gamma}\ } \]
+<p>토크는 힘과 같이 \(\bar N_\perp=N_\perp/\gamma\)로 변환하므로 (a)와 완벽히 일관된다. <b>교훈:</b> 같은 물리(토크)가 한 계에선 순수 자기적 \(\vb{m}\times\vb{B}\), 다른 계에선 순수 전기적 \(\vb{p}\times\vb{E}\)로 나타난다.</p>
+<div class="alabel">감점 포인트</div>
+\(\bar S\)에서 고리의 네 변 전하밀도가 <b>서로 달라진다</b>는 점을 놓치는 것. 고리가 전기적으로 중성이라고 가정하면 쌍극자 모멘트가 나오지 않는다.</div><!--/sol-->

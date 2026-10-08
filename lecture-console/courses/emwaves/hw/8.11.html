@@ -1,0 +1,19 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> \(a&lt;r&lt;b\) 에서만 \(\vb{E}=\dfrac{Q}{4\pi\eps r^{2}}\hat{\vb{r}}\).
+\(\hat{\vb{r}}\times\hat{\vb{z}}=-\sin\theta\,\hat{\boldsymbol\varphi}\) 이므로
+\[\vb{g}=\eps\vb{E}\times\vb{B}=-\frac{QB_0\sin\theta}{4\pi r^{2}}\hat{\boldsymbol\varphi},\qquad
+\ell_z=(\vb{r}\times\vb{g})_z=-\frac{QB_0\sin^{2}\theta}{4\pi r}.\]
+\[L_z=-\frac{QB_0}{4\pi}\,2\pi\int_a^b r\,dr\int_0^\pi\sin^{3}\theta\,d\theta
+=-\frac{QB_0}{2}\cdot\frac{b^{2}-a^{2}}{2}\cdot\frac{4}{3}\]
+\[\boxed{\;\vb{L}_{em}=-\tfrac13 QB_0(b^{2}-a^{2})\,\hat{\vb{z}}\;}\]</p>
+<p><b>(b)</b> \(\vb{B}\)를 서서히 끄면 \(E_\varphi=-\tfrac{s}{2}\dot B\) (\(s=r\sin\theta\)).
+반지름 \(a\), 전하 \(Q\)인 껍질:
+\[N_z=\int s\,\sigma_a E_\varphi\,da=-\frac{\sigma_a\dot B}{2}\int s^{2}da
+=-\frac{Q}{4\pi a^{2}}\cdot\frac{\dot B}{2}\cdot\frac{8\pi a^{4}}{3}=-\frac{Q\dot B a^{2}}{3},\]
+\[L_z^{(a)}=-\frac{Qa^{2}}{3}(0-B_0)=+\frac{QB_0a^{2}}{3}.\]
+\(Q\to-Q,\ a\to b\) 로 바꾸면 \(L_z^{(b)}=-\dfrac{QB_0b^{2}}{3}\).</p>
+<p>\[\boxed{\;\vb{L}_{\rm mech}=\tfrac13 QB_0(a^{2}-b^{2})\,\hat{\vb{z}}=\vb{L}_{em}\;}\]
+장이 잃은 각운동량이 그대로 껍질로 넘어간다 ✓</p>
+<div class="alabel">감점 포인트</div>
+\(\int\sin^3\theta\,d\theta=4/3\) 와 \(\int s^2 da=\tfrac{8\pi}{3}R^4\) 를 혼동하는 것.</div><!--/sol-->

@@ -1,0 +1,21 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(\mu_1=\mu_2=\mu_3=\mu_0\)이므로 경계조건은 \(\mathbf E^{\parallel}\)와 \(\mathbf B^{\parallel}\)(즉 \(n\times\)방향 진폭)의 연속.
+\[\tilde E=\begin{cases}\tilde E_Ie^{ik_1z}+\tilde E_Re^{-ik_1z} & z&lt;0\\ \tilde Ae^{ik_2z}+\tilde Be^{-ik_2z} & 0&lt;z&lt;d\\ \tilde E_Te^{ik_3z} & z&gt;d\end{cases}\]
+\(\mathbf B\)의 연속은 \(n\)을 가중치로 하는 진행/역행 성분의 차:
+\[z=0:\quad \tilde E_I+\tilde E_R=\tilde A+\tilde B,\qquad n_1(\tilde E_I-\tilde E_R)=n_2(\tilde A-\tilde B)\]
+\[z=d:\quad \tilde Ae^{i\delta}+\tilde Be^{-i\delta}=P,\qquad n_2(\tilde Ae^{i\delta}-\tilde Be^{-i\delta})=n_3P\]
+여기서 \(\delta\equiv k_2d=\dfrac{n_2\omega d}{c}\), \(P\equiv\tilde E_Te^{ik_3d}\) (\(|P|=|\tilde E_T|\)).<br>
+\(z=d\) 두 식에서
+\[\tilde Ae^{i\delta}=\frac P2\left(1+\frac{n_3}{n_2}\right),\qquad \tilde Be^{-i\delta}=\frac P2\left(1-\frac{n_3}{n_2}\right).\]
+이를 \(z=0\) 식에 넣으면
+\[\tilde E_I+\tilde E_R=P\left[\cos\delta-i\frac{n_3}{n_2}\sin\delta\right],\qquad \tilde E_I-\tilde E_R=\frac{P}{n_1}\left[n_3\cos\delta-in_2\sin\delta\right].\]
+더하면
+\[2\tilde E_I=P\left[\left(1+\frac{n_3}{n_1}\right)\cos\delta-i\left(\frac{n_3}{n_2}+\frac{n_2}{n_1}\right)\sin\delta\right].\]
+\(T=\dfrac{n_3}{n_1}\left|\dfrac{\tilde E_T}{\tilde E_I}\right|^2\)이므로
+\[T^{-1}=\frac{n_1}{4n_3}\left[\left(1+\frac{n_3}{n_1}\right)^2\cos^2\delta+\left(\frac{n_3}{n_2}+\frac{n_2}{n_1}\right)^2\sin^2\delta\right] =\frac{1}{4n_1n_3}\left[(n_1+n_3)^2\cos^2\delta+\frac{(n_1n_3+n_2^2)^2}{n_2^2}\sin^2\delta\right].\]
+\(\cos^2\delta=1-\sin^2\delta\)로 정리하면 \(\sin^2\delta\)의 계수는
+\[\frac{(n_1n_3+n_2^2)^2-n_2^2(n_1+n_3)^2}{n_2^2}=\frac{n_1^2n_3^2+n_2^4-n_2^2n_1^2-n_2^2n_3^2}{n_2^2}=\frac{(n_1^2-n_2^2)(n_3^2-n_2^2)}{n_2^2}.\]
+\[\boxed{T^{-1}=\frac{1}{4n_1n_3}\left[(n_1+n_3)^2+\frac{(n_1^2-n_2^2)(n_3^2-n_2^2)}{n_2^2}\sin^2\!\left(\frac{n_2\omega d}{c}\right)\right]}\]
+<div class="alabel">감점 포인트</div>
+슬랩 안에는 <b>양방향 파가 모두</b> 있어야 한다(다중반사의 결과). 한 방향만 두면 \(\sin^2\) 간섭항이 나오지 않는다.</div><!--/sol-->

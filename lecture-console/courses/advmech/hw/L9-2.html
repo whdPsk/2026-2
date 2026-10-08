@@ -1,0 +1,15 @@
+<div class="stmt"><p>정지 표적에 대한 탄성 산란에서
+\[ \tan\psi=\frac{\sin2\zeta}{(m_1/m_2)-\cos2\zeta}=\frac{\sin\phi}{(m_1/m_2)-\cos\phi},\qquad \phi\equiv2\zeta \]
+임을 보여라. (강의 식 9.44)</p></div><!--/stmt-->
+<div class="sol">
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(\tan\psi\) 공식(U5)에 \(\theta=\pi-2\zeta\) 대입.</div>
+<ol>
+<li>U5 유도 2: \(\tan\psi=\dfrac{\sin\theta}{\cos\theta+m_1/m_2}\).</li>
+<li>U5 유도 3: \(2\zeta=\pi-\theta\), 즉 \(\theta=\pi-2\zeta\). 그러면 \(\sin\theta=\sin2\zeta\), \(\cos\theta=-\cos2\zeta\).</li>
+<li>대입:
+\[ \tan\psi=\frac{\sin2\zeta}{(m_1/m_2)-\cos2\zeta}.\ \blacksquare \]
+교재 식 9.92는 \(\phi=2\zeta\)로 쓴 같은 식(교재에서 \(\phi\)는 CM계에서 반동 입자가 꺾인 각 \(\pi-\theta\)).</li>
+<li><b>검산(등질량)</b>: \(\tan\psi=\dfrac{2\sin\zeta\cos\zeta}{1-\cos2\zeta}=\dfrac{2\sin\zeta\cos\zeta}{2\sin^2\zeta}=\cot\zeta\) → \(\psi+\zeta=90°\) ✓.</li>
+<li><b>검산(\(m_1\ll m_2\))</b>: \(\tan\psi\approx-\tan2\zeta\) → \(\psi\approx\pi-2\zeta\), 즉 \(\theta\approx\psi\) ✓ (무거운 표적은 고정 산란 중심).</li>
+</ol></div>
+</div><!--/sol-->

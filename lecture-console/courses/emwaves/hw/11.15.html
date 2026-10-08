@@ -1,0 +1,17 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\[ \frac{dP}{d\Omega}=\frac{\mu_0q^2a^2}{16\pi^2c}\frac{\sin^2\theta}{(1-\beta\cos\theta)^5}. \]
+<p>\(\theta\)로 미분하여 0으로 놓으면</p>
+\[ 2\cos\theta(1-\beta\cos\theta)-5\beta\sin^2\theta=0\;\Longrightarrow\;3\beta\cos^2\theta+2\cos\theta-5\beta=0 \]
+\[ \boxed{\;\cos\theta_{\max}=\frac{\sqrt{1+15\beta^2}-1}{3\beta}\;} \]
+<p>초상대론 극한: \(\varepsilon\equiv1-\beta\ll1\)로 두고 전개하면 \(\sqrt{1+15\beta^2}\approx4-\tfrac{15}{4}\varepsilon\), \(3\beta=3-3\varepsilon\)이므로</p>
+\[ \cos\theta_{\max}\approx\frac{3-\tfrac{15}{4}\varepsilon}{3-3\varepsilon}\approx1-\frac{\varepsilon}{4}
+\;\Longrightarrow\;\theta_{\max}\approx\sqrt{2\cdot\frac{\varepsilon}{4}}=\boxed{\;\sqrt{\frac{1-\beta}{2}}\;} \]
+<p>\(1-\beta\approx1/2\gamma^2\)이므로 \(\theta_{\max}\approx1/2\gamma\) — 복사가 전방으로 \(1/\gamma\) 원뿔에 몰린다.</p>
+<p>세기: \(\sin^2\theta_{\max}\approx\varepsilon/2=1/4\gamma^2\), \(1-\beta\cos\theta_{\max}\approx\varepsilon+\varepsilon/4=\tfrac54\varepsilon=\dfrac{5}{8\gamma^2}\).</p>
+\[ \left.\frac{dP}{d\Omega}\right|_{\max}=\frac{\mu_0q^2a^2}{16\pi^2c}\cdot\frac{1/4\gamma^2}{(5/8\gamma^2)^5}
+=\frac{\mu_0q^2a^2}{16\pi^2c}\cdot\frac14\left(\frac85\right)^5\gamma^{8}. \]
+<p>정지 입자의 최댓값은 \(\dfrac{\mu_0q^2a^2}{16\pi^2c}\)(\(\theta=90^\circ\))이므로</p>
+\[ \boxed{\;\frac{(dP/d\Omega)_{\max}}{(dP/d\Omega)_{\rm rest,max}}=\frac{8^5}{4\cdot5^5}\gamma^8\approx2.6\,\gamma^8\;} \]
+<div class="alabel">감점 포인트</div>
+<p>이차방정식의 두 근 중 \(|\cos\theta|\le1\)을 만족하는 \(+\) 근을 골라야 한다. \(-\) 근은 물리적이지 않다.</p></div><!--/sol-->

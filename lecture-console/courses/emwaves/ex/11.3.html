@@ -1,0 +1,75 @@
+<div class="exq"><b>상황.</b> 점전하의 각분포 일률 공식
+\[ \frac{\dd P}{\dd\Omega}=\frac{q^2}{16\pi^2\eps}\frac{|\hat{\boldsymbol{\rr}}\times(\vb{u}\times\vb{a})|^2}{(\hat{\boldsymbol{\rr}}\cdot\vb{u})^5},\qquad \vb{u}=c\hat{\boldsymbol{\rr}}-\vb{v} \]
+에서, 속도와 가속도가 (적어도 순간적으로) <b>같은 직선 위에 있는</b> 경우 — 예컨대 직선 운동 — 를 다룬다. 목표는 (ⅰ) 각분포를 \(\theta\)의 명시적 함수로 쓰고, (ⅱ) 전 입체각에 대해 적분해 총 일률을 얻는 것. 이 결과가 금속 표적에 부딪혀 급감속하는 고속 전자가 X선을 내는 현상(제동복사)의 고전 이론이다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(\vb{v}\parallel\vb{a}\)이면 \(\vb{u}\times\vb{a}=c(\hat{\boldsymbol{\rr}}\times\vb{a})\)로 단순해진다. 나머지는 \((1-\beta x)^{-5}\) 적분.</div>
+<ol>
+<li><b>분자 단순화.</b> \(\vb{v}\parallel\vb{a}\)이면 \(\vb{v}\times\vb{a}=0\)이므로
+\[ \vb{u}\times\vb{a}=(c\hat{\boldsymbol{\rr}}-\vb{v})\times\vb{a}=c(\hat{\boldsymbol{\rr}}\times\vb{a}). \]
+따라서 분자는 \(c^2|\hat{\boldsymbol{\rr}}\times(\hat{\boldsymbol{\rr}}\times\vb{a})|^2\)이고, BAC-CAB로 \(\hat{\boldsymbol{\rr}}\times(\hat{\boldsymbol{\rr}}\times\vb{a})=(\hat{\boldsymbol{\rr}}\cdot\vb{a})\hat{\boldsymbol{\rr}}-\vb{a}\)이므로
+\[ |\hat{\boldsymbol{\rr}}\times(\hat{\boldsymbol{\rr}}\times\vb{a})|^2=a^2-(\hat{\boldsymbol{\rr}}\cdot\vb{a})^2=a^2\sin^2\theta, \]
+여기서 \(z\)축을 \(\vb{v}\)(=\(\vb{a}\) 방향)로 잡았다.</li>
+
+<li><b>분모.</b> \(\hat{\boldsymbol{\rr}}\cdot\vb{u}=c-\hat{\boldsymbol{\rr}}\cdot\vb{v}=c(1-\beta\cos\theta)\), \(\beta\equiv v/c\).</li>
+
+<li><b>각분포.</b>
+\[ \frac{\dd P}{\dd\Omega}=\frac{q^2}{16\pi^2\eps}\frac{c^2a^2\sin^2\theta}{c^5(1-\beta\cos\theta)^5}=\frac{\muz q^2a^2}{16\pi^2c}\frac{\sin^2\theta}{(1-\beta\cos\theta)^5}. \]
+\(\beta=0\)이면 익숙한 \(\sin^2\theta\) 도넛(Larmor 각분포)이다. \(\beta\to1\)이면 분모가 \(\theta\approx0\) 근처에서 극도로 작아져 <b>도넛이 앞으로 늘어나고 밀린다</b>.</li>
+
+<li><b>총 일률 적분.</b> \(\varphi\) 적분은 \(2\pi\), \(x=\cos\theta\)로 치환:
+\[ P=\frac{\muz q^2a^2}{8\pi c}\int_{-1}^{1}\frac{1-x^2}{(1-\beta x)^5}\dd x. \]
+부분적분(또는 \(\int\frac{\dd x}{(1-\beta x)^n}\) 반복)으로
+\[ \int_{-1}^{1}\frac{1-x^2}{(1-\beta x)^5}\dd x=\frac{4}{3(1-\beta^2)^3}. \]
+(\(\beta=0\)에서 \(4/3\)임을 바로 확인할 수 있다.)</li>
+
+<li><b>결과.</b>
+\[ P=\frac{\muz q^2a^2}{8\pi c}\cdot\frac{4}{3(1-\beta^2)^3}=\frac{\muz q^2a^2}{6\pi c}\gamma^6,\qquad \gamma=\frac{1}{\sqrt{1-\beta^2}}. \]
+Liénard 일반 공식 \(P=\frac{\muz q^2\gamma^6}{6\pi c}\big(a^2-|\vb{v}\times\vb{a}|^2/c^2\big)\)에 \(\vb{v}\parallel\vb{a}\)를 넣은 것과 일치한다 ✓.</li>
+
+<li><b>중요한 관찰.</b> 각분포는 \(a^2\)에만 의존하므로 <b>가속이든 감속이든 똑같다</b>. 그리고 어느 경우든 복사는 <em>속도 방향</em> 앞쪽으로 쏠린다. 고속 전자가 표적에서 급감속하면 앞쪽으로 좁은 X선 다발이 나온다 — 제동복사.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \frac{\dd P}{\dd\Omega}=\frac{\muz q^2a^2}{16\pi^2c}\frac{\sin^2\theta}{(1-\beta\cos\theta)^5},\qquad P=\frac{\muz q^2a^2}{6\pi c}\gamma^6\ } \]
+<p class="note">\((1-\beta\cos\theta)^{-5}\)의 다섯 제곱 중 넷은 지연시각 야코비안 \((\partial t_s/\partial t)^{-1}\)에서, 하나는 "총알을 쏘며 달리는 자동차" 인자 \(\rr\cdot\vb{u}/\rr c\)에서 온다. <b>검산</b> ① 비상대론 극한 \(\beta\to0\): \(\dd P/\dd\Omega=\frac{\muz q^2a^2\sin^2\theta}{16\pi^2c}\), \(P=\frac{\muz q^2a^2}{6\pi c}\) — Larmor 공식 ✓ (Example 11.2b). ② \(\theta=0,\pi\)에서 정확히 0 — 아무리 빨라도 <em>정확히 정면</em>으로는 복사하지 않는다 ✓. ③ 차원: \(\muz q^2a^2/c\)는 W(Larmor에서 확인됨), \(\gamma^6\)는 무차원 ✓. ④ \(a\to0\): \(P\to0\) — 등속 전하는 복사하지 않음, Ex 10.4와 정합 ✓. ⑤ Liénard 공식으로의 환원 ✓.</p></div>
+
+<div class="qz" data-q="ex11.3-a"><div class="qq"><b>+α</b> 복사가 <b>정확히 어느 방향으로</b> 가장 세게 나오는가? \(\theta_{\max}(\beta)\)를 정확히 구하고, 초상대론 극한(\(\beta\to1\))에서의 근사식을 유도하라. 또 그 최대 방향의 강도가 <b>정지 입자</b>의 최대 강도의 몇 배인지 \(\gamma\)로 답하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 극값 조건.</b> \(x=\cos\theta\), \(f(x)=\dfrac{1-x^2}{(1-\beta x)^5}\). 미분하면
+\[ f'(x)=\frac{-2x(1-\beta x)+5\beta(1-x^2)}{(1-\beta x)^6}. \]
+분자를 0으로:
+\[ -2x+2\beta x^2+5\beta-5\beta x^2=0\ \Longrightarrow\ 3\beta x^2+2x-5\beta=0. \]</p>
+<p><b>2) 근.</b>
+\[ x=\frac{-2\pm\sqrt{4+60\beta^2}}{6\beta}=\frac{-1\pm\sqrt{1+15\beta^2}}{3\beta}. \]
+\(|x|\le1\)이어야 하므로 \(+\) 근:
+\[ \boxed{\ \cos\theta_{\max}=\frac{\sqrt{1+15\beta^2}-1}{3\beta}\ } \]
+확인: \(\beta\to0\)이면 \(\sqrt{1+15\beta^2}\approx1+\tfrac{15}{2}\beta^2\)이므로 \(\cos\theta_{\max}\approx\tfrac52\beta\to0\), 즉 \(\theta_{\max}\to90°\) ✓ (Larmor 도넛). \(\beta\to1\)이면 \((4-1)/3=1\), 즉 \(\theta_{\max}\to0\) ✓.</p>
+<p><b>3) 초상대론 전개.</b> \(\varepsilon\equiv1-\beta\ll1\). \(\beta^2\approx1-2\varepsilon\)이므로 \(\sqrt{1+15\beta^2}\approx\sqrt{16-30\varepsilon}=4\sqrt{1-\tfrac{15}{8}\varepsilon}\approx4-\tfrac{15}{4}\varepsilon\). 따라서
+\[ \cos\theta_{\max}\approx\frac{3-\tfrac{15}{4}\varepsilon}{3(1-\varepsilon)}\approx\left(1-\tfrac54\varepsilon\right)(1+\varepsilon)\approx1-\frac{\varepsilon}{4}. \]
+\(\cos\theta\approx1-\theta^2/2\)이므로 \(\theta_{\max}^2=\varepsilon/2\):
+\[ \boxed{\ \theta_{\max}\approx\sqrt{\frac{1-\beta}{2}}\approx\frac{1}{2\gamma}\ } \]
+(\(1-\beta\approx1/2\gamma^2\)를 썼다). 즉 복사는 <b>반각 \(\sim1/2\gamma\)의 바늘 같은 원뿔</b> 안에 갇힌다. \(\gamma=1000\)인 전자라면 약 0.03°다 — 싱크로트론 광원의 "연필빔"이 이 때문이다.</p>
+<p><b>4) 최대 강도 비.</b> \(\sin^2\theta_{\max}\approx\theta_{\max}^2=\varepsilon/2\approx\dfrac{1}{4\gamma^2}\), 그리고
+\[ 1-\beta\cos\theta_{\max}\approx1-(1-\varepsilon)\left(1-\frac{\varepsilon}{4}\right)\approx\frac{5\varepsilon}{4}=\frac{5}{8\gamma^2}. \]
+정지 입자의 최대(\(\theta=90°\))는 \(\dd P/\dd\Omega\big|_0=\frac{\muz q^2a^2}{16\pi^2c}\)이므로 비는
+\[ \frac{(\dd P/\dd\Omega)_{\max}}{(\dd P/\dd\Omega)_{\rm rest}}=\frac{1/4\gamma^2}{(5/8\gamma^2)^5}=\frac{1}{4}\left(\frac{8}{5}\right)^5\gamma^8=\boxed{\ \frac{8192}{3125}\gamma^8\approx2.62\,\gamma^8\ } \]
+(수치 검증: \(\beta=0.999\)일 때 정확식으로 \(1.640\times10^{11}\), 근사식 \(2.62\gamma^8=1.642\times10^{11}\) ✓.)</p>
+<p><b>5) 정합성 체크.</b> 총 일률은 \(\gamma^6\)인데 최대 강도는 \(\gamma^8\)이다. 모순이 아니다 — 복사가 담기는 입체각이 \(\sim\pi\theta_{\max}^2\sim1/\gamma^2\)로 줄어드니 \(\gamma^8\times\gamma^{-2}=\gamma^6\)로 정확히 맞는다 ✓.</p></div></div>
+
+<div class="qz" data-q="ex11.3-b"><div class="qq"><b>+α</b> 이번엔 \(\vb{v}\perp\vb{a}\) (원형 가속기!). Liénard 공식으로 총 일률을 구하고 \(\gamma\) 의존성을 직선 가속과 비교하라. 반지름 \(R\)의 원형 가속기에서 <b>한 바퀴당 잃는 에너지</b>를 구하고, 이것이 가속기 설계에 어떤 의미를 갖는지 논하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 총 일률.</b> Liénard 공식
+\[ P=\frac{\muz q^2\gamma^6}{6\pi c}\left(a^2-\left|\frac{\vb{v}\times\vb{a}}{c}\right|^2\right) \]
+에서 \(\vb{v}\perp\vb{a}\)이면 \(|\vb{v}\times\vb{a}|=va\)이므로
+\[ P=\frac{\muz q^2\gamma^6}{6\pi c}a^2(1-\beta^2)=\boxed{\ \frac{\muz q^2 a^2\gamma^4}{6\pi c}\ } \]</p>
+<p><b>2) 비교.</b> 같은 가속도 \(a\)에 대해 \(P_\parallel/P_\perp=\gamma^2\) — <b>직선 방향 가속이 훨씬 더 낭비적</b>이다. 하지만 실제 가속기에서 중요한 것은 "같은 \(a\)"가 아니라 "같은 힘 / 같은 에너지 이득"이다. 상대론적으로 \(a_\parallel=F_\parallel/(m\gamma^3)\), \(a_\perp=F_\perp/(m\gamma)\)이므로 <em>힘</em>으로 다시 쓰면
+\[ P_\parallel=\frac{\muz q^2F_\parallel^2}{6\pi m^2c},\qquad P_\perp=\frac{\muz q^2F_\perp^2\gamma^2}{6\pi m^2c}. \]
+직선 가속기에서는 \(\gamma\)가 아예 사라지고, 원형에서는 \(\gamma^2\)로 자란다. <b>그래서 초고에너지 전자는 선형가속기(SLAC 등)로 만든다.</b></p>
+<p><b>3) 한 바퀴당 에너지 손실.</b> 반지름 \(R\)의 원운동에서 \(a=v^2/R\), 한 바퀴 시간은 \(2\pi R/v\):
+\[ \Delta E=P_\perp\cdot\frac{2\pi R}{v}=\frac{\muz q^2\gamma^4}{6\pi c}\frac{v^4}{R^2}\cdot\frac{2\pi R}{v}=\frac{\muz q^2\gamma^4 v^3}{3cR}. \]
+\(\muz=1/\eps c^2\), \(\beta=v/c\)로 정리하면 유명한 싱크로트론 공식
+\[ \boxed{\ \Delta E=\frac{q^2\beta^3\gamma^4}{3\eps R}\ \xrightarrow{\ \beta\to1\ }\ \frac{q^2\gamma^4}{3\eps R}\ } \]</p>
+<p><b>4) 수치 감각.</b> 전자에 대해 \(\Delta E[\mathrm{keV}]\approx88.5\,\dfrac{(E[\mathrm{GeV}])^4}{R[\mathrm{m}]}\). LEP(반지름 \(\sim4.3\,\mathrm{km}\), \(E=100\,\mathrm{GeV}\))라면 한 바퀴에 약 2 GeV — <b>빔 에너지의 2%를 매 바퀴 날린다</b>. 이것이 LEP가 100 GeV에서 멈춘 이유이고, 같은 터널에 전자 대신 양성자(LHC)를 넣은 이유다: \(\gamma=E/mc^2\)이므로 같은 에너지에서 양성자의 \(\gamma\)는 \((m_e/m_p)\approx1/1836\)배, \(\gamma^4\)는 \(10^{13}\)배 작다.</p>
+<p><b>5) 검산.</b> ① \(\gamma\to1\)(비상대론): \(P_\perp\to\muz q^2a^2/6\pi c\) — Larmor ✓. ② \(a\to0\): \(P\to0\) ✓. ③ 차원: \(q^2/\eps R\)은 J ✓. ④ 각분포도 \(\vb{v}\parallel\vb{a}\)와 마찬가지로 반각 \(\sim1/\gamma\)의 앞방향 원뿔에 갇힌다 — 싱크로트론 광원이 자연스레 준평행 X선 빔을 주는 이유 ✓.</p></div></div>

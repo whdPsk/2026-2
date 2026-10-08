@@ -1,0 +1,183 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 중성인 도선 옆을 나란히 달리는 전하는 도선 쪽으로 끌린다. 그런데 그 전하의 정지계로 가면 전하는 멈춰 있으니 자기력은 0이다. 그래도 힘은 있어야 한다 — 힘이 있느냐 없느냐는 관측자가 고를 수 있는 문제가 아니기 때문이다. 그렇다면 그 계에서는 무엇이 전하를 끌어당길까? 도선이 중성이라는 사실이 계에 따라 달라질 수 있을까?</div>
+
+<h4>12.3.1 상대론적 현상으로서의 자기력 <span class="en">magnetism as a relativistic phenomenon</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>★ 간판 유도 — 도선과 나란히 달리는 시험전하 (자기법칙 없이 \(F=quB\) 뽑기)</div>
+<ol>
+<li><b>설정 (계 \(S\)).</b> 도선을 두 줄의 선전하로 모형화한다. 선전하 \(+\lambda\)가 \(+x\)로 속력 \(v\), 선전하 \(-\lambda\)가 \(-x\)로 같은 속력 \(v\). 두 줄이 정확히 상쇄하므로 <b>도선은 중성</b>이다. 알짜 전류는
+\[ I=2\lambda v\quad(+x\ \text{방향}). \]
+거리 \(d\) 떨어진 곳에서 시험전하 \(q\)가 \(+x\)로 속력 \(u\ (&lt;v)\)로 달린다.</li>
+<li><b>\(S\)에서의 관찰.</b> 도선이 중성이므로 <b>전기력은 0</b>이다. 그러면 힘이 아예 없는가? 여기서는 아직 판단을 보류한다 — 자기법칙을 쓰지 않기로 했으니까.</li>
+<li><b>계 갈아타기.</b> \(q\)의 정지계 \(\bar S\)로 간다. \(\bar S\)는 \(S\)에 대해 \(+x\)로 속력 \(u\)로 움직인다. 이 계에서 \(q\)는 정지해 있으므로, 설령 자기장이 있어도 <b>자기력은 원리적으로 0</b>이다. 힘이 있다면 그것은 오직 전기력이다.</li>
+<li><b>각 선의 속력 (속도 덧셈).</b> \(\bar S\)에서 두 선의 속력은
+\[ v_{\pm}=\frac{v\mp u}{1\mp vu/c^{2}} \]
+(위 부호는 \(+\lambda\) 줄, 아래 부호는 \(-\lambda\) 줄). <b>\(v_{-}&gt;v_{+}\)</b> — 음전하 줄이 더 빠르다. 이 부등식 하나가 이 유도 전체의 물리적 심장이다.</li>
+<li><b>고유 선밀도.</b> 각 줄이 자기 정지계에서 갖는 선전하밀도를 \(\lambda_0\)이라 하자. \(S\)에서 이미 속력 \(v\)로 움직이고 있으므로 간격이 \(1/\gamma\)로 수축해 있고
+\[ \lambda=\gamma\lambda_0,\qquad \gamma=\frac{1}{\sqrt{1-v^{2}/c^{2}}} . \]
+<b>전하는 불변</b>이므로(§12.3.2 첫 가정) 밀도 변화는 순전히 길이 수축 때문이다.</li>
+<li><b>\(\bar S\)에서의 밀도.</b>
+\[ \lambda_{\pm}=\pm\gamma_{\pm}\lambda_0,\qquad \gamma_{\pm}=\frac{1}{\sqrt{1-v_{\pm}^{2}/c^{2}}} . \]</li>
+<li><b>\(\gamma_{\pm}\) 대수 (핵심 계산).</b>
+\[ \gamma_{\pm}=\left[1-\frac{(v\mp u)^{2}}{c^{2}(1\mp vu/c^{2})^{2}}\right]^{-1/2} =\frac{c^{2}\mp uv}{\sqrt{(c^{2}\mp uv)^{2}-c^{2}(v\mp u)^{2}}} . \]</li>
+<li><b>분모 전개.</b>
+\[ (c^{2}\mp uv)^{2}-c^{2}(v\mp u)^{2} =c^{4}\mp2c^{2}uv+u^{2}v^{2}-c^{2}v^{2}\pm2c^{2}uv-c^{2}u^{2} . \]
+\(\mp2c^{2}uv\)와 \(\pm2c^{2}uv\)가 <b>정확히 상쇄</b>되고, 남은 것은
+\[ c^{4}+u^{2}v^{2}-c^{2}v^{2}-c^{2}u^{2}=(c^{2}-v^{2})(c^{2}-u^{2}). \]</li>
+<li><b>깔끔한 형태.</b>
+\[ \gamma_{\pm}=\frac{c^{2}\mp uv}{\sqrt{(c^{2}-v^{2})(c^{2}-u^{2})}} =\gamma\,\frac{1\mp uv/c^{2}}{\sqrt{1-u^{2}/c^{2}}} . \]
+\(\gamma_{-}&gt;\gamma_{+}\)임이 한눈에 보인다.</li>
+<li><b>알짜 선전하밀도.</b>
+\[ \lambda_{\text{tot}}=\lambda_{+}+\lambda_{-}=\lambda_0(\gamma_{+}-\gamma_{-}) =\lambda_0\,\gamma\,\frac{(1-uv/c^{2})-(1+uv/c^{2})}{\sqrt{1-u^{2}/c^{2}}} \]
+\[ =-\frac{2\lambda_0\gamma\,uv/c^{2}}{\sqrt{1-u^{2}/c^{2}}} =\boxed{\;-\frac{2\lambda uv}{c^{2}\sqrt{1-u^{2}/c^{2}}}\;}\qquad(\lambda=\gamma\lambda_0) \]
+<b>\(S\)에서 중성이던 도선이 \(\bar S\)에서는 음으로 대전되어 있다!</b> 음전하 줄이 더 심하게 수축했기 때문이다.</li>
+<li><b>\(\bar S\)에서의 전기력.</b> 선전하가 만드는 장은 \(E=\lambda_{\text{tot}}/(2\pi\eps d)\)이므로
+\[ \bar F=qE=-\frac{\lambda v}{\pi\eps c^{2}d}\,\frac{qu}{\sqrt{1-u^{2}/c^{2}}} . \]
+음수 = 도선 쪽으로 <b>끌린다</b>. 순수한 Coulomb 힘이다.</li>
+<li><b>힘을 \(S\)로 되돌린다.</b> \(q\)는 \(\bar S\)에서 정지해 있고 \(\bar F\)는 상대운동 방향 \(x\)에 <b>수직</b>이므로, U27 유도 4의 특수 규칙이 적용된다:
+\[ F=\sqrt{1-u^{2}/c^{2}}\;\bar F=-\frac{\lambda v}{\pi\eps c^{2}}\frac{qu}{d} . \]
+\(\gamma_u\) 인자가 정확히 소거된다.</li>
+<li><b>익숙한 얼굴로 바꾸기.</b> \(c^{2}=1/(\eps\muz)\)와 \(I=2\lambda v\)를 넣으면
+\[ F=-\muz\,\frac{2\lambda v}{2\pi}\frac{qu}{d}=-qu\left(\frac{\muz I}{2\pi d}\right). \]</li>
+<li><b>정체 확인.</b> 괄호 안은 정확히 <b>무한 직선 도선의 자기장</b> \(B=\muz I/2\pi d\)이다. 따라서
+\[ \boxed{\;|F|=quB,\qquad B=\frac{\muz I}{2\pi d}\;} \]
+방향까지 포함해 Lorentz 힘 법칙 \(\vb{F}=q\vb{u}\times\vb{B}\)가 주는 답과 <b>완전히 일치</b>한다.</li>
+<li><b>결론의 무게.</b> 우리는 Biot–Savart도, Ampère 법칙도, 자기력이라는 개념 자체도 쓰지 않았다. 쓴 것은 <b>Coulomb 법칙 + 전하 불변 + 속도 덧셈 + 길이 수축 + 힘 변환</b>뿐이다. 그런데 자기력이 튀어나왔다. 자기력은 독립적인 제5의 힘이 아니라 <b>정전기력의 상대론적 측면</b>이다. \(S\)의 관측자는 "자기력"이라 부르고 \(\bar S\)의 관측자는 "전기력"이라 부르지만, <b>입자가 도선에 끌린다</b>는 사실은 하나다.</li>
+</ol></div>
+
+<div class="callout"><b class="head">\(v/c\sim10^{-13}\)인데 왜 자기력이 이렇게 센가?</b> 구리 도선 속 전자의 표류 속도는 초속 수 밀리미터다. \(v^2/c^2\sim10^{-26}\)이니 상대론적 보정은 무시해도 될 것 같다. 그런데 실제로 자석은 물건을 든다. 이유: <b>상쇄되는 전하량이 어마어마</b>하기 때문이다. 도선 1미터 안의 전도전자 총전하는 \(10^{4}\,\mathrm{C}\) 규모이고, 정전기력은 이 정도 전하가 조금만 어긋나도 압도적이다. \(10^{-26}\)이라는 미세한 비대칭이 \(10^{20}\) 규모의 전하 상쇄에 곱해져 일상적 크기로 살아 나온다. "작은 상대론적 효과 × 거대한 상쇄 = 눈에 보이는 힘" — 이것이 자기력의 정체다.</div>
+
+<h4>12.3.2 장은 어떻게 변환하는가 <span class="en">how the fields transform</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>장의 변환 규칙 세우기</div>
+<ol>
+<li><b>깔고 가는 두 가정.</b> (i) <b>전하는 불변</b>이다 — 질량과 달리, 에너지와 달리, 입자의 전하는 속력과 무관한 고정된 수다. (ii) 변환 규칙은 <b>장이 어떻게 만들어졌는지와 무관</b>하다. 그렇지 않다면 "장이 그 점의 모든 것을 말해 준다"는 장 이론의 대전제가 무너진다.</li>
+<li><b>수직 성분 (\(\vb{E}_\perp\)).</b> 평행판 축전기를 \(xz\)면에 평행하게 놓는다(장은 \(\hat{\vb{y}}\)). 정지계 \(S_0\)에서 \(E_0=\sigma_0/\eps\). 이를 \(x\)방향으로 상대운동하는 계 \(S\)에서 보면, 판의 <b>길이 \(l\)이 \(1/\gamma_0\)로 수축</b>하지만 총전하와 폭 \(w\)는 그대로다. 따라서
+\[ \sigma=\gamma_0\sigma_0\;\Longrightarrow\;\boxed{E_\perp=\gamma_0 E_\perp^{0}} . \]</li>
+<li><b>평행 성분 (\(\vb{E}_\parallel\)).</b> 같은 축전기를 \(yz\)면에 평행하게 돌려 놓는다. 이번엔 <b>판 간격 \(d\)</b>가 수축하지만 \(l,w\), 따라서 \(\sigma\)는 불변이다. 그런데 \(E=\sigma/\eps\)는 \(d\)에 <b>의존하지 않으므로</b>
+\[ \boxed{E_\parallel=E_\parallel^{0}} . \]</li>
+<li><b>한계와 돌파구.</b> 위 둘은 "출발계에 자기장이 없는" 특수한 경우다. 일반 규칙을 얻으려면 <b>전기장과 자기장이 둘 다 있는 계</b>에서 출발해야 한다. \(S\) 자체를 그런 계로 쓴다: \(S\)에서 판들이 움직이므로 표면전류 \(K_\pm=\mp\sigma v_0\hat{\vb{x}}\)가 흐르고, Ampère 법칙으로
+\[ E_y=\frac{\sigma}{\eps},\qquad B_z=-\muz\sigma v_0 . \]</li>
+<li><b>세 번째 계.</b> \(S\)에 대해 \(+x\)로 속력 \(v\)인 계 \(\bar S\)를 도입한다. \(\bar S\)에서 판의 속력은 속도 덧셈으로 \(\bar v=(v+v_0)/(1+vv_0/c^{2})\)이고, 같은 논리로 \(\bar E_y=\bar\sigma/\eps\), \(\bar B_z=-\muz\bar\sigma\bar v\), \(\bar\sigma=\bar\gamma\sigma_0\).</li>
+<li><b>핵심 대수.</b> 약간의 계산으로
+\[ \frac{\bar\gamma}{\gamma_0}=\frac{\sqrt{1-v_0^{2}/c^{2}}}{\sqrt{1-\bar v^{2}/c^{2}}}=\gamma\Big(1+\frac{vv_0}{c^{2}}\Big) . \]
+이 한 줄이 세 계를 잇는 다리다.</li>
+<li><b>대입해서 정리.</b>
+\[ \bar E_y=\gamma\Big(1+\frac{vv_0}{c^{2}}\Big)\frac{\sigma}{\eps} =\gamma\big(E_y-vB_z\big), \]
+\[ \bar B_z=-\gamma\Big(1+\frac{vv_0}{c^{2}}\Big)\muz\sigma\,\frac{v+v_0}{1+vv_0/c^{2}} =\gamma\Big(B_z-\frac{v}{c^{2}}E_y\Big). \]</li>
+<li><b>나머지 성분.</b> 축전기를 \(xy\)면에 정렬하면 \(E_y\to E_z\), \(B_z\to -B_y\)의 대응으로
+\[ \bar E_z=\gamma(E_z+vB_y),\qquad \bar B_y=\gamma\Big(B_y+\frac{v}{c^{2}}E_z\Big). \]</li>
+<li><b>\(B_\parallel\)은 왜 불변인가 (솔레노이드 논증).</b> \(x\)축에 나란한 긴 솔레노이드를 \(S\)에 정지시킨다. \(B_x=\muz nI\). \(\bar S\)에서는 (i) 길이가 수축해 단위길이당 감은 수가 \(\bar n=\gamma n\)로 <b>증가</b>하고, (ii) 시간이 늘어나 전류(단위시간당 전하)가 \(\bar I=I/\gamma\)로 <b>감소</b>한다. 두 \(\gamma\)가 정확히 상쇄되어
+\[ \boxed{\bar B_x=B_x} . \]</li>
+<li><b>완성된 규칙 (벡터형).</b>
+\[ \bar{\vb{E}}_\parallel=\vb{E}_\parallel,\qquad \bar{\vb{E}}_\perp=\gamma\big(\vb{E}+\vb{v}\times\vb{B}\big)_\perp, \]
+\[ \bar{\vb{B}}_\parallel=\vb{B}_\parallel,\qquad \bar{\vb{B}}_\perp=\gamma\Big(\vb{B}-\frac{\vb{v}}{c^{2}}\times\vb{E}\Big)_\perp . \]
+<b>운동 방향 성분은 그대로, 수직 성분만 섞이면서 \(\gamma\)가 붙는다.</b> 이것이 \(\vb{E}\)와 \(\vb{B}\)가 각각 4-vector의 공간 부분일 수 없는 이유이며, U29에서 반대칭 2계 텐서가 등장하는 직접적 동기다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>두 불변량과 그것이 금지하는 것들</div>
+<ol>
+<li><b>주장.</b> 부스트에 대해 다음 두 조합은 <b>불변</b>이다:
+\[ \vb{E}\cdot\vb{B},\qquad E^{2}-c^{2}B^{2}. \]</li>
+<li><b>\(\vb{E}\cdot\vb{B}\) 직접 검증.</b> \(x\)-부스트에 대해
+\[ \bar{\vb{E}}\cdot\bar{\vb{B}}=E_xB_x+\gamma^{2}(E_y-vB_z)\Big(B_y+\frac{v}{c^{2}}E_z\Big)+\gamma^{2}(E_z+vB_y)\Big(B_z-\frac{v}{c^{2}}E_y\Big). \]</li>
+<li><b>둘째 항 전개.</b> \(\gamma^{2}\big[E_yB_y+\tfrac{v}{c^{2}}E_yE_z-vB_zB_y-\tfrac{v^{2}}{c^{2}}B_zE_z\big]\).</li>
+<li><b>셋째 항 전개.</b> \(\gamma^{2}\big[E_zB_z-\tfrac{v}{c^{2}}E_zE_y+vB_yB_z-\tfrac{v^{2}}{c^{2}}B_yE_y\big]\).</li>
+<li><b>합치기.</b> \(\pm\tfrac{v}{c^{2}}E_yE_z\)와 \(\mp vB_yB_z\)가 각각 상쇄되고
+\[ \gamma^{2}\Big(1-\frac{v^{2}}{c^{2}}\Big)(E_yB_y+E_zB_z)=E_yB_y+E_zB_z . \]
+따라서 \(\bar{\vb{E}}\cdot\bar{\vb{B}}=\vb{E}\cdot\vb{B}\). ∎ (\(E^{2}-c^{2}B^{2}\)도 같은 방식으로 확인된다.)</li>
+<li><b>따름정리 1 — 직교성은 절대적이다.</b> 어떤 계에서 \(\vb{E}\perp\vb{B}\)이면 <b>모든</b> 계에서 그렇다. 평면 전자기파가 어느 계에서 보아도 \(\vb{E}\perp\vb{B}\)인 이유다.</li>
+<li><b>따름정리 2 — 빛은 어느 계에서도 빛이다.</b> 진공 평면파는 \(E=cB\)이고 \(\vb{E}\cdot\vb{B}=0\), 즉 두 불변량이 모두 0이다. 불변이므로 어떤 관성계에서도 \(E=cB\), \(\vb{E}\perp\vb{B}\)가 유지된다. 어떤 부스트로도 빛을 "정지한 정적 장"으로 만들 수 없다 — 소년 Einstein의 질문에 대한 답이다.</li>
+<li><b>따름정리 3 — 사라지게 만들 수 있는가.</b> \(E^{2}-c^{2}B^{2}\)의 <b>부호</b>가 무엇이 가능한지를 결정한다:
+<ul>
+<li>\(E^{2}-c^{2}B^{2}&lt;0\)(자기 우세): 어떤 계에서도 \(\vb{B}=0\)이 될 수 <b>없다</b>. 잘하면 \(\vb{E}=0\)인 계는 찾을 수 있다(단 \(\vb{E}\cdot\vb{B}=0\)일 때).</li>
+<li>\(E^{2}-c^{2}B^{2}&gt;0\)(전기 우세): 어떤 계에서도 \(\vb{E}=0\)이 될 수 <b>없다</b>.</li>
+<li>\(\vb{E}\cdot\vb{B}\ne0\): 어느 쪽도 0으로 만들 수 없다(0이 되면 내적이 0이 되어 불변량 위반).</li>
+</ul>
+이것이 이 단원 최고 빈출 참/거짓 문제의 근거다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>등속으로 움직이는 점전하의 \(\vb{E}\)와 \(\vb{B}\)</div>
+<ol>
+<li><b>정지계.</b> \(S_0\)에서 원점에 정지한 \(q\): \(\vb{E}_0=\dfrac{1}{4\pi\eps}\dfrac{q}{r_0^{2}}\hat{\vb{r}}_0\), \(\vb{B}_0=0\).</li>
+<li><b>장 변환.</b> \(E_x=E_{x0}\), \(E_y=\gamma_0E_{y0}\), \(E_z=\gamma_0E_{z0}\).</li>
+<li><b>좌표 변환.</b> 관측점을 \(S\) 좌표로 다시 쓴다. \(\vb{R}\)를 <b>전하의 현재 위치</b>에서 관측점으로 가는 벡터라 하면
+\[ x_0=\gamma_0 R_x,\qquad y_0=R_y,\qquad z_0=R_z . \]</li>
+<li><b>결합.</b> 분자에서는 \(E_y,E_z\)가 장 변환으로 \(\gamma_0\)를 얻고, \(E_x\)는 좌표 변환으로 \(\gamma_0\)를 얻는다. <b>두 \(\gamma_0\)가 균형을 이루어</b> 결과 벡터는 정확히 \(\vb{R}\)에 나란해진다:
+\[ \boxed{\;\vb{E}=\frac{q}{4\pi\eps}\,\frac{1-v^{2}/c^{2}}{\big[1-(v^{2}/c^{2})\sin^{2}\theta\big]^{3/2}}\,\frac{\hat{\vb{R}}}{R^{2}}\;} \]
+(\(\theta\)는 \(\vb{v}\)와 \(\vb{R}\) 사이 각).</li>
+<li><b>놀라운 점.</b> 장이 <b>지연 위치가 아니라 순간 위치</b>를 향한다. 정보는 \(c\)로 오는데도 그렇다. 10장에서 지연 퍼텐셜로 힘들게 얻었던 결과를, 여기서는 좌표 변환 두 줄로 얻고 <b>왜</b> 그런지까지 설명한다.</li>
+<li><b>장의 모양.</b> \(\theta=0\)(진행 방향)에서 \(1/\gamma^{2}\)배로 <b>약해지고</b>, \(\theta=\pi/2\)(옆구리)에서 \(\gamma\)배로 <b>강해진다</b>. 장이 진행 방향에 수직인 "팬케이크"로 눌린다.</li>
+<li><b>자기장은 공짜.</b> 정지계에서 \(\vb{B}_0=0\)이므로 변환 규칙의 특수 경우 \(\vb{B}=\dfrac{1}{c^{2}}(\vb{v}\times\vb{E})\)를 그대로 쓴다:
+\[ \vb{B}=\frac{\muz}{4\pi}\,\frac{qv\,(1-v^{2}/c^{2})\sin\theta}{\big[1-(v^{2}/c^{2})\sin^{2}\theta\big]^{3/2}}\,\frac{\hat{\boldsymbol\varphi}}{R^{2}} . \]</li>
+<li><b>비상대론 극한.</b> \(v^{2}\ll c^{2}\)에서
+\[ \vb{B}\approx\frac{\muz}{4\pi}\,\frac{q\,\vb{v}\times\hat{\vb{R}}}{R^{2}} \]
+— 점전하에 Biot–Savart를 순진하게 적용한 결과와 일치한다. 5장의 그 "왜 그런지 모르겠는" 공식이 여기서 정당화된다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 장의 변환 규칙 (\(x\)방향 부스트)</div>
+\[ \bar E_x=E_x,\quad \bar E_y=\gamma(E_y-vB_z),\quad \bar E_z=\gamma(E_z+vB_y) \]
+\[ \bar B_x=B_x,\quad \bar B_y=\gamma\Big(B_y+\frac{v}{c^{2}}E_z\Big),\quad \bar B_z=\gamma\Big(B_z-\frac{v}{c^{2}}E_y\Big) \]
+<p class="note">벡터형: \(\bar{\vb{E}}_\parallel=\vb{E}_\parallel,\ \bar{\vb{E}}_\perp=\gamma(\vb{E}+\vb{v}\times\vb{B})_\perp,\ \bar{\vb{B}}_\parallel=\vb{B}_\parallel,\ \bar{\vb{B}}_\perp=\gamma(\vb{B}-\tfrac{\vb{v}}{c^{2}}\times\vb{E})_\perp\). 특수 경우가 훨씬 자주 쓰인다: \(S\)에서 \(\vb{B}=0\)이면 \(\bar{\vb{B}}=-\tfrac{1}{c^{2}}(\vb{v}\times\bar{\vb{E}})\), \(S\)에서 \(\vb{E}=0\)이면 \(\bar{\vb{E}}=\vb{v}\times\bar{\vb{B}}\).</p></div>
+
+<div class="formula"><div class="ftitle">암기 — 두 불변량</div>
+\[ \boxed{\;\vb{E}\cdot\vb{B}=\text{불변},\qquad E^{2}-c^{2}B^{2}=\text{불변}\;} \]
+<p class="note">"어떤 계에서 \(\vb{E}\)(또는 \(\vb{B}\))를 없앨 수 있는가?" 유형의 문제는 <b>예외 없이</b> 이 두 수를 계산하는 것으로 시작한다. \(\vb{E}\cdot\vb{B}\ne0\)이면 둘 다 못 없앤다. \(\vb{E}\cdot\vb{B}=0\)일 때 부호가 결정한다: \(E&lt;cB\)면 \(\vb{E}\)를 없앨 수 있고, \(E&gt;cB\)면 \(\vb{B}\)를 없앨 수 있고, \(E=cB\)면 (평면파) 어느 쪽도 못 없앤다. U29에서 이 둘은 \(F^{\mu\nu}F_{\mu\nu}\)와 \(F^{\mu\nu}G_{\mu\nu}\)로 정체가 드러난다.</p></div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u28-1"><div class="qq">[참/거짓 + 증명] ★ "어떤 점에서 \(\vb{E}=0,\ \vb{B}\ne0\)인 관성계가 존재한다면, 같은 점에서 \(\vb{B}=0\)인 관성계도 존재한다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>거짓.</b> 절대 불가능하다.</p>
+<p><b>증명 (불변량).</b> 문제의 계에서
+\[ E^{2}-c^{2}B^{2}=0-c^{2}B^{2}=-c^{2}B^{2}\;&lt;\;0\qquad(B\ne0). \]
+이 값은 <b>모든 관성계에서 동일</b>하다.</p>
+<p>만약 \(\vb{B}'=0\)인 계가 존재한다면 그 계에서
+\[ E'^{2}-c^{2}\cdot 0=E'^{2}\;\ge\;0 . \]
+음수 = 음이 아닌 수, 모순. ∎</p>
+<p><b>더 강한 결론.</b> \(E^{2}-c^{2}B^{2}&lt;0\)이 모든 계에서 성립하므로 <b>어느 계에서도</b> \(E&lt;cB\)이고, 특히 \(B\)는 절대 0이 될 수 없다. "자기 우세"라는 성격은 부스트로 지울 수 없는 절대적 속성이다.</p>
+<p><b>대칭 명제.</b> 같은 논리로 \(\vb{B}=0,\ \vb{E}\ne0\)인 계가 있으면(예: 정지한 점전하) \(E^{2}-c^{2}B^{2}=E^{2}&gt;0\)이므로 <b>어떤 계에서도 \(\vb{E}=0\)이 될 수 없다</b>. 아무리 빨리 달려도 전하를 "전기적으로 지울" 수는 없다.</p>
+<p><b>그럼 무엇이 가능한가.</b> \(\vb{E}=0,\vb{B}\ne0\)인 계가 있으면 다른 계에서 \(\vb{E}\ne0\)을 만들 수는 있다(변환 규칙 \(\bar{\vb{E}}=\vb{v}\times\bar{\vb{B}}\)). 즉 <b>전기장을 없던 데서 만들 수는 있어도, 자기장을 있던 데서 없앨 수는 없다</b>. 불변량의 부호가 방향을 정해 준다.</p>
+<p><b>시험 대응 요령.</b> 이 유형은 매번 나온다. 답안 첫 줄에 반드시 "\(E^2-c^2B^2\)와 \(\vb{E}\cdot\vb{B}\)는 Lorentz 불변량이다"를 쓰고 시작할 것. 계산 없이 부호만으로 결론이 난다.</p>
+</div></div>
+
+<div class="qz" data-q="u28-2"><div class="qq">[참/거짓 + 조건] "임의로 주어진 \(\vb{E}\), \(\vb{B}\)에 대해, 두 장이 나란해지는 관성계가 항상 존재한다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>대체로 참이지만, 예외가 하나 있다.</b></p>
+<p><b>가능한 경우.</b> \(\vb{E}\)와 \(\vb{B}\)가 나란하지도 수직하지도 않은 일반적 상황이라면, 다음 속도로 움직이는 계 \(\bar S\)에서 두 장이 나란해진다:
+\[ \frac{\vb{v}}{1+v^{2}/c^{2}}=\frac{\vb{E}\times\vb{B}}{B^{2}+E^{2}/c^{2}} . \]
+(우변의 크기가 \(c/2\)를 넘지 않음을 확인하면 \(v&lt;c\)인 해가 존재함을 알 수 있다.)</p>
+<p><b>예외 = 평면파.</b> \(\vb{E}\cdot\vb{B}=0\)이면서 <b>동시에</b> \(E=cB\)인 경우(진공 평면 전자기파의 장)에는 두 장을 나란하게 만들 수 없다. 나란해지면 \(\vb{E}\cdot\vb{B}\ne0\)이 되는데 이 값은 불변(=0)이어야 하므로 모순이다. 또한 두 장 중 어느 하나를 0으로 만들 수도 없다(0이면 \(E^2-c^2B^2\)가 0이 아닌 값을 가져야 하는데 실제로는 0).</p>
+<p><b>수직으로 만들 수 있는가.</b> \(\vb{E}\cdot\vb{B}\ne0\)이면 <b>불가능</b>하다 — 수직이면 내적이 0인데 그 값은 불변이기 때문이다. \(\vb{E}\cdot\vb{B}=0\)이면 이미 모든 계에서 수직이다.</p>
+<p><b>정리하면.</b> \(\vb{E}\cdot\vb{B}\)의 값이 "나란/수직" 여부를 완전히 통제하고, \(E^{2}-c^{2}B^{2}\)의 부호가 "어느 장을 지울 수 있는가"를 통제한다. 두 불변량이 장 배치의 <b>Lorentz 불변 분류</b>를 완성한다.</p>
+</div></div>
+
+<div class="qz" data-q="u28-3"><div class="qq">[계산] \(+x\)로 진행하고 \(\hat{\vb{y}}\)로 편광된 진폭 \(E_0\)의 진공 평면파를, \(+x\)로 속력 \(v\)인 계 \(\bar S\)에서 관측한다. \(\bar S\)에서의 진폭을 구하고, 두 불변량이 유지되는지 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>\(S\)에서의 장.</b> \(\vb{E}=E_0\cos(kx-\omega t)\,\hat{\vb{y}}\), \(\vb{B}=\dfrac{E_0}{c}\cos(kx-\omega t)\,\hat{\vb{z}}\).</p>
+<p><b>변환.</b> \(E_y\)와 \(B_z\)만 0이 아니므로
+\[ \bar E_y=\gamma(E_y-vB_z)=\gamma E_y\Big(1-\frac{v}{c}\Big)=\gamma(1-\beta)E_y . \]</p>
+<p><b>인자 정리.</b>
+\[ \gamma(1-\beta)=\frac{1-\beta}{\sqrt{(1-\beta)(1+\beta)}}=\sqrt{\frac{1-\beta}{1+\beta}} . \]
+따라서
+\[ \boxed{\;\bar E_0=E_0\sqrt{\frac{1-\beta}{1+\beta}}\;} \]</p>
+<p><b>자기장도 같은 인자.</b>
+\[ \bar B_z=\gamma\Big(B_z-\frac{v}{c^{2}}E_y\Big)=\gamma B_z(1-\beta)=\sqrt{\frac{1-\beta}{1+\beta}}\;B_z . \]
+따라서 \(\bar E_0=c\bar B_0\)가 <b>그대로 유지</b>된다 ✓</p>
+<p><b>불변량 확인.</b> \(\bar{\vb{E}}\cdot\bar{\vb{B}}=0\) ✓ (여전히 직교). \(\bar E^{2}-c^{2}\bar B^{2}=0\) ✓. 두 불변량이 0에서 0으로 보존된다 — 예상대로다.</p>
+<p><b>Doppler 해석.</b> 위상 \(kx-\omega t\)는 스칼라(같은 사건에서 같은 값)이므로 \(\bar\omega\)도 같은 인자를 얻는다:
+\[ \bar\omega=\omega\sqrt{\frac{1-\beta}{1+\beta}} \]
+— 상대론적 <b>Doppler 이동</b>이 장의 변환에서 자동으로 나온다. 파를 쫓아가면 진동수도 진폭도 같은 비율로 줄어든다.</p>
+<p><b>세기.</b> \(I\propto E_0^{2}\)이므로 \(\bar I/I=(1-\beta)/(1+\beta)\).</p>
+<p><b>\(v\to c\) 극한 — 소년 Einstein의 질문.</b> \(\beta\to1\)에서 \(\bar E_0\to0\), \(\bar\omega\to0\), \(\bar I\to0\). 빛을 따라잡으려 할수록 파는 <b>희미해지고 느려지다가 사라진다</b>. 결코 "정지한 정적인 파동 무늬"를 보지 못한다. 두 불변량이 0으로 고정되어 있는 것과 정확히 정합적이다.</p>
+</div></div>
+
+<div class="qz" data-q="u28-4"><div class="qq">[개념·서술] 도선 유도(유도 1)에서 "\(S\)에서 중성인 도선이 \(\bar S\)에서는 대전되어 있다"는 결론의 물리적 근거를 두 문장으로 요약하라. 그리고 이 현상이 전하 보존을 위반하지 않는 이유를 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>근거 요약.</b> (1) 전하는 불변이므로 선전하<b>밀도</b>의 변화는 오직 <b>간격의 길이 수축</b>에서만 온다. (2) \(\bar S\)에서 양·음 두 줄의 <b>속력이 서로 다르므로</b>(\(v_-&gt;v_+\), 속도 덧셈의 비선형성 때문) 수축 인자 \(\gamma_\pm\)가 달라지고, 결과적으로 두 밀도의 크기가 어긋나 알짜 전하가 남는다.</p>
+<p><b>더 깊은 이유 — 동시성.</b> "단위 길이당 전하"를 세려면 도선 위 두 지점의 전하를 <b>같은 시각에</b> 읽어야 한다. 그런데 "같은 시각"이 계마다 다르다. 두 줄이 반대 방향으로 움직이므로, 동시선을 기울이면 한 줄에서는 전하를 더 세고 다른 줄에서는 덜 세게 된다. <b>동시성의 상대성이 전하밀도의 상대성을 낳는다</b> — 이것이 가장 근본적인 서술이다.</p>
+<p><b>전하 보존과 충돌하지 않는 이유.</b> 두 개념을 구별해야 한다.</p>
+<ul>
+<li><b>총전하 \(Q\)</b>는 보존되고 불변이다. 도선 전체(닫힌 회로)의 총전하는 어느 계에서도 0이다.</li>
+<li><b>전하밀도 \(\rho\)(또는 \(\lambda\))</b>는 불변량이 아니다. \(\rho\)는 4-vector \(J^{\mu}=(c\rho,\vb{J})\)의 <b>시간 성분</b>이고, 시간 성분은 부스트에서 공간 성분(전류)과 섞인다(U29 유도 3).</li>
+</ul>
+<p>실제로 \(J^{\mu}\)의 변환은 \(\bar\rho=\gamma(\rho-vJ_x/c^{2})\)를 준다. \(S\)에서 \(\rho=0\)이지만 \(J_x\ne0\)이므로 \(\bar\rho=-\gamma vJ_x/c^{2}\ne0\) — 유도 1의 결과가 <b>단 한 줄로</b> 재현된다. 전류가 전하밀도로 "변환되어 들어온" 것이지, 전하가 생기거나 사라진 것이 아니다.</p>
+<p><b>한 문장으로.</b> "중성이다"라는 진술은 절대적이지 않다. 절대적인 것은 \(J^{\mu}\)라는 4-vector의 존재와, 그 발산이 0이라는 사실(\(\partial_\mu J^\mu=0\))뿐이다.</p>
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> 백지에서 도선-시험전하 유도를 \(\gamma_\pm\) 대수까지 완주해 \(F=quB\)를 뽑고, 두 불변량만으로 "어느 장을 없앨 수 있는가" 유형을 즉답할 수 있다.</div>

@@ -1,0 +1,119 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 전류 고리는 총전하가 0이라 \(V=0\)이다. 그렇다면 복사장은 오직 \(\vb{A}\)에서만 나와야 한다 — \(\vb{E}=-\partial\vb{A}/\partial t\)가 되는데, 이때 \(\vb{E}\)의 방향은 전기 쌍극자와 같을까 다를까? 또 크기가 비슷한 두 안테나(막대 vs 고리)를 같은 주파수로 구동하면 어느 쪽이 더 강하게 복사할지, 그리고 그 비가 어떤 무차원 조합으로 표현될지 예상해 보라.</div>
+
+<h4>11.1.3 자기 쌍극자 복사 <span class="en">magnetic dipole radiation</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>진동 전류 고리의 지연 벡터 퍼텐셜</div><ol>
+<li>모형: \(xy\) 평면의 반지름 \(b\)인 고리에 \(I(t)=I_0\cos(\omega t)\)를 흘린다. 자기 쌍극자 모멘트는
+\[ \vb{m}(t)=\pi b^2 I(t)\hat{\vb{z}}=m_0\cos(\omega t)\hat{\vb{z}},\qquad m_0\equiv \pi b^2 I_0. \]</li>
+<li><b>고리는 중성이므로 \(V=0\)</b> — 이것이 전기 쌍극자와의 첫 번째 구조적 차이다. 남는 것은
+\[ \vb{A}(\vb{r},t)=\frac{\muz I_0}{4\pi}\oint \frac{\cos[\omega(t-\rr/c)]}{\rr}\,\dd\boldsymbol\ell'. \]</li>
+<li>\(x\)축 바로 위의 관측점을 잡으면 대칭성에 의해 \(x\) 성분이 상쇄되고 \(\hat{\vb{y}}\) 성분만 남는다(\(\dd\boldsymbol\ell'\)의 \(y\) 성분이 \(\cos\varphi'\,\dd\varphi'\)를 뽑아낸다):
+\[ \vb{A}=\frac{\muz I_0 b}{4\pi}\hat{\vb{y}}\int_0^{2\pi}\frac{\cos[\omega(t-\rr/c)]}{\rr}\cos\varphi'\,\dd\varphi',\qquad \rr=\sqrt{r^2+b^2-2rb\sin\theta\cos\varphi'} \]
+(코사인 법칙; \(\vb{r}\cdot\vb{b}=rb\sin\theta\cos\varphi'\)를 썼다).</li>
+<li><b>근사 1 (\(b\ll r\))</b>: \(\rr\approx r(1-\tfrac{b}{r}\sin\theta\cos\varphi')\), \(\ \dfrac{1}{\rr}\approx\dfrac1r\left(1+\dfrac{b}{r}\sin\theta\cos\varphi'\right)\).<br>
+<b>근사 2 (\(b\ll\lambda\))</b>: \(\cos[\omega(t-\rr/c)]\approx\cos[\omega(t-r/c)]-\dfrac{\omega b}{c}\sin\theta\cos\varphi'\,\sin[\omega(t-r/c)]\).</li>
+<li>대입 후 각적분의 구조가 결정적이다:
+\[ \int_0^{2\pi}\cos\varphi'\,\dd\varphi'=0,\qquad \int_0^{2\pi}\cos^2\varphi'\,\dd\varphi'=\pi. \]
+<b>선행항이 통째로 죽고, \(b\)의 1차 보정항만 살아남는다.</b> 자기 쌍극자 복사가 태생적으로 한 차수 약한 이유가 여기 있다. 일반적으로 \(\vb{A}\)는 \(\hat{\boldsymbol\varphi}\) 방향이므로
+\[ \vb{A}(r,\theta,t)=\frac{\muz m_0}{4\pi}\left(\frac{\sin\theta}{r}\right)\left\{\frac1r\cos[\omega(t-r/c)]-\frac{\omega}{c}\sin[\omega(t-r/c)]\right\}\hat{\boldsymbol\varphi}. \]</li>
+<li>검산: \(\omega\to0\)이면 \(\vb{A}=\dfrac{\muz}{4\pi}\dfrac{m_0\sin\theta}{r^2}\hat{\boldsymbol\varphi}\), 정자기 쌍극자 공식(5.87) 재현. ✓<br>
+<b>근사 3 (\(r\gg\lambda\))</b>으로 \(1/r^2\) 항을 버리면
+\[ \boxed{\;\vb{A}=-\frac{\muz m_0\omega}{4\pi c}\left(\frac{\sin\theta}{r}\right)\sin[\omega(t-r/c)]\,\hat{\boldsymbol\varphi}\;}\]</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>장, 세기, 그리고 \(\langle P\rangle=\muz m_0^2\omega^4/12\pi c^3\)</div><ol>
+<li>\(V=0\)이므로 곧바로
+\[ \vb{E}=-\frac{\partial\vb{A}}{\partial t}=\frac{\muz m_0\omega^2}{4\pi c}\left(\frac{\sin\theta}{r}\right)\cos[\omega(t-r/c)]\,\hat{\boldsymbol\varphi}. \]</li>
+<li>\(\vb{B}=\curl\vb{A}\)에서 근사 3으로 \(1/r^2\) 항을 지우면
+\[ \vb{B}=-\frac{\muz m_0\omega^2}{4\pi c^2}\left(\frac{\sin\theta}{r}\right)\cos[\omega(t-r/c)]\,\hat{\boldsymbol\theta}. \]</li>
+<li><b>구조 비교(시험 단골)</b>: 전기 쌍극자에서는 \(\vb{E}\parallel\hat{\boldsymbol\theta},\ \vb{B}\parallel\hat{\boldsymbol\varphi}\)였는데, 자기 쌍극자에서는 <b>정확히 뒤바뀐다</b>. 나머지 성질(동위상, 상호 수직, 횡파, \(E_0/B_0=c\))은 동일하다. 이는 쌍대성(duality)의 자연스러운 귀결이다.</li>
+<li>\[ \vb{S}=\frac{1}{\muz}(\vb{E}\times\vb{B})=\frac{\muz}{c}\left\{\frac{m_0\omega^2}{4\pi c}\left(\frac{\sin\theta}{r}\right)\cos[\omega(t-r/c)]\right\}^2\hat{\vb{r}} \]
+\(\Rightarrow\ \langle\vb{S}\rangle=\left(\dfrac{\muz m_0^2\omega^4}{32\pi^2c^3}\right)\dfrac{\sin^2\theta}{r^2}\hat{\vb{r}}\).</li>
+<li>같은 \(\int\sin^2\theta\,\dd\Omega=8\pi/3\)를 써서
+\[ \boxed{\;\langle P\rangle=\frac{\muz m_0^2\omega^4}{12\pi c^3}\;}\]
+각분포도 똑같이 도넛, \(\omega\) 의존성도 똑같이 \(\omega^4\). <b>유일한 차이는 분모의 \(c^3\)</b>이고, 그 안에 모든 물리가 들어 있다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>왜 전기 쌍극자 복사가 압도적인가: \(P_{\rm mag}/P_{\rm elec}=(\omega b/c)^2\)</div><ol>
+<li>두 결과를 나눈다:
+\[ \frac{P_{\rm mag}}{P_{\rm elec}}=\frac{\muz m_0^2\omega^4/12\pi c^3}{\muz p_0^2\omega^4/12\pi c}=\left(\frac{m_0}{p_0 c}\right)^2. \]
+\(\omega^4\)가 소거된다는 점에 주목 — 이 비는 주파수 자체가 아니라 크기와 파장의 비에만 의존하게 된다.</li>
+<li>비교 조건을 정한다. 전기 쌍극자 쪽: \(p_0=q_0 d\)이고 전류 진폭은 \(I_0=q_0\omega\)이므로 \(p_0=I_0 d/\omega\). 자기 쪽: \(m_0=\pi b^2 I_0\).</li>
+<li>"비슷한 크기"의 두 장치를 비교하기 위해 도선 길이를 맞춘다: \(d=\pi b\). 그러면
+\[ \frac{m_0}{p_0 c}=\frac{\pi b^2 I_0}{(I_0 \pi b/\omega)c}=\frac{\omega b}{c}. \]</li>
+<li>\[ \boxed{\;\frac{P_{\rm mag}}{P_{\rm elec}}=\left(\frac{\omega b}{c}\right)^2=\left(\frac{2\pi b}{\lambda}\right)^2\ll1\;}\]</li>
+<li><b>해석이 핵심이다.</b> \(\omega b/c\)는 바로 <b>근사 2에서 "매우 작다"고 가정했던 그 양</b>이며, 여기서 제곱되어 나타난다. 즉 완전 쌍극자 근사가 성립하는 한 자기 쌍극자 복사는 항상 전기 쌍극자 복사보다 압도적으로 약하다. 자기 쌍극자 복사가 관측되는 것은 <b>전기 쌍극자 기여가 대칭성 때문에 원천적으로 0인 경우</b>(예: 중성 전류 고리)뿐이다.</li>
+<li>같은 논리를 복사 저항으로 옮기면 고리 안테나의 \(R_{\rm rad}\approx 3\times10^5 (b/\lambda)^4\,\Omega\) — 지수가 2가 아니라 4다. 크기 의존성이 훨씬 가파르다.</li>
+</ol></div>
+
+<h4>11.1.4 임의 소스의 복사와 다중극 위계 <span class="en">arbitrary localized source; the multipole hierarchy</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>지연 퍼텐셜의 다중극 전개 → \(P=\muz\ddot p^{\,2}/6\pi c\)</div><ol>
+<li>원점 근처 부피 \(\tau\)에 국소화된 임의의 \(\rho,\vb{J}\).
+\[ V(\vb{r},t)=\frac{1}{4\pi\eps}\int\frac{\rho(\vb{r}',t-\rr/c)}{\rr}\dd\tau',\qquad \rr=|\vb{r}-\vb{r}'|. \]</li>
+<li><b>근사 1 (\(r'\ll r\))</b>: \(\rr\approx r\left(1-\dfrac{\vb{r}\cdot\vb{r}'}{r^2}\right)\), \(\ \dfrac1\rr\approx\dfrac1r\left(1+\dfrac{\hat{\vb{r}}\cdot\vb{r}'}{r}\right)\).</li>
+<li>지연 시각을 원점 기준 \(t_0\equiv t-r/c\)로 잡고 \(\rho\)를 <b>시간에 대해</b> Taylor 전개한다:
+\[ \rho\!\left(\vb{r}',t-\tfrac{\rr}{c}\right)\approx\rho(\vb{r}',t_0)+\dot\rho(\vb{r}',t_0)\left(\frac{\hat{\vb{r}}\cdot\vb{r}'}{c}\right)+\cdots \]
+<b>근사 2</b>는 다음 항 \(\tfrac12\ddot\rho(\hat{\vb{r}}\cdot\vb{r}'/c)^2\) 등을 버릴 수 있다는 조건, 즉 \(r'\ll c/|\ddot\rho/\dot\rho|,\ c/|\dddot\rho/\dot\rho|^{1/2},\dots\)이다. 진동계에서는 이 모든 비가 \(c/\omega\)가 되어 익숙한 \(r'\ll\lambda\)로 환원된다. 실질적으로 근사 1+2는 "\(r'\)의 1차만 남긴다"는 뜻이다.</li>
+<li>대입하고 \(r'\)의 2차를 버리면 세 개의 적분이 나온다: \(\int\rho\,\dd\tau'=Q\)(전하 보존 → 시간에 무관), \(\int\vb{r}'\rho\,\dd\tau'=\vb{p}(t_0)\), 그리고 그 시간미분.
+\[ V(\vb{r},t)\approx\frac{1}{4\pi\eps}\left[\frac{Q}{r}+\frac{\hat{\vb{r}}\cdot\vb{p}(t_0)}{r^2}+\frac{\hat{\vb{r}}\cdot\dot{\vb{p}}(t_0)}{rc}\right]. \]
+앞의 두 항은 정적 다중극 전개의 단극·쌍극 항이고, <b>셋째 항은 정적 상황에는 존재하지 않는 새로운 \(1/r\) 항</b> — 이것이 복사의 씨앗이다.</li>
+<li>벡터 퍼텐셜은 \(\vb{p}\) 자체가 이미 \(r'\)의 1차이므로 \(\rr\to r\)로 놓아도 충분하고, \(\int\vb{J}\,\dd\tau'=\dot{\vb{p}}\)(Prob. 5.7)를 쓰면
+\[ \vb{A}(\vb{r},t)\approx\frac{\muz}{4\pi}\frac{\dot{\vb{p}}(t_0)}{r}. \]</li>
+<li><b>근사 3</b>: \(\vb{E},\vb{B}\)에서 \(1/r^2\) 항을 버린다. 미분이 \(t_0\)의 인수를 때릴 때만 \(1/r\)이 유지되며, \(\nabla t_0=-\hat{\vb{r}}/c\)이므로
+\[ \nabla V\approx-\frac{1}{4\pi\eps c^2}\frac{(\hat{\vb{r}}\cdot\ddot{\vb{p}})}{r}\hat{\vb{r}},\qquad \curl\vb{A}\approx-\frac{\muz}{4\pi rc}[\hat{\vb{r}}\times\ddot{\vb{p}}],\qquad \frac{\partial\vb{A}}{\partial t}\approx\frac{\muz}{4\pi}\frac{\ddot{\vb{p}}}{r}. \]</li>
+<li>따라서 <b>임의 소스의 복사장</b>:
+\[ \vb{E}=\frac{\muz}{4\pi r}\big[\hat{\vb{r}}\times(\hat{\vb{r}}\times\ddot{\vb{p}})\big],\qquad \vb{B}=-\frac{\muz}{4\pi rc}\big[\hat{\vb{r}}\times\ddot{\vb{p}}\big]=\frac1c\hat{\vb{r}}\times\vb{E}. \]
+\(z\)축을 \(\ddot{\vb{p}}(t_0)\) 방향으로 잡으면 \(E_\theta=\dfrac{\muz\ddot p}{4\pi}\dfrac{\sin\theta}{r}\), \(B_\varphi=E_\theta/c\).</li>
+<li>\[ \vb{S}=\frac{\muz}{16\pi^2c}[\ddot p(t_0)]^2\frac{\sin^2\theta}{r^2}\hat{\vb{r}}\ \Longrightarrow\ \boxed{\;P_{\rm rad}(t_0)=\frac{\muz}{6\pi c}[\ddot{\vb{p}}(t_0)]^2\;}\]</li>
+<li><b>두 가지 즉시 확인(Ex. 11.2)</b>: (a) \(\vb{p}=p_0\cos\omega t\Rightarrow\ddot{\vb{p}}=-\omega^2p_0\cos\omega t\), \(\langle\ddot p^2\rangle=\tfrac12\omega^4p_0^2\) → §11.1.2 결과 복원. (b) 점전하 하나면 \(\vb{p}=q\vb{d}(t)\Rightarrow\ddot{\vb{p}}=q\vb{a}\), 따라서 \(P=\muz q^2a^2/6\pi c\) — <b>Larmor 공식</b>이 공짜로 떨어진다.</li>
+<li><b>위계</b>: 이 계산은 복사를 낼 수 있는 최저 차수, 즉 전기 쌍극자 항까지의 전개다. 전기 단극은 전하 보존 때문에 절대 복사하지 못한다(만약 \(Q(t)\)가 변한다면 \(E_{\rm mono}=\dot Q(t_0)\hat{\vb{r}}/4\pi\eps c r\)라는 \(1/r\) 항이 생겼을 것이다). \(\ddot{\vb{p}}=0\)이면 \(r'\)의 2차 항으로 내려가야 하고, 이는 <b>자기 쌍극자 + 전기 사중극</b>으로 갈라진다. 그것마저 0이면 자기 사중극 + 전기 팔중극… 이런 식으로 계속된다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 자기 쌍극자 복사와 전기/자기 비</div>
+\[ \langle P\rangle_{\rm mag}=\frac{\muz m_0^2\omega^4}{12\pi c^3},\qquad \frac{P_{\rm mag}}{P_{\rm elec}}=\left(\frac{m_0}{p_0c}\right)^2\overset{d=\pi b}{=}\left(\frac{\omega b}{c}\right)^2 \]
+<p class="note">전기 쌍극자 공식에서 \(p_0\to m_0/c\)로 치환하면 그대로 자기 쌍극자 공식이 된다 — \(c^3\)를 외울 필요 없이 이 치환 규칙 하나만 기억하면 된다. 시간 영역판: \(P=\muz\ddot m^2/6\pi c^3\).</p></div>
+
+<div class="formula"><div class="ftitle">암기 — 임의 국소 소스의 복사 (11장의 마스터 공식)</div>
+\[ \vb{E}_{\rm rad}=\frac{\muz}{4\pi r}\hat{\vb{r}}\times(\hat{\vb{r}}\times\ddot{\vb{p}}),\qquad \boxed{P_{\rm rad}=\frac{\muz}{6\pi c}\,\ddot{p}^{\,2}}\quad (\ddot{\vb{p}}\ \text{는}\ t_0=t-r/c\ \text{에서 평가}) \]
+<p class="note">\(\hat{\vb{r}}\times(\hat{\vb{r}}\times\ddot{\vb{p}})=(\hat{\vb{r}}\cdot\ddot{\vb{p}})\hat{\vb{r}}-\ddot{\vb{p}}\)는 "\(\ddot{\vb{p}}\)를 시선에 수직한 평면으로 투영한 것의 \(-1\)배". 이 공식 하나에서 §11.1.2 전체와 Larmor 공식이 모두 특수경우로 나온다.</p></div>
+
+<div class="callout"><b class="head">안테나 크기와 파장.</b> \(R_{\rm rad}^{\rm elec}=790(d/\lambda)^2\,\Omega\), \(R_{\rm rad}^{\rm mag}\approx3\times10^5(b/\lambda)^4\,\Omega\). 두 식 모두 절대 크기가 아니라 <b>파장 대비 크기</b>만이 문제라고 말한다. FM 방송(\(90\,\)MHz, \(\lambda\approx3.3\,\)m)의 송신 안테나가 수 미터인 것, 반대로 휴대폰(\(\sim\)GHz, \(\lambda\approx10\,\)cm)의 안테나가 손톱만 한 것이 같은 이유다. 지수 \(4\)는 왜 소형 루프 안테나가 송신용으로는 거의 쓰이지 않고 <b>수신·측정용</b>으로만 쓰이는지 설명한다 — 대신 루프는 전기장 잡음에 둔감하다는 장점이 있다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u21-1"><div class="qq">(참/거짓 + 증명 또는 반례) "복사장에서 \(\vb{E}\)는 언제나 \(\hat{\boldsymbol\theta}\) 방향, \(\vb{B}\)는 언제나 \(\hat{\boldsymbol\varphi}\) 방향이다(단, \(z\)축은 쌍극자 축)."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>거짓.</b> 반례가 바로 자기 쌍극자 복사다. \(z\)축을 \(\vb{m}\) 방향으로 잡았을 때
+\[ \vb{E}\parallel\hat{\boldsymbol\varphi},\qquad \vb{B}\parallel\hat{\boldsymbol\theta} \]
+로 전기 쌍극자와 정확히 뒤바뀐다.<br><br>
+<b>이유</b>: 고리는 중성이라 \(V=0\)이고 \(\vb{A}\parallel\hat{\boldsymbol\varphi}\)이다. 따라서 \(\vb{E}=-\partial\vb{A}/\partial t\)가 \(\vb{A}\)의 방향을 그대로 물려받아 \(\hat{\boldsymbol\varphi}\)가 된다. 전기 쌍극자에서는 \(\vb{A}\parallel\hat{\vb{z}}\)여서 \(\vb{E}\)가 \(\hat{\boldsymbol\theta}\) 성분을 갖게 되는 것과 대조된다.<br><br>
+<b>참인 것은 무엇인가</b>: 방향의 구체적 라벨이 아니라 (i) \(\vb{E}\perp\vb{B}\perp\hat{\vb{r}}\), (ii) 동위상, (iii) \(E_0/B_0=c\), (iv) \(\vb{B}=\hat{\vb{r}}\times\vb{E}/c\). 이 네 가지는 모든 복사장에서 성립한다. 실용적 함의: 편광 방향을 보면 그 안테나가 전기형인지 자기형인지 알 수 있다.
+</div></div>
+
+<div class="qz" data-q="u21-2"><div class="qq">(차원해석) \(\langle P\rangle_{\rm mag}\)의 분모에 왜 \(c\)가 아니라 \(c^3\)이 오는지를, 결과를 외우지 않고 단위만으로 강제하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+\(\langle P\rangle=k\,\muz m_0^2\omega^4 c^{\,b}\)로 놓는다(\(\omega^4\)는 U20 Q2와 같은 논리로 이미 확정, 혹은 미지수로 두고 함께 풀어도 된다).<br>
+\([m_0]=\mathrm{A\,m^2}=\mathrm{C\,s^{-1}m^2}\)이므로
+\[ [\muz m_0^2]=\mathrm{kg\,m\,C^{-2}}\cdot\mathrm{C^2 s^{-2}m^4}=\mathrm{kg\,m^5 s^{-2}}. \]
+\(\omega^4\)를 곱하면 \(\mathrm{kg\,m^5 s^{-6}}\). 이를 \(\mathrm{W=kg\,m^2s^{-3}}\)로 만들려면
+\[ \mathrm{m^5 s^{-6}}\cdot(\mathrm{m\,s^{-1}})^{b}=\mathrm{m^2s^{-3}}\ \Rightarrow\ 5+b=2\ \text{와}\ -6-b=-3\ \Rightarrow\ b=-3. \]
+두 조건이 모순 없이 같은 답 \(b=-3\)을 주는 것이 좋은 검산이다.<br><br>
+<b>더 빠른 방법</b>: \([m_0/c]=\mathrm{C\,s^{-1}m^2}/(\mathrm{m\,s^{-1}})=\mathrm{C\,m}=[p_0]\). 즉 \(m_0/c\)가 전기 쌍극자 모멘트와 <b>같은 차원</b>이다. 그래서 전기 공식에 \(p_0\to m_0/c\)를 대입하면 \(c^2\)가 하나 더 생겨 \(c\to c^3\)가 된다. 이 치환은 단위상의 우연이 아니라 Maxwell 방정식의 쌍대성에서 온다.
+</div></div>
+
+<div class="qz" data-q="u21-3"><div class="qq">(Example 변형, 계산기 없이) 반지름 \(b=1\,\)cm인 고리 안테나를 \(f=100\,\)MHz로 구동한다. 같은 규모의 전기 쌍극자 안테나와 비교해 복사 일률이 몇 배나 약한가? 어림수만 써서 답하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+\(\dfrac{P_{\rm mag}}{P_{\rm elec}}=\left(\dfrac{\omega b}{c}\right)^2=\left(\dfrac{2\pi b}{\lambda}\right)^2\).<br><br>
+\(\lambda=c/f=3\times10^8/10^8=3\,\)m. \(b=10^{-2}\,\)m.<br>
+\[ \frac{2\pi b}{\lambda}=\frac{6.28\times10^{-2}}{3}\approx2.1\times10^{-2}. \]
+제곱하면 \(\approx4.4\times10^{-4}\), 즉 <b>약 \(2000\)배 이상 약하다</b>.<br><br>
+<b>덧붙일 해석</b>: \(2\pi b/\lambda\approx1/50\)은 정확히 근사 2(\(b\ll\lambda\))가 요구하는 작은 양이고, 그것이 제곱되어 나타난 것이다. 근사가 좋을수록 자기 쌍극자 복사는 약해진다 — 즉 <b>"자기 쌍극자 복사를 강하게 만들려면 근사 자체를 깨야 한다"</b>는 자기모순적 상황이 된다. 실제 고리 안테나가 송신용으로 불리한 근본 이유다. (반대로 이 억제 때문에, 전기 쌍극자 항이 대칭성으로 금지된 계에서만 자기 쌍극자 복사가 주역이 된다 — 원자물리의 M1 전이가 E1 전이보다 훨씬 약한 것도 같은 구조다.)
+</div></div>
+
+<div class="qz" data-q="u21-4"><div class="qq">(개념) 전기 <b>단극</b>은 왜 절대 복사할 수 없는가? 만약 전하가 보존되지 않는다면 무슨 일이 벌어지는지 식으로 보여라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+다중극 전개의 첫 항은 \(V_{\rm mono}=\dfrac{1}{4\pi\eps}\dfrac{Q(t_0)}{r}\)이다. 복사를 낳는 것은 "미분이 지연 시각 \(t_0\)의 인수를 때리는 경우"뿐이고, \(\nabla t_0=-\hat{\vb{r}}/c\)이므로
+\[ \vb{E}_{\rm mono}=-\nabla V_{\rm mono}\supset \frac{1}{4\pi\eps c}\frac{\dot Q(t_0)}{r}\hat{\vb{r}}. \]
+이는 \(1/r\)로 떨어지므로 <b>원리적으로는 복사 조건을 만족한다.</b> 그런데 <b>전하 보존</b>이 \(\dot Q=0\)을 강제하므로 이 항은 존재할 수 없다.<br><br>
+즉 "단극 복사가 없다"는 것은 기하학적 우연이 아니라 <b>전하 보존 법칙의 직접적 결과</b>다. 이 점이 시험 서술형의 핵심 포인트다.<br><br>
+<b>구체적 확인</b>: 숨쉬는 대전 구껍질(U20 Q1)이 바로 단극 진동 시도인데, Gauss 법칙이 외부 장을 정확히 고정시켜 아무 일도 일어나지 않는다. 참고로 <b>음향학에서는 단극이 복사한다</b> — 질량 보존이 유체를 밀어낼 수 있게 허용하기 때문이다(황소개구리의 울음소리가 그 예). 전자기학에서 이것이 금지되는 것은 전하가 "밀려나갈" 수 없기 때문이다.
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> \(V=0\)에서 출발해 자기 쌍극자 \(\vb{A}\to\vb{E},\vb{B}\to\langle P\rangle=\muz m_0^2\omega^4/12\pi c^3\)를 유도하고, \(P_{\rm mag}/P_{\rm elec}=(\omega b/c)^2\)의 의미를 근사 2와 연결해 설명할 수 있으며, 임의 소스에서 \(P=\muz\ddot p^2/6\pi c\)를 세워 Larmor 공식을 뽑아낼 수 있다.</div>

@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>\(x\)방향 부스트 행렬(Eq. 12.117)의 0이 아닌 성분: \(\Lambda^0_{\ 0}=\Lambda^1_{\ 1}=\gamma,\ \Lambda^0_{\ 1}=\Lambda^1_{\ 0}=-\gamma\beta,\ \Lambda^2_{\ 2}=\Lambda^3_{\ 3}=1\). 변환법칙은 \(\bar t^{\mu\nu}=\Lambda^{\mu}_{\ \lambda}\Lambda^{\nu}_{\ \sigma}t^{\lambda\sigma}\).</p>
+
+\[ \bar t^{02}=\Lambda^0_{\ \lambda}\Lambda^2_{\ 2}t^{\lambda2}=\Lambda^0_{\ 0}t^{02}+\Lambda^0_{\ 1}t^{12}=\boxed{\gamma(t^{02}-\beta t^{12})} \]
+\[ \bar t^{03}=\Lambda^0_{\ 0}t^{03}+\Lambda^0_{\ 1}t^{13}=\gamma(t^{03}-\beta t^{13})=\boxed{\gamma(t^{03}+\beta t^{31})} \]
+\[ \bar t^{23}=\Lambda^2_{\ 2}\Lambda^3_{\ 3}t^{23}=\boxed{t^{23}} \]
+\[ \bar t^{31}=\Lambda^3_{\ 3}\Lambda^1_{\ \sigma}t^{3\sigma}=\Lambda^1_{\ 0}t^{30}+\Lambda^1_{\ 1}t^{31}=\boxed{\gamma(t^{31}+\beta t^{03})} \]
+\[ \bar t^{12}=\Lambda^1_{\ \lambda}\Lambda^2_{\ 2}t^{\lambda2}=\Lambda^1_{\ 0}t^{02}+\Lambda^1_{\ 1}t^{12}=\boxed{\gamma(t^{12}-\beta t^{02})} \]
+<p>(\(\bar t^{31}\)에서 \(t^{30}=-t^{03}\), \(\bar t^{03}\)에서 \(t^{13}=-t^{31}\)를 쓴 것이 부호의 유일한 함정이다.)</p>
+<p>이 여섯 규칙이 Eq. 12.111과 <b>글자 하나 안 틀리고 같다</b>는 사실이 장 텐서 \(F^{\mu\nu}\)를 정의하게 해준다.</p>
+<div class="alabel">감점 포인트</div>
+\(\Lambda\)의 위·아래 첨자 위치를 뒤섞는 것: \(\Lambda^{\mu}_{\ \nu}\)는 "행 \(\mu\), 열 \(\nu\)"이고 합은 언제나 아래첨자 쪽에서 일어난다.</div><!--/sol-->

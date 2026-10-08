@@ -1,0 +1,16 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+(a) \(q_1\) 정지 → 순수 Coulomb:
+\[ \boxed{\vb{F}_{12}=\frac{q_1q_2}{4\pi\eps v^2t^2}\hat{\vb{z}}} \]
+(b) \(q_2\)의 장을 원점에서 평가. 원점은 운동선 위(\(\theta=0\ \text{or}\ \pi\))이므로 \(\sin\theta=0\), Eq. 10.75가 \((1-\beta^2)\)만 남긴다. 또 \(\vb{v}\parallel\vb{E}_2\)이므로 \(\vb{B}_2(0)=\frac{1}{c^2}\vb{v}\times\vb{E}_2=0\).
+\[ \boxed{\vb{F}_{21}=-\frac{q_1q_2}{4\pi\eps v^2t^2}\left(1-\frac{v^2}{c^2}\right)\hat{\vb{z}}} \]
+\[ \vb{F}_{12}+\vb{F}_{21}=\frac{q_1q_2}{4\pi\eps v^2t^2}\frac{v^2}{c^2}\hat{\vb{z}}=\frac{\muz q_1q_2}{4\pi t^2}\hat{\vb{z}}\ne0
+\ \Rightarrow\ \boxed{\text{제3법칙 위배}} \]
+(c) 장의 (상호작용) 운동량. \(\vb{B}_1=0\)이므로 \(\vb{p}=\eps\int(\vb{E}_1\times\vb{B}_2)d\tau\). Coulomb 게이지에서의 항등식 \(\vb{p}_{\rm em}=\int\rho\vb{A}\,d\tau\)를 쓰면 \(\vb{p}=q_1\vb{A}_2(0,t)\)이고, 등속 전하의 Coulomb-게이지 벡터퍼텐셜은
+\[ \vb{A}_2=\frac{\muz q_2}{8\pi R}\big[\vb{v}+(\vb{v}\cdot\hat{\vb{R}})\hat{\vb{R}}\big]. \]
+원점에서 \(\hat{\vb{R}}=-\hat{\vb{z}},\ R=vt\)이므로 \(\vb{v}+(\vb{v}\cdot\hat{\vb{R}})\hat{\vb{R}}=2v\hat{\vb{z}}\):
+\[ \boxed{\vb{p}(t)=\frac{\muz q_1q_2}{4\pi t}\hat{\vb{z}}} \]
+(d) \[ -\frac{d\vb{p}}{dt}=+\frac{\muz q_1q_2}{4\pi t^2}\hat{\vb{z}}=\vb{F}_{12}+\vb{F}_{21}\ \checkmark \]
+<b>해석:</b> 두 입자의 역학적 운동량 증가분이 정확히 장의 운동량 감소분과 같다. 제3법칙이 "깨지는" 것이 아니라, 전자기장이 제3의 참여자로서 운동량을 주고받는 것이다.
+<div class="alabel">감점 포인트</div>
+(c)에서 자기장이 두 개 다 있다고 생각해 \(\vb{E}_2\times\vb{B}_1\) 항을 살려두는 것 — \(q_1\)이 정지해 있으므로 \(\vb{B}_1=0\).</div><!--/sol-->

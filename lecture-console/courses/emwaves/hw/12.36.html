@@ -1,0 +1,24 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>왜 광자 1개는 불가능한가:</b> 계 전체의 4-운동량은 시간꼴(질량 있는 두 입자의 합, \(-P^\mu P_\mu=M_\text{inv}^{2}c^{2}\gt0\))이지만, 단일 광자의 4-운동량은 광꼴(\(P^\mu P_\mu=0\))이다. 불변량이 다르므로 변환이 불가능하다. 직관적으로는 중심운동량계에서 총운동량이 0인데, 광자 하나는 \(E=|p|c\)라서 \(p=0\)이면 \(E=0\)이어야 한다 — 에너지 보존과 모순.
+\[ \boxed{\text{광자 1개로는 에너지·운동량을 동시에 보존할 수 없다}} \]</p>
+
+<p><b>에너지 계산.</b> \(E_e=\sqrt{p_e^{2}c^{2}+m^{2}c^{4}}\). 전체 4-운동량
+\[ P_\text{tot}^{\mu}=\Bigl(\frac{E_e+mc^{2}}{c},\ p_e,0,0\Bigr). \]
+광자 1(각도 \(\theta=60^{\circ}\), 에너지 \(E_1\))의 4-운동량 \(P_1^\mu=\bigl(\frac{E_1}{c},\frac{E_1}{c}\cos\theta,\frac{E_1}{c}\sin\theta,0\bigr)\).
+남은 광자 2는 \(P_2=P_\text{tot}-P_1\)이고, 광자이므로 \(P_2^{\mu}P_{2\mu}=0\). 따라서
+\[ P_\text{tot}^{\mu}P_{\text{tot}\,\mu}-2P_\text{tot}^{\mu}P_{1\mu}=0. \]
+
+<p>각 항을 계산하면 (\(E_e^2=p_e^2c^2+m^2c^4\) 사용)
+\[ P_\text{tot}^{\mu}P_{\text{tot}\,\mu}=-\frac{(E_e+mc^{2})^{2}}{c^{2}}+p_e^{2}=-2m(E_e+mc^{2}), \]
+\[ P_\text{tot}^{\mu}P_{1\mu}=-\frac{(E_e+mc^{2})E_1}{c^{2}}+\frac{p_eE_1\cos\theta}{c}. \]
+대입:
+\[ -2m(E_e+mc^{2})+\frac{2E_1(E_e+mc^{2})}{c^{2}}-\frac{2p_eE_1\cos\theta}{c}=0, \]
+\[ E_1\Bigl[(E_e+mc^{2})-p_ec\cos\theta\Bigr]=mc^{2}(E_e+mc^{2}). \]
+\(\cos60^{\circ}=\frac12\)이므로
+\[ \boxed{E_1=\frac{mc^{2}\bigl(E_e+mc^{2}\bigr)}{E_e+mc^{2}-\tfrac12 p_ec},\qquad E_e=\sqrt{p_e^{2}c^{2}+m^{2}c^{4}}} \]</p>
+
+<p>검산: \(p_e\to0\)이면 \(E_e\to mc^{2}\)이고 \(E_1\to mc^{2}\) — 정지 상태의 쌍소멸에서 각 광자가 \(mc^{2}=511\,\text{keV}\)를 갖는 잘 알려진 결과와 일치(PET 원리). 나머지 광자의 에너지는 \(E_2=E_e+mc^{2}-E_1\).</p>
+
+<div class="alabel">감점 포인트</div>
+두 번째 광자의 각도 \(\phi\)를 미지수로 남긴 채 세 방정식을 힘겹게 푸는 것. \(P_2^{\mu}P_{2\mu}=0\)을 이용해 <b>모르는 광자를 통째로 소거</b>하는 것이 표준 기법이며, 컴프턴 산란(예제 12.9)에도 똑같이 쓰인다.</div><!--/sol-->

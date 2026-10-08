@@ -1,0 +1,13 @@
+<div class="exq"><b>상황.</b> 구슬 3개인 loaded string(\(n=3\)). \(t=0\)에 가운데 구슬만 \(a\)만큼 당겼다가 정지 상태에서 놓는다. 이후 운동.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>이산 사인 변환으로 \(\mu_r\).</div>
+<ol>
+<li>초기 \(q_2(0)=a\), \(q_1(0)=q_3(0)=0\), 속도 모두 0 → \(\nu_r=0\).</li>
+<li>\(\mu_r=\frac{2}{n+1}\sum_jq_j(0)\sin\frac{jr\pi}{4}=\frac12a\sin\frac{r\pi}2\): \(\mu_1=\frac a2\), \(\mu_2=0\), \(\mu_3=-\frac a2\).</li>
+<li>\(\sin\frac{jr\pi}4\) 표: \(r=1\): \((\frac{\sqrt2}2,1,\frac{\sqrt2}2)\), \(r=3\): \((\frac{\sqrt2}2,-1,\frac{\sqrt2}2)\).</li>
+<li>\(q_j(t)=\sum_r\mu_r\sin\frac{jr\pi}4\cos\omega_rt\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ q_1=q_3=\frac{\sqrt2}{4}a(\cos\omega_1t-\cos\omega_3t),\qquad q_2=\frac a2(\cos\omega_1t+\cos\omega_3t)\ } \]
+<p class="note">\(\omega_r=2\sqrt{\tau/md}\sin(r\pi/8)\). <b>검산</b> ① \(t=0\): \(q_1=0\), \(q_2=a\) ✓. ② 모드 2(\((1,0,-1)\))는 가운데가 마디라 가운데를 당겨서는 들뜨지 않는다 ✓. ③ 대칭 초기조건 → \(q_1=q_3\) 유지 ✓.</p></div>
+<div class="qz" data-q="ex12.7-a"><div class="qq"><b>+α</b> 이번엔 구슬 1만 \(a\) 당겼다 놓는다. \(\mu_r\)과 \(q_3(t)\)를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\mu_r=\frac12a\sin\frac{r\pi}4\): \(\mu_1=\frac{\sqrt2}4a\), \(\mu_2=\frac a2\), \(\mu_3=\frac{\sqrt2}4a\). \(q_3=\sum\mu_r\sin\frac{3r\pi}4\cos\omega_rt=\frac a4\cos\omega_1t-\frac a2\cos\omega_2t+\frac a4\cos\omega_3t\). 검산 \(t=0\): \(\frac14-\frac12+\frac14=0\) ✓.</p></div></div>
+<div class="qz" data-q="ex12.7-b"><div class="qq"><b>+α</b> 원래 예제에서 가운데 구슬에 초기 <b>속도</b> \(v_0\)를 주는 경우(변위 0)의 \(q_2(t)\)는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\nu_r=-\frac{2}{4\omega_r}v_0\sin\frac{r\pi}2\): \(\nu_1=-\frac{v_0}{2\omega_1}\), \(\nu_3=\frac{v_0}{2\omega_3}\). \(q_2=\sum_r\sin\frac{2r\pi}4(-\nu_r\sin\omega_rt)=\frac{v_0}{2\omega_1}\sin\omega_1t+\frac{v_0}{2\omega_3}\sin\omega_3t\). 검산: \(\dot q_2(0)=\frac{v_0}2+\frac{v_0}2=v_0\) ✓.</p></div></div>

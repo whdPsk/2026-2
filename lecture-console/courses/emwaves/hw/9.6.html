@@ -1,0 +1,16 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<b>(a)</b> 매듭에 뉴턴 2법칙. 좌우 줄이 매듭에 주는 횡방향 힘은 \(T\partial_z f|_{0^+}-T\partial_z f|_{0^-}\)이므로
+\[\boxed{\;m\left.\frac{\partial^2 f}{\partial t^2}\right|_{z=0}=T\left(\left.\frac{\partial f}{\partial z}\right|_{0^+}-\left.\frac{\partial f}{\partial z}\right|_{0^-}\right)\;}\]
+(변위 연속 \(f(0^-,t)=f(0^+,t)\)는 그대로 유지.) \(m\to0\)이면 기울기 연속으로 환원.<br>
+<b>(b)</b> 줄 2가 질량 0이면 어느 부분에도 알짜 힘이 있을 수 없으므로 직선이어야 하고, \(z\to\infty\)에서 0이려면 \(\partial_z f|_{0^+}=0\). 따라서
+\[-m\omega^2(\tilde A_I+\tilde A_R)=-Tik_1(\tilde A_I-\tilde A_R),\qquad Tk_1=\mu_1v_1\omega .\]
+정리하면 \(m\omega(\tilde A_I+\tilde A_R)=i\mu_1v_1(\tilde A_I-\tilde A_R)\), 즉
+\[\frac{\tilde A_R}{\tilde A_I}=\frac{i\mu_1v_1-m\omega}{i\mu_1v_1+m\omega}.\]
+분자·분모의 크기가 같으므로 \(|A_R|=A_I\)(완전반사, 에너지는 줄 2로 전달되지 않음). \(\varphi\equiv\tan^{-1}\!\frac{m\omega}{\mu_1v_1}\)로 두면
+\[\boxed{A_R=A_I,\qquad \delta_R=2\varphi=2\tan^{-1}\!\frac{m\omega}{\mu_1v_1}}\]
+투과(=매듭과 함께 통째로 움직이는 직선 줄)의 진폭은 \(\tilde A_T=\tilde A_I+\tilde A_R=\tilde A_I\frac{2i\mu_1v_1}{i\mu_1v_1+m\omega}\):
+\[\boxed{A_T=2A_I\cos\varphi,\qquad \delta_T=\varphi}\]
+검산: \(m\to0\) → \(\varphi\to0\), \(A_T=2A_I\), \(\delta_R=0\) (자유단, 변위 두 배). \(m\to\infty\) → \(A_T\to0\), \(\delta_R\to\pi\) (고정단).
+<div class="alabel">감점 포인트</div>
+"질량 없는 줄 = 아무 일도 안 일어남"이 아니라 \(\partial_z f=0\)(자유단)이라는 점. 그리고 \(|A_R|=A_I\)이지만 위상이 \(0\)이 아니라는 것이 핵심.</div><!--/sol-->

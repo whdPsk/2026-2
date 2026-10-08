@@ -1,0 +1,46 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> CO₂(O=C=O, 일직선)는 원자 3개 → 자유도 9. 그중 병진 3, 회전 2(일직선 분자는 축 둘레 회전이 의미 없음) → 진동 모드 몇 개? 그중 원자가 줄을 따라 움직이는 종진동, 줄에 수직으로 움직이는 횡진동은 각각 몇 개일까? 그리고 적외선을 흡수·방출하려면 진동이 쌍극자 모멘트를 바꿔야 하는데, 가운데 C가 가만히 있고 두 O가 대칭으로 움직이는 모드는 어떨까?</div>
+
+<h4>12.7 분자 진동 <span class="en">molecular vibrations</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">정의</span>진동 자유도 세기</div>
+<ol>
+<li>원자 \(n\)개: 자유도 \(3n\) = 병진 3 + 회전 3 + 진동 \(3n-6\). 일직선 분자: 회전 2 → 진동 \(3n-5\).</li>
+<li>일직선 분자의 종진동: \(n\)개 좌표 − 병진 1 = \(n-1\). 횡진동: \((3n-5)-(n-1)=2n-4\)개, 서로 수직한 두 방향이 같은 진동수(축퇴)이므로 서로 다른 진동수는 \(n-2\)개.</li>
+<li>CO₂ (\(n=3\)): 진동 4 = 종 2 + 횡 2(축퇴된 한 쌍).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>CO₂ 종진동 — Example 12.5 <b>(필수)</b></div>
+<ol>
+<li>변위 \(x_1,x_2,x_3\) (O, C, O), 질량 \(m,M,m\), 결합 용수철 \(\kappa\). CM 고정으로 병진 제거: \(m(x_1+x_3)+Mx_2=0\) → \(x_2=-\frac mM(x_1+x_3)\).</li>
+<li>\(T=\tfrac12m(\dot x_1^2+\dot x_3^2)+\tfrac12\frac{m^2}{M}(\dot x_1+\dot x_3)^2\) — \(\dot x_1\dot x_3\) 동적 결합.</li>
+<li>좌표 변환 \(q_1=x_1+x_3\), \(q_2=x_3-x_1\)로 동적 결합 제거:
+\[ T=\frac{m(M+2m)}{4M}\dot q_1^2+\frac m4\dot q_2^2 . \]</li>
+<li>\(U=\tfrac12\kappa(x_2-x_1)^2+\tfrac12\kappa(x_3-x_2)^2\)를 같은 변수로 정리하면
+\[ U=\frac\kappa4\left(\frac{2m+M}{M}\right)^2q_1^2+\frac\kappa4q_2^2 . \]</li>
+<li>둘 다 대각 → \(q_1,q_2\)가 곧 정규 좌표:
+\[ \boxed{\ \omega_1^2=\frac{\kappa(2m+M)}{mM},\qquad \omega_2^2=\frac{\kappa}{m}\ } \]
+모드 1(\(q_2=0\), \(x_1=x_3\)): 두 O가 같은 방향, C가 반대(비대칭 신축). 모드 2(\(q_1=0\), \(x_3=-x_1\), \(x_2=0\)): C 정지, O 대칭 신축.</li>
+<li>검산: 비 \(\omega_1/\omega_2=\sqrt{1+2m/M}\). CO₂: \(\sqrt{1+32/12}=1.91\) (실측 2349/1388 cm⁻¹ = 1.69 — 단순 용수철 모형의 한계).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>CO₂ 횡진동(굽힘) — 교재 식 (12.106)–(12.111)</div>
+<ol>
+<li>회전을 제거하면 굽힘 모드는 두 O가 같은 쪽(\(y_1=y_3\)), C가 반대쪽. CM 조건 \(y_2=-\frac mM(y_1+y_3)\).</li>
+<li>굽힘각 \(\alpha=\frac{(y_1-y_2)+(y_3-y_2)}{b}=\frac{2y_1(2m+M)}{bM}\).</li>
+<li>\(U=\tfrac12\kappa_\delta(b\alpha)^2\) (직선에서 벗어난 정도에 비례하는 복원력 가정), \(T=\frac{mM b^2}{4(2m+M)}\dot\alpha^2\).</li>
+<li>\[ \omega_3^2=\frac{2\kappa_\delta(2m+M)}{mM} . \]</li>
+<li><b>적외선 활성</b>: 모드 1(비대칭 신축)과 모드 3(굽힘)은 전기 중심(O⁻·C⁺⁺)이 CM에서 벗어나 쌍극자가 진동 → 복사. 모드 2(대칭 신축)는 쌍극자 0 → 적외선 비활성(Raman 활성). 온실효과를 만드는 것은 1, 3번 모드.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 선형 3원자 분자 (O–C–O)</div>
+\[ \omega_{\rm asym}^2=\frac{\kappa(2m+M)}{mM},\quad \omega_{\rm sym}^2=\frac\kappa m,\quad \omega_{\rm bend}^2=\frac{2\kappa_\delta(2m+M)}{mM} \]
+<p class="note">진동 자유도 \(3n-6\) (일직선 \(3n-5\)). 요령: CM 고정으로 0 모드 제거 → 대칭/반대칭 조합으로 동적 결합 제거.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u30-1"><div class="qq">CO₂ 종진동을 CM 고정 없이 \(3\times3\) 영년방정식으로 풀어 세 진동수(하나는 0)를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(A=\kappa\begin{pmatrix}1&-1&0\-1&2&-1\0&-1&1\end{pmatrix}\), \(m=\mathrm{diag}(m,M,m)\). 대칭 (1,0,−1): \(\kappa-m\omega^2=0\) → \(\omega^2=\kappa/m\). 병진 (1,1,1): \(\omega=0\). 나머지는 대각합: \(\sum\omega^2=\mathrm{tr}(m^{-1}A)=\frac{2\kappa}m+\frac{2\kappa}M\) → \(\omega^2=\frac{2\kappa}{m}+\frac{2\kappa}M-\frac\kappa m=\frac{\kappa(2m+M)}{mM}\) ✓.</p></div></div>
+
+<div class="qz" data-q="u30-2"><div class="qq">H₂O(굽은 3원자 분자)의 진동 모드 수는? CO₂와 다른 이유는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(3\cdot3-6=3\) (대칭 신축, 비대칭 신축, 굽힘). 일직선이 아니라 회전 자유도가 3개이기 때문에 CO₂(4개)보다 하나 적다.</p></div></div>
+
+<div class="qz" data-q="u30-3"><div class="qq">\(q_1=x_1+x_3\), \(q_2=x_3-x_1\) 변환 후 \(T\)의 계수 \(\frac{m(M+2m)}{4M}\)를 직접 계산하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(x_1=\frac{q_1-q_2}2\), \(x_3=\frac{q_1+q_2}2\): \(\dot x_1^2+\dot x_3^2=\frac{\dot q_1^2+\dot q_2^2}{2}\). \(\dot x_2=-\frac mM\dot q_1\). \(T=\frac m4(\dot q_1^2+\dot q_2^2)+\frac{m^2}{2M}\dot q_1^2=\frac{m(M+2m)}{4M}\dot q_1^2+\frac m4\dot q_2^2\) ✓.</p></div></div>

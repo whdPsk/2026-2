@@ -1,0 +1,22 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+도선을 \(z\)축, 관측점을 거리 \(s\). \(\rr=\sqrt{s^2+z^2}\), \(t_r=t-\rr/c\). 신호가 도달한 부분만 기여:
+\(|z|\le Z\equiv\sqrt{c^2t^2-s^2}\).
+
+<b>(a) \(I=kt\):</b>
+\[ \vb{A}=\frac{\muz\hat{\vb{z}}}{4\pi}\cdot 2\!\int_0^{Z}\frac{k\left(t-\frac{\sqrt{s^2+z^2}}{c}\right)}{\sqrt{s^2+z^2}}dz
+=\frac{\muz k}{2\pi}\left[t\ln\!\frac{ct+Z}{s}-\frac{Z}{c}\right]\hat{\vb{z}} . \]
+\(\dot Z=c^2t/Z\)이고 \(\frac{d}{dt}\ln(ct+Z)=\frac{c+c^2t/Z}{ct+Z}=\frac{c}{Z}\)이므로
+\[ \frac{\partial \vb{A}}{\partial t}=\frac{\muz k}{2\pi}\left[\ln\frac{ct+Z}{s}+\frac{ct}{Z}-\frac{ct}{Z}\right]\hat{\vb{z}}
+\ \Longrightarrow\ \boxed{\vb{E}=-\frac{\muz k}{2\pi}\ln\!\left[\frac{ct+\sqrt{c^2t^2-s^2}}{s}\right]\hat{\vb{z}}} \]
+\(\vb{B}=-\dfrac{\partial A_z}{\partial s}\hat{\boldsymbol\varphi}\)를 계산하면 \((ct+Z)(ct-Z)=s^2\)을 이용한 정리 끝에 깨끗하게
+\[ \boxed{\vb{B}=\frac{\muz k}{2\pi c\,s}\sqrt{c^2t^2-s^2}\;\hat{\boldsymbol\varphi}} \]
+\(t\to\infty\)에서 \(\vb{B}\to\muz kt/2\pi s=\muz I(t)/2\pi s\) — 준정적 극한 회복 ✓.
+
+<b>(b) \(I=q_0\delta(t)\):</b> \(u=\sqrt{s^2+z^2}\)로 치환(\(dz=u\,du/\sqrt{u^2-s^2}\), \(\pm z\) 두 배):
+\[ \vb{A}=\frac{\muz q_0\hat{\vb{z}}}{2\pi}\int_s^\infty\frac{\delta(t-u/c)}{\sqrt{u^2-s^2}}du
+=\boxed{\frac{\muz q_0c}{2\pi\sqrt{c^2t^2-s^2}}\hat{\vb{z}}}\quad(ct&gt;s) \]
+\[ \vb{E}=-\frac{\partial\vb{A}}{\partial t}=\boxed{\frac{\muz q_0c^3t}{2\pi(c^2t^2-s^2)^{3/2}}\hat{\vb{z}}},\qquad
+\vb{B}=-\frac{\partial A_z}{\partial s}\hat{\boldsymbol\varphi}=\boxed{-\frac{\muz q_0 c\,s}{2\pi(c^2t^2-s^2)^{3/2}}\hat{\boldsymbol\varphi}} \]
+<div class="alabel">감점 포인트</div>
+적분 상한을 \(\infty\)로 두는 실수 — \(t_r&lt;0\)인 부분은 전류가 아직 0이므로 반드시 \(|z|\le\sqrt{c^2t^2-s^2}\)로 잘라야 한다.</div><!--/sol-->

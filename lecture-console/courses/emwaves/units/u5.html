@@ -1,0 +1,123 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 팽팽한 줄을 한 번 튕기면 그 모양이 흐트러지지 않고 옆으로 밀려간다. 이 "모양이 유지된 채 등속으로 이동"이라는 물리적 사실을 수식 한 줄로 옮기면 무엇이 될까? 그리고 그 수식이 만족하는 미분방정식은 왜 2계여야 하는지, 1계로는 왜 안 되는지 생각해 보자. 마지막으로, 파동방정식의 해가 무한히 많은데도 우리가 사인파 하나만 공부해도 되는 이유를 미리 추측해 보라.</div>
+
+<h4>9.1.1 파동방정식 <span class="en">the wave equation</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>줄의 Newton 제2법칙에서 파동방정식 뽑아내기</div>
+<ol>
+<li>장력 \(T\), 선질량밀도 \(\mu\)인 줄을 생각한다. 줄의 평형 위치에서의 횡방향 변위를 \(f(z,t)\)라 하자. 구간 \([z,\;z+\Delta z]\)에 작용하는 <b>횡방향</b> 알짜힘은 양끝에서 장력의 횡성분 차이뿐이다:
+\[ \Delta F = T\sin\theta' - T\sin\theta \]
+여기서 \(\theta',\theta\)는 각각 \(z+\Delta z\), \(z\)에서 줄이 \(z\)축과 이루는 각이다. 장력의 크기가 양쪽에서 같다고 두는 것이 핵심 가정이며, 이는 변형이 작아 줄이 늘어나지 않는다는 뜻이다.</li>
+<li>진폭이 작다는 가정을 넣는다. \(\theta \ll 1\)이면 \(\sin\theta \approx \tan\theta = \partial f/\partial z\)이다. 이 <b>선형화</b>가 뒤에 나올 모든 중첩원리의 뿌리다:
+\[ \Delta F \approx T\left(\left.\frac{\partial f}{\partial z}\right|_{z+\Delta z} - \left.\frac{\partial f}{\partial z}\right|_{z}\right) \]</li>
+<li>괄호 안은 도함수의 차이이므로 \(\Delta z\)에 대해 1차로 전개한다:
+\[ \Delta F \approx T\,\frac{\partial^2 f}{\partial z^2}\,\Delta z \]
+즉 <b>휘어진 정도(곡률)가 복원력을 만든다</b>. 직선인 부분에는 알짜힘이 없다.</li>
+<li>같은 구간의 질량은 \(\mu\,\Delta z\)이므로 Newton 제2법칙은
+\[ T\,\frac{\partial^2 f}{\partial z^2}\Delta z = \mu\,\Delta z\,\frac{\partial^2 f}{\partial t^2} \]</li>
+<li>\(\Delta z\)를 소거하면 (Griffiths Eq. 9.2)
+\[ \frac{\partial^2 f}{\partial z^2} = \frac{\mu}{T}\frac{\partial^2 f}{\partial t^2} \equiv \frac{1}{v^2}\frac{\partial^2 f}{\partial t^2},\qquad v=\sqrt{\frac{T}{\mu}} \]
+\(v\)가 속도의 차원을 갖는다는 것은 아직 "정의"일 뿐이고, 실제로 전파 속도라는 사실은 유도 2에서 증명된다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>\(g(z-vt)\)가 해임을 증명하고 d'Alembert 일반해에 이르기</div>
+<ol>
+<li>"모양이 안 변하고 속도 \(v\)로 오른쪽으로 간다"는 진술을 수식으로 옮기면, 시각 \(t\)에 위치 \(z\)에서의 변위는 시각 \(0\)에 위치 \(z-vt\)에서의 변위와 같다:
+\[ f(z,t) = f(z-vt,0) \equiv g(z-vt) \]
+즉 \(z\)와 \(t\)가 <b>오직 \(u \equiv z-vt\)라는 조합으로만</b> 들어간다. 이것이 진행파의 정의다.</li>
+<li>연쇄법칙으로 미분한다. \(\partial u/\partial z = 1\), \(\partial u/\partial t = -v\)이므로
+\[ \frac{\partial f}{\partial z}=\frac{\dd g}{\dd u},\qquad \frac{\partial f}{\partial t}=-v\frac{\dd g}{\dd u} \]</li>
+<li>한 번 더 미분하면
+\[ \frac{\partial^2 f}{\partial z^2}=\frac{\dd^2 g}{\dd u^2},\qquad \frac{\partial^2 f}{\partial t^2}=v^2\frac{\dd^2 g}{\dd u^2} \]
+따라서 임의의 두 번 미분 가능한 \(g\)에 대해 파동방정식이 자동으로 만족된다. <b>이것이 \(v\)를 전파 속도라고 부르는 근거다.</b></li>
+<li>파동방정식에는 \(v^2\)만 들어가므로 \(v \to -v\)로 바꾼 \(h(z+vt)\)도 해다. 방정식이 선형이므로 두 해의 합도 해다:
+\[ \boxed{\,f(z,t)=g(z-vt)+h(z+vt)\,} \]
+이것이 d'Alembert 해이며, 실제로 <b>모든</b> 해가 이 꼴로 쓰인다. \(u=z-vt,\;w=z+vt\)로 변수변환하면 방정식이 \(\partial^2 f/\partial u\,\partial w = 0\)이 되어 곧바로 확인된다.</li>
+<li>주의할 점: 상미분방정식과 달리 2계 편미분방정식의 해공간은 유한 차원이 아니다. 임의 함수 두 개(\(g,h\))만큼의 자유도가 있고, 이는 초기조건 \(f(z,0)\)과 \(\dot f(z,0)\) 두 개의 함수로 고정된다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 1차원 파동방정식과 그 일반해</div>
+\[ \frac{\partial^2 f}{\partial z^2}=\frac{1}{v^2}\frac{\partial^2 f}{\partial t^2},\qquad f=g(z-vt)+h(z+vt),\qquad v_{\text{string}}=\sqrt{T/\mu} \]
+<p class="note">"복원력을 주는 양"과 "관성을 주는 양"의 비의 제곱근이 속도가 된다는 구조는 이후 전자기파에서 \(v = 1/\sqrt{\epsilon\mu}\)로 그대로 반복된다. 줄에서는 \(T \leftrightarrow 1/\eps\), \(\mu \leftrightarrow \mu\)에 대응하는 셈이다.</p></div>
+
+<h4>9.1.2 사인파와 복소 표기 <span class="en">sinusoidal waves and complex notation</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>사인파 용어 정리와 \(\omega=kv\)</div>
+<ol>
+<li>가장 다루기 쉬운 파형은
+\[ f(z,t)=A\cos[k(z-vt)+\delta] \]
+\(A\)는 진폭(양수), 코사인의 인수 전체가 위상(phase), \(\delta\)는 위상상수다.</li>
+<li>\(t=0\)에서 위상이 0이 되는 점은 \(z=-\delta/k\)가 아니라 \(z = vt - \delta/k\)이다. 즉 \(\delta/k\)는 파형 전체가 <b>뒤로 밀린 거리</b>로 해석된다.</li>
+<li>\(z\)가 \(2\pi/k\)만큼 늘면 코사인이 한 주기를 돈다. 따라서 파장은
+\[ \lambda = \frac{2\pi}{k} \]
+\(k\)를 파수(wave number)라 부른다.</li>
+<li>고정된 \(z\)에서 시간이 \(2\pi/(kv)\)만큼 흐르면 한 주기다. 따라서
+\[ T=\frac{2\pi}{kv},\qquad \nu=\frac1T=\frac{v}{\lambda},\qquad \omega \equiv 2\pi\nu = kv \]
+\(\boxed{\omega = kv}\)는 이 장 전체를 관통하는 <b>분산관계(dispersion relation)</b>다. 매질이 분산성이면 \(v\)가 \(\omega\)에 의존하게 되고(§9.4.3), 도파관에서는 아예 \(\omega^2 = (ck)^2+\omega_{mn}^2\)로 바뀐다(§9.5.2).</li>
+<li>\(\omega\)로 다시 쓰면 오른쪽 진행파는 \(f=A\cos(kz-\omega t+\delta)\), 왼쪽 진행파는 \(f=A\cos(kz+\omega t-\delta)\)이다. 코사인이 우함수임을 쓰면 후자는 \(A\cos(-kz-\omega t+\delta)\)이므로, <b>\(k\)의 부호를 뒤집는 것</b>과 진행 방향을 뒤집는 것이 같은 조작임을 알 수 있다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>복소 파동함수 — 왜 쓰고, 어디서 깨지는가 (Ex. 9.1)</div>
+<ol>
+<li>Euler 공식 \(\ee^{\ii\theta}=\cos\theta+\ii\sin\theta\)를 쓰면
+\[ f(z,t)=\mathrm{Re}\!\left[A\ee^{\ii(kz-\omega t+\delta)}\right] \]</li>
+<li>진폭과 위상상수를 한 덩어리로 묶어 <b>복소 진폭</b> \(\tilde A \equiv A\ee^{\ii\delta}\)를 정의하고, 복소 파동함수를
+\[ \tilde f(z,t) \equiv \tilde A\,\ee^{\ii(kz-\omega t)},\qquad f=\mathrm{Re}[\tilde f] \]
+로 둔다. 지수함수는 미분해도 형태가 유지되므로 삼각함수 항등식 지옥을 피할 수 있다.</li>
+<li><b>Example 9.1</b>: 같은 \(k,\omega\)를 가진 두 사인파를 더할 때, \(\mathrm{Re}\)는 선형연산이므로
+\[ \tilde f_3=\tilde f_1+\tilde f_2 \;\Longrightarrow\; \tilde A_3=\tilde A_1+\tilde A_2 \quad\text{즉}\quad A_3\ee^{\ii\delta_3}=A_1\ee^{\ii\delta_1}+A_2\ee^{\ii\delta_2} \]
+복소 진폭을 벡터처럼 더하기만 하면 끝난다. 합성파의 \(k,\omega\)는 변하지 않는다.</li>
+<li>그러나 곱셈에서는 무너진다:
+\[ \mathrm{Re}(\tilde f_1\tilde f_2)\neq \mathrm{Re}(\tilde f_1)\,\mathrm{Re}(\tilde f_2) \]
+에너지밀도 \(u\), Poynting 벡터 \(\vb{S}\)처럼 <b>장에 대해 2차인 양</b>은 복소 표기를 그대로 대입하면 틀린다. 반드시 실수 장으로 돌아가거나, 시간평균에 한해 Prob. 9.12의 공식
+\[ \langle fg\rangle=\tfrac12\,\mathrm{Re}(\tilde f\,\tilde g^{*}) \]
+를 써야 한다. 이 함정은 U8에서 다시 만난다.</li>
+<li>마지막으로, 임의의 파동은 사인파의 선형결합으로 쓸 수 있다:
+\[ \tilde f(z,t)=\int_{-\infty}^{\infty}\tilde A(k)\,\ee^{\ii(kz-\omega t)}\dd k \]
+(\(k\)가 음수까지 달리게 하여 양방향 진행파를 모두 포함). \(\tilde A(k)\)는 Fourier 역변환으로 초기조건에서 얻는다(Prob. 9.34). <b>그래서 사인파 하나만 완전히 이해하면 충분하다.</b></li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 사인파의 표준형과 관계식</div>
+\[ \tilde f(z,t)=\tilde A\,\ee^{\ii(kz-\omega t)},\qquad \tilde A = A\ee^{\ii\delta},\qquad \lambda=\frac{2\pi}{k},\quad T=\frac{2\pi}{\omega},\quad \boxed{\omega=kv} \]
+<p class="note">시험에서 \(\ee^{\ii(kz-\omega t)}\) 규약(Griffiths 규약)을 쓰는지 \(\ee^{\ii(\omega t-kz)}\)를 쓰는지에 따라 복소 굴절률·감쇠항의 부호가 통째로 뒤집힌다. Griffiths 규약에서는 감쇠가 \(\tilde k = k+\ii\kappa\)의 <b>양의</b> 허수부로 나타난다(U11).</p></div>
+
+<div class="callout"><b class="head">왜 사인파만 공부해도 되는가.</b> 파동방정식이 선형이기 때문이다. 선형이라는 것은 서로 다른 진동수 성분이 서로 간섭하지 않고 독립적으로 진화한다는 뜻이고, Fourier 분해가 그 독립 성분을 골라내는 도구다. 반대로 매질이 비선형이면(강한 레이저 속 결정 등) 진동수가 섞여 배진동수 발생 같은 현상이 생기고, 이 장의 논리는 통째로 무너진다. Griffiths가 각주에서 "선형 매질만 다룬다"고 계속 못 박는 이유가 이것이다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u5-1"><div class="qq">(참/거짓 + 증명 또는 반례) "\(f(z,t)=A\sin(bz)\cos(bvt)\)는 모양이 유지된 채 이동하지 않으므로 파동방정식의 해가 아니다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>거짓.</b> 두 진술을 분리해야 한다. (i) 이 함수는 진행파가 <b>아니다</b> — \(z\)와 \(t\)가 \(z\mp vt\) 조합으로 들어가 있지 않고, 마디(node)가 \(z=n\pi/b\)에 고정되어 있다. 이것이 정상파다. (ii) 그러나 파동방정식은 <b>만족한다</b>. 직접 미분하면
+\[ \frac{\partial^2 f}{\partial z^2}=-b^2 f,\qquad \frac{\partial^2 f}{\partial t^2}=-b^2v^2 f \;\Rightarrow\; \frac{\partial^2 f}{\partial z^2}=\frac{1}{v^2}\frac{\partial^2 f}{\partial t^2}\;\checkmark \]
+d'Alembert 형태로도 확인된다. 곱-합 공식을 쓰면
+\[ A\sin(bz)\cos(bvt)=\tfrac{A}{2}\sin[b(z-vt)]+\tfrac{A}{2}\sin[b(z+vt)] \]
+즉 <b>같은 진폭의 좌·우 진행파의 합</b>이다(Prob. 9.2). 교훈: "파동방정식의 해"와 "형태 불변 진행파"는 동치가 아니다. 후자가 전자에 포함되는 관계다.
+</div></div>
+
+<div class="qz" data-q="u5-2"><div class="qq">(차원·스케일링, 지수를 명시할 것) \(v=\sqrt{T/\mu}\)의 차원을 확인하고, \(T\)를 4배·\(\mu\)를 2배로 했을 때 고정된 \(\omega\)에서 \(\lambda\)가 몇 배가 되는지 지수로 답하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>차원:</b> \([T]=\mathrm{N}=\mathrm{kg\,m\,s^{-2}}\), \([\mu]=\mathrm{kg\,m^{-1}}\). 따라서
+\[ [T/\mu]=\mathrm{kg^{1}m^{1}s^{-2}}\cdot \mathrm{kg^{-1}m^{1}}=\mathrm{m^{2}s^{-2}} \]
+제곱근을 취하면 \(\mathrm{m\,s^{-1}}\) ✓.
+<b>스케일링:</b> \(v \propto T^{1/2}\mu^{-1/2}\). 따라서
+\[ \frac{v'}{v}=4^{1/2}\cdot 2^{-1/2}=\frac{2}{\sqrt2}=\sqrt2 \]
+\(\omega\)는 진동을 만드는 사람이 정하므로 고정이고, \(\omega=kv=2\pi v/\lambda\)에서 \(\lambda \propto v\). 그러므로 \(\lambda\)도 \(\sqrt2\approx1.41\)배가 된다. 진동수 \(\nu\)는 <b>변하지 않는다</b>. 이 "진동수는 경계에서 보존, 파장은 매질에 따라 변함"이라는 구조는 U6·U9·U10에서 그대로 반복된다.
+</div></div>
+
+<div class="qz" data-q="u5-3"><div class="qq">(Ex. 9.1 변형, 계산기 없이) 같은 \(k,\omega\)를 가진 두 파 \(A_1=3,\ \delta_1=0\)과 \(A_2=4,\ \delta_2=\pi/2\)를 더하라. 합성 진폭과 위상을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+복소 진폭을 그대로 더한다:
+\[ \tilde A_3=3\ee^{\ii 0}+4\ee^{\ii\pi/2}=3+4\ii \]
+따라서
+\[ A_3=|\tilde A_3|=\sqrt{3^2+4^2}=5,\qquad \delta_3=\arctan\frac{4}{3}\approx 53^\circ \]
+합성파는 \(f_3=5\cos(kz-\omega t+53^\circ)\). 주목할 점 두 가지. (i) 진폭이 단순히 \(3+4=7\)이 아니라 \(5\)인 것은 위상이 어긋났기 때문이다. (ii) 만약 \(\delta_2=\pi\)였다면 \(\tilde A_3=3-4=-1\), 즉 \(A_3=1,\ \delta_3=\pi\)로 <b>거의 상쇄</b>된다. 일반식은
+\[ A_3^2=A_1^2+A_2^2+2A_1A_2\cos(\delta_1-\delta_2) \]
+(Prob. 9.3) — 코사인 제2법칙과 같은 꼴이다.
+</div></div>
+
+<div class="qz" data-q="u5-4"><div class="qq">(개념) 왜 에너지밀도를 계산할 때 복소 파동함수를 그대로 제곱하면 안 되는가? 어떤 처방이 옳은가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+\(\mathrm{Re}\)는 <b>덧셈에 대해서만</b> 교환된다. \(\tilde f = A\ee^{\ii\theta}\)에 대해
+\[ \mathrm{Re}(\tilde f^2)=A^2\cos 2\theta,\qquad [\mathrm{Re}(\tilde f)]^2=A^2\cos^2\theta=\tfrac{A^2}{2}(1+\cos2\theta) \]
+두 값은 다르다. 특히 시간평균이 결정적으로 다르다: 앞의 것은 \(0\), 뒤의 것은 \(A^2/2\). 에너지·운동량·강도는 모두 장의 2차식이므로 이 차이가 곧바로 물리적 오류가 된다.
+<b>옳은 처방 두 가지.</b> (i) 실수 장으로 되돌아가 계산한다(가장 안전). (ii) <b>시간평균만</b> 필요할 때는 Prob. 9.12의 공식을 쓴다:
+\[ \langle fg\rangle=\tfrac12\mathrm{Re}(\tilde f\tilde g^{*}) \quad\Rightarrow\quad \langle \vb{S}\rangle=\frac{1}{2\muz}\mathrm{Re}(\tilde{\vb{E}}\times\tilde{\vb{B}}^{*}) \]
+단, 이 공식은 두 파의 \(k,\omega\)가 같을 때만 성립한다(진폭·위상은 달라도 무방).
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> 백지에서 줄의 파동방정식을 유도하고, 임의의 \(g(z-vt)\)가 해임을 증명하며, 복소 진폭으로 두 사인파를 합성할 수 있다.</div>

@@ -1,0 +1,13 @@
+<div class="exq"><b>상황.</b> 그림 14-5의 충돌: \(K\)의 A는 공을 \(+x_2\)로, \(K'\)(속도 \(v\))의 B는 \(-x_2'\)로 각각 고유 속력 \(u_0\)로 던져 탄성 충돌한다. 상대론적 운동량 \(\vb p=\gamma m\vb u\)를 쓰면 \(x_2\) 운동량이 보존됨을 보여라.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(K\)에서 B 공의 속력은 \(u_0\)가 아니다 — \(\gamma\)를 공 자신의 속력으로 계산.</div>
+<ol>
+<li>A 공: \(p_{A2}=\frac{mu_0}{\sqrt{1-u_0^2/c^2}}\), \(\Delta p_{A2}=-\frac{2mu_0}{\sqrt{1-u_0^2/c^2}}\).</li>
+<li>B 공의 \(K\) 속도: \(u_{B1}=v\), \(u_{B2}=-u_0\sqrt{1-v^2/c^2}\). 속력 \(u_B^2=v^2+u_0^2(1-v^2/c^2)\).</li>
+<li>\(1-u_B^2/c^2=(1-v^2/c^2)(1-u_0^2/c^2)\) (전개해서 확인).</li>
+<li>\(p_{B2}=\frac{-mu_0\sqrt{1-v^2/c^2}}{\sqrt{(1-v^2/c^2)(1-u_0^2/c^2)}}=\frac{-mu_0}{\sqrt{1-u_0^2/c^2}}\), \(\Delta p_{B2}=+\frac{2mu_0}{\sqrt{1-u_0^2/c^2}}\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \Delta p_{A2}+\Delta p_{B2}=0\ \checkmark \]
+<p class="note">3단계의 인수분해가 핵심: 횡속도의 \(\sqrt{1-v^2/c^2}\) 축소를 \(\gamma_{u_B}\)가 정확히 보상한다. <b>검산</b>: \(v\to0\)이면 대칭 충돌로 자명 ✓. 고전 운동량으로는 \(-2mu_0+2mu_0\sqrt{1-v^2/c^2}\ne0\).</p></div>
+<div class="qz" data-q="ex14.6-a"><div class="qq"><b>+α</b> 3단계 \(1-u_B^2/c^2=(1-\beta^2)(1-u_0^2/c^2)\)를 전개로 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(1-\frac{v^2}{c^2}-\frac{u_0^2}{c^2}+\frac{u_0^2v^2}{c^4}=(1-\frac{v^2}{c^2})(1-\frac{u_0^2}{c^2})\) ✓.</p></div></div>
+<div class="qz" data-q="ex14.6-b"><div class="qq"><b>+α</b> 이 충돌에서 \(x_1\) 운동량은 보존되는가? 에너지는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>각 공의 \(x_1\) 속도(A: 0, B: \(v\))와 속력은 탄성 충돌 전후 불변 → \(\gamma\)도 불변 → \(x_1\) 운동량과 에너지 \(\gamma mc^2\) 각각 보존 ✓(자명하게).</p></div></div>

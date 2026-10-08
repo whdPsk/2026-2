@@ -1,0 +1,18 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>\(\mathbf u=c\hat{\boldsymbol{\mathcal R}}-\mathbf v\), BAC-CAB로 \(\hat{\boldsymbol{\mathcal R}}\times(\mathbf u\times\mathbf a)=\mathbf u(\hat{\boldsymbol{\mathcal R}}\cdot\mathbf a)-\mathbf a(\hat{\boldsymbol{\mathcal R}}\cdot\mathbf u)\). 따라서</p>
+\[ |\hat{\boldsymbol{\mathcal R}}\times(\mathbf u\times\mathbf a)|^2=u^2(\hat{\boldsymbol{\mathcal R}}\cdot\mathbf a)^2+a^2(\hat{\boldsymbol{\mathcal R}}\cdot\mathbf u)^2-2(\hat{\boldsymbol{\mathcal R}}\cdot\mathbf a)(\hat{\boldsymbol{\mathcal R}}\cdot\mathbf u)(\mathbf u\cdot\mathbf a). \]
+<p>\(\mathbf v\perp\mathbf a\)이므로 \(\mathbf u\cdot\mathbf a=c(\hat{\boldsymbol{\mathcal R}}\cdot\mathbf a)\), \(u^2=c^2-2cv\cos\theta+v^2\), \(\hat{\boldsymbol{\mathcal R}}\cdot\mathbf u=c(1-\beta\cos\theta)\), \(\hat{\boldsymbol{\mathcal R}}\cdot\mathbf a=a\sin\theta\cos\varphi\). 정리하면 \((\hat{\boldsymbol{\mathcal R}}\cdot\mathbf a)^2\) 계수가 \(v^2-c^2\)로 뭉쳐져</p>
+\[ |\cdots|^2=a^2c^2\big[(1-\beta\cos\theta)^2-(1-\beta^2)\sin^2\theta\cos^2\varphi\big]. \]
+\[ \boxed{\;\frac{dP}{d\Omega}=\frac{\mu_0q^2a^2}{16\pi^2c}\frac{(1-\beta\cos\theta)^2-(1-\beta^2)\sin^2\theta\cos^2\varphi}{(1-\beta\cos\theta)^5}\;} \]
+<p><b>총 출력</b> — 두 항을 따로 적분한다. \(x=\cos\theta\):</p>
+\[ \int\frac{d\Omega}{(1-\beta\cos\theta)^3}=2\pi\int_{-1}^{1}\frac{dx}{(1-\beta x)^3}
+=\frac{\pi}{\beta}\Big[\frac1{(1-\beta)^2}-\frac1{(1+\beta)^2}\Big]=\frac{\pi}{\beta}\cdot\frac{4\beta}{(1-\beta^2)^2}=4\pi\gamma^4 . \]
+<p>둘째 항: \(\int_0^{2\pi}\cos^2\varphi\,d\varphi=\pi\)이고, Ex. 11.3에서 이미 \(\displaystyle\int_{-1}^{1}\frac{(1-x^2)}{(1-\beta x)^5}dx=\frac43(1-\beta^2)^{-3}=\frac43\gamma^6\)이므로</p>
+\[ -(1-\beta^2)\,\pi\cdot\frac43\gamma^6=-\frac{4\pi}{3}\gamma^4 . \]
+\[ P=\frac{\mu_0q^2a^2}{16\pi^2c}\Big(4\pi\gamma^4-\frac{4\pi}{3}\gamma^4\Big)=\frac{\mu_0q^2a^2}{16\pi^2c}\cdot\frac{8\pi}{3}\gamma^4
+=\boxed{\;\frac{\mu_0q^2a^2\gamma^4}{6\pi c}\;} \]
+<p><b>Liénard 확인</b>: \(P=\dfrac{\mu_0q^2\gamma^6}{6\pi c}\Big(a^2-\Big|\dfrac{\mathbf v\times\mathbf a}{c}\Big|^2\Big)\)에서 \(\mathbf v\perp\mathbf a\)이면 \(|\mathbf v\times\mathbf a|=va\)이므로 \(a^2(1-\beta^2)=a^2/\gamma^2\) → \(\mu_0q^2a^2\gamma^4/6\pi c\) ✓.</p>
+<p><b>고전 필수</b>: 원운동에 적용하면 이것이 <b>싱크로트론 복사</b>. \(\gamma^4\)(수직) vs \(\gamma^6\)(평행, bremsstrahlung) 차이를 반드시 기억할 것. 상대론적 전자에서는 복사가 전방 \(1/\gamma\) 원뿔로 좁아져 기관차 헤드라이트처럼 쓸고 간다.</p>
+<div class="alabel">감점 포인트</div>
+<p>\((1-\beta\cos\theta)^{-5}\) 적분에서 분자의 \((1-\beta\cos\theta)^2\)을 약분하지 않고 그냥 5제곱 적분표를 찾는 것 — 약분하면 지수가 3이 되어 훨씬 쉽다.</p></div><!--/sol-->

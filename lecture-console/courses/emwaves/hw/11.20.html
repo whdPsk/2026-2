@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a) 각 끝의 자기력을 더하기.</b> 아령의 두 끝은 각각 전하 \(q/2\)이므로 자기 자신에 대한 Abraham–Lorentz 힘은</p>
+\[ \frac{\mu_0(q/2)^2\dot a}{6\pi c}=\frac{\mu_0q^2\dot a}{24\pi c}\quad\text{(둘 합쳐 }\frac{\mu_0q^2\dot a}{12\pi c}). \]
+\[ F_{\rm rad}=\underbrace{\frac{\mu_0q^2\dot a}{12\pi c}}_{\rm int}+\underbrace{\frac{\mu_0q^2\dot a}{12\pi c}}_{\rm self}=\boxed{\;\frac{\mu_0q^2\dot a}{6\pi c}\;} \]
+<p><b>(b) 순환논법을 피한 방법.</b> \(F(q)\)를 전하 \(q\)에 대한 \(d\)-무관 자기력이라 하면</p>
+\[ F(q)=F^{\rm int}(q)+2F(q/2). \]
+<p>장이 \(q\)에 비례하고 힘이 \(qE\)이므로 \(F\propto q^2\), 따라서 \(F(q/2)=\tfrac14F(q)\):</p>
+\[ F(q)=F^{\rm int}(q)+\tfrac12F(q)\;\Longrightarrow\;F(q)=2F^{\rm int}(q)=\frac{\mu_0q^2\dot a}{6\pi c}\;\checkmark \]
+<p><b>(c) 전하를 길이 \(L\)의 띠로 펴기.</b> Eq. 11.99를 두 전하 \(q_1,q_2\)로 다시 쓰면(\(q_1=q_2=q/2\)일 때 \(\mu_0q^2\dot a/12\pi c\)가 나오도록)</p>
+\[ dF^{\rm int}=\frac{\mu_0\,q_1q_2\,\dot a}{3\pi c}\quad\Rightarrow\quad dF=\frac{\mu_0\lambda^2\dot a}{3\pi c}\,dy_1\,dy_2,\qquad \lambda=\frac qL . \]
+<p>핵심: 이 상호작용 힘은 <b>간격 \(d\)에 무관</b>하다. 서로 다른 쌍을 한 번씩만 세면 \(\iint_{y_1&lt;y_2}dy_1dy_2=L^2/2\):</p>
+\[ F=\frac{\mu_0\lambda^2\dot a}{3\pi c}\cdot\frac{L^2}{2}=\frac{\mu_0(\lambda L)^2\dot a}{6\pi c}=\boxed{\;\frac{\mu_0q^2\dot a}{6\pi c}\;}\;\checkmark \]
+<div class="alabel">감점 포인트</div>
+<p>(c)에서 같은 쌍을 두 번 세어 \(L^2\)을 쓰면 답이 2배가 된다. \(1/2\) 반드시 명시.</p></div><!--/sol-->

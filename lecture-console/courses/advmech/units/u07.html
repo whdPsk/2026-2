@@ -1,0 +1,80 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 똑같은 공 두 개가 정면충돌해 한 덩어리로 붙었다. 운동에너지의 몇 %가 사라질까? 한쪽이 정지해 있던 경우와 둘이 마주 달려온 경우 중 어느 쪽이 더 많이 잃을까? 그리고 CM계에서 보면 "잃을 수 있는 최대 에너지"는 무엇으로 정해질지 먼저 생각해 보라.</div>
+
+<h4>9.8 비탄성충돌 <span class="en">inelastic collisions</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">정의</span>Q값 — 강의 식 (9.47)</div>
+<ol>
+<li>충돌 전후 같은 입자들이라 하고 에너지 보존을
+\[ Q+\tfrac12m_1u_1^2+\tfrac12m_2u_2^2=\tfrac12m_1v_1^2+\tfrac12m_2v_2^2 \]
+로 쓴다. \(Q\)는 내부 에너지(질량에너지, 열, 들뜸)에서 운동에너지로 넘어온 양.</li>
+<li>\(Q=0\) 탄성 · \(Q&gt;0\) 발열(exoergic, 운동에너지 증가 — 폭발, 발열 핵반응) · \(Q&lt;0\) 흡열(endoergic, 운동에너지 감소 — 보통의 비탄성충돌).</li>
+<li>거시적 물체의 충돌은 모두 어느 정도 흡열이다. 특강의 RIXS는 광자가 물질에 에너지 ΔE를 남기는 \(Q&lt;0\) 산란.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>완전 비탄성충돌의 에너지 손실 = CM계 에너지 전부</div>
+<ol>
+<li>두 입자가 붙으면 최종 속도는 \(\vb V\)(운동량 보존). 최종 운동에너지 \(\tfrac12MV^2\).</li>
+<li>U4의 분해 \(T=\tfrac12MV^2+T_{\rm CM}\)을 초기 상태에 쓰면, 잃은 에너지는
+\[ -Q=T_{\rm init}-\tfrac12MV^2=T'_0=\tfrac12\mu|\vb u_1-\vb u_2|^2,\qquad \mu=\frac{m_1m_2}{m_1+m_2}. \]
+<b>잃을 수 있는 최대량이 곧 CM계 운동에너지</b>이고, 완전 비탄성충돌이 그 최대를 실현한다.</li>
+<li>예측의 답: 등질량, 한쪽 정지 → \(T'_0=\tfrac12T_0\) (50% 손실). 등질량이 같은 속력으로 마주 오면 \(\vb V=0\) → 100% 손실.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>반발계수(Newton의 규칙)와 최종 속도 — 강의 식 (9.48)</div>
+<ol>
+<li>정면충돌, 회전 없음. Newton은 상대속도의 비가 두 물체에 대해 거의 일정함을 실험으로 발견했다:
+\[ \epsilon=\frac{|v_2-v_1|}{|u_2-u_1|}. \]
+\(\epsilon=1\) 완전 탄성, \(0&lt;\epsilon&lt;1\) 비탄성, \(\epsilon=0\) 완전 비탄성(붙어서 같이 감). <b>9/23판 강의노트는 0과 1이 뒤바뀌어 있었으니 주의 (9/28판에서 수정).</b></li>
+<li>1차원에서 부호까지 쓰면 \(v_2-v_1=\epsilon(u_1-u_2)\). 운동량 \(m_1u_1+m_2u_2=m_1v_1+m_2v_2\)와 연립하면
+\[ v_1=\frac{m_1u_1+m_2u_2-\epsilon m_2(u_1-u_2)}{m_1+m_2},\qquad v_2=\frac{m_1u_1+m_2u_2+\epsilon m_1(u_1-u_2)}{m_1+m_2}. \]</li>
+<li>CM계에서 보면 간단하다: 충돌 전 상대속도가 \(-\epsilon\)배가 되어 나온다. 따라서 CM계 운동에너지가 \(\epsilon^2\)배:
+\[ T'_{\rm final}=\epsilon^2T'_0,\qquad Q=-(1-\epsilon^2)\,\tfrac12\mu(u_1-u_2)^2 . \]</li>
+<li><b>비스듬한 충돌 (교재 그림 9-18)</b>: Newton의 규칙은 접촉면의 <b>법선 성분</b>에만 적용. 매끄러운 면이면 접선 성분은 거의 변하지 않는다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>충격력과 충격량 — 강의 식 (9.49)–(9.50)</div>
+<ol>
+<li>충돌 중에도 \(\vb F=\od{}{t}(m\vb v)\)는 성립한다. 충돌 시간 \(\Delta t=t_2-t_1\)에 대해 적분하면
+\[ \vb J\equiv\int_{t_1}^{t_2}\vb F(t)\,\dd t=\Delta\vb p . \]
+(교재는 기호 \(\vb P\), 강의는 \(\vb J\).)</li>
+<li>충돌 중 운동량 변화를 충돌력과 기타 외력으로 나누면
+\[ \Delta\vb p=\int\vb F_{\rm coll}\,\dd t+\int\vb F_{\rm ext}\,\dd t . \]
+외력(중력 등)이 유한하면 둘째 항은 \(\sim F_{\rm ext}\Delta t\to0\). 충돌력은 \(\Delta t\to0\)에서도 적분이 유한하도록 커진다(이상적 충격 = 무한 힘 × 무한소 시간, δ함수).</li>
+<li><b>그래서 충돌 직전·직후 사이에는 운동량 보존을 쓸 수 있다</b> — 중력 속에서 충돌해도.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>Example 9.10 — 탁자로 떨어지는 밧줄: \(F=3\rho xg\)</div>
+<ol>
+<li>선밀도 \(\rho\), 길이 \(a\)인 밧줄을 탁자 바로 위에 매달았다가 놓는다. \(x\)만큼 떨어져 쌓였을 때 탁자가 받는 힘?</li>
+<li>이미 쌓인 부분의 무게: \(F_g=\rho xg\).</li>
+<li>충격 부분: 시간 \(\dd t\) 동안 질량 \(\rho v\,\dd t\)가 속력 \(v\)에서 0으로 멈춘다. 탁자가 받는 운동량 \(\dd p=(\rho v\,\dd t)v\), 따라서
+\[ F_{\rm impulse}=\rho v^2 . \]</li>
+<li>떨어지는 부분은 자유낙하(각 부분이 \(g\)로 가속) → \(v^2=2gx\), \(F_{\rm impulse}=2\rho xg\).</li>
+<li>\[ \boxed{\,F=\rho xg+2\rho xg=3\rho xg\,} \]
+쌓인 길이 \(x\)의 무게의 <b>3배</b>. 마지막 순간(\(x=a\)) 직전 \(3Mg\), 다 떨어진 직후 \(Mg\)로 급락.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 비탄성충돌</div>
+\[ Q=T_f-T_i,\qquad \epsilon=\frac{|v_2-v_1|}{|u_2-u_1|},\qquad Q=-(1-\epsilon^2)\tfrac12\mu(u_1-u_2)^2\ \ (\text{정면}) \]
+\[ \vb J=\int\vb F\,\dd t=\Delta\vb p,\qquad \text{떨어지는 밧줄: }F=3\rho xg \]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u07-1"><div class="qq">Example 9.9: \(m_2\)가 정지한 탄성 정면충돌에서 \(\epsilon=1\)임을 보여라. (운동량과 에너지 보존에서 \(v_1/u_1\)을 구해 대입.)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>운동량: \(v_2=\frac{m_1}{m_2}(u_1-v_1)\). 에너지에 대입해 \(x=v_1/u_1\)로 정리: \(\left(1+\frac{m_1}{m_2}\right)x^2-2\frac{m_1}{m_2}x+\left(\frac{m_1}{m_2}-1\right)=0\). 해 \(x=1\)(충돌 없음)과 \(x=\dfrac{m_1-m_2}{m_1+m_2}\).</p>
+<p>그러면 \(v_2=\dfrac{2m_1}{m_1+m_2}u_1\), \(v_2-v_1=\dfrac{2m_1-m_1+m_2}{m_1+m_2}u_1=u_1\). 따라서 \(\epsilon=\dfrac{|v_2-v_1|}{|0-u_1|}=1\) ∎.</p>
+<p>더 짧은 논증: CM계에서 탄성충돌은 속도를 뒤집기만 하므로 상대속도 크기가 보존 → \(\epsilon=1\).</p></div></div>
+
+<div class="qz" data-q="u07-2"><div class="qq">질량 \(m\)인 공을 높이 \(h\)에서 떨어뜨렸다. 바닥과의 반발계수가 \(\epsilon\)일 때 (a) \(n\)번째 튀어 오른 높이 (b) 멈출 때까지 걸린 총시간을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>(a) 매 충돌마다 속력이 \(\epsilon\)배 → 높이는 \(\epsilon^2\)배: \(h_n=\epsilon^{2n}h\).</p>
+<p>(b) 첫 낙하 \(t_0=\sqrt{2h/g}\). \(n\)번째 튐의 체공시간 \(2\epsilon^n t_0\). 총시간
+\[ t=t_0\left(1+2\sum_{n=1}^\infty\epsilon^n\right)=t_0\,\frac{1+\epsilon}{1-\epsilon}=\sqrt{\frac{2h}{g}}\,\frac{1+\epsilon}{1-\epsilon}. \]
+무한 번 튀지만 유한 시간에 멈춘다 (Zeno형). \(\epsilon\to1\)이면 발산 ✓.</p></div></div>
+
+<div class="qz" data-q="u07-3"><div class="qq">Example 9.10의 결과 \(F=3\rho xg\)에서 "2"가 어디서 오는지 설명하라. 만약 밧줄이 탁자에 닿은 뒤 튀어 오른다면(탄성) 충격 부분은 어떻게 바뀌는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(F_{\rm imp}=\rho v^2\)에서 \(v^2=2gx\)의 "2"가 온다 — 자유낙하 거리 \(x\)에서의 속력 제곱.</p>
+<p>완전 탄성으로 되튀면 각 조각의 운동량 변화가 \(mv\to-mv\)로 두 배: \(F_{\rm imp}=2\rho v^2=4\rho xg\). (\(\epsilon\)이면 \((1+\epsilon)\rho v^2\).)</p></div></div>
+
+<div class="qz" data-q="u07-4"><div class="qq">질량 \(m_1\), 속력 \(u\)인 입자가 정지한 \(m_2\)와 완전 비탄성충돌한다. 잃은 운동에너지의 비율 \(-Q/T_0\)를 구하고, 유도 1의 "\(-Q=T'_0\)"와 일치함을 보여라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(V=m_1u/M\), \(T_f=\tfrac12MV^2=\tfrac{m_1}{M}T_0\). \(-Q/T_0=1-\tfrac{m_1}{M}=\tfrac{m_2}{m_1+m_2}\).</p>
+<p>U6 유도 1: \(T'_0=\tfrac{m_2}{M}T_0\) — 정확히 일치 ✓. 표적이 무거울수록 거의 다 잃는다(총알이 벽에 박힘).</p></div></div>

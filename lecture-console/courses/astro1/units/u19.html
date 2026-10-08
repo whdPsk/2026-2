@@ -1,0 +1,164 @@
+<div class="predict"><b>◈ 학습 목표.</b> 전자 <b>집단</b>의 싱크로트론 복사를 말로 설명하고 관측에 적용한다. ① 멱법칙 전자 분포 \(N(\gamma)\propto\gamma^{-p}\) → 방출계수 적분 → <span class="hl">\(j_\nu\propto\nu^{(1-p)/2}\)</span>(플립 21의 δ함수 근사). ② 단일 전자 스펙트럼 \(F(\nu/\nu_c)\): 펄스열의 푸리에 변환(컨볼루션 정리·샤 함수)으로 왜 그런 모양인지. ③ 편광: 강하게 편광, \(\mathbf E\perp\mathbf B\). ④ 냉각시간 \(t=1/(A\gamma_0)\propto1/(\gamma B^2)\)과 에너지 재공급, Cas A·Cyg A 스펙트럼. ⑤ <span class="hl">관측 스펙트럼 → \(p\) → \(n_0\)–\(B\) 축퇴 → 최소에너지/등분배로 \(B\)·\(n_0\)</span>(10/6 수업 문제 SN 1993J → 예제 6.17). ⑥ 자가흡수(교재 선행, 강의 미진도).</div>
+
+<h4>멱법칙 전자 분포 <span class="en">power-law electrons</span></h4>
+<div class="slide flip"><div class="sh">플립 21 · 0:00–0:58 <span class="st">전자의 에너지 분포</span></div>
+<ol><li>지금까지는 전자 하나(single electron)를 봤지만 실제 플라스마에는 전자가 많다. 전자의 에너지는 \(\gamma m_ec^2\)이고, 그 에너지에 따른 분포가 <b>멱급수(power law)</b>를 따른다는 것이 관측으로 확인된다: \(N(\gamma)\,d\gamma\propto\gamma^{-p}\,d\gamma\), \(p\) = power index. [[F21.01]]</li>
+<li>\(\gamma\)가 작은 전자가 많고 \(\gamma\)가 큰 전자는 적다 — 에너지가 높은 전자는 적고 낮은 전자는 많다는 뜻. [[F21.01]]</li></ol></div>
+<div class="explain"><b>부가설명 (10/6 리뷰)</b> \(\gamma\)는 로런츠 인자이지만 전자의 총에너지가 \(\gamma m_ec^2\)(정지질량 에너지 + 상대론적 운동에너지)이므로 <b>γ 값이 곧 에너지</b>다. "γ의 분포가 \(\gamma^{-p}\) 멱법칙을 따른다고 하자 — 이건 (이론적으로) 모르는 것, 알 수 없는 것"이지만 <span class="hl">여러 관측 결과를 설명할 수 있기 때문에 그렇게 놓는다</span>. [[D1006.01]]<br>
+근거의 하나가 지난 시간 수업 문제로 본 <b>우주선(cosmic ray) 에너지 스펙트럼</b>: 로그–로그 그림에서 knee와 ankle에서 기울기가 조금 달라질 뿐 멱법칙이 좋은 근사다. 가로축 에너지는 \(\log(\gamma mc^2)\)(m = 입자 질량). 지구 근방에서 측정한, 외부에서 들어오는 입자들의 분포 — "이런저런 이유로 멱법칙을 잡는 게 일반적". [[D1006.02]] (→ 예제 6.13)</div>
+<div class="trap"><b>확인 필요 · p의 전형값</b>플립 21 녹취는 \(p\)가 "0.5에서 2.5 사이"로 들리고 마지막에 "관측 flux가 대개 \(\nu^{-1/2}\)이니 \(p\approx2\)"라고 한다. 10/6 강의에서는 "전자 에너지 분포는 대개 3 정도(3.5, 3)"라고 말한다. 두 값이 다르고 STT도 불확실 — 시험에서는 <b>주어진 스펙트럼 기울기에서 \(p\)를 직접 구하면</b> 된다. 우주선 그림의 축 설명("X축이 넘버, Y축이 에너지")도 뒤바뀐 듯. [[F21.01, F21.09, D1006.02, D1006.05]]</div>
+
+<h4>방출계수와 스펙트럼 기울기 <span class="en">\(j_\nu\propto\nu^{(1-p)/2}\)</span></h4>
+<div class="slide flip"><div class="sh">플립 21 · 0:58–6:40 <span class="st">δ함수 근사로 방출계수 적분</span></div>
+<ol><li>단일 전자의 파워가 실리는 주파수는 에너지에 따라 다르다 — \(\gamma^2\)에 비례. 이를 선윤곽 함수(line profile function) \(\phi_\nu(\gamma)\)로 나타낸다(정규화 \(\int\phi_\nu\,d\nu=1\)). 로런츠 인자 γ인 전자가 내는 주파수는 \(\gamma^2\)에 비례해 달라진다. [[F21.02]]</li>
+<li>모든 전자의 방출계수 = 단일 전자 파워에 개수 분포를 가중치로 적분. emissivity는 <b>단위 입체각당</b>이라 \(4\pi\)로 나누고, 수밀도(단위부피당)·파워(시간당 에너지)·\(\phi_\nu\)(주파수당)로 단위가 맞는다: [[F21.03]]
+\[ j_\nu=\frac1{4\pi}\int_1^\infty P(\gamma)\,\phi_\nu(\gamma)\,N(\gamma)\,d\gamma \]</li>
+<li>\(\gamma\ge1\)이므로 1부터 적분. \(\phi_\nu\)를 알아야 하는데, 가장 간단한 근사로 싱크로트론 광자의 주파수 분포가 <b>특성 주파수</b>에서 봉우리를 이룬다고 하자(실제로 그렇다): \(\nu_c\simeq\gamma^2\nu_L\), \(\nu_L\) = Larmor 주파수, \(\omega_L=eB/m_ec\) — 자기장과 전자 질량으로 계산되는 값. [[F21.04]]</li>
+<li>에너지가 클수록 더 높은 주파수. 모든 에너지가 \(\nu_c\)에서만 방출된다고 가정: \(\phi_\nu(\gamma)=\delta(\nu-\gamma^2\nu_L)\). 실제론 넓은 분포지만 <b>결과에 큰 차이가 없어</b> 써도 된다. 다만 δ함수의 인자가 \(\gamma^2\)이라 적분이 만만치 않다 — <span class="hl">δ함수 적분은 인자를 적분변수의 1차식으로 바꿔야</span> 한다. [[F21.05]]</li>
+<li>변수 변환 \(x\equiv\gamma^2\nu_L\) → \(\gamma=(x/\nu_L)^{1/2}\), \(d\gamma=dx/(2\gamma\nu_L)\). 상수(\(\tfrac43\sigma_TcU_B\), \(n_0\))를 적분 밖으로 내고, \(P\propto\gamma^2-1\)에서 \(\gamma\gg1\)이라 1을 무시하면 피적분함수는 \(\gamma^{2-p}\,\delta(\nu-x)\,d\gamma\). [[F21.06]]
+\[ j_\nu=\frac1{4\pi}\,\frac43\sigma_TcU_B\,n_0\int\gamma^{2-p}\,\delta(\nu-x)\,\frac{dx}{2\gamma\nu_L} \]</li>
+<li>적분은 \(x=\nu\)일 때만 남는다 → \(x\)를 \(\nu\)로 바꾸면 끝. <span class="star">강조</span> 중요한 것은 <span class="hl">power index가 \((1-p)/2\)</span>라는 것: [[F21.07]]
+\[ j_\nu=\frac{1}{4\pi}\,\frac43\sigma_TcU_B\,\frac{n_0}{2\nu_L}\left(\frac{\nu}{\nu_L}\right)^{(1-p)/2}\propto n_0\,B^{(p+1)/2}\,\nu^{-(p-1)/2} \]</li>
+<li>그림으로 기억: 전자의 γ 분포(멱법칙)와 주어진 γ의 주파수 분포(봉우리 하나)를 겹쳐 더한다(convolution). γ가 작은 전자는 <b>개수가 많고 주파수가 낮아</b> 높이 올라오고, 고주파를 주는 γ 큰 전자는 <b>개수가 적어</b> 낮다 → 모두 누적하면 기울기 \((1-p)/2\)의 멱법칙. 그래서 관측된 싱크로트론 스펙트럼에서 \(p\)를 구할 수 있다. [[F21.08]]</li>
+<li>관측으로 구한 \(p\)는 전자 에너지 분포 \(\gamma^{-p}\)의 지수다. 천체마다 다르지만 flux 분포가 대개 \(\nu^{-1/2}\) → \(p\approx2\)(플립 녹취 기준). [[F21.09]]</li></ol></div>
+<div class="explain"><b>부가설명 (10/6 리뷰: "방출계수를 적어 봐라")</b> 단일 전자 파워에서 시작한다: \(P=\tfrac43\sigma_TcU_B\beta^2\gamma^2\) 또는 \(\gamma^2-1\) — \(\gamma\gg1\)이면 그냥 \(\gamma^2\). 입자 하나가 시간당 싱크로트론으로 내는 에너지다. 방출계수는 <b>부피당·입체각당·주파수당·시간당</b>이므로 \(P\)에 선윤곽 함수(주파수당)와 수밀도 분포(부피당)를 곱해 γ = 1부터 ∞까지 적분하고 4π로 나눈다(\(4\pi j_\nu\)로 써도 됨). 적분 과정은 동영상에 있으니 수업에서는 생략. [[D1006.03]]<br>
+결과: 에너지 지수 \(p\)와 스펙트럼 기울기 α의 관계는 <span class="hl">\(\alpha=(1-p)/2\)</span> — "마이너스가 들어가는 게 맞다". 단일 전자의 주파수 분포는 특성 주파수 \(\nu_c\propto\gamma^2\nu_L\) 근처에 몰려 있고, \(\nu_L=\omega_L/2\pi\), \(\omega_L=eB/m_ec\)(비상대론 원운동의 gyro 진동수 = Larmor 진동수; \(\gamma^2\)는 상대론적 운동방정식에서 나온 것). γ가 큰 전자일수록 \(\gamma^2\)배 높은 주파수를 낸다. [[D1006.03, D1006.04]] (\(\nu_c\) 유도는 U18)<br>
+그런데 γ가 큰 전자는 수가 적다 → 그 전자들이 내는 flux는 점점 줄어든다 → 전부 더하면 멱법칙 스펙트럼. δ함수 적분은 변수 변환이 좀 까다롭다. <span class="star">시험</span> <span class="hl">우리가 관측하는 것은 α다 → 관측된 α를 설명하는 \(p\)를 구한다</span>. [[D1006.05]]</div>
+<div class="intuit"><b>왜 지수가 \((1-p)/2\)인가 — 세 줄 직관</b>① 주파수 ν를 맡는 전자는 \(\gamma\simeq(\nu/\nu_L)^{1/2}\) 한 종류뿐(δ근사). ② 그 전자들의 수 × 파워 \(\propto\gamma^{-p}\cdot\gamma^2\). ③ 주파수 구간 \(d\nu\)에 해당하는 γ 구간은 \(d\gamma\propto d\nu/\gamma\). 곱하면 \(\gamma^{1-p}\propto\nu^{(1-p)/2}\). 전자 지수 \(p\)가 그대로 스펙트럼 지수가 되지 않는 이유는 \(\nu\propto\gamma^2\)(제곱)이기 때문. [[F21.06, F21.07]]</div>
+<div class="trap"><b>함정 · α의 부호 약속</b>\(S_\nu\propto\nu^{\alpha}\)로 쓰면 \(\alpha=(1-p)/2\)(음수), \(S_\nu\propto\nu^{-\alpha}\)로 쓰면 \(\alpha=(p-1)/2\)(양수)이고 \(p=2\alpha+1\). 수업은 앞의 약속(예: \(\nu^{-1}\) → α = −1 → p = 3). 녹음 6:27 부근 "마이너스 알파… 알파는 음수가 될 수 있어요"는 이 부호 약속 설명인데 STT가 흐트러져 있다. 문제를 풀 때는 <b>부호 약속부터 적을 것</b>. STT 교정: "Delpha가 유니마이너스 p 나오면 2" → \(\alpha=(1-p)/2\). [[D1006.03, D1006.05]]</div>
+
+<h4>단일 전자 스펙트럼 F(x) <span class="en">보충: 펄스열의 푸리에 변환</span></h4>
+<div class="explain"><b>보충 ① 무엇을 변환하나 (10/6)</b> 단일 전자의 스펙트럼(가로 주파수, 세로 flux·세기·emissivity 어느 것이든)이 왜 "완만히 오르다 급히 떨어지는" 모양인가. 지난 시간: 전자가 나선(helical) 운동을 하면 관측자에게 <b>펄스가 주기적으로 반복</b>된다. 주기는 \(T=2\pi/\omega_B\), \(\omega_B=\omega_L/\gamma\)(상대론적 운동방정식 때문에 γ가 붙는다). 펄스 지속시간은 \(\Delta t\sim1/(\gamma^3\omega_B)=1/(\gamma^2\omega_L)\) — γ가 크니 매우 짧다. 짧은 순간 전기장이 보였다가 한동안 안 보이는 것이 반복된다. 이 \(E(t)\)를 <b>푸리에 변환해 제곱</b>하면 에너지 스펙트럼. [[D1006.13]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">논증</span>컨볼루션 정리 + 샤(Ш) 함수 → 이산 피크 × 포락선 F</div><ol>
+<li><b>컨볼루션 정리</b>: \(g*h\)(h를 시간으로 옮겨 가며 곱해 적분)의 푸리에 변환은 각 변환의 곱 \(G\cdot H\); 반대로 곱의 푸리에 변환은 컨볼루션. [[D1006.14]]</li>
+<li><b>샘플링 함수 = 샤 함수 Ш</b>(삼지창 모양 글자): 간격 \(T\)인 점들에서만 값이 있고 나머지는 0. 임의의 신호(노랫소리)에 곱하면 그 점들에서의 값만 남는다 → sampling function. 샤의 푸리에 변환은 <b>다시 샤</b>이고 간격은 역수(각진동수로 \(2\pi/T\)): \(T\)가 크면 변환 쪽은 더 촘촘. (Parseval 정리 — 총에너지는 시간 영역과 주파수 영역에서 같다 — 도 중요한 정리.) [[D1006.14]]</li>
+<li>전자의 전기장 = (간격 \(T=2\pi/\omega_B\)의 샤) \(*\) (펄스 한 개). 샤를 \(T\)씩 옮길 때마다 펄스가 하나씩 생긴다. 펄스 안의 전기장은 입자가 관측자에게 다가올 때 +, 멀어질 때 −. [[D1006.15]]</li>
+<li>푸리에 변환하면 컨볼루션 → 곱: (간격 \(\omega_B\)의 샤) × (펄스 한 개의 변환). 펄스 한 개의 변환은 폭이 지속시간의 역수 \(\sim\gamma^3\omega_B\) — γ가 크면 폭이 매우 넓다. 이 포락선이 함수 \(F(x)\), \(x=\nu/\nu_c\). [[D1006.15]]</li>
+<li>샤를 곱했으므로 <b>샘플 점들만 남는다</b>: 이상적으로는 간격 \(\omega_B\)의 이산 피크들. 포락선 폭이 간격의 \(\gamma^3\)배 → \(\gamma=10^4\)이면 \(\sim10^{12}\)개의 점이 촘촘히 들어간다. [[D1006.15, D1006.16]]</li>
+<li>실제로는 전자마다 γ(멱법칙 분포)와 피치각 ψ가 조금씩 달라 샘플 위치가 서로 어긋난다 → 빈틈이 꽉 채워진다 → <span class="hl">연속 스펙트럼으로 간주</span>해도 무방. [[D1006.16]]</li></ol></div>
+<div class="explain"><b>보충 ② F(x)의 모양과 총 파워 (10/6)</b> 지난 시간 식 재확인: \(P=\tfrac43\sigma_TcU_B(\gamma^2-1)\), \(U_B=B^2/8\pi\), \(\sigma_T=\tfrac{8\pi}3r_e^2\), \(r_e=e^2/m_ec^2\)(전자의 고전 반지름). 원래는 \(B^2\sin^2\psi\) 인자가 있는 \(P=2\sigma_TcU_B\gamma^2\beta^2\sin^2\psi\)이고, 등방 평균 \(\langle\sin^2\psi\rangle=2/3\)를 곱하면 \(\tfrac43\) — "같은 것처럼 안 보이지만 같은 식". 평균 전에는 \(B_\perp=B\sin\psi\)로 쓴다. [[D1006.17]]<br>
+주파수당(첨자 ν)으로 쓰려면 선윤곽 함수가 필요하고, γ에 따라 최대가 나오는 주파수 \(\nu_c\)가 달라진다. 정확히 계산하면(유도는 교재에) \(F(\nu/\nu_c)\)가 나오며, 그 정규화 조건으로 주파수 적분하면 위의 총 파워와 <b>같은 식</b>이 된다(√3이 상쇄). [[D1006.17]]
+\[ P_\nu(\gamma)=\frac{\sqrt3\,e^3B\sin\psi}{m_ec^2}\,F\!\left(\frac{\nu}{\nu_c}\right),\qquad F(x)=x\int_x^\infty K_{5/3}(\xi)\,d\xi,\qquad\int_0^\infty F\,dx=\frac{8\pi}{9\sqrt3} \]
+모양: <span class="hl">\(x\approx0.3\)(\(\nu\approx0.3\nu_c\))에서 최대</span>, 저주파 쪽은 \(F\propto x^{1/3}\)으로 완만히 상승, 고주파 쪽은 \(\sqrt x\,e^{-x}\) 꼴로 지수적 급감. 로그–로그로 그리면 기울기 1/3으로 오르다 급격히 떨어진다. 플립 21에서는 이것을 δ함수로 근사했지만 <b>결과는 큰 차이가 없다</b>. [[D1006.15, D1006.17]]</div>
+<div class="trap"><b>수치·식 확인</b>최댓값 위치: 녹음 "0.3 정도" / 표준 0.29 (python: \(x_{\max}=0.286\), \(F_{\max}=0.918\), \(\int F\,dx=1.612=8\pi/9\sqrt3\)). 위 \(P_\nu\) 식은 \(\nu_c=\tfrac32\gamma^2\nu_L\sin\psi\)로 정의했을 때의 <b>표준형</b>으로, 주파수 적분이 \(2\sigma_TcU_B\gamma^2\sin^2\psi\)가 됨을 확인했다. 수업 화면의 정규화 상수·\(\nu_c\) 계수(3/2 포함 여부)는 녹음에 없어 <b>확인 필요</b>(→ 아래 「Lecture10 PPT 원문 대조」에서 화면 식으로 확정). STT: "이후에 세제고" → \(\nu^{1/3}\), "스큐리트 이후에 exponent" → \(\sqrt x\,e^{-x}\). [[D1006.15, D1006.17]]</div>
+
+<h4>편광 <span class="en">polarization</span></h4>
+<div class="explain"><b>결론만 (10/6)</b> <span class="star">강조</span> 플립에서 빠뜨린 것 하나. 전자는 자기장에 수직한 면에서 원운동하므로 복사의 전기장이 주로 그 면 안에 놓인다. → <span class="hl">싱크로트론 복사는 강하게 편광(highly polarized)되어 있고, 전기장 방향은 자기장 방향에 수직</span>. "그 정도만 알고 계시면 된다 … 기억하면 돼요." 수학적으로 보이는 것은 꽤 까다로워 대학원 수업에서 배운다. [[D1006.06]]</div>
+<div class="apply"><b>쓰임</b>편광된 전파의 E 벡터를 90° 돌리면 (하늘에 투영된) 자기장 방향 → 전파 편광 지도로 자기장 구조를 그린다. 먼지 편광(U10)과 함께 자기장 방향을 읽는 방법. 참고(교재 선행, 강의 미진도): 균일한 B에서 멱법칙 전자의 선편광도 \(\Pi=(p+1)/(p+7/3)\) — p = 3이면 75%(python).</div>
+
+<h4>냉각시간 <span class="en">synchrotron cooling</span></h4>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>\(d\gamma/dt=-A\gamma^2\) → \(t_{\rm cool}=1/(A\gamma_0)\)</div><ol>
+<li>전자 하나의 파워 = 시간당 방출 에너지 = cooling rate. 전자의 총에너지 \(E=\gamma m_ec^2\), \(dE/dt=-P\). \(m_ec^2\)는 상수이므로 변하는 것은 γ. [[D1006.18]]</li>
+<li>\(v\)도 시간에 따라 변하지만 어차피 상대론적일 때 싱크로트론이 나오므로 \(v\to c\)(β ≈ 1)로 근사: [[D1006.18]]
+\[ m_ec^2\frac{d\gamma}{dt}=-\frac43\sigma_TcU_B\gamma^2\ \Rightarrow\ \frac{d\gamma}{dt}=-A\gamma^2,\qquad A\equiv\frac{4\sigma_TU_B}{3m_ec}=\frac{\sigma_TB^2}{6\pi m_ec} \]</li>
+<li>풀이 ①(멱함수 시도): \(\gamma=at^{\alpha}\)를 넣어 양변의 t 지수를 맞춘다(\(\alpha-1=2\alpha\) → α = −1). 풀이 ②: 간단한 변수분리 — \(d\gamma/\gamma^2=-A\,dt\). [[D1006.18]]</li>
+<li>\(t=0\)에서 \(\gamma_0\)로 적분: [[D1006.19]]
+\[ \frac1\gamma-\frac1{\gamma_0}=At\ \Rightarrow\ \gamma(t)=\frac{\gamma_0}{1+A\gamma_0t} \]</li>
+<li>냉각시간(lifetime)의 정의: \(A\gamma_0t=1\), 즉 <span class="hl">γ가 초기값의 절반이 되는 시간</span>: [[D1006.19]]
+\[ t_{\rm cool}=\frac1{A\gamma_0}=\frac{6\pi m_ec}{\sigma_TB^2\gamma_0}\approx7.7\times10^{12}\ \mathrm s\left(\frac{\gamma_0}{10^4}\right)^{-1}\left(\frac{B}{100\,\mu\mathrm G}\right)^{-2} \]</li>
+<li>빨리 구하려면 \(E/P\)에 \(\gamma_0\)를 넣는다 — 인자가 조금 다를 수 있지만 큰 차이는 없다(이 경우엔 \(E/P=1/(A\gamma_0)\)로 정확히 같다, python). [[D1006.19]]</li></ol></div>
+<div class="explain"><b>읽는 법 (10/6)</b> 자기장이 세면 파워가 커서 수명이 짧다(\(\propto B^{-2}\)). 초기 에너지가 크면 파워가 \(\gamma^2\)에 비례해 커서 수명이 짧다(\(\propto\gamma^{-1}\)). 바꿔 말해 어떤 에너지 분포의 전자가 공급되면 <span class="hl">에너지가 높은 전자부터 빨리 소진</span>된다 — 전자가 사라지는 게 아니라 싱크로트론 복사를 하지 못하게 되는 것(수업 중 "에너지가 작은 전자가"라 했다가 "높은 전자가"로 정정). [[D1006.19, D1006.20]]<br>
+수치: 전형적으로 \(\gamma=10^4\), \(B=100\,\mu\mathrm G=10^{-4}\) G → 약 \(10^{12}\) s, 1년 ≈ \(3\times10^7\) s이므로 <b>10만 년 정도</b>. 천문학적으로 "길지도 짧지도 않은" 시간: 은하 규모 표준 시간 ~100억 년, 태양의 은하 공전 주기 ~2.5억 년에 비하면 짧고, 초신성 잔해의 나이와 비슷한 정도. [[D1006.20]] → 예제 6.18</div>
+<div class="trap"><b>수치 확인 · 냉각시간</b>녹음상 "\(10^{12}\) s ≈ \(10^5\)년" / 계산 \(t=6\pi m_ec/(\sigma_TB^2\gamma)=7.7\times10^{12}\) s ≈ \(2.5\times10^5\)년(γ = 10⁴, B = 100 μG; python). 자릿수는 일치하지만 앞자리(녹음이 7.7×10¹²를 "10의 12승"으로 줄여 말한 것인지)는 <b>확인 필요</b>. 같은 대목의 "태양이 은하 중심을 50바퀴"는 4.6 Gyr/0.25 Gyr ≈ 18바퀴(은하 나이 10 Gyr 기준 40바퀴)로 수치 의심. 풀이 ①의 지수는 녹음에 "−2분의 1"로 들리나 \(\alpha-1=2\alpha\)에서 α = −1(확인 필요). [[D1006.18, D1006.20]]</div>
+<div class="prof"><b>수업 중 질문 — 해가 γ → 0으로 가는데요?</b>\(\gamma(t)=\gamma_0/(1+A\gamma_0t)\)는 \(t\to\infty\)에서 0으로 가지만 γ는 1보다 작을 수 없다. 교수님: 수학적으로 얻은 해라 그렇다. 적분을 γ = 1까지만 하는 식으로 할 수도 있다(그렇게 수명을 정의하는 사람도 있음). 하지만 여기서는 이 해를 끝까지 쓰는 게 아니라 <b>초기값의 절반이 될 때까지</b>만 수명으로 썼으니 문제없다. 그리고 γ가 1 근처로 가면 (\(v\approx c\)로) 일정하다고 놓은 <span class="hl">가정 자체가 틀리게 된다</span>. [[D1006.19, D1006.28]]</div>
+
+<h4>에너지 재공급과 스펙트럼 노화 <span class="en">re-supply · aging: Cas A, Cyg A</span></h4>
+<div class="apply"><b>초신성 잔해·펄서 (10/6)</b>싱크로트론 수명은 대략 수십만–100만 년으로 잡는다(정해진 값은 없음). 그렇다면 초신성 잔해가 계속 싱크로트론을 내려면 <span class="hl">에너지를 공급하는 메커니즘</span>이 있어야 한다 — 없으면 특히 고에너지 쪽에서 감소가 일어나고, 실제로 그런 감소가 보인다. 공급원: 중심의 중성자별. 초신성이 터질 때 중성자별이 남지 않는 경우도 있지만, 남는 경우에는 <b>펄서</b>가 신선한(fresh) 고에너지 전자를 공급한다고 생각할 수 있다. [[D1006.21]]</div>
+<div class="apply"><b>관측 스펙트럼: Cas A와 Cygnus A (10/6)</b>① <b>Cas A</b>(초신성 잔해): 가로축 주파수(MHz; 10³ MHz = 1 GHz), 세로축 flux density(Jy). 대체로 멱법칙을 잘 따르지만 완벽하진 않다. ② <b>Cygnus A</b>(전파은하)의 싱크로트론 스펙트럼: 전파 영역에서 멱법칙이다가 고주파 쪽에서 더 빨리 떨어진다 — 아마 <b>aging 효과</b>: 고에너지 전자의 수명이 짧아 원래 멱법칙이던 분포에서 그쪽 전자 수가 줄었기 때문. "그냥 추측, 합리적인 추측". [[D1006.22]]<br>
+Cyg A의 구조: 중심 블랙홀에서 나오는 에너지가 큰 흐름이 <b>radio lobe</b>를 만들고 그 안에 자기장과 전자가 있다. 여기서 중심에서 나오는 것은 복사가 아니라 <b>전자</b> — 쭉 공급되어 가다가 멈춰 로브를 만든다. 관측에 의하면 로브의 \(B\sim10^{-4}\) G(100 μG), 크기(반지름)는 전형적으로 ~30 kpc로 은하보다 훨씬 크다. [[D1006.22]]</div>
+<div class="trap"><b>STT 확인</b>Cyg A 로브 자기장은 녹음에 "10⁻⁴ gauss … 100 밀리가우스 … 100 마이크로가우스"가 섞여 들린다 — 10⁻⁴ G = 100 μG로 정리했으나 <b>확인 필요</b>. "30km파 색" → 30 kpc, "에이즈 효과" → aging 효과, "CASA/gas a" → Cas A, "레드 블럭시" → radio galaxy. [[D1006.22]]</div>
+
+<h4>n₀–B 축퇴와 최소에너지·등분배 <span class="en">minimum energy · equipartition</span></h4>
+<div class="explain"><b>① 관측량에서 무엇을 알 수 있나 (10/6)</b> 관측한 flux와 은하까지의 거리를 알면 광도 \(L_\nu=4\pi d^2S_\nu\)를 안다. 가정: 로브에 멱법칙 전자가 가득 차 있고 그 싱크로트론을 전파망원경으로 본 것. 부피 방출계수는 플립에서 유도한 \(j_\nu\propto\nu^{(1-p)/2}\)(Larmor 주파수와 \(U_B\) 포함), \(n_0\)는 전자 분포 \(N(\gamma)=n_0\gamma^{-p}\)의 정규화 상수. 싱크로트론은 대개 <b>광학적으로 얇으므로</b>(저주파 쪽은 두꺼울 수 있음) [[D1006.22, D1006.23]]
+\[ L_\nu=4\pi j_\nu\,V,\qquad S_\nu=\frac{L_\nu}{4\pi d^2} \]
+B 의존성만 모으면: \(U_B\)에서 \(B^2\), \(1/\nu_L\)에서 \(B^{-1}\), \((\nu/\nu_L)^{(1-p)/2}\)에서 \(B^{(p-1)/2}\) → [[D1006.24]]
+\[ L_\nu\propto n_0\,B^{(p+1)/2}\quad\Rightarrow\quad n_0=C\,B^{-(p+1)/2}\ (\text{주어진 }L_\nu) \]
+\(p\)는 기울기에서 구할 수 있지만 <span class="hl">관측은 하나뿐이라 \(n_0\)와 \(B\)를 구별할 수 없다 — 축퇴(degeneracy)</span>. B가 달라지면 \(n_0\)가 달라질 뿐 항상 이 관계를 만족한다. [[D1006.24]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>최소에너지 조건 \(U_{CR}=\dfrac4{p+1}U_B\)</div><ol>
+<li>싱크로트론에 관련된 에너지는 두 가지뿐: <b>자기 에너지</b> \(U_B=B^2/8\pi\)와 <b>우주선(전자) 에너지</b>. [[D1006.24, D1006.25]]</li>
+<li>전자 하나 \(\gamma m_ec^2\), 분포 \(N(\gamma)d\gamma=n_0\gamma^{-p}d\gamma\), \(p&gt;2\) 가정: [[D1006.25]]
+\[ U_{CR}=\int_{\gamma_{\min}}^\infty\gamma m_ec^2\,n_0\gamma^{-p}\,d\gamma=\frac{n_0m_ec^2}{p-2}\,\gamma_{\min}^{\,2-p} \]</li>
+<li>\(\gamma_{\min}\)(멱법칙이 시작되는 곳) 잡는 두 방법: ⓐ 관측된 최저 주파수 \(\nu_{\min}\)를 \(\nu_c\) 관계로 γ로 바꾼다(이때 \(\gamma_{\min}\)에도 B 의존성이 생김), ⓑ 그냥 \(\gamma_{\min}=100\)으로 둔다. 크게 차이는 없다. [[D1006.25]]</li>
+<li>총 에너지밀도 \(U=U_B+U_{CR}\). \(n_0=CB^{-(p+1)/2}\)를 넣으면(ⓑ의 경우) \(U_{CR}\propto B^{-(p+1)/2}\). B에 대해 그리면 \(U_B\propto B^2\)은 증가, \(U_{CR}\)는 감소 → 합은 <b>최소점</b>을 가진다. [[D1006.25, D1006.26]]</li>
+<li>최소 조건 \(dU/dB=0\): \(\dfrac{2U_B}{B}-\dfrac{p+1}{2}\dfrac{U_{CR}}{B}=0\) → [[D1006.26]]
+\[ U_{CR}=\frac{4}{p+1}\,U_B \]</li>
+<li>\(p\)가 대개 3 근처이므로 계수가 거의 1 → \(U_{CR}\approx U_B\): <span class="hl">최소에너지 조건 ≈ 에너지 등분배(equipartition)</span>. [[D1006.26, D1006.27]]</li>
+<li>\(\gamma_{\min}\) 대신 \(\nu_{\min}\)를 고정하면(ⓐ) \(\gamma_{\min}\propto B^{-1/2}\)이 들어가 \(U_{CR}\propto B^{-3/2}\) → \(U_{CR}=\tfrac43U_B\). 무엇을 택해도 결과는 크게 달라지지 않는다. [[D1006.27]]</li></ol></div>
+<div class="prof"><b>교수님 코멘트 — 등분배는 '가정'이다</b>"사실 그럴 이유는 반드시 없는데" 사람들은 계가 최소에너지 상태에 있을 것이라고 생각한다 — \(n_0\)와 B를 떼어낼 <b>별다른 방법이 없으니까</b>. "반드시 맞지 않을 수도 있다는 생각은 든다." [[D1006.26]]<br>
+굳이 물리적으로 설명하면: 자기장이 강하면 전자를 가속해 고에너지로 만들고, 에너지가 큰 우주선은 움직이며 자기장을 끌고 다녀 자기장을 강하게 만든다 → 둘이 무관하지는 않다. 그렇다고 싱크로트론 원이 항상 등분배에 있다고 간주하기는 어렵다 — 특히 우주선은 먼 거리를 이동할 수 있다. [[D1006.27]]<br>
+<b>전파은하 로브</b>는 큰 문제 없어 보인다(공급된 전자가 자기장을 끌고 가고, 전자의 가속도 그 자기장으로 일어난다고 보므로). 그러나 <b>우리 은하 나선팔</b>은 다르다: 자기장은 원래 있었고 전자는 별 탄생 영역에서 만들어져 공급된 것이라 서로 키워 주는 관계라고 보기 어렵다. 그래도 사람들은 등분배/최소에너지로 나선팔 자기장 세기를 재는데 — <span class="hl">"개인적으로는 좀 문제가 있을 거라고 생각합니다."</span> [[D1006.27]]</div>
+<div class="trap"><b>확인 필요 · 최소에너지 계수</b>녹음에는 최소 조건의 계수가 들리지 않고 "p가 3 근처니까 이 값이 거의 <i>6이와</i> 같아요"라고만 되어 있다. 직접 유도하면 \(U_{CR}=\tfrac4{p+1}U_B\)(p = 3이면 정확히 1, p = 2.5이면 1.14)이므로 "1과 같아요"의 오인식으로 판단했다. ν_min 고정의 "3분에서 factor"도 유도상 4/3. 화면 식과 대조 필요(→ 아래 「Lecture10 PPT 원문 대조」에서 화면 식으로 확정). γ_min 방법 ⓐ의 예시 주파수는 "30 몇 Hz"로 들려 30 MHz대로 추정 — 확인 필요. [[D1006.25, D1006.26, D1006.27]]</div>
+<div class="explain"><b>② 이런 문제가 자주 나온다 (10/6 수업 문제)</b> <span class="star">시험</span> "싱크로트론 복사에 관한 내용은 이런 문제가 많이 나와요. <span class="hl">관측된 스펙트럼을 주고 power index를 구하고, 자기장 세기와 전자의 수밀도(정규화)를 구하는 문제</span>가 자주 나오니까 이런 식으로 풀면 됩니다." 풀이 순서: 기울기 → \(p\) → 입체각·밝기온도 → \(L_\nu\)에서 \(n_0\)–B 관계 → 등분배로 연립. "고차원적인 문제가 아니라 같은 내용이 조금씩 확장되는 것". 다음 숙제도 싱크로트론으로 전자 밀도와 자기장 세기를 구하는 응용 문제로 예고. [[D1006.28, D1006.30, D1006.32, D1006.33, D1006.34, D1006.35, D1006.36]] → 예제 6.17 (SN 1993J)</div>
+
+<h4>자가흡수 <span class="en">교재 선행 · 강의 미진도</span></h4>
+<p>아래는 10/6까지 강의에서 다루지 않은 교재 선행 내용이다(원자료 인용 없음). 저주파에서 싱크로트론 자가흡수가 중요해지면 균일 멱법칙 모형의 세기는 \(\nu^{5/2}\)로 상승한다 — 열적 흑체의 \(\nu^2\)와 다르다. 10/6 강의에서는 "싱크로트론은 대개 광학적으로 얇지만 저주파 쪽은 두꺼울 수 있다"는 언급만 있었다. [[D1006.23]]</p>
+<p>높은 에너지 전자가 더 빨리 냉각하므로, 지속 주입 + 정상상태 + 탈출 무시 조건에서는 냉각 구간에서 전자 지수가 1만큼, 얇은 복사 지수가 0.5만큼 가팔라질 수 있다. 관측된 모든 꺾임을 이 모형으로 단정하면 안 된다(강의에서도 Cyg A의 급락을 "추측"이라 함).</p>
+
+<div class="formula"><div class="ftitle">암기 — 싱크로트론: 집단·자가흡수·냉각</div><p><b>얇은 멱법칙 스펙트럼</b></p>\[ N(\gamma)=n_0\gamma^{-p},\quad j_\nu\propto n_0B^{(p+1)/2}\nu^{-(p-1)/2} \]<p class="note">관측 \(S_\nu\propto\nu^{-\alpha}\)이면 \(p=2\alpha+1\). <i>조건: 광학적으로 얇고 해당 γ가 분포의 경계에서 충분히 멀 때</i></p><p><b>냉각과 최소에너지</b></p>\[ t_{\rm cool}={6\pi m_ec\over\sigma_TB^2\gamma},\qquad U_{CR}={4\over p+1}U_B\ (\gamma_{\min}\ \text{고정}) \]<p class="note">냉각시간은 고에너지·강한 자기장일수록 짧다. 등분배는 가정. <i>조건: 등방 피치각·γ≫1</i></p><p><b>자가흡수 (교재 선행)</b></p>\[ \kappa_\nu\propto n_0B^{(p+2)/2}\nu^{-(p+4)/2},\quad S_\nu={j_\nu\over\kappa_\nu}\propto B^{-1/2}\nu^{5/2} \]<p class="note">\(n_0\)는 원천함수에서 소거되지만 전이주파수 \(\tau_\nu\approx1\)에는 영향을 준다. <i>조건: 균일한 멱법칙 전자, 저에너지 cutoff 영향이 작은 구간</i></p><p><b>선편광 (교재 선행)</b></p>\[ \Pi_L={p+1\over p+7/3} \]<p class="note">정렬된 B에서의 최대 수준. 방향은 \(\mathbf E\perp\mathbf B\). <i>조건: 얇은 멱법칙</i></p></div>
+
+<h4>Lecture10 PPT 원문 대조 — 싱크로트론 <span class="en">slides 3–11</span></h4>
+<p class="note">10/8에 Drive에 올라온 Lecture10 PPT를 슬라이드 단위로 옮기고, 위 본문(플립 21·10/6 녹음)에서 '확인 필요'로 남겼던 계수를 화면 식으로 확정했습니다.</p>
+<div class="slide"><div class="sh">L10 · 슬라이드 3 <span class="st">Review Questions (싱크로트론)</span></div>
+<ul><li>For a power-law electron distribution \(n(\gamma)d\gamma=n_0\gamma^{-p}d\gamma\), write the synchrotron emission coefficient. [[L10.s3a]]</li>
+<li>What is the relation between the energy index \(p\) and the spectral slope \(\alpha\) of synchrotron radiation. [[L10.s3b]]</li></ul></div>
+<div class="explain"><b>부가설명</b>① \(4\pi j_\nu=\tfrac23\sigma_TcU_Bn_0\,\nu_L^{-1}(\nu/\nu_L)^{(1-p)/2}\) — 전자 한 개의 파워에 전자 수 분포를 곱해 γ로 적분한 결과(슬라이드 10의 식). ② \(j_\nu\propto\nu^{\alpha}\)로 쓰면 \(\alpha=(1-p)/2\), 즉 관측 기울기에서 \(p=1-2\alpha\). SN 1993J는 \(F_\nu\propto\nu^{-1}\)이므로 \(p=3\). [[L10.s3a, L10.s3b, L10.s10, L10.s16]]</div>
+
+<div class="slide"><div class="sh">L10 · 슬라이드 5–6 <span class="st">Received Electric Field · Fourier Transform</span></div>
+<ul><li>[그림] 관측자가 받는 \(E(t)\): 좁은 펄스가 \(2\pi/\omega_B\) 간격으로 반복되고 펄스 하나의 폭은 \(2\pi/(\gamma^3\omega_B)\). [[L10.s5]]</li>
+<li>Convolution theorem: \((g*h)(t)\equiv\int_{-\infty}^{\infty}g(\tau)h(t-\tau)\,d\tau\ \Leftrightarrow\ G(f)H(f)\) — \(G, H\)는 \(g, h\)의 푸리에 변환.</li>
+<li>Sampling function (Shah function): \(\mathrm{III}_T(t)\equiv\sum_{n=-\infty}^{\infty}\delta(t-nT)\ \Leftrightarrow\ \tfrac1T\mathrm{III}_{1/T}(f)\). [[L10.s6]]</li></ul></div>
+<div class="explain"><b>부가설명</b>두 가지 도구만 기억하면 된다. 시간 영역의 합성곱은 진동수 영역의 곱이 되고, 간격 \(T\)인 빗(델타 열)의 변환은 간격 \(1/T\)인 빗이다. 펄스열 = (빗) ∗ (펄스 하나)이므로 스펙트럼 = (빗) × (펄스 하나의 스펙트럼)이 된다. [[L10.s5, L10.s6]]</div>
+
+<div class="slide"><div class="sh">L10 · 슬라이드 7 <span class="st">Spectrum by a Single Electron</span></div>
+<ul><li>Spectrum of the synchrotron radiation is given by the Fourier transform of \(E(t)^2\).</li>
+<li>[그림] \(E(t)\) = (간격 \(2\pi/\omega_B\) 빗) ∗ (폭 \(2\pi/\gamma^3\omega_B\) 펄스) ⟷ (간격 \(\omega_B\) 빗) × \(F(\nu/\nu_c)\), 포락선 폭 \(\sim\gamma^3\omega_B\). Electric field is positive as the particle approaches the observer.</li>
+<li>Ideally, the resulting spectrum consists of discrete numerous peaks, with an envelope given by \(F(\nu/\nu_c)\).</li>
+<li>Due to the phase mixing of electrons with different \(\gamma\) and \(\psi\), the actual spectrum is continuous.</li></ul> [[L10.s7]]</div>
+<div class="intuit"><b>직관 · 빗살이 뭉개져 연속 스펙트럼</b>전자 하나만 보면 \(\omega_B\) 간격의 촘촘한 선들이고 그 높이를 잇는 선이 \(F\)다. 실제로는 γ와 피치각 ψ가 제각각인 전자들이 섞여 선 위치가 조금씩 어긋나므로 <span class="hl">선은 지워지고 포락선 \(F\)만 남는다</span>. [[L10.s7]]</div>
+
+<div class="slide"><div class="sh">L10 · 슬라이드 8 <span class="st">Spectrum</span></div>
+<ul><li>\(P_\nu\) = Power per unit frequency from an electron with Lorentz factor γ: \[P_\nu(\gamma)=\frac{2e^4(\gamma^2-1)B_\perp^2}{3m_e^2c^3}\,\phi_\nu(\gamma),\quad B_\perp=B\sin\psi,\quad \int_0^\infty\phi_\nu(\gamma)\,d\nu=1\]</li>
+<li>Or, from more detailed calculations for \(\gamma\gg1\), \[P_\nu=\frac{\sqrt3e^3B_\perp}{m_ec^2}F(\nu/\nu_c),\qquad \nu_c=\frac{3\gamma^2eB_\perp}{4\pi m_ec}\ \text{(critical frequency)}\] with \(\displaystyle\int F(\nu/\nu_c)\,d\nu=\frac{8\pi\nu_c}{9\sqrt3}=\frac{2}{3\sqrt3}\frac{\gamma^2eB_\perp}{m_ec}\)</li>
+<li>[그림] \(F(x)\): peaks at \(\nu=0.29\nu_c\propto\gamma^2B\); 작은 x에서 \(\propto\nu^{1/3}\), 큰 x에서 \(\propto\sqrt\nu\,e^{-\nu/\nu_c}\).</li></ul> [[L10.s8]]</div>
+<div class="explain"><b>부가설명 · 확인 필요였던 계수 확정</b>화면 식 기준 <span class="hl">\(\nu_c=\tfrac32\gamma^2\nu_L\sin\psi\)</span>(3/2 포함, \(\nu_L=eB/2\pi m_ec\)), 봉우리는 \(0.29\nu_c\), 정규화는 \(\int F\,d\nu=8\pi\nu_c/9\sqrt3\). 두 식은 서로 맞는다: \(\tfrac{\sqrt3e^3B_\perp}{m_ec^2}\cdot\tfrac{2}{3\sqrt3}\tfrac{\gamma^2eB_\perp}{m_ec}=\tfrac{2e^4\gamma^2B_\perp^2}{3m_e^2c^3}\). 외울 것은 모양 — 저주파 \(\nu^{1/3}\), 봉우리 \(\propto\gamma^2B\), 고주파 지수 감쇠. [[L10.s8]]</div>
+
+<div class="slide"><div class="sh">L10 · 슬라이드 9 <span class="st">Synchrotron Cooling</span></div>
+<ul><li>Electrons in a plasma emitting synchrotron radiation cool down. Total energy \(E=\gamma m_ec^2\), energy loss rate \(dE/dt=-P_{\rm em}\).</li>
+<li>\[m_ec^2\frac{d\gamma}{dt}=-\frac23\frac{e^4v^2B_\perp^2}{m_e^2c^5}\gamma^2\approx-\frac23\frac{e^4B_\perp^2}{m_e^2c^3}\gamma^2\ \Rightarrow\ \gamma(t)=\gamma_0(1+A\gamma_0t)^{-1},\quad A=\frac{2e^4B_\perp^2}{3m_e^3c^5}\]</li>
+<li>Lifetime of an electron: \(t_{1/2}=(A\gamma_0)^{-1}=\dfrac{5.2\times10^8}{\gamma_0B_\perp^2}\) s. \(t_{1/2}\) is shorter for electrons with larger \(\gamma_0\). In general, \(t_{1/2}\) is shorter than the age of supernova remnants.</li></ul> [[L10.s9]]</div>
+<div class="trap"><b>함정 · 5.2×10⁸ 과 7.7×10⁸</b>PPT 식은 \(B_\perp=B\sin\psi\)로 쓴 것이고(\(3m_e^3c^5/2e^4=5.2\times10^8\), cgs), 예제 6.18의 \(6\pi m_ec/\sigma_TB^2=7.7\times10^8/B^2\)는 피치각 평균 \(\langle\sin^2\psi\rangle=2/3\)을 넣은 것 — 1.5배 차이는 이 때문이다. γ₀ = 10⁴, B⊥ = 100 μG면 PPT 식으로 \(5.2\times10^{12}\) s ≈ 1.6×10⁵년, 평균하면 2.5×10⁵년. 어느 쪽이든 녹음의 "10만 년 정도"와 맞는다. [[L10.s9]]</div>
+
+<div class="slide"><div class="sh">L10 · 슬라이드 10 <span class="st">Radio Galaxy</span></div>
+<ul><li>Cygnus A is a powerful radio galaxy containing magnetic fields and cosmic rays, emitting synchrotron radiation. [그림: 두 로브, \(R\sim30\) kpc, \(B\sim10^{-4}\) G; Cyg A·Cas A·Vir A 멱법칙 스펙트럼]</li>
+<li>Assume that the radio lobes of Cygnus A consist of power-law electrons. The volume emissivity is \[4\pi j_\nu=\frac23\sigma_TcU_Bn_0\frac1{\nu_L}\left(\frac{\nu}{\nu_L}\right)^{(1-p)/2},\quad \nu_L=\frac{eB}{2\pi m_ec},\ U_B=\frac{B^2}{8\pi}\]</li>
+<li>Luminosity \(L_\nu=4\pi j_\nu V\propto n_0B^2B^{-1-(1-p)/2}V\propto n_0B^{(1+p)/2}V\).</li>
+<li>For given \(L_\nu\) and \(V\), we thus obtain \(n_0=CB^{-(1+p)/2}\) with constant \(C\).</li></ul> [[L10.s10]]</div>
+<div class="explain"><b>부가설명</b>밝기 하나로는 \(n_0\)와 \(B\)를 따로 정할 수 없다 — 전자가 많고 자기장이 약해도, 그 반대여도 같은 \(L_\nu\)가 나온다(축퇴). p = 3이면 \(n_0B^2\) = 상수이고, 이것이 Q4의 답 형태다. [[L10.s10, L10.s19]]</div>
+
+<div class="slide"><div class="sh">L10 · 슬라이드 11 <span class="st">Energy Equipartition</span></div>
+<ul><li>Cosmic rays have energy density \(U_{\rm cr}=\displaystyle\int_{\gamma_{\min}}^\infty n(\gamma)\gamma m_ec^2\,d\gamma=\frac{n_0m_ec^2}{p-2}\gamma_{\min}^{2-p}\ (p&gt;2)\), where \(\gamma_{\min}^2\nu_L\) is the lowest observed frequency.</li>
+<li>Total energy per unit volume (when \(\gamma_{\min}\) is known): \(E/V=U_B+U_{\rm cr}=\dfrac{B^2}{8\pi}+C'B^{-(1+p)/2}\)</li>
+<li>The minimum energy condition requires \(\dfrac{d}{dB}(U_B+U_{\rm cr})=\dfrac{2U_B}{B}-\dfrac{p+1}{2}\dfrac{U_{\rm cr}}{B}=0\), or <span class="hl">\(U_{\rm cr}=\dfrac{4}{p+1}U_B\sim U_B\)</span>.</li>
+<li>This is equivalent to the energy equipartition. Strong \(B\) can accelerate electrons to high γ. Large cosmic-ray energy can induce strong \(B\). \(U_{\rm cr}=(4/3)U_B\) when \(\gamma_{\min}^2\nu_L\) is fixed (instead of fixed \(\gamma_{\min}\)).</li></ul> [[L10.s11]]</div>
+<div class="explain"><b>부가설명 · 확인 필요였던 계수 확정</b>γ_min을 고정하면 \(U_{\rm cr}=\tfrac{4}{p+1}U_B\)(p = 3이면 \(U_{\rm cr}=U_B\)), 관측 최저 주파수 \(\gamma_{\min}^2\nu_L\)을 고정하면 \(U_{\rm cr}=\tfrac43U_B\) — 녹음의 "3분의 …factor"는 이 4/3이다. 뒤쪽은 \(\gamma_{\min}\propto B^{-1/2}\)가 되어 \(U_{\rm cr}\propto B^{-(1+p)/2}B^{(p-2)/2}=B^{-3/2}\)이고, \(2U_B=\tfrac32U_{\rm cr}\)에서 나온다(p와 무관). 그림처럼 \(U_B\propto B^2\)는 오르고 \(U_{\rm cr}\)는 내려가 합이 최소인 점이 곧 두 에너지가 비슷한 점이다. [[L10.s11]]</div>
+
+<div class="slide"><div class="sh">L10 · 슬라이드 16–19 <span class="st">Q1–Q4 (SN 1993J)</span></div>
+<ul><li>Q1 spectral index → <b>p = 3</b> [[L10.s16]]</li><li>Q2 solid angle → <b>Ω = 3.67 × 10⁻¹⁷ sr</b> [[L10.s17]]</li><li>Q3 brightness temperature at 23 GHz → <b>\(T_B=4.2\times10^7\) K</b> [[L10.s18]]</li><li>Q4 \(4\pi j_\nu=5.3\times10^{-25}n_0B^2\nu_9^{-1}\) erg cm⁻³ Hz⁻¹ (p = 3) → <b>\(n_0B^2=73\)</b> (cgs) [[L10.s19]]</li></ul></div>
+<div class="explain"><b>부가설명</b>문제 원문과 단계별 풀이는 <a href="#/examples?e=6.17">예제 6.17</a>. 네 답 모두 다시 계산해 PPT 값과 일치함을 확인했다. [[L10.s16, L10.s17, L10.s18, L10.s19]]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u19-1"><div class="qq">관측 스펙트럼이 \(S_\nu\propto\nu^{-0.7}\)이면 전자 지수 \(p\)는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(p=2\alpha+1=2.4\) (\(S_\nu\propto\nu^{-\alpha}\) 약속, α = 0.7). 수업 약속 \(S_\nu\propto\nu^{\alpha}\)로는 \(\alpha=(1-p)/2=-0.7\). α와 p의 정의 부호를 먼저 적는다. [[F21.07, D1006.03]]</p></div></div>
+<div class="qz" data-q="u19-2"><div class="qq">낮은 주파수에서 \(\nu^{5/2}\)가 관측되면 온도를 RJ로 바로 추정하는가? (교재 선행)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 비열적 멱법칙 전자의 자가흡수 source function은 일반 흑체가 아니다.</p></div></div>
+<div class="qz" data-q="u19-3"><div class="qq">등분배 자기장은 직접 측정값인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>가정에 의존한 추정값이다. \(n_0\)–B 축퇴를 풀 다른 방법이 없어 최소에너지(≈등분배)를 가정한 것이고, \(\gamma_{\min}\) 선택 등에 따라 달라진다. 교수님도 나선팔 자기장에 적용하는 것은 "개인적으로 문제가 있다"고 했다. [[D1006.26, D1006.27]]</p></div></div>
+<div class="qz" data-q="u19-4"><div class="qq"><span class="star">강조</span> 천문학에서 중요한 연속복사 메커니즘 네 가지와, 싱크로트론 편광의 방향을 말하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>흑체복사 · 제동복사(bremsstrahlung) · 싱크로트론 · 역콤프턴. 싱크로트론은 강하게 편광되어 있고 전기장 방향이 자기장에 수직. [[D1006.06, D1006.07]]</p></div></div>
+<div class="qz" data-q="u19-5"><div class="qq">전자 지수 \(p\)가 그대로 스펙트럼 지수가 되지 않고 \((1-p)/2\)가 되는 이유를 말로 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>주파수 ν를 내는 전자는 \(\gamma\simeq(\nu/\nu_L)^{1/2}\)(\(\nu_c\propto\gamma^2\)). 개수 × 파워 \(\propto\gamma^{-p}\gamma^2\), 주파수 구간으로 바꾸는 \(d\gamma/d\nu\propto1/\gamma\) → \(\gamma^{1-p}\propto\nu^{(1-p)/2}\). γ 작은 전자는 많고 저주파, γ 큰 전자는 적고 고주파. [[F21.06, F21.08, D1006.05]]</p></div></div>
+<div class="qz" data-q="u19-6"><div class="qq">단일 전자의 싱크로트론 스펙트럼은 원리상 이산 피크인데 왜 연속으로 취급하는가? 피크 간격과 포락선의 최대 위치는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>E(t) = 샤(간격 2π/ω_B) * 펄스 → 변환은 간격 \(\omega_B\)의 샤 × 포락선 F. 포락선 폭이 \(\gamma^3\omega_B\)라 γ = 10⁴이면 ~10¹²개 피크가 촘촘하고, 전자마다 γ·피치각이 달라 빈틈이 메워진다. 최대는 \(\nu\approx0.3\nu_c\)(0.29), 저주파 \(\nu^{1/3}\), 고주파 지수 감쇠. [[D1006.15, D1006.16, D1006.17]]</p></div></div>
+<div class="qz" data-q="u19-7"><div class="qq">\(d\gamma/dt=-A\gamma^2\)의 해와 냉각시간의 정의를 쓰고, B가 2배·γ₀가 10배가 되면 수명이 어떻게 변하는지 말하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\gamma=\gamma_0/(1+A\gamma_0t)\), γ가 절반이 되는 \(t=1/(A\gamma_0)=6\pi m_ec/(\sigma_TB^2\gamma_0)\). B 2배 → 1/4, γ₀ 10배 → 1/10. 고에너지 전자부터 소진 → 고주파 쪽 스펙트럼이 먼저 꺼진다(aging). [[D1006.19, D1006.20, D1006.22]]</p></div></div>
+<div class="qz" data-q="u19-8"><div class="qq">\(L_\nu\)만으로 B를 정할 수 없는 이유와, 최소에너지 조건이 등분배와 거의 같은 이유는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(L_\nu\propto n_0B^{(p+1)/2}\) — 미지수 둘, 관측 하나(축퇴). \(U=U_B+U_{CR}\)에서 \(U_{CR}\propto B^{-(p+1)/2}\)를 넣고 \(dU/dB=0\) → \(U_{CR}=\tfrac4{p+1}U_B\), p ≈ 3이면 계수 ≈ 1. [[D1006.24, D1006.26]]</p></div></div>
+<div class="qz" data-q="u19-9"><div class="qq">초신성 잔해가 수명(~10⁵–10⁶ 년)보다 오래 싱크로트론을 내려면 무엇이 필요한가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>신선한 고에너지 전자의 재공급 — 중심 중성자별(펄서)이 공급원. 재공급이 없으면 고에너지(고주파) 쪽부터 감소. [[D1006.21]]</p></div></div>
+
+<div class="qz" data-q="u19-10"><div class="qq">(PPT Review) 단일 전자 싱크로트론 스펙트럼 \(F(\nu/\nu_c)\)의 모양을 말로 설명하라: 임계 주파수, 봉우리 위치, 양쪽 끝의 거동.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\nu_c=3\gamma^2eB_\perp/4\pi m_ec\), 봉우리는 \(0.29\nu_c\propto\gamma^2B\). 저주파 쪽은 \(\nu^{1/3}\)로 완만히 오르고 고주파 쪽은 \(\sqrt\nu\,e^{-\nu/\nu_c}\)로 급히 꺼진다. 전자 하나로는 \(\omega_B\) 간격의 선 스펙트럼이지만 γ·ψ가 다른 전자들이 섞여 연속이 된다. [[L10.s7, L10.s8]]</p></div></div>
+<div class="qz" data-q="u19-11"><div class="qq">(PPT) 최소에너지 조건에서 \(U_{\rm cr}\)와 \(U_B\)의 비는? γ_min 고정일 때와 최저 관측 주파수 고정일 때를 구분하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(L_\nu\) 고정이면 \(n_0\propto B^{-(1+p)/2}\). γ_min 고정: \(U_{\rm cr}=\tfrac{4}{p+1}U_B\)(p = 3이면 같음). \(\gamma_{\min}^2\nu_L\) 고정: \(U_{\rm cr}=\tfrac43U_B\). 어느 쪽이든 두 에너지밀도가 비슷 — 등분배. [[L10.s10, L10.s11]]</p></div></div>
+
+<p class="note">출처: 플립 21(복사스펙트럼) · 10/6 강의 녹음 · 교재 p.145–150(자가흡수·편광도는 교재 선행) · Lecture10 PPT · 상태: 10/6 반영, 10/8 Lecture10 PPT 대조 완료</p>

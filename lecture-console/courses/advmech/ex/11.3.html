@@ -1,0 +1,12 @@
+<div class="exq"><b>상황.</b> 균일 정육면체(밀도 \(\rho\), 질량 \(M\), 한 변 \(b\)), 한 꼭짓점이 원점, 인접한 세 모서리가 좌표축 위. 관성 텐서를 구한다(원점이 CM이 아님에 주의).</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(I_{ij}=\rho\int(\delta_{ij}r^2-x_ix_j)\dd v\), 적분 구간 \([0,b]^3\).</div>
+<ol>
+<li>\(I_{11}=\rho\int_0^b\int_0^b\int_0^b(x_2^2+x_3^2)\dd v=\rho b\left(\frac{b^3}{3}b+b\frac{b^3}{3}\right)=\tfrac23\rho b^5=\tfrac23Mb^2\).</li>
+<li>\(I_{12}=-\rho\int x_1x_2\dd v=-\rho\frac{b^2}2\frac{b^2}2b=-\tfrac14Mb^2\).</li>
+<li>세 축이 대칭적으로 동등 → 대각 모두 \(\tfrac23\beta\), 비대각 모두 \(-\tfrac14\beta\) (\(\beta=Mb^2\)).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \I=Mb^2\begin{pmatrix}\tfrac23&-\tfrac14&-\tfrac14\-\tfrac14&\tfrac23&-\tfrac14\-\tfrac14&-\tfrac14&\tfrac23\end{pmatrix}\ } \]
+<p class="note"><b>검산</b> ① \(I_{11}\): 모서리 축에 대한 정육면체 = CM 축 \(\tfrac16Mb^2\) + \(M(b/\sqrt2)^2=\tfrac12Mb^2\) → \(\tfrac23Mb^2\) ✓. ② 관성곱 부호: 질량이 모두 제1팔분공간 → \(\sum mx_1x_2&gt;0\) → \(I_{12}&lt;0\) ✓.</p></div>
+<div class="qz" data-q="ex11.3-a"><div class="qq"><b>+α</b> 한 변 \(a\), \(b\), \(c\)인 직육면체(모서리 원점)의 \(I_{11}\)과 \(I_{12}\)는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(I_{11}=\tfrac M3(b^2+c^2)\), \(I_{12}=-\tfrac M4ab\) (\(x_1\) 방향 변 \(a\), \(x_2\) 방향 \(b\)). \(a=b=c\)이면 정육면체 결과 ✓.</p></div></div>
+<div class="qz" data-q="ex11.3-b"><div class="qq"><b>+α</b> 이 텐서로 \(\boldsymbol\omega=\omega(1,1,1)/\sqrt3\)(대각선 방향)일 때 \(T_{\rm rot}\)을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(I_n=\uv n^{\mathsf T}\I\uv n=\tfrac13\sum_{ij}I_{ij}=\tfrac13\left(3\cdot\tfrac23-6\cdot\tfrac14\right)Mb^2=\tfrac16Mb^2\). \(T=\tfrac1{12}Mb^2\omega^2\). (대각선이 주축이고 그 모멘트가 \(\tfrac16Mb^2\) — Example 11.5 예고.)</p></div></div>

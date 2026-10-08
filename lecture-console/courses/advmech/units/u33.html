@@ -1,0 +1,43 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> U32의 loaded string에서 구슬 수 \(n\to\infty\), 간격 \(d\to0\)으로 보내되 선밀도 \(\rho=m/d\)는 고정한다. \(j\)번째 구슬의 진폭 \(\sin\frac{jr\pi}{n+1}\)은 무엇이 될까? 모드 수는? 초기 모양 \(q(x,0)\)에서 모드 진폭을 뽑는 이산 사인 변환은 어떤 적분으로 바뀔까? 그리고 기타 줄의 한가운데를 뜯으면 어떤 배음이 빠질지 예측해 보라.</div>
+
+<h4>13.1–13.2 연속 줄: loaded string의 극한 <span class="en">continuous string as a limiting case</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>극한 \(n\to\infty\): 모드 함수와 진동수 <b>(필수)</b></div>
+<ol>
+<li>\(n\to\infty\), \(d\to0\), \((n+1)d=L\), \(m/d=\rho\) 고정. \(jd\to x\):
+\[ \frac{jr\pi}{n+1}=\frac{r\pi(jd)}{(n+1)d}\to\frac{r\pi x}{L} . \]</li>
+<li>\[ q(x,t)=\sum_{r=1}^\infty\eta_r(t)\sin\frac{r\pi x}{L}=\sum_r\beta_re^{i\omega_rt}\sin\frac{r\pi x}{L} . \]
+모드가 무한히 많고, 초기조건도 두 개의 연속 함수 \(q(x,0)\), \(\dot q(x,0)\)라 무한히 많은 상수를 정할 수 있다.</li>
+<li>진동수: \(\omega_r=2\sqrt{\frac\tau{md}}\sin\frac{r\pi d}{2L}\to2\sqrt{\frac{\tau}{md}}\frac{r\pi d}{2L}\):
+\[ \boxed{\ \omega_r=\frac{r\pi}{L}\sqrt{\frac\tau\rho}\ } \]
+등간격(배음 \(\omega_r=r\omega_1\)) — 악기 음색의 기반.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>초기조건 → 모드 진폭 (Fourier 사인 급수) — 교재 식 (13.6)–(13.8)</div>
+<ol>
+<li>\(\beta_r=\mu_r+i\nu_r\): \(q(x,0)=\sum\mu_r\sin\frac{r\pi x}L\), \(\dot q(x,0)=-\sum\omega_r\nu_r\sin\frac{r\pi x}L\).</li>
+<li>직교성 \(\int_0^L\sin\frac{r\pi x}L\sin\frac{s\pi x}L\dd x=\frac L2\delta_{rs}\) (이산 합 \(\frac{n+1}2\delta_{rs}\)의 극한).</li>
+<li>\[ \boxed{\ \mu_r=\frac2L\int_0^Lq(x,0)\sin\frac{r\pi x}L\dd x,\qquad \nu_r=-\frac{2}{\omega_rL}\int_0^L\dot q(x,0)\sin\frac{r\pi x}L\dd x\ } \]</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>뜯은 줄 — Example 13.1 <b>(필수)</b></div>
+<ol>
+<li>가운데를 \(h\) 당긴 삼각형, 정지 출발: \(q(x,0)=\frac{2h}Lx\) (\(x\le L/2\)), \(\frac{2h}L(L-x)\) (\(x\ge L/2\)). \(\nu_r=0\).</li>
+<li>\(\mu_r=\frac{4h}{L^2}\left[\int_0^{L/2}x\sin\frac{r\pi x}L\dd x+\int_{L/2}^L(L-x)\sin\frac{r\pi x}L\dd x\right]=\frac{8h}{r^2\pi^2}\sin\frac{r\pi}2\).</li>
+<li>\(\mu_r=0\) (\(r\) 짝수), \(\pm\frac{8h}{r^2\pi^2}\) (홀수):
+\[ q(x,t)=\frac{8h}{\pi^2}\left[\sin\frac{\pi x}L\cos\omega_1t-\frac19\sin\frac{3\pi x}L\cos\omega_3t+\frac1{25}\sin\frac{5\pi x}L\cos\omega_5t-\cdots\right]. \]</li>
+<li><b>짝수 배음이 없다</b> — 짝수 모드는 가운데가 마디라 가운데를 뜯어서는 들뜨지 않는다. 일반적으로 뜯은 점에 마디가 있는 배음은 모두 빠진다(기타에서 브리지 가까이 뜯으면 음색이 밝아지는 이유).</li>
+<li>에너지 \(\propto\omega_r^2\mu_r^2\propto1/r^2\) (U34): 기본음 : 3배음 : 5배음 = \(1:\frac19:\frac1{25}\) → 3배음은 약 19 dB, 5배음은 28 dB 아래.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 양끝 고정 연속 줄</div>
+\[ q=\sum_r\sin\frac{r\pi x}L(\mu_r\cos\omega_rt-\nu_r\sin\omega_rt),\quad \omega_r=\frac{r\pi}L\sqrt{\tau/\rho},\quad \mu_r=\frac2L\int_0^Lq_0\sin\frac{r\pi x}L\dd x \]
+<p class="note">가운데 뜯기: \(\mu_r=\frac{8h}{r^2\pi^2}\sin\frac{r\pi}2\) — 홀수 배음만.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u33-1"><div class="qq">(시험형) Example 13.1의 \(\mu_r\)을 적분으로 계산하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>대칭(\(x\to L-x\))을 쓰면 두 적분은 \(\sin\frac{r\pi}2\)에 비례하는 같은 값 — \(\int_0^{L/2}x\sin kx\,\dd x=\left[\frac{\sin kx}{k^2}-\frac{x\cos kx}{k}\right]_0^{L/2}\) (\(k=r\pi/L\)). 두 적분의 \(\cos\) 항은 상쇄, \(\sin\) 항 합은 \(\frac{2\sin(r\pi/2)}{k^2}\). \(\mu_r=\frac{4h}{L^2}\cdot\frac{2L^2}{r^2\pi^2}\sin\frac{r\pi}2\) ✓.</p></div></div>
+
+<div class="qz" data-q="u33-2"><div class="qq">Problem 13-2: 한쪽 끝에서 \(L/3\) 지점을 \(h\) 당겼다 놓으면 어떤 배음이 빠지는가? \(\mu_r\)의 일반식을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>꼭짓점 \(a=L/3\)인 삼각형에 대한 일반식: \(\mu_r=\frac{2hL^2}{r^2\pi^2a(L-a)}\sin\frac{r\pi a}{L}\). \(a=L/3\): \(\mu_r=\frac{9h}{r^2\pi^2}\sin\frac{r\pi}3\) → \(r=3,6,9,\ldots\) 빠짐(그 모드들은 \(L/3\)에 마디).</p></div></div>
+
+<div class="qz" data-q="u33-3"><div class="qq">\(q(x,0)=0\), \(\dot q(x,0)=A\sin(3\pi x/L)\)으로 출발(Problem 13-1). 운동을 쓰라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\mu_r=0\), \(\nu_r\)는 \(r=3\)만: \(-\omega_3\nu_3=A\) → \(q=\frac{A}{\omega_3}\sin\frac{3\pi x}L\sin\omega_3t\). 순수한 3배음 하나만.</p></div></div>

@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>(a) 쌍극자모멘트 \(p(t)=Q(t)d\)이므로</p>
+\[ \ddot p=d\,\ddot Q=\frac{d\,Q_0}{(RC)^2}e^{-t/RC},\qquad
+P=\frac{\mu_0\ddot p^2}{6\pi c}=\frac{\mu_0 d^2Q_0^2}{6\pi c(RC)^4}e^{-2t/RC}. \]
+\[ W_{\rm rad}=\int_0^\infty P\,dt=\frac{\mu_0d^2Q_0^2}{6\pi c(RC)^4}\cdot\frac{RC}{2}=\frac{\mu_0d^2Q_0^2}{12\pi c\,R^3C^3}. \]
+<p>초기 에너지 \(Q_0^2/2C\)로 나누면</p>
+\[ \boxed{\;f=\frac{W_{\rm rad}}{Q_0^2/2C}=\frac{\mu_0 d^2}{6\pi c\,R^3C^2}\;} \]
+<p>(b) \(\dfrac{\mu_0}{6\pi c}=2.22\times10^{-16}\), \(d^2=10^{-8}\,\mathrm{m^2}\), \(R^3C^2=(10^3)^3(10^{-12})^2=10^{-15}\):</p>
+\[ f=\frac{(2.22\times10^{-16})(10^{-8})}{10^{-15}}=\boxed{\;\approx2\times10^{-9}\;} \]
+<p>즉 10억분의 2. 전자회로에서 복사손실을 무시하는 것은 <b>충분히 타당</b>하다.</p>
+<div class="alabel">감점 포인트</div>
+<p>\(\ddot Q\)를 \(\dot Q\)로 착각하는 것, 그리고 \(\int e^{-2t/RC}dt=RC/2\)에서 인수 2를 놓치는 것.</p></div><!--/sol-->

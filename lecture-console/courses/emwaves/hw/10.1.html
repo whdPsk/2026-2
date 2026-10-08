@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+출발점은 퍼텐셜 표현을 Maxwell 방정식 (i), (iv)에 넣어 얻은 두 식이다.
+\[ \nabla^2V+\frac{\partial}{\partial t}(\divg\vb{A})=-\frac{1}{\eps}\rho,\qquad
+\left(\nabla^2\vb{A}-\muz\eps\frac{\partial^2\vb{A}}{\partial t^2}\right)-\nabla\!\left(\divg\vb{A}+\muz\eps\frac{\partial V}{\partial t}\right)=-\muz\vb{J}. \]
+첫 식에 \(\muz\eps\,\partial^2V/\partial t^2\)를 <b>더하고 빼는</b> 것이 전부다.
+\[ \underbrace{\nabla^2V-\muz\eps\frac{\partial^2V}{\partial t^2}}_{\Box^2V}
++\frac{\partial}{\partial t}\underbrace{\left(\divg\vb{A}+\muz\eps\frac{\partial V}{\partial t}\right)}_{L}=-\frac{\rho}{\eps}. \]
+두 번째 식은 이미 \(\Box^2\vb{A}\)와 \(\nabla L\)의 조합이다. 따라서
+\[ \boxed{\;\Box^2V+\frac{\partial L}{\partial t}=-\frac{1}{\eps}\rho,\qquad \Box^2\vb{A}-\nabla L=-\muz\vb{J}\;} \]
+Lorenz 게이지란 정확히 \(L=0\)을 고르는 것이고, 그때 네 방정식은 완전히 분리된 비동차 파동방정식이 된다.
+<div class="alabel">감점 포인트</div>
+\(\muz\eps\,\partial^2V/\partial t^2\)를 "더하고 빼기"를 안 하고 억지로 정리하려다 부호를 틀리는 경우가 많다.</div><!--/sol-->

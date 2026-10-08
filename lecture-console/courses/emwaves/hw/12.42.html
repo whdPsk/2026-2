@@ -1,0 +1,16 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<b>★ hidden momentum — 8장 field momentum과 짝을 이루는 문제.</b>
+<p>Ex. 12.13의 전략을 그대로 일반화한다. 전류를 전하 \(Q\), 질량 \(M\)인 입자들의 흐름으로 본다. 고리 위 한 조각 \(\dd\vb{l}\)에서 선전하밀도를 \(\lambda\), 속력을 \(u\)라 하면 그 조각 안의 입자 수는 \(\lambda\,\dd l/Q\)이고, 각 입자의 운동량은 \(\gamma M\vb{u}\)이다. 따라서</p>
+\[ \dd\vb{p}=\gamma M u\,\frac{\lambda\,\dd l}{Q}\,\hat{\vb{l}}=\frac{\gamma M(\lambda u)}{Q}\dd\vb{l}=\frac{\gamma M I}{Q}\dd\vb{l}, \]
+<p>여기서 정상전류 조건 \(I=\lambda u=\)일정을 썼다(그래야 전하가 어디에도 쌓이지 않는다). 이것이 요령이다 — \(u\)와 \(\lambda\)는 위치에 따라 변해도 곱은 일정.</p>
+<p>다음으로 <b>에너지 보존</b>: 정전기장 속을 도는 입자는 \(\gamma Mc^{2}+QV=\text{const}\equiv\mathcal{E}\)를 만족하므로 \(\gamma M=(\mathcal{E}-QV)/c^{2}\). 그러면</p>
+\[ \vb{p}_{\rm hid}=\frac{I}{Q}\oint\gamma M\,\dd\vb{l}=\frac{I}{Qc^{2}}\oint(\mathcal{E}-QV)\dd\vb{l}=-\frac{I}{c^{2}}\oint V\,\dd\vb{l}, \]
+<p>닫힌 고리에서 \(\oint\dd\vb{l}=0\)이므로 상수항이 죽는다. 즉</p>
+\[ \boxed{\ \vb{p}_{\rm hid}=-\frac{I}{c^{2}}\oint V\,\dd\vb{l}\ ,\qquad \vb{p}_{\rm hid}=-\frac{1}{c^{2}}\int V\vb{K}\,\dd a=-\frac{1}{c^{2}}\int V\vb{J}\,\dd\tau\ } \]
+<p>(\(I\,\dd\vb{l}\to\vb{K}\,\dd a\to\vb{J}\,\dd\tau\)의 표준 치환.)</p>
+<p><b>Eq. 8.46과의 비교:</b> 그 식은 \(\vb{p}_{\rm em}=\eps\muz\!\int V\vb{J}\,\dd\tau=(1/c^{2})\!\int V\vb{J}\,\dd\tau\)였다. 따라서</p>
+\[ \vb{p}_{\rm hid}=-\vb{p}_{\rm em}\quad\Longrightarrow\quad \vb{p}_{\rm tot}=0. \]
+<p>정적인 배치의 에너지중심은 정지해 있으므로 Eq. 12.73에 의해 총 운동량은 0이어야 한다 — 숨은 운동량은 그 요구를 정확히 충족시키는 역학적 상대론 효과다.</p>
+<div class="alabel">감점 포인트</div>
+비상대론적으로 \(p=Mu\)를 쓰면 \(\oint\dd\vb{l}=0\)으로 0이 나온다. \(\gamma\)가 위치에 따라 달라진다는 점이 전부다.</div><!--/sol-->

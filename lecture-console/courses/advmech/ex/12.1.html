@@ -1,0 +1,13 @@
+<div class="exq"><b>상황.</b> U26의 두 결합 진동자(질량 \(M\), 벽 용수철 \(\kappa\), 결합 \(\kappa_{12}\))를 일반 형식 \(T=\tfrac12\sum m_{jk}\dot q_j\dot q_k\), \(U=\tfrac12\sum A_{jk}q_jq_k\)로 다시 푼다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(U\) 전개 → \(A_{jk}=\partial^2U/\partial x_j\partial x_k\).</div>
+<ol>
+<li>\(U=\tfrac12\kappa x_1^2+\tfrac12\kappa_{12}(x_2-x_1)^2+\tfrac12\kappa x_2^2=\tfrac12(\kappa+\kappa_{12})(x_1^2+x_2^2)-\kappa_{12}x_1x_2\).</li>
+<li>\(A_{11}=A_{22}=\kappa+\kappa_{12}\), \(A_{12}=\partial^2U/\partial x_1\partial x_2=-\kappa_{12}=A_{21}\).</li>
+<li>\(T=\tfrac12M(\dot x_1^2+\dot x_2^2)\) → \(m_{11}=m_{22}=M\), \(m_{12}=0\).</li>
+<li>\(\begin{vmatrix}\kappa+\kappa_{12}-M\omega^2&-\kappa_{12}\-\kappa_{12}&\kappa+\kappa_{12}-M\omega^2\end{vmatrix}=0\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \omega_1=\sqrt{\frac{\kappa+2\kappa_{12}}M},\qquad \omega_2=\sqrt{\frac\kappa M}\ } \]
+<p class="note"><b>검산</b>: Newton 방법(U26)과 동일 ✓. 교차항 \(-\kappa_{12}x_1x_2\)가 \(\tfrac12(A_{12}+A_{21})x_1x_2\)이므로 \(A_{12}=-\kappa_{12}\) (−2κ₁₂로 착각하지 말 것).</p></div>
+<div class="qz" data-q="ex12.1-a"><div class="qq"><b>+α</b> 벽 용수철이 서로 다르다(\(\kappa_1\ne\kappa_2\)), 질량 같음. 영년방정식과 진동수를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\((\kappa_1+\kappa_{12}-M\omega^2)(\kappa_2+\kappa_{12}-M\omega^2)=\kappa_{12}^2\). \(M\omega^2=\frac{\kappa_1+\kappa_2}2+\kappa_{12}\pm\sqrt{\left(\frac{\kappa_1-\kappa_2}2\right)^2+\kappa_{12}^2}\). 결합이 두 진동수를 밀어내는 "준위 반발"(avoided crossing).</p></div></div>
+<div class="qz" data-q="ex12.1-b"><div class="qq"><b>+α</b> 질량이 \(M\), \(2M\)이고 세 용수철이 모두 \(\kappa\)일 때 진동수를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(A=\kappa\begin{pmatrix}2&-1\-1&2\end{pmatrix}\), \(m=M\,\mathrm{diag}(1,2)\). \(\lambda=M\omega^2/\kappa\): \((2-\lambda)(2-2\lambda)-1=0\) → \(2\lambda^2-6\lambda+3=0\) → \(\lambda=\frac{3\pm\sqrt3}{2}\) (0.634, 2.366).</p></div></div>

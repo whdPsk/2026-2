@@ -1,0 +1,13 @@
+<div class="exq"><b>상황.</b> 길이 \(b\), 질량 \(m\)인 두 진자가 평형에서 늘지 않은 용수철(\(\kappa\))로 이어져 있다. 고유진동수와 정규 모드.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>좌표 \(\theta_1,\theta_2\), 작은 각.</div>
+<ol>
+<li>\(T=\tfrac12mb^2(\dot\theta_1^2+\dot\theta_2^2)\). \(U=mgb(1-\cos\theta_1)+mgb(1-\cos\theta_2)+\tfrac12\kappa(b\sin\theta_1-b\sin\theta_2)^2\approx\frac{mgb}2(\theta_1^2+\theta_2^2)+\frac{\kappa b^2}2(\theta_1-\theta_2)^2\).</li>
+<li>\(m_{jk}=mb^2\delta_{jk}\), \(A=\begin{pmatrix}mgb+\kappa b^2&-\kappa b^2\-\kappa b^2&mgb+\kappa b^2\end{pmatrix}\).</li>
+<li>\(mg+\kappa b-\omega^2mb=\pm\kappa b\).</li>
+<li>+: \(\omega_1^2=g/b\), \(a_{11}=a_{21}\). −: \(\omega_2^2=g/b+2\kappa/m\), \(a_{12}=-a_{22}\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \omega_1=\sqrt{g/b}\ (\theta_1=\theta_2),\qquad \omega_2=\sqrt{g/b+2\kappa/m}\ (\theta_1=-\theta_2)\ } \]
+<p class="note">정규 좌표 \(\eta_1\propto\theta_1+\theta_2\), \(\eta_2\propto\theta_1-\theta_2\). 모드 1에서 용수철은 늘지도 줄지도 않아 각 진자가 자기 진동수로. <b>교재의 번호가 U26과 반대</b>(여기선 1이 대칭)이니 번호보다 모양으로 기억할 것.</p></div>
+<div class="qz" data-q="ex12.4-a"><div class="qq"><b>+α</b> 용수철을 진자 줄의 중간(매단 점에서 \(b/2\))에 달면 진동수는 어떻게 바뀌는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>용수철 늘어남 \(\frac b2(\theta_1-\theta_2)\) → 결합 항 \(\frac{\kappa b^2}8(\theta_1-\theta_2)^2\) (1/4). \(\omega_1^2=g/b\) 그대로, \(\omega_2^2=g/b+\kappa/2m\).</p></div></div>
+<div class="qz" data-q="ex12.4-b"><div class="qq"><b>+α</b> 진자 2를 손으로 고정하고 진자 1만 흔들면 진동수는? 이것이 \(\omega_1\)과 \(\omega_2\) 사이에 있음을 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(mb^2\ddot\theta_1=-(mgb+\kappa b^2)\theta_1\) → \(\omega_0^2=g/b+\kappa/m\). \(g/b&lt;g/b+\kappa/m&lt;g/b+2\kappa/m\) ✓ — 결합이 공통 진동수를 위아래로 가른다(U26 유도 2).</p></div></div>

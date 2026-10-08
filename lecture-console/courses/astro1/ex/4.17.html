@@ -1,0 +1,10 @@
+<div class="exq"><span class="examtag">PPT 슬라이드 11–13 수치 · 9/17 수업</span><br>\(\tau=2e^2/3m_ec^3\)를 계산하고, λ = 5000 Å 진동자에 대해 \(\omega_0\tau\), \(\Gamma=\omega_0^2\tau\), \(\tau_{\rm life}=1/\Gamma\), 진동 횟수 \(\omega_0/\Gamma\)를 구하라. [[L06.s11, L06.s12, L06.s13]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>python 재계산</div><ol>
+<li>\(\tau=2r_e/3c=2(2.82\times10^{-13})/(3\cdot3.00\times10^{10})=6.27\times10^{-24}\) s. [[S0917.29]]</li>
+<li>\(\omega_0=2\pi c/\lambda=3.77\times10^{15}\,\mathrm{s^{-1}}\) → \(\omega_0\tau=2.4\times10^{-8}\ll1\) (약한 감쇠). [[S0917.29]]</li>
+<li>\(\Gamma=\omega_0^2\tau=8.9\times10^7\,\mathrm{s^{-1}}\), \(\tau_{\rm life}=1.12\times10^{-8}\) s. [[S0917.30, S0917.31]]</li>
+<li>\(\omega_0/\Gamma=1/(\omega_0\tau)=4.2\times10^7\) rad → 약 \(7\times10^6\) 주기 동안 진동한 뒤 에너지가 \(1/e\)로.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>τ = 6.27×10⁻²⁴ s, ω₀τ = 2.4×10⁻⁸, Γ = 8.9×10⁷ s⁻¹, τ_life ≈ 1.1×10⁻⁸ s. 원자 들뜬 상태 수명 ~10⁻⁸ s와 같은 차수.</p></div>
+<div class="qz" data-q="ex4.17-a"><div class="qq"><b>+α</b> X선(λ = 1 Å) 진동자라면 ω₀τ는? 여전히 약한 감쇠인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>ω₀τ ∝ 1/λ → 5000배 → 1.2×10⁻⁴ ≪ 1, 여전히 약한 감쇠.</p></div></div>
+<div class="qz" data-q="ex4.17-b"><div class="qq"><b>+α</b> τ_life가 λ에 어떻게 의존하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>τ_life = 1/(ω₀²τ) ∝ λ² — 긴 파장 전이일수록 고전 수명이 길다.</p></div></div>

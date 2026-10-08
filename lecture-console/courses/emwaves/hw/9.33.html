@@ -1,0 +1,21 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\[\mathbf E=\frac{A\cos(kz-\omega t)}{s}\hat s,\qquad \mathbf B=\frac{A\cos(kz-\omega t)}{cs}\hat\phi,\qquad k=\frac{\omega}{c}.\]
+<b>(a)</b> 원통좌표에서
+\[\nabla\cdot\mathbf E=\frac1s\frac{\partial}{\partial s}(sE_s)=\frac1s\frac{\partial}{\partial s}\big[A\cos(kz-\omega t)\big]=0\ \checkmark\]
+\[\nabla\cdot\mathbf B=\frac1s\frac{\partial B_\phi}{\partial\phi}=0\ \checkmark\]
+\[\nabla\times\mathbf E=\frac{\partial E_s}{\partial z}\hat\phi=-\frac{Ak}{s}\sin(kz-\omega t)\hat\phi,\qquad -\frac{\partial\mathbf B}{\partial t}=-\frac{A\omega}{cs}\sin(kz-\omega t)\hat\phi\]
+두 식은 \(k=\omega/c\)일 때 일치 \(\checkmark\)
+\[\nabla\times\mathbf B=-\frac{\partial B_\phi}{\partial z}\hat s+\frac1s\frac{\partial(sB_\phi)}{\partial s}\hat z=\frac{Ak}{cs}\sin(kz-\omega t)\hat s+0,\]
+\[\frac{1}{c^2}\frac{\partial\mathbf E}{\partial t}=\frac{A\omega}{c^2 s}\sin(kz-\omega t)\hat s\]
+역시 \(k=\omega/c\)일 때 일치 \(\checkmark\)<br>
+<b>경계조건:</b> \(\mathbf E\)는 순수 반지름 방향 → 도체 표면(\(s=a,b\))에서 \(E^{\parallel}=E_z=E_\phi=0\ \checkmark\). \(\mathbf B\)는 순수 방위 방향 → \(B^{\perp}=B_s=0\ \checkmark\).<br>
+<b>(b)</b> 반지름 \(s\)(\(a&lt;s&lt;b\)), 길이 \(dz\)의 원통에 Gauss 법칙:
+\[E_s=\frac{\lambda}{2\pi\epsilon_0 s}\ \Rightarrow\ \boxed{\lambda(z,t)=2\pi\epsilon_0 A\cos(kz-\omega t)}\]
+반지름 \(s\)의 원에 Ampère 법칙:
+\[B_\phi=\frac{\mu_0 I}{2\pi s}\ \Rightarrow\ I=\frac{2\pi s B_\phi}{\mu_0}=\frac{2\pi A}{\mu_0c}\cos(kz-\omega t)\]
+\[\boxed{I(z,t)=2\pi\epsilon_0 c\,A\cos(kz-\omega t)=\lambda(z,t)\,c}\]
+연속방정식 검산: \(\partial_t\lambda=2\pi\epsilon_0 A\omega\sin(kz-\omega t)\), \(-\partial_zI=2\pi\epsilon_0 cAk\sin(kz-\omega t)\); \(\omega=ck\)이므로 \(\partial_t\lambda+\partial_zI=0\ \checkmark\)<br>
+전하가 속도 \(c\)로 흐르는 셈(\(I=\lambda c\))이고, 파는 분산 없이 \(c\)로 전달된다 — 이것이 동축 케이블이 신호 전송에 쓰이는 이유(cutoff 없음).
+<div class="alabel">감점 포인트</div>
+동축선에는 <b>cutoff 주파수가 없다</b>(TEM이라 \(k=\omega/c\), 임의 \(\omega\) 가능)는 점이 속 빈 도파관과의 결정적 차이. 시험에 자주 나온다.</div><!--/sol-->

@@ -1,0 +1,196 @@
+<div class="predict"><b>◈ 학습 목표.</b> ① <b>연속복사 4대 메커니즘</b>(흑체·제동·싱크로트론·역콤프턴)을 구분한다. ② 톰슨 vs 콤프턴: 전자의 반동(recoil)을 무시할 수 있는가 — 기준은 \(h\nu\) 대 \(m_ec^2=0.511\) MeV. ③ 에너지·운동량 보존으로 <span class="hl">\(h\nu'=h\nu/[1+(h\nu/m_ec^2)(1-\cos\theta)]\)</span>를 유도하고 두 극한을 읽는다. ④ Klein–Nishina 단면적의 두 성질(고에너지에서 감소·전방 쏠림). ⑤ 역콤프턴: 상대론적 전자가 광자에 에너지를 줌, K/K′ 좌표계 표기, \(\nu_1\sim\gamma^2\nu\)(10/6 예고), SSC. ⑥ 역콤프턴 파워·콤프턴화(교재 선행, 강의 미진도).</div>
+
+<h4>연속복사 네 가지 <span class="en">continuum radiation mechanisms</span></h4>
+<div class="explain"><b>10/6 강의</b> <span class="star">강조</span> 지금까지(6주차쯤) 배운 복사 메커니즘을 정리하면, <span class="hl">천문학에서 중요한 연속복사는 네 가지: ① 흑체복사 ② 제동복사(bremsstrahlung) ③ 싱크로트론 ④ 역콤프턴(inverse Compton)</span>. "이 네 가지는 <b>대학원 입시에도, 면접 시에도 잘 나오니</b> 뭐가 뭔지 잘 기억해 두세요." 선복사(line radiation)는 자세히 들어가지는 않았지만 Einstein A 계수로 선의 세기를 재는 방법까지 배웠다. 마지막으로 배울 복사가 콤프턴 산란. [[D1006.07]]</div>
+<div class="intuit"><b>네 가지를 한 줄씩</b>흑체 = 물질과 평형인 복사(온도 하나로 결정, U04). 제동복사 = 자유전자가 이온의 쿨롱장에서 가속(열적 플라스마, U15–16). 싱크로트론 = 자기장 속 상대론적 전자의 원운동(비열적 멱법칙, U18–19). 역콤프턴 = 상대론적 전자가 기존의 저에너지 광자를 때려 올림(이 단원).</div>
+
+<h4>톰슨 산란 vs 콤프턴 산란 <span class="en">recoil matters?</span></h4>
+<div class="slide flip"><div class="sh">플립 22 · 0:00–1:26 <span class="st">톰슨 산란 복습</span></div>
+<ol><li>이번 차시: 콤프턴 산란과 역콤프턴 산란, 상대론적 도플러 효과, 역콤프턴 산란의 파워. [[F22.01]]</li>
+<li>톰슨 산란: <b>정지해 있는 전자</b>에 복사가 입사 → 전자가 가속 운동 → 가속되는 전자가 방출한 복사가 퍼져 나가는 과정. [[F22.01]]</li>
+<li>톰슨은 입사 복사의 에너지가 전자의 정지질량 에너지(약 0.5 MeV)보다 <b>무척 작아</b> 전자가 뒤로 튀는 <b>반동(recoil)을 무시</b>할 수 있을 때: \(h\nu\ll m_ec^2\). 이때 산란 후 주파수 \(\nu'\)(프라임 = 산란 후)는 입사와 같다: \(h\nu'=h\nu\) — 에너지가 변하지 않는 산란. [[F22.02]]</li>
+<li>미분 단면적과 총 단면적은 이미 배운 대로: [[F22.02]]
+\[ \frac{d\sigma_T}{d\Omega}=\frac{r_e^2}{2}(1+\cos^2\theta),\qquad\sigma_T=\frac{8\pi}{3}r_e^2 \]</li></ol></div>
+<div class="prof"><b>수업 문답 — "콤프턴 산란이 무엇일까요?"</b><b>학생</b>: (정지해 있는 전자에) 광자가 충돌해서 광자의 에너지가 전자에 전달되는 것. <b>교수님</b>: 정확히는 빛과 전자의 충돌. 그럼 톰슨과의 차이는? <b>학생</b>: 광자의 에너지가 전자의 정지질량 에너지보다 큰 경우. <b>교수님</b>: 그렇죠. [[D1006.08]]<br>
+일반적으로는 <span class="hl">콤프턴 산란이 톰슨 산란을 포함하는, 더 일반화된 산란</span>이다. 전자에 빛이 와서 때리면 빛은 각 θ로 산란되어 나가고 전자는 다른 쪽으로 움직여 간다 — <b>전자가 움직이는 효과를 고려하면 콤프턴</b>, 들어온 빛의 에너지가 너무 작아 전자가 거의 움직이지 않으면 톰슨. 즉 <span class="hl">콤프턴 산란의 저에너지 극한(low-energy limit)이 톰슨 산란</span>. [[D1006.08]]</div>
+<div class="slide flip"><div class="sh">플립 22 · 1:26–4:11 <span class="st">콤프턴 산란: 에너지·운동량 보존</span></div>
+<ol><li>콤프턴 산란은 더 일반적인 산란: 정지한 전자에 들어오는 복사의 에너지가 꽤 큰 경우(전자의 정지질량 에너지 0.5 MeV보다 큰 경우). 전자가 <b>recoil</b>되어 움직인다. 전자의 운동량을 \(p\)라 하면 특수상대론에서 전자의 에너지는 \(E=\sqrt{(m_ec^2)^2+(pc)^2}\)(정지질량 에너지와 운동 부분의 합). [[F22.03]]</li>
+<li>에너지 보존: 충돌 전 = 복사 에너지 + 전자의 정지질량 에너지(정지해 있으므로), 충돌 후 = 주파수 \(\nu'\)로 바뀐 복사 에너지 + 움직이는 전자의 에너지: \(h\nu+m_ec^2=h\nu'+E\). [[F22.04]]</li>
+<li>운동량 보존: 충돌 전 전자는 운동량 0, 복사의 운동량은 (에너지)/c, 방향은 입사 방향 \(\hat n_i\). 충돌 후 전자는 \(\mathbf p\), 복사는 \(\hat n_f\) 방향으로 \(h\nu'/c\): \(\dfrac{h\nu}{c}\hat n_i=\mathbf p+\dfrac{h\nu'}{c}\hat n_f\). [[F22.04, F22.05]]</li>
+<li>두 보존식을 풀면(현대물리에서 배웠을 내용): [[F22.05]]
+\[ h\nu'=\frac{h\nu}{1+\dfrac{h\nu}{m_ec^2}(1-\cos\theta)} \]
+<span class="hl">항상 \(h\nu'\le h\nu\)</span> — 빛의 에너지가 전자의 에너지로 바뀐다는 뜻.</li>
+<li>극한: 입사 에너지가 매우 작으면 분모의 둘째 항 → 0, \(h\nu'=h\nu\)(톰슨). 반대로 \(h\nu\gg m_ec^2\)이면 전자의 반응(recoil)이 매우 중요 — 이것이 콤프턴 산란. 정리: 톰슨 = 빛 에너지가 너무 작아 전자가 가속 운동 후 recoil이 없는 경우, 콤프턴 = 입사 에너지가 커서 전자가 운동량을 가지고 움직이는 경우. [[F22.06]]</li></ol></div>
+<div class="explain"><b>부가설명 (10/6)</b> 전자를 움직이게 만드는 데 에너지가 쓰이므로 빛의 에너지는 감소한다. 이 공식은 일반물리·현대물리에서 여러 번 배운 것. <b>표기 주의</b>: 지금은 프라임(′)이 충돌 후지만, 앞으로(역콤프턴)는 <b>첨자 1 = 충돌 후, 첨자 없음 = 충돌 전, 프라임 = 전자의 정지 좌표계</b>로 쓴다. [[D1006.09]]<br>
+분모의 \(m_ec^2\)는 0.5 MeV — MeV는 굉장히 큰 에너지다: X선이 keV이니 그보다 1000배, 대개 <b>감마선</b>. 전파 같은 것을 생각하면 \(h\nu\)가 워낙 작아 무시 → 충돌 전후 에너지 변화 없음 = 톰슨. 반대로 \(h\nu/m_ec^2\gg1\)이면 분모의 1을 무시하고 \(h\nu\)가 약분되어 [[D1006.09]]
+\[ h\nu'\approx\frac{m_ec^2}{1-\cos\theta}\qquad(h\nu\gg m_ec^2) \]
+처럼 방향(θ)에 따라 달라지는 에너지를 갖는다. θ = 입사 방향과 산란 후 광자 진행 방향 사이의 각. [[D1006.09]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>콤프턴 공식 (10/6 보충 — 동영상은 결과만)</div><ol>
+<li>정지한 전자에 광자가 \(\hat n_i\) 방향으로 입사, 산란 후 \(\hat n_f\) 방향, 전자는 운동량 \(\mathbf p\)로 움직인다. 전자의 총에너지(특수상대론): \(E^2=(m_ec^2)^2+(pc)^2\) — γ를 운동량으로 바꿔 쓴 것. [[D1006.29]]</li>
+<li>에너지 보존 (A): \(h\nu+m_ec^2=h\nu'+E\). 운동량 보존 (B, <b>벡터식</b>): \(\dfrac{h\nu}c\hat n_i=\mathbf p+\dfrac{h\nu'}c\hat n_f\). [[D1006.29]]</li>
+<li>\(\mathbf p\)를 없애는 것이 목표. (B)를 이항해 c를 곱하고 제곱: \(\hat n_i\cdot\hat n_f=\cos\theta\)이므로 [[D1006.29]]
+\[ (pc)^2=(h\nu)^2+(h\nu')^2-2\,h\nu\,h\nu'\cos\theta \]</li>
+<li>(A)도 이항해 제곱(항 6개): \(E^2=(h\nu-h\nu'+m_ec^2)^2=(h\nu)^2+(h\nu')^2+(m_ec^2)^2-2h\nu\,h\nu'+2m_ec^2(h\nu-h\nu')\). [[D1006.29]]</li>
+<li>\(E^2=(m_ec^2)^2+(pc)^2\)에 3을 넣어 4와 같다고 놓으면 제곱항 세 개가 소거: \(-2h\nu\,h\nu'\cos\theta=-2h\nu\,h\nu'+2m_ec^2(h\nu-h\nu')\). \(h\nu'\)로 묶어 정리: [[D1006.29]]
+\[ h\nu'=\frac{h\nu}{1+\dfrac{h\nu}{m_ec^2}(1-\cos\theta)}\quad\Longleftrightarrow\quad\lambda'-\lambda=\frac{h}{m_ec}(1-\cos\theta) \]</li>
+<li>\(\cos\theta\)는 −1과 1 사이라 \(1-\cos\theta\ge0\) → 분모 ≥ 1 → <b>빛은 항상 에너지를 잃고</b> 전자가 얻는다. \(h\nu\ll m_ec^2\)이면 \(\nu'\approx\nu\)(톰슨), 반대로 0.5 MeV보다 큰 energetic 광자면 전자가 움직이는 것이 중요할 수밖에 없다. [[D1006.29]]</li></ol></div>
+<div class="apply"><b>수치 감각 (python)</b>\(h\nu=1\) keV, θ = 90°: \(h\nu'=0.998\) keV(0.2% 감소 — 사실상 톰슨). \(h\nu=0.511\) MeV: 90°에서 절반(0.256 MeV), 180°에서 1/3(0.170 MeV). \(h\nu=10\) MeV: 90°에서 0.486 MeV ≈ \(m_ec^2\), 180°에서 0.249 MeV ≈ \(m_ec^2/2\) — 고에너지 극한식 그대로. 콤프턴 파장 \(h/m_ec=2.43\times10^{-10}\) cm.</div>
+
+<h4>Klein–Nishina 단면적 <span class="en">forward scattering</span></h4>
+<div class="slide flip"><div class="sh">플립 22 · 4:11–5:52 <span class="st">Klein–Nishina 공식</span></div>
+<ol><li>콤프턴 산란의 미분 단면적은 양자전기역학(QED)에서 유도하며 결과는 <b>Klein–Nishina 공식</b>으로 표현된다(표준형): [[F22.07]]
+\[ \frac{d\sigma}{d\Omega}=\frac{r_e^2}{2}\left(\frac{\nu'}{\nu}\right)^2\left(\frac{\nu}{\nu'}+\frac{\nu'}{\nu}-\sin^2\theta\right) \]</li>
+<li>그림(등고선 = 산란 후 복사가 진행하는 방향별 단면적): 입사 광자 에너지 0.5 MeV이면 앞으로 가는 단면적이 가장 크고 반대(뒤)로 가는 단면적은 작다. [[F22.07]]</li>
+<li>에너지가 더 커져 10 MeV가 되면 대부분이 <b>앞으로 쏠린다</b>. 2.75 eV처럼 매우 낮은 에너지에서는 앞쪽·뒤쪽 단면적이 같아진다. [[F22.08]]</li>
+<li>성질 두 가지: ① 에너지가 증가하면 <span class="hl">단면적 자체가 줄어든다</span> → 고에너지에서는 콤프턴 산란이 효과적이지 않다. ② 에너지가 커지면 <span class="hl">전방 산란이 증가(increase of forward scattering)</span> — 산란된 빛의 방향이 앞쪽으로 편중. [[F22.08]]</li>
+<li>\(h\nu\)가 무척 작은 저에너지 충돌이면 톰슨처럼 주파수가 변하지 않고(\(\nu'=\nu\)), Klein–Nishina 공식도 톰슨의 미분 단면적 \(\tfrac{r_e^2}{2}(1+\cos^2\theta)\)과 <b>정확히 일치</b>한다. [[F22.09]]</li></ol></div>
+<div class="trap"><b>확인 필요 · 플립 22 수치와 식</b>Klein–Nishina 식은 영상 화면에만 있어 위는 표준형을 적은 것(\(\nu'=\nu\)를 넣으면 \(2-\sin^2\theta=1+\cos^2\theta\)로 톰슨과 일치). 그림의 예시 에너지는 STT로 "0.5mhz", "10melectronvolt", "2.75electronvolt"로 들려 0.5 MeV·10 MeV·2.75 eV로 읽었다 — 화면과 대조 필요. STT 교정: "컴퓨턴/computer 산란" → 콤프턴 산란, "Client Niche나/Client Net이나 공식" → Klein–Nishina 공식, "0.5 ml/0.5mhz" → 0.5 MeV, "정제돼 있는" → 정지해 있는. [[F22.02, F22.07, F22.08]]</div>
+
+<h4>역콤프턴 산란 <span class="en">inverse Compton · K와 K′</span></h4>
+<div class="slide flip"><div class="sh">플립 22 · 5:52–끝 <span class="st">역콤프턴과 좌표계 표기</span></div>
+<ol><li>콤프턴이 빛이 전자에게 에너지를 주는 것이라면, <b>inverse Compton</b>은 <b>전자가 무척 빠르게 움직이고 있는</b> 경우다. 그 좌표계를 <b>K frame</b>(lab frame)이라 하자: 전자가 속도 \(v\)로 움직인다. [[F22.09]]</li>
+<li>이때 전자가 가진 에너지의 일부가 광자로 전달될 수 있다 = 역콤프턴. <span class="hl">콤프턴: 빛 에너지 → 전자, 역콤프턴: 전자 에너지 일부 → 빛</span>. [[F22.10]]</li>
+<li>전자의 정지 좌표계 = <b>K′ frame</b>: 전자는 정지, 빛이 어떤 각도로 와서 충돌 후 \(\nu_1'\)으로 나간다. 표기: <b>프라임(′) = 전자가 정지한 프레임, 첨자 1 = 충돌 후</b>. \(\theta_1'\) = K′에서 충돌 후의 각도, \(\nu_1'\) = K′에서 충돌 후의 주파수. [[F22.10, F22.11]]</li>
+<li>천문학적 상황에서는 대부분 (K′에서 본) 빛의 에너지가 전자의 정지질량 에너지보다 작다: X선이 보통 keV인데 \(m_ec^2\)는 0.5 MeV. X선이나 낮은 에너지의 감마선까지는 대개 이 조건(\(h\nu'\ll m_ec^2\))을 만족 → <span class="hl">K′ 프레임에서는 콤프턴이 아니라 톰슨 산란으로 근사</span>할 수 있다. [[F22.11]]</li>
+<li>톰슨은 간단하다: 단면적이 앞·뒤 대칭(front–back symmetry)이고 주파수 변화가 없다(\(\nu_1'=\nu'\)). 우리가 알고 싶은 것은 <b>K 프레임에서 충돌 전과 후의 주파수 변화</b>. [[F22.12]]</li></ol></div>
+<div class="explain"><b>부가설명 (10/6)</b> 아까는 전자가 정지해 있었는데, 전자가 정지해 있다는 것은 <b>가정</b>이다. 일반적으로, 특히 천문학적 상황에서는 전자가 움직인다. 전자가 상대론적으로 움직이면 움직이는 전자가 빛과 충돌해 <b>전자 에너지의 일부가 빛으로</b> 전달된다 — 콤프턴(빛 → 전자)의 반대. [[D1006.10]]<br>
+<b>결론 예고(다음 시간에 왜 그런지)</b>: <span class="hl">산란 후 주파수는 근사적으로 \(\gamma^2\)에 비례 — \(\nu_1\sim\gamma^2\nu\)</span>(γ = 전자의 로런츠 인자). 전형적인 \(\gamma=10^4\)이면 <b>10⁸배</b>: GHz 전파 광자(10⁹ Hz)가 10¹⁷ Hz로 → 가시광보다 훨씬 높은 <b>X선·감마선</b>으로 올라간다. [[D1006.11, D1006.12]]</div>
+<div class="apply"><b>Synchrotron self-Compton(SSC) (10/6)</b>천체에 자기장이 있고 전자가 돌아다니면 싱크로트론 광자가 나온다. 그 광자가 <b>바로 그 싱크로트론을 만든 전자와</b> 다시 충돌해 더 높은 에너지로 boost되는 것 — 자기가 만든 광자를 자기가 산란. 블랙홀 주변(강착원반), 중성자별 근방 같은 매우 에너지가 큰 현상에서 중요한 복사원. [[D1006.12]]</div>
+<div class="trap"><b>수치 확인 · γ² 증폭</b>녹음상 "10¹³ Hz 정도가 optical … 10¹⁷은 그보다 만 배" / 표준: 가시광 ≈ 5×10¹⁴ Hz(10¹³ Hz는 중적외선). 결론(전파 → X선)은 그대로: 10¹⁷ Hz ↔ \(h\nu\approx0.41\) keV, 연X선(python). 등방 광자장의 평균은 \(\tfrac43\gamma^2\)(교재 선행). 아직 유도 전이므로 "γ²에 비례"까지만 강의 내용. STT: "인버스 컴텀/inverse component/엠버스 컴퓨턴" → inverse Compton, "Operation Risk" → accretion disk로 추정(확인 필요). [[D1006.11, D1006.12]]</div>
+<div class="intuit"><b>왜 γ²인가 — 미리 보는 직관(교재 선행)</b>K → K′로 갈 때 도플러로 광자 에너지가 ~γ배, K′에서 톰슨 산란(에너지 불변), 다시 K로 돌아올 때 ~γ배 → γ². 톰슨 근사가 되려면 K′에서 \(\gamma h\nu\ll m_ec^2\)이어야 한다.</div>
+
+<h4>역콤프턴 파워·콤프턴화 <span class="en">교재 선행 · 강의 미진도</span></h4>
+<p>아래는 10/6까지 강의에서 아직 다루지 않은 교재 선행 내용이다(원자료 인용 없음). 등방 저에너지 광자장에서는 광자 에너지 증가가 대략 \(\gamma^2\)이고 평균 파워는 복사 에너지밀도에 비례한다. 싱크로트론 파워와 형태가 같으므로 두 방출을 비교하면 자기장과 외부 복사장의 상대 중요도를 읽을 수 있다. 같은 전자·같은 부피·같은 근사라는 조건을 먼저 확인하자.</p>
+<p>역콤프턴을 톰슨 근사로 다루려면 실험실의 광자 에너지만 작아서는 부족하다. 전자 정지계에서도 광자 에너지가 \(m_ec^2\)보다 충분히 작아야 한다(\(\gamma h\nu\ll m_ec^2\)). 벗어나면 반동과 Klein–Nishina 단면적 감소가 중요해진다.</p>
+<p>열적 전자와 여러 번 산란하면 한 번의 작은 에너지 교환이 누적된다. y는 산란당 평균 에너지 변화와 산란 횟수의 곱으로 이해하면 된다. y≪1은 작은 왜곡, y가 커지면 큰 스펙트럼 변화가 가능하지만 포화된 모양은 광자 생성/흡수 여부와 탈출도 함께 결정한다.</p>
+
+<div class="formula"><div class="ftitle">암기 — 콤턴·역콤턴·콤턴화</div><p><b>정지 전자의 콤턴 이동</b></p>\[ \lambda_1-\lambda={h\over m_ec}(1-\cos\theta),\quad h\nu_1={h\nu\over1+(h\nu/m_ec^2)(1-\cos\theta)} \]<p class="note">산란각 0에서 변화 0, 뒤산란에서 최대 파장 이동. <i>조건: 처음 정지한 자유전자</i></p><p><b>역콤턴 평균파워 (교재 선행)</b></p>\[ P_{IC}={4\over3}\sigma_TcU_{rad}\gamma^2\beta^2,\quad\langle\nu_1\rangle\simeq{4\over3}\gamma^2\nu \]<p class="note">전자에서 광자로 전달되는 순파워. 주파수 식은 γ≫1. <i>조건: 등방 입사장·톰슨 영역</i></p><p><b>열적 교환과 y (교재 선행)</b></p>\[ {\langle\Delta E\rangle\over E}\simeq{4kT_e-E\over m_ec^2},\quad y\simeq{4kT_e\over m_ec^2}\max(\tau_T,\tau_T^2) \]<p class="note">뜨거운 전자의 증폭과 광자의 반동 손실이 경쟁. <i>조건: kTe,E≪mec²; y식은 E≪kTe, 기하 계수 생략</i></p></div>
+
+<h4>Lecture10 PPT 원문 대조 — 콤프턴 산란 <span class="en">slides 3, 13–14</span></h4>
+<div class="slide"><div class="sh">L10 · 슬라이드 3 <span class="st">Review Questions (콤프턴)</span></div>
+<ul><li>What is Compton scattering? – Energy relation of an electron before and after scattering? [[L10.s3c]]</li>
+<li>What is inverse Compton scattering? [[L10.s3d]]</li></ul></div>
+<div class="explain"><b>부가설명</b>콤프턴 산란: 광자가 전자와 충돌해 에너지·운동량을 나눠 갖는 산란. 정지 전자 기준 \(h\nu'=h\nu/[1+(h\nu/m_ec^2)(1-\cos\theta)]\)라 광자는 항상 에너지를 잃고 전자가 그만큼 되튄다. 역콤프턴: 빠른 전자가 저에너지 광자에 에너지를 넘겨 광자 진동수가 \(\sim\gamma^2\)배 오르는 경우. [[L10.s3c, L10.s3d, L10.s14]]</div>
+<div class="slide"><div class="sh">L10 · 슬라이드 13 <span class="st">Compton Scattering</span></div>
+<ul><li>More generally, one has to account for the conservation of energy and momentum in a scattering, especially when \(h\nu\gg m_ec^2=0.511\) MeV. Energy can be transferred from a photon to an electron.</li>
+<li>An electron is initially stationary and moves after the collision. [그림: 입사 \(\hat{\mathbf n}_i\), 산란 \(\hat{\mathbf n}_f\)(각 θ), 되튐 전자 \(\mathbf p_e\)] Total energy of an electron: \(E_e=\gamma m_ec^2=\sqrt{m_e^2c^4+p_e^2c^2}\)</li>
+<li>Energy conservation: \(h\nu+m_ec^2=h\nu'+E_e=h\nu'+\sqrt{p_e^2c^2+m_e^2c^4}\) &nbsp;(A)</li>
+<li>Momentum conservation: \(\dfrac{h\nu}{c}\hat{\mathbf n}_i=\mathbf p_e+\dfrac{h\nu'}{c}\hat{\mathbf n}_f\) &nbsp;(B)</li></ul> [[L10.s13]]</div>
+<div class="slide"><div class="sh">L10 · 슬라이드 14 <span class="st">Compton Scattering (계속)</span></div>
+<ul><li>From (B): \(p_e^2c^2=(h\nu\hat{\mathbf n}_i-h\nu'\hat{\mathbf n}_f)^2=h^2\nu^2+h^2\nu'^2-2h^2\nu\nu'\cos\theta\), which gives \(E_e^2=h^2\nu^2+h^2\nu'^2-2h^2\nu\nu'\cos\theta+m_e^2c^4\) &nbsp;(C)</li>
+<li>(A) can be written as \(E_e^2=(h\nu-h\nu'+m_ec^2)^2=h^2\nu^2+h^2\nu'^2+m_e^2c^4-2h^2\nu\nu'+2m_ec^2h(\nu-\nu')\) &nbsp;(D)</li>
+<li>Equating (C) and (D): \[h\nu'=\frac{h\nu}{1+\dfrac{h\nu}{m_ec^2}(1-\cos\theta)}\ \approx h\nu\ (h\nu\ll m_ec^2),\qquad \approx\frac{m_ec^2}{1-\cos\theta}\ (h\nu\gg m_ec^2)\]</li>
+<li><span class="hl">\(h\nu'&lt;h\nu\) always!</span> Electron recoil becomes important.</li></ul> [[L10.s14]]</div>
+<div class="explain"><b>부가설명</b>위 본문의 유도(플립 22·녹음)와 같은 순서다: 운동량 보존을 제곱해 전자 에너지를 만들고(C), 에너지 보존을 제곱한 것(D)과 같다고 놓는다. 저에너지 극한이 톰슨(진동수 불변), 고에너지 극한에서는 산란 광자 에너지가 입사 에너지와 무관하게 \(m_ec^2\) 정도로 떨어진다. [[L10.s13, L10.s14]]</div>
+
+<h4>플립 23 — 역콤프턴의 진동수 변화 <span class="en">Doppler · aberration · head-on / trailing</span></h4>
+<p class="note">플립러닝 11차시(eTL 안내 PDF) = 플립 23·24. 10/8 수업 전 시청분이며, Lecture11 PPT의 Review Questions 다섯 개가 이 두 영상의 내용이다.</p>
+<div class="slide flip"><div class="sh">플립 23 · 0:00–3:14 <span class="st">상대론적 도플러 효과</span></div>
+<ol><li>전자가 속도 \(v\)로 점 1 → 2로 움직인다. 그 사이 시간을 <b>복사의 한 주기</b>로 잡는다. 전자 정지계 K′에서 \(\Delta t'=1/\nu'\). [[F23.01]]</li>
+<li>관측자계 K에서는 시간 지연으로 \(\Delta t=\gamma\Delta t'=\gamma/\nu'\). [[F23.02]]</li>
+<li>그러나 관측자가 재는 것은 두 신호의 <b>도착 시간차</b>다. 전자가 2에 올 때까지 관측자 쪽으로 \(v\Delta t\cos\theta\)만큼 다가왔으므로 그 거리를 빛이 가는 시간을 뺀다: \(\Delta t_A=\Delta t-\dfrac{v\Delta t\cos\theta}{c}=\Delta t(1-\beta\cos\theta)\). [[F23.03, F23.04]]</li>
+<li>\(\nu=1/\Delta t_A\)이므로 \[\nu'=\gamma\nu(1-\beta\cos\theta)\] [[F23.04, F23.05]]</li></ol></div>
+<div class="slide flip"><div class="sh">플립 23 · 3:14–5:30 <span class="st">광행차 공식</span></div>
+<ol><li>상대성 원리: K′가 정지해 있고 K가 \(-v\)로 움직인다고 봐도 같은 꼴이어야 한다. 프라임을 맞바꾸고 \(\beta\to-\beta\): \(\nu=\gamma\nu'(1+\beta\cos\theta')\). [[F23.05, F23.06]]</li>
+<li>두 식을 곱하면 진동수가 지워져 \(1=\gamma^2(1-\beta\cos\theta)(1+\beta\cos\theta')\). 정리하면 \[\cos\theta'=\frac{\cos\theta-\beta}{1-\beta\cos\theta}\] — 같은 벡터를 K에서 θ, K′에서 θ′로 볼 때 두 각 사이의 관계. [[F23.06]]</li></ol></div>
+<div class="slide flip"><div class="sh">플립 23 · 5:30–9:42 <span class="st">산란 전후 진동수 ν → ν₁</span></div>
+<ol><li>산란 전(K → K′): \(\nu'=\gamma\nu(1-\beta\cos\theta)\). 산란 후(K′ → K): \(\nu_1=\gamma\nu_1'(1+\beta\cos\theta_1')\). [[F23.07]]</li>
+<li>K′에서는 톰슨 산란이라 진동수가 안 변한다: \(\nu_1'\approx\nu'\). 대입하고 광행차 공식으로 \(\theta_1'\)을 K의 각 \(\theta_1\)로 바꾸면 \[\nu_1=\nu\,\frac{1-\beta\cos\theta}{1-\beta\cos\theta_1}\] (모두 K계의 양: θ는 충돌 전, θ₁은 충돌 후 광자 방향). [[F23.08, F23.09]]</li>
+<li><b>정면 충돌</b>(head-on; θ = π, θ₁ = 0): \(\nu_1=\nu\dfrac{1+\beta}{1-\beta}=\gamma^2(1+\beta)^2\nu\to\) <span class="hl">\(4\gamma^2\nu\)</span>. \(1-\beta\)는 β ≈ 1에서 값을 알기 어려우니 \(1/[\gamma^2(1+\beta)]\)로 바꿔 쓰는 것이 요령. [[F23.09, F23.10]]</li>
+<li><b>추격 충돌</b>(광자가 전자를 뒤따름; θ = 0, θ₁ = π): \(\nu_1=\nu\dfrac{1-\beta}{1+\beta}\approx\nu/4\gamma^2\) — 광자 에너지가 <b>감소</b>. 경우마다 다르므로 평균이 필요하다. [[F23.10, F23.11]]</li></ol></div>
+
+<h4>플립 24 — 평균 증폭과 역콤프턴 파워·파국 <span class="en">⟨ν₁⟩ ≈ γ²ν · P_IC · catastrophe</span></h4>
+<div class="slide flip"><div class="sh">플립 24 · 0:00–4:51 <span class="st">평균 에너지 증폭</span></div>
+<ol><li>K에서 광자는 등방. 전자 정지계 K′에서는 광자들이 한쪽(−v 방향)으로 쏠려 들어온다. K′의 톰슨 산란은 앞뒤 대칭이라 산란 뒤에는 ±v 방향이 동등해진다. [[F24.01, F24.02]]</li>
+<li>이를 K로 되돌리면 상대론적 beaming으로 산란 광자는 전자 진행 방향의 \(\theta_1\lesssim1/\gamma\) 안에 모인다. \(\cos\theta_1\approx1-\dfrac{1}{2\gamma^2}\approx\beta\). [[F24.02, F24.03]]</li>
+<li>\(\nu_1\approx\nu\dfrac{1-\beta\cos\theta}{1-\beta^2}=\gamma^2\nu(1-\beta\cos\theta)\). 등방이므로 \(\langle\cos\theta\rangle=0\) → <span class="hl">\(\langle\nu_1\rangle\approx\gamma^2\nu\)</span>. [[F24.04, F24.05]]</li>
+<li>정확히 계산하면(수업에서 다룸 — Lecture11 슬라이드 9–10) \(\langle\nu_1\rangle=\gamma^2(1+\beta^2/3)\nu\): γ = 1이면 ν 그대로, γ ≫ 1이면 \(\tfrac43\gamma^2\nu\). γ = 10⁴이면 1 GHz 광자가 10¹⁷ Hz X선이 된다. [[F24.06, L11.s10]]</li></ol></div>
+<div class="intuit"><b>직관 · 왜 γ가 두 번 붙는가</b><span class="star">강조</span>좌표계 변환을 두 번 하기 때문이다. K → K′로 갈 때 진동수가 γ배쯤 오르고, K′에서 톰슨 산란(진동수 불변)을 한 뒤 K′ → K로 돌아올 때 γ가 한 번 더 붙는다. [[F24.05]]</div>
+<div class="slide flip"><div class="sh">플립 24 · 4:51–7:37 <span class="st">역콤프턴 파워와 싱크로트론의 비</span></div>
+<ol><li>한 번 충돌에서 전자가 잃는 에너지 = \(\langle h\nu_1\rangle-h\nu\). 파워 = 이 값 × 단위 시간당 충돌 수. [[F24.07]]</li>
+<li>충돌 수는 톰슨 단면적 × c × 광자 수밀도. 정리하면 \(P_{\rm IC}=\tfrac43c\sigma_TU_\gamma\gamma^2\beta^2\), \(U_\gamma=h\nu\,n_\gamma\). K′에서 톰슨 산란(\(h\nu'\ll m_ec^2\))이라는 가정 위의 결과. [[F24.08]]</li>
+<li>싱크로트론은 \(P_{\rm syn}=\tfrac43c\sigma_TU_B\gamma^2\beta^2\), \(U_B=B^2/8\pi\) — 꼴이 같다. 비를 취하면 <span class="hl">\(\dfrac{L_{\rm IC}}{L_{\rm syn}}=\dfrac{U_\gamma}{U_B}\)</span>. 전자 속도가 임의여도 성립하지만 톰슨 가정은 항상 필요. [[F24.08, F24.09]]</li></ol></div>
+<div class="slide flip"><div class="sh">플립 24 · 7:37–끝 <span class="st">역콤프턴 파국 (inverse Compton catastrophe)</span></div>
+<ol><li>자기장 속 빠른 전자가 싱크로트론 광자를 내고, 그 광자가 자신을 만든 전자와 다시 충돌해 X선·감마선으로 올라간다. [[F24.10]]</li>
+<li>이런 산란이 잦아져 역콤프턴 광도가 싱크로트론 광도보다 커지면, 그 에너지는 전자의 운동에너지에서 나오므로 전자가 급속히 식어 더는 상대론적이지 않게 된다 → 싱크로트론을 못 낸다. [[F24.11]]</li>
+<li>씨앗 광자가 없어지니 역콤프턴도 줄어든다. 결론: <span class="hl">실제 계에서는 \(L_{\rm IC}\)가 \(L_{\rm syn}\)보다 클 수 없다</span>. '파국'은 전자 운동에너지의 급격한 소진을 가리킨다. [[F24.12]]</li>
+<li>이론 연구에 따르면 compact radio source에서 이 한계는 <b>밝기온도 10¹² K</b>에서 나타난다. 자세한 것은 수업에서. [[F24.13]]</li></ol></div>
+<div class="trap"><b>STT 확인 필요</b>마지막 대목의 천체 이름이 "퍼스사"로 받아써져 있다 — 문맥상 퀘이사(quasar)로 보이나 <b>확인 필요</b>. 온도는 "12 12승 켈빈"으로 들려 10¹² K로 적었다(표준값과 일치). [[F24.13]]</div>
+
+<h4>10/8 강의 PPT — 역콤프턴 파워·SSC·열전자 산란·SZ 효과 <span class="en">Lecture11</span></h4>
+<p class="note">Lecture11 PPT(10/8 수업분)를 슬라이드 단위로 옮겼습니다. <b>10/8 강의 녹음은 다글로에서 '녹음중 · 00:00'(미완료)으로만 보여</b> 교수님 구두 설명·강조점은 들어 있지 않습니다. 부가설명은 슬라이드 식을 따라 쓴 것입니다.</p>
+<div class="slide"><div class="sh">L11 · 슬라이드 3 <span class="st">Review Questions</span></div>
+<ul><li>What is the relativistic Doppler effect formula? [[L11.s3a]]</li>
+<li>What is the aberration formula? [그림: K계의 θ, 속도 v로 움직이는 K′계의 θ′] [[L11.s3b]]</li>
+<li>What is the average energy boost of a photon by inverse Compton scattering when the photons are isotropic? [[L11.s3c]]</li>
+<li>What is the inverse Compton power radiated by a single electron in an isotropic photon field with energy density \(U_\gamma\)? – How does it compare to synchrotron power? [[L11.s3d]]</li>
+<li>What is the inverse Compton catastrophe? – At what brightness temperature does this occur? [[L11.s3e]]</li></ul></div>
+<div class="explain"><b>부가설명 · 답의 뼈대</b>① 도플러: \(\nu'=\gamma\nu(1-\beta\cos\theta)\)(슬라이드 9의 \(\epsilon'=\epsilon\gamma(1-\beta\cos\theta)\)). ② 광행차: \(\cos\theta'=(\cos\theta-\beta)/(1-\beta\cos\theta)\). ③ 등방 광자면 \(\langle\nu_1\rangle=\gamma^2(1+\beta^2/3)\nu\approx\tfrac43\gamma^2\nu\). ④ \(P_{\rm IC}=\tfrac43c\sigma_TU_\gamma\gamma^2\beta^2\) — 싱크로트론 \(\tfrac43c\sigma_TU_B\gamma^2\beta^2\)와 꼴이 같아 <span class="hl">\(P_{\rm IC}/P_{\rm syn}=U_\gamma/U_B\)</span>. ⑤ 역콤프턴 파국: 싱크로트론 광자 에너지밀도가 \(U_B\)를 넘으면 산란된 광자가 또 산란되며 손실이 폭주해 전자가 순식간에 식는 것. ②의 유도와 ⑤의 문턱(밝기온도 \(10^{12}\) K)은 플립 23·24에 나온다 — 위 두 절 참고. [[F23.06, F24.13]] [[L11.s3a, L11.s3b, L11.s3c, L11.s3d, L11.s3e, L11.s8, L11.s9]]</div>
+
+<div class="slide"><div class="sh">L11 · 슬라이드 5 <span class="st">Inverse Compton Power for Single Scattering</span></div>
+<ul><li>Consider a situation in which an electron with energy \(\gamma m_ec^2\) moves through a space filled with isotropic photons with frequency ν. Energy lost by the electron is \(\langle h\nu_1\rangle-h\nu\).</li>
+<li>The inverse Compton power is then \(P_{\rm IC}=(\langle h\nu_1\rangle-h\nu)\times\dfrac{dN_{\rm scatt}}{dt}\), where \(dN_{\rm scatt}/dt\) is the number scattering per unit time.</li>
+<li>It is difficult to calculate \(dN_{\rm scatt}/dt\) directly in the K frame. We calculate \(dN'_{\rm scatt}/dt'\) in the K′ frame first and convert it. Since \(N_{\rm scatt}\) is Lorentz invariant and \(dt=\gamma\,dt'\) (time dilation), \(\dfrac{dN_{\rm scatt}}{dt}=\dfrac1\gamma\dfrac{dN'_{\rm scatt}}{dt'}\).</li></ul> [[L11.s5]]</div>
+<div class="explain"><b>부가설명</b>계산 전략: 파워 = (한 번 산란에서 얻는 평균 에너지) × (단위 시간당 산란 횟수). 산란 횟수는 전자가 정지한 K′계에서 세는 것이 쉽고(톰슨 단면적을 그대로 쓸 수 있다), 횟수 자체는 어느 계에서 세어도 같으므로 시간 지연 인자 1/γ만 붙이면 된다. [[L11.s5]]</div>
+
+<div class="slide"><div class="sh">L11 · 슬라이드 6–7 <span class="st">dN′<sub>scatt</sub>/dt′ → dN<sub>scatt</sub>/dt</span></div>
+<ol><li>Let \(f'_\gamma(\mathbf p')d^3\mathbf p'\) denote the number density of the photons with momentum between \(\mathbf p'\) and \(\mathbf p'+d\mathbf p'\) in the K′ frame. For Thomson scatterings, \(\dfrac{dN'_{\rm scatt}}{dt'}=c\sigma_T\displaystyle\int f'_\gamma(\mathbf p')\,d^3p'\).</li>
+<li>It is convenient to evaluate the integral in the K frame where the photons are isotropic. The photon distribution function is Lorentz invariant: \(f'_\gamma(\mathbf p')=f_\gamma(\mathbf p)\). Since \(p^2=p_x^2+p_y^2+p_z^2\), \(dp=(p_x/p)dp_x=\cos\theta\,dp_x\).</li>
+<li>Lorentz transformation: \(p'_x=\gamma(p_x-p\beta),\ p'_y=p_y,\ p'_z=p_z\ \Rightarrow\ dp'_x=\gamma(1-\beta\cos\theta)dp_x\), so that \(d^3\mathbf p'=\gamma(1-\beta\cos\theta)\,d^3p\). [[L11.s6]]</li>
+<li>Therefore \(\dfrac{dN'_{\rm scatt}}{dt'}=c\sigma_T\displaystyle\int f_\gamma(p)\gamma(1-\beta\cos\theta)p^2dp\,d\Omega=c\gamma\sigma_T\cdot\frac{n_\gamma}{4\pi}\cdot4\pi=n_\gamma\gamma c\sigma_T\), where \(n_\gamma=\int4\pi p^2f(p)\,dp\) is the photon number density.</li>
+<li>Therefore, the number of scatterings in the K frame is <span class="hl">\(\dfrac{dN_{\rm scatt}}{dt}=\dfrac1\gamma\dfrac{dN'_{\rm scatt}}{dt'}=n_\gamma c\sigma_T\)</span>. [[L11.s7]]</li></ol></div>
+<div class="intuit"><b>직관 · 결과는 "밀도 × 단면적 × c"</b>복잡한 변환을 거쳤지만 답은 정지 전자와 똑같은 \(n_\gamma\sigma_Tc\)다. 각도 적분에서 \(\beta\cos\theta\) 항은 앞·뒤가 상쇄되어 사라진다 — 앞에서 오는 광자는 더 자주, 뒤에서 오는 광자는 덜 자주 만나 평균이 그대로다. K′계에서 γ배 많아 보이는 것은 시간 지연 1/γ가 되돌린다. [[L11.s6, L11.s7]]</div>
+
+<div class="slide"><div class="sh">L11 · 슬라이드 8 <span class="st">Inverse Compton Power</span></div>
+<ul><li>If we take \(\langle\nu_1\rangle=\gamma^2\left(1+\dfrac{\beta^2}{3}\right)\nu\ \Rightarrow\ \langle h\nu_1\rangle-h\nu=\dfrac43\gamma^2\beta^2h\nu\), the “net power” lost by the electron, converted into increased radiation, is \[P_{\rm IC}=(\langle h\nu_1\rangle-h\nu)\times n_\gamma\sigma_Tc=\frac43c\sigma_TU_\gamma\gamma^2\beta^2\] where the photon energy density is defined as \(U_\gamma=h\nu n_\gamma\).</li>
+<li>Note that this result is based on the assumption that the electron undergoes Thomson scatterings in the K′ frame.</li></ul> [[L11.s8]]</div>
+<div class="formula"><div class="ftitle">암기 — 역콤프턴 파워</div>\[P_{\rm IC}=\frac43c\sigma_TU_\gamma\gamma^2\beta^2,\qquad \frac{P_{\rm IC}}{P_{\rm syn}}=\frac{U_\gamma}{U_B}\]<p class="note">조건: 전자 정지계에서 톰슨 산란(\(\gamma h\nu\ll m_ec^2\)), 광자 등방. \(\gamma^2(1+\beta^2/3)-1=\tfrac43\gamma^2\beta^2\)는 \(\gamma^2-1=\gamma^2\beta^2\)에서 나온다. [[L11.s8]]</p></div>
+
+<div class="slide"><div class="sh">L11 · 슬라이드 9–10 <span class="st">⟨hν₁⟩?</span></div>
+<ol><li>Let \(P\) be the inverse Compton power (without correcting for the initial photon energy). Then \(P=\langle h\nu_1\rangle\dfrac{dN_{\rm scatt}}{dt}=P'\), since the power is Lorentz invariant for any emitter that emits with front-back symmetry in its instantaneous rest frame.</li>
+<li>In the K′ frame, the energy of the photon after a scattering is \(\epsilon'_1=\epsilon'\) for the Thomson scattering, so that \(P'=c\sigma_T\displaystyle\int\epsilon'f'_\gamma(\mathbf p')\,d^3p'\).</li>
+<li>Using \(d^3\mathbf p'=\gamma(1-\beta\cos\theta)d^3\mathbf p\) and \(\epsilon'=\epsilon\gamma(1-\beta\cos\theta)\): \(P'=c\gamma^2\sigma_T\displaystyle\int\epsilon f_\gamma(p)p^2dp\iint(1-\beta\cos\theta)^2\sin\theta\,d\theta\,d\phi\). [[L11.s9]]</li>
+<li>Thus \(P=c\gamma^2\sigma_T\cdot\dfrac{U_\gamma}{4\pi}\cdot4\pi\left(1+\dfrac13\beta^2\right)=c\sigma_TU_\gamma\gamma^2\left(1+\dfrac13\beta^2\right)\), where \(U_\gamma=4\pi\int\epsilon f_\gamma(p)p^2dp\) is the photon energy density.</li>
+<li>Since \(\dfrac{dN_{\rm scatt}}{dt}=n_\gamma c\sigma_T=\dfrac{U_\gamma}{h\nu}c\sigma_T\), we obtain <span class="hl">\(\langle h\nu_1\rangle=\dfrac{P}{dN_{\rm scatt}/dt}=\gamma^2\left(1+\dfrac{\beta^2}{3}\right)h\nu\)</span>. [[L11.s10]]</li></ol></div>
+<div class="explain"><b>부가설명</b>슬라이드 8에서 "If we take"로 빌려 쓴 평균 증폭을 여기서 유도한다. 이번에는 \((1-\beta\cos\theta)\)가 두 번 들어간다(운동량 부피 한 번, 도플러로 광자 에너지 한 번). 제곱의 각도 평균이 \(\tfrac12\int_{-1}^{1}(1-\beta\mu)^2d\mu=1+\beta^2/3\)이라 이 인자가 남는다. β → 1이면 \(\tfrac43\gamma^2\) — 정면 충돌 한 번의 최대 증폭 \(\sim4\gamma^2\)를 각도로 평균한 값이다. γ = 10⁴인 전자가 1 GHz 전파 광자를 치면 \(\langle\nu_1\rangle\approx1.3\times10^{17}\) Hz(X선). [[L11.s9, L11.s10]]</div>
+
+<div class="slide"><div class="sh">L11 · 슬라이드 11 <span class="st">Synchrotron Self-Compton</span></div>
+<ul><li>In the SSC, ultrarelativistic electrons accelerated in a magnetic field generate synchrotron photons. The typical field strength is ~10² μG, and resulting synchrotron photons spans a broad frequency range, from radio to X-rays, depending on the electron energy distribution.</li>
+<li>These photons in turn interact via inverse Compton scattering with their own parent electron population. Ultrarelativistic electrons boost the energy of the rescattered photons to GeV–TeV energies.</li>
+<li>[그림] \(E^2dN/dE\) 스펙트럼: 싱크로트론 봉우리(~1 keV 부근)와 역콤프턴 봉우리(~100 GeV, 50 TeV까지), 합은 쌍봉.</li></ul> [[L11.s11]]</div>
+<div class="apply"><b>적용 · 쌍봉 스펙트럼 읽기</b>같은 전자 집단이 두 번 일한다: 자기장에서 싱크로트론 광자를 만들고, 그 광자를 다시 쳐서 γ²배 올린다. 그래서 낮은 봉우리(싱크로트론)와 높은 봉우리(역콤프턴)가 짝으로 나타나고, 두 봉우리의 세기 비는 \(U_\gamma/U_B\)를 알려 준다. [[L11.s11, L11.s8]]</div>
+
+<div class="slide"><div class="sh">L11 · 슬라이드 12 <span class="st">Scattering by Thermal Electrons</span></div>
+<ul><li>Recall that the average photon energy after inverse Compton scattering is \(\langle\nu_1\rangle=\gamma^2(1+\beta^2/3)\nu\).</li>
+<li>The fractional energy gain <b>per scattering</b> is \(\dfrac{\Delta\epsilon}{\epsilon}\equiv\dfrac{\langle h\nu_1\rangle-h\nu}{h\nu}=\dfrac43\gamma^2\beta^2\).</li>
+<li>For (non-relativistic) thermal electrons that obey the MB velocity distribution, \(\langle\beta^2\rangle=\dfrac{\langle v^2\rangle}{c^2}=\dfrac{3kT_e}{m_ec^2}\).</li>
+<li><b>In an optically thin plasma</b>, a photon has a probability (\(\tau=n_e\sigma_TL\)) of being scattered. Thus, the average fractional energy gain is <span class="hl">\(\dfrac{\Delta\epsilon}{\epsilon}=\dfrac{4kT_e}{m_ec^2}\tau\)</span>.</li></ul> [[L11.s12]]</div>
+<div class="explain"><b>부가설명</b>비상대론 전자는 γ ≈ 1이라 한 번 산란의 이득이 \(\tfrac43\langle\beta^2\rangle=4kT_e/m_ec^2\)로 작다. 얇은 플라즈마에서는 광자가 산란될 확률이 τ이므로 평균 이득은 여기에 τ를 곱한다. [[L11.s12]]</div>
+
+<div class="slide"><div class="sh">L11 · 슬라이드 13 <span class="st">Sunyaev–Zeldovich Effect</span></div>
+<ul><li>Galaxy clusters contain X-ray emitting hot gas which can scatter CMB photons, causing spectral distortion. \(k_BT_e\sim5\) keV, \(k_BT_e/m_ec^2\sim0.01\): non-relativistic, \(\tau\sim0.02\). Scattered radiation: \(\dfrac{\Delta\nu}{\nu}=\dfrac{4k_BT_e}{m_ec^2}\tau\sim10^{-4}\). [그림: Sunyaev &amp; Zeldovich (1980) — 산란 뒤 CMB 스펙트럼이 고주파 쪽으로 이동]</li>
+<li>This effect is independent of cluster distance, but depends on the optical depth \(\tau=n_e\sigma_TL\), where \(n_e\) is the electron number density and \(L\) is the cluster diameter.</li>
+<li>X-ray luminosity is due to Bremsstrahlung and thus depends on \(n_e^2L\).</li>
+<li>Comparison of spectral distortion and X-ray luminosity gives \(L\), and measurement of the cluster angular size gives the distance to the cluster.</li></ul> [[L11.s13]]</div>
+<div class="apply"><b>적용 · 거리 재기</b>SZ 왜곡은 \(n_eL\)에, X선(제동복사)은 \(n_e^2L\)에 비례한다. 둘을 나누면 \(n_e\)가 지워져 실제 크기 \(L\)이 나오고, 각크기와 비교하면 은하단까지의 거리가 된다. 왜곡 크기 자체는 거리에 무관하므로 먼 은하단 탐색에도 쓴다. [[L11.s13]]</div>
+<div class="trap"><b>수치 확인 필요</b>슬라이드의 값을 그대로 곱하면 \(4\times0.01\times0.02=8\times10^{-4}\)인데 화면 표기는 "~10⁻⁴"다. 자릿수 어림으로 쓴 것인지, τ나 온도를 다른 값으로 잡은 것인지 <b>확인 필요</b>. [[L11.s13]]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u20-1"><div class="qq">역콤턴 파워와 싱크로트론 파워의 비가 \(U_r/U_B\)인 조건은? (교재 선행)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>같은 초상대론 전자집단, 등방 광자장/피치각, 톰슨 영역이고 다른 손실을 비교에서 제외할 때.</p></div></div>
+<div class="qz" data-q="u20-2"><div class="qq">한 번 산란하면 항상 \(4\gamma^2\)배 에너지가 되는가? (교재 선행)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(4\gamma^2\)는 특정 정면 충돌의 최대 척도다. 등방장의 평균은 초상대론에서 \(4\gamma^2/3\)이며 각도에 따라 손실도 가능하다. 강의(10/6)는 "근사적으로 γ²에 비례"까지. [[D1006.11]]</p></div></div>
+<div class="qz" data-q="u20-3"><div class="qq">전자보다 에너지가 큰 광자도 계속 역콤턴 증폭되는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 반동·에너지 보존·Klein–Nishina 효과(고에너지에서 단면적 감소)를 고려해야 한다. [[F22.08]]</p></div></div>
+<div class="qz" data-q="u20-4"><div class="qq">톰슨 산란과 콤프턴 산란의 차이를 한 문장으로, 그리고 판단 기준이 되는 에너지를 말하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>전자의 반동(recoil)을 무시할 수 있으면 톰슨(주파수 불변), 고려해야 하면 콤프턴(광자가 에너지를 잃음). 기준은 \(h\nu\) 대 \(m_ec^2=0.511\) MeV — 톰슨은 콤프턴의 저에너지 극한. [[F22.02, F22.06, D1006.08]]</p></div></div>
+<div class="qz" data-q="u20-5"><div class="qq">콤프턴 공식을 쓰고 (i) \(h\nu\ll m_ec^2\), (ii) \(h\nu\gg m_ec^2\) 극한을 말하라. 유도에 쓰는 두 보존식은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(h\nu'=h\nu/[1+(h\nu/m_ec^2)(1-\cos\theta)]\). (i) \(\nu'\approx\nu\)(톰슨), (ii) \(h\nu'\approx m_ec^2/(1-\cos\theta)\). 에너지 보존 \(h\nu+m_ec^2=h\nu'+E\)와 운동량 보존(벡터) + \(E^2=(m_ec^2)^2+(pc)^2\). [[F22.05, D1006.09, D1006.29]]</p></div></div>
+<div class="qz" data-q="u20-6"><div class="qq">Klein–Nishina 단면적이 광자 에너지에 따라 보이는 두 가지 성질은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>에너지가 커질수록 ① 단면적 자체가 감소(고에너지에서 콤프턴 산란 비효율), ② 전방 산란으로 쏠림. 저에너지에서는 톰슨의 \(\tfrac{r_e^2}2(1+\cos^2\theta)\)(앞뒤 대칭)로 돌아간다. [[F22.08, F22.09]]</p></div></div>
+<div class="qz" data-q="u20-7"><div class="qq">역콤프턴에서 K, K′, 첨자 1은 각각 무엇을 뜻하며, 왜 K′에서는 톰슨 산란으로 다룰 수 있는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>K = 실험실계(전자가 움직임), K′ = 전자 정지계, 첨자 1 = 충돌 후. 천체의 광자(X선 keV 등)는 K′에서도 \(m_ec^2\)(0.5 MeV)보다 에너지가 훨씬 작아 반동을 무시할 수 있기 때문. [[F22.10, F22.11, F22.12]]</p></div></div>
+<div class="qz" data-q="u20-8"><div class="qq">\(\gamma=10^4\) 전자가 1 GHz 전파 광자를 역콤프턴 산란시키면 대략 어느 영역이 되는가? SSC란?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\nu_1\sim\gamma^2\nu=10^8\times10^9=10^{17}\) Hz ≈ 0.4 keV, X선. SSC = 싱크로트론을 낸 바로 그 전자들이 자기 싱크로트론 광자를 다시 역콤프턴 산란해 더 높은 에너지로 올리는 것(블랙홀·중성자별 근방). [[D1006.11, D1006.12]]</p></div></div>
+
+<div class="qz" data-q="u20-9"><div class="qq">(PPT Review) 등방 광자장 속 전자 하나의 역콤프턴 파워와, 광자 한 개의 평균 에너지 증폭을 쓰라. 싱크로트론 파워와의 비는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(dN_{\rm scatt}/dt=n_\gamma c\sigma_T\), \(\langle h\nu_1\rangle=\gamma^2(1+\beta^2/3)h\nu\) → \(P_{\rm IC}=\tfrac43c\sigma_TU_\gamma\gamma^2\beta^2\). 싱크로트론은 \(U_\gamma\to U_B\)로 바꾼 꼴이라 \(P_{\rm IC}/P_{\rm syn}=U_\gamma/U_B\). [[L11.s7, L11.s8, L11.s10]]</p></div></div>
+<div class="qz" data-q="u20-10"><div class="qq">(PPT) \(k_BT_e\approx5\) keV, τ ≈ 0.02인 은하단을 지난 CMB 광자의 평균 에너지 이득 비율은? SZ 효과로 은하단 거리를 재는 논리를 말하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\Delta\epsilon/\epsilon=(4kT_e/m_ec^2)\tau=4\times0.01\times0.02\approx8\times10^{-4}\)(슬라이드 표기 ~10⁻⁴, 확인 필요). SZ ∝ \(n_eL\), X선 ∝ \(n_e^2L\) → 둘로 \(L\)을 구하고 각크기와 비교해 거리. [[L11.s12, L11.s13]]</p></div></div>
+<div class="qz" data-q="u20-11"><div class="qq">(PPT Review) 콤프턴 산란에서 산란 광자의 에너지를 입사 에너지와 산란각으로 쓰고, 두 극한을 말하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(h\nu'=h\nu/[1+(h\nu/m_ec^2)(1-\cos\theta)]\). \(h\nu\ll m_ec^2\): \(h\nu'\approx h\nu\)(톰슨). \(h\nu\gg m_ec^2\): \(h\nu'\approx m_ec^2/(1-\cos\theta)\). 항상 \(h\nu'&lt;h\nu\) — 전자 되튐. [[L10.s13, L10.s14]]</p></div></div>
+
+<div class="qz" data-q="u20-12"><div class="qq">(플립 23) 산란 전후 진동수 관계 \(\nu_1=\nu(1-\beta\cos\theta)/(1-\beta\cos\theta_1)\)에서 정면 충돌과 추격 충돌의 결과를 구하라. 평균은 왜 γ²인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>정면(θ = π, θ₁ = 0): \(\nu_1=\nu(1+\beta)/(1-\beta)\approx4\gamma^2\nu\). 추격(θ = 0, θ₁ = π): \(\nu_1=\nu(1-\beta)/(1+\beta)\approx\nu/4\gamma^2\). 산란 광자는 \(\cos\theta_1\approx\beta\)로 몰리고 입사는 등방(\(\langle\cos\theta\rangle=0\))이라 \(\langle\nu_1\rangle\approx\gamma^2\nu\) — 좌표계 변환 두 번에서 γ가 하나씩. [[F23.09, F23.10, F23.11, F24.04, F24.05]]</p></div></div>
+<div class="qz" data-q="u20-13"><div class="qq">(플립 24 · PPT Review) 역콤프턴 파국이란? 어떤 밝기온도에서 일어나는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>싱크로트론 광자가 자기를 낸 전자에 다시 산란(SSC)되어 \(L_{\rm IC}/L_{\rm syn}=U_\gamma/U_B\)가 1을 넘으려 하면 전자가 운동에너지를 급속히 잃어 싱크로트론도 역콤프턴도 꺼진다 — 그래서 \(L_{\rm IC}\)는 \(L_{\rm syn}\)보다 클 수 없다. compact radio source에서 밝기온도 약 10¹² K가 한계. [[F24.09, F24.11, F24.12, F24.13, L11.s3e]]</p></div></div>
+
+<p class="note">출처: 플립 22(컴프톤 산란) · 플립 23–24(역컴프톤) · 10/6 강의 녹음 · 교재 p.151–171(역콤프턴 파워·콤프턴화는 교재 선행) · Lecture10·11 PPT · 상태: 10/6 반영 + 10/8 Lecture10 PPT 대조 완료, Lecture11 PPT 반영(10/8 녹음 미확인)</p>

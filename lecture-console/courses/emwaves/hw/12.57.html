@@ -1,0 +1,17 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>지표 위치부터 정확히.</b> 세 항의 자유지표가 모두 같은 위치에 있으려면 미분은 <b>반변</b> 미분 \(\partial^{\lambda}\equiv\partial/\partial x_{\lambda}\)여야 한다(\(\partial^{0}=-\partial_0\)에 주의):</p>
+\[ \boxed{\ \partial^{\lambda}F^{\mu\nu}+\partial^{\mu}F^{\nu\lambda}+\partial^{\nu}F^{\lambda\mu}=0\ }\quad\Longleftrightarrow\quad \partial_{\lambda}F_{\mu\nu}+\partial_{\mu}F_{\nu\lambda}+\partial_{\nu}F_{\lambda\mu}=0 \]
+<p>(두 형태는 세 지표를 모두 올리거나 내려 얻어지며 동치다. 이것이 Bianchi 항등식.)</p>
+
+<p><b>확인 1: 세 지표가 모두 공간</b> \((\mu\nu\lambda)=(1,2,3)\):</p>
+\[ \partial_3F^{12}+\partial_1F^{23}+\partial_2F^{31}=\frac{\partial B_z}{\partial z}+\frac{\partial B_x}{\partial x}+\frac{\partial B_y}{\partial y}=\divg\vb{B}=0 \]
+<p>이는 \(\partial G^{0\nu}/\partial x^{\nu}=\divg\vb{B}=0\)과 같은 식이다 ✓</p>
+
+<p><b>확인 2: 하나가 시간</b> \((\mu\nu\lambda)=(0,1,2)\), 아래첨자 형태로:</p>
+\[ \partial_2F_{01}+\partial_0F_{12}+\partial_1F_{20}=-\frac{1}{c}\frac{\partial E_x}{\partial y}+\frac{1}{c}\frac{\partial B_z}{\partial t}+\frac{1}{c}\frac{\partial E_y}{\partial x}=\frac{1}{c}\Big[(\curl\vb{E})_z+\frac{\partial B_z}{\partial t}\Big]=0 \]
+<p>즉 Faraday 법칙이고, 이는 \(\partial G^{3\nu}/\partial x^{\nu}=0\)에 해당한다 ✓ (\(F_{01}=-F^{01}=-E_x/c,\ F_{20}=-F^{20}=E_y/c,\ F_{12}=F^{12}=B_z\).)</p>
+
+<p><b>일반론:</b> 좌변은 세 지표에 대해 완전반대칭이므로 독립 성분은 \(\binom{4}{3}=4\)개뿐이고, 그 4개가 정확히 \(\partial_\nu G^{\mu\nu}=0\)의 4개 방정식(\(\divg\vb{B}=0\) 1개 + Faraday 3개)이다. 실제로 \(G^{\mu\nu}=\tfrac{1}{2}\epsilon^{\mu\nu\lambda\sigma}F_{\lambda\sigma}\)이고, 순환합은 \(\epsilon\)로 축약하면 \(\partial_\nu G^{\mu\nu}\)에 비례한다.</p>
+<div class="alabel">감점 포인트</div>
+\(\partial/\partial x^{\lambda}\)(공변 미분)와 \(\partial/\partial x_{\lambda}\)(반변 미분)를 섞는 것 — \(\lambda=0\)일 때 부호가 뒤집혀 Faraday 법칙의 부호가 반대로 나온다.</div><!--/sol-->

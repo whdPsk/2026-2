@@ -1,0 +1,75 @@
+<div class="predict"><b>◈ 학습 목표.</b> ① 가우스 단위 맥스웰 방정식 4개의 뜻을 말하고 전하 보존식을 끌어낸다. ② 원천(ρ, j)이 있을 때 왜 퍼텐셜 \(\mathbf A,\phi\)를 쓰는지, <b>Lorenz(PPT 표기 Lorentz) 게이지</b>가 무엇이고 왜 쓰는지 말로 설명한다. ③ <b>지연시간(retarded time)</b>과 <b>지연 퍼텐셜</b>을 정의하고 "왜 거리만큼 시간 보정으로 끝나지 않는가"에 답한다. ④ 작은 원천의 다중극 복사 우선순위를 안다. — 9/15 PPT Review Questions ③–⑤가 이 단원의 뼈대.</div>
+
+<h4>맥스웰 방정식 (가우스 단위) <span class="en">Maxwell's equations · Gaussian units</span></h4>
+<p>전기장·자기장을 기술하는 4개의 식. 천문학에서는 <b>가우스(cgs) 단위</b>를 쓴다. ① 전하에 대한 가우스 법칙, ② 패러데이 유도 법칙(자기장이 시간에 따라 변하면 전기장이 생김), ③ 자기장에 대한 가우스 법칙(자기 단극자(magnetic monopole)가 없음), ④ 앙페르–맥스웰 법칙(전류가 있으면 자기장이 생김 — 앙페르; 두 번째 항 \(\partial\mathbf E/\partial t\)는 전기장과 자기장이 <b>대칭적으로</b> 기술되도록 맥스웰이 새로 도입). [[F10.01, F10.02]]</p>
+<div class="formula"><div class="ftitle">암기 — Gaussian 맥스웰 방정식</div>\[ \nabla\cdot\mathbf E=4\pi\rho,\qquad\nabla\times\mathbf E=-{1\over c}{\partial\mathbf B\over\partial t},\qquad\nabla\cdot\mathbf B=0,\qquad\nabla\times\mathbf B={4\pi\over c}\mathbf j+{1\over c}{\partial\mathbf E\over\partial t} \]<p class="note">ρ = 전하밀도(charge density), \(\mathbf j=\rho\mathbf v\) = 전류밀도(v는 전하가 움직이는 속도). 진공에서는 ρ = 0, j = 0. 유체의 질량밀도 ρ와 혼동 금지. [[F10.02]]</p></div>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>④식의 발산 → 전하 보존 [[F10.03]]</div><ol>
+<li>④식에 발산을 취한다. 벡터 항등식 \(\nabla\cdot(\nabla\times\mathbf B)=0\)이므로 좌변은 0: \(\;0={4\pi\over c}\nabla\cdot\mathbf j+{1\over c}{\partial\over\partial t}(\nabla\cdot\mathbf E)\).</li>
+<li>①식으로 \(\nabla\cdot\mathbf E=4\pi\rho\)를 넣는다: \(\;0={4\pi\over c}\nabla\cdot\mathbf j+{4\pi\over c}{\partial\rho\over\partial t}\).</li>
+<li>\(4\pi/c\)로 나누면 \(\displaystyle{\partial\rho\over\partial t}+\nabla\cdot\mathbf j=0\) — <b>전하 보존식</b>.</li>
+<li>뜻: 어떤 공간 안의 전하밀도 변화는 그 공간을 둘러싼 면을 통해 드나드는 전류로만 결정된다.</li>
+</ol></div>
+<div class="intuit"><b>9/15 수업에서의 정리</b>지난 시간(플립)에 본 것은 진공(ρ = j = 0)에서의 맥스웰 방정식 해 = 평면파였고, 그것을 선편광 → 원편광 → 타원편광으로 일반화해 해석했다(U09·U10). 이제 다음 장에서는 <b>ρ와 j가 0이 아닐 때</b>의 해를 구하려는 것. 그래서 퍼텐셜·게이지·지연시간이 등장한다. [[S0915.07]]</div>
+
+<h4>퍼텐셜과 게이지 <span class="en">Review Q ③ · Lorentz (Lorenz) gauge</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 3 ③ <span class="st">Review Questions</span></div>
+<ul><li>What is the Lorentz gauge? Why do we use the Lorentz gauge?</li></ul> [[L05.s3c]]</div>
+<div class="explain"><b>부가설명</b>
+<p><b>(1) 벡터 퍼텐셜.</b> 자기장에는 원천이 없으므로(\(\nabla\cdot\mathbf B=0\)) 벡터 항등식 \(\nabla\cdot(\nabla\times\mathbf A)=0\)을 이용해 \(\mathbf B=\nabla\times\mathbf A\)로 놓으면 그 식이 <b>자동으로</b> 성립한다. \(\mathbf A\)를 알면 회전(curl)만 취해 자기장의 크기·방향을 안다.</p>
+<p><b>(2) 스칼라 퍼텐셜.</b> 원천이 없는 정전기라면 \(\mathbf E=-\nabla\phi\)로 충분하지만, 패러데이 법칙(\(\nabla\times\mathbf E=-\frac1c\partial_t\mathbf B\))을 만족하려면 \(-\frac1c\partial\mathbf A/\partial t\) 항이 들어가야 한다: \(\mathbf E=-\nabla\phi-\dfrac1c\dfrac{\partial\mathbf A}{\partial t}\). [[S0915.08]]</p>
+<p><b>(3) 자유도.</b> 장은 퍼텐셜의 회전·기울기로만 들어가므로 \(\mathbf A\)나 \(\phi\)에 상수를 더해도 \(\mathbf E,\mathbf B\)는 변하지 않는다 → 퍼텐셜을 고르는 데 상당한 자유도가 있다. [[S0915.08]]</p>
+<p><b>(4) Lorenz 게이지 = 무엇.</b> 두 퍼텐셜 식을 맥스웰 방정식에 넣어 전개하면, 그 자유도를 이용해 \(\nabla\cdot\mathbf A+\dfrac1c\dfrac{\partial\phi}{\partial t}=0\)을 만족하는 \((\mathbf A,\phi)\) 조합을 고를 수 있다. 이 조건이 <b>Lorenz(로렌츠) 게이지</b>.</p>
+<p><b>(5) 왜 쓰나.</b> 맥스웰 방정식을 퍼텐셜로 바꾸는 과정에서 나오는 미분방정식이 <span class="hl">훨씬 간단해지기 때문</span>. 0이 아닌 다른 조건으로도 풀 수 있지만 어차피 퍼텐셜은 그만큼 옮겨도 차이가 없으니 간단한 쪽을 택한다. 결과: \(\phi\)와 \(\mathbf A\)가 각각 원천이 있는 파동방정식을 만족한다. [[S0915.09]]</p></div>
+<div class="formula"><div class="ftitle">암기 — 퍼텐셜 · Lorenz 조건 · 원천이 있는 파동방정식</div>\[ \mathbf B=\nabla\times\mathbf A,\qquad\mathbf E=-\nabla\phi-{1\over c}{\partial\mathbf A\over\partial t},\qquad\nabla\cdot\mathbf A+{1\over c}{\partial\phi\over\partial t}=0 \]\[ \nabla^2\phi-{1\over c^2}{\partial^2\phi\over\partial t^2}=-4\pi\rho,\qquad\nabla^2\mathbf A-{1\over c^2}{\partial^2\mathbf A\over\partial t^2}=-{4\pi\over c}\mathbf j \]<p class="note">ρ = j = 0(진공)이면 정확히 파동방정식 → \(e^{i(\mathbf k\cdot\mathbf x-\omega t)}\) 꼴의 해가 그대로 만족. [[S0915.09, S0915.10]]</p></div>
+<div class="trap"><b>함정 · 이름과 게이지 변환</b>
+<ul><li>PPT·녹음은 "Lorentz gauge"(로렌츠/로렌즈)라고 하지만 표준 명칭은 덴마크 물리학자 Lorenz의 <b>Lorenz gauge</b>. 시험 답안에서는 어느 쪽도 의미가 통한다. [[L05.s3c, S0915.09]]</li>
+<li>강의에서는 "상수를 더해도 장이 안 변한다"로 설명했지만, 일반적인 게이지 변환은 임의의 매끄러운 함수 χ에 대해 \(\mathbf A\to\mathbf A+\nabla\chi,\ \phi\to\phi-\frac1c\partial_t\chi\)이고 이때도 \(\mathbf E,\mathbf B\)는 불변이다. 따라서 게이지를 바꿔도 관측되는 빛(세기·편광)은 바뀌지 않는다. [[S0915.08]]</li></ul></div>
+<div class="prof"><b>수업 중 질문</b>Q. Lorenz 게이지를 안 쓰면? → 식의 형태가 완전히 달라져야 하지만 <b>결과(장)는 같아야</b> 한다(퍼텐셜은 상수만큼 차이가 날 뿐). 다만 굳이 그렇게 계산한 사람은 없을 것 — 쉬운 길을 두고 어렵게 돌아갈 필요가 없다. [[S0915.16]]</div>
+
+<h4>원천과 관측자 <span class="en">source at x′, observer at x</span></h4>
+<p>우리가 풀려는 것은 원천이 있는 위 파동방정식. 멀리 천체가 있고 그 안의 전자 같은 대전 입자가 움직여 다닌다. 원천 위치를 \(\mathbf x'\), 관측자 위치를 \(\mathbf x\)라 하면 거리는 \(|\mathbf x-\mathbf x'|\). 전하가 움직이면 전기장·자기장이 생기고, 그것이 (거리가 머니 약해지지만) 관측자까지 전달된다. <span class="hl">"복사를 본다" = 그렇게 전달된 전기장과 자기장을 보는 것</span> — 그래서 원천이 어떻게 움직이는지가 중요하다. [[S0915.10]]</p>
+
+<h4>지연시간 <span class="en">Review Q ④ · retarded time</span> <span class="star">강조</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 3 ④ <span class="st">Review Questions</span></div>
+<ul><li>What is the retarded time?</li></ul> [[L05.s3d]]</div>
+<div class="explain"><b>부가설명</b>
+<p>전기장·자기장은 <b>빛의 속도로</b> 전달된다. 전자가 움직이기 시작할 때 전기장이 방출되지만, 그것이 관측자에게 오는 데 \(|\mathbf x-\mathbf x'|/c\)의 시간이 걸린다. 그래서 지금(내 시각 t) 내가 받은 신호는 그만큼 <b>과거</b>에 전자가 있던 위치에서 방출된 것이다:</p>
+\[ t_{\rm ret}=t-{|\mathbf x-\mathbf x'|\over c} \]
+<p><span class="hl">현재 내가 보는 전기장은 현재 전자 위치가 아니라, 거리만큼 이전 시각의 전자 위치에서 방출된 신호다 — 그걸 구별해야 한다.</span> 교수님: "굉장히 중요하고." 이 시각을 retarded time(지연시간)이라 부른다. [[S0915.11]]</p>
+<p>지구 실험실에서도 원리상 지연은 있지만 너무 짧아 무시되고, 천체는 멀어서 차이가 크다. 그러나 <span class="hl">핵심은 "거리가 멀다"가 아니라 "신호를 받았을 때 그것을 방출한 전자는 이미 그 자리에 없다"</span>는 점. (우주 팽창 같은 우주론적 효과는 여기서 전혀 고려하지 않는다.) [[S0915.12]]</p></div>
+<div class="prof"><b>수업 중 질문</b>Q. 관측되는 것이 과거 시점의 현상이라면, 지연시간을 굳이 식에 넣지 말고 거리만큼 시간을 따로 보정하면 되지 않나?<br>A. 천체가 멀다는 문제가 아니다. 본질적으로 <b>복사는 가속 때문</b>이다(등속 운동하는 전하도 전기장은 있지만 우리가 말하는 복사와는 다르다 — 다음 시간). 가속은 속도의 크기·방향이 시간에 따라 바뀌는 것이므로(예: 원운동), ① 대전 입자의 궤적을 정확한 시간대로 따라가야 가속도를 알고 전기장을 정확히 계산할 수 있고, ② 시간 지연을 넣어야 비밍(beaming) 같은 <b>특수상대론적 효과</b>를 반영할 수 있다. 명확한 답은 다음 시간(점전하 복사)에. [[S0915.15]]</div>
+<div class="trap"><b>STT 수치·문장 의심</b>녹음상 "전자가 등속으로 움직이면 복사가 생기잖아요" / 문맥·물리상 "생기지 <b>않</b>잖아요"(등속 전하는 복사하지 않음 — 가속이 필요). [[S0915.15]]</div>
+
+<h4>지연 퍼텐셜 <span class="en">Review Q ⑤ · retarded potential</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 3 ⑤ <span class="st">Review Questions</span></div>
+<ul><li>What is the retarded potential?</li></ul> [[L05.s3e]]</div>
+<div class="explain"><b>부가설명</b>
+<p>원천이 있는 파동방정식의 해. 전자기학의 쿨롱 법칙을 떠올리면 적기 쉽다: 전하밀도 ρ를 원천 부피(프라임 좌표)에 대해 적분하고(= 총전하) 거리의 역수를 곱한 것이 퍼텐셜. <b>달라지는 것은 단 하나</b> — 관측자가 위치 \(\mathbf x\), 시각 t에서 퍼텐셜을 잰다면, 적분 안의 전하 분포는 모두 <b>지연시간에서의</b> 분포여야 한다(복사가 오는 동안 전자는 움직여 갔으니, 방출할 때의 위치를 써야). 유도 과정은 수학적으로 만만치 않으니 관심 있으면 따로 공부. [[S0915.13]]</p>
+<p>벡터 퍼텐셜도 똑같다: 전하가 속도 v로 움직이면 전류(밀도) \(\mathbf j=\rho\mathbf v\)이므로, ρ 대신 \(\mathbf j\)를 넣고 c로 나누면 된다. 이렇게 \(\phi,\mathbf A\)를 알면 \(\mathbf B=\nabla\times\mathbf A\), \(\mathbf E=-\nabla\phi-\frac1c\partial_t\mathbf A\)로 관측자 위치의 장을 계산한다(두 경로로 구한 결과가 맞아야 함 — 아니면 계산이 틀린 것). 다음 시간: 점전하가 움직일 때의 퍼텐셜을 구체적으로. [[S0915.14]]</p></div>
+<div class="formula"><div class="ftitle">암기 — 지연 퍼텐셜</div>\[ \phi(\mathbf x,t)=\int{\rho(\mathbf x',t_{\rm ret})\over|\mathbf x-\mathbf x'|}\,d^3x',\qquad\mathbf A(\mathbf x,t)={1\over c}\int{\mathbf j(\mathbf x',t_{\rm ret})\over|\mathbf x-\mathbf x'|}\,d^3x',\qquad t_{\rm ret}=t-{|\mathbf x-\mathbf x'|\over c} \]<p class="note">정적인 경우의 쿨롱 퍼텐셜과 같은 꼴 — 원천을 "지연시간"에서 평가한다는 것만 다르다. [[S0915.13, S0915.14]]</p></div>
+<div class="apply"><b>스케일 감각</b>실험실 1 m → 지연 \(1/c\approx3.3\) ns(무시 가능). 태양 1 AU → 약 499 s ≈ 8.3분. 그러나 위 질문처럼 지연시간이 중요한 진짜 이유는 크기가 아니라 <b>가속 궤적을 시간 순서대로 따라가야 한다</b>는 데 있다. [[S0915.12, S0915.15]]</div>
+
+<h4>작은 원천의 다중극 복사 <span class="en">multipole expansion</span></h4>
+<p>작은 소스에서는 복사를 다중극으로 전개한다. 전하 보존 때문에 전기 단극자 복사는 없고, 보통 전기 쌍극자가 가장 낮은 차수이다. 대칭성으로 전체 전기 쌍극자가 상쇄되면 자기 쌍극자나 전기 사중극자 항을 봐야 한다. ‘전하들이 가속하니 개별 라모 파워를 더한다’는 방법은 간섭을 놓칠 수 있다.</p><p>다중극 전개의 작은 매개변수는 소스 크기/파장(ka)이다. 정적인 다중극장의 거리감쇠와 원거리 복사장의 1/r 감쇠는 서로 다른 비교다. 높은 복사 다중극은 주로 작은 진폭 인자로 억제되며, 원거리 복사의 장 자체는 여전히 1/r이다.</p>
+<div class="formula"><div class="ftitle">암기 — 다중극의 우선순위</div>\[ ka={2\pi a\over\lambda}\ll1,\qquad\mathbf p=\sum q_i\mathbf r_i \]<p class="note">진동하는 총쌍극자가 없으면 다음 비영차수로 진행. <i>조건: 소스가 작고 상대 위상/지연을 체계적으로 전개할 수 있을 때</i></p></div>
+
+<h4>Review Questions ③–⑤ 말로 답하기</h4>
+<div class="explain"><b>모범답 (30초 버전)</b>
+<p>③ Lorenz 게이지: \(\nabla\cdot\mathbf A+\frac1c\partial_t\phi=0\). 퍼텐셜에는 장을 바꾸지 않는 선택의 자유가 있으므로 이 조건을 고르면 φ와 A가 각각 원천이 있는 파동방정식(□φ = −4πρ, □A = −4πj/c)으로 분리돼 간단해진다.</p>
+<p>④ 지연시간: \(t_{\rm ret}=t-|\mathbf x-\mathbf x'|/c\). 장은 c로 전달되므로 지금 받는 신호는 그만큼 이전에, 그때의 전하 위치에서 방출된 것.</p>
+<p>⑤ 지연 퍼텐셜: 쿨롱형 적분 \(\int\rho/|\mathbf x-\mathbf x'|\,d^3x'\)(A는 j/c)인데 원천을 지연시간에서 평가한 것. [[L05.s3c, L05.s3d, L05.s3e]]</p><p>→ 예제 3.12(게이지), 3.13(지연시간 수치), 3.14(지연 퍼텐셜).</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u08-1"><div class="qq">gauge를 바꾸면 관측되는 빛의 편광이 바뀌는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. E와 B가 불변이므로 물리적 관측량은 바뀌지 않는다. (수업: Lorenz 게이지를 안 써도 결과는 같아야 한다.)</p></div></div>
+
+
+<div class="qz" data-q="u08-2"><div class="qq">전체 쌍극자 모멘트가 항상0이면 복사가 완전히 없는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>반드시 그렇지는 않다. 자기 쌍극자·전기 사중극자 같은 고차 복사가 남을 수 있다.</p></div></div>
+
+<div class="qz" data-q="u08-3"><div class="qq">지연시간을 정의하고, "거리/c만큼 시간만 보정하면 되지 않나?"에 답하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(t_{\rm ret}=t-|\mathbf x-\mathbf x'|/c\). 복사는 가속에서 나오므로 전하 궤적(속도의 크기·방향 변화)을 정확한 방출 시각 순서로 따라가야 가속도와 장을 계산할 수 있고, 지연을 넣어야 비밍 같은 상대론 효과도 들어간다. 신호를 받을 때 방출한 전자는 이미 다른 곳에 있다.</p></div></div>
+
+<div class="qz" data-q="u08-4"><div class="qq">Lorenz 게이지 조건을 쓰고, 이를 쓰는 이유를 한 문장으로.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\nabla\cdot\mathbf A+\frac1c\partial\phi/\partial t=0\). 퍼텐셜 선택의 자유를 이용해 맥스웰 방정식을 φ, A 각각의 (원천 있는) 파동방정식으로 간단히 만들기 위해서.</p></div></div>
+
+<div class="qz" data-q="u08-5"><div class="qq">④ 앙페르–맥스웰 식에서 전하 보존식을 유도하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>발산을 취하면 ∇·(∇×B)=0 → 0=(4π/c)∇·j+(1/c)∂(∇·E)/∂t, ∇·E=4πρ 대입 → ∂ρ/∂t+∇·j=0.</p></div></div>
+
+<p class="note">출처: Lecture05 EMWaves 슬라이드 3(Review Q ③–⑤) · 플립 10(맥스웰 방정식) · 9/15 강의 속기(퍼텐셜·게이지·지연시간 구간) · 다중극 부분은 교재 p.65–67, 81–83, 90–95 선행 정리 · 상태: PPT·플립·속기 전수 반영</p>

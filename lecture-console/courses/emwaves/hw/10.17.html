@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+Ex. 10.3: \(V=\dfrac{1}{4\pi\eps}\dfrac{qc}{\sqrt{D}}\), \(D=(c^2t-\vb{r}\cdot\vb{v})^2+(c^2-v^2)(r^2-c^2t^2)\).
+\(\vb{r}=\vb{R}+\vb{v}t\)로 바꿔 넣는다.
+\[ c^2t-\vb{r}\cdot\vb{v}=(c^2-v^2)t-\vb{R}\cdot\vb{v},\qquad
+r^2-c^2t^2=R^2+2t(\vb{R}\cdot\vb{v})-(c^2-v^2)t^2 . \]
+전개하면 \(t^2\)항과 \(t\)항이 <b>모두 상쇄</b>된다:
+\[ D=\big[(c^2-v^2)t-\vb{R}\cdot\vb{v}\big]^2+(c^2-v^2)\big[R^2+2t(\vb{R}\cdot\vb{v})-(c^2-v^2)t^2\big]
+=(\vb{R}\cdot\vb{v})^2+(c^2-v^2)R^2 . \]
+\(\vb{R}\cdot\vb{v}=Rv\cos\theta\)이므로
+\[ D=R^2v^2\cos^2\theta+c^2R^2-v^2R^2=c^2R^2\left(1-\frac{v^2}{c^2}\sin^2\theta\right). \]
+\[ \boxed{V(\vb{r},t)=\frac{1}{4\pi\eps}\frac{q}{R\sqrt{1-v^2\sin^2\theta/c^2}}} \]
+\(v\ll c\)에서 \(V\approx q/4\pi\eps R\) — 놀랍게도 <b>현재 위치</b> 기준의 Coulomb 형태. (지연 위치에서 정보가 왔음에도!)
+<div class="alabel">감점 포인트</div>
+\(\theta\)를 지연 위치 기준 각으로 착각하는 것 — \(\theta\)는 <b>현재</b> 위치에서 잰 \(\vb{R}\)와 \(\vb{v}\) 사이 각이다.</div><!--/sol-->

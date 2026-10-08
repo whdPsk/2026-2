@@ -1,0 +1,23 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(\tilde{\mathbf E}_I=\tilde E_{0I}\hat y\,e^{i(\mathbf k_I\cdot\mathbf r-\omega t)}\) 등. \(\hat k_I=(\sin\theta_I,0,\cos\theta_I)\), \(\hat k_R=(\sin\theta_I,0,-\cos\theta_I)\), \(\hat k_T=(\sin\theta_T,0,\cos\theta_T)\)이고 \(\tilde{\mathbf B}=\frac1v(\hat k\times\tilde{\mathbf E})\):
+\[\tilde{\mathbf B}_I=\frac{\tilde E_{0I}}{v_1}(\sin\theta_I\hat z-\cos\theta_I\hat x),\ \ \tilde{\mathbf B}_R=\frac{\tilde E_{0R}}{v_1}(\sin\theta_I\hat z+\cos\theta_I\hat x),\ \ \tilde{\mathbf B}_T=\frac{\tilde E_{0T}}{v_2}(\sin\theta_T\hat z-\cos\theta_T\hat x).\]
+<b>경계조건.</b> (i) \(E^\perp=E_z=0\) → 자동 만족. (iii) \(E^{\parallel}\) 연속:
+\[\tilde E_{0I}+\tilde E_{0R}=\tilde E_{0T}\quad\cdots(1)\]
+(ii) \(B^\perp=B_z\) 연속은 Snell 법칙 \(\frac{\sin\theta_I}{v_1}=\frac{\sin\theta_T}{v_2}\)에 의해 (1)과 동일 — 새 정보 없음.<br>
+(iv) \(\frac1\mu B^{\parallel}\)의 \(x\)성분:
+\[\frac{\cos\theta_I}{\mu_1v_1}\big(\tilde E_{0I}-\tilde E_{0R}\big)=\frac{\cos\theta_T}{\mu_2v_2}\tilde E_{0T}\ \Rightarrow\ \tilde E_{0I}-\tilde E_{0R}=\alpha\beta\,\tilde E_{0T}\quad\cdots(2)\]
+\[\alpha\equiv\frac{\cos\theta_T}{\cos\theta_I},\qquad \beta\equiv\frac{\mu_1v_1}{\mu_2v_2}=\frac{\mu_1n_2}{\mu_2n_1}.\]
+(1),(2)를 풀면 <b>Fresnel 식(수직 편광)</b>:
+\[\boxed{\tilde E_{0R}=\left(\frac{1-\alpha\beta}{1+\alpha\beta}\right)\tilde E_{0I},\qquad \tilde E_{0T}=\left(\frac{2}{1+\alpha\beta}\right)\tilde E_{0I}}\]
+<b>그래프(\(\beta=n_2/n_1=1.5\)).</b> \(\theta_I=0\)에서 \(\alpha=1\) → \(\tilde E_{0R}/\tilde E_{0I}=-0.2\), \(\tilde E_{0T}/\tilde E_{0I}=0.8\). \(\theta_I\to90^\circ\)에서 \(\alpha\to\infty\) → 비는 \(-1\), \(0\). 전 구간에서 음수이므로 반사파는 항상 \(180^\circ\) 위상차.<br>
+<b>Brewster 각 없음.</b> \(\tilde E_{0R}=0\)이려면 \(\alpha\beta=1\), 즉 (\(\mu_1=\mu_2\)) \(n_2\cos\theta_T=n_1\cos\theta_I\). Snell \(n_1\sin\theta_I=n_2\sin\theta_T\)와 각각 제곱해 더하면
+\[n_2^2=n_1^2 .\]
+즉 두 매질이 광학적으로 구별되지 않을 때뿐.
+\[\boxed{\text{수직(s) 편광에는 Brewster 각이 존재하지 않는다}}\]
+<b>수직입사 극한:</b> \(\alpha=1\) → \(\frac{1-\beta}{1+\beta}\), \(\frac{2}{1+\beta}\) — Eq. 9.82와 일치 \(\checkmark\)<br>
+<b>계수:</b>
+\[R=\left(\frac{1-\alpha\beta}{1+\alpha\beta}\right)^2,\qquad T=\frac{\epsilon_2v_2\cos\theta_T}{\epsilon_1v_1\cos\theta_I}\left|\frac{\tilde E_{0T}}{\tilde E_{0I}}\right|^2=\alpha\beta\frac{4}{(1+\alpha\beta)^2},\]
+\[R+T=\frac{(1-\alpha\beta)^2+4\alpha\beta}{(1+\alpha\beta)^2}=1\ \checkmark\]
+<div class="alabel">감점 포인트</div>
+평행 편광(p)의 결과 \(\frac{\alpha-\beta}{\alpha+\beta}\)와 헷갈리기 쉽다. s-편광은 \(\alpha\)와 \(\beta\)가 <b>곱</b>으로 함께 나타난다 — 그래서 \(\alpha\beta=1\)이 Snell과 양립 불가 → Brewster 없음. 시험 단골.</div><!--/sol-->

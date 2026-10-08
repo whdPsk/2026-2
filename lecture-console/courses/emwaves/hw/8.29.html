@@ -1,0 +1,20 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> \(Q\)의 전기력은 중심력이라 토크가 없다. 쌍극자 자기장
+\(\vb{B}=\dfrac{\muz m}{4\pi r^{3}}(2\cos\theta\,\hat{\vb{r}}+\sin\theta\,\hat{\boldsymbol\theta})\) 와
+\(\vb{v}=\dot r\hat{\vb{r}}+r\dot\theta\hat{\boldsymbol\theta}+r\sin\theta\,\dot\varphi\,\hat{\boldsymbol\varphi}\) 로부터
+\[\vb{N}=\vb{r}\times q(\vb{v}\times\vb{B})
+=\frac{\muz qm}{4\pi r^{2}}\Big[-(\dot r\sin\theta-2r\dot\theta\cos\theta)\hat{\boldsymbol\theta}
++2r\sin\theta\cos\theta\,\dot\varphi\,\hat{\boldsymbol\varphi}\Big].\]
+\(\hat{\boldsymbol\theta}\cdot\hat{\vb{z}}=-\sin\theta\), \(\hat{\boldsymbol\varphi}\cdot\hat{\vb{z}}=0\) 이므로
+\[\boxed{\;N_z=\frac{\muz qm}{4\pi}\Big(\frac{\sin^{2}\theta}{r^{2}}\dot r-\frac{2\sin\theta\cos\theta}{r}\dot\theta\Big)
+=-\frac{\muz qm}{4\pi}\frac{d}{dt}\Big(\frac{\sin^{2}\theta}{r}\Big)\;}\]
+\(r\to\infty\) 에서 \(L_z=0\) 이므로 시간적분하면
+\[\boxed{\;L_z=-\frac{\muz qm}{4\pi}\frac{\sin^{2}\theta}{r}\;}\]</p>
+<p><b>(b)</b> <b>장에서 왔다.</b> Prob. 8.22에 의해 \(\vb{r}\)에 있는 전하 \(q\)와 원점의 \(\vb{m}\)이 이루는 <em>장</em>의 각운동량은
+\[L_z^{\rm field}=+\frac{\muz qm\sin^{2}\theta}{4\pi r}.\]
+입자가 무한히 먼 곳(\(r\to\infty\), \(L_z^{\rm field}\to0\))에서 출발했으므로, 입자가 접근하면서 장의 \(L_z\)가 커지고 그 정확히 반대만큼을 입자가 역학적 각운동량으로 얻는다:
+\[\boxed{\;L_z^{\rm mech}+L_z^{\rm field}=0\ \text{(항상)}\;}\]
+계 전체의 각운동량은 처음부터 끝까지 0으로 보존된다. "입자가 회전을 시작했는데 아무도 토크를 주지 않았다"는 역설은 장의 각운동량을 장부에 넣는 순간 사라진다.</p>
+<div class="alabel">감점 포인트</div>
+\(\vb{N}=\vb{r}\times\vb{F}\)에서 \(\hat{\boldsymbol\theta}\)의 \(z\)성분이 \(-\sin\theta\)라는 점을 놓쳐 부호를 틀리는 것.</div><!--/sol-->

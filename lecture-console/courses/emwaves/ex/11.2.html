@@ -1,0 +1,73 @@
+<div class="exq"><b>상황.</b> 앞 절에서는 <em>사인파로 진동하는</em> 쌍극자만 다뤘다. 이제 시간 의존성을 전혀 제한하지 않은 임의의 쌍극자 \(\vb{p}(t)\)에 대해 복사장과 복사 일률을 구한 뒤, 두 가지 특수한 경우에 적용한다: <b>(a)</b> \(\vb{p}(t)=\vb{p}_0\cos\omega t\)이면 §11.1.2의 결과가 회복되는가? <b>(b)</b> 쌍극자가 사실은 <em>움직이는 점전하 하나</em>라면 무엇이 나오는가? 다중극 전개를 지연 퍼텐셜에 적용해 \(r'\)의 최저 차수(=전기 쌍극자 항)만 남기고, 복사 영역(\(1/r\) 항만 유지)으로 가는 것이 전략이다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>지연 시각 \(t_0=t-r/c\)를 미분할 때만 \(1/r\) 항이 살아난다. \(\nabla t_0=-\hat{\vb{r}}/c\)가 모든 것을 결정한다.</div>
+<ol>
+<li><b>전개된 퍼텐셜.</b> 근사 1(소스가 작다)·2(소스 크기 ≪ \(c\times\)변화 시간)로 \(r'\)의 1차까지 남기면
+\[ V(\vb{r},t)\approx\frac{1}{4\pi\eps}\left[\frac{Q}{r}+\frac{\hat{\vb{r}}\cdot\vb{p}(t_0)}{r^2}+\frac{\hat{\vb{r}}\cdot\dot{\vb{p}}(t_0)}{rc}\right],\qquad \vb{A}(\vb{r},t)\approx\frac{\muz}{4\pi}\frac{\dot{\vb{p}}(t_0)}{r}. \]
+(\(\int\vb{J}\,\dd\tau'=\dot{\vb{p}}\)를 썼다.) \(Q\)는 전하 보존 때문에 시간에 무관하다.</li>
+
+<li><b>복사 영역 규칙.</b> 근사 3: \(1/r^2\) 이상 항은 버린다. 그러면 <b>미분이 \(t_0\)에 걸릴 때만</b> 새 항이 살아난다. \(t_0=t-r/c\)이므로
+\[ \nabla t_0=-\frac1c\nabla r=-\frac{\hat{\vb{r}}}{c}. \]</li>
+
+<li><b>\(\vb{E}\).</b> \(V\)의 셋째 항만 \(1/r\)이고 그중 \(t_0\) 미분만 남긴다:
+\[ \nabla V\approx\frac{1}{4\pi\eps}\frac{\hat{\vb{r}}\cdot\ddot{\vb{p}}}{rc}\nabla t_0=-\frac{1}{4\pi\eps c^2}\frac{(\hat{\vb{r}}\cdot\ddot{\vb{p}})}{r}\hat{\vb{r}},\qquad \frac{\partial\vb{A}}{\partial t}\approx\frac{\muz}{4\pi}\frac{\ddot{\vb{p}}}{r}. \]
+따라서
+\[ \vb{E}=-\nabla V-\frac{\partial\vb{A}}{\partial t}\approx\frac{\muz}{4\pi r}\Big[(\hat{\vb{r}}\cdot\ddot{\vb{p}})\hat{\vb{r}}-\ddot{\vb{p}}\Big]=\frac{\muz}{4\pi r}\Big[\hat{\vb{r}}\times(\hat{\vb{r}}\times\ddot{\vb{p}})\Big]. \]</li>
+
+<li><b>\(\vb{B}\).</b>
+\[ \vb{B}=\curl\vb{A}\approx\frac{\muz}{4\pi r}\big[(\nabla t_0)\times\ddot{\vb{p}}\big]=-\frac{\muz}{4\pi rc}\big[\hat{\vb{r}}\times\ddot{\vb{p}}\big]=\frac1c\hat{\vb{r}}\times\vb{E}. \]
+\(z\)축을 \(\ddot{\vb{p}}(t_0)\) 방향으로 잡으면
+\[ \vb{E}\approx\frac{\muz\ddot p(t_0)}{4\pi}\frac{\sin\theta}{r}\hat{\boldsymbol\theta},\qquad \vb{B}\approx\frac{\muz\ddot p(t_0)}{4\pi c}\frac{\sin\theta}{r}\hat{\boldsymbol\varphi}. \]</li>
+
+<li><b>Poynting 벡터와 총 일률.</b>
+\[ \vb{S}=\frac{1}{\muz}(\vb{E}\times\vb{B})=\frac{\muz}{16\pi^2c}[\ddot p(t_0)]^2\frac{\sin^2\theta}{r^2}\hat{\vb{r}},\qquad P_{\rm rad}=\oint\vb{S}\cdot\dd\vb{a}=\frac{\muz}{16\pi^2c}[\ddot p]^2\cdot\frac{8\pi}{3}=\frac{\muz[\ddot p(t_0)]^2}{6\pi c}. \]</li>
+
+<li><b>(a) 진동 쌍극자.</b> \(p=p_0\cos\omega t\Rightarrow\ddot p=-\omega^2p_0\cos\omega t\Rightarrow\langle\ddot p^2\rangle=\tfrac12\omega^4p_0^2\). 대입하면
+\[ \langle P\rangle=\frac{\muz}{6\pi c}\cdot\frac{\omega^4p_0^2}{2}=\frac{\muz p_0^2\omega^4}{12\pi c} \]
+— §11.1.2의 결과 그대로 ✓.</li>
+
+<li><b>(b) 점전하.</b> 원점에 대해 위치 \(\vb{d}(t)\)에 있는 전하 \(q\)는 \(\vb{p}=q\vb{d}\), 따라서 \(\ddot{\vb{p}}=q\vb{a}\):
+\[ P=\frac{\muz q^2a^2}{6\pi c} \]
+— <b>Larmor 공식</b>. 점전하의 복사 일률은 <em>가속도의 제곱</em>에만 의존한다(속도가 아니라!).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \vb{E}=\frac{\muz}{4\pi r}\big[\hat{\vb{r}}\times(\hat{\vb{r}}\times\ddot{\vb{p}})\big],\quad \vb{B}=\frac1c\hat{\vb{r}}\times\vb{E},\quad P_{\rm rad}=\frac{\muz[\ddot{\vb{p}}(t_0)]^2}{6\pi c}\ \Rightarrow\ \begin{cases}\langle P\rangle=\dfrac{\muz p_0^2\omega^4}{12\pi c}\\[6pt] P=\dfrac{\muz q^2a^2}{6\pi c}\ (\text{Larmor})\end{cases}} \]
+<p class="note">전기 <b>홀극</b>은 복사하지 않는다 — \(Q\)가 보존되므로 \(\dot Q=0\)이고 \(V_{\rm mono}=Q/4\pi\eps r\)에서 \(1/r\) 장이 나오지 않는다. (반지름이 진동하는 대전 구는 Gauss 법칙에 의해 바깥 장이 전혀 변하지 않으므로 복사하지 않는다. 음향에서는 홀극이 복사한다 — 개구리 울음소리.) <b>검산</b> ① 복사장 조건: \(\vb{E}\perp\vb{B}\perp\hat{\vb{r}}\), \(E/B=c\) ✓. ② 차원: \(\muz\ddot p^2/c=(\mathrm{T\,m/A})(\mathrm{C\,m/s^2})^2/(\mathrm{m/s})\)를 풀면 W ✓. ③ 정적 극한: \(\ddot{\vb{p}}=0\)이면 복사 없음 — 등속 점전하(Ex 10.4)와 정합 ✓. ④ 알려진 특수경우: (a)가 §11.1.2, (b)가 Larmor로 각각 환원 ✓. ⑤ 각분포 \(\sin^2\theta\): 쌍극자 축 방향으로는 복사 0 — 도넛 ✓.</p></div>
+
+<div class="qz" data-q="ex11.2-a"><div class="qq"><b>+α</b> 소스의 시간 의존성을 바꿔라. 극판 간격 \(d\), 전기용량 \(C\)인 평행판 축전기에 초기 전하 \(\pm Q_0\)를 채운 뒤 저항 \(R\)에 연결해 방전시킨다: \(Q(t)=Q_0e^{-t/RC}\). (ⅰ) 순간 복사 일률 \(P(t)\), (ⅱ) 총 복사 에너지, (ⅲ) 그것과 저항에서 열로 소모된 에너지의 비를 구하고 수치를 넣어 보라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>(ⅰ) 일률.</b> 축전기의 쌍극자 모멘트는 \(p(t)=Q(t)d\)이므로
+\[ \ddot p=d\,\ddot Q=\frac{Q_0 d}{(RC)^2}e^{-t/RC}. \]
+따라서
+\[ \boxed{\ P(t)=\frac{\muz}{6\pi c}\frac{Q_0^2d^2}{(RC)^4}\,e^{-2t/RC}\ } \]
+(엄밀히는 \(t_0=t-r/c\)에서 평가; 총량 계산엔 무관하다.)</p>
+<p><b>(ⅱ) 총 복사 에너지.</b> \(\int_0^\infty e^{-2t/RC}\dd t=RC/2\)이므로
+\[ U_{\rm rad}=\frac{\muz Q_0^2d^2}{6\pi c(RC)^4}\cdot\frac{RC}{2}=\boxed{\ \frac{\muz Q_0^2d^2}{12\pi c\,(RC)^3}\ } \]</p>
+<p><b>(ⅲ) 저항에서 소모된 에너지</b>는 축전기에 저장돼 있던 전부, 즉 \(U_R=Q_0^2/2C\). 비는
+\[ \frac{U_{\rm rad}}{U_R}=\frac{\muz Q_0^2d^2}{12\pi c(RC)^3}\cdot\frac{2C}{Q_0^2}=\frac{\muz d^2}{6\pi c R^3C^2} =\frac{\muz c}{6\pi R}\left(\frac{d}{cRC}\right)^2. \]
+\(\muz c=377\,\Omega\)(자유공간 임피던스)이므로
+\[ \boxed{\ \frac{U_{\rm rad}}{U_R}=\frac{377\,\Omega}{6\pi R}\left(\frac{d}{c\,RC}\right)^{2}\ } \]</p>
+<p><b>수치.</b> \(d=1\,\mathrm{mm},\ R=1\,\mathrm{k\Omega},\ C=1\,\mathrm{nF}\)(\(RC=1\,\mu\mathrm{s}\))이면 \(d/(cRC)=10^{-3}/300=3.3\times10^{-6}\), 그 제곱은 \(1.1\times10^{-11}\); \(377/(6\pi\times10^3)=0.020\). 따라서
+\[ \frac{U_{\rm rad}}{U_R}\approx2\times10^{-13}. \]
+완전히 무시할 수준이다 ✓.</p>
+<p><b>해석.</b> 괄호 안의 \(d/(cRC)\)는 <b>(소스 크기)/(방출 파장 스케일)</b>이다 — 정확히 쌍극자 근사가 요구하는 작은 양이다. 이 비가 1에 접근하려면 \(d\)를 키우거나 \(RC\)를 극단적으로 짧게 해야 하는데, 그러면 쌍극자 근사 자체가 깨진다. 즉 "전자회로는 복사하지 않는다"는 실험실의 상식이 공식 안에 내장돼 있다. (반대로 안테나는 \(d\sim\lambda\)로 일부러 이 비를 1 근처까지 끌어올린 장치다.)</p></div></div>
+
+<div class="qz" data-q="ex11.2-b"><div class="qq"><b>+α</b> 시간 의존성을 진동이 아니라 <b>회전</b>으로 바꾸자: \(\vb{p}(t)=p_0[\cos\omega t\,\hat{\vb{x}}+\sin\omega t\,\hat{\vb{y}}]\). 각분포 \(\langle\dd P/\dd\Omega\rangle\)와 총 일률을 구하고, 선형 진동 쌍극자와 비교하라. 각 방향에서 나오는 빛의 편광은?</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 가속도.</b> \(\ddot{\vb{p}}=-\omega^2p_0[\cos\omega t_0\,\hat{\vb{x}}+\sin\omega t_0\,\hat{\vb{y}}]\), 크기는 \(|\ddot{\vb{p}}|=\omega^2p_0\)로 <b>시간에 무관</b>(방향만 회전). 이것이 계산을 쉽게 만든다.</p>
+<p><b>2) 각분포.</b> \(\dfrac{\dd P}{\dd\Omega}=\dfrac{\muz}{16\pi^2c}|\hat{\vb{r}}\times\ddot{\vb{p}}|^2=\dfrac{\muz}{16\pi^2c}\big[\ddot p^2-(\hat{\vb{r}}\cdot\ddot{\vb{p}})^2\big]\). 구면좌표 \(\hat{\vb{r}}=(\sin\theta\cos\varphi,\sin\theta\sin\varphi,\cos\theta)\)로
+\[ \hat{\vb{r}}\cdot\ddot{\vb{p}}=-\omega^2p_0\sin\theta\big[\cos\varphi\cos\omega t_0+\sin\varphi\sin\omega t_0\big]=-\omega^2p_0\sin\theta\cos(\omega t_0-\varphi). \]
+시간 평균 \(\langle\cos^2\rangle=1/2\)이므로 \(\langle(\hat{\vb{r}}\cdot\ddot{\vb{p}})^2\rangle=\tfrac12\omega^4p_0^2\sin^2\theta\), 따라서
+\[ \Big\langle\frac{\dd P}{\dd\Omega}\Big\rangle=\frac{\muz\omega^4p_0^2}{16\pi^2c}\left(1-\frac{\sin^2\theta}{2}\right)=\boxed{\ \frac{\muz p_0^2\omega^4}{32\pi^2c}\big(1+\cos^2\theta\big)\ } \]</p>
+<p><b>3) 총 일률.</b> \(\int(1+\cos^2\theta)\dd\Omega=4\pi+\frac{4\pi}{3}=\frac{16\pi}{3}\)이므로
+\[ \langle P\rangle=\frac{\muz p_0^2\omega^4}{32\pi^2c}\cdot\frac{16\pi}{3}=\boxed{\ \frac{\muz p_0^2\omega^4}{6\pi c}\ } \]
+선형 진동 쌍극자의 \(\muz p_0^2\omega^4/12\pi c\)의 <b>정확히 2배</b>다.</p>
+<p><b>4) 왜 2배인가 (합리성 검사).</b> 회전 쌍극자는 서로 90° 위상차를 갖는 두 개의 선형 진동 쌍극자(\(x\)축, \(y\)축)의 중첩이다. 일률은 장의 제곱이므로 원래는 교차항이 걱정되지만, 두 쌍극자가 서로 수직이라 \(\langle\ddot p_x\ddot p_y\rangle\)형 교차항이 시간 평균에서 0이 된다. 그래서 그냥 두 개 몫 = 2배 ✓. 또 \(|\ddot{\vb{p}}|\)가 상수라는 점에서 보면, 선형 쌍극자의 \(\langle\cos^2\rangle=1/2\) 손실이 없어진 것이기도 하다.</p>
+<p><b>5) 각분포 모양과 편광.</b>
+<br>· \(\theta=0,\pi\)(회전축): \(1+\cos^2\theta=2\)로 <b>최대</b>. 이 방향에서는 \(\ddot{\vb{p}}\)가 시선에 수직인 평면 안에서 등속 회전하므로 빛은 <b>원편광</b>이다.
+<br>· \(\theta=\pi/2\)(회전면): \(1+\cos^2\theta=1\)로 최소(축의 절반). 이 방향에서는 \(\ddot{\vb{p}}\)의 시선수직 성분이 한 방향으로만 진동하므로 <b>선편광</b>.
+<br>· 그 사이는 <b>타원편광</b>. 강도 비 2:1의 "찌그러진 공" 모양이며, 선형 쌍극자의 도넛(축에서 0)과 달리 <b>어느 방향으로도 0이 되지 않는다</b>.
+<br>· 이 \(1+\cos^2\theta\)는 Example 11.1 +α의 무편광 Rayleigh 위상함수와 같은 꼴 — 이유도 같다(수직인 두 쌍극자의 비간섭 합) ✓.</p></div></div>

@@ -1,0 +1,50 @@
+<div class="exq"><b>상황.</b> 에너지 \(E_0\)인 광자가 정지해 있는 전자(질량 \(m\))에 부딪혀 원래 진행 방향에 대해 각 \(\theta\)로 튕겨 나간다. 전자는 각 \(\phi\)로 반동한다. 산란된 광자의 에너지 \(E\)를 \(E_0\)와 \(\theta\)의 함수로 구하라. 광자는 질량이 0이므로 \(E=pc\)를 만족하고, 이 충돌은 같은 입자가 다시 나오므로 <b>탄성</b>이다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span><b>전략: ① 4-운동량 보존 → ② <em>측정하지 않는</em> 전자를 한쪽으로 몰고 제곱해서 소거(반동각 \(\phi\)를 아예 안 다뤄도 된다).</b></div>
+<ol>
+<li>4-운동량을 적는다. 광자를 \(+x\)로 입사시키고 산란면을 \(xy\)면으로 잡는다.
+\[ p_{\gamma}=\left(\frac{E_0}{c},\ \frac{E_0}{c}\hat{\vb x}\right),\quad p_e=(mc,\ \vb 0),\quad p_{\gamma}'=\left(\frac{E}{c},\ \frac{E}{c}\hat{\vb n}\right),\quad p_e'=\left(\frac{E_e}{c},\ \vb p_e\right), \]
+여기서 \(\hat{\vb n}\cdot\hat{\vb x}=\cos\theta\).</li>
+<li>보존식에서 <b>전자를 격리</b>한다:
+\[ p_e'=p_\gamma+p_e-p_\gamma'. \]</li>
+<li>양변을 제곱한다. 전자는 질량이 변하지 않으므로 \(p_e'\cdot p_e'=-m^2c^2=p_e\cdot p_e\), 광자는 \(p_\gamma\cdot p_\gamma=p_\gamma'\cdot p_\gamma'=0\):
+\[ -m^2c^2=0-m^2c^2+0+2\,p_\gamma\!\cdot\! p_e-2\,p_\gamma\!\cdot\! p_\gamma'-2\,p_e\!\cdot\! p_\gamma'. \]
+\(-m^2c^2\)이 양변에서 상쇄되어
+\[ p_\gamma\!\cdot\! p_e-p_\gamma\!\cdot\! p_\gamma'-p_e\!\cdot\! p_\gamma'=0. \]</li>
+<li>내적들을 계산한다(계량 \(a\cdot b=-a^0b^0+\vb a\cdot\vb b\)):
+\[ p_\gamma\!\cdot\! p_e=-\frac{E_0}{c}(mc)=-mE_0,\qquad p_e\!\cdot\! p_\gamma'=-mE, \]
+\[ p_\gamma\!\cdot\! p_\gamma'=-\frac{E_0E}{c^2}+\frac{E_0E}{c^2}\cos\theta=-\frac{E_0E}{c^2}(1-\cos\theta). \]</li>
+<li>대입하면
+\[ -mE_0+\frac{E_0E}{c^2}(1-\cos\theta)+mE=0\ \Longrightarrow\ m(E-E_0)=-\frac{E_0E}{c^2}(1-\cos\theta). \]
+양변을 \(mE_0E\)로 나누면
+\[ \frac{1}{E_0}-\frac{1}{E}=-\frac{1-\cos\theta}{mc^2}\ \Longrightarrow\ \frac1E=\frac{1}{E_0}+\frac{1-\cos\theta}{mc^2}. \]</li>
+<li>파장으로 바꾸면(\(E=hc/\lambda\)) 훨씬 예쁜 꼴이 된다.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ E=\frac{1}{\dfrac{1-\cos\theta}{mc^2}+\dfrac{1}{E_0}}\qquad\Longleftrightarrow\qquad \lambda=\lambda_0+\frac{h}{mc}(1-\cos\theta)\ } \]
+<p class="note">\(h/mc=2.426\) pm를 전자의 <b>Compton 파장</b>이라 한다. 파장 이동이 \(\lambda_0\)에 무관하고 오직 각도로만 결정된다는 것이 이 결과의 놀라운 점이며, 빛이 입자(광자)임을 보여준 역사적 실험이다. <b>검산</b>: (i) \(\theta=0\)이면 \(E=E_0\) — 아무 일도 안 일어난 경우 ✓. (ii) \(m\to\infty\)(무거운 표적)이면 \(E\to E_0\) — 벽에 튕긴 공처럼 에너지를 잃지 않음 ✓. (iii) \(E_0\ll mc^2\)(비상대론 극한)이면 \(1/E\approx1/E_0\)로 Thomson 산란(파장 불변)이 회복된다 ✓. (iv) 항상 \(E\le E_0\)(광자는 에너지를 잃기만 한다) — \(1-\cos\theta\ge0\)이므로 ✓. (v) 차원: \(1/E\)의 두 항 모두 에너지의 역수 ✓.</p></div>
+<div class="qz" data-q="ex12.9-a"><div class="qq"><b>+α</b> (극한 취하기) \(\theta=180^\circ\)(정면 되튕김)일 때 광자 에너지와 <em>전자가 얻는 운동에너지</em>를 구하라. 입사 광자가 \(E_0=0.511\) MeV(=\(mc^2\))인 경우 수치를 내고, 이것이 왜 "Compton edge"라 불리는지 설명하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>일반식.</b> \(\theta=180^\circ\Rightarrow1-\cos\theta=2\):</p>
+\[ \frac1E=\frac{2}{mc^2}+\frac{1}{E_0}\ \Longrightarrow\ \boxed{\ E_{\min}=\frac{E_0\,mc^2}{2E_0+mc^2}\ } \]
+<p>전자가 얻는 운동에너지는 광자가 잃은 만큼이다:</p>
+\[ T_{e,\max}=E_0-E_{\min}=E_0\left(1-\frac{mc^2}{2E_0+mc^2}\right)=\boxed{\ \frac{2E_0^2}{2E_0+mc^2}\ } \]
+<p><b>수치</b>(\(E_0=mc^2=0.511\) MeV):</p>
+\[ E_{\min}=\frac{(0.511)(0.511)}{2(0.511)+0.511}=\frac{0.511}{3}=0.170\ \mathrm{MeV},\qquad T_{e,\max}=0.511-0.170=0.341\ \mathrm{MeV}. \]
+<p><b>왜 "edge"인가.</b> 산란각 \(\theta\)는 0부터 180°까지 연속적으로 분포하므로 전자가 받는 에너지도 0부터 \(T_{e,\max}\)까지 <b>연속 스펙트럼</b>을 이룬다. 그러나 \(T_{e,\max}\)를 넘는 전자는 원리적으로 나올 수 없으므로 스펙트럼이 그 지점에서 뚝 끊긴다 — 감마선 검출기 스펙트럼에서 보이는 그 절벽이 Compton edge다.</p>
+<p><b>검산</b>: (i) \(E_0\ll mc^2\)이면 \(T_{e,\max}\to2E_0^2/mc^2\to0\) — 저에너지 광자는 전자를 거의 못 움직인다 ✓. (ii) \(E_0\gg mc^2\)이면 \(E_{\min}\to mc^2/2=0.256\) MeV로 <b>포화</b>한다 — 아무리 센 감마선도 정면 되튕김 후에는 0.26 MeV 정도로 나온다 ✓. (iii) \(T_{e,\max}&lt;E_0\)이므로 광자가 전부를 주지는 못한다 — 운동량 보존 때문이며, 이것이 자유전자가 광자를 <em>완전 흡수</em>할 수 없는 이유이기도 하다.</p></div></div>
+<div class="qz" data-q="ex12.9-b"><div class="qq"><b>+α</b> (다른 관성계에서 다시 묻기 — 역Compton 산란) 전자가 정지해 있지 않고 \(\gamma\gg1\)로 광자 쪽으로 정면으로 달려온다. 되튕겨 나온 광자의 에너지는 대략 얼마인가? \(\gamma=10^4\)인 전자가 우주배경복사 광자(\(E_0=6.6\times10^{-4}\) eV)와 부딪히는 경우를 계산하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>전략: 전자 정지계로 boost → 본문 공식 적용 → 실험실계로 다시 boost.</b> 광자 에너지의 Doppler 변환은 \(E'=\gamma E(1+\beta)\)(정면으로 다가갈 때)이다.</p>
+<p><b>1단계 — 전자 정지계 \(S'\)로.</b> \(\beta\to1\)이므로</p>
+\[ E_0'=\gamma E_0(1+\beta)\approx2\gamma E_0. \]
+<p>수치: \(E_0'\approx2\times10^4\times6.6\times10^{-4}\,\mathrm{eV}=13.2\) eV. 이는 \(mc^2=5.11\times10^5\) eV보다 훨씬 작다.</p>
+<p><b>2단계 — \(S'\)에서 Compton 산란.</b> \(E_0'\ll mc^2\)이므로 Thomson 극한이라 에너지가 거의 안 변한다:</p>
+\[ E'\approx E_0'\approx2\gamma E_0. \]
+<p><b>3단계 — 실험실계로 되돌리기.</b> 되튕긴 광자는 이제 전자 진행 방향으로 나가므로 다시 \(\gamma(1+\beta)\approx2\gamma\)배 blueshift:</p>
+\[ \boxed{\ E_{\text{final}}\approx4\gamma^2E_0\ } \]
+<p><b>수치.</b> \(\gamma=10^4\):</p>
+\[ E_{\text{final}}\approx4\times10^{8}\times6.6\times10^{-4}\ \mathrm{eV}=2.6\times10^{5}\ \mathrm{eV}=0.26\ \mathrm{MeV}. \]
+<p>마이크로파 광자가 감마선/경X선으로 승격되었다! 이것이 <b>역Compton 산란(inverse Compton scattering)</b>이며, 활동은하핵과 초신성 잔해에서 고에너지 광자가 만들어지는 주요 기작이다.</p>
+<p><b>검산</b>: (i) \(\gamma\to1,\ \beta\to0\)이면 \(E_{\text{final}}\to E_0\) — 정지 전자에 저에너지 광자면 아무 일 없음(Thomson) ✓. (ii) 유효성 조건: 이 근사는 \(2\gamma E_0\ll mc^2\)일 때만 성립한다. 여기서는 13.2 eV \(\ll\) 511 keV이므로 여유롭게 만족 ✓. 만약 \(2\gamma E_0\gtrsim mc^2\)이면(Klein–Nishina 영역) 전자 정지계에서도 광자가 에너지를 크게 잃어 \(E_{\text{final}}\)이 \(\gamma mc^2\)로 포화한다 — 전자의 전체 에너지 이상을 줄 수는 없으므로 물리적으로 당연하다 ✓. (iii) \(4\gamma^2\)의 두 \(\gamma\)가 각각 "들어갈 때"와 "나올 때" 한 번씩 온 것이므로 구조도 납득된다.</p></div></div>

@@ -1,0 +1,275 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 고전적 충돌 문제에서는 운동량 보존과 질량 보존이 항상 성립하고, 운동 에너지는 탄성일 때만 보존된다. 상대론에서는 <b>어느 것이 살아남고 어느 것이 죽는가</b>? U26의 표(불변 vs 보존)를 떠올려 답을 미리 적어 보라. 그리고 계산 전략을 예측하라 — 미지의 속도가 여러 개 얽힌 문제에서, 각 입자의 \(\gamma\)를 하나씩 구하는 것과 <b>4-운동량 방정식을 세운 뒤 불변량으로 축약하는 것</b> 중 어느 쪽이 대수적으로 짧겠는가? 마지막으로: 일정한 힘을 무한히 가하면 속도는 무한히 커지는가, 아니면 무언가가 발산하고 무언가는 포화하는가?</div>
+
+<h4>12.2.3 상대론적 운동학 <span class="en">relativistic kinematics</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>표준 알고리즘 — "보존시키고, 몰아넣고, 제곱하라"</div>
+<ol>
+<li><b>1단계 — 4-운동량 보존을 쓴다.</b> 고립계의 모든 과정에서
+\[ \sum_{\text{before}}p^{\mu}=\sum_{\text{after}}p^{\mu}\qquad(\mu=0,1,2,3) \]
+0번 성분이 에너지 보존, 나머지 셋이 운동량 보존이다. U26 유도 3에 의해 <b>네 개가 한 덩어리</b>이며, 한 계에서 성립하면 모든 계에서 성립한다.</li>
+<li><b>2단계 — 모르는 것을 한쪽으로 몰아넣는다.</b> 관심 없는 입자(예: 검출되지 않은 중성미자)의 4-운동량을 홀로 남기도록 이항한다:
+\[ p^{\mu}_{\text{unknown}}=\sum p^{\mu}_{\text{known}}. \]</li>
+<li><b>3단계 — 양변을 "제곱"한다.</b> 즉 자기 자신과 축약한다:
+\[ p^{\mu}_{\text{unknown}}\,p_{\mu,\text{unknown}}=-m_{\text{unknown}}^{2}c^{2}. \]
+<b>이것이 마법이다.</b> 좌변은 그 입자의 <b>질량만</b>으로 결정되므로, 그 입자의 에너지·운동량·방향이 <b>모두 사라진다</b>. 우변은 아는 것들의 축약이므로 계산 가능하다.</li>
+<li><b>필요한 축약 규칙 (외워야 함).</b>
+\[ p_1^{\mu}p_{2\mu}=-\frac{E_1E_2}{c^{2}}+\vb{p}_1\cdot\vb{p}_2,\qquad p^{\mu}p_{\mu}=-m^{2}c^{2}. \]
+특히 한 입자가 <b>정지</b>해 있으면 \(p_2^{\mu}=(m_2c,\vb{0})\)이므로
+\[ p_1^{\mu}p_{2\mu}=-m_2E_1/c \]
+<b>매우 단순해진다</b> — 그래서 "정지한 입자의 계에서 계산하라"가 표준 요령이다.</li>
+<li><b>4단계 — 불변량이므로 가장 편한 계에서 계산한다.</b> 축약 결과는 Lorentz 불변이므로, 좌변은 실험실계에서 우변은 질량중심계에서 계산해 <b>등호로 연결</b>해도 된다. 문턱 에너지 문제(유도 3)가 이 기법의 정수다.</li>
+<li><b>무엇이 보존되고 무엇이 안 되는가 — 고전과의 대조표.</b>
+<br>• <b>고전</b>: 운동량 ✓ 보존, 질량 ✓ 보존, 운동 에너지 △ (탄성일 때만).
+<br>• <b>상대론</b>: 운동량 ✓ 보존, <b>총</b> 에너지 ✓ 보존, <b>질량 ✗ 보존 안 됨</b>, 운동 에너지 △ (탄성일 때만).
+<br><b>탄성(elastic)의 정의</b>: 운동 에너지가 보존되는 과정. 총 에너지가 항상 보존되므로, 운동 에너지가 보존되면 <b>정지 에너지도 보존</b>되고 따라서 <b>질량도 보존</b>된다. 실질적으로 이는 <b>들어간 입자와 나온 입자가 같다</b>는 뜻이다.</li>
+<li><b>왜 질량은 보존되지 않는가.</b> 질량은 \(m=\sqrt{-p^{\mu}p_{\mu}}/c\)로 정의되는데, 여러 입자로 이루어진 계의 총 4-운동량의 노름은 <b>개별 노름의 합이 아니다</b> (제곱근은 합에 대해 선형이 아니다). 구체적으로 두 입자에 대해
+\[ -\big(p_1+p_2\big)^{\mu}\big(p_1+p_2\big)_{\mu}=m_1^{2}c^{2}+m_2^{2}c^{2}-2p_1^{\mu}p_{2\mu} \]
+이고, 교차항 \(-2p_1^\mu p_{2\mu}=2(E_1E_2/c^2-\vb{p}_1\cdot\vb{p}_2)\)가 상대 운동에 의존한다. <b>운동 에너지가 질량에 기여한다</b>는 것이 핵심이며, 유도 3에서 숫자로 확인한다.</li>
+</ol>
+</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>붕괴 문제 완전 풀이 — 파이온 붕괴 (Ex. 12.8)</div>
+<ol>
+<li><b>문제.</b> 정지한 파이온이 뮤온과 중성미자로 붕괴한다: \(\pi\to\mu+\nu\). 중성미자를 질량 0으로 두고, 나오는 뮤온의 에너지를 \(m_\pi\)와 \(m_\mu\)로 표현하라.</li>
+<li><b>방법 A — Griffiths의 직접 풀이.</b> 보존식:
+\[ E_{\text{before}}=m_{\pi}c^{2},\quad \vb{p}_{\text{before}}=0;\qquad E_{\text{after}}=E_{\mu}+E_{\nu},\quad \vb{p}_{\text{after}}=\vb{p}_{\mu}+\vb{p}_{\nu}. \]
+운동량 보존 \(\Rightarrow\) \(\vb{p}_{\nu}=-\vb{p}_{\mu}\), 따라서 \(|\vb{p}_\nu|=|\vb{p}_\mu|\).</li>
+<li>중성미자는 질량이 0이므로 \(E_{\nu}=|\vb{p}_{\nu}|c=|\vb{p}_{\mu}|c\). 뮤온에는 \(E^{2}-p^{2}c^{2}=m^{2}c^{4}\)를 써서 \(|\vb{p}_{\mu}|=\sqrt{E_{\mu}^{2}-m_{\mu}^{2}c^{4}}/c\). 에너지 보존:
+\[ E_{\mu}+\sqrt{E_{\mu}^{2}-m_{\mu}^{2}c^{4}}=m_{\pi}c^{2}. \]</li>
+<li>제곱근을 고립시키고 제곱한다:
+\[ E_{\mu}^{2}-m_{\mu}^{2}c^{4}=\left(m_{\pi}c^{2}-E_{\mu}\right)^{2}=m_{\pi}^{2}c^{4}-2m_{\pi}c^{2}E_{\mu}+E_{\mu}^{2} \]
+\(E_\mu^2\)이 소거되어
+\[ 2m_{\pi}c^{2}E_{\mu}=\left(m_{\pi}^{2}+m_{\mu}^{2}\right)c^{4} \ \Rightarrow\ \boxed{\ E_{\mu}=\frac{\left(m_{\pi}^{2}+m_{\mu}^{2}\right)c^{2}}{2m_{\pi}}\ } \]</li>
+<li><b>방법 B — 알고리즘 (유도 1)으로 다시 풀기. 이쪽이 일반적이고 빠르다.</b> (표기 주의: 입자 이름 \(\pi,\mu,\nu\)와 Lorentz 지표가 충돌하지 않도록, <b>Lorentz 지표는 \(\alpha\)</b>로 쓴다.) 중성미자를 "모르는 것"으로 몰아넣는다:
+\[ P_{\nu}^{\alpha}=P_{\pi}^{\alpha}-P_{\mu}^{\alpha}. \]
+양변 제곱(축약):
+\[ \underbrace{P_{\nu}^{\alpha}P_{\nu\alpha}}_{=0\ (m_\nu=0)}=P_{\pi}^{\alpha}P_{\pi\alpha}+P_{\mu}^{\alpha}P_{\mu\alpha}-2\,P_{\pi}^{\alpha}P_{\mu\alpha} =-m_{\pi}^{2}c^{2}-m_{\mu}^{2}c^{2}-2\,P_{\pi}^{\alpha}P_{\mu\alpha}. \]</li>
+<li>파이온 정지계에서 \(P_{\pi}^{\alpha}=(m_{\pi}c,\ \vb{0})\), \(P_{\mu}^{\alpha}=(E_{\mu}/c,\ \vb{p}_{\mu})\)이므로
+\[ P_{\pi}^{\alpha}P_{\mu\alpha}=-m_{\pi}c\cdot\frac{E_{\mu}}{c}+\vb{0}\cdot\vb{p}_{\mu}=-m_{\pi}E_{\mu}. \]
+대입:
+\[ 0=-m_{\pi}^{2}c^{2}-m_{\mu}^{2}c^{2}+2m_{\pi}E_{\mu} \ \Rightarrow\ E_{\mu}=\frac{(m_{\pi}^{2}+m_{\mu}^{2})c^{2}}{2m_{\pi}}.\ \checkmark \]
+<b>제곱근이 한 번도 등장하지 않았다.</b> 이것이 알고리즘의 위력이다.</li>
+<li><b>뮤온의 속도 (Prob. 12.32).</b> \(\vb{u}=\vb{p}c^{2}/E\)를 쓴다. 먼저
+\[ |\vb{p}_{\mu}|=\frac{E_{\nu}}{c}=\frac{m_{\pi}c^{2}-E_{\mu}}{c}=\frac{1}{c}\left(m_{\pi}c^{2}-\frac{(m_{\pi}^{2}+m_{\mu}^{2})c^{2}}{2m_{\pi}}\right)=\frac{(m_{\pi}^{2}-m_{\mu}^{2})c}{2m_{\pi}}. \]
+따라서
+\[ u=\frac{|\vb{p}_\mu|c^{2}}{E_{\mu}}=\frac{(m_{\pi}^{2}-m_{\mu}^{2})c/(2m_{\pi})\cdot c^{2}}{(m_{\pi}^{2}+m_{\mu}^{2})c^{2}/(2m_{\pi})} =\boxed{\ \frac{m_{\pi}^{2}-m_{\mu}^{2}}{m_{\pi}^{2}+m_{\mu}^{2}}\,c\ } \]</li>
+<li><b>극한 점검 (항상 하라).</b> \(m_{\mu}\to0\): \(u\to c\) ✓ (질량 없는 입자). \(m_{\mu}\to m_{\pi}\): \(u\to 0\) ✓ (에너지가 남지 않아 뮤온이 거의 정지). 실제 값 \(m_{\pi}c^2\approx139.6\,\mathrm{MeV}\), \(m_{\mu}c^2\approx105.7\,\mathrm{MeV}\)를 넣으면 \(u\approx0.271c\).</li>
+</ol>
+</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>충돌과 문턱 에너지 — 점토 (Ex. 12.7)와 반양성자 생성</div>
+<ol>
+<li><b>Ex. 12.7 — 질량이 보존되지 않는 가장 간단한 예.</b> 각각 정지 질량 \(m\)인 점토 두 덩이가 \(\tfrac35 c\)로 정면충돌해 달라붙는다. 합쳐진 덩이의 질량 \(M\)은?</li>
+<li><b>운동량 보존은 자명.</b> 전후 모두 0이므로 합쳐진 덩이는 <b>정지</b>한다.</li>
+<li><b>에너지 보존.</b> \(\gamma=1/\sqrt{1-(3/5)^{2}}=5/4\)이므로 각 덩이의 에너지는 \(\tfrac54 mc^{2}\). 합친 덩이는 정지해 있으므로 에너지가 \(Mc^{2}\):
+\[ \frac{5}{4}mc^{2}+\frac{5}{4}mc^{2}=Mc^{2}\ \Rightarrow\ \boxed{\ M=\frac{5}{2}m\ } \]</li>
+<li><b>해석 — 반드시 말로 설명할 수 있어야 한다.</b> \(M=2.5m&gt;2m\). <b>질량이 증가했다!</b> 운동 에너지가 정지 에너지로 전환된 것이다. 고전적으로는 "운동 에너지가 열에너지가 되었다"고 말한다. 그런데 열에너지란 원자·분자들의 무작위 운동 및 퍼텐셜 에너지의 총합이고, 상대론은 <b>그 내부 에너지가 물체의 질량에 반영된다</b>고 말한다. 두 서술은 같은 것이다. (점토로는 절대 검출할 수 없다 — 필요한 속도가 터무니없다. 그러나 소립자에서는 지배적이다.)</li>
+<li><b>Prob. 12.33 변형 (자주 출제).</b> 총 에너지가 정지 에너지의 2배(\(E=2mc^{2}\), 즉 \(\gamma=2\))인 입자가 정지한 동일 입자와 충돌해 달라붙는다. 합성 입자의 질량과 속도는?
+<br>운동량: \(pc=\sqrt{E^{2}-m^{2}c^{4}}=\sqrt{4-1}\,mc^{2}=\sqrt3\,mc^{2}\).
+<br>총 에너지 \(E_{\text{tot}}=2mc^{2}+mc^{2}=3mc^{2}\), 총 운동량 \(p_{\text{tot}}c=\sqrt3\,mc^{2}\).
+<br>불변 질량:
+\[ M^{2}c^{4}=E_{\text{tot}}^{2}-p_{\text{tot}}^{2}c^{2}=9m^{2}c^{4}-3m^{2}c^{4}=6m^{2}c^{4}\ \Rightarrow\ \boxed{M=\sqrt6\,m\approx2.449m} \]
+\[ u=\frac{p_{\text{tot}}c^{2}}{E_{\text{tot}}}=\frac{\sqrt3\,mc^{2}\cdot c}{3mc^{2}}=\boxed{\frac{c}{\sqrt3}\approx0.577c} \]
+<b>주목</b>: \(\sqrt6\,m&gt;2m\)이고, 개별 질량의 합(\(2m\))이 아니라 <b>불변 질량</b>이 답이다.</li>
+<li><b>문턱 에너지 — 이 기법의 정수.</b> 정지 표적에 양성자를 쏘아 반양성자를 만들고 싶다:
+\[ p+p\ \longrightarrow\ p+p+p+\bar p \]
+(바리온수 보존 때문에 \(p\bar p\) 쌍으로만 생성 가능). 입사 양성자의 최소 에너지 \(E\)는?</li>
+<li><b>핵심 아이디어.</b> 반응이 <b>겨우</b> 일어나는 문턱에서는, 생성물 네 개가 <b>질량중심계에서 모두 정지</b>해 있다 (남는 운동 에너지가 0). 그러면 그 계에서 총 에너지는 \(4mc^{2}\)다. 이제 <b>불변량</b> \(-p^{\mu}_{\text{tot}}p_{\text{tot}\mu}c^{2}=E_{\text{tot}}^{2}-p_{\text{tot}}^{2}c^{2}\)를 두 계에서 계산해 등호로 연결한다.</li>
+<li><b>실험실계에서 계산.</b> 입사 양성자 \((E,\ \vb{p})\), 표적 \((mc^{2},\ \vb{0})\):
+\[ E_{\text{tot}}=E+mc^{2},\qquad p_{\text{tot}}c=pc=\sqrt{E^{2}-m^{2}c^{4}} \]
+\[ E_{\text{tot}}^{2}-p_{\text{tot}}^{2}c^{2}=(E+mc^{2})^{2}-(E^{2}-m^{2}c^{4})=2m^{2}c^{4}+2Emc^{2}. \]</li>
+<li><b>질량중심계에서 계산 (문턱 조건).</b> 총 운동량 0, 총 에너지 \(4mc^{2}\):
+\[ E_{\text{tot}}^{2}-p_{\text{tot}}^{2}c^{2}=(4mc^{2})^{2}=16m^{2}c^{4}. \]</li>
+<li><b>등호로 연결.</b>
+\[ 2m^{2}c^{4}+2Emc^{2}=16m^{2}c^{4}\ \Rightarrow\ \boxed{\ E=7mc^{2}\ },\qquad E_{\text{kin,threshold}}=E-mc^{2}=6mc^{2}. \]
+양성자 \(mc^{2}\approx0.938\,\mathrm{GeV}\)이므로 <b>약 5.6 GeV</b>의 운동 에너지가 필요하다. (역사적으로 Bevatron이 정확히 이 값을 넘도록 설계되었다.)</li>
+<li><b>충격적인 결론.</b> 새 입자 하나(\(2mc^{2}\)어치의 질량, 즉 \(p\)와 \(\bar p\))를 만드는 데 <b>\(6mc^{2}\)</b>가 필요하다 — 세 배의 낭비다. 이유: <b>운동량 보존 때문에 생성물이 정지할 수 없고</b>, 그 필연적인 운동 에너지를 입사 입자가 대신 지불해야 한다.</li>
+<li><b>충돌 빔이 왜 압도적으로 유리한가 (Prob. 12.35).</b> 두 입자를 각각 에너지 \(E\)로 가속해 정면충돌시키면, 질량중심계 총 에너지가 \(2E\) 전부다. 같은 반응을 고정 표적으로 하려면 필요한 에너지 \(\bar E\)는:
+\[ 2m^{2}c^{4}+2\bar Emc^{2}=(2E)^{2}\ \Rightarrow\ \boxed{\ \bar E=\frac{2E^{2}}{mc^{2}}-mc^{2}\ } \]
+<b>수치</b>: 양성자 \(mc^{2}=1\,\mathrm{GeV}\), \(E=30\,\mathrm{GeV}\)이면
+\[ \bar E=\frac{2\times900}{1}-1=1799\ \mathrm{GeV}\approx 60\,E. \]
+고전적으로는 상대 에너지가 겨우 \(4E\)인데, 상대론적으로는 <b>60배</b>다. 이 <b>\(E^{2}\) 스케일링</b>이 현대 입자물리 실험이 고정 표적을 버리고 <b>충돌 빔</b>으로 간 이유다.</li>
+</ol>
+</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>탄성 충돌의 예 — Compton 산란 (Ex. 12.9)</div>
+<ol>
+<li><b>문제.</b> 에너지 \(E_{0}\)인 광자가 정지한 전자(질량 \(m\))에 부딪혀 각 \(\theta\)로 튕겨 나간다. 나가는 광자의 에너지 \(E\)를 \(\theta\)의 함수로 구하라. (전자는 각 \(\phi\)로 튄다.) 이것은 <b>탄성</b> 과정이다 — 들어간 입자와 나온 입자가 같다.</li>
+<li><b>Griffiths의 성분별 풀이 (교과서 방식).</b> 수직 방향 운동량 보존: \(p_e\sin\phi=p_p\sin\theta\)이고 광자는 \(p_p=E/c\)이므로
+\[ \sin\phi=\frac{E}{p_ec}\sin\theta. \]
+수평 방향:
+\[ \frac{E_{0}}{c}=\frac{E}{c}\cos\theta+p_e\cos\phi = \frac{E}{c}\cos\theta+p_e\sqrt{1-\left(\frac{E}{p_ec}\sin\theta\right)^{2}}. \]
+\(\phi\)를 소거하도록 정리하면
+\[ p_e^{2}c^{2}=(E_{0}-E\cos\theta)^{2}+E^{2}\sin^{2}\theta=E_{0}^{2}-2E_{0}E\cos\theta+E^{2}. \]</li>
+<li>에너지 보존 (\(E_e=\sqrt{m^{2}c^{4}+p_e^{2}c^{2}}\)):
+\[ E_{0}+mc^{2}=E+\sqrt{m^{2}c^{4}+E_{0}^{2}-2E_{0}E\cos\theta+E^{2}}. \]
+제곱해서 정리하면
+\[ \boxed{\ E=\frac{1}{\dfrac{1-\cos\theta}{mc^{2}}+\dfrac{1}{E_{0}}}\ } \]</li>
+<li><b>알고리즘(유도 1)으로 다시 — 훨씬 짧다.</b> 전자를 "모르는 것"으로 몰아넣는다:
+\[ p_{e}^{\prime\mu}=p_{\gamma}^{\mu}+p_{e}^{\mu}-p_{\gamma}^{\prime\mu}. \]
+양변 제곱:
+\[ -m^{2}c^{2}=\underbrace{0}_{\gamma}+\underbrace{(-m^{2}c^{2})}_{e}+\underbrace{0}_{\gamma'}+2p_{\gamma}^{\mu}p_{e\mu}-2p_{\gamma}^{\mu}p_{\gamma\mu}'-2p_{e}^{\mu}p_{\gamma\mu}'. \]
+전자 정지계에서 \(p_e^{\mu}=(mc,\vb 0)\)이므로
+\[ p_{\gamma}^{\mu}p_{e\mu}=-mE_{0},\qquad p_{e}^{\mu}p'_{\gamma\mu}=-mE,\qquad p_{\gamma}^{\mu}p'_{\gamma\mu}=-\frac{E_{0}E}{c^{2}}+\frac{E_{0}E}{c^{2}}\cos\theta. \]
+대입하면 \(m^2c^2\) 항이 소거되고
+\[ 0=-2mE_{0}+2mE+\frac{2E_{0}E}{c^{2}}(1-\cos\theta) \ \Rightarrow\ \frac{1}{E}-\frac{1}{E_{0}}=\frac{1-\cos\theta}{mc^{2}}. \]
+같은 답, <b>세 줄</b>. 이것이 알고리즘을 익혀야 하는 이유다.</li>
+<li><b>파장으로 쓰면 더 아름답다.</b> \(E=h\nu=hc/\lambda\)를 넣으면
+\[ \boxed{\ \lambda=\lambda_{0}+\frac{h}{mc}\left(1-\cos\theta\right)\ } \]
+\(h/mc\)를 전자의 <b>Compton 파장</b>이라 하며 \(\approx2.43\times10^{-12}\,\mathrm{m}\)다.</li>
+<li><b>극한 점검.</b> \(\theta=0\): \(\lambda=\lambda_{0}\) (충돌 안 함) ✓. \(\theta=\pi\) (역산란): 파장 이동이 최대 \(2h/mc\) ✓. \(E_{0}\ll mc^{2}\): \(E\approx E_{0}\) — 저에너지에서는 광자가 에너지를 거의 잃지 않는다(Thomson 산란 극한) ✓.</li>
+<li><b>탄성인데 왜 광자의 에너지는 변하는가?</b> "탄성 = 총 운동 에너지 보존"이지 "개별 입자의 에너지 보존"이 아니다. 광자는 잃고 전자는 얻는다. 질량은 보존된다(같은 입자가 나옴) — 그래서 탄성이다. Ex. 12.7(점토)과 Ex. 12.8(파이온 붕괴)은 <b>비탄성</b>이었고 질량이 보존되지 않았다.</li>
+</ol>
+</div>
+
+<h4>12.2.4 상대론적 동역학 <span class="en">relativistic dynamics</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 5</span>힘의 정의, 쌍곡선 운동 (Ex. 12.10), 일–에너지 정리, Minkowski 힘</div>
+<ol>
+<li><b>세 법칙의 운명.</b>
+<br>• <b>제1법칙</b>: 상대성 원리에 이미 내장되어 있다 (관성계의 정의 자체).
+<br>• <b>제2법칙</b>: \(\vb{F}=\dfrac{\dd\vb{p}}{\dd t}\) 형태로 <b>그대로 유효</b>하다 — 단 \(\vb{p}=\gamma m\vb{u}\)를 써야 한다. (\(\vb{F}=m\vb{a}\) 형태는 <b>무효</b>.)
+<br>• <b>제3법칙</b>: 일반적으로 <b>무효</b>다. \(A\)가 \(B\)에 가하는 힘과 그 반작용이 계 \(S\)에서 "같은 순간"에 크기가 같고 방향이 반대라 해도, 두 물체가 공간적으로 떨어져 있으면 다른 계에서는 그 두 사건이 <b>다른 시각</b>에 일어난다 (동시성의 상대성!). 따라서 그 계에서는 제3법칙이 깨진다. <b>접촉 상호작용</b>(두 힘이 같은 점에 작용)이나 힘이 상수인 자명한 경우에만 살아남는다.</li>
+<li><b>Ex. 12.10 — 일정한 힘 아래의 운동.</b> 질량 \(m\)인 입자가 \(t=0\)에 원점에서 정지 상태로 출발해 일정한 힘 \(F\)를 받는다. \(x(t)\)는?</li>
+<li><b>운동량은 고전과 똑같이 자란다.</b>
+\[ \frac{\dd p}{\dd t}=F\ \Rightarrow\ p=Ft \]
+(초기 조건 \(p(0)=0\)). <b>운동량에는 아무 상한이 없다</b> — 무한히 자란다.</li>
+<li><b>속도를 뽑아낸다.</b> \(p=\dfrac{mu}{\sqrt{1-u^{2}/c^{2}}}=Ft\)를 \(u\)에 대해 푼다. 양변 제곱:
+\[ m^{2}u^{2}=F^{2}t^{2}\left(1-\frac{u^{2}}{c^{2}}\right)\ \Rightarrow\ u^{2}\left(m^{2}+\frac{F^{2}t^{2}}{c^{2}}\right)=F^{2}t^{2} \]
+\[ \boxed{\ u(t)=\frac{(F/m)\,t}{\sqrt{1+\left(Ft/mc\right)^{2}}}\ } \]</li>
+<li><b>읽어내기.</b> 분자는 고전 답 \(u_{\text{cl}}=(F/m)t\)로, \(Ft\ll mc\)일 때 정확하다. <b>분모</b>가 상대론적 보정이며, \(t\to\infty\)에서 \(u\to c\)를 보장한다. <b>일정한 힘은 일정한 가속도를 주지 않는다</b>:
+\[ a=\frac{\dd u}{\dd t}=\frac{F/m}{\left[1+(Ft/mc)^{2}\right]^{3/2}}\ \longrightarrow\ 0 \quad (t\to\infty). \]
+힘은 그대로인데 가속도가 0으로 죽는다.</li>
+<li><b>한 번 더 적분해 위치를 얻는다.</b> \(s\equiv Ft'/mc\)로 치환하면
+\[ x(t)=\frac{F}{m}\int_{0}^{t}\frac{t'\,\dd t'}{\sqrt{1+(Ft'/mc)^{2}}} =\frac{mc^{2}}{F}\sqrt{1+(Ft'/mc)^{2}}\;\Bigg|_{0}^{t} \]
+\[ \boxed{\ x(t)=\frac{mc^{2}}{F}\left[\sqrt{1+\left(\frac{Ft}{mc}\right)^{2}}-1\right]\ } \]</li>
+<li><b>왜 "쌍곡선 운동"인가.</b> 위 식을 정리하면
+\[ \left(x+\frac{mc^{2}}{F}\right)^{2}-(ct)^{2}=\left(\frac{mc^{2}}{F}\right)^{2} \]
+Minkowski 도형에서 <b>쌍곡선</b>이다 (고전적으로는 포물선 \(x=\tfrac{F}{2m}t^{2}\)). 점근선은 \(45^{\circ}\)선, 즉 광속. <b>불변 간격의 기하가 쌍곡선이었던 것</b>(U25 유도 4)을 떠올리면 이 이름이 자연스럽다. 실제 예: 균일한 전기장 안의 전하.</li>
+<li><b>일–에너지 정리는 살아남는다.</b> \(W\equiv\int\vb{F}\cdot\dd\vb{l}\)에서
+\[ W=\int\frac{\dd\vb{p}}{\dd t}\cdot\dd\vb{l}=\int\frac{\dd\vb{p}}{\dd t}\cdot\vb{u}\,\dd t. \]
+피적분함수를 계산한다:
+\[ \frac{\dd\vb{p}}{\dd t}\cdot\vb{u}=\frac{\dd}{\dd t}\!\left(\frac{m\vb{u}}{\sqrt{1-u^{2}/c^{2}}}\right)\cdot\vb{u} =\frac{m\,\vb{u}\cdot\dfrac{\dd\vb{u}}{\dd t}}{\left(1-u^{2}/c^{2}\right)^{3/2}} =\frac{\dd}{\dd t}\!\left(\frac{mc^{2}}{\sqrt{1-u^{2}/c^{2}}}\right)=\frac{\dd E}{\dd t}. \]
+(중간 단계: \(\dfrac{\dd}{\dd t}(1-u^2/c^2)^{-1/2}=\dfrac{\vb u\cdot\dot{\vb u}/c^2}{(1-u^2/c^2)^{3/2}}\)를 쓰면 바로 확인된다.) 따라서
+\[ \boxed{\ W=E_{\text{final}}-E_{\text{initial}}\ } \]
+정지 에너지는 상수이므로 총 에너지를 쓰든 운동 에너지를 쓰든 같다.</li>
+<li><b>왜 \(\vb{F}=m\vb{a}\)가 안 되는가 (Prob. 12.37).</b> \(\vb{p}=\gamma m\vb{u}\)를 직접 미분하면
+\[ \vb{F}=\gamma m\vb{a}+\gamma^{3}m\frac{(\vb{u}\cdot\vb{a})}{c^{2}}\vb{u} \ \Longrightarrow\ \vb{F}_{\parallel}=\gamma^{3}m\,\vb{a}_{\parallel},\qquad \vb{F}_{\perp}=\gamma m\,\vb{a}_{\perp}. \]
+<b>\(\vb{a}\)는 일반적으로 \(\vb{F}\)와 평행하지 않다.</b> 이것이 "상대론적 질량" 하나로는 동역학을 담을 수 없는 이유(U26 Q1)이며, 종방향 반응이 \(\gamma^{3}\)로 억제되는 것이 가속기가 고에너지로 갈수록 비효율적인 이유다.</li>
+<li><b>\(\vb{F}\)의 나쁜 변환 성질.</b> \(\vb{F}=\dd\vb{p}/\dd t\)는 <b>보통 시간</b>으로 미분한 것이므로 보통 속도와 같은 병을 앓는다 — 분자·분모가 모두 변환된다. 결과:
+\[ \bar F_{y}=\frac{F_{y}}{\gamma\left(1-\beta u_{x}/c\right)},\qquad \bar F_{z}=\frac{F_{z}}{\gamma\left(1-\beta u_{x}/c\right)},\qquad \bar F_{x}=\frac{F_{x}-\beta\left(\vb{u}\cdot\vb{F}\right)/c}{1-\beta u_{x}/c}. \]
+<b>특수한 경우</b>: 입자가 \(S\)에서 (순간적으로) 정지해 있으면 \(\vb{u}=0\)이므로
+\[ \bar{\vb{F}}_{\perp}=\frac{1}{\gamma}\vb{F}_{\perp},\qquad \bar{\vb{F}}_{\parallel}=\vb{F}_{\parallel}. \]
+<b>운동 방향 성분은 그대로, 수직 성분은 \(\gamma\)로 나뉜다.</b> (이 결과는 §12.3의 장 변환 유도에 직접 쓰인다.)</li>
+<li><b>처방은 이미 알고 있다 — Minkowski 힘.</b> 보통 속도의 병을 고유시간으로 고쳤듯이, 힘도 <b>고유시간</b>으로 미분한다:
+\[ \boxed{\ K^{\mu}\equiv\frac{\dd p^{\mu}}{\dd\tau}\ } \]
+\(p^{\mu}\)가 4-벡터이고 \(\dd\tau\)가 불변이므로 \(K^{\mu}\)는 <b>명백히 4-벡터</b>다.</li>
+<li><b>보통 힘과의 관계.</b> 공간 성분:
+\[ \vb{K}=\frac{\dd t}{\dd\tau}\frac{\dd\vb{p}}{\dd t}=\frac{1}{\sqrt{1-u^{2}/c^{2}}}\,\vb{F}=\gamma_u\vb{F}. \]
+0번 성분:
+\[ K^{0}=\frac{\dd p^{0}}{\dd\tau}=\frac{1}{c}\frac{\dd E}{\dd\tau}=\frac{\gamma_u}{c}\frac{\dd E}{\dd t}=\frac{\gamma_u}{c}\,\vb{F}\cdot\vb{u} \]
+(마지막 등호는 8단계의 일–에너지 정리). <b>즉 \(K^{0}\)는 일률(power)이다</b> — 4-벡터의 0번 성분이 늘 그렇듯 "에너지 쪽" 정보를 담는다.
+\[ K^{\mu}=\gamma_u\left(\frac{\vb{F}\cdot\vb{u}}{c},\ \vb{F}\right). \]</li>
+<li><b>구조적 요약 (이 장 전체의 리듬).</b>
+\[ \begin{array}{lll}
+\text{나쁜 것} & \text{처방} & \text{좋은 것}\\ \hline
+\vb{u}=\dd\vb{l}/\dd t & \dd t\to\dd\tau & \eta^{\mu}=\dd x^{\mu}/\dd\tau\\
+\vb{p}=m\vb{u} & \vb{u}\to\boldsymbol\eta & p^{\mu}=m\eta^{\mu}\\
+\vb{F}=\dd\vb{p}/\dd t & \dd t\to\dd\tau & K^{\mu}=\dd p^{\mu}/\dd\tau
+\end{array} \]
+<b>같은 처방이 세 번 반복된다.</b> 이 표를 백지에서 재현할 수 있으면 §12.2를 이해한 것이다.</li>
+</ol>
+</div>
+
+<div class="formula"><div class="ftitle">암기 — 충돌·붕괴 알고리즘과 동역학 핵심</div>
+\[ \textbf{알고리즘: }\ \sum_{\text{in}}p^{\mu}=\sum_{\text{out}}p^{\mu}\ \longrightarrow\ p^{\mu}_{?}=(\text{알려진 것들})\ \longrightarrow\ p^{\mu}_{?}p_{?\mu}=-m_{?}^{2}c^{2} \]
+\[ p_1^{\mu}p_{2\mu}=-\frac{E_1E_2}{c^{2}}+\vb{p}_1\cdot\vb{p}_2;\qquad
+\text{문턱: }E_{\text{tot}}^{2}-p_{\text{tot}}^{2}c^{2}=\Big(\textstyle\sum_i m_ic^{2}\Big)^{2} \]
+\[ \vb{F}=\frac{\dd\vb{p}}{\dd t}\ \ (\vb{F}\ne m\vb{a}),\qquad
+\vb{F}_{\parallel}=\gamma^{3}m\vb{a}_{\parallel},\ \ \vb{F}_{\perp}=\gamma m\vb{a}_{\perp},\qquad
+\boxed{\ K^{\mu}\equiv\frac{\dd p^{\mu}}{\dd\tau}=\gamma_u\!\left(\frac{\vb{F}\cdot\vb{u}}{c},\ \vb{F}\right)\ } \]
+<p class="note">문턱 공식의 우변은 "생성물이 <b>질량중심계에서 모두 정지</b>"라는 조건을 불변량으로 옮긴 것이다. 왼쪽은 실험실계에서, 오른쪽은 질량중심계에서 계산해 <b>등호로 연결</b>하는 것이 요령 — 두 값이 같은 이유는 오직 <b>Lorentz 불변성</b> 때문이다. 동역학 쪽에서는 \(p=Ft\)(운동량은 무한히 자람)와 \(u\to c\)(속도는 포화)의 대비, 그리고 \(x(t)\)가 <b>포물선이 아니라 쌍곡선</b>이라는 사실이 핵심 결론이다.</p></div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u27-1"><div class="qq">(참/거짓 + 증명 또는 반례) "단일 광자가 진공에서 전자–양전자 쌍으로 붕괴할 수 있다: \(\gamma\to e^{-}+e^{+}\)."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>거짓.</b> 4-운동량 보존만으로 <b>엄밀히 금지</b>된다. (에너지 보존이나 전하 보존은 아무 문제가 없다는 점이 함정이다 — \(E_\gamma\)만 충분히 크면 되고, 전하는 \(0=(-e)+(+e)\)로 맞는다.)</p>
+<p><b>증명 1 — 불변량 논증 (가장 깔끔).</b> 4-운동량이 보존되므로 \(p^{\mu}_{\gamma}=p^{\mu}_{-}+p^{\mu}_{+}\). 양변을 축약한다.
+<br><b>좌변</b> (광자는 질량 0):
+\[ p^{\mu}_{\gamma}p_{\gamma\mu}=0. \]
+<b>우변</b>:
+\[ (p_-+p_+)^{\mu}(p_-+p_+)_{\mu}=-m^{2}c^{2}-m^{2}c^{2}+2\,p_{-}^{\mu}p_{+\mu} =-2m^{2}c^{2}-2\left(\frac{E_-E_+}{c^{2}}-\vb{p}_-\cdot\vb{p}_+\right). \]</p>
+<p><b>이제 교차항의 부호를 확정해야 한다.</b> 주장: \(E_-E_+-\vb{p}_-\cdot\vb{p}_+c^{2}\ \ge\ m^{2}c^{4}\).
+<br>증명: \(\vb{p}_-\cdot\vb{p}_+\le|\vb{p}_-||\vb{p}_+|\)이므로 \(E_-E_+-\vb{p}_-\cdot\vb{p}_+c^{2}\ge E_-E_+-|\vb{p}_-||\vb{p}_+|c^{2}\). 이제 \(E_-E_+\ge m^{2}c^{4}+|\vb{p}_-||\vb{p}_+|c^{2}\)을 보이면 된다. 양변이 양수이므로 제곱해 비교한다. \(E_\pm^{2}=m^{2}c^{4}+p_\pm^{2}c^{2}\)를 쓰면
+\[ E_-^{2}E_+^{2}-\left(m^{2}c^{4}+p_-p_+c^{2}\right)^{2} =(m^{2}c^{4}+p_-^{2}c^{2})(m^{2}c^{4}+p_+^{2}c^{2})-\left(m^{2}c^{4}+p_-p_+c^{2}\right)^{2} \]
+\[ =m^{2}c^{6}\left(p_-^{2}+p_+^{2}\right)-2m^{2}c^{6}p_-p_+ = m^{2}c^{6}\left(p_--p_+\right)^{2}\ \ge 0.\ \checkmark \]
+(산술–기하 평균 부등식과 같은 구조다.) 따라서
+\[ (p_-+p_+)^{\mu}(p_-+p_+)_{\mu}\le -2m^{2}c^{2}-2m^{2}c^{2}=-4m^{2}c^{2}&lt;0. \]</p>
+<p><b>모순.</b> 좌변은 \(0\), 우변은 \(\le-4m^{2}c^{2}&lt;0\). \(m\ne0\)이므로 등호가 성립할 수 없다. \(\blacksquare\)
+<br>기하학적으로: <b>빛꼴 4-벡터가 시간꼴 4-벡터와 같아질 수 없다.</b> 이 분류는 Lorentz 불변이므로 어떤 계에서도 구제 불가능하다.</p>
+<p><b>증명 2 — 계 선택 논증 (더 직관적).</b> 쌍의 총 운동량이 0인 계(쌍의 질량중심계)가 반드시 존재한다 (총 4-운동량이 시간꼴이므로). 그 계에서 총 에너지는 \(\ge2mc^{2}&gt;0\)인데 총 운동량은 0이다. 그런데 <b>광자는 어떤 관성계에서도 \(E=|\vb{p}|c\)</b>를 만족하므로, 광자의 운동량이 0이면 에너지도 0이어야 한다. \(E=0\ne\ge2mc^{2}\) — 모순. \(\blacksquare\)</p>
+<p><b>그럼 실제 쌍생성은 어떻게 일어나는가?</b> <b>원자핵 근처</b>에서 일어난다: \(\gamma+N\to e^{-}+e^{+}+N\). 핵이 운동량을 받아 가므로 위 모순이 해소된다. 진공에서 홀로는 절대 불가능하다. 역과정도 마찬가지 — <b>쌍소멸은 광자 하나가 아니라 반드시 둘 이상을 낳는다</b> (Prob. 12.36의 "왜 광자 하나로는 안 되는가?"가 정확히 이 질문이다). 답: 소멸 전 총 4-운동량이 시간꼴이므로 빛꼴인 단일 광자가 될 수 없다.</p>
+<p><b>같은 논리의 형제 문제들 (한 방에 판정하는 법).</b> "질량 있는 입자가 자기보다 무거운 것으로 붕괴할 수 있는가?" (불가 — 정지계에서 에너지 부족). "정지한 자유 전자가 광자를 흡수할 수 있는가?" (불가 — 같은 이유, \(e+\gamma\to e\)는 4-운동량 보존 위반). <b>판정법: 전후 총 4-운동량의 불변 노름을 비교하라.</b></p>
+</div></div>
+
+<div class="qz" data-q="u27-2"><div class="qq">(점근·수치, 계산기 없이) 양성자(\(mc^{2}=1\,\mathrm{GeV}\)로 근사)로 반양성자 쌍을 만든다: \(p+p\to p+p+p+\bar p\). (a) 고정 표적일 때 문턱 운동 에너지는? (b) 같은 반응을 충돌 빔으로 하면 각 빔에 필요한 에너지는? (c) 고정 표적 가속기가 \(E=30\,\mathrm{GeV}\)를 낼 때 이는 충돌 빔 몇 GeV에 해당하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>(a) 고정 표적 문턱.</b> 실험실계 불변량 \(=2m^{2}c^{4}+2Emc^{2}\), 문턱에서 질량중심계 불변량 \(=(4mc^{2})^{2}=16m^{2}c^{4}\):
+\[ 2m^{2}c^{4}+2Emc^{2}=16m^{2}c^{4}\ \Rightarrow\ E=7mc^{2}=7\,\mathrm{GeV} \]
+\[ \boxed{E_{\text{kin}}=E-mc^{2}=6mc^{2}=6\ \mathrm{GeV}} \]
+(실제 양성자 \(mc^{2}=0.938\,\mathrm{GeV}\)로는 \(5.63\,\mathrm{GeV}\).)</p>
+<p><b>(b) 충돌 빔.</b> 각 빔 에너지 \(E_b\), 정면충돌이면 총 운동량 0, 총 에너지 \(2E_b\). 문턱 조건:
+\[ 2E_b=4mc^{2}\ \Rightarrow\ E_b=2mc^{2}=2\,\mathrm{GeV},\qquad E_{\text{kin},b}=1\,\mathrm{GeV}\ \text{(빔당)}. \]
+<b>총 투입 운동 에너지 비교: 고정 표적 6 GeV vs 충돌 빔 2 GeV (1 GeV × 2). 3배 절약.</b></p>
+<p><b>(c) 등가 환산 (Prob. 12.35).</b> 충돌 빔 에너지 \(E\)와 등가인 고정 표적 에너지 \(\bar E\)는
+\[ \bar E=\frac{2E^{2}}{mc^{2}}-mc^{2}. \]
+문제는 역방향을 묻고 있다: 고정 표적 \(\bar E=30\,\mathrm{GeV}\)에 해당하는 충돌 빔 \(E\)는?
+\[ 30=2E^{2}-1\ \Rightarrow\ E^{2}=15.5\ \Rightarrow\ E\approx 3.94\,\mathrm{GeV}. \]
+<b>즉 30 GeV짜리 고정 표적 가속기는 겨우 4 GeV 충돌 빔 두 개와 맞먹는다.</b></p>
+<p><b>역방향도 확인 (교과서 수치).</b> \(E=30\,\mathrm{GeV}\) 충돌 빔이면
+\[ \bar E=\frac{2\times900}{1}-1=1799\ \mathrm{GeV}\approx 60E. \]
+고정 표적으로 같은 일을 하려면 <b>1800 GeV</b>가 필요하다.</p>
+<p><b>왜 이렇게 차이가 나는가 — 스케일링으로 이해하라.</b> 유용한 것은 <b>질량중심 에너지</b> \(\sqrt{s}\)다.
+<br>• 충돌 빔: \(\sqrt{s}=2E\) — <b>\(E\)에 선형</b>.
+<br>• 고정 표적: \(s=2m^{2}c^{4}+2\bar Emc^{2}\approx 2\bar Emc^{2}\)이므로 \(\sqrt{s}\approx\sqrt{2\bar Emc^{2}}\) — <b>\(\sqrt{\bar E}\)에만 비례</b>.
+<br>고정 표적에서는 에너지를 4배 올려야 유효 에너지가 2배가 된다. 투입 에너지의 대부분이 <b>질량중심 전체를 앞으로 밀어내는 데</b> 낭비되기 때문이다. 이것이 LHC를 비롯한 현대 가속기가 모두 충돌 빔인 이유다.</p>
+</div></div>
+
+<div class="qz" data-q="u27-3"><div class="qq">(계산) 질량 \(m\), 상대론적 운동량 \(p=\tfrac34 mc\)인 중성 파이온이 두 광자로 붕괴한다. 하나는 원래 파이온과 <b>같은 방향</b>, 다른 하나는 <b>반대 방향</b>으로 나온다. 각 광자의 에너지를 구하라. (Prob. 12.34)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 파이온의 에너지.</b>
+\[ E_\pi=\sqrt{p^{2}c^{2}+m^{2}c^{4}}=\sqrt{\tfrac{9}{16}m^{2}c^{4}+m^{2}c^{4}}=\sqrt{\tfrac{25}{16}}\,mc^{2}=\frac{5}{4}mc^{2}. \]
+(3-4-5 삼각형이 나오도록 설계된 숫자다. \(\gamma=E/mc^2=5/4\), \(\beta=pc/E=(3/4)/(5/4)=3/5\) — Ex. 12.1·12.7과 같은 값.)</p>
+<p><b>2) 보존식 두 개.</b> 광자 1이 \(+x\), 광자 2가 \(-x\). 광자는 \(E=|p|c\)이므로 운동량은 \(E_1/c\)와 \(-E_2/c\).
+\[ \text{에너지: }\ E_1+E_2=\frac{5}{4}mc^{2},\qquad \text{운동량: }\ \frac{E_1}{c}-\frac{E_2}{c}=\frac{3}{4}mc. \]</p>
+<p><b>3) 풀이 (더하고 빼기만 하면 된다).</b> 두 식을 더하면
+\[ 2E_1=\frac{5}{4}mc^{2}+\frac{3}{4}mc^{2}=2mc^{2}\ \Rightarrow\ \boxed{E_1=mc^{2}}\ \text{(전방)}. \]
+빼면
+\[ 2E_2=\frac{5}{4}mc^{2}-\frac{3}{4}mc^{2}=\frac{1}{2}mc^{2}\ \Rightarrow\ \boxed{E_2=\frac{1}{4}mc^{2}}\ \text{(후방)}. \]</p>
+<p><b>4) 검산.</b> 합 \(=mc^{2}+\tfrac14 mc^{2}=\tfrac54 mc^{2}=E_\pi\) ✓. 운동량 차 \(=(1-\tfrac14)mc=\tfrac34 mc\) ✓.
+<br><b>불변 질량 검산 (더 강력하다).</b> 두 광자의 총 4-운동량 노름:
+\[ E_{\text{tot}}^{2}-p_{\text{tot}}^{2}c^{2}=\left(\tfrac54 mc^{2}\right)^{2}-\left(\tfrac34 mc^{2}\right)^{2}=\left(\tfrac{25-9}{16}\right)m^{2}c^{4}=m^{2}c^{4}. \]
+정확히 \(\pi\)의 질량. ✓ <b>개별 광자는 질량 0이지만 두 광자 계의 불변 질량은 \(m\)이다</b> — 유도 1의 7단계("질량은 더해지지 않는다")의 극적인 예다.</p>
+<p><b>5) 물리적 해석 — 상대론적 Doppler / beaming.</b> 파이온 정지계에서는 두 광자가 각각 \(\tfrac12 mc^{2}\)씩 정확히 반반씩 나눠 가진다. 실험실계로 오면 전방 광자는 \(mc^{2}\)로 <b>두 배</b>가 되고 후방은 \(\tfrac14 mc^{2}\)로 <b>절반</b>이 된다. 비는
+\[ \frac{E_1}{E_2}=4=\frac{1+\beta}{1-\beta}=\frac{1+3/5}{1-3/5}=\frac{8/5}{2/5}=4\ \checkmark \]
+정확히 <b>종방향 상대론적 Doppler 인자의 제곱 비</b>다. 전방으로 나가는 복사가 파랗게·강하게 쏠리는 현상(beaming)의 가장 간단한 사례이며, Ch. 11의 복사 각분포와 직결된다.</p>
+</div></div>
+
+<div class="qz" data-q="u27-4"><div class="qq">(개념 설명) 일정한 힘을 무한히 오래 가하면 어떻게 되는가? "일정한 힘 = 일정한 가속도"가 왜 깨지는지, 그리고 그 결과 궤적이 왜 포물선이 아니라 쌍곡선이 되는지 설명하라. 또 이 상황에서 "빛보다 앞서 달릴 수 있는가"(Prob. 12.38)라는 물음에 답하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 무엇이 발산하고 무엇이 포화하는가.</b> \(\vb{F}=\dd\vb{p}/\dd t\)이므로 일정한 \(F\)는 <b>운동량을 선형으로 무한히</b> 키운다: \(p=Ft\to\infty\). 에너지도 발산한다: \(E=\sqrt{m^{2}c^{4}+F^{2}t^{2}c^{2}}\to Fct\). 그러나 <b>속도는 포화</b>한다:
+\[ u=\frac{pc^{2}}{E}=\frac{Ftc^{2}}{\sqrt{m^{2}c^{4}+F^{2}c^{2}t^{2}}}=\frac{(F/m)t}{\sqrt{1+(Ft/mc)^{2}}}\ \longrightarrow\ c. \]
+<b>핵심: "힘이 통하지 않게 되는 것"이 아니라, \(p\)와 \(u\)의 관계가 비선형이라 \(p\to\infty\)가 \(u\to c\)로만 번역되는 것이다.</b></p>
+<p><b>2) 가속도는 죽는다.</b>
+\[ a=\frac{\dd u}{\dd t}=\frac{F/m}{\left[1+(Ft/mc)^{2}\right]^{3/2}}\ \sim\ \frac{m^{2}c^{3}}{F^{2}t^{3}}\quad(t\to\infty). \]
+힘은 그대로인데 가속도가 \(t^{-3}\)로 사라진다. 더 근본적으로, 종방향에 대해
+\[ F_{\parallel}=\gamma^{3}m\,a_{\parallel} \]
+이므로 <b>같은 힘을 주려면 \(\gamma^{3}\)에 반비례하는 가속도밖에 얻지 못한다</b>. "일정한 힘 = 일정한 가속도"는 \(\gamma\approx1\)일 때만 성립하는 저속 근사였다.</p>
+<p><b>3) 왜 쌍곡선인가.</b> 적분하면
+\[ x(t)=\frac{mc^{2}}{F}\left[\sqrt{1+\left(\frac{Ft}{mc}\right)^{2}}-1\right] \ \Longleftrightarrow\ \left(x+\frac{mc^{2}}{F}\right)^{2}-(ct)^{2}=\left(\frac{mc^{2}}{F}\right)^{2}. \]
+고전 답 \(x=\tfrac{F}{2m}t^{2}\)는 <b>포물선</b>이고, 상대론 답은 Minkowski 도형에서 \(45^{\circ}\)선을 점근선으로 갖는 <b>쌍곡선</b>이다. 두 곡선은 \(t\)가 작을 때 겹치고, \(Ft\sim mc\)부터 갈라진다. 명칭 "쌍곡선 운동(hyperbolic motion)"이 여기서 나왔고, 이는 U25에서 본 <b>불변 간격의 쌍곡 기하</b>와 같은 뿌리다 — 실제로 이 궤적은 \(x^{2}-(ct)^{2}=\text{const}\)라는 <b>불변 간격 일정</b>의 곡선이다. 대표적 실현: <b>균일한 전기장 속의 하전 입자</b>.</p>
+<p><b>4) "빛을 앞지를 수 있는가" (Prob. 12.38).</b> 답: <b>충분한 출발 거리를 앞서 주면, 뒤에서 출발한 광선에게 영원히 따라잡히지 않을 수 있다.</b> 속도로 이기는 것이 아니라 <b>기하로</b> 이기는 것이다.
+<br>당신의 세계선은 위 쌍곡선이고 점근선은 \(x=ct-\dfrac{mc^{2}}{F}+\cdots\)이다. \(t=0\)에 원점보다 뒤쪽 \(x=-d\)에서 출발한 광선의 세계선은 \(x_{\text{light}}=ct-d\). 두 곡선이 만나려면
+\[ \frac{mc^{2}}{F}\left[\sqrt{1+(Ft/mc)^{2}}-1\right]=ct-d. \]
+큰 \(t\)에서 좌변 \(\to ct-\dfrac{mc^{2}}{F}\)이므로, 만약 \(d&gt;\dfrac{mc^{2}}{F}\)이면 좌변이 우변보다 <b>항상 크다</b> — 광선이 결코 따라오지 못한다.</p>
+<p><b>5) 이것이 인과율을 깨는가? 아니다.</b> 당신의 속도는 언제나 \(c\) 미만이다. 일어난 일은 "당신이 빛보다 빨랐다"가 아니라, <b>영원히 가속하는 관측자에게는 시공간의 일부가 원리적으로 도달 불가능해진다</b>는 것이다. 그 경계면을 <b>Rindler 지평선(event horizon)</b>이라 부르며, 블랙홀 지평선의 가장 단순한 유비다. 여기서 특수상대론이 일반상대론의 문턱에 닿는다.</p>
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> "보존시키고, 몰아넣고, 제곱하라" 알고리즘으로 파이온 붕괴 \(E_\mu=(m_\pi^2+m_\mu^2)c^2/2m_\pi\)와 Compton 공식을 무리식 없이 유도하고, 불변량 등식으로 반양성자 생성 문턱 \(6mc^2\)과 충돌 빔의 \(E^2\) 이득을 계산하며, \(\gamma\to e^+e^-\) 금지를 4-운동량 노름의 부호로 증명하고, \(p=Ft\)에서 \(u\to c\)·\(a\to0\)·쌍곡선 궤적을 유도하며 \(K^\mu=\dd p^\mu/\dd\tau=\gamma_u(\vb F\cdot\vb u/c,\vb F)\)를 쓸 수 있다.</div>

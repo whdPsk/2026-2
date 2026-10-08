@@ -1,0 +1,66 @@
+<div class="exq"><b>상황.</b> 반지름 \(R\), 단위길이당 감은 수 \(n\), 전류 \(I\)의 아주 긴 솔레노이드가 있다. 이것과 축을 공유하는 두 개의 <b>부도체</b> 원통 껍질(길이 \(l\gg b\))이 있는데, 하나는 솔레노이드 <em>안쪽</em> 반지름 \(a\)에 전하 \(+Q\), 다른 하나는 <em>바깥</em> 반지름 \(b\)에 \(-Q\)를 균일하게 띠고 있다(\(a&lt;R&lt;b\)). 처음엔 모두 정지. 이제 솔레노이드 전류를 천천히 0으로 줄이면 두 원통이 회전하기 시작한다. <b>각운동량은 어디서 왔는가?</b> 장에 저장돼 있던 각운동량 \(\vb{L}_{\rm em}=\eps\int\vb{r}\times(\vb{E}\times\vb{B})\,\dd\tau\)를 구하고, 실제로 원통들이 얻는 각운동량과 비교한다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(\vb{E}\times\vb{B}\ne0\)인 영역은 \(a&lt;s&lt;R\)뿐 → 그 안에서 각운동량 밀도가 <em>상수</em>가 되는 것이 계산의 열쇠.</div>
+<ol>
+<li><b>초기 장.</b> 두 원통 사이(\(a&lt;s&lt;b\))에는 Gauss 법칙으로
+\[ \vb{E}=\frac{Q}{2\pi\eps l}\frac{1}{s}\hat{\vb{s}}, \]
+솔레노이드 내부(\(s&lt;R\))에는 \(\vb{B}=\muz nI\,\hat{\vb{z}}\). 둘이 <em>동시에</em> 0이 아닌 영역은 \(a&lt;s&lt;R\)이다.</li>
+
+<li><b>운동량 밀도.</b> \(\hat{\vb{s}}\times\hat{\vb{z}}=-\hat{\boldsymbol\varphi}\)이므로
+\[ \vb{g}=\eps(\vb{E}\times\vb{B})=-\frac{\muz nIQ}{2\pi l s}\,\hat{\boldsymbol\varphi}\qquad(a&lt;s&lt;R). \]</li>
+
+<li><b>각운동량 밀도.</b> \(\vb{r}=s\hat{\vb{s}}+z\hat{\vb{z}}\)이지만 \(\hat{\vb{z}}\)-성분만 필요하고 \(s\hat{\vb{s}}\times\hat{\boldsymbol\varphi}=s\hat{\vb{z}}\)이므로
+\[ (\vb{r}\times\vb{g})_z=s\,g_\varphi=-\frac{\muz nIQ}{2\pi l}=\text{상수!} \]
+(반지름 성분은 \(z\)에 대해 홀함수라 적분하면 0.)</li>
+
+<li><b>부피를 곱하기만 하면 끝.</b> 영역 \(a&lt;s&lt;R\)의 부피는 \(\pi(R^{2}-a^{2})l\):
+\[ \vb{L}_{\rm em}=-\frac{\muz nIQ}{2\pi l}\pi(R^{2}-a^{2})l\,\hat{\vb{z}}=-\tfrac12\muz nIQ\,(R^{2}-a^{2})\,\hat{\vb{z}}. \]</li>
+
+<li><b>전류를 끌 때 유도 전기장.</b> Faraday 법칙 \(\oint\vb{E}\cdot \dd\vb{l}=-\dot\Phi\)를 반지름 \(s\)의 고리에 적용:
+\[ \vb{E}_{\rm ind}= \begin{cases} -\tfrac12\muz n\dot I\,s\,\hat{\boldsymbol\varphi}, & s&lt;R,\\[2pt] -\tfrac12\muz n\dot I\,\dfrac{R^{2}}{s}\hat{\boldsymbol\varphi}, & s&gt;R. \end{cases} \]</li>
+
+<li><b>각 원통이 받는 토크.</b> 안쪽(\(s=a&lt;R\), 전하 \(+Q\)):
+\[ \vb{N}_a=a\,Q\,E_\varphi(a)\,\hat{\vb{z}}=-\tfrac12\muz nQ a^{2}\dot I\,\hat{\vb{z}} \;\Rightarrow\; \vb{L}_a=\int\vb{N}_a\dd t=+\tfrac12\muz nIQ a^{2}\,\hat{\vb{z}}. \]
+바깥(\(s=b&gt;R\), 전하 \(-Q\)):
+\[ \vb{N}_b=b\,(-Q)E_\varphi(b)\,\hat{\vb{z}}=+\tfrac12\muz nQ R^{2}\dot I\,\hat{\vb{z}} \;\Rightarrow\; \vb{L}_b=-\tfrac12\muz nIQ R^{2}\,\hat{\vb{z}}. \]
+(둘 다 \(\int\dot I\,\dd t=0-I=-I\)를 사용.)</li>
+
+<li>합하면 \(\vb{L}_a+\vb{L}_b=-\tfrac12\muz nIQ(R^{2}-a^{2})\hat{\vb{z}}=\vb{L}_{\rm em}\).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \vb{L}_{\rm em}=-\tfrac12\muz nIQ\,(R^{2}-a^{2})\,\hat{\vb{z}}=\vb{L}_a+\vb{L}_b\ } \]
+<p class="note">장이 잃은 각운동량 = 원통이 얻은 각운동량. 정적인 \(\vb{E}\)와 \(\vb{B}\)가 겹치기만 해도 각운동량이 저장된다. 두 원통이 <b>서로 반대 방향</b>으로 돈다는 점도 중요하다(총 각운동량은 보존되지만 0은 아니고, 원래 장에 있던 값과 같다). <b>검산</b> ① 차원: \(\muz n I\)는 T, \(Q R^{2}\)는 C·m\(^2\) → T·C·m\(^2\)=(kg/(C·s))·C·m\(^2\)=kg·m\(^2\)/s ✓ 각운동량. ② 극한: \(a\to R\)이면 \(\vb{E}\)와 \(\vb{B}\)가 겹치는 영역이 사라져 \(\vb{L}_{\rm em}\to0\) ✓. \(I\to0\) 또는 \(Q\to0\)이면 0 ✓. ③ 바깥 원통 결과에 \(b\)가 <em>등장하지 않는</em> 점: \(s&gt;R\)에서 유도 \(E_\varphi\propto R^2/s\)라 토크 \(\propto b\cdot(R^2/b)=R^2\)로 \(b\)가 상쇄된다 — 물리적으로 옳다(솔레노이드 밖 자속은 \(b\)와 무관) ✓. ④ 총합이 \(l\)에 무관: 길이가 두 배면 전하밀도가 절반이므로 상쇄 ✓.</p></div>
+
+<div class="qz" data-q="ex8.4-a"><div class="qq"><b>+α</b> 같은 각운동량을 <b>다른 메커니즘</b>으로 인출하기: 전류를 끄는 대신, 두 원통 사이에 약한 도전성 스포크(반지름 방향 도선)를 연결해 <b>전기장</b>을 없앤다(솔레노이드에 홈을 내 원통이 자유롭게 돌 수 있게 한다). 스포크 전류에 작용하는 자기력으로부터 원통들이 얻는 총 각운동량을 구하고 \(\vb{L}_{\rm em}\)과 비교하라. (Problem 8.10)</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 설정.</b> 방전 전류 \(I_r(t)\)가 스포크를 따라 <em>바깥쪽</em>(\(+\hat{\vb{s}}\))으로 흐른다(안쪽의 \(+Q\)가 바깥의 \(-Q\)를 중화). 이번에는 \(I\)(솔레노이드 전류)가 <b>일정</b>하므로 \(\vb{B}=\muz nI\hat{\vb{z}}\)(\(s&lt;R\))가 유지되고, 유도 전기장은 없다. 힘의 정체는 <b>Lorentz 힘</b>이다.</p>
+<p><b>2) 스포크에 작용하는 힘.</b> 길이요소 \(\dd\vb{l}=\dd s\,\hat{\vb{s}}\)에 대해
+\[ \dd\vb{F}=I_r\,\dd\vb{l}\times\vb{B}=I_r B\,\dd s\,(\hat{\vb{s}}\times\hat{\vb{z}})=-I_rB\,\dd s\,\hat{\boldsymbol\varphi}. \]</p>
+<p><b>3) 토크.</b> \(\dd N_z=s\,\dd F_\varphi=-sI_rB\,\dd s\). \(\vb{B}\)는 \(s&lt;R\)에서만 존재하므로 \(s\)를 \(a\)에서 \(R\)까지만 적분:
+\[ N_z=-I_r\muz nI\int_a^{R}\!s\,\dd s=-\tfrac12 I_r\muz nI\,(R^{2}-a^{2}). \]</p>
+<p><b>4) 시간적분.</b> 방전이 끝나면 \(\int I_r\,\dd t=Q\)이므로
+\[ \boxed{\ L_z=\int N_z\,\dd t=-\tfrac12\muz nIQ\,(R^{2}-a^{2})\ }=\ L_{{\rm em},z}\ \checkmark \]</p>
+<p><b>물리적 포인트.</b> Ex 8.4에서는 <em>Faraday 법칙</em>이, 여기서는 <em>Lorentz 힘 법칙</em>이 각운동량을 장에서 물질로 옮겼다. 메커니즘은 완전히 다른데 결과는 같다 — 보존법칙이 특정 메커니즘에 의존하지 않는다는 강력한 증거다.</p>
+<p><b>검산</b>: 부호와 크기가 본문과 완전 일치 ✓. \(a\to R\)이면 스포크가 자기장 영역을 지나지 않으므로 0 ✓. 차원: \([\muz nI]\,[Q]\,[\text{m}^2]\) ✓. 주의: 이번엔 두 원통이 스포크로 연결돼 <em>함께</em> 돈다(총 각운동량은 같지만 분배는 다르다).</p>
+</div></div>
+
+<div class="qz" data-q="ex8.4-b"><div class="qq"><b>+α</b> 기하 바꾸기(원통 → 구): 반지름 \(a\)에 \(+Q\), 반지름 \(b\)에 \(-Q\)를 띤 두 동심 <b>구 껍질</b>이 균일 자기장 \(\vb{B}=B_0\hat{\vb{z}}\) 속에 있다. (a) 장의 각운동량을 구하라. (b) \(\vb{B}\)를 천천히 끌 때 각 껍질이 받는 토크와 최종 각운동량을 구해 (a)와 대조하라. (Problem 8.11)</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>(a) 장의 각운동량.</b> \(a&lt;r&lt;b\)에서 \(\vb{E}=\dfrac{Q}{4\pi\eps r^{2}}\hat{\vb{r}}\), 어디서나 \(\vb{B}=B_0\hat{\vb{z}}\). \(\hat{\vb{r}}\times\hat{\vb{z}}=-\sin\theta\,\hat{\boldsymbol\varphi}\)이므로
+\[ \vb{g}=\eps(\vb{E}\times\vb{B})=-\frac{QB_0\sin\theta}{4\pi r^{2}}\hat{\boldsymbol\varphi}. \]
+\(\vb{r}\times\vb{g}=r\hat{\vb{r}}\times g_\varphi\hat{\boldsymbol\varphi}=-rg_\varphi\hat{\boldsymbol\theta}\)이고 \(\hat{\boldsymbol\theta}\cdot\hat{\vb{z}}=-\sin\theta\)이므로
+\[ (\vb{r}\times\vb{g})_z=-\frac{QB_0\sin^{2}\theta}{4\pi r}. \]
+\(\dd\tau=r^{2}\sin\theta\,\dd r\,\dd\theta\,\dd\varphi\)로 적분(\(\int_0^\pi\sin^{3}\theta\,\dd\theta=\tfrac43\), \(\int_a^b r\,\dd r=\tfrac{b^{2}-a^{2}}2\)):
+\[ \boxed{\ \vb{L}_{\rm em}=-\tfrac13 QB_0\,(b^{2}-a^{2})\,\hat{\vb{z}}\ } \]</p>
+<p><b>(b) \(B\)를 끌 때.</b> 균일 \(B_0(t)\hat{\vb{z}}\)에 대한 유도 전기장은 축거리 \(s=r\sin\theta\)를 써서
+\[ \vb{E}_{\rm ind}=-\frac{s}{2}\dot B_0\,\hat{\boldsymbol\varphi}. \]
+반지름 \(a\), 전하 \(Q\)인 껍질(\(\sigma=Q/4\pi a^{2}\))이 받는 토크의 \(z\)성분:
+\[ N_z=\oint s\,\sigma E_\varphi\,\dd a=-\frac{\dot B_0}{2}\frac{Q}{4\pi a^{2}}\int (a\sin\theta)^{2}a^{2}\sin\theta\,\dd\theta\,\dd\varphi=-\frac{Qa^{2}\dot B_0}{8\pi}(2\pi)\!\left(\tfrac43\right)=-\frac{Qa^{2}}{3}\dot B_0. \]
+시간적분(\(\int\dot B_0\dd t=-B_0\)): \(L_{a,z}=+\tfrac13Qa^{2}B_0\).
+바깥 껍질은 전하가 \(-Q\), 반지름 \(b\)이므로 \(L_{b,z}=-\tfrac13Qb^{2}B_0\).
+\[ L_{a,z}+L_{b,z}=-\tfrac13QB_0(b^{2}-a^{2})=L_{{\rm em},z}\ \checkmark \]</p>
+<p><b>검산</b> ① 구조가 원통 문제와 동일: 안쪽 껍질은 \(+\), 바깥은 \(-\)로 반대로 돌고 합이 장의 값과 같다 ✓. ② \(b\to a\)이면 \(\vb{E}\)가 있는 영역이 없어져 0 ✓. ③ 차원: \(QB_0R^{2}\)=C·T·m\(^2\)=kg·m\(^2\)/s ✓. ④ \(\muz\)가 등장하지 않는 것이 맞다 — \(\vb{g}=\eps\vb{E}\times\vb{B}\)에서 \(\vb{E}\)의 \(1/\eps\)와 상쇄됐다 ✓.</p>
+</div></div>

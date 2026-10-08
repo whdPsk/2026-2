@@ -1,0 +1,143 @@
+[
+ {
+  "id": "L06.s1",
+  "loc": "슬라이드 1",
+  "raw": "Radiation From Moving Charges — Introduction to Astrophysics I, 2026 Fall, Woong-Tae Kim",
+  "skip": "표지",
+  "note": ""
+ },
+ {
+  "id": "L06.s2",
+  "loc": "슬라이드 2",
+  "raw": "Questions?\n• Feel free to ask any questions you had while watching the flipped-learning animations.",
+  "skip": "질문 안내(내용 없음)",
+  "note": ""
+ },
+ {
+  "id": "L06.s3a",
+  "loc": "슬라이드 3 ①",
+  "raw": "Review Questions\n• The electric field of a moving charge can be separated into\n  E(x,t) = q[(n̂−β)/(γ²κ³R²)]_ret + (q/c)[n̂×{(n̂−β)×β̇}/(κ³R)]_ret\n  – Identify the velocity field term and explain why it falls off as ∼R⁻².",
+  "note": "Review Q① 속도장"
+ },
+ {
+  "id": "L06.s3b",
+  "loc": "슬라이드 3 ②",
+  "raw": "  – Identify the radiation field in the above equation and show that it falls off as ∼R⁻¹. Show that it is always transverse to n̂.",
+  "note": "Review Q② 복사장"
+ },
+ {
+  "id": "L06.s3c",
+  "loc": "슬라이드 3 ③",
+  "raw": "• Explain the figure below:\n[그림: 왼쪽 t=0 — x=0에 있는 전하에서 방사상으로 뻗는 전기력선(화살표). 오른쪽 t=T — 반경 cT 안쪽은 x=0을 중심으로 한 방사상 력선, 바깥쪽은 x=vT(점으로 표시)를 향하는 방사상 력선, 반경 cT 근처에서 력선이 꺾여 연결되는 transition 영역]",
+  "note": "Review Q③ 갑자기 멈춘 전하의 전기력선 그림"
+ },
+ {
+  "id": "L06.s3d",
+  "loc": "슬라이드 3 ④",
+  "raw": "• State Larmor's formula for the power radiated by a charge q undergoing acceleration a.",
+  "note": "Review Q④ 라모 공식"
+ },
+ {
+  "id": "L06.s4",
+  "loc": "슬라이드 4",
+  "raw": "(빈 슬라이드)",
+  "skip": "빈 슬라이드",
+  "note": ""
+ },
+ {
+  "id": "L06.s5",
+  "loc": "슬라이드 5",
+  "raw": "Dipole Approximation\n• When there are many particles with different positions r_i, velocities v_i, and charges q_i, we can find the radiation field at large distances by simply adding together the E_rad from each particle.\n  – However, the differences in retarded time make it difficult to obtain E_rad.\n• When many charged particles are in a small volume with size (r′ ≪ λ), the differences in retarded time across the source are negligible ➔ dipole approximation.\n• Then, E_rad(x,t) = Σ_i (q_i/c)[n̂×{n̂×β̇_i}/R_i]_ret = [n̂×{n̂×p̈}/(c²R₀)]_ret\n  where the dipole moment is p ≡ Σ_i q_i x_i = ∫_{V₀} ρ(x′,t) x′ d³x′\n  ➡ dP/dΩ = p̈² sin²Θ/(4πc³),  P = 2p̈²/(3c³)\n[그림: 회색 원(소스 부피 V₀) 안에 원점 O와 위치 x′, ρ(x′,t′), j(x′,t′); 멀리 관측점 P(φ(x,t), A(x,t))까지 벡터 x와 x−x′]",
+  "note": ""
+ },
+ {
+  "id": "L06.s6",
+  "loc": "슬라이드 6",
+  "raw": "For a Free Electron\n• We apply the dipole formula to the radiation from a free charge in response to an incident electromagnetic wave.\n• Consider a free electron exposed to EM radiation.\n[그림: 왼쪽에서 k̂ 방향으로 들어오는 파동 E = x̂E₀cos ω₀t (for polarized E field), 전하 q가 위아래(x̂)로 진동, 진동축과 각 Θ를 이루는 n̂ 방향으로 나가는 scattered E field (polarized)]\n• EOM under the Lorenz force (non-relativistic case)\n  F = m_e ẍ = e(E + (v/c)×B) ≈ eE = eE₀cos(ω₀t)  ➡ ẍ = (eE₀/m_e) cos(ω₀t)\n• Angular distribution of the radiated power is dP/dΩ = e²|ẍ|² sin²Θ/(4πc³)",
+  "note": ""
+ },
+ {
+  "id": "L06.s7",
+  "loc": "슬라이드 7",
+  "raw": "Thomson Scattering Cross Section\n• Time-averaged angular distribution of power ⟨dP/dΩ⟩ = (e²/4πc³) sin²Θ · (e²E₀²/m_e²)⟨cos²(ω₀t)⟩ = e⁴E₀² sin²Θ/(8πm_e²c³)\n• Total radiated power is ⟨P⟩ = e⁴E₀²/(3m_e²c³)\n• The incident flux is ⟨S⟩ = (c/4π)⟨E²⟩ = (cE₀²/4π)⟨cos²(ω₀t)⟩ = cE₀²/8π\n• The differential scattering cross section is given by dσ_sca/dΩ = ⟨dP/dΩ⟩/⟨S⟩ = (e⁴/m_e²c⁴) sin²Θ = r_e² sin²Θ,  r_e ≡ e²/(m_ec²) classical electron radius\n• Thomson scattering cross section σ_T = ∫(dσ_sca/dΩ)dΩ = (8π/3)r_e² = (8π/3)(e²/m_ec²)² = 0.665×10⁻²⁴ cm²\n  – Independent of frequency",
+  "note": ""
+ },
+ {
+  "id": "L06.s8",
+  "loc": "슬라이드 8",
+  "raw": "For Unpolarized Incident Light\n• An unpolarized beam can be regarded as the independent superposition of two linear-polarized beams with perpendicular axes.\n• Choose one such beam along E₁, which is in the plane of the incident (k̂) and scattered (n̂) directions, and the second along E₂, perpendicular to this plane.\n• Then, (dσ/dΩ)_unpol = ½[(dσ(Θ)/dΩ)_pol + (dσ(π/2)/dΩ)_pol] = ½r_e²(1+sin²Θ) = ½r_e²(1+cos²θ)\n  – Forward-backward symmetry: • Unchanged by θ → −θ\n  – Total cross section: σ_unpol = ∫(dσ/dΩ)_unpol dΩ = (8π/3)r_e² = σ_T\n[그림: E₁ 위쪽, k̂ 오른쪽, n̂은 k̂와 각 θ, E₁과 n̂ 사이 Θ = π/2 − θ, 앞쪽으로 E₂, E₂와 n̂ 사이 Θ = π/2]",
+  "note": ""
+ },
+ {
+  "id": "L06.s9",
+  "loc": "슬라이드 9",
+  "raw": "Degree of Polarization\n• Depend on the viewing angle with respect to the incident direction.  (dσ/dΩ)_unpol = ½r_e²(1+cos²θ)\n[그림: 왼쪽 — 앞 슬라이드의 E₁·k̂·n̂·E₂ 좌표, n̂에 수직으로 'North' 빨간 화살표. 오른쪽 — Observer's plane of the sky: 위쪽(North) 화살표 길이 cos²θ, 오른쪽(E₂) 화살표 길이 1]\n  I_min/I_max = cos²θ ➔ Π = (I_max − I_min)/(I_max + I_min) = (1 − cos²θ)/(1 + cos²θ)\n  • No polarization along the incident direction (θ = 0)\n  • 100% polarization in the perpendicular direction (θ = π/2)",
+  "note": ""
+ },
+ {
+  "id": "L06.s10",
+  "loc": "슬라이드 10",
+  "raw": "Oscillator Model of an Atom\n• Line radiation from atoms and ions is quantum mechanical processes, but one can use classical theory using damped oscillators to obtain approximate expression for radiated power.\n• In the Lorentz oscillator model, an electron bound to a nucleus by a spring is in simple harmonic oscillations with frequency ω₀.\n• EOM: ẍ = −ω₀²x  – Solution: x(t) = x₀cos(ω₀t)\n• The total power radiated over one cycle is ⟨P⟩ = (2e²/3c³)⟨|ẍ|²⟩ = (2e²x₀²ω₀⁴/3c³)⟨cos²ω₀t⟩ = e²ω₀⁴x₀²/(3c³)",
+  "note": ""
+ },
+ {
+  "id": "L06.s11",
+  "loc": "슬라이드 11",
+  "raw": "Radiation Damping\n• Power from an oscillator means that it loses energy over time.\n  – The kinetic energy of an electron is E₀ = m_eω₀²x₀²/2.\n  – The radiated energy over one period is E_r = P/ω₀ = e²ω₀³x₀²/(3c³).\n• If the radiation damping is weak (E_r ≪ E₀), or e²ω₀³x₀²/(3c³) ≪ ½m_eω₀²x₀²\n  Or, if ω₀τ ≪ 1, one can treat the damping as small perturbations on the particle's motion.\n  τ ≡ 2r_e/(3c) = 2e²/(3m_ec³) = 6.27×10⁻²⁴ s = the timescale for radiation to cross a distance r_e\n  r_e ≡ e²/(m_ec²) = 2.82×10⁻¹³ cm = classical electron radius",
+  "note": ""
+ },
+ {
+  "id": "L06.s12",
+  "loc": "슬라이드 12",
+  "raw": "Radiation Reaction Force\n• There must be a force F_rad, called the radiation reaction force, acting on a particle by virtue of the radiation it produces.\n• Since the energy radiated must be compensated for by the work done against F_rad, one is tempted to write −⟨F_rad·v⟩ = ⟨2e²v̇²/(3c³)⟩\n• Since ⟨v̇²⟩ = (1/T)∫₀ᵀ v̇·v̇ dT = (1/T)∫₀ᵀ[d/dt(v·v̇) − v·v̈]dT = (1/T)[v·v̇]₀ᵀ − ⟨v·v̈⟩ = −⟨v·v̈⟩\n  one can write F_rad = (2e²/3c³)v̈ = m_eτv̈ = −Γm_e v\n  where the radiation damping constant is Γ = τω₀² = (2r_e/3c)ω₀² = (2e²/3m_ec³)ω₀² ≪ ω₀ for ω₀τ ≪ 1",
+  "note": ""
+ },
+ {
+  "id": "L06.s13",
+  "loc": "슬라이드 13",
+  "raw": "Decaying Solution\n• Thus, the EOM with the radiation reaction force is ẍ + Γẋ + ω₀²x = 0\n• Take x ≡ x₀e^{αt} as a solution to obtain α² + Γα + ω₀² = 0, which for Γ ≪ ω₀ gives α ≈ ±iω₀ − Γ/2\n• For the initial conditions of x(0) = x₀ and ẋ(0) = 0, the solution becomes x(t) = x₀cos ω₀t · e^{−Γt/2}\n• That is, the energy of an electron decays as ∝ exp(−Γt), with timescale of τ_life ≡ 1/Γ = 3m_ec³/(2e²ω₀²) = 1/(ω₀²τ) (≫ 1/ω₀)",
+  "note": ""
+ },
+ {
+  "id": "L06.s14",
+  "loc": "슬라이드 14",
+  "raw": "FT of x(t)\n• The EM radiation emitted does not have one frequency ν₀ = ω₀/(2π), but has a frequency distribution.\n• Let us write the solution x(t) as x(t) = x₀cos(ω₀t)e^{−Γt/2} = (x₀/2)(e^{iω₀t} + e^{−iω₀t})e^{−Γt/2}\n• Fourier transform of x(t) assuming that x(t) = 0 for t < 0:\n  x̃(ω) = (1/2π)∫_{−∞}^{+∞} x(t)e^{iωt}dt = (x₀/4π)∫₀^∞ dt[e^{(iω+iω₀−Γ/2)t} + e^{(iω−iω₀−Γ/2)t}]\n  = (x₀/4π)[1/(Γ/2 − i(ω+ω₀)) + 1/(Γ/2 − i(ω−ω₀))] ≈ (x₀/4π)·1/(Γ/2 − i(ω−ω₀))  for ω > 0\n  ➡ |x̃|² = (x₀/4π)² · 1/[(ω−ω₀)² + (Γ/2)²]",
+  "note": ""
+ },
+ {
+  "id": "L06.s15",
+  "loc": "슬라이드 15",
+  "raw": "FT of E(t)\n• To obtain the emitted spectrum, we need to take FT of E_rad(x,t) = (q/c)[n̂×{n̂×β̇}/R]_ret ➡ E(t) = −e n̂×[n̂×ẍ(t)]/(c²r)\n• Since x(t) = ∫x̃(ω)e^{−iωt}dω ➡ ẍ(t) = −ω²∫x̃(ω)e^{−iωt}dω, we obtain Ẽ(ω) = (eω²/c²r) n̂×[n̂×x̃(ω)]\n• Therefore, Ẽ(ω) = (eω²/c²r) x̃(ω) sinΘ, where Θ is an angle between p̈ and an observer.\n[그림: 전하 q에서 위로 p̈ 화살표, p̈와 각 Θ를 이루는 n̂ 방향 끝에 E_rad와 B_rad(지면 안팎)]",
+  "note": ""
+ },
+ {
+  "id": "L06.s16",
+  "loc": "슬라이드 16",
+  "raw": "Energy Spectrum\n• Since the radiation energy per unit area per unit angular frequency is given by dW/(dA dω) = c|Ẽ(ω)|², we obtain the energy spectrum\n  dW/dω = ∫c|Ẽ(ω)|² r² dΩ = (e²ω⁴/c³)|x̃|²∫sin²Θ dΩ ≃ (8πe²ω⁴/3c³)(x₀/4π)² · 1/[(ω−ω₀)² + (Γ/2)²]\n  (옆에 다시 적힌 식: Ẽ(ω) = (eω²/c²r)x̃(ω)sinΘ,  |x̃|² = (x₀/4π)²/[(ω−ω₀)² + (Γ/2)²])",
+  "note": ""
+ },
+ {
+  "id": "L06.s17",
+  "loc": "슬라이드 17",
+  "raw": "Classical Line Width\n• Or by taking ω ~ ω₀ in the numerator, dW/dω = (m_eΓω₀²x₀²/4π) · 1/[(ω−ω₀)² + (Γ/2)²] = ½m_eω₀²x₀²φ(ω)\n  where φ(ω) ≡ (1/π)(Γ/2)/[(ω−ω₀)² + (Γ/2)²] with ∫_{−∞}^{+∞}φ(ω)dω = 1 is a Lorenzian line shape function.\n• Total energy radiated from an oscillator is W = ∫_{−∞}^{+∞}(dW/dω)dω = ½m_eω₀²x₀² = the initial energy of the oscillator.\n• FWHM: Δω_FWHM = Γ.\n• Since λ = c/ν = 2πc/ω, Δλ_FWHM = 2πcΔω_FWHM/ω₀² = 2πc/(ω₀²τ_life) = 2πcτ = 1.18×10⁻⁴ Å  Natural line width",
+  "note": ""
+ },
+ {
+  "id": "L06.s18",
+  "loc": "슬라이드 18",
+  "raw": "Atoms in a Radiation Field\n• Modeled by a driven damped oscillator\n• EOM: ẍ + Γẋ + ω₀²x = (eE₀/m_e)e^{iωt}\n• Solution: x(t) = [(e/m_e)E₀/(ω₀² − ω² + iΓω)]e^{iωt} = [(e/m_e)E₀/√((ω₀²−ω²)² + (Γω)²)]e^{i(ωt+δ)}, where δ = −tan⁻¹(Γω/(ω₀²−ω²))\n• Time-averaged total power is ⟨P⟩ = (2e²/3c³)⟨|v̇|²⟩ = (2e²/3c³)(e/m_e)²E₀²ω⁴/[(ω²−ω₀²)² + Γ²ω²]⟨cos²(ωt+δ)⟩ = (e⁴E₀²/3m_e²c³)·ω⁴/[(ω²−ω₀²)² + Γ²ω²]",
+  "note": ""
+ },
+ {
+  "id": "L06.s19",
+  "loc": "슬라이드 19",
+  "raw": "Scattering Cross Section\n• Since ⟨S⟩ = (c/8π)E₀², the scattering cross section by an oscillator is σ = ⟨P⟩/⟨S⟩ = (8πe⁴/3m_e²c⁴)·ω⁴/[(ω²−ω₀²)² + Γ²ω²] = σ_T ω⁴/[(ω²−ω₀²)² + Γ²ω²]\n[그림: σ/σ_T(세로, 0–30) vs ω/ω₀(가로, 0–4) — ω/ω₀=1에서 뾰족한 피크(폭 Γ/ω₀ 표시), 저주파 쪽 '∝ω⁴', 고주파에서 1로 수렴]\n• For ω ≫ ω₀, σ → σ_T: Thomson scattering – At high energy, the binding becomes negligible.\n• For ω ≪ ω₀, σ = σ_T(ω/ω₀)⁴: Rayleigh scattering – Responsible for the blue color of the sky and the red color of the sun at sunrise and sunset.\n• For ω ≈ ω₀: resonant scattering – Corresponding to the case in QM where an electron becomes excited by absorbing radiation and then de-excited back to the original level.",
+  "note": ""
+ },
+ {
+  "id": "L06.s20",
+  "loc": "슬라이드 20",
+  "raw": "Resonant Scattering\n• At ω ≈ ω₀, one can simplify the denominator by using (ω²−ω₀²)² = (ω−ω₀)²(ω+ω₀)² ≈ 4ω₀²(ω−ω₀)² to obtain σ ≈ (σ_T/4)·ω₀²/[(ω−ω₀)² + (Γ/2)²] = (πe²/m_ec)φ(ν), with φ(ν) = (1/π)[(Γ/4π)/((ν−ν₀)² + (Γ/4π)²)]\n• Total (classical) cross section: ∫₀^∞ σ dν = πe²/(m_ec) = 0.0265 cm² s⁻¹\n• In QM, ∫₀^∞ σ(ν)dν = (πe²/m_ec) f₁₂, where f₁₂ is the oscillator strength (or f-value), representing the QM correction for the classical result for line transitions.",
+  "note": ""
+ }
+]

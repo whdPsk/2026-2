@@ -1,0 +1,22 @@
+<div class="predict"><b>◈ 학습 목표.</b> 19.1 · 19.2 · 19.3 · 19.4의 가정, 물리적 원인, 결과식과 한계 거동을 설명한다.</div>
+
+<h4>기말 <span class="en">약 45분</span></h4>
+
+<p>비리얼 정리는 운동량 방정식의 공간 모멘트로 계의 전체 수축·팽창을 추적한다. 관성모멘트 I=∫ρr²dV의 이차 시간미분은 운동·열·중력·표면압력 항의 균형을 나타낸다. I의 이차 미분이0이라는 조건과 계가 매 순간 완전히 정지한다는 조건은 다르다.</p><p>유체의 K는 거시적 속도장의 운동에너지이고 U는 미시적 열에너지다. 압력 적분이3(γ−1)U로 등장한다. 별로 이루어진 충돌 없는 계에서는 별의 무작위 운동을 K에 넣는다. 동일한 무작위 운동을 K와 열압력 양쪽에 중복 계산하면 안 된다.</p><p>균일 구의 중력에너지는 −3GM²/(5R)이다. 실제 밀도 분포가 집중될수록 계수는 달라진다. 시선 속도분산으로 질량을 추정하려면 구대칭·정상·속도 등방성 등 추가 가정이 필요하다. 투영 반지름과 3차원 반지름 역시 구별한다.</p><p>외부 압력은 구름을 가두는 항이다. 압력에 갇힌 등온 구는 임계 질량보다 커지면 안정한 Bonnor–Ebert 평형을 유지할 수 없다. 비리얼 평형 조건만으로 안정성까지 결론 내리지 말고 섭동에 따른 복원성을 확인한다.</p><p>외부 중력은 질량중심의 병진운동을 제외한 조석 항으로 내부 구조에 영향을 준다. 조석 텐서의 방향에 따라 늘림과 압축이 공존할 수 있어 ‘외부 중력은 항상 구름을 찢는다’는 설명은 틀리다. 회전계의 Roche 조건에는 원심력까지 일관되게 포함해야 한다. 이 절의 상세 형상별 임계 해는 원문 대조가 남아 있다.</p>
+
+<div class="callout"><b class="head">강의·교재 강조점.</b> 교재 선행 학습노트. 후속 강의·HW 강조점 미반영.</div>
+
+<div class="formula"><div class="ftitle">암기 — 비리얼 정리·질량 추정·압력 구름</div><p><b>압력 경계를 가진 유체 비리얼</b></p>\[ {1\over2}{d^2I\over dt^2}=2K+3(\gamma-1)U+W-3P_{ext}V \]<p class="note">K는 거시적 운동, U는 열에너지, W는 음의 자체중력에너지. <i>조건: 물질 경계·등방 일정 외부압력, 자기장·조석 등 별도 항 생략</i></p><p><b>균일 구의 질량 척도</b></p>\[ W=-{3GM^2\over5R},\quad M_{vir}={5R\sigma_{1D}^2\over G} \]<p class="note">등방 무작위 운동의 K=3Mσ1D²/2. <i>조건: 균일 구·평형·외부압력 및 추가 지지 무시</i></p><p><b>등온 압력 구름과 조석</b></p>\[ M_{BE}\simeq1.18{c_T^4\over G^{3/2}P_{ext}^{1/2}},\quad W_{tid}\simeq-\int\rho x_ix_j\partial_i\partial_j\Phi_{ext}\,dV \]<p class="note">조석은 질량중심에서 외부 퍼텐셜을 이차까지 전개한 항. <i>조건: BE는 비회전·비자화 등온구; 조석식은 작은 구름 근사</i></p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u34-1"><div class="qq">비리얼 평형이면 총에너지가0인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>외부압력 없는 단순 중력계에서는 2K+W=0이므로 총에너지 K+W=W/2<0이다.</p></div></div>
+
+
+<div class="qz" data-q="u34-2"><div class="qq">K와 U에 같은 열운동을 넣어도 되는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>안 된다. 유체의 거시 운동과 내부 열에너지, 충돌 없는 입자의 분산운동 정의를 구분해야 한다.</p></div></div>
+
+
+<div class="qz" data-q="u34-3"><div class="qq">외부압력이 커지면 BE 임계질량은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>같은 온도에서 Pext^−1/2로 감소한다. 더 작은 질량도 불안정해질 수 있다.</p></div></div>
+
+
+<p class="note">출처: 교재 p.431–444 · 상태: 교재 선행 · 교재432·434쪽 비리얼 유도와 K/U·표면압력 구분 직접 확인</p>

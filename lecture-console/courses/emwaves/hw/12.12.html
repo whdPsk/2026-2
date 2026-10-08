@@ -1,0 +1,16 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+정변환:
+\[ \bar x=\gamma(x-vt),\quad \bar y=y,\quad \bar z=z,\quad \bar t=\gamma\Bigl(t-\frac{v}{c^{2}}x\Bigr),\qquad \gamma\equiv\frac1{\sqrt{1-v^2/c^2}}. \]
+첫 식과 넷째 식을 연립한다. \(\bar x+ v\bar t\)를 계산하면
+\[ \bar x+v\bar t=\gamma\Bigl[(x-vt)+v\Bigl(t-\frac{v}{c^2}x\Bigr)\Bigr]=\gamma x\Bigl(1-\frac{v^{2}}{c^{2}}\Bigr)=\frac{x}{\gamma}, \]
+여기서 \(\gamma(1-v^2/c^2)=1/\gamma\)를 썼다. 따라서
+\[ \boxed{x=\gamma(\bar x+v\bar t)} \]
+마찬가지로
+\[ \bar t+\frac{v}{c^{2}}\bar x=\gamma\Bigl[\Bigl(t-\frac{v}{c^2}x\Bigr)+\frac{v}{c^{2}}(x-vt)\Bigr]=\gamma t\Bigl(1-\frac{v^{2}}{c^{2}}\Bigr)=\frac{t}{\gamma}, \]
+\[ \boxed{t=\gamma\Bigl(\bar t+\frac{v}{c^{2}}\bar x\Bigr)},\qquad \boxed{y=\bar y,\ z=\bar z} \]
+
+<p>결과는 정변환에서 \(v\to-v\)로 바꾼 것과 정확히 같다. 이는 상대성 원리의 직접적 표현: \(S\)에서 보면 \(\bar S\)가 \(+v\)로, \(\bar S\)에서 보면 \(S\)가 \(-v\)로 움직이며 두 계의 지위는 대등하다.</p>
+
+<div class="alabel">감점 포인트</div>
+\(\gamma(1-v^2/c^2)=1/\gamma\) 항등식을 못 알아보고 계산이 지저분해지는 것. 그리고 "부호만 바꾸면 된다"고 답만 쓰고 대수적 확인을 생략하면 감점.</div><!--/sol-->

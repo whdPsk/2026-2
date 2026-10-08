@@ -1,0 +1,23 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>먼저 \(\divg\vb{B}=\frac1s\partial_s(-ks^{2})+2k=0\) ✓ (물리적으로 가능한 장).</p>
+<p><b>(a)</b> 테두리 전하 하나의 속도 \(\vb{v}=\omega R\hat{\boldsymbol\varphi}+\dot z\hat{\vb{z}}\), 힘
+\[\vb{F}=q\vb{v}\times\vb{B}=qk\big[\omega R^{2}\hat{\vb{z}}+2\omega Rz\,\hat{\vb{s}}-\dot z R\,\hat{\boldsymbol\varphi}\big].\]
+\(\hat{\vb{s}}\) 성분은 \(n\)개를 더하면 상쇄. 남는 것:
+\[M\ddot z=nqkR^{2}\omega,\qquad
+I\dot\omega=-nqkR^{2}\dot z\ \ \big(I=\tfrac12MR^{2}\big)\Rightarrow \dot\omega=-\frac{2nqk}{M}\dot z .\]
+\(\alpha\equiv nqk/M\) 로 두면 \(\dot\omega=-2\alpha\dot z\Rightarrow \omega=\omega_0-2\alpha z\), 이를 대입:
+\[\ddot z+2\alpha^{2}R^{2}z=\alpha R^{2}\omega_0 .\]
+\(z(0)=\dot z(0)=0\) 인 단순조화운동:
+\[\boxed{\;z(t)=\frac{M\omega_0}{2nqk}\Big[1-\cos\Big(\frac{\sqrt2\,nqkR}{M}t\Big)\Big],\qquad
+\omega(t)=\omega_0\cos\Big(\frac{\sqrt2\,nqkR}{M}t\Big)\;}\]
+(진동수 \(\Omega=\sqrt2\,\alpha R=\sqrt2\,nqkR/M\).)</p>
+<p><b>(b)</b> 원반은 \(z=0\)과 \(z_{\max}=M\omega_0/nqk\) 사이를 <b>진동</b>하면서, 자전은 \(\omega_0\to0\to-\omega_0\to0\to\omega_0\) 로 함께 진동한다. 올라가면서 자전이 느려지고(회전에너지 → 병진에너지), 최고점에서는 병진이 멈추고 \(-\omega_0\)로 거꾸로 돈다.</p>
+<p>에너지 검산:
+\[K=\tfrac12M\dot z^{2}+\tfrac12 I\omega^{2}
+=\tfrac12M\Big(\frac{\omega_0^{2}R^{2}}{2}\Big)\sin^{2}\Omega t+\tfrac12\Big(\frac{MR^{2}}{2}\Big)\omega_0^{2}\cos^{2}\Omega t
+=\frac{MR^{2}\omega_0^{2}}{4}\]
+\[\boxed{\;K=\tfrac12 I\omega_0^{2}=\text{일정}\;}\]
+자기력은 일을 하지 않고 회전↔병진 에너지를 <b>변환</b>만 시킨다 (8.3절의 주제).</p>
+<div class="alabel">감점 포인트</div>
+관성모멘트를 \(nMR^2\)나 \(MR^2\)로 잡는 것(원반이므로 \(\tfrac12MR^{2}\)), 그리고 \(\hat{\vb{s}}\) 방향 힘이 대칭으로 상쇄됨을 언급하지 않는 것.</div><!--/sol-->

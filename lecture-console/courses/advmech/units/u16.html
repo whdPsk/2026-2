@@ -1,0 +1,48 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 평면운동에서는 회전관성이 숫자 하나 \(I\)였다. 3차원에서 임의 방향 \(\boldsymbol\omega\)로 돌 때 \(T_{\rm rot}=\tfrac12\sum m|\boldsymbol\omega\times\vb r|^2\)를 \(\omega\)의 성분으로 전개하면 \(\omega_i\omega_j\)의 이차형식이 된다. 계수는 몇 개일까? 대칭이라면 독립적인 것은 몇 개? 대각 성분과 비대각 성분은 각각 어떤 모양의 적분일지 먼저 추측해 보라.</div>
+
+<h4>11.3 관성 텐서 <span class="en">inertia tensor</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>\(T=T_{\rm trans}+T_{\rm rot}\) — CM을 원점으로 잡는 이유 <b>(필수)</b></div>
+<ol>
+<li>강체이므로 물체계에서 상대 속도 0: \(\vb v_\alpha=\vb V+\boldsymbol\omega\times\vb r_\alpha\) (U11의 \(\vb v_f=\vb V+\vb v_r+\boldsymbol\omega\times\vb r\)에서 \(\vb v_r=0\)).</li>
+<li>\[ T=\tfrac12\sum m_\alpha V^2+\sum m_\alpha\vb V\cdot(\boldsymbol\omega\times\vb r_\alpha)+\tfrac12\sum m_\alpha(\boldsymbol\omega\times\vb r_\alpha)^2 . \]</li>
+<li>가운데 항 \(=\vb V\cdot\left(\boldsymbol\omega\times\sum m_\alpha\vb r_\alpha\right)\). 원점이 CM이면 \(\sum m_\alpha\vb r_\alpha=0\) → 사라짐. (원점이 고정점이면 \(\vb V=0\)이라 역시 사라짐.)</li>
+<li>\[ T=\tfrac12MV^2+\tfrac12\sum_\alpha m_\alpha(\boldsymbol\omega\times\vb r_\alpha)^2 . \]</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>\(T_{\rm rot}=\tfrac12\sum_{ij}I_{ij}\omega_i\omega_j\), \(I_{ij}=\sum m(\delta_{ij}r^2-x_ix_j)\) <b>(필수)</b></div>
+<ol>
+<li>항등식 \((\vb A\times\vb B)^2=A^2B^2-(\vb A\cdot\vb B)^2\):
+\[ T_{\rm rot}=\tfrac12\sum_\alpha m_\alpha\left[\omega^2r_\alpha^2-(\boldsymbol\omega\cdot\vb r_\alpha)^2\right]. \]</li>
+<li>성분으로: \(\omega^2=\sum_{ij}\omega_i\omega_j\delta_{ij}\), \((\boldsymbol\omega\cdot\vb r)^2=\sum_{ij}\omega_i\omega_jx_ix_j\). 따라서
+\[ T_{\rm rot}=\tfrac12\sum_{ij}\omega_i\omega_j\underbrace{\sum_\alpha m_\alpha\left(\delta_{ij}\sum_kx_{\alpha,k}^2-x_{\alpha,i}x_{\alpha,j}\right)}_{I_{ij}} . \]</li>
+<li>연속체: \(I_{ij}=\int_V\rho(\vb r)\left(\delta_{ij}r^2-x_ix_j\right)\dd v\).</li>
+<li>행렬로 (\(x,y,z\) 표기):
+\[ \{\I\}=\begin{pmatrix}\sum m(y^2+z^2)&-\sum mxy&-\sum mxz\\-\sum myx&\sum m(z^2+x^2)&-\sum myz\\-\sum mzx&-\sum mzy&\sum m(x^2+y^2)\end{pmatrix}. \]
+대각: <b>관성 모멘트</b>(축까지 거리 제곱의 가중합). 비대각의 음수: <b>관성곱</b>.</li>
+<li>성질: <b>대칭</b> \(I_{ij}=I_{ji}\) → 독립 성분 6개. <b>가산적</b>(부분들의 텐서를 더하면 전체). 차원 질량×길이². \(\boldsymbol\omega=\omega\uv n\)이면 \(T=\tfrac12I_n\omega^2\), \(I_n=\uv n^{\mathsf T}\I\uv n\) — 초등물리의 \(I\)가 이것.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>모서리를 원점으로 한 정육면체 — Example 11.3</div>
+<ol>
+<li>균일 정육면체(한 변 \(b\), 밀도 \(\rho\), \(M=\rho b^3\)), 한 꼭짓점이 원점, 세 모서리가 좌표축.</li>
+<li>\(I_{11}=\rho\int_0^b\!\!\int_0^b\!\!\int_0^b(x_2^2+x_3^2)\dd x_1\dd x_2\dd x_3=\rho\cdot b\cdot2\cdot\frac{b^3}{3}\cdot b=\tfrac23\rho b^5=\tfrac23Mb^2\).</li>
+<li>\(I_{12}=-\rho\int x_1x_2\,\dd v=-\rho\cdot\frac{b^2}{2}\cdot\frac{b^2}{2}\cdot b=-\tfrac14Mb^2\).</li>
+<li>대칭으로 모든 대각이 같고 모든 비대각이 같다. \(\beta\equiv Mb^2\):
+\[ \{\I\}=\beta\begin{pmatrix}\tfrac23&-\tfrac14&-\tfrac14\\-\tfrac14&\tfrac23&-\tfrac14\\-\tfrac14&-\tfrac14&\tfrac23\end{pmatrix}. \]
+원점이 CM이 아니고 축이 주축이 아니다 → 비대각 성분이 생긴다(U18, U19에서 계속).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 관성 텐서</div>
+\[ \boxed{\ I_{ij}=\int\rho\left(\delta_{ij}r^2-x_ix_j\right)\dd v,\qquad T_{\rm rot}=\tfrac12\sum_{ij}I_{ij}\omega_i\omega_j=\tfrac12\boldsymbol\omega^{\mathsf T}\I\boldsymbol\omega\ } \]
+<p class="note">\(T=T_{\rm trans}+T_{\rm rot}\) 분리는 원점 = CM(또는 고정점)일 때만. 정육면체(모서리 원점): 대각 \(\tfrac23Mb^2\), 비대각 \(-\tfrac14Mb^2\).</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u16-1"><div class="qq">\(T_{\rm rot}=\tfrac12\sum m(\boldsymbol\omega\times\vb r)^2\)에서 출발해 \(I_{ij}\)의 정의를 유도하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 2. 핵심은 \(\omega^2r^2=\sum_{ij}\omega_i\omega_j\delta_{ij}r^2\)로 써서 두 항을 같은 \(\omega_i\omega_j\) 형태로 맞추는 한 줄.</p></div></div>
+
+<div class="qz" data-q="u16-2"><div class="qq">반지름 \(R\), 질량 \(M\)인 균일 구의 관성 텐서를 중심에 대해 구하라(Problem 11-3). \(I_{11}+I_{22}+I_{33}=2\int\rho r^2\dd v\)를 이용하면 한 줄이다.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>대칭 → 비대각 0, 대각 셋 같음. \(3I=2\int\rho r^2\dd v=2\rho\int_0^R4\pi r^4\dd r=\frac{8\pi\rho R^5}{5}\), \(\rho=\frac{3M}{4\pi R^3}\) → \(3I=\frac65MR^2\), \(I=\tfrac25MR^2\).</p></div></div>
+
+<div class="qz" data-q="u16-3"><div class="qq">질점 \(m\) 하나가 \((a,a,0)\)에 있다. 원점에 대한 관성 텐서를 쓰고, \(\boldsymbol\omega=\omega\uv z\)와 \(\boldsymbol\omega=\omega\uv x\)일 때의 \(T_{\rm rot}\)을 각각 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+\[ \I=m\begin{pmatrix}a^2&-a^2&0\\-a^2&a^2&0\\0&0&2a^2\end{pmatrix}. \]
+<p>\(\omega\uv z\): \(T=\tfrac12(2ma^2)\omega^2=ma^2\omega^2\) (축까지 거리 \(\sqrt2a\)). \(\omega\uv x\): \(T=\tfrac12ma^2\omega^2\) (x축까지 거리 \(a\)) ✓.</p></div></div>

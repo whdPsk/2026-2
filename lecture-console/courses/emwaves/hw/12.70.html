@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>핵심 관찰:</b> \(\vb{E}\)와 \(\vb{B}\)는 둘 다 \(\vb{E}\times\vb{B}\)에 <b>수직</b>이다. 그러니 부스트 방향을 \(\hat{\vb{n}}=\widehat{\vb{E}\times\vb{B}}\)로 잡으면 \(\vb{E}_\parallel=\vb{B}_\parallel=0\), 즉 변환식이 단순해진다:</p>
+\[ \bar{\vb{E}}=\gamma(\vb{E}+\vb{v}\times\vb{B}),\qquad \bar{\vb{B}}=\gamma\Big(\vb{B}-\frac{1}{c^{2}}\vb{v}\times\vb{E}\Big),\qquad \vb{v}=v\hat{\vb{n}}. \]
+<p>나란함의 조건은 \(\bar{\vb{E}}\times\bar{\vb{B}}=0\). 전개하면(\(\vb{v}\cdot\vb{E}=\vb{v}\cdot\vb{B}=0\) 이용)</p>
+\[ \vb{E}\times(\vb{v}\times\vb{E})=vE^{2},\qquad (\vb{v}\times\vb{B})\times\vb{B}=-vB^{2},\qquad (\vb{v}\times\vb{B})\times(\vb{v}\times\vb{E})=-v\,[\vb{v}\cdot(\vb{E}\times\vb{B})] \]
+\[ \frac{\bar{\vb{E}}\times\bar{\vb{B}}}{\gamma^{2}}=\hat{\vb{n}}\Big[\Big(1+\frac{v^{2}}{c^{2}}\Big)|\vb{E}\times\vb{B}|-v\Big(B^{2}+\frac{E^{2}}{c^{2}}\Big)\Big]. \]
+<p>이것이 0이 되려면</p>
+\[ \boxed{\ \frac{v}{1+v^{2}/c^{2}}=\frac{|\vb{E}\times\vb{B}|}{B^{2}+E^{2}/c^{2}},\qquad \vb{v}\parallel\vb{E}\times\vb{B}\ } \]
+<p><b>해가 존재하는가?</b> \(u\equiv v/c\)로 두면 \(u^{2}-\kappa u+1=0\), \(\kappa\equiv\dfrac{cB^{2}+E^{2}/c}{|\vb{E}\times\vb{B}|}\). \(|\vb{E}\times\vb{B}|\le EB\)이고 AM–GM에 의해 \(cB^{2}+E^{2}/c\ge2EB\)이므로 \(\kappa\ge2\) — 실근이 존재하고, 작은 쪽 근 \(u=\tfrac{1}{2}(\kappa-\sqrt{\kappa^{2}-4})\le1\)이 물리적 해다. (\(\kappa=2\), 즉 \(\vb{E}\perp\vb{B}\)이고 \(E=cB\)일 때만 \(v=c\)로 불가능해진다 — 평면파.)</p>
+<p><b>수직이 되는 계는?</b> <b>없다.</b> \(\vb{E}\cdot\vb{B}\)는 불변량인데(12.49) 문제에서 \(\vb{E}\)와 \(\vb{B}\)가 수직이 아니므로 \(\vb{E}\cdot\vb{B}\neq0\)이고, 이 값은 어느 계에서도 0이 될 수 없다.</p>
+<div class="alabel">감점 포인트</div>
+부스트 방향을 임의로 잡고 계산에 들어가는 것 — \(\vb{E}\times\vb{B}\) 방향을 고르면 \(\parallel\) 성분이 모두 사라져 계산이 반으로 준다.</div><!--/sol-->

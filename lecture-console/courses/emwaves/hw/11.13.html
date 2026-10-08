@@ -1,0 +1,16 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>\(k\equiv \dfrac{qQ}{4\pi\epsilon_0 m}\)로 두면 \(a=k/x^2\), 에너지 보존 \(v=\sqrt{v_0^2-2k/x}\), 반환점 \(x_m=2k/v_0^2\).</p>
+<p>들어올 때와 나갈 때가 대칭이므로</p>
+\[ W_{\rm rad}=2\int_{x_m}^{\infty}\frac{\mu_0q^2a^2}{6\pi c}\frac{dx}{v}
+=\frac{\mu_0q^2}{3\pi c}\int_{x_m}^{\infty}\frac{k^2}{x^4}\frac{dx}{v_0\sqrt{1-x_m/x}} . \]
+<p>\(u=x_m/x\) 치환 (\(dx=-x_m du/u^2\)):</p>
+\[ \int_{x_m}^\infty\frac{k^2/x^4}{v_0\sqrt{1-x_m/x}}dx=\frac{k^2}{x_m^3v_0}\int_0^1\frac{u^2}{\sqrt{1-u}}du,\qquad
+\int_0^1\frac{u^2du}{\sqrt{1-u}}=B\!\left(3,\tfrac12\right)=\frac{16}{15}. \]
+<p>\(x_m^3=8k^3/v_0^6\)이므로 \(\dfrac{k^2}{x_m^3v_0}\cdot\dfrac{16}{15}=\dfrac{v_0^6}{8k}\cdot\dfrac{16}{15v_0}=\dfrac{2v_0^5}{15k}\). 따라서</p>
+\[ W_{\rm rad}=\frac{\mu_0q^2}{3\pi c}\cdot\frac{2v_0^5}{15k}=\frac{2\mu_0q^2v_0^5}{45\pi ck}. \]
+<p>\(k=\dfrac{qQ\mu_0c^2}{4\pi m}\)를 넣으면 \(\dfrac{\mu_0}{k}=\dfrac{4\pi m}{qQc^2}\):</p>
+\[ W_{\rm rad}=\frac{2q^2v_0^5}{45\pi c}\cdot\frac{4\pi m}{qQc^2}=\frac{8\,q\,m\,v_0^5}{45\,Q\,c^3}. \]
+\[ \boxed{\;\frac{W_{\rm rad}}{\tfrac12mv_0^2}=\frac{16}{45}\frac{q}{Q}\left(\frac{v_0}{c}\right)^3\;} \]
+<div class="alabel">감점 포인트</div>
+<p>왕복(인수 2)을 빠뜨리는 것, 그리고 \(dt=dx/v\)에서 \(v\)가 \(x\)에 의존함을 잊고 상수로 빼는 것.</p></div><!--/sol-->

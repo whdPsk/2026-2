@@ -1,0 +1,10 @@
+<div class="exq"><span class="examtag">PPT 슬라이드 19–20 적용</span><br>(1) 레일리 영역에서 4500 Å(파랑)과 6500 Å(빨강)의 산란 단면적 비, (2) λ = 5000 Å 공명 진동자의 피크 단면적 \(\sigma(\omega_0)/\sigma_T\), (3) 고전 적분 단면적 \(\pi e^2/m_ec\)와 Lyα(\(f=0.416\))의 적분 단면적을 구하라. [[L06.s19, L06.s20]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>python 재계산</div><ol>
+<li>\(\sigma\propto\omega^4\propto\lambda^{-4}\): \((6500/4500)^4=4.35\). [[L06.s19]]</li>
+<li>\(\sigma(\omega_0)=\sigma_T\omega_0^4/(\Gamma^2\omega_0^2)=\sigma_T/(\omega_0\tau)^2=\sigma_T/(2.4\times10^{-8})^2\approx1.8\times10^{15}\sigma_T\approx1.2\times10^{-9}\,\mathrm{cm^2}\).</li>
+<li>\(\pi e^2/m_ec=0.0265\,\mathrm{cm^2\,s^{-1}}\); Lyα: \(0.0265\times0.416=0.0110\,\mathrm{cm^2\,s^{-1}}\). [[L06.s20]]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>파랑/빨강 ≈ 4.4배; 공명 피크 ≈ 10¹⁵σ_T(그래프의 30은 모식도); ∫σdν = 0.0265 cm² s⁻¹ (고전, f=1), Lyα 0.0110 cm² s⁻¹.</p></div>
+<div class="trap"><b>함정</b>ω≫ω₀에서 σ→σ_T는 "속박이 무시된다"는 뜻이지 공명보다 크다는 뜻이 아니다. 또 레일리 \(\omega^4\)는 분자 \(\omega^4\)(라모의 \(\ddot x\))에서 오고, 공명 근처의 \(\omega^4\approx\omega_0^4\) 근사와 같은 뿌리. [[L06.s19]]</div>
+<div class="qz" data-q="ex4.19-a"><div class="qq"><b>+α</b> 4000 Å과 7000 Å의 레일리 산란 비는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>(7000/4000)⁴ ≈ 9.4배.</p></div></div>
+<div class="qz" data-q="ex4.19-b"><div class="qq"><b>+α</b> Hα(f₂₃ = 0.641)의 적분 단면적은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>0.0265 × 0.641 ≈ 0.0170 cm² s⁻¹.</p></div></div>

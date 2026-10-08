@@ -1,0 +1,10 @@
+<div class="exq"><span class="examtag">PPT 슬라이드 8–9 적용</span><br>무편광 입사의 톰슨 산란에서 θ = 0°, 30°, 45°, 60°, 90°의 상대 산란 세기 \((d\sigma/d\Omega)/r_e^2\)와 편광도 Π를 표로 만들고, 총 단면적이 σ_T임을 확인하라. [[L06.s8, L06.s9]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>표 만들기 (python 재계산)</div><ol>
+<li>\(\tfrac12(1+\cos^2\theta)\): 1, 0.875, 0.75, 0.625, 0.5. [[S0917.21]]</li>
+<li>\(\Pi=(1-\cos^2\theta)/(1+\cos^2\theta)\): 0, 0.143, 0.333, 0.600, 1.000. [[S0917.24]]</li>
+<li>\(\int\tfrac12r_e^2(1+\cos^2\theta)d\Omega=\tfrac12r_e^2(4\pi+4\pi/3)=\tfrac{8\pi}{3}r_e^2=\sigma_T\). [[S0917.22]]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>세기는 전방·후방(θ=0, 180°)이 최대, 90°가 그 절반. 편광도는 반대로 90°에서 100%. 총 단면적 σ_T 그대로.</p></div>
+<div class="intuit"><b>직관</b>θ가 커질수록 \(\mathbf E_1\) 진동이 시선과 나란해져 그 성분이 사라진다 — 세기가 줄면서 편광도가 오른다. 전후방 대칭: θ와 180°−θ가 같다. [[S0917.21, S0917.23]]</div>
+<div class="qz" data-q="ex4.16-a"><div class="qq"><b>+α</b> θ = 150°의 상대 세기와 편광도는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>cos²150° = 0.75 → 세기 0.875, Π = 0.25/1.75 = 0.143 (θ=30°와 같음).</p></div></div>
+<div class="qz" data-q="ex4.16-b"><div class="qq"><b>+α</b> 산란광 전체(모든 방향 평균)의 세기 가중 편광도 ∫(1−cos²θ)dΩ / ∫(1+cos²θ)dΩ는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>(4π − 4π/3)/(4π + 4π/3) = (8/3)/(16/3) = 0.5.</p></div></div>

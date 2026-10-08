@@ -1,0 +1,28 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>Feynman 원반 역설의 변형 — 정적 장의 각운동량 대표 문제.</b>
+\(\vb{B}_{\rm in}=\tfrac23\muz M\hat{\vb{z}}\), 밖은 \(m=\tfrac43\pi R^{3}M\) 인 쌍극자.
+\(\vb{E}\)는 \(r&gt;R\)에서만 \(\dfrac{Q}{4\pi\eps r^{2}}\hat{\vb{r}}\).</p>
+<p><b>(a)</b> \(r&gt;R\) 에서
+\(\vb{g}=\eps\vb{E}\times\vb{B}=\dfrac{\muz Qm\sin\theta}{16\pi^{2}r^{5}}\hat{\boldsymbol\varphi}\),
+\(\ell_z=\dfrac{\muz Qm\sin^{2}\theta}{16\pi^{2}r^{4}}\).
+\[L_z=\frac{\muz Qm}{16\pi^{2}}2\pi\int_R^\infty\frac{dr}{r^{2}}\int_0^\pi\sin^{3}\theta\,d\theta
+=\frac{\muz Qm}{6\pi R}\]
+\[\boxed{\;\vb{L}_{em}=\tfrac{2}{9}\muz M Q R^{2}\,\hat{\vb{z}}\;}\]</p>
+<p><b>(b)</b> \(A_\varphi=\dfrac{\muz m\sin\theta}{4\pi r^{2}}\) (표면에서 연속), \(\vb{E}_{\rm ind}=-\partial\vb{A}/\partial t\):
+\(E_\varphi(R)=-\dfrac{\muz\dot m\sin\theta}{4\pi R^{2}}\).
+표면전하 \(\sigma=Q/4\pi R^{2}\) 에 대한 토크
+\[N_z=\int (R\sin\theta)\sigma E_\varphi\,da=-\frac{\muz Q\dot m}{6\pi R},\qquad
+L_z=-\frac{\muz Q}{6\pi R}(0-m)=\frac{\muz Qm}{6\pi R}.\]
+\[\boxed{\;\vb{L}=\tfrac29\muz MQR^{2}\hat{\vb{z}}=\vb{L}_{em}\;}\]</p>
+<p><b>(c)</b> \(\sigma\)가 균일하게 유지되며 북극으로 빠져나가므로, 위도 \(\theta\)를 북쪽으로 건너는 전류는
+\(I(\theta)=-\dot Q\,\dfrac{1+\cos\theta}{2}\), 즉
+\(\vb{K}=K_\theta\hat{\boldsymbol\theta}\), \(K_\theta=\dfrac{\dot Q(1+\cos\theta)}{4\pi R\sin\theta}\).</p>
+<p>\(\hat{\boldsymbol\theta}\times\hat{\vb{r}}=-\hat{\boldsymbol\varphi}\), \(\hat{\boldsymbol\theta}\times\hat{\boldsymbol\theta}=0\) 이므로 <b>오직 \(B_r\)만 기여</b>한다. \(B_r=\tfrac23\muz M\cos\theta\) 는 표면에서 <em>연속</em>이므로 불연속 문제는 생기지 않는다(이것이 문제의 함정).
+\[f_\varphi=-\tfrac23\muz M\cos\theta\,K_\theta,\qquad
+N_z=\int R\sin\theta\,f_\varphi\,da=-\tfrac29\muz M\dot Q R^{2}.\]
+\[L_z=-\tfrac29\muz MR^{2}(0-Q)\;\Rightarrow\;
+\boxed{\;\vb{L}=\tfrac29\muz M Q R^{2}\hat{\vb{z}}\;}\]
+세 방식 모두 같은 값 ✓</p>
+<div class="alabel">감점 포인트</div>
+(c)에서 전류 분포를 \(\propto(1-\cos\theta)\) 로 잘못 잡는 것(북극으로 <em>빠져나가는</em> 유출을 계산에 넣어야 \(1+\cos\theta\)가 나온다). 부호가 뒤집힌다.</div><!--/sol-->

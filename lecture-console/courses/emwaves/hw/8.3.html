@@ -1,0 +1,25 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>충전 축전기의 Poynting 흐름 — 8장에서 가장 자주 출제되는 고전 문제.</b></p>
+<p><b>(a)</b> 극판 전하 \(Q=It\), \(\sigma=It/\pi a^2\). 간극 안에서
+\[\vb{E}=\frac{It}{\eps \pi a^{2}}\hat{\vb{z}}.\]
+Ampère–Maxwell (반지름 \(s\) 원):
+\(B\,2\pi s=\muz\eps \dfrac{d}{dt}(E\pi s^{2})\Rightarrow\)
+\[\boxed{\;\vb{B}=\frac{\muz I s}{2\pi a^{2}}\hat{\boldsymbol\varphi}\;}\]</p>
+<p><b>(b)</b>
+\[u=\frac{\eps}{2}E^{2}+\frac{B^{2}}{2\muz}
+=\frac{I^{2}t^{2}}{2\eps\pi^{2}a^{4}}+\frac{\muz I^{2}s^{2}}{8\pi^{2}a^{4}},\]
+\[\vb{S}=\frac{1}{\muz}\vb{E}\times\vb{B}
+=-\frac{I^{2}ts}{2\pi^{2}\eps a^{4}}\hat{\vb{s}} .\]
+\(\hat{\vb{z}}\times\hat{\boldsymbol\varphi}=-\hat{\vb{s}}\) 이므로 \(\vb{S}\)는 <b>안쪽(측면에서 축 쪽)으로</b> 향한다 — 에너지는 도선을 따라 흘러들어오는 것이 아니라 옆면으로 들어온다.<br>
+확인: \(\divg\vb{S}=\frac{1}{s}\partial_s(sS_s)=-\dfrac{I^{2}t}{\pi^{2}\eps a^{4}}\), 한편 \(\partial u/\partial t=\dfrac{I^{2}t}{\pi^{2}\eps a^{4}}\cdot\)… 실제로
+\(\partial u/\partial t=\dfrac{I^{2}t}{\eps\pi^{2}a^{4}}=-\divg\vb{S}\) ✓ (Eq. 8.12 만족).</p>
+<p><b>(c)</b> 반지름 \(b&lt;a\) 원기둥 부피에 대해
+\[U(t)=\frac{I^{2}t^{2}w\,b^{2}}{2\eps\pi a^{4}}+\frac{\muz I^{2}w\,b^{4}}{16\pi a^{4}},\qquad
+\frac{dU}{dt}=\frac{I^{2}t\,w\,b^{2}}{\eps\pi a^{4}} .\]
+옆면으로 들어오는 일률
+\[P_{\rm in}=|\vb{S}(b)|\,(2\pi b w)=\frac{I^{2}tb}{2\pi^{2}\eps a^{4}}\,2\pi bw=\frac{I^{2}t\,b^{2}w}{\pi\eps a^{4}}=\frac{dU}{dt}\;\checkmark\]
+\[\boxed{\;P_{\rm in}=\frac{dU}{dt}=\frac{I^{2}t\,b^{2}w}{\pi\eps a^{4}}\;}\]
+(자기 에너지 항은 시간에 무관하므로 \(dU/dt\)에 기여하지 않는다.)</p>
+<div class="alabel">감점 포인트</div>
+\(\vb{S}\)의 방향을 \(+\hat{\vb{s}}\)로 잘못 잡는 것, 그리고 (c)에서 옆면 넓이 \(2\pi b w\)의 \(w\)를 빠뜨리는 것.</div><!--/sol-->

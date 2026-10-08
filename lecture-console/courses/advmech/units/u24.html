@@ -1,0 +1,51 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 팽이 끝을 바닥에 고정하고 돌리면 기울어진 축이 쓰러지지 않고 연직축 둘레를 돈다(세차). 빨리 돌릴수록 세차는 빨라질까 느려질까? 그리고 Lagrangian에서 순환 좌표(ignorable coordinate)가 되는 Euler 각은 어느 것일까 — 중력 토크의 방향(교선)을 생각하면 어느 축에 대한 각운동량이 보존될지 알 수 있다.</div>
+
+<h4>11.11 한 점이 고정된 대칭 팽이 <span class="en">symmetric top with one point fixed</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>Lagrangian과 두 보존 운동량 <b>(필수)</b></div>
+<ol>
+<li>원점 = 고정된 끝(고정계·물체계 공통) → 병진 운동에너지 없음. \(x'_3\) 연직 위, \(x_3\) 대칭축, CM까지 거리 \(h\), 질량 \(M\), \(I_1=I_2\) (끝 기준).</li>
+<li>U21의 \(\omega_1^2+\omega_2^2=\dot\phi^2\sin^2\theta+\dot\theta^2\), \(\omega_3=\dot\phi\cos\theta+\dot\psi\):
+\[ L=\tfrac12I_1(\dot\phi^2\sin^2\theta+\dot\theta^2)+\tfrac12I_3(\dot\phi\cos\theta+\dot\psi)^2-Mgh\cos\theta . \]</li>
+<li>\(\phi,\psi\)가 <b>순환 좌표</b>:
+\[ p_\psi=\pd L{\dot\psi}=I_3(\dot\psi+\dot\phi\cos\theta)=I_3\omega_3=\text{const}, \]
+\[ p_\phi=\pd L{\dot\phi}=(I_1\sin^2\theta+I_3\cos^2\theta)\dot\phi+I_3\dot\psi\cos\theta=\text{const}. \]
+물리: 중력 토크는 교선 방향 → 연직축(\(x'_3\))과 대칭축(\(x_3\)) 성분이 없다 → 두 축에 대한 각운동량 보존.</li>
+<li>풀면
+\[ \dot\phi=\frac{p_\phi-p_\psi\cos\theta}{I_1\sin^2\theta},\qquad \dot\psi=\frac{p_\psi}{I_3}-\frac{(p_\phi-p_\psi\cos\theta)\cos\theta}{I_1\sin^2\theta}. \]</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>유효 퍼텐셜 \(V(\theta)\)와 장동 — 교재 식 (11.158)–(11.164)</div>
+<ol>
+<li>에너지 보존 \(E=\tfrac12I_1(\dot\phi^2\sin^2\theta+\dot\theta^2)+\tfrac12I_3\omega_3^2+Mgh\cos\theta\). \(\omega_3\) 상수이므로 \(E'\equiv E-\tfrac12I_3\omega_3^2\)도 보존.</li>
+<li>\(\dot\phi\)를 대입:
+\[ E'=\tfrac12I_1\dot\theta^2+V(\theta),\qquad V(\theta)=\frac{(p_\phi-p_\psi\cos\theta)^2}{2I_1\sin^2\theta}+Mgh\cos\theta . \]
+1차원 문제! 중심력의 유효 퍼텐셜(8장)과 같은 구조.</li>
+<li>\(V\)는 \(\theta\to0,\pi\)에서 발산(일반적으로) → \(E'\) 수준선과의 두 교점 \(\theta_1\le\theta\le\theta_2\) 사이를 진동 = <b>장동(nutation)</b>. \(E'=V_{\min}\)이면 \(\theta=\theta_0\) 고정 = 정상 세차.</li>
+<li>궤적의 세 유형(교재 그림 11-17): \(\dot\phi\)가 부호를 안 바꿈(물결) / 바꿈(고리) / \(\theta_1\)에서 \(\dot\phi=\dot\theta=0\) (<b>뾰족점, cusp</b>) — 팽이를 돌려 기울여 놓고 놓는 보통의 경우.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>정상 세차와 빠른 팽이 — 교재 식 (11.165)–(11.172) <b>(필수)</b></div>
+<ol>
+<li>\(V'(\theta_0)=0\), \(\beta\equiv p_\phi-p_\psi\cos\theta_0\)로 두면 \(\cos\theta_0\,\beta^2-p_\psi\sin^2\theta_0\,\beta+MghI_1\sin^4\theta_0=0\).</li>
+<li>\[ \beta=\frac{p_\psi\sin^2\theta_0}{2\cos\theta_0}\left(1\pm\sqrt{1-\frac{4MghI_1\cos\theta_0}{p_\psi^2}}\right). \]
+실수 조건(\(\theta_0&lt;\pi/2\)): \(p_\psi^2\ge4MghI_1\cos\theta_0\), 즉
+\[ \omega_3\ge\frac{2}{I_3}\sqrt{MghI_1\cos\theta_0} . \]
+이보다 느리면 그 각에서 정상 세차가 불가능.</li>
+<li>\(\dot\phi_0=\beta/(I_1\sin^2\theta_0)\). 빠른 팽이(\(p_\psi\) 큼)에서 근호를 전개:
+\[ \dot\phi_{0(+)}\approx\frac{I_3\omega_3}{I_1\cos\theta_0}\ (\text{빠른 세차}),\qquad \boxed{\ \dot\phi_{0(-)}\approx\frac{Mgh}{I_3\omega_3}\ }\ (\text{느린 세차}) . \]
+보통 보이는 것은 <b>느린 세차</b> — 빨리 돌릴수록 <b>느리게</b> 세차(예측의 답). \(\theta_0\)와 무관!</li>
+<li>초등 유도(자이로스코프 근사): \(\vb L\approx I_3\omega_3\uv e_3\), \(|\dot{\vb L}|=L\sin\theta\,\dot\phi=Mgh\sin\theta\) → \(\dot\phi=Mgh/L\) ✓.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 무거운 대칭 팽이</div>
+\[ L=\tfrac12I_1(\dot\phi^2s^2_\theta+\dot\theta^2)+\tfrac12I_3(\dot\phi c_\theta+\dot\psi)^2-Mghc_\theta,\quad p_\psi=I_3\omega_3,\ p_\phi\ \text{보존} \]
+\[ V(\theta)=\frac{(p_\phi-p_\psi\cos\theta)^2}{2I_1\sin^2\theta}+Mgh\cos\theta,\qquad \dot\phi_{\rm slow}\approx\frac{Mgh}{I_3\omega_3},\qquad \omega_3^2\ge\frac{4MghI_1\cos\theta_0}{I_3^2} \]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u24-1"><div class="qq">(시험형) 무거운 대칭 팽이의 Lagrangian을 쓰고, 두 보존 운동량과 유효 퍼텐셜 \(V(\theta)\)를 유도하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 1, 2. \(E'\)에서 \(\tfrac12I_1\dot\phi^2\sin^2\theta=\frac{(p_\phi-p_\psi\cos\theta)^2}{2I_1\sin^2\theta}\)로 바꾸는 단계가 핵심(원심 퍼텐셜 \(l^2/2\mu r^2\)과 같은 역할).</p></div></div>
+
+<div class="qz" data-q="u24-2"><div class="qq">질량 0.1 kg, 끝에서 CM까지 4 cm, \(I_3=4\times10^{-5}\) kg m² 인 팽이가 초당 30회 돈다. 느린 세차의 주기는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\omega_3=2\pi\cdot30=188.5\) rad/s. \(\dot\phi=\frac{0.1\cdot9.8\cdot0.04}{4\times10^{-5}\cdot188.5}=\frac{0.0392}{7.54\times10^{-3}}=5.2\) rad/s → 주기 \(2\pi/5.2\approx1.2\) s.</p></div></div>
+
+<div class="qz" data-q="u24-3"><div class="qq">팽이를 \(\theta_1\)로 기울이고 \(\dot\theta=\dot\phi=0\)으로 놓으면 궤적이 뾰족점을 가진다. \(p_\phi\)와 \(p_\psi\)의 관계를 쓰고, 축이 처음에 떨어지기(θ 증가) 시작하는 이유를 \(V(\theta)\)로 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\dot\phi(\theta_1)=0\iff p_\phi=p_\psi\cos\theta_1\). 그러면 \(V(\theta_1)=Mgh\cos\theta_1\), \(E'=V(\theta_1)\) (\(\dot\theta=0\)). \(\theta\)가 조금 커지면 첫 항이 \(\propto(\theta-\theta_1)^2\)으로만 늘고 중력항은 1차로 줄어 \(V\)가 감소 → \(\theta_1\)은 퍼텐셜 우물의 <b>위쪽 선회점</b>, 축은 아래로 떨어지기 시작한다. 떨어지면서 \(\dot\phi\)가 생겨 세차가 시작 — 뾰족점 궤적.</p></div></div>

@@ -1,0 +1,88 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 중성자를 감속시키려면(원자로의 감속재) 어떤 원자핵에 부딪히게 해야 할까 — 납처럼 무거운 핵? 수소처럼 가벼운 핵? 한 번의 정면충돌에서 입사 입자가 잃을 수 있는 최대 에너지 비율을 질량비로 먼저 추측해 보라. 또, 산란된 입자의 에너지를 재면 표적이 무엇인지 알 수 있을까?</div>
+
+<h4>9.7 에너지 관계 <span class="en">kinematics of elastic collisions</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>LAB·CM 초기 에너지 — 강의 식 (9.38)</div>
+<ol>
+<li>LAB: \(T_0=\tfrac12m_1u_1^2\).</li>
+<li>CM: \(T'_0=\tfrac12m_1u'^2_1+\tfrac12m_2u'^2_2\)에 \(u'_1=\frac{m_2u_1}{M}\), \(u'_2=\frac{m_1u_1}{M}\)을 넣으면
+\[ T'_0=\frac12\frac{m_1m_2^2+m_2m_1^2}{M^2}u_1^2=\frac12\frac{m_1m_2}{m_1+m_2}u_1^2=\frac12\mu u_1^2=\frac{m_2}{m_1+m_2}T_0 . \]</li>
+<li><b>의미</b>: \(T_0-T'_0=\tfrac12MV^2\)은 CM 운동에너지 — 충돌로 절대 없앨 수 없는 몫이다(운동량 보존 때문에 CM은 계속 움직여야 한다). 반응·들뜸에 쓸 수 있는 에너지는 \(T'_0\)뿐 → 무거운 표적(\(m_2\gg m_1\))일수록 유리. (U46 문턱 에너지의 비상대론 버전.)</li>
+<li>CM 최종 에너지:
+\[ T'_1=\tfrac12m_1v'^2_1=\left(\frac{m_2}{M}\right)^2T_0,\qquad T'_2=\tfrac12m_2v'^2_2=\frac{m_1m_2}{M^2}T_0 . \]</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>\(\dfrac{T_1}{T_0}=1-\dfrac{2m_1m_2}{(m_1+m_2)^2}(1-\cos\theta)\) — 강의 경로(코사인 법칙) <b>(필수)</b></div>
+<ol>
+<li>\(T_1/T_0=v_1^2/u_1^2\). 속도 원 그림에서 \(\vb v_1=\vb V+\vb v'_1\), 두 벡터 사이 각이 \(\theta\)이므로 코사인 법칙:
+\[ v_1^2=v'^2_1+V^2+2v'_1V\cos\theta . \]
+(교재는 \(\psi\)에 대한 코사인 법칙으로 시작해 식 9.83–9.86을 거치는데, 강의와 오타표는 이 짧은 경로를 쓴다.)</li>
+<li>\(v'_1/u_1=m_2/M\), \(V/u_1=m_1/M\)을 대입:
+\[ \frac{T_1}{T_0}=\frac{m_2^2+m_1^2+2m_1m_2\cos\theta}{M^2}. \]</li>
+<li>분자에 \(\pm2m_1m_2\)를 더하고 빼면 \(M^2-2m_1m_2(1-\cos\theta)\):
+\[ \boxed{\ \frac{T_1}{T_0}=1-\frac{2m_1m_2}{(m_1+m_2)^2}(1-\cos\theta)\ } \]</li>
+<li><b>최대 에너지 손실</b>은 \(\theta=\pi\)(정면충돌 후 되튐):
+\[ \left(\frac{T_1}{T_0}\right)_{\min}=\left(\frac{m_1-m_2}{m_1+m_2}\right)^2,\qquad \left(\frac{\Delta T}{T_0}\right)_{\max}=\frac{4m_1m_2}{(m_1+m_2)^2}. \]
+중성자(\(m_1\)) + 수소(\(m_2=m_1\)): 한 번에 전부 잃을 수 있다. 납(\(m_2\approx207m_1\)): 최대 약 2%. → 감속재는 가벼운 핵(물, 흑연).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>\(T_1/T_0\)을 LAB 각 \(\psi\)로 — 강의 식 (9.41), 교재 (9.87b)</div>
+<ol>
+<li>이번에는 \(\vb v'_1=\vb v_1-\vb V\)에 코사인 법칙(사이각 \(\psi\)):
+\[ v'^2_1=v_1^2+V^2-2v_1V\cos\psi . \]</li>
+<li>\(v_1\)에 대한 이차방정식을 푼다:
+\[ v_1=V\cos\psi\pm\sqrt{v'^2_1-V^2\sin^2\psi}. \]</li>
+<li>\(u_1\)로 나눠 제곱:
+\[ \frac{T_1}{T_0}=\frac{m_1^2}{(m_1+m_2)^2}\left[\cos\psi\pm\sqrt{\left(\frac{m_2}{m_1}\right)^2-\sin^2\psi}\,\right]^2 . \]</li>
+<li><b>부호 판정 (강의 정리)</b>
+<ul><li>\(m_1&lt;m_2\): 근호 &gt; \(\cos\psi\)이므로 − 부호는 \(v_1&lt;0\) → 비물리. <b>+만</b>.</li>
+<li>\(m_1=m_2\): 근호 \(=\cos\psi\) → \(T_1/T_0=\cos^2\psi\) (또는 0: 입사 입자가 멈추는 정면충돌).</li>
+<li>\(m_1&gt;m_2\): <b>두 값 모두 물리적</b>(전방 f, 후방 b 해). 실수이려면 \(\sin\psi\le m_2/m_1\) → \(\psi_{\max}\) 재확인.</li></ul></li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>반동 에너지 \(T_2/T_0=\dfrac{4m_1m_2}{(m_1+m_2)^2}\cos^2\zeta\) — 강의 식 (9.42)–(9.43)</div>
+<ol>
+<li>\(\vb v'_2=\vb v_2-\vb V\), 사이각 \(\zeta\): \(v'^2_2=v_2^2+V^2-2v_2V\cos\zeta\).</li>
+<li>\(v'_2=V\)이므로 \(v_2(v_2-2V\cos\zeta)=0\) → \(v_2=2V\cos\zeta\) (\(\zeta\le\pi/2\)).</li>
+<li>\[ \frac{T_2}{T_0}=\frac{m_2v_2^2}{m_1u_1^2}=\frac{m_2}{m_1}\cdot\frac{4m_1^2}{M^2}\cos^2\zeta=\frac{4m_1m_2}{(m_1+m_2)^2}\cos^2\zeta . \]
+\(\zeta=0\)(정면)일 때 최대 — 유도 2의 최대 손실과 정확히 같다 ✓ (에너지 보존).</li>
+<li>등질량: \(T_2/T_0=\cos^2\zeta=\sin^2\psi\), 그리고 \(T_1/T_0=\cos^2\psi\) — 합이 1 ✓.</li>
+</ol></div>
+
+<div class="callout"><b class="head">강의 유도 과제 — 교재 식 (9.90), (9.91).</b> \(\sin\zeta=\sqrt{\dfrac{m_1T_1}{m_2T_2}}\sin\psi\), \(\tan\psi=\dfrac{\sin2\zeta}{(m_1/m_2)-\cos2\zeta}\). 과제 탭의 <a href="#/hw?p=L9-1">L9-1</a>, <a href="#/hw?p=L9-2">L9-2</a>에 문제로 넣어 두었다. 힌트: 첫째는 수직 방향 운동량 보존 한 줄, 둘째는 \(\theta=\pi-2\zeta\)를 \(\tan\psi\) 공식에 대입.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 5</span>90° 검출기로 표적 질량 읽기 — 강의 식 (9.45)–(9.46), 교재 그림 9-15</div>
+<ol>
+<li>\(\psi=90°\): \(\cos\psi=0\), \(\sin\psi=1\).
+\[ \frac{T_1}{T_0}=\frac{m_1^2}{M^2}\left[\left(\frac{m_2}{m_1}\right)^2-1\right]=\frac{m_2^2-m_1^2}{(m_1+m_2)^2}=\frac{m_2-m_1}{m_2+m_1}. \]
+(\(m_2&gt;m_1\)이어야 90° 산란이 가능.)</li>
+<li>역으로 풀면
+\[ \boxed{\ \frac{m_2}{m_1}=\frac{1+T_1/T_0}{1-T_1/T_0}\ } \]
+\(T_1/T_0\)가 1에 가까워질수록 \(m_2/m_1\)이 가파르게 커진다 → 무거운 원소끼리는 에너지 분해능이 나빠진다.</li>
+<li>예: \(T_1/T_0=0.818\)이면 \(m_2/m_1=1.818/0.182\approx10\) (교재의 \(0.8T_0\) 봉우리 ≈ \(m_2=10m_1\)에 대응). 봉우리 <b>위치</b> → 원소 종류, 봉우리 <b>세기</b> → 조성비(단면적을 알면). Rutherford 후방산란 분광(RBS)의 원리.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 탄성충돌 에너지</div>
+\[ T'_0=\frac{m_2}{M}T_0,\qquad \frac{T_1}{T_0}=1-\frac{2m_1m_2}{M^2}(1-\cos\theta),\qquad \frac{T_2}{T_0}=\frac{4m_1m_2}{M^2}\cos^2\zeta \]
+\[ \frac{T_1}{T_0}=\frac{m_1^2}{M^2}\left[\cos\psi\pm\sqrt{(m_2/m_1)^2-\sin^2\psi}\right]^2,\qquad \psi=90°:\ \frac{m_2}{m_1}=\frac{1+T_1/T_0}{1-T_1/T_0} \]
+<p class="note">최대 손실 \(4m_1m_2/M^2\) (정면). 등질량: \(T_1=T_0\cos^2\psi\), \(T_2=T_0\sin^2\psi\).</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u06-1"><div class="qq">강의 경로(CM 각 θ에 코사인 법칙)로 \(T_1/T_0\)을 유도하라. 그리고 \(m_1=m_2\)일 때 \(\cos^2\psi\)가 됨을 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>유도 2 참조. 등질량: \(\dfrac{T_1}{T_0}=1-\dfrac12(1-\cos\theta)=\dfrac{1+\cos\theta}{2}=\cos^2\dfrac\theta2=\cos^2\psi\) (\(\psi=\theta/2\)) ✓.</p></div></div>
+
+<div class="qz" data-q="u06-2"><div class="qq">Example 9.7: 정면 탄성충돌에서 \(u_2=au_1\) (\(a&gt;0\), 같은 방향), 두 입자의 초기 LAB 운동에너지가 같다. 충돌 후 \(m_1\)이 정지하려면 \(a\)와 \(m_1/m_2\)는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>같은 에너지: \(m_1u_1^2=m_2a^2u_1^2\Rightarrow m_1/m_2=a^2\).</p>
+<p>\(m_1\) 정지 → 운동량 \(m_1u_1+m_2au_1=m_2v_2\), 에너지 \(\tfrac12m_1u_1^2+\tfrac12m_2a^2u_1^2=\tfrac12m_2v_2^2\) → \(2a^2=\left(a^2+a\right)^2\) (양변을 \(m_2u_1^2\)로 정리).</p>
+<p>\(2a^2=a^2(a+1)^2\Rightarrow(a+1)^2=2\Rightarrow a=\sqrt2-1\approx0.414\), \(m_1/m_2=a^2=3-2\sqrt2\approx0.172\).</p>
+<p><b>검산</b>: \(u_2&lt;u_1\)이라 뒤에서 따라잡는 충돌 ✓. 가벼운 \(m_1\)이 무거운 \(m_2\)를 쫓아가 멈추는 그림.</p></div></div>
+
+<div class="qz" data-q="u06-3"><div class="qq">Example 9.8: 탄성 산란으로 운동량의 1/3을 잃는(즉 \(v_1=\tfrac23u_1\)) 입자를 검출하려면 (a) 가능한 \(m_1/m_2\) 범위는? (b) \(m_1=m_2\)일 때 LAB 각은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(T_1/T_0=4/9\). 유도 2: \(\dfrac49=1-\dfrac{2m_1m_2}{M^2}(1-\cos\theta)\Rightarrow1-\cos\theta=\dfrac{5M^2}{18m_1m_2}\equiv y\).</p>
+<p>(a) \(\cos\theta\ge-1\) 이려면 \(y\le2\): \(5(m_1+m_2)^2\le36m_1m_2\). \(x=m_1/m_2\)로 쓰면 \(5x^2-26x+5\le0\Rightarrow\boxed{1/5\le x\le5}\).</p>
+<p>(b) \(x=1\): \(y=20/18=10/9\), \(\cos\theta=-1/9\), \(\theta\approx96.4°\), \(\psi=\theta/2\approx48.2°\). (교재 답 48°.) 또는 바로 \(\cos^2\psi=4/9\Rightarrow\cos\psi=2/3\Rightarrow\psi=48.2°\) ✓ — 훨씬 빠르다.</p></div></div>
+
+<div class="qz" data-q="u06-4"><div class="qq">양성자 빔(\(T_0\))을 표적에 쏘고 90°에서 에너지를 측정했더니 \(T_1/T_0=0.6\)과 \(0.87\) 두 봉우리가 나왔다. 표적 원소의 질량수를 추정하라. 어느 쪽 원소가 에너지 분해능 면에서 더 구별하기 어려운가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(m_2/m_1=(1+r)/(1-r)\): \(r=0.6\to1.6/0.4=4\) (He-4). \(r=0.87\to1.87/0.13\approx14.4\) (N-14 근처).</p>
+<p>무거운 쪽이 어렵다: \(\dd(m_2/m_1)/\dd r=2/(1-r)^2\)가 \(r\to1\)에서 발산 — 같은 에너지 오차가 큰 질량 오차로 확대된다.</p></div></div>

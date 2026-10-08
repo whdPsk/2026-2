@@ -1,0 +1,12 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+경계조건에서 (Eq. 9.82)
+\[\tilde E_{0R}=\left(\frac{1-\beta}{1+\beta}\right)\tilde E_{0I},\qquad \tilde E_{0T}=\left(\frac{2}{1+\beta}\right)\tilde E_{0I},\qquad \beta\equiv\frac{\mu_1v_1}{\mu_2v_2}=\frac{\mu_1n_2}{\mu_2n_1}.\]
+세기 \(I=\frac12\epsilon v E_0^2\)이므로
+\[R=\frac{I_R}{I_I}=\left|\frac{\tilde E_{0R}}{\tilde E_{0I}}\right|^2=\boxed{\left(\frac{1-\beta}{1+\beta}\right)^2}\]
+\[T=\frac{\epsilon_2v_2}{\epsilon_1v_1}\left|\frac{\tilde E_{0T}}{\tilde E_{0I}}\right|^2 .\]
+여기서 \(\epsilon v=\epsilon/\sqrt{\epsilon\mu}=\sqrt{\epsilon/\mu}=1/(\mu v)\)이므로 \(\dfrac{\epsilon_2v_2}{\epsilon_1v_1}=\dfrac{\mu_1v_1}{\mu_2v_2}=\beta\). 따라서
+\[T=\boxed{\frac{4\beta}{(1+\beta)^2}}\]
+\[R+T=\frac{(1-\beta)^2+4\beta}{(1+\beta)^2}=\frac{(1+\beta)^2}{(1+\beta)^2}=1\quad\checkmark\]
+<div class="alabel">감점 포인트</div>
+\(T\)에 붙는 인자 \(\epsilon_2v_2/\epsilon_1v_1\)(=\(\beta\))를 빼먹고 \(T=|E_{0T}/E_{0I}|^2\)로 쓰면 \(R+T\neq1\)이 된다. 세기 비이지 진폭 비가 아니다.</div><!--/sol-->

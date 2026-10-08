@@ -1,0 +1,18 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(I(t_r)=k\!\left(t-\dfrac{\rr}{c}\right)=kt-\dfrac{k\rr}{c}\) 이므로
+\[ \vb{A}(0,t)=\frac{\muz}{4\pi}\oint\frac{I(t_r)}{\rr}d\vb{l}
+=\frac{\muz k}{4\pi}\left[t\oint\frac{d\vb{l}}{\rr}-\frac1c\underbrace{\oint d\vb{l}}_{=0}\right]=\frac{\muz kt}{4\pi}\oint\frac{d\vb{l}}{\rr}. \]
+폐곡선이므로 두 번째 적분이 사라지는 것이 핵심.
+
+\(\oint d\vb{l}/\rr\) 계산 (경로: \(x=a\to b\) → 반지름 \(b\) 반원 → \(x=-b\to-a\) → 반지름 \(a\) 반원):
+<ul>
+<li>직선 두 개: \(\int_a^b\frac{dx}{x}\hat{\vb{x}}+\int_{-b}^{-a}\frac{dx}{|x|}\hat{\vb{x}}=2\ln(b/a)\,\hat{\vb{x}}\)</li>
+<li>호 두 개: \(\rr\)가 상수이므로 \(\frac{1}{\rr}\int d\vb{l}=\frac{1}{\rr}(\text{알짜 변위})\) → \(\frac{-2b\hat{\vb{x}}}{b}+\frac{2a\hat{\vb{x}}}{a}=0\) (서로 상쇄)</li>
+</ul>
+\[ \boxed{\vb{A}=\frac{\muz kt}{2\pi}\ln\!\frac{b}{a}\,\hat{\vb{x}}},\qquad
+\boxed{\vb{E}=-\frac{\partial\vb{A}}{\partial t}=-\frac{\muz k}{2\pi}\ln\!\frac{b}{a}\,\hat{\vb{x}}} \]
+<b>왜 중성 도선이 \(\vb{E}\)를?</b> 전하가 없어도 \(\partial\vb{A}/\partial t\ne0\)이면 유도 전기장(Faraday)이 생긴다. \(\vb{E}=-\nabla V-\partial\vb{A}/\partial t\)의 둘째 항이 원인이며, 이는 "정전기적" 장이 아니라 유도장이다.
+<b>왜 \(\vb{B}\)를 못 구하나?</b> \(\vb{B}=\curl\vb{A}\)는 <b>중심 근방의 \(\vb{A}\) 분포</b>를 알아야 계산되는데, 우리는 한 점(중심)에서의 값만 구했다.
+<div class="alabel">감점 포인트</div>
+\(\oint d\vb{l}=0\)을 이용하지 않고 \(-\rr/c\) 항을 힘들게 적분하다 틀리는 것, 그리고 호 기여가 상쇄됨을 놓치는 것.</div><!--/sol-->

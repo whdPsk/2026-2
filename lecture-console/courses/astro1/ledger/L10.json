@@ -1,0 +1,139 @@
+[
+{
+"id": "L10.s1",
+"loc": "슬라이드 1",
+"raw": "Synchrotron Radiation / Compton Scattering — Introduction to Astrophysics I, 2026 Fall, Woong-Tae Kim",
+"note": "",
+"skip": "표지"
+},
+{
+"id": "L10.s2",
+"loc": "슬라이드 2",
+"raw": "Questions? • Feel free to ask any questions you had while watching the flipped-learning animations.",
+"note": "",
+"skip": "질문 안내(내용 없음)"
+},
+{
+"id": "L10.s3a",
+"loc": "슬라이드 3 ①",
+"raw": "Review Questions • For a power-law electron distribution n(γ)dγ = n0 γ^-p dγ, write the synchrotron emission coefficient.",
+"note": ""
+},
+{
+"id": "L10.s3b",
+"loc": "슬라이드 3 ②",
+"raw": "• What is the relation between the energy index p and the spectral slope α of synchrotron radiation.",
+"note": ""
+},
+{
+"id": "L10.s3c",
+"loc": "슬라이드 3 ③",
+"raw": "• What is Compton scattering? – Energy relation of an electron before and after scattering?",
+"note": ""
+},
+{
+"id": "L10.s3d",
+"loc": "슬라이드 3 ④",
+"raw": "• What is inverse Compton scattering?",
+"note": ""
+},
+{
+"id": "L10.s4",
+"loc": "슬라이드 4",
+"raw": "(빈 슬라이드)",
+"note": "",
+"skip": "빈 슬라이드"
+},
+{
+"id": "L10.s5",
+"loc": "슬라이드 5",
+"raw": "Received Electric Field [그림: E(t) 대 t. 좁은 양의 펄스가 주기 2π/ω_B 간격으로 반복, 각 펄스 폭 2π/(γ³ω_B), 펄스 양옆으로 얕은 음의 꼬리]",
+"note": ""
+},
+{
+"id": "L10.s6",
+"loc": "슬라이드 6",
+"raw": "Fourier Transform • Convolution theorem: (g∗h)(t) ≡ ∫ g(τ)h(t−τ)dτ ⇔ G(f)H(f) – G(f) and H(f) are the Fourier transforms of g(t) and h(t), respectively. • Sampling function (or Shah function): Ш_T(t) ≡ Σ_n δ(t−nT) ⇔ (1/T) Ш_{1/T}(f) [그림: 간격 T의 델타 빗 ⇔ 간격 1/T의 델타 빗]",
+"note": ""
+},
+{
+"id": "L10.s7",
+"loc": "슬라이드 7",
+"raw": "Spectrum by a Single Electron • Spectrum of the synchrotron radiation is given by the Fourier transform of E(t)². [그림: 펄스열 E(t) = (간격 2π/ω_B의 빗) ∗ (폭 2π/(γ³ω_B)의 단일 펄스); 푸리에 변환하면 (간격 ω_B의 빗) × F(ν/ν_c), 포락선 폭 ~γ³ω_B] Electric field is positive as the particle approaches the observer. • Ideally, the resulting spectrum consists of discrete numerous peaks, with an envelope given by F(ν/ν_c). • Due to the phase mixing of electrons with different γ and ψ, the actual spectrum is continuous.",
+"note": ""
+},
+{
+"id": "L10.s8",
+"loc": "슬라이드 8",
+"raw": "Spectrum • P_ν = Power per unit frequency from an electron with Lorentz factor γ. P_ν(γ) = [2e⁴(γ²−1)B_⊥²/(3 m_e² c³)] φ_ν(γ), where B_⊥ = B sinψ and ∫_0^∞ φ_ν(γ)dν = 1 • Or, from more detailed calculations for γ ≫ 1, P_ν = (√3 e³ B_⊥ / m_e c²) F(ν/ν_c), where ν_c = 3γ² e B_⊥/(4π m_e c) is the critical frequency, with ∫F(ν/ν_c)dν = 8πν_c/(9√3) = (2/(3√3)) γ² e B_⊥/(m_e c) [그림: F(x), x=ν/ν_c. peaks at ν = 0.29ν_c ∝ γ²B (최대값 0.92); 작은 x에서 ∝ ν^{1/3}; 큰 x에서 ∝ √ν e^{−ν/ν_c}. 로그-로그 그림에 slope ≈ 1/3]",
+"note": ""
+},
+{
+"id": "L10.s9",
+"loc": "슬라이드 9",
+"raw": "Synchrotron Cooling • Electrons in a plasma emitting synchrotron radiation cool down. – Total energy of an electron E = γ m_e c² – Energy loss rate dE/dt = −P_em • The energy equation for an electron is then m_e c² dγ/dt = −(2/3)(e⁴ v² B_⊥²/(m_e² c⁵)) γ² ≈ −(2/3)(e⁴ B_⊥²/(m_e² c³)) γ². This gives a solution for γ: γ(t) = γ0 (1 + Aγ0 t)^-1, A = 2e⁴B_⊥²/(3 m_e³ c⁵) • Lifetime of an electron is t_1/2 = (Aγ0)^-1 = 5.2×10⁸/(γ0 B_⊥²) s – t_1/2 is shorter for electrons with larger γ0. – In general, t_1/2 is shorter than the age of supernova remnants.",
+"note": "검산: 3m_e³c⁵/(2e⁴)=5.18×10⁸ (cgs, B는 Gauss) ✓. 피치각 평균(⟨sin²ψ⟩=2/3)을 쓰면 7.7×10⁸/(γ0B²)."
+},
+{
+"id": "L10.s10",
+"loc": "슬라이드 10",
+"raw": "Radio Galaxy • Cygnus A is a powerful radio galaxy containing magnetic fields and cosmic rays, emitting synchrotron radiation. [그림: Cyg A 전파 영상(두 로브), R ~ 30 kpc, B ~ 10⁻⁴ Gauss; Cyg A·Cas A·Vir A의 flux density–frequency 멱법칙 스펙트럼] • Assume that the radio lobes of Cygnus A consist of power-law electrons. • The volume emissivity is 4πj_ν = (2/3) σ_T c U_B n0 (1/ν_L)(ν/ν_L)^{(1−p)/2} with ν_L = eB/(2π m_e c), U_B = B²/8π • Luminosity L_ν = 4πj_ν V ∝ n0 B² B^{−1−(1−p)/2} V ∝ n0 B^{(1+p)/2} V • For given L_ν and V, we thus obtain n0 = C B^{−(1+p)/2} with constant C.",
+"note": ""
+},
+{
+"id": "L10.s11",
+"loc": "슬라이드 11",
+"raw": "Energy Equipartion • Cosmic rays have energy density U_cr = ∫_{γ_min}^∞ n(γ) γ m_e c² dγ = [n0 m_e c²/(p−2)] γ_min^{2−p} (p > 2), where γ_min² ν_L is the lowest observed frequency. • Total energy per unit volume (when γ_min is known) is E/V = U_B + U_cr = B²/8π + C′B^{−(1+p)/2} • The minimum energy condition requires d/dB (U_B + U_cr) = 2U_B/B − ((p+1)/2) U_cr/B = 0, or U_cr = [4/(p+1)] U_B ~ U_B • This is equivalent to the energy equipartition. – Strong B can accelerate electrons to high γ. – Large cosmic-ray energy can induce strong B. – U_cr=(4/3)U_B when γ_min² ν_L is fixed (instead of fixed γ_min). [그림: U 대 B 로그 그림, U_cr ∝ B^{−(1+p)/2} 감소선과 U_B ∝ B² 증가선의 합이 최소를 가짐]",
+"note": ""
+},
+{
+"id": "L10.s12",
+"loc": "슬라이드 12",
+"raw": "(빈 슬라이드)",
+"note": "",
+"skip": "빈 슬라이드"
+},
+{
+"id": "L10.s13",
+"loc": "슬라이드 13",
+"raw": "Compton Scattering • More generally, one has to account for the conservation of energy and momentum in a scattering, especially when hν ≫ m_e c² = 0.511 MeV. – Energy can be transferred from a photon to an electron. An electron is initially stationary and moves after the collision. [그림: 입사 광자 n̂_i, 산란 광자 n̂_f(각 θ), 되튐 전자 p_e] Total energy of an electron: E_e = γ m_e c² = √(m_e² c⁴ + p_e² c²) – Energy conservation: hν + m_e c² = hν′ + E_e = hν′ + √(p_e² c² + m_e² c⁴) (A) – Momentum conservation: (hν/c) n̂_i = p_e + (hν′/c) n̂_f (B)",
+"note": ""
+},
+{
+"id": "L10.s14",
+"loc": "슬라이드 14",
+"raw": "Compton Scattering • From (B), we obtain p_e² c² = (hν n̂_i − hν′ n̂_f)² = h²ν² + h²ν′² − 2h²νν′ cosθ, which gives E_e² = p_e² c² + m_e² c⁴ = h²ν² + h²ν′² − 2h²νν′ cosθ + m_e² c⁴ (C) • On the other hand, (A) can be written as E_e² = (hν − hν′ + m_e c²)² = h²ν² + h²ν′² + m_e² c⁴ − 2h²νν′ + 2 m_e c² h(ν − ν′) (D) • Equating (C) and (D) to solve for hν′, we obtain hν′ = hν / [1 + (hν/m_e c²)(1 − cosθ)] ≈ hν if hν ≪ m_e c²; ≈ m_e c²/(1 − cosθ) if hν ≫ m_e c². hν′ < hν always! Electron recoil becomes important.",
+"note": ""
+},
+{
+"id": "L10.s15",
+"loc": "슬라이드 15",
+"raw": "(빈 슬라이드)",
+"note": "",
+"skip": "빈 슬라이드"
+},
+{
+"id": "L10.s16",
+"loc": "슬라이드 16 (Q1)",
+"raw": "Q1 • In 1993, a supernova (SN1993J) was observed in the nearby galaxy, M81, at a distance D = 3.6 Mpc from the Earth. About 230 days after the observed explosion, its radio emission was characterized by: a falling spectrum (F_ν ∝ ν^-1) with a flux density of F_ν = 25 mJy at ν = 23 GHz; a radius of r = 0.0123 pc; a minimum energy cut-off to the electron energy spectrum of γ_min = 100. • Determine the electron energy spectral index, p. • Answer: p = 3",
+"note": ""
+},
+{
+"id": "L10.s17",
+"loc": "슬라이드 17 (Q2)",
+"raw": "Q2 • (같은 SN1993J 조건) • Determine the solid angle subtended by the source, Ω. • Answer: Ω = 3.67 × 10⁻¹⁷ sr",
+"note": "검산 π(r/D)² = 3.67×10⁻¹⁷ sr ✓"
+},
+{
+"id": "L10.s18",
+"loc": "슬라이드 18 (Q3)",
+"raw": "Q3 • (같은 SN1993J 조건) • Determine the brightness temperature at ν = 23 GHz. • Answer: T_B = 4.2 × 10⁷ K",
+"note": "검산 I=F/Ω, T_B=c²I/(2kν²)=4.2×10⁷ K ✓"
+},
+{
+"id": "L10.s19",
+"loc": "슬라이드 19 (Q4)",
+"raw": "Q4 • (같은 SN1993J 조건) • Using the emissivity given below for p = 3, find a relation between n0 and B. 4πj_ν = 5.3 × 10⁻²⁵ n0 B² ν_9⁻¹ erg cm⁻³ Hz⁻¹ • Answer: n0 B² = 73 (in cgs units)",
+"note": "검산 4πj_ν=3F_νD²/r³=1.69×10⁻²⁴ → n0B²=73.4 ✓"
+}
+]

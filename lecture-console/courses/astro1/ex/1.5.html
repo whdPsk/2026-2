@@ -1,0 +1,13 @@
+<div class="exq"><span class="examtag">9/3 수업 예고 문제 · 밝기온도로 쓴 RT 해</span><br><b>상황.</b> 전파에서 배경의 밝기온도 \(T_{B0}=500\) K. 구름을 통과한 선 위 시선에서 \(T_B=400\) K, 배경이 없는 옆 시선(같은 구름)에서 \(T_B=20\) K. 구름의 온도 T(여기트 온도)와 광학깊이 τ를 구하라. (9/8 PPT03 Q1과 같은 구성 → 예제 2.10 참고) [[S0903.15]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>균일 층의 해를 밝기온도로</div><ol>
+<li>RJ(\(h\nu\ll kT\))에서 \(I_\nu=2\nu^2kT_B/c^2\)로 세기를 온도로 대응, \(S_\nu=B_\nu(T)\) → \(I=I_0e^{-\tau}+S(1-e^{-\tau})\)는 \(T_B=T_{B0}e^{-\tau}+T(1-e^{-\tau})\). [[S0903.14, S0903.15]]</li>
+<li>배경 있는 시선: \(400=500e^{-\tau}+T(1-e^{-\tau})\). 배경 없는 시선: \(20=T(1-e^{-\tau})\). [[S0903.15]]</li>
+<li>빼면 \(380=500e^{-\tau}\) → \(e^{-\tau}=0.76\), \(\tau=-\ln0.76=0.274\).</li>
+<li>\(T=20/(1-0.76)=83.3\) K.</li>
+<li>(덧붙임) 시선 깊이 5 pc라면 \(\kappa=\tau/L=0.274/(5\times3.086\times10^{18})=1.78\times10^{-20}\) cm⁻¹, 평균자유행로 \(1/\kappa=18.2\) pc. [[F05.04]]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>τ≈0.274(optically thin 쪽), T≈83.3 K, κ≈1.78×10⁻²⁰ cm⁻¹, ℓ≈18.2 pc. 조건: RJ, 두 시선이 같은 구름(같은 T·τ).</p></div>
+<div class="intuit"><b>수업 포인트</b> T는 구름의 실제 온도, \(T_{B0}\)는 멀리서 들어오는 배경, \(T_B\)는 망원경으로 실제 관측한 밝기온도. <span class="hl">관측 두 개로 구름의 온도와 광학깊이를 동시에</span> 구할 수 있다 — "이런 문제를 낼 것". 배경(500 K)이 구름(83 K)보다 뜨거우니 400 K로 <b>어두워져</b> 흡수선처럼 보인다. [[S0903.15]]</div>
+<div class="trap"><b>함정</b> 밝기온도는 관측 세기를 흑체로 "그냥 대응"시킨 값 — 실제 온도가 아니다. 두꺼운 극한에서만 \(T_B\to T\). [[S0903.15, S0903.13]]</div>
+<div class="qz" data-q="ex1.5-a"><div class="qq"><b>+α</b> 같은 구름의 광학깊이가 2배(τ=0.549)라면 두 시선의 T_B는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>e^{−2τ}=0.5776 → 배경 없는 시선 83.3×0.4224≈35.2 K, 배경 시선 500×0.5776+35.2≈324 K.</p></div></div>
+<div class="qz" data-q="ex1.5-b"><div class="qq"><b>+α</b> 배경 T_B0=50 K(구름보다 차가움)이면 선은 방출선인가 흡수선인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>T_B=50×0.76+20=58 K > 50 K → 방출선. S(T)와 배경의 상대 크기가 결정.</p></div></div>

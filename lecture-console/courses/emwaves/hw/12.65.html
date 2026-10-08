@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>CM계에서:</b> 두 입자는 \(\pm v\hat{\vb{x}}\)로 접근하고, 탄성이므로 충돌 후에도 속력 \(v\)로 \(\pm(\cos\varphi,\sin\varphi)\) 방향으로 나간다. 표적이 실험실에서 정지해 있으므로 CM계는 실험실에 대해 \(+v\hat{\vb{x}}\)로 움직인다.</p>
+<p><b>속도 덧셈</b>(CM → 실험실, 부스트 속도 \(v\hat{\vb{x}}\)):</p>
+\[ u_x=\frac{u'_x+v}{1+u'_xv/c^{2}},\qquad u_y=\frac{u'_y}{\gamma(1+u'_xv/c^{2})}\ \Rightarrow\ \tan\theta=\frac{u_y}{u_x}=\frac{u'_y}{\gamma(u'_x+v)}. \]
+<p>입자 1: \(\vb{u}'=v(\cos\varphi,\sin\varphi)\) →</p>
+\[ \tan\theta_1=\frac{\sin\varphi}{\gamma(1+\cos\varphi)}=\frac{1}{\gamma}\tan\frac{\varphi}{2}. \]
+<p>입자 2: \(\vb{u}'=-v(\cos\varphi,\sin\varphi)\) →</p>
+\[ \tan\theta_2=\frac{\sin\varphi}{\gamma(1-\cos\varphi)}=\frac{1}{\gamma}\cot\frac{\varphi}{2}. \]
+<p>(두 입자는 축의 반대편으로 갈리므로 사이각은 \(\theta=\theta_1+\theta_2\).) 탄젠트 덧셈공식:</p>
+\[ \tan\theta=\frac{\tan\theta_1+\tan\theta_2}{1-\tan\theta_1\tan\theta_2}=\frac{\frac{1}{\gamma}\big(\tan\frac{\varphi}{2}+\cot\frac{\varphi}{2}\big)}{1-\frac{1}{\gamma^{2}}}=\frac{\frac{2}{\gamma\sin\varphi}}{v^{2}/c^{2}} \]
+\[ \boxed{\ \theta=\tan^{-1}\!\Big(\frac{2c^{2}}{\gamma v^{2}\sin\varphi}\Big)\ } \]
+<p><b>극한 확인:</b> \(v\ll c\)이면 \(\gamma\to1\), \(2c^{2}/v^{2}\to\infty\)이므로 \(\theta\to90^{\circ}\) — 고전 결과 회복 ✓. 반대로 초상대론적일수록 두 궤적은 앞쪽으로 좁게 몰린다(가속기 실험에서 익숙한 "forward cone").</p>
+<div class="alabel">감점 포인트</div>
+\(u_y\) 변환에서 \(1/\gamma\)를 빼먹는 것 — 횡속도 변환의 \(\gamma\)가 바로 \(90^{\circ}\)를 깨뜨리는 유일한 원인이다.</div><!--/sol-->

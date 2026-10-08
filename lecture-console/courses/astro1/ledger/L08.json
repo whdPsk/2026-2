@@ -1,0 +1,142 @@
+[
+ {
+  "id": "L08.s1",
+  "loc": "슬라이드 1",
+  "raw": "Thermal Bremsstrahlung — Introduction to Astrophysics I, Woong-Tae Kim, 2025 Fall",
+  "note": "",
+  "skip": "표지"
+ },
+ {
+  "id": "L08.s2",
+  "loc": "슬라이드 2",
+  "raw": "Questions? • Feel free to ask any questions you had while watching the flipped-learning animations.",
+  "note": "",
+  "skip": "질문 안내(내용 없음)"
+ },
+ {
+  "id": "L08.s3a",
+  "loc": "슬라이드 3 ①",
+  "raw": "Review Questions • What is the rate of collisions between electrons with a single ion with impact parameter b ∼ b + db? [그림: 속도 v로 움직이는 전자들(점) 속 축 위의 이온, 반지름 b·두께 db의 원통 껍질이 길이 v dt만큼 이어짐] n_e · v dt · 2πb db / dt = 2π n_e v b db [Typos in the animation] (n_e는 빨간색으로 강조)",
+  "note": "애니메이션에서 v(및 n_e 표기)가 빠진 오타 — 교수님 언급(녹음 07:36). 단위: 개/s."
+ },
+ {
+  "id": "L08.s3b",
+  "loc": "슬라이드 3 ②",
+  "raw": "Review Questions • What is the Coulomb logarithm?",
+  "note": ""
+ },
+ {
+  "id": "L08.s3c",
+  "loc": "슬라이드 3 ③",
+  "raw": "Review Questions • What are the proper choices of b_max and b_min?",
+  "note": ""
+ },
+ {
+  "id": "L08.s3d",
+  "loc": "슬라이드 3 ④",
+  "raw": "Review Questions • The total radiated power per unit volume is dW/(dt dV) = 1.42 × 10⁻²⁷ Z² n_i n_e T^{1/2} ḡ_B erg cm⁻³ s⁻¹ – Explain the physical dependence of the emissivity on each term.",
+  "note": "검산: 4π×5.44×10⁻³⁹×(k/h) = 1.42×10⁻²⁷ ✓ (ν 적분)."
+ },
+ {
+  "id": "L08.s4a",
+  "loc": "슬라이드 4 ①",
+  "raw": "Free-free Absorption • We have seen that the free-free emissivity is given by j_ν = (16πZ²e⁶ / 3√3 m_e²c³) n_i n_e (m_e/2πkT)^{1/2} ḡ_ff e^{−hν/kT} = 5.44 × 10⁻³⁹ Z² n_i n_e T^{−1/2} ḡ_ff e^{−hν/kT} erg cm⁻³ s⁻¹ Hz⁻¹ sr⁻¹",
+  "note": "검산(python): 16πe⁶/(3√3 m_e²c³)·(m_e/2πk)^{1/2} = 5.44×10⁻³⁹ ✓."
+ },
+ {
+  "id": "L08.s4b",
+  "loc": "슬라이드 4 ②",
+  "raw": "• Electrons can also absorb radiation. • To find the related absorption coefficient, we can use Kirchhoff’s law κ_ν = j_ν/B_ν = (8πZ²e⁶ / 3√3 m_e²hc) n_i n_e (m_e/2πkT)^{1/2} ḡ_ff ν⁻³ (1 − e^{−hν/kT}) = 3.69 × 10⁸ Z² n_i n_e T^{−1/2} ḡ_ff ν⁻³ (1 − e^{−hν/kT}) cm⁻¹",
+  "note": "검산: 5.44×10⁻³⁹·c²/(2h) = 3.69×10⁸ ✓."
+ },
+ {
+  "id": "L08.s5a",
+  "loc": "슬라이드 5 ①",
+  "raw": "Free-free Absorption • In the Rayleigh-Jeans limit (hν ≪ kT) valid for radio wavelengths, allowing for the dependence of the Gaunt factor on T, Z, and ν, the more accurate form of the emission and absorption coefficients can be written as j_ν ≈ 3.35 × 10⁻⁴⁰ Z^{1.882} n_i n_e T₄^{−0.323} ν₉^{−0.118} erg cm⁻³ s⁻¹ Hz⁻¹ sr⁻¹ ; κ_ν = j_ν/B_ν ≈ 3.37 × 10⁻⁷ Z^{1.882} n_i n_e T₄^{−1.323} ν₉^{−2.118} pc⁻¹",
+  "note": "검산: 3.35×10⁻⁴⁰·c²/(2k·10⁴·10¹⁸)·pc = 3.36×10⁻⁷ pc⁻¹ ✓. Gaunt=1 RJ값(5.5×10⁻⁸)의 ~6배 = 전파 Gaunt ≈ 6."
+ },
+ {
+  "id": "L08.s5b",
+  "loc": "슬라이드 5 ②",
+  "raw": "• The optical depth (in the Rayleigh-Jeans limit) is then given by τ_ν = ∫κ_ν ds ≈ 3.37 × 10⁻⁷ Z^{1.882} T₄^{−1.323} ν₉^{−2.118} (n_i/n_p) [EM / cm⁻⁶pc] where EM ≡ ∫ n_e n_p ds is the emission measure; n_p = proton number density – Optically thick at low frequencies – Optically thin at high frequencies",
+  "note": ""
+ },
+ {
+  "id": "L08.s6a",
+  "loc": "슬라이드 6 ①",
+  "raw": "Application • Consider an H II region filled with ionized hydrogen with temperature T, density n, and radius R, located at a distance d away from the Sun. [그림: 반지름 R인 노란 원(HII 영역)과 거리 d 떨어진 관측자 점으로 모이는 시선]",
+  "note": ""
+ },
+ {
+  "id": "L08.s6b",
+  "loc": "슬라이드 6 ②",
+  "raw": "• Radiation transfer gives I_ν = S_ν(1 − e^{−τ_ν}). • At low frequency, the plasma is optically thick (τ_ν ≫ 1) and radiates like a black body since S_ν = j_ν/κ_ν = B_ν(T). Then the flux is F_ν = S_ν ΔΩ = B_ν π(R/d)² ∝ ν² (τ_ν ≫ 1, hν ≪ kT)",
+  "note": ""
+ },
+ {
+  "id": "L08.s6c",
+  "loc": "슬라이드 6 ③",
+  "raw": "• At high frequency, the plasma is optically thin (τ_ν ≪ 1). Then, F_ν = (4πj_ν)(4πR³/3)(1/4πd²) = (4j_νR/3) π(R/d)² = (4κ_νR/3) B_ν π(R/d)² ∝ ν^{−0.1}",
+  "note": ""
+ },
+ {
+  "id": "L08.s7a",
+  "loc": "슬라이드 7 ①",
+  "raw": "Application • Since I_ν = τ_ν S_ν in the optically-thin regime (τ_ν ≪ 1), one can write F_ν = B_ν τ̄_ν Ω_s, Ω_s = π(R/d)² – This gives the mean optical depth of the plasma in spherical shape τ̄_ν = (4κ_νR/3)",
+  "note": ""
+ },
+ {
+  "id": "L08.s7b",
+  "loc": "슬라이드 7 ②",
+  "raw": "• Example spectrum : Orion nebula [그림: Orion 성운 전파 스펙트럼, 가로축 ν (MHz) 10¹–10⁴ 로그, 세로축 F_ν (Jy) 10¹–10³; 관측점(오차막대)과 모형 곡선 — 저주파 τ_ν ≫ 1 구간은 가파르게 상승, 고주파 τ_ν ≪ 1 구간은 거의 평탄하게 약간 감소; 꺾이는 곳에 화살표] The turn-over frequency corresponds to τ_ν = 1.",
+  "note": ""
+ },
+ {
+  "id": "L08.s8a",
+  "loc": "슬라이드 8 (Q1)",
+  "raw": "Q1 • The figure below shows two examples of thermal bremsstrahlung spectra, one from an H II region and the other from the hot intracluster medium (ICM). Can you identify which is which? [그림: 가로축 ν (Hz) 10⁷–10¹⁷, 세로축 (I_ν) 10⁻¹⁸–10⁻¹⁶ 로그. (A): 저주파에서 Planck(점선, ν²)를 따라 오르다 τ_ν ≪ 1 평탄 구간이 높게(~5×10⁻¹⁷) 이어진 뒤 ~10¹⁴–10¹⁵ Hz에서 급감. (B): 평탄 구간이 더 낮게(~1.6×10⁻¹⁷) 시작해 ~10¹⁷ Hz 근처까지 이어진 뒤 급감]",
+  "note": ""
+ },
+ {
+  "id": "L08.s8b",
+  "loc": "슬라이드 8 (Q1 답)",
+  "raw": "• Answer: (A) H II region, (B) ICM",
+  "note": ""
+ },
+ {
+  "id": "L08.s9a",
+  "loc": "슬라이드 9 (Q2)",
+  "raw": "Q2 • The parameters for spectrum (B) are n_i = n_e = 10⁻⁴ cm⁻³, T_e = 10⁶ K, Z = 1, and the path length of l = 1 Mpc. Calculate its EM.",
+  "note": ""
+ },
+ {
+  "id": "L08.s9b",
+  "loc": "슬라이드 9 (Q2 답)",
+  "raw": "• Answer: EM = 10⁻² [cm⁻⁶ pc]",
+  "note": "python: 10⁻⁸×10⁶ = 10⁻² ✓"
+ },
+ {
+  "id": "L08.s10a",
+  "loc": "슬라이드 10 (Q3)",
+  "raw": "Q3 • The parameters for spectrum (B) are n_i = n_e = 10⁻⁴ cm⁻³, T_e = 10⁶ K, Z = 1, and the path length of l = 1 Mpc. – Determine the frequency at which the emission becomes optically thick. – In what part of the spectrum does this occur and is it observable from the ground? – Do you ever expect to observe optically thick hot intracluster gas? τ_ν = ∫κ_ν ds ≈ 3.37 × 10⁻⁷ Z^{1.882} T₄^{−1.323} ν₉^{−2.118} (n_i/n_p) [EM / cm⁻⁶pc]",
+  "note": ""
+ },
+ {
+  "id": "L08.s10b",
+  "loc": "슬라이드 10 (Q3 답)",
+  "raw": "• Answers: ν = 5600 Hz; very low radio frequency; No",
+  "note": "python: 5630 Hz ✓ (T=10⁸ K면 ≈320 Hz)"
+ },
+ {
+  "id": "L08.s11a",
+  "loc": "슬라이드 11 (Q4)",
+  "raw": "Q4 • The halo of NGC 4631 (distance = 7.6 Mpc) emits free-free emission. The broadscale X‐ray emission, which extends to about 8 kpc from the plane, can be characterized by a temperature of 0.18 keV. The X‐ray luminosity is L_X ≈ 2 × 10³⁹ erg s⁻¹ in the 0.3–2 keV waveband. Estimate the electron density and hydrogen mass of the halo. (Take g_X = 0.7 as the X-ray Gaunt factor.) [그림: 옆에서 본(edge-on) 원반 은하 NGC 4631 — 붉은 별 형성 원반을 파란 X선 헤일로가 위아래로 감쌈] j_ν = 5.44 × 10⁻³⁹ Z² n_i n_e T^{−1/2} ḡ_ff e^{−hν/kT} erg cm⁻³ s⁻¹ Hz⁻¹ sr⁻¹",
+  "note": ""
+ },
+ {
+  "id": "L08.s11b",
+  "loc": "슬라이드 11 (Q4 답)",
+  "raw": "• Answer: n_e = 1.1 × 10⁻² cm⁻³ ; M_H = 5.7 × 10⁸ M☉",
+  "note": "python: n_e = 1.08×10⁻², M_H = 5.7×10⁸ M☉ (R = 8 kpc 구) ✓"
+ }
+]

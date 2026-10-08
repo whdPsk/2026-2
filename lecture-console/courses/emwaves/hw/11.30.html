@@ -1,0 +1,18 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> 외력은 \(0&lt;t&lt;T\)에서만 작용하고, 그 구간의 \(v=\frac Fm[t+\tau(1-e^{(t-T)/\tau})]\):</p>
+\[ W=\int_0^TFv\,dt=\frac{F^2}{m}\int_0^T\Big[t+\tau-\tau e^{(t-T)/\tau}\Big]dt \]
+\[ \boxed{\;W=\frac{F^2}{m}\Big[\frac{T^2}{2}+\tau T-\tau^2\big(1-e^{-T/\tau}\big)\Big]\;} \]
+<p><b>(b)</b> 최종속도는 \(v_f=FT/m\)이므로</p>
+\[ \boxed{\;K_f=\frac12mv_f^2=\frac{F^2T^2}{2m}\;} \]
+<p><b>(c)</b> \(P=\frac{\mu_0q^2a^2}{6\pi c}=m\tau a^2\). \(X\equiv e^{-T/\tau}\)로 두면</p>
+\[ \int_{-\infty}^0a^2dt=\Big(\frac Fm\Big)^2(1-X)^2\frac{\tau}{2},\qquad
+\int_0^Ta^2dt=\Big(\frac Fm\Big)^2\Big[T-2\tau(1-X)+\frac\tau2(1-X^2)\Big]. \]
+<p>두 지수항이 합쳐지며 \(\frac\tau2(1-X)^2+\frac\tau2(1-X^2)=\tau(1-X)\)로 깔끔히 정리되어</p>
+\[ \int a^2dt=\Big(\frac Fm\Big)^2\big[T-\tau(1-X)\big] \]
+\[ \boxed{\;W_{\rm rad}=m\tau\Big(\frac Fm\Big)^2\Big[T-\tau\big(1-e^{-T/\tau}\big)\Big]=\frac{F^2\tau}{m}\Big[T-\tau\big(1-e^{-T/\tau}\big)\Big]\;} \]
+<p><b>(d) 검산</b>:</p>
+\[ K_f+W_{\rm rad}=\frac{F^2}{m}\Big[\frac{T^2}{2}+\tau T-\tau^2(1-e^{-T/\tau})\Big]=W\;\checkmark \]
+<p>예비가속 구간에서 미리 얻은 운동에너지까지 포함해 정확히 균형이 맞는다. 즉 폭주해를 버린 해는 <b>에너지 보존을 만족</b>한다(인과성만 조금 희생).</p>
+<div class="alabel">감점 포인트</div>
+<p>(c)에서 \(t&lt;0\) 구간(예비가속)의 복사를 빼먹는 것. 힘이 없는데도 가속하므로 복사한다.</p></div><!--/sol-->

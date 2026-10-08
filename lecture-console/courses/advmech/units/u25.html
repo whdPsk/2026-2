@@ -1,0 +1,36 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 고무줄로 묶은 책을 세 주축 둘레로 각각 던져 돌려 보라(실제로 해볼 것). 가장 긴 변 축, 가장 짧은 변 축, 중간 축 중 어느 회전이 뒤집히며 흔들릴까? 또 Euler 방정식에서 작은 섭동 \(\lambda,\mu\)가 \(\ddot\lambda+\Omega^2\lambda=0\) 꼴이 되느냐 \(\ddot\lambda-\kappa^2\lambda=0\) 꼴이 되느냐가 무엇으로 결정될지 추측해 보라.</div>
+
+<h4>11.12 강체 회전의 안정성 <span class="en">stability of rigid-body rotations</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>주축 둘레 회전의 선형 안정성 <b>(필수)</b></div>
+<ol>
+<li>\(I_3&gt;I_2&gt;I_1\), 외력 없음. \(x_1\)축 둘레 회전에 작은 섭동: \(\boldsymbol\omega=\omega_1\uv e_1+\lambda\uv e_2+\mu\uv e_3\), \(\lambda\mu\approx0\).</li>
+<li>Euler 방정식:
+\[ I_1\dot\omega_1=(I_2-I_3)\lambda\mu\approx0\Rightarrow\omega_1=\text{const}, \]
+\[ I_2\dot\lambda=(I_3-I_1)\mu\omega_1,\qquad I_3\dot\mu=(I_1-I_2)\omega_1\lambda . \]</li>
+<li>첫 식을 미분하고 둘째를 대입:
+\[ \ddot\lambda+\underbrace{\frac{(I_1-I_2)(I_1-I_3)}{I_2I_3}\omega_1^2}_{\Omega_1^2}\lambda=0 . \]</li>
+<li>\(\Omega_1^2&gt;0\)이면 진동(안정), \(&lt;0\)이면 지수 성장(불안정). 순환하면
+\[ \Omega_1^2\propto(I_1-I_2)(I_1-I_3),\quad \Omega_2^2\propto(I_2-I_3)(I_2-I_1),\quad \Omega_3^2\propto(I_3-I_1)(I_3-I_2). \]</li>
+<li>\(I_1\)(최소): 두 음수의 곱 &gt; 0 → <b>안정</b>. \(I_3\)(최대): 두 양수의 곱 &gt; 0 → <b>안정</b>. \(I_2\)(중간): 양 × 음 &lt; 0 → <b>불안정</b>.</li>
+</ol></div>
+
+<div class="callout"><b class="head">중간축 정리(테니스 라켓 정리, Dzhanibekov 효과).</b> 최대·최소 관성 모멘트 축 둘레의 회전은 안정, 중간 축은 불안정 — 모양과 무관한 일반 결과. 우주에서 나비너트가 주기적으로 뒤집히는 영상으로 유명하다. 대칭 팽이(\(I_1=I_2\))에서 \(x_1\)축 회전은 \(\Omega^2=0\) → 섭동이 \(\lambda=C+Dt\)로 선형 증가(불안정); 대칭축 \(x_3\) 둘레만 \(I_3\)의 대소와 무관하게 안정. <b>에너지 소산이 있으면</b> 최대 모멘트 축만 진짜 안정(Explorer 1 위성이 길쭉한 축 회전에서 뒤집힌 사건 — 교재의 Intelsat 이야기와 함께 볼 것).</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>기하학적 그림 — 에너지 타원체와 \(L^2\) 구의 교선</div>
+<ol>
+<li>보존량(U22): \(\sum I_iω_i^2=2T\), \(\sum I_i^2\omega_i^2=L^2\). \(\vb L\) 공간에서 쓰면 \(\sum L_i^2/I_i=2T\) (타원체), \(\sum L_i^2=L^2\) (구).</li>
+<li>\(\vb L\)의 물체계 성분은 두 곡면의 교선(폴호드) 위를 움직인다. 최대·최소 축 근처에서는 교선이 작은 닫힌 고리 → 안정. 중간 축은 안장점 — 교선이 그 점을 지나 반대쪽으로 멀리 돈다(분리선, separatrix) → 뒤집힘.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 안정성</div>
+\[ \Omega_i^2=\frac{(I_i-I_j)(I_i-I_k)}{I_jI_k}\omega_i^2\qquad(i,j,k\ \text{서로 다름}) \]
+<p class="note">최대·최소 축: 안정. 중간 축: 불안정. 대칭 팽이: 대칭축만 안정.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u25-1"><div class="qq">(시험형) Euler 방정식을 선형화해 \(x_1\)축 회전의 섭동 진동수 \(\Omega_1\)을 구하고, 중간 축 회전이 불안정함을 보여라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 1. \(\ddot\lambda=\frac{(I_3-I_1)(I_1-I_2)}{I_2I_3}\omega_1^2\lambda=-\frac{(I_1-I_2)(I_1-I_3)}{I_2I_3}\omega_1^2\lambda\)의 부호 판정.</p></div></div>
+
+<div class="qz" data-q="u25-2"><div class="qq">가로 \(a\), 세로 \(2a\), 두께 \(a/4\)인 책(균일 직육면체)의 CM 주관성 모멘트를 비교해 어느 축 회전이 불안정한지 판정하라. \(I_x=\tfrac{M}{12}(b^2+c^2)\) 꼴.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>변 \(a,2a,a/4\). 가로축(a방향 축): \(\tfrac M{12}(4a^2+a^2/16)\), 세로축(2a방향 축): \(\tfrac M{12}(a^2+a^2/16)\), 두께축: \(\tfrac M{12}(a^2+4a^2)\). 크기 순: 세로축(최소) &lt; 가로축(중간) &lt; 두께축(최대). <b>가로축</b>(책의 짧은 변과 평행한, 표지면 안의 축)이 불안정 — 표지를 위로 향하게 던져 짧은 변 축으로 돌리면 뒤집힌다.</p></div></div>
+
+<div class="qz" data-q="u25-3"><div class="qq">대칭 팽이(\(I_1=I_2\))가 \(x_1\)축 둘레로 돌 때 섭동이 선형으로 자람을 보여라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(I_3\dot\mu=(I_1-I_2)\omega_1\lambda=0\) → \(\mu\) 상수. \(I_2\dot\lambda=(I_3-I_1)\omega_1\mu\) = 상수 → \(\lambda=C+Dt\). 지수적이지는 않지만 유계가 아니므로 불안정.</p></div></div>

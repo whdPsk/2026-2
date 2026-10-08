@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+Jefimenko의 전기장 식(Eq. 10.36):
+\[ \vb{E}=\frac{1}{4\pi\eps}\int\left[\frac{\rho(\vb{r}',t_r)}{\rr^2}\rhat+\frac{\dot\rho(\vb{r}',t_r)}{c\rr}\rhat-\frac{\dot{\vb{J}}(\vb{r}',t_r)}{c^2\rr}\right]d\tau' . \]
+\(\vb{J}\)가 상수 → \(\dot{\vb{J}}=0\) (세 번째 항 소멸). \(\rho\)가 \(t\)에 선형 → \(\dot\rho\)는 시간에 무관한 상수이고
+\[ \rho(\vb{r}',t_r)=\rho(\vb{r}',t)+\dot\rho\,(t_r-t)=\rho(\vb{r}',t)-\frac{\rr}{c}\dot\rho . \]
+첫째 항에 넣으면
+\[ \frac{\rho(\vb{r}',t)}{\rr^2}\rhat-\frac{\dot\rho}{c\rr}\rhat, \]
+이것이 둘째 항 \(+\dfrac{\dot\rho}{c\rr}\rhat\)와 <b>정확히 상쇄</b>된다. 남는 것은
+\[ \boxed{\vb{E}(\vb{r},t)=\frac{1}{4\pi\eps}\int\frac{\rho(\vb{r}',t)}{\rr^2}\rhat\,d\tau'} \]
+즉 지연 없는 Coulomb 법칙. ∎
+<div class="alabel">감점 포인트</div>
+\(\dot\rho(t_r)=\dot\rho(t)\)임(선형이라 도함수가 상수)을 명시하지 않고 넘어가는 것.</div><!--/sol-->

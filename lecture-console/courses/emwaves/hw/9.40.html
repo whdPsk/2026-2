@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(n_1=\frac43\), \(n_2=\frac32\), \(n_3=1\). Eq. 9.201:
+\[T^{-1}=\frac{1}{4\cdot\frac43\cdot1}\left[\left(\frac43+1\right)^2+\frac{\left(\frac{16}{9}-\frac94\right)\left(1-\frac94\right)}{\frac94}\sin^2\delta\right] =\frac{3}{16}\left[\frac{49}{9}+0.2624\sin^2\delta\right]\]
+\[T^{-1}=1.0208+0.04919\sin^2\delta\]
+\[\boxed{T_{\max}=\frac{1}{1.0208}=0.980\ (\sin\delta=0),\qquad T_{\min}=\frac{1}{1.0700}=0.935\ (\sin\delta=\pm1)}\]
+즉 유리 두께에 따라 93.5%–98.0% 사이. 어느 쪽이든 거의 다 통과한다 — 그래서 물고기가 선명하게 보인다.<br>
+<b>반대 방향(물고기가 나를 봄):</b> \(n_1=1\), \(n_3=\frac43\)으로 바꿔도
+\[(n_1+n_3)^2,\quad 4n_1n_3,\quad (n_1^2-n_2^2)(n_3^2-n_2^2)\]
+가 모두 \(n_1\leftrightarrow n_3\) 교환에 대해 <b>대칭</b>이므로 \(T\)가 완전히 같다.
+\[\boxed{\text{물고기가 나를 보는 정도 = 내가 물고기를 보는 정도 (광학적 상반성, reciprocity)}}\]
+<div class="alabel">감점 포인트</div>
+\(T\)는 대칭이지만 진폭투과율 \(\tilde E_T/\tilde E_I\)는 대칭이 아니다(굴절률 비 인자 때문). 세기 계수와 진폭 계수를 구별할 것.</div><!--/sol-->

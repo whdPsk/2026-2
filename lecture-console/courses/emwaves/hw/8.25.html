@@ -1,0 +1,24 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>솔레노이드 내부만 \(\vb{B}=\muz nI\hat{\vb{z}}\) 이므로
+\(\vb{p}=\eps\big(\int_{s&lt;R}\vb{E}\,d\tau\big)\times\vb{B}\).</p>
+<p>\(\int_{s&lt;R}\vb{E}\,d\tau=-\oint V\,d\vb{a}\) (옆면만 기여, 끝면은 \(V\sim1/|z|\)라 소멸):
+\[\Big(\int\vb{E}\,d\tau\Big)_x=-R\!\int\!\!\!\int V(R,\varphi,z)\cos\varphi\,d\varphi\,dz .\]
+\(z\)적분을 \(|z|&lt;L\)로 자르면 \(\int dz/\sqrt{\imath^{2}+z^{2}}=2\ln 2L-\ln \imath^{2}\), \(\imath^{2}=R^{2}+a^{2}-2aR\cos\varphi\).
+전개 \(\ln\imath^{2}=2\ln r_{&gt;}-2\sum_k\frac1k(r_{&lt;}/r_{&gt;})^{k}\cos k\varphi\) 를 쓰면 \(\cos\varphi\) 성분만 살아남고 \(L\)은 소거된다.</p>
+<p><b>\(a&gt;R\):</b> \(\int_{s&lt;R}E_x\,d\tau=-\dfrac{qR^{2}}{2\eps a}\), 따라서
+\[\boxed{\;\vb{p}=\frac{\muz q n I R^{2}}{2a}\hat{\vb{y}}\;}\]
+각운동량: \(L_z=-\eps\muz nI\int_{s&lt;R}\boldsymbol{\rho}\cdot\vb{E}\,d\tau\) 이고
+\(\boldsymbol\rho\cdot\vb{E}=2V-\divg(V\boldsymbol\rho)\) 를 쓰면
+\[\int\boldsymbol\rho\cdot\vb{E}\,d\tau=2\int_0^R\! G(s)s\,ds-R^{2}G(R),\quad
+G(s)\equiv\!\int\!\!\!\int V(s,\varphi,z)d\varphi\,dz .\]
+\(a&gt;R\) 이면 \(G(s)\)는 \(s\)에 무관(원 위 평균값 정리)하므로 위 식은 0:
+\[\boxed{\;\vb{L}=0\;}\]</p>
+<p><b>\(a&lt;R\) (전하가 솔레노이드 안):</b> 같은 계산에서
+\(\int_{s&lt;R}E_x\,d\tau=-\dfrac{qa}{2\eps}\), 그리고
+\(2\int_0^R Gs\,ds-R^{2}G(R)=\dfrac{q}{\eps}\dfrac{R^{2}-a^{2}}{2}\):
+\[\boxed{\;\vb{p}=\frac{\muz qnIa}{2}\hat{\vb{y}},\qquad
+\vb{L}=-\frac{\muz qnI(R^{2}-a^{2})}{2}\hat{\vb{z}}\;}\]
+검산: Ex. 8.4에서 안쪽 원통(\(+Q\)@\(a&lt;R\))이 \(-\tfrac12\muz nIQ(R^{2}-a^{2})\hat{\vb{z}}\), 바깥 원통(\(-Q\)@\(b&gt;R\))이 0 — 합이 Eq. 8.34와 일치 ✓</p>
+<div class="alabel">감점 포인트</div>
+\(a&gt;R\)에서 \(\vb{p}\ne0\)인데 \(\vb{L}=0\)인 것을 모순으로 여기는 것. \(\vb{L}\)은 \(\vb{g}\)의 <em>모멘트</em>이므로 상쇄될 수 있다.</div><!--/sol-->

@@ -1,0 +1,21 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+먼저
+\[ u=\frac{dx}{dt}=\frac{c^{2}t}{\sqrt{b^{2}+c^{2}t^{2}}},\qquad 1-\frac{u^{2}}{c^{2}}=1-\frac{c^{2}t^{2}}{b^{2}+c^{2}t^{2}}=\frac{b^{2}}{b^{2}+c^{2}t^{2}}. \]
+\(|u|\lt c\)임이 자동으로 보장된다.
+
+<p>(a)
+\[ \tau=\int_{0}^{t}\sqrt{1-u^{2}/c^{2}}\,dt'=\int_{0}^{t}\frac{b\,dt'}{\sqrt{b^{2}+c^{2}t'^{2}}}=\frac{b}{c}\sinh^{-1}\!\Bigl(\frac{ct}{b}\Bigr). \]
+\[ \boxed{\tau=\frac{b}{c}\sinh^{-1}\!\Bigl(\frac{ct}{b}\Bigr)\quad\Longleftrightarrow\quad t=\frac{b}{c}\sinh\!\Bigl(\frac{c\tau}{b}\Bigr)} \]</p>
+
+<p>(b) 대입하면
+\[ x=\sqrt{b^{2}+b^{2}\sinh^{2}(c\tau/b)}=\boxed{b\cosh\!\Bigl(\frac{c\tau}{b}\Bigr)} \]
+\[ u=\frac{c^{2}t}{x}=\frac{c^{2}\cdot(b/c)\sinh}{b\cosh}=\boxed{c\tanh\!\Bigl(\frac{c\tau}{b}\Bigr)} \]
+(라피디티가 고유시간에 비례해 선형 증가: \(\theta=c\tau/b\) — 일정한 고유가속도 \(a=c^{2}/b\)의 운동.)</p>
+
+<p>(c) \(\eta^{\mu}=dx^{\mu}/d\tau\), \(x^{0}=ct=b\sinh(c\tau/b)\), \(x^{1}=b\cosh(c\tau/b)\):
+\[ \boxed{\eta^{\mu}=\Bigl(c\cosh\frac{c\tau}{b},\ c\sinh\frac{c\tau}{b},\ 0,\ 0\Bigr)} \]
+검산: \(\eta^{\mu}\eta_{\mu}=c^{2}(-\cosh^{2}+\sinh^{2})=-c^{2}\) ✓ (문제 12.26). 또 \(-\,(x^0)^2+(x^1)^2=b^2\)로 세계선이 쌍곡선임이 명백하다.</p>
+
+<div class="alabel">감점 포인트</div>
+(a)의 적분에서 \(\sqrt{1-u^2/c^2}\) 대신 \(1/\sqrt{\cdot}\)를 넣는 실수(\(d\tau=dt/\gamma\), 고유시간이 <b>짧다</b>). 그리고 \(\sinh^{-1}\)의 적분 공식 \(\int dt/\sqrt{a^2+t^2}=\sinh^{-1}(t/a)\)를 확실히 해둘 것.</div><!--/sol-->

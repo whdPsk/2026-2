@@ -1,0 +1,19 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> 판 사이: \(\vb{E}=-(\sigma/\eps)\hat{\vb{z}}\).
+표면전류 \(\vb{K}_{\rm top}=\sigma v\hat{\vb{y}}\), \(\vb{K}_{\rm bot}=-\sigma v\hat{\vb{y}}\) 이고
+\(\vb{B}=\tfrac{\muz}{2}\vb{K}\times\hat{\vb{n}}\) 을 더하면 사이에서
+\(\vb{B}=-\muz\sigma v\,\hat{\vb{x}}\), 바깥은 0.
+\[\vb{g}=\eps(\vb{E}\times\vb{B})=\muz\sigma^{2}v\,\hat{\vb{y}}\]
+\[\boxed{\;\vb{p}_{em}=\muz\sigma^{2}v\,A d\,\hat{\vb{y}}\;}\]</p>
+<p><b>(b)</b> 두 몫으로 나뉜다.</p>
+<p><i>위 판</i>: 아래 판이 만드는 \(\vb{E}_{\rm bot}=-\tfrac{\sigma}{2\eps}\hat{\vb{z}},\ \vb{B}_{\rm bot}=-\tfrac{\muz\sigma v}{2}\hat{\vb{x}}\) 속을 속도 \(v\hat{\vb{y}}-u\hat{\vb{z}}\) 로 움직인다. 단위면적당 힘의 \(y\)성분은
+\(\sigma\big[(-u\hat{\vb{z}})\times\vb{B}_{\rm bot}\big]_y=\tfrac{\muz\sigma^{2}vu}{2}\).
+소요 시간 \(T=d/u\) 이므로 충격량 \(=\tfrac{\muz\sigma^{2}v d}{2}A\,\hat{\vb{y}}\).</p>
+<p><i>아래 판</i>: 위 판이 지나가면서 \(\vb{B}\)가 사라진다. \(\curl\vb{E}=-\partial\vb{B}/\partial t\) 에서
+\(\partial\vb{B}/\partial t=\muz\sigma v u\,\delta(z-z_{\rm top})\hat{\vb{x}}\) 이므로 \(E_y\)가 움직이는 판을 가로질러 \(\muz\sigma vu\) 만큼 도약한다. 대칭 선택으로 판 아래쪽에서 \(E_y=-\muz\sigma vu/2\), 전하 \(-\sigma\)에 작용하는 힘은 \(+\muz\sigma^{2}vu/2\) (단위면적). 역시 충격량 \(\tfrac{\muz\sigma^{2}vd}{2}A\,\hat{\vb{y}}\).</p>
+<p>합하면
+\[\boxed{\;\vb{J}_{\rm tot}=\muz\sigma^{2}vAd\,\hat{\vb{y}}=\vb{p}_{em}\;}\]
+장에 저장돼 있던 운동량이 정확히 물질로 넘어간다.</p>
+<div class="alabel">감점 포인트</div>
+위 판만 계산하고 "절반밖에 안 나온다"고 끝내는 것. 유도 전기장이 아래 판에 주는 나머지 절반을 반드시 챙겨야 한다.</div><!--/sol-->

@@ -1,0 +1,180 @@
+[
+ {
+  "id": "L09.s1",
+  "loc": "슬라이드 1",
+  "raw": "Synchrotron Radiation — Introduction to Astrophysics I, 2026 Fall, Woong-Tae Kim",
+  "note": "",
+  "skip": "표지"
+ },
+ {
+  "id": "L09.s2",
+  "loc": "슬라이드 2",
+  "raw": "Questions? • Feel free to ask any questions you had while watching the flipped-learning animations.",
+  "note": "",
+  "skip": "질문 안내(내용 없음)"
+ },
+ {
+  "id": "L09.s3a",
+  "loc": "슬라이드 3 ①",
+  "raw": "Review Questions • What is synchrotron radiation?",
+  "note": "녹음 06:26–09:44에서 답(상대론적 속도로 자기장 주위를 도는 전하의 복사)."
+ },
+ {
+  "id": "L09.s3b",
+  "loc": "슬라이드 3 ②",
+  "raw": "Review Questions • How does synchrotron radiation differ from cyclotron radiation?",
+  "note": "비상대론(cyclotron, 쌍극자·단일 주파수) vs 상대론(synchrotron, beaming)."
+ },
+ {
+  "id": "L09.s3c",
+  "loc": "슬라이드 3 ③",
+  "raw": "Review Questions • Write the expression for the total power radiated by a relativistic electron with parallel acceleration a∥ and perpendicular acceleration a⊥ relative to its velocity.",
+  "note": "답: P = (2e²/3c³)γ⁴(a⊥² + γ²a∥²). 녹음 09:44–11:29."
+ },
+ {
+  "id": "L09.s3d",
+  "loc": "슬라이드 3 ④",
+  "raw": "Review Questions • Write the equation of motion for a relativistic electron in the presence of a magnetic field.",
+  "note": "d(γm v)/dt = (q/c) v×B, d(γmc²)/dt = q E·v = 0."
+ },
+ {
+  "id": "L09.s3e",
+  "loc": "슬라이드 3 ⑤",
+  "raw": "Review Questions – What is the gyrofrequency?",
+  "note": "ω_B = qB/(γmc)."
+ },
+ {
+  "id": "L09.s3f",
+  "loc": "슬라이드 3 ⑥",
+  "raw": "Review Questions – What is the perpendicular acceleration of an electron in a magnetic field?",
+  "note": "a⊥ = ω_B v⊥ = ω_B v sinψ."
+ },
+ {
+  "id": "L09.s3g",
+  "loc": "슬라이드 3 ⑦",
+  "raw": "Review Questions • Write down the expression for the synchrotron power radiated by a single electron.",
+  "note": "P = 2σ_T c U_B γ²β² sin²ψ → 등방 평균 (4/3)σ_T c U_B γ²β²."
+ },
+ {
+  "id": "L09.s3h",
+  "loc": "슬라이드 3 ⑧",
+  "raw": "Review Questions • What is the characteristic frequency of a synchrotron photon?",
+  "note": "ω_c ~ γ³ω_B = γ² eB/(mc)."
+ },
+ {
+  "id": "L09.s4",
+  "loc": "슬라이드 4",
+  "raw": "(빈 슬라이드)",
+  "note": "",
+  "skip": "빈 슬라이드"
+ },
+ {
+  "id": "L09.s5a",
+  "loc": "슬라이드 5 ①",
+  "raw": "Received Power • Recall that the radiation field at point P by an accelerated charge is E(x,t) = (q/c)[ n̂×{(n̂−β)×β̇} / (κ³R) ]_ret, B(x,t) = [n̂×E]_ret, where n̂ ≡ R(t′)/R(t′), β ≡ v(t′)/c, κ ≡ 1 − n̂·β. [그림: 원점 O에서 전하 위치 x₀(t′)로의 벡터, 궤적 곡선 위 속도 v(t′), 관측점 P까지의 벡터 x와 R = x − x₀(t′)]",
+  "note": "Liénard–Wiechert 복사장(가속도장)."
+ },
+ {
+  "id": "L09.s5b",
+  "loc": "슬라이드 5 ②",
+  "raw": "• The power pattern received by an observer at P is dP/dΩ = R²(S·n̂) = (q²/4πc)[ |n̂×{(n̂−β)×β̇}|² / κ⁶ ]_ret – Depends on both β and β̇. – The κ term is responsible for the beaming effect of emitted radiation.",
+  "note": "'received'는 빨간색 강조."
+ },
+ {
+  "id": "L09.s6a",
+  "loc": "슬라이드 6 ①",
+  "raw": "dt/dt′ • The received power is determined by the acceleration of a charge at the retarded time t′ = t − R(t′)/c. • Since R²(t′) = |x − x(t′)|², 2R dR/dt′ = 2[x − x(t′)]·(−v) = −2R n̂·v ⟹ dR/dt′ = −n̂·v, we obtain 1 = dt/dt′ − (1/c)dR(t′)/dt′ = dt/dt′ + n̂·β ⟹ dt/dt′ = 1 − n̂·β = κ",
+  "note": ""
+ },
+ {
+  "id": "L09.s6b",
+  "loc": "슬라이드 6 ②",
+  "raw": "• Geometrical interpretation: – Consider a situation that a moving source emits radiation as it moves from point 1 to point 2 at velocity v over the time span dt′. – The difference in arrival times dt of the radiation emitted at 1 and 2 is equal to dt′ minus the time taken for radiation to propagate a distance d = v dt′ cosθ: dt = dt′(1 − (v/c)cosθ) = κ dt′ [그림: 점 1에서 2로 v dt′ 이동, 각 θ 방향으로 나가는 두 광선, 1에서 나간 광선이 c dt′ 진행, 그 중 v dt′ cosθ 부분 표시]",
+  "note": ""
+ },
+ {
+  "id": "L09.s7",
+  "loc": "슬라이드 7",
+  "raw": "Emitted Power • For relativistic charges, there is a difference between the emitted and received power. • Since the energy flux received by an observer between t₁ = T₁ + R(T₁)/c and t₂ = T₂ + R(T₂)/c is ∫_{T₁+R(T₁)/c}^{T₂+R(T₂)/c} [S·n̂]_ret dt = ∫_{T₁}^{T₂} (S·n̂)(dt/dt′) dt′, the energy flux emitted is given by S·n̂ (dt/dt′) = κ S·n̂ (evaluated at t′) • Therefore, the emitted power per unit solid angle is dP_em/dΩ = R²(S·n̂)(dt/dt′) = (q²/4πc)|n̂×{(n̂−β)×β̇}|²/κ⁵ evaluated at t′ – Different from dP/dΩ by a factor of κ = 1 − n̂·β = 1 − βcosθ.",
+  "note": "'the energy flux emitted' 빨간색."
+ },
+ {
+  "id": "L09.s8",
+  "loc": "슬라이드 8",
+  "raw": "When β ∥ β̇ [dP_em/dΩ = (q²/4πc)|n̂×{(n̂−β)×β̇}|²/κ⁵] • If β ∥ β̇, n̂×{(n̂−β)×β̇} = n̂×(n̂×β̇) so that dP_em/dΩ = (q²/4πc) β̇² sin²θ/(1−βcosθ)⁵ = (q²/4πc³) a² sin²θ/(1−βcosθ)⁵ where a = cβ̇. θ: angle between β and n̂ • If non-relativistic (β≪1), dP_em/dΩ = (q²/4πc³) a² sin²θ : dipole radiation [그림: β̇∥β 수직 화살표와 n̂ 사이 각 θ; 3D 도넛형 쌍극자 파워 패턴]",
+  "note": ""
+ },
+ {
+  "id": "L09.s9",
+  "loc": "슬라이드 9",
+  "raw": "When β ∥ β̇ • If relativistic (β→1), we use the Lorentz factor γ² = 1/(1−β²) to approximate 1 − βcosθ ≈ 1 − (1 − 1/2γ²)(1 − θ²/2) ≈ (1+γ²θ²)/(2γ²) • Then, the angular distribution of the emitted power is dP_em/dΩ ≈ 8q²a²γ⁸(γθ)²/(πc³(1+γ²θ²)⁵) : peaks at γθ_max = 1/2. [그림: 가로축 γθ(0–2), 세로축 정규화된 dP_em/dΩ — 0에서 0, γθ≈0.5에서 최대 1, 2 근처에서 0으로] Beaming effect [그림: 속도 v 방향(위)으로 쏠린 두 개의 좁은 로브(β≈1)와 원래의 작은 쌍극자(β≪1), 각 θ_max 표시]",
+  "note": "'Beaming effect' 빨간색."
+ },
+ {
+  "id": "L09.s10",
+  "loc": "슬라이드 10",
+  "raw": "When β ∥ β̇ • The total emitted power is P_em = ∫(dP_em/dΩ)dΩ = (q²a²/4πc³)2π∫₀^π sin³θ/(1−βcosθ)⁵ dθ = (q²a²/2c³)∫_{−1}^{1}(1−μ²)/(1−βμ)⁵ dμ = (q²a²/2c³)·4/(3(1−β²)³) = 2q²a²γ⁶/(3c³) ∝ γ⁶ • This recovers the Larmor formula for non-relativistic (γ=1) dipole radiation.",
+  "note": "∝γ⁶ 빨간색."
+ },
+ {
+  "id": "L09.s11",
+  "loc": "슬라이드 11",
+  "raw": "When β ⊥ β̇ • Let us take β and β̇ parallel to the z- and x-axes, respectively. • Set n̂ = (sinθcosφ, sinθsinφ, cosθ). Then, n̂ − β = (sinθcosφ, sinθsinφ, cosθ − β). (n̂−β)×β̇ = det[x̂ ŷ ẑ; sinθcosφ sinθsinφ cosθ−β; β̇ 0 0] = β̇(0, cosθ−β, −sinθsinφ) n̂×{(n̂−β)×β̇} = β̇ det[x̂ ŷ ẑ; sinθcosφ sinθsinφ cosθ; 0 cosθ−β −sinθsinφ] = x̂β̇(−sin²θsin²φ − cos²θ + βcosθ) + ŷβ̇ sin²θ sinφ cosφ + ẑβ̇ sinθcosφ(cosθ−β) = x̂β̇(−1 + sin²θcos²φ + βcosθ) + ŷβ̇ sin²θ sinφcosφ + ẑβ̇ sinθcosφ(cosθ−β) [그림: β∥ẑ, β̇∥x̂, 관측 방향 n̂의 극각 θ·방위각 φ]",
+  "note": ""
+ },
+ {
+  "id": "L09.s12",
+  "loc": "슬라이드 12",
+  "raw": "When β ⊥ β̇ • Then, |n̂×{(n̂−β)×β̇}|² = β̇²(−1 + sin²θcos²φ + βcosθ)² + a² sin⁴θ sin²φ cos²φ + a² sin²θcos²φ(cos²θ − 2βcosθ + β²) • By collecting terms containing cos²φ separately, one can write |n̂×{(n̂−β)×β̇}|² = β̇²(1−βcosθ)² + β̇² cos²φ sin²θ(β²−1) = β̇²(1−βcosθ)² − β̇² cos²φ sin²θ/γ² • Therefore, the angular distribution of the emitted power is dP_em/dΩ = (q²/4πc)|n̂×{(n̂−β)×β̇}|²/κ⁵ = (q²a²/4πc³)(1/(1−βcosθ)³)[1 − sin²θcos²φ/(γ²(1−βcosθ)²)], β̇ = a/c",
+  "note": "슬라이드 첫 식 둘째·셋째 항의 a²는 β̇²(차원상 동일 의미, a=cβ̇)로 읽어야 함."
+ },
+ {
+  "id": "L09.s13",
+  "loc": "슬라이드 13",
+  "raw": "When β ⊥ β̇ • For γ ≫ 1, 1 − βcosθ ≈ 1 − (1 − 1/2γ²)(1 − θ²/2) ≈ (1+γ²θ²)/(2γ²) so that dP_em/dΩ ≈ (2q²a²γ⁶/(πc³(1+γ²θ²)³))[1 − 4γ²θ²cos²φ/(1+γ²θ²)²] ➔ Most energy is concentrated in a small angle with θ ≤ 1/γ. [그림: 3D 회색 타원체 파워 패턴(β, β̇ 축 표시); φ=π/2 평면 단면 — 가속도 a 방향의 작은 로브와 속도 v 방향으로 길게 뻗은 로브, 반각 1/γ 표시; 오른쪽 dP_em/dΩ vs γθ(0–2) 그래프, 0에서 최대 후 γθ≈1–2에서 0으로 감소] at the φ = π/2 plane",
+  "note": ""
+ },
+ {
+  "id": "L09.s14",
+  "loc": "슬라이드 14",
+  "raw": "When β ⊥ β̇ • The total emitted power is P_em = ∫(dP_em/dΩ)dΩ = (q²a²/4πc³)[2π∫₀^π sinθdθ/(1−βcosθ)³ − (1/γ²)∫₀^π sin³θdθ/(1−βcosθ)⁵ ∫₀^{2π}cos²φdφ] = (q²a²/4πc³)[2π·2/(1−β²)² − (1/γ²)·4/(3(1−β²)³)·π] = (q²a²/4πc³)·8πγ⁴/3 = 2q²a²γ⁴/(3c³) ∝ γ⁴ • Again, this recovers the Larmor formula for non-relativistic (γ=1) dipole radiation.",
+  "note": "∝γ⁴ 빨간색."
+ },
+ {
+  "id": "L09.s15",
+  "loc": "슬라이드 15",
+  "raw": "General Cases • In general, the acceleration a of a charge can be decomposed into the parallel component a∥ and the perpendicular component a⊥ to its velocity: – a = a∥ + a⊥ and a² = a∥² + a⊥² • The total power can then be written as P_em = (2q²γ⁴/3c³)(a⊥² + γ²a∥²) = (2q²γ⁶/3c³)(a⊥²/γ² + a∥²) = (2q²γ⁶/3c³)(a⊥²/γ² + a² − a⊥²) = (2q²γ⁶/3c³)(a² − β²a⊥²) = (2q²γ⁶/3c)[β̇² − (β×β̇)²] valid for general β̇ and β. where we used a = β̇c, a⊥ = |(β/β)×β̇|c",
+  "note": ""
+ },
+ {
+  "id": "L09.s16",
+  "loc": "슬라이드 16",
+  "raw": "(빈 슬라이드)",
+  "note": "",
+  "skip": "빈 슬라이드"
+ },
+ {
+  "id": "L09.s17",
+  "loc": "슬라이드 17",
+  "raw": "Q1 • Determine the gyrofrequency and gyroradius of a typical electron within the warm ionized medium (WIM; T_e = 10⁴ K and n_e = 0.01 cm⁻³) of the Milky Way, in which the magnetic field strength is B = 3 µG. Can we expect to observe the resulting cyclotron radiation?",
+  "note": "답 슬라이드 없음. 수업: ω_B≈53 s⁻¹, r_B~10⁶ cm, 이온층(~10 MHz) 때문에 관측 불가. 예제 6.10."
+ },
+ {
+  "id": "L09.s18",
+  "loc": "슬라이드 18",
+  "raw": "Q2 • Determine the gyrofrequency and gyroradius of an electron with γ = 10⁴ in the ISM with a magnetic field strength of B = 3µG. • What is the speed of the electron compared to the speed of light?",
+  "note": "예제 6.11."
+ },
+ {
+  "id": "L09.s19",
+  "loc": "슬라이드 19",
+  "raw": "Q3 • For the condition in Q2, determine the total opening angle of the emission cone, the critical frequency, and the spacing of the harmonics for this particle. [그림: E(t) 대 t — 날카로운 펄스가 주기 2π/ω_B 간격으로 반복, 각 펄스 폭 2π/(γ³ω_B)]",
+  "note": "예제 6.12. 수업 답 ν_c≈0.84 GHz."
+ },
+ {
+  "id": "L09.s20",
+  "loc": "슬라이드 20",
+  "raw": "Q4 • Determine the relativistic gyroradius (kpc) of a CR proton that has the highest energy in the figure when B = 3µG. • Compare this to the distance of the Large Magellanic Cloud (distance = 50 kpc) and comment on the ability of galaxies, in general, to retain such high-energy cosmic rays. [그림: 우주선 에너지 스펙트럼 J(E) (m⁻² sr⁻¹ s⁻¹ GeV⁻¹) vs Lab Energy (eV) 10⁹–10²¹ 로그-로그; 여러 실험(LEAP, Proton satellite, Yakutsk, Haverah Park, Akeno, AGASA, Fly's Eye, HiRes, Auger) 데이터; 주석 '(1 particle/m²-sec)' ~10¹¹ eV, 'Knee (1 particle/m²-year)' ~10¹⁵–10¹⁶ eV, 'Ankle (1 particle/km²-year)' ~10¹⁸–10¹⁹ eV, '(1 particle/km²-century)' ~10²⁰ eV; 최고 에너지 데이터 ~10²⁰ eV 이상]",
+  "note": "예제 6.13. 수업에서는 최고 에너지를 3×10²⁰ eV로 잡아 108 kpc."
+ }
+]

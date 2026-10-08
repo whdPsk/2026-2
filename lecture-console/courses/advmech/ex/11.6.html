@@ -1,0 +1,12 @@
+<div class="exq"><b>상황.</b> Example 11.3의 정육면체 텐서(모서리 원점 \(Q\))를 CM 원점 텐서로 바꾼다. CM은 \(Q\)에서 \(\vb a=(b/2,b/2,b/2)\).</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(I_{ij}=J_{ij}-M(a^2\delta_{ij}-a_ia_j)\).</div>
+<ol>
+<li>\(a^2=\tfrac34b^2\).</li>
+<li>대각: \(I_{11}=\tfrac23Mb^2-M\left(\tfrac34b^2-\tfrac14b^2\right)=\tfrac23Mb^2-\tfrac12Mb^2=\tfrac16Mb^2\).</li>
+<li>비대각: \(I_{12}=-\tfrac14Mb^2-M(0-\tfrac14b^2)=0\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \I_{\rm CM}=\tfrac16Mb^2\,\mathbb 1\ } \]
+<p class="note"><b>검산</b> 직접 적분: \(\rho\int_{-b/2}^{b/2}(y^2+z^2)\dd v=\rho b\cdot2\cdot b\cdot\frac{b^3}{12}=\tfrac16Mb^2\) ✓; 비대각은 홀함수 적분 0 ✓. 교재 각주: CM 기준 관성 텐서만으로는 정육면체와 구를 구별할 수 없다.</p></div>
+<div class="qz" data-q="ex11.6-a"><div class="qq"><b>+α</b> 이 결과를 이용해 정육면체의 한 <b>면의 중심</b>을 원점으로 한 관성 텐서를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\vb a=(0,0,b/2)\) (면이 \(x_3=\pm b/2\)라 하면): \(J=\tfrac16Mb^2\mathbb 1+M\,\mathrm{diag}(b^2/4,b^2/4,0)=Mb^2\,\mathrm{diag}\left(\tfrac5{12},\tfrac5{12},\tfrac16\right)\). 비대각 \(-Ma_ia_j\)는 성분이 하나라 0.</p></div></div>
+<div class="qz" data-q="ex11.6-b"><div class="qq"><b>+α</b> 역방향 검산: CM 텐서에서 모서리 원점 텐서의 비대각 \(-\tfrac14Mb^2\)이 나옴을 평행축 정리로 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(J_{12}=I_{12}+M(a^2\delta_{12}-a_1a_2)=0-M\frac b2\frac b2=-\tfrac14Mb^2\) ✓.</p></div></div>

@@ -1,0 +1,162 @@
+[
+ {
+  "id": "L03.s1",
+  "loc": "슬라이드 1",
+  "raw": "Radiation Basics + Line Radiation — Introduction to Astrophysics I, 2026 Fall, Woong-Tae Kim (2026-09-08)",
+  "skip": "표지"
+ },
+ {
+  "id": "L03.s2",
+  "loc": "슬라이드 2",
+  "raw": "Questions? • Feel free to ask any questions you had while watching the flipped-learning animations.",
+  "skip": "질문 안내(내용 없음)"
+ },
+ {
+  "id": "L03.s3a",
+  "loc": "슬라이드 3 ①",
+  "raw": "Review Questions • What is thermal radiation?"
+ },
+ {
+  "id": "L03.s3b",
+  "loc": "슬라이드 3 ②",
+  "raw": "Review Questions • What is the Kirchhoff’s Law for thermal radiation?"
+ },
+ {
+  "id": "L03.s3c",
+  "loc": "슬라이드 3 ③",
+  "raw": "Review Questions • What is the line profile function?"
+ },
+ {
+  "id": "L03.s3d",
+  "loc": "슬라이드 3 ④",
+  "raw": "Review Questions • What are the Einstein A₂₁ coefficient (units)?"
+ },
+ {
+  "id": "L03.s3e",
+  "loc": "슬라이드 3 ⑤",
+  "raw": "Review Questions • What are the Einstein B₁₂ and B₂₁ coefficients (units)?"
+ },
+ {
+  "id": "L03.s3f",
+  "loc": "슬라이드 3 ⑥",
+  "raw": "Review Questions • What is detailed balance?"
+ },
+ {
+  "id": "L03.s3g",
+  "loc": "슬라이드 3 ⑦",
+  "raw": "Review Questions • Write the relations among the Einstein coefficients."
+ },
+ {
+  "id": "L03.s3h",
+  "loc": "슬라이드 3 ⑧",
+  "raw": "Review Questions • Write the emission coefficient j_ν in terms of A₂₁."
+ },
+ {
+  "id": "L03.s4a",
+  "loc": "슬라이드 4 ①",
+  "raw": "Black Body Radiation • An idealized body that absorbs all incident radiation, regardless of frequency or angle of incidence. • Planck function for intensity: B_ν(T) = (2hν³/c²) · 1/(e^{hν/kT} − 1); B_λ(T) = B_ν(T)|dν/dλ| = (2hc²/λ⁵) · 1/(e^{hc/λkT} − 1). [그림: log–log B_ν(T) (erg cm⁻² s⁻¹ sr⁻¹ Hz⁻¹) vs ν (Hz), 위축 λ(µm); 10, 10², 10³, 10⁴, 10⁵ K 곡선 — 온도가 높을수록 모든 진동수에서 위에 있고 서로 교차하지 않음, 저주파 쪽 기울기 일정]"
+ },
+ {
+  "id": "L03.s4b",
+  "loc": "슬라이드 4 ②",
+  "raw": "• Wien’s displacement law – λ_max T = 0.5103 cm K from B_ν(T) – λ_max T = 0.2898 cm K from B_λ(T)",
+  "note": "계산: B_ν 피크 x=2.821 → 0.5099 cm K; B_λ 피크 → 0.2898 cm K"
+ },
+ {
+  "id": "L03.s4c",
+  "loc": "슬라이드 4 ③",
+  "raw": "• For hν ≪ kT (long wavelength limit), B_ν ≈ (2hν³/c²)(kT/hν) = (2ν²/c²)kT = 2kT/λ² : Rayleigh-Jeans limit"
+ },
+ {
+  "id": "L03.s4d",
+  "loc": "슬라이드 4 ④",
+  "raw": "• For hν ≫ kT (short wavelength limit), B_ν ≈ (2hν³/c²) e^{−hν/kT} : Wien approximation"
+ },
+ {
+  "id": "L03.s5",
+  "loc": "슬라이드 5",
+  "raw": "Black Body Radiation • We want to evaluate ∫₀^∞ B_ν dν = (2h/c²)∫₀^∞ ν³/(e^{hν/kT}−1) dν = (2h/c²)(kT/h)⁴ ∫₀^∞ x³/(eˣ−1) dx, x = hν/kT. Since ∫₀^∞ x³/(eˣ−1) dx = π⁴/15, we obtain ∫₀^∞ B_ν dν = (2(kT)⁴/h³c²)(π⁴/15) = (σ/π)T⁴, where σ = 2π⁵k⁴/(15h³c²) ≈ 5.6704×10⁻⁵ erg cm⁻² s⁻¹ K⁻⁴ : Stefan–Boltzmann constant",
+  "note": "계산 σ=5.6704×10⁻⁵ 일치"
+ },
+ {
+  "id": "L03.s6a",
+  "loc": "슬라이드 6 ①",
+  "raw": "Black Body Radiation • Flux: F = π∫₀^∞ B_ν dν = σT⁴ : Stefan-Boltzmann law"
+ },
+ {
+  "id": "L03.s6b",
+  "loc": "슬라이드 6 ②",
+  "raw": "• Energy density: u_ν = (1/c)∫B_ν dΩ = (4π/c)B_ν • Total energy density: u = ∫u_ν dν = (4π/c)∫B_ν dν = (4σ/c)T⁴ = aT⁴ (a = 4σ/c: radiation constant)",
+  "note": "a=7.566×10⁻¹⁵ erg cm⁻³ K⁻⁴"
+ },
+ {
+  "id": "L03.s6c",
+  "loc": "슬라이드 6 ③",
+  "raw": "• Photon number density: n_γ = ∫u_ν/(hν) dν = (8π/c³)∫ν²dν/(e^{hν/kT}−1) = 8π(kT/hc)³∫₀^∞ x²dx/(eˣ−1) = 16πζ(3)(kT/hc)³ = 20.3T³ – n_γ ~ 400 for CMBR with T=2.73 K",
+  "note": "계산 20.29 T³, CMB 413 cm⁻³"
+ },
+ {
+  "id": "L03.s7a",
+  "loc": "슬라이드 7 ①",
+  "raw": "Temperatures • Effective temperature: temperature of a perfect blackbody emitting the same amount of energy per unit area per unit time. F = σT_eff⁴ [그림: 태양 스펙트럼 복사조도(W m⁻² nm⁻¹) vs 파장(nm) — extraterrestrial solar spectral irradiance(노란색, total area 1367 W/m²)와 T = 5777 K blackbody spectrum(회색, 같은 total area) 겹침]"
+ },
+ {
+  "id": "L03.s7b",
+  "loc": "슬라이드 7 ②",
+  "raw": "• Color temperature: temperature of a blackbody emitting the same ratio of the intensities at two wavelength as the observed ratio: I_λ1/I_λ2 = B_λ1(T_c)/B_λ2(T_c) [그림: I vs λ 곡선 위 \"blue B\"와 \"visible V (green-yellow)\" 두 필터 대역 표시]"
+ },
+ {
+  "id": "L03.s7c",
+  "loc": "슬라이드 7 ③",
+  "raw": "• Brightness temperature: temperature of a blackbody emitting the same intensity as observed at the same frequency: I_ν = B_ν(T_b) ≈ 2kT_b/λ²"
+ },
+ {
+  "id": "L03.s8a",
+  "loc": "슬라이드 8 ①",
+  "raw": "Spontaneous vs. Stimulated Emission • The rate ratio of the stimulated to spontaneous emission is B₂₁J̄/A₂₁ = (c²/2hν³)J̄ = 1/(e^{hν/kT} − 1) (photon occupation number)"
+ },
+ {
+  "id": "L03.s8b",
+  "loc": "슬라이드 8 ②",
+  "raw": "• For H I 21cm lines, hν/k = 0.068 K. B₂₁J̄/A₂₁ ≈ kT/hν = T/0.068 K ~ 40 (T/2.7 K) – The stimulated emission by the CMBR is important for H I 21cm lines.",
+  "note": "계산: hν/k=0.0682 K, T=2.7 K → 39.6(RJ) / 39.1(정확)"
+ },
+ {
+  "id": "L03.s8c",
+  "loc": "슬라이드 8 ③",
+  "raw": "• However, the photon occupation number is generally small for optical lines with large hν. – In this case, the stimulated transitions can be ignored."
+ },
+ {
+  "id": "L03.s9a",
+  "loc": "슬라이드 9 ① (문제)",
+  "raw": "Q1 [그림: quasar(T_B = 500 K) → cloud(T, τ) → 전파망원경; on-source 시선은 퀘이사를 지나 구름을 통과, off-source 시선은 구름만 통과] • We make H I 21 cm observations of a cloud which happens to have a 500 K continuum source behind it. We see the following sort of line profiles. Find τ_ν0, the excitation temperature T_ex of the cloud. [그림: off-source — T_b vs ν, ν0에서 20 K 피크의 방출선; on-source — 500 K 연속에서 ν0에서 400 K로 파인 흡수선]"
+ },
+ {
+  "id": "L03.s9b",
+  "loc": "슬라이드 9 ② (답)",
+  "raw": "Answers: τ_ν0 = 0.273, T_ex = 83.3 K",
+  "note": "계산: τ=ln(500/380)=0.2744(Q2 슬라이드 0.274와 일치), Tex=83.3 K"
+ },
+ {
+  "id": "L03.s10a",
+  "loc": "슬라이드 10 ① (문제)",
+  "raw": "Q2 • Assuming that the depth of the cloud (with τ_ν = 0.274) along the line of sight is 5 pc, find the number of absorptions per cm, κ_ν, in the cloud at the frequency of the line. • Assuming that the cloud density is constant, how deep in pc would the line of sight distance have to be for the cloud to become optically thick?"
+ },
+ {
+  "id": "L03.s10b",
+  "loc": "슬라이드 10 ② (답)",
+  "raw": "• Answers: κ_ν = 1.78 × 10⁻²⁰ cm⁻¹, l = 18.2 pc",
+  "note": "계산 κ=1.776×10⁻²⁰, l=18.25 pc"
+ },
+ {
+  "id": "L03.s11a",
+  "loc": "슬라이드 11 ① (문제)",
+  "raw": "Q3 • The Planck curves show that a hot object is brighter than a cool object at all frequencies when both emit a Planck spectrum. Yet, observations of the ISM in infrared show mostly cool dust emission while the hotter stellar emission is negligible in comparison. How can these two statements be reconciled? • To answer this question, consider a cubic region of volume, 1 pc³ in the Galaxy some distance, D, away. Assume that there is one star within this volume and that this star is equivalent to the Sun. Assume that all dust grains are spherical, evenly distributed, with temperature T = 100 K, radius a = 0.2 µm, density ρ = 2.5 g cm⁻³, and the total dust mass in the volume is M_d = 2.65 × 10⁻⁴ M⊙. Find the ratio of the stellar flux to the dust flux at IR (100 µm) and visible (550 nm) wavelengths, assuming both emit perfect Planck spectra."
+ },
+ {
+  "id": "L03.s11b",
+  "loc": "슬라이드 11 ② (답)",
+  "raw": "• Answer: f_λ100µm(star)/f_λ100µm(dust) ≈ 10⁻¹⁰, f_λ550nm(star)/f_λ550nm(dust) ≈ 10¹⁰⁰",
+  "note": "계산(T☉=5777 K): 2.5×10⁻¹⁰, 8.5×10⁹⁹. 이미지 오른쪽 끝 잘림 — 10¹⁰⁰으로 판독"
+ }
+]

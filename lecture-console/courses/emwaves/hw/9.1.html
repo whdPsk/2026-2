@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+파동방정식은 \(\partial_z^2 f=\dfrac{1}{v^2}\partial_t^2 f\).<br>
+<b>일반 논증(핵심).</b> \(f=g(u)\), \(u\equiv z-vt\) 꼴이면 \(\partial_z f=g'\), \(\partial_z^2 f=g''\), \(\partial_t f=-vg'\), \(\partial_t^2 f=v^2 g''\). 따라서 자동으로 \(g''=\frac{1}{v^2}(v^2 g'')\) 성립. \(f_1,f_2,f_3\)는 모두 \(z-vt\)라는 조합만으로 쓰였으므로 미분을 일일이 하지 않아도 만족한다. (검산: \(f_1\)의 경우 \(g=Ae^{-bu^2}\), \(g'=-2buAe^{-bu^2}\), \(g''=(4b^2u^2-2b)Ae^{-bu^2}\); 양변 모두 같은 값이 나온다.)<br>
+<b>\(f_4\).</b> 지수가 \(bz^2+vt\)로 \(z\mp vt\) 조합이 아니다.
+\[\partial_z^2 f_4=(4b^4z^2-2b^2)f_4,\qquad \frac{1}{v^2}\partial_t^2 f_4=\frac{1}{v^2}(bv)^2 f_4=b^2 f_4 .\]
+둘이 같으려면 \(4b^4z^2-2b^2=b^2\), 즉 특정 \(z\)에서만 성립 → 모든 \(z\)에 대해 성립하지 않음.<br>
+<b>\(f_5=A\sin(bz)\cos^3(bvt)\).</b> \(\partial_z^2 f_5=-b^2 f_5\). 한편 \(w\equiv bvt\)로 두면
+\[\frac{d^2}{dw^2}\cos^3 w=-3\cos^3 w+6\cos w\sin^2 w,\]
+\[\frac{1}{v^2}\partial_t^2 f_5=b^2 A\sin(bz)\left(-3\cos^3 w+6\cos w\sin^2 w\right)\neq -b^2 f_5 .\]
+\[\boxed{f_1,f_2,f_3\ \text{만족}\ (z-vt\ \text{함수});\quad f_4,f_5\ \text{불만족}}\]
+<div class="alabel">감점 포인트</div>
+\(f_5\)에서 세제곱을 놓치고 \(\sin(bz)\cos(bvt)\)로 읽으면 "만족한다"는 반대 결론이 나온다(9.2 참조). 지수를 정확히 볼 것.</div><!--/sol-->

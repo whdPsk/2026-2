@@ -1,0 +1,21 @@
+<div class="exq"><b>상황.</b> 관측 로켓이 지표에서 수직으로 발사된다. 배기 속력 \(u\), 일정 연소율 \(\alpha\), 초기 질량 \(m_0\), 연소 종료 질량 \(m_b\). 연소 종료 시 고도 \(H_b\)와 속력 \(v_b\)를 \(u,\alpha,m_b,m_0,g\)로 나타낸다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(T=(m_0-m_b)/\alpha\)까지 \(v(t)\)를 적분. \(\ln\) 항은 질량 변수로.</div>
+<ol>
+<li>\(v(t)=-gt+u\ln\dfrac{m_0}{m}\), \(m=m_0-\alpha t\).</li>
+<li>\(H_b=\int_0^Tv\,\dd t=-\tfrac12gT^2+\dfrac u\alpha\int_{m_b}^{m_0}\ln\dfrac{m_0}{m}\,\dd m\).</li>
+<li>\(\int\ln x\,\dd x=x\ln x-x\) 사용:
+\[ \int_{m_b}^{m_0}\ln\frac{m_0}{m}\dd m=m_0-m_b+m_b\ln\frac{m_b}{m_0}. \]</li>
+<li>정리:
+\[ H_b=-\frac{g(m_0-m_b)^2}{2\alpha^2}+\frac u\alpha\left[m_b\ln\frac{m_b}{m_0}+m_0-m_b\right]. \]</li>
+<li>속력: \(v_b=-\dfrac{g(m_0-m_b)}{\alpha}+u\ln\dfrac{m_0}{m_b}\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ H_b=-\frac{g}{2}\frac{(m_0-m_b)^2}{\alpha^2}+\frac{u}{\alpha}\left[m_0-m_b-m_b\ln\frac{m_0}{m_b}\right],\qquad v_b=u\ln\frac{m_0}{m_b}-\frac{g(m_0-m_b)}{\alpha}\ } \]
+<p class="note"><b>검산</b> ① Example 9.12 수치 대입 시 같은 100 km ✓. ② \(g=0\)이면 \(H_b=\frac u\alpha[\ldots]\ge0\) — 괄호 안 \(=m_0-m_b-m_b\ln(m_0/m_b)\ge0\) (\(\ln x\le x-1\)) ✓. ③ \(\alpha\to\infty\)(순간 연소): \(H_b\to0\), \(v_b\to u\ln(m_0/m_b)\) — 자유공간 결과로 환원 ✓.</p></div>
+<div class="qz" data-q="ex9.13-a"><div class="qq"><b>+α</b> 최적화 감각: 연료량을 고정하고 \(\alpha\)만 바꿀 때, 최종 최고 고도 \(H_{\max}=H_b+v_b^2/2g\)를 \(\alpha\)의 함수로 쓰고, \(\alpha\to\infty\)가 최선임을 보여라. (중력 손실 관점에서 설명.)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(L\equiv\ln(m_0/m_b)\), \(\Delta m=m_0-m_b\), \(\tau=\Delta m/\alpha\). \(v_b=uL-g\tau\), \(H_b=-\tfrac12g\tau^2+u\tau\left[1-\tfrac{m_b}{\Delta m}L\right]\).</p>
+<p>\(H_{\max}=H_b+\dfrac{(uL-g\tau)^2}{2g}=\dfrac{u^2L^2}{2g}-u\tau L+u\tau-\dfrac{u\tau m_b L}{\Delta m}=\dfrac{u^2L^2}{2g}-u\tau\left[L\,\frac{m_0}{\Delta m}-1\right]\).</p>
+<p>대괄호 \(=\frac{m_0}{\Delta m}\ln\frac{m_0}{m_b}-1&gt;0\) (\(\ln x&gt;1-1/x\)), 따라서 \(H_{\max}\)는 \(\tau\)에 대해 감소 → \(\tau\to0\) (\(\alpha\to\infty\))일 때 최대 \(u^2L^2/2g\). 오래 태울수록 연료를 들고 중력을 거스르는 시간이 길어진다(중력 손실).</p></div></div>
+<div class="qz" data-q="ex9.13-b"><div class="qq"><b>+α</b> 이륙 조건과의 연결: \(\alpha u&lt;m_0g\)이면 이 공식들은 무엇을 잘못 예측하는가? 실제로는 언제 이륙하는가? (Problem 9-59)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>공식은 \(t=0\)부터 운동방정식 \(m\dot v=\alpha u-mg\)가 성립한다고 가정하므로 초기에 \(\dot v&lt;0\) — 로켓이 땅을 뚫고 내려가는 비물리적 결과. 실제로는 지면 수직항력이 \(v=0\)을 유지.</p>
+<p>이륙은 \(m(t)g=\alpha u\), 즉 \(t_*=\dfrac{m_0-\alpha u/g}{\alpha}\)에 일어나고, 그 뒤부터 초기 질량 \(m_*=\alpha u/g\)로 위 공식을 다시 적용한다. 그동안 태운 연료는 낭비.</p></div></div>

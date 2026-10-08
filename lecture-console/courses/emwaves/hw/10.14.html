@@ -1,0 +1,10 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(t_r-t=-\rr/c\)이므로 \(\vb{J}(t_r)\approx\vb{J}(t)-\dfrac{\rr}{c}\dot{\vb{J}}(t)\), 그리고 같은 차수에서 \(\dot{\vb{J}}(t_r)\approx\dot{\vb{J}}(t)\).
+Eq. 10.38에 대입:
+\[ \vb{B}=\frac{\muz}{4\pi}\int\left[\frac{\vb{J}(t_r)}{\rr^2}+\frac{\dot{\vb{J}}(t_r)}{c\rr}\right]\times\rhat\,d\tau'
+\approx\frac{\muz}{4\pi}\int\left[\frac{\vb{J}(t)}{\rr^2}-\frac{\dot{\vb{J}}(t)}{c\rr}+\frac{\dot{\vb{J}}(t)}{c\rr}\right]\times\rhat\,d\tau' \]
+\[ \boxed{\vb{B}(\vb{r},t)=\frac{\muz}{4\pi}\int\frac{\vb{J}(\vb{r}',t)\times\rhat}{\rr^2}d\tau'} \]
+<b>의미:</b> 준정적 근사에서 우리가 저지르는 두 가지 오차 — (i) 지연을 무시한 것, (ii) Eq. 10.38의 둘째 항을 버린 것 — 이 <b>1차까지 서로 상쇄</b>된다. 그래서 Biot–Savart는 기대 이상으로 정확하다(오차는 \((\rr/c)^2\ddot{\vb{J}}\) 차수).
+<div class="alabel">감점 포인트</div>
+"상쇄"의 물리적 의미(준정적 근사가 2차까지 정확)를 설명하지 않고 계산만 하는 것.</div><!--/sol-->

@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(\theta\equiv\mathbf k\cdot\mathbf r-\omega t\)로 두고 곱→합:
+\[fg=AB\cos(\theta+\delta_a)\cos(\theta+\delta_b)=\frac{AB}{2}\Big[\cos(\delta_a-\delta_b)+\cos(2\theta+\delta_a+\delta_b)\Big].\]
+한 주기 시간평균에서 둘째 항은 0이므로
+\[\langle fg\rangle=\frac{AB}{2}\cos(\delta_a-\delta_b).\]
+한편 \(\tilde f=Ae^{i\delta_a}e^{i\theta}\), \(\tilde g=Be^{i\delta_b}e^{i\theta}\)이므로
+\[\tilde f\tilde g^*=ABe^{i(\delta_a-\delta_b)}\ \Rightarrow\ \mathrm{Re}(\tilde f\tilde g^*)=AB\cos(\delta_a-\delta_b).\]
+\[\boxed{\langle fg\rangle=\tfrac12\mathrm{Re}(\tilde f\tilde g^*)}\]
+\(e^{i\theta}\)와 \(e^{-i\theta}\)가 상쇄되므로 두 파의 \(\mathbf k,\omega\)가 같아야만 성립한다. 따름:
+\[\langle u\rangle=\tfrac14\mathrm{Re}\!\left(\epsilon_0\tilde{\mathbf E}\!\cdot\!\tilde{\mathbf E}^*+\tfrac{1}{\mu_0}\tilde{\mathbf B}\!\cdot\!\tilde{\mathbf B}^*\right),\qquad \langle\mathbf S\rangle=\tfrac{1}{2\mu_0}\mathrm{Re}(\tilde{\mathbf E}\times\tilde{\mathbf B}^*).\]
+<div class="alabel">감점 포인트</div>
+\(\mathrm{Re}(\tilde f)\mathrm{Re}(\tilde g)\neq\mathrm{Re}(\tilde f\tilde g)\). 별표(켤레)를 빼먹으면 \(\cos(2\theta+\cdots)\) 항이 남아 틀린다.</div><!--/sol-->

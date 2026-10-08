@@ -1,0 +1,33 @@
+<div class="stmt"><p>강의 범위 안의 Example을 답을 보지 않고 풀 수 있게 공부할 것 (모든 과제 공통 0번).</p><p><b>1.</b> 강의에서 다룬 wave guide를 생각하자. Maxwell 방정식에서 시작해 \(E_x,E_y,B_x,B_y\)를 \(E_z\)와 \(B_z\)의 함수로 나타내고, 진공에서의 전자기파와 달리 TEM mode가 있을 수 없음을 보여라. (강의 내용 복습 과제) → U13 참고.</p></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<b>설정.</b> 속이 빈 완전 도체 관이 \(z\)축 방향으로 뻗어 있고, 관 안을 \(z\)로 진행하는 단색파를 찾는다:
+\[\tilde{\mathbf E}(x,y,z,t)=\tilde{\mathbf E}_0(x,y)\,e^{i(kz-\omega t)},\qquad \tilde{\mathbf B}(x,y,z,t)=\tilde{\mathbf B}_0(x,y)\,e^{i(kz-\omega t)}\]
+\(\tilde{\mathbf E}_0=E_x\hat{\mathbf x}+E_y\hat{\mathbf y}+E_z\hat{\mathbf z}\) (성분은 \(x,y\)의 함수), \(\mathbf B_0\)도 같다. 그러면 \(\partial_z\to ik\), \(\partial_t\to-i\omega\).<br>
+<b>① 두 curl 방정식을 성분으로.</b> \(\nabla\times\mathbf E=-\partial_t\mathbf B\), \(\nabla\times\mathbf B=\dfrac1{c^2}\partial_t\mathbf E\)에서
+\[\begin{aligned}
+&\text{(i)}\ \ \partial_xE_y-\partial_yE_x=i\omega B_z &&\text{(iv)}\ \ \partial_xB_y-\partial_yB_x=-\frac{i\omega}{c^2}E_z\\
+&\text{(ii)}\ \ \partial_yE_z-ikE_y=i\omega B_x &&\text{(v)}\ \ \partial_yB_z-ikB_y=-\frac{i\omega}{c^2}E_x\\
+&\text{(iii)}\ \ ikE_x-\partial_xE_z=i\omega B_y &&\text{(vi)}\ \ ikB_x-\partial_xB_z=-\frac{i\omega}{c^2}E_y
+\end{aligned}\]
+<b>② 가로 성분 풀기.</b> (iii)과 (v)는 \(E_x,B_y\)만의 연립식이다. (iii)에서 \(B_y=\dfrac{k}{\omega}E_x+\dfrac{i}{\omega}\partial_xE_z\). (v)에 넣으면
+\[\partial_yB_z+\frac{k}{\omega}\partial_xE_z=i\left(\frac{k^2}{\omega}-\frac{\omega}{c^2}\right)E_x
+\ \Rightarrow\ E_x=\frac{i}{(\omega/c)^2-k^2}\left(k\,\partial_xE_z+\omega\,\partial_yB_z\right)\]
+같은 방법으로 (ii)·(vi)에서 \(E_y,B_x\)를, 다시 (iii)·(v)에서 \(B_y\)를 구하면
+\[\boxed{\begin{aligned}
+E_x&=\frac{i}{(\omega/c)^2-k^2}\left(k\frac{\partial E_z}{\partial x}+\omega\frac{\partial B_z}{\partial y}\right), &
+E_y&=\frac{i}{(\omega/c)^2-k^2}\left(k\frac{\partial E_z}{\partial y}-\omega\frac{\partial B_z}{\partial x}\right)\\
+B_x&=\frac{i}{(\omega/c)^2-k^2}\left(k\frac{\partial B_z}{\partial x}-\frac{\omega}{c^2}\frac{\partial E_z}{\partial y}\right), &
+B_y&=\frac{i}{(\omega/c)^2-k^2}\left(k\frac{\partial B_z}{\partial y}+\frac{\omega}{c^2}\frac{\partial E_z}{\partial x}\right)
+\end{aligned}}\]
+즉 세로 성분 \(E_z,B_z\)만 알면 나머지 넷이 정해진다. 이것을 \(\nabla\cdot\mathbf E=0\), \(\nabla\cdot\mathbf B=0\)(또는 (i), (iv))에 넣으면
+\[\left[\partial_x^2+\partial_y^2+(\omega/c)^2-k^2\right]E_z=0,\qquad\left[\partial_x^2+\partial_y^2+(\omega/c)^2-k^2\right]B_z=0\]
+경계조건은 벽에서 \(\mathbf E^\parallel=0\), \(B^\perp=0\). \(E_z=0\)이면 TE, \(B_z=0\)이면 TM.<br>
+<b>③ TEM이 없음.</b> TEM은 \(E_z=B_z=0\)이다. 위 상자식의 우변이 모두 0이 되므로, 가로 성분이 살아남으려면 분모도 0, 즉 \(k=\omega/c\)여야 하고(0/0) 원래 식으로 돌아가야 한다. \(E_z=0\)이면 Gauss 법칙이, \(B_z=0\)이면 (i)이 각각
+\[\partial_xE_x+\partial_yE_y=0,\qquad \partial_xE_y-\partial_yE_x=0\]
+을 준다. 둘째 식에서 \(\mathbf E_0=-\nabla\varphi\)인 2차원 스칼라 퍼텐셜이 있고, 첫째 식에서 \(\nabla^2\varphi=0\)(2차원 Laplace). 그런데 벽에서 \(\mathbf E^\parallel=0\)이므로 벽은 등퍼텐셜이고, Laplace 방정식의 해는 영역 안에 극값을 가질 수 없으니 벽에서 상수인 \(\varphi\)는 관 안 전체에서 같은 상수다. 따라서 \(\mathbf E_0=0\), 이어서 (ii), (iii)에서 \(\mathbf B_0=0\) — 파가 없다.
+\[\boxed{\text{속이 빈 도파관에는 TEM 모드가 없다.}}\]
+<div class="alabel">진공과 무엇이 다른가</div>
+진공의 평면파는 \(E_z=B_z=0\)이면서 \(k=\omega/c\)인 바로 그 0/0 경우다. 경계가 없으니 \(\varphi\)에 "벽에서 상수" 조건이 붙지 않아 균일한 가로 장이 허용된다. 도파관에서는 등퍼텐셜인 벽이 관 안을 둘러싸는 순간 정전기 문제(전하 없는 빈 도체 공동 → 장 0)와 같은 꼴이 되어 막힌다. 같은 논리로, 가운데에 도체가 하나 더 있는 동축선은 두 도체의 퍼텐셜이 달라도 되므로 TEM이 가능하다.
+<div class="alabel">감점 포인트</div>
+"상자식에 \(E_z=B_z=0\)을 넣으면 0"에서 끝내면 불완전하다 — \(k=\omega/c\)이면 분모도 0이라 그 식이 성립하지 않는다. 반드시 원래 식으로 돌아가 Laplace 방정식 + 경계조건 논증을 해야 한다. 부호는 (iv)–(vi)의 \(-i\omega/c^2\)에서 가장 자주 틀린다.
+</div><!--/sol-->

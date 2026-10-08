@@ -1,0 +1,43 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 천장에 감긴 실에 매달린 원통(요요)을 놓으면 원통의 가속도는 \(g\)보다 작을 것이다. 얼마나 작을까 — \(g/2\)? \(2g/3\)? 실의 장력은 무게의 몇 분의 일일까? 그리고 강체의 운동을 "질량중심의 병진 + 질량중심 둘레 회전"으로 나눌 수 있는 근거는 어느 단원(Ch.9)의 결과였는지 먼저 떠올려 보라.</div>
+
+<h4>11.1–11.2 강체와 단순 평면운동 <span class="en">rigid bodies & simple planar motion</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">정의</span>강체의 자유도와 두 좌표계</div>
+<ol>
+<li><b>강체</b>: 모든 입자 사이 거리가 고정된 입자계(연속체면 합 → 적분). 실제로는 탄성 변형이 있지만 무시.</li>
+<li>배치를 정하는 데 필요한 수: <b>6</b> — CM 위치 3개 + 방향 3개(보통 Euler 각, U21).</li>
+<li><b>Chasles 정리</b>: 임의의 강체 변위 = 한 점의 병진 + 그 점을 지나는 축 둘레의 회전. 그 점을 CM으로 잡으면 U3·U4의 분해(\(\vb L=\vb R\times\vb P+\vb L_{\rm CM}\), \(T=\tfrac12MV^2+T_{\rm CM}\))를 그대로 쓸 수 있다.</li>
+<li>두 좌표계: 관성계("고정계")와 물체에 붙은 "물체계(body system)". 10장의 회전계를 이 장에서는 물체계라 부른다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>평면운동의 두 방정식과 구름 조건 — Example 11.1</div>
+<ol>
+<li><b>병진</b>: \(M\ddot{\vb R}=\vb F^{\rm ext}\). <b>회전</b>(CM 둘레, U3 유도 3): \(I_{\rm CM}\ddot\theta=N_{\rm CM}\).</li>
+<li>요요(원통, \(I=\tfrac12MR^2\)), 아래가 +: \(M\ddot y=Mg-T\), \(I\ddot\theta=RT\).</li>
+<li><b>구속 조건</b>(실이 미끄러지지 않고 풀림): \(y=R\theta\) → \(\ddot y=R\ddot\theta\).</li>
+<li>풀면 \(T=I\ddot y/R^2=\tfrac12M\ddot y\) → \(M\ddot y=Mg-\tfrac12M\ddot y\):
+\[ \ddot y=\tfrac23g,\qquad T=\tfrac13Mg,\qquad \omega(t)=\frac{2gt}{3R}. \]</li>
+<li>일반형: 회전관성 \(I=\beta MR^2\)이면 \(\ddot y=\dfrac{g}{1+\beta}\), \(T=\dfrac{\beta}{1+\beta}Mg\). 경사면을 구르는 물체도 같은 구조(\(g\to g\sin\alpha\)).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>물리 진자 — Example 11.2</div>
+<ol>
+<li>수평축 \(O\) 둘레로 도는 강체, CM까지 거리 \(l\), \(O\)에 대한 회전관성 \(I=Mk^2\) (\(k\): 회전 반지름).</li>
+<li>\(T=\tfrac12I\dot\theta^2\), \(U=-Mgl\cos\theta\approx-Mgl(1-\theta^2/2)\). Lagrange: \(I\ddot\theta+Mgl\theta=0\).</li>
+<li>\[ \omega_0^2=\frac{Mgl}{I}=\frac{gl}{k^2},\qquad T_0=2\pi\sqrt{\frac{k^2}{gl}} . \]
+등가 단진자 길이 \(l_{\rm eq}=k^2/l\).</li>
+<li>평행축 정리 \(k^2=k_{\rm CM}^2+l^2\) → \(l_{\rm eq}=l+k_{\rm CM}^2/l\ge2k_{\rm CM}\). 주기는 \(l=k_{\rm CM}\)에서 최소. <b>진동 중심</b>(\(O\)에서 \(l_{\rm eq}\) 떨어진 점)과 \(O\)를 바꿔 매달아도 주기가 같다 — Kater 가역 진자의 원리.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 평면 강체</div>
+\[ M\ddot{\vb R}=\vb F,\qquad I_{\rm CM}\ddot\theta=N_{\rm CM}\ (\text{또는 고정축 }O\text{ 둘레}) \]
+\[ \text{요요: }\ddot y=\tfrac{g}{1+\beta},\ T=\tfrac{\beta}{1+\beta}Mg;\qquad \text{물리진자: }\omega_0^2=\frac{Mgl}{I_O}=\frac{gl}{k^2} \]
+<p class="note">회전관성: 속 찬 원통·원판 \(\tfrac12MR^2\), 구 \(\tfrac25MR^2\), 구 껍질 \(\tfrac23MR^2\), 막대(중심) \(\tfrac1{12}ML^2\), 막대(끝) \(\tfrac13ML^2\).</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u15-1"><div class="qq">Example 11.1을 실이 감긴 <b>얇은 원통 껍질</b>(\(I=MR^2\))로 바꾸면 가속도·장력은? 또 에너지 보존으로 \(y\)만큼 내려왔을 때의 속력을 구해 가속도와 일치하는지 보여라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\beta=1\): \(\ddot y=g/2\), \(T=Mg/2\). 에너지: \(Mgy=\tfrac12Mv^2+\tfrac12MR^2(v/R)^2=Mv^2\) → \(v^2=gy=2(g/2)y\) ✓ (등가속도 \(g/2\)).</p></div></div>
+
+<div class="qz" data-q="u15-2"><div class="qq">길이 \(L\)인 균일 막대를 한 끝에 매단 물리 진자의 주기와 등가 단진자 길이를 구하라. 또 주기가 최소가 되는 매달 위치는 CM에서 얼마인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(I=\tfrac13ML^2\), \(l=L/2\): \(l_{\rm eq}=\frac{L^2/3}{L/2}=\tfrac23L\), \(T_0=2\pi\sqrt{2L/3g}\). 최소 주기는 \(l=k_{\rm CM}=L/\sqrt{12}\approx0.289L\)에서.</p></div></div>
+
+<div class="qz" data-q="u15-3"><div class="qq">당구공(반지름 \(R\))을 수평으로 큐로 칠 때, 치자마자 미끄러짐 없이 구르려면 중심에서 얼마나 높은 곳을 쳐야 하는가? (Problem 11-7a)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>충격량 \(J\)를 높이 \(h\)(중심 위)에 가함: \(MV=J\), \(I\omega=Jh\). 구름 조건 \(V=R\omega\): \(\frac JM=R\frac{Jh}{\frac25MR^2}\) → \(h=\tfrac25R\). 즉 바닥에서 \(\tfrac75R\) — 이것이 당구대 쿠션 높이의 기준(Problem 11-7b).</p></div></div>

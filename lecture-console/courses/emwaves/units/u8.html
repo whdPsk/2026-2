@@ -1,0 +1,113 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 평면파에서 전기장이 나르는 에너지와 자기장이 나르는 에너지 중 어느 쪽이 클까? \(B_0=E_0/c\)로 자기장 값이 훨씬 작으니 자기 쪽이 작을 것 같지만, 에너지 공식의 \(1/\muz\) 인수를 따져 보라. 또 빛이 운동량을 나른다면, 태양빛이 1 m²에 가하는 힘은 대략 몇 자릿수일까? 대기압과 비교해 미리 짐작해 보자.</div>
+
+<h4>9.2.3 에너지밀도와 Poynting 벡터 <span class="en">energy density and the Poynting vector</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>전기 기여 = 자기 기여 — 정확히 반반</div>
+<ol>
+<li>일반적인 전자기 에너지밀도(Griffiths Eq. 8.5)는
+\[ u=\frac12\left(\epsE^2+\frac{1}{\muz}B^2\right) \]</li>
+<li>평면파에서는 \(B=E/c\)이므로
+\[ B^2=\frac{E^2}{c^2}=\muz\epsE^2 \]
+(\(1/c^2=\muz\eps\) 사용.)</li>
+<li>자기 항에 대입하면
+\[ \frac{1}{\muz}B^2=\frac{1}{\muz}\muz\epsE^2=\epsE^2 \]
+<b>전기 항 \(\epsE^2\)와 완전히 같다.</b> 즉 두 기여는 항상 정확히 반반이다.</li>
+<li>따라서
+\[ u=\epsE^2=\epsE_0^2\cos^2(kz-\omega t+\delta) \]
+\(u\)는 진행 방향으로 함께 이동하는 \(\cos^2\) 무늬를 이룬다.</li>
+<li><b>주의:</b> 여기서 반드시 <b>실수</b> 장을 썼다. \(\tilde u \equiv \tfrac12(\eps\tilde E^2+\tilde B^2/\muz)\)의 실수부를 취하면 \(\epsE_0^2\cos[2(kz-\omega t+\delta)]\)가 나와 시간평균이 0이 되는 엉터리 결과가 된다(U5 Q4).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>\(\vb{S}=cu\,\hat{\vb{z}}\) — Poynting 벡터와 그 기하학적 의미</div>
+<ol>
+<li>Poynting 벡터(Eq. 8.10)는 에너지 유속밀도다:
+\[ \vb{S}=\frac{1}{\muz}(\vb{E}\times\vb{B}) \]</li>
+<li>\(z\)방향 진행, \(x\)편광 평면파를 넣는다. \(\hat{\vb{x}}\times\hat{\vb{y}}=\hat{\vb{z}}\)이므로
+\[ \vb{S}=\frac{1}{\muz}E_0\cos(\cdot)\cdot\frac{E_0}{c}\cos(\cdot)\,\hat{\vb{z}}=\frac{E_0^2}{\muz c}\cos^2(\cdot)\,\hat{\vb{z}} \]</li>
+<li>\(1/(\muz c)=c\eps\)(왜냐하면 \(\muz c^2=1/\eps\))를 쓰면
+\[ \boxed{\;\vb{S}=c\epsE_0^2\cos^2(kz-\omega t+\delta)\,\hat{\vb{z}}=cu\,\hat{\vb{z}}\;} \]</li>
+<li><b>기하학적 검증(외우지 말고 그려라):</b> 면적 \(A\)의 창을 시간 \(\Delta t\) 동안 통과하는 에너지는, 두께 \(c\Delta t\)인 원기둥 속 에너지 \(u\,A\,c\Delta t\)와 같다. 단위시간·단위면적으로 나누면
+\[ \frac{uAc\Delta t}{A\Delta t}=uc \]
+정확히 \(|\vb{S}|\)다. 즉 \(\vb{S}=u\vb{v}\)라는 "밀도 × 속도" 구조다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>시간평균, 강도 \(I\), 그리고 운동량밀도</div>
+<ol>
+<li>가시광은 주기가 \(\sim10^{-15}\ \mathrm{s}\)이므로 어떤 거시적 측정도 수많은 주기를 평균한다. 따라서 \(\cos^2\)의 평균이 필요하다.
+<b>암산 요령:</b> \(\langle\sin^2\rangle+\langle\cos^2\rangle=1\)이고 한 주기에 걸쳐 두 평균이 같으므로
+\[ \langle\cos^2\rangle=\frac12 \]</li>
+<li>따라서
+\[ \langle u\rangle=\frac12\epsE_0^2,\qquad \langle \vb{S}\rangle=\frac12 c\epsE_0^2\,\hat{\vb{z}} \]</li>
+<li><b>강도(intensity)</b>는 단위면적당 평균 일률로 정의된다:
+\[ \boxed{\;I\equiv\langle S\rangle=\frac12 c\epsE_0^2\;} \]
+\(I\propto E_0^2\)라는 점을 반드시 기억하라 — 반사·투과 계수가 진폭비의 <b>제곱</b>인 이유다(U9, U10).</li>
+<li>장은 운동량도 나른다(Eq. 8.29):
+\[ \vb{g}=\frac{1}{c^2}\vb{S}=\frac{1}{c}u\,\hat{\vb{z}} \]
+즉 <b>에너지밀도 \(u\)에 대해 운동량밀도가 \(u/c\)</b>. 이는 \(E=pc\)라는 무질량 입자의 관계와 정확히 대응하며, 광자 그림과의 연결점이다.</li>
+<li>시간평균:
+\[ \langle \vb{g}\rangle=\frac{1}{2c}\epsE_0^2\,\hat{\vb{z}}=\frac{I}{c^2}\hat{\vb{z}} \]</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>복사압 \(P=I/c\)와 반사체의 2배</div>
+<ol>
+<li>완전 흡수체가 면적 \(A\)로 수직 입사광을 받는다. 시간 \(\Delta t\) 동안 표면에 도달하는 운동량은, 유도 2와 같은 원기둥 논법으로
+\[ \Delta p=\langle g\rangle\,A\,c\,\Delta t \]</li>
+<li>흡수체는 이 운동량을 전부 받는다. 압력(단위면적당 평균 힘)은
+\[ P=\frac{1}{A}\frac{\Delta p}{\Delta t}=\langle g\rangle c=\frac{I}{c^2}\cdot c=\boxed{\frac{I}{c}}=\frac12\epsE_0^2 \]</li>
+<li><b>완전 반사체</b>: 광자가 \(+\hat{\vb{z}}\)로 들어와 \(-\hat{\vb{z}}\)로 나간다. 운동량 변화량이 \(p\to -p\)이므로 전달량은 \(2p\), 따라서
+\[ P_{\text{refl}}=\frac{2I}{c} \]
+(흡수는 "받아서 멈춤", 반사는 "받아서 되던짐" — 야구공을 잡는 것과 배트로 되받아치는 것의 차이.)</li>
+<li><b>미시적 해석과 그 함정.</b> 소박한 설명은 이렇다: \(\vb{E}\)가 표면 전하를 \(\hat{\vb{x}}\)로 흔들고, 그 속도 \(\vb{v}\)에 \(\vb{B}\)가 작용해 \(q(\vb{v}\times\vb{B})\)가 \(+\hat{\vb{z}}\)를 향한다. 그러나 Prob. 9.11에서 보듯 감쇠가 없으면 \(\vb{v}\)가 \(\vb{E}\)와 \(90^\circ\) 어긋나 <b>시간평균 자기력이 0</b>이 된다. 에너지가 실제로 흡수되려면 저항(감쇠 \(-\gamma m\vb{v}\))이 있어야 하고, 그때 비로소 평균 힘이 살아난다. 완전도체 반사에 대한 더 깔끔한 설명은 표면전류 \(\vb{K}\)에 작용하는 자기력으로 하는 것이다(Prob. 9.36).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 에너지·운동량 4종 세트</div>
+\[ \langle u\rangle=\tfrac12\epsE_0^2,\qquad I=\langle S\rangle=\tfrac12 c\epsE_0^2,\qquad \langle g\rangle=\frac{I}{c^2},\qquad P_{\text{abs}}=\frac{I}{c},\quad P_{\text{refl}}=\frac{2I}{c} \]
+<p class="note">시간평균이 필요한 2차량은 복소 표기로 \(\langle \vb{S}\rangle=\dfrac{1}{2\muz}\mathrm{Re}(\tilde{\vb{E}}\times\tilde{\vb{B}}^{*})\), \(\langle u\rangle=\dfrac14\mathrm{Re}\!\left(\eps\tilde{\vb{E}}\cdot\tilde{\vb{E}}^{*}+\dfrac{1}{\muz}\tilde{\vb{B}}\cdot\tilde{\vb{B}}^{*}\right)\)로 계산한다(Prob. 9.12). 매질 속에서는 \(\eps\to\eps,\ \muz\to\mu,\ c\to v\)로 치환.</p></div>
+
+<div class="callout"><b class="head">태양돛(solar sail).</b> \(P\sim 10^{-5}\ \mathrm{Pa}\)는 대기압의 \(10^{-10}\)배로 우스울 만큼 작다. 그러나 우주에서는 마찰이 없어 이 힘이 <b>영원히</b> 작용한다. 1 km² 반사막(질량 100 kg 가정)에 \(2I/c\approx 9\times10^{-6}\ \mathrm{Pa}\)가 걸리면 힘은 약 9 N, 가속도는 \(0.09\ \mathrm{m/s^2}\) — 하루면 초속 8 km에 도달한다. 연료 없이 항해하는 우주선의 원리이며, 혜성 꼬리가 항상 태양 반대쪽을 향하는 이유의 일부(주된 원인은 태양풍이지만 복사압도 기여)이기도 하다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u8-1"><div class="qq">(참/거짓 + 증명 또는 반례) "평면파에서 자기장이 나르는 에너지는 \(B_0=E_0/c\)이므로 전기장 기여의 \(1/c^2\)배로 무시할 수 있다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>거짓.</b> 두 기여는 <b>정확히 같다</b>. 계산 실수의 원인은 \(1/\muz\)라는 큰 인수를 빠뜨린 것이다:
+\[ u_E=\tfrac12\epsE^2,\qquad u_B=\frac{1}{2\muz}B^2=\frac{1}{2\muz}\frac{E^2}{c^2}=\frac{\eps\muz}{2\muz}E^2=\tfrac12\epsE^2=u_E \]
+즉 \(B\)가 작은 것은 <b>단위계의 문제</b>이지 물리적 중요도의 문제가 아니다. 자연 단위계(\(c=1\))에서는 \(E=B\)로 대칭성이 명백해진다.
+<b>추가 확인:</b> 도체 속에서는 이 대칭이 깨진다. Prob. 9.22에 따르면 도체 내부에서는 오히려 <b>자기 기여가 항상 지배적</b>이며, \(\langle u\rangle=(k^2/2\mu\omega^2)E_0^2\ee^{-2\kappa z}\)이다. "반반"은 \(\sigma=0\)인 매질의 특성이다.
+</div></div>
+
+<div class="qz" data-q="u8-2"><div class="qq">(수치·차수 분석, 지수 명시) 지구에 도달하는 태양빛의 강도는 약 \(1300\ \mathrm{W/m^2}\)이다. (a) 완전 흡수체·완전 반사체에 대한 복사압, (b) 대기압에 대한 비, (c) \(E_0\)와 \(B_0\)를 구하라. (Prob. 9.10 변형)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>(a)</b> \[ P_{\text{abs}}=\frac{I}{c}=\frac{1.3\times10^{3}}{3.0\times10^{8}}\approx 4.3\times10^{-6}\ \mathrm{Pa} \]
+반사체는 두 배: \(P_{\text{refl}}\approx 8.7\times10^{-6}\ \mathrm{Pa}\).
+<b>(b)</b> 대기압 \(1.0\times10^{5}\ \mathrm{Pa}\)에 대해
+\[ \frac{P_{\text{abs}}}{P_{\text{atm}}}\approx\frac{4.3\times10^{-6}}{1.0\times10^{5}}\approx 4\times10^{-11} \]
+즉 대기압의 약 \(10^{-11}\)배 — 지수 \(-11\).
+<b>(c)</b> \(I=\tfrac12 c\epsE_0^2\)에서
+\[ E_0^2=\frac{2I}{c\eps}=\frac{2(1.3\times10^{3})}{(3.0\times10^{8})(8.85\times10^{-12})} \]
+분모 \(\approx 2.66\times10^{-3}\), 분자 \(2.6\times10^{3}\)이므로 \(E_0^2\approx 9.8\times10^{5}\), 즉
+\[ E_0\approx 9.9\times10^{2}\ \mathrm{V/m}\approx 1\ \mathrm{kV/m},\qquad B_0=\frac{E_0}{c}\approx 3.3\times10^{-6}\ \mathrm{T} \]
+<b>스케일링 확인:</b> \(E_0\propto I^{1/2}\)이므로 강도가 100배인 레이저는 \(E_0\)가 10배다. 반대로 압력은 \(P\propto I^{1}\propto E_0^{2}\).
+</div></div>
+
+<div class="qz" data-q="u8-3"><div class="qq">(개념 + 계산) 진공 중 평면파에 대해 \(\langle \vb{S}\rangle\)를 복소 공식 \(\frac{1}{2\muz}\mathrm{Re}(\tilde{\vb{E}}\times\tilde{\vb{B}}^{*})\)로 구하고, 실수 계산 결과와 일치함을 보여라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+\(x\)편광, \(z\)진행 평면파:
+\[ \tilde{\vb{E}}=\tilde E_0\ee^{\ii(kz-\omega t)}\hat{\vb{x}},\qquad \tilde{\vb{B}}=\frac{\tilde E_0}{c}\ee^{\ii(kz-\omega t)}\hat{\vb{y}} \]
+켤레를 취하면 \(\tilde{\vb{B}}^{*}=\dfrac{\tilde E_0^{*}}{c}\ee^{-\ii(kz-\omega t)}\hat{\vb{y}}\). 지수가 <b>상쇄</b>되는 것이 이 공식의 핵심이다:
+\[ \tilde{\vb{E}}\times\tilde{\vb{B}}^{*}=\frac{|\tilde E_0|^2}{c}\,(\hat{\vb{x}}\times\hat{\vb{y}})=\frac{E_0^2}{c}\hat{\vb{z}} \]
+이미 실수이므로
+\[ \langle\vb{S}\rangle=\frac{1}{2\muz}\frac{E_0^2}{c}\hat{\vb{z}}=\frac12 c\epsE_0^2\,\hat{\vb{z}} \]
+(\(1/(\muz c)=c\eps\) 사용.) 유도 3의 결과와 일치 ✓.
+<b>주목할 점:</b> 켤레를 취한 덕분에 시간 의존성이 사라졌다. 그래서 이 공식은 "시간평균"만 주고 순간값은 주지 못한다. 또 \(\tilde E_0\)의 위상 \(\delta\)는 \(|\tilde E_0|^2\) 안에서 자동으로 사라지므로 답에 나타나지 않는다 — 물리적으로 당연하다.
+</div></div>
+
+<div class="qz" data-q="u8-4"><div class="qq">(개념) 복사압에 대한 소박한 설명("전기장이 전하를 흔들고 자기장이 밀어낸다")의 결함은 무엇인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>결함: 감쇠가 없으면 시간평균 자기력이 정확히 0이다</b>(Prob. 9.11).
+\(\vb{E}=E_0\cos\omega t\,\hat{\vb{x}}\)에 대해 \(m\dot{\vb v}=qE_0\cos\omega t\,\hat{\vb{x}}\)를 풀면
+\[ \vb{v}=\frac{qE_0}{m\omega}\sin\omega t\,\hat{\vb{x}} \]
+즉 속도가 전기장보다 위상이 \(90^\circ\) 늦다. 자기력은
+\[ \vb{F}=q\vb{v}\times\vb{B}=\frac{q^2E_0^2}{m\omega c}\sin\omega t\cos\omega t\,\hat{\vb{z}}=\frac{q^2E_0^2}{2m\omega c}\sin 2\omega t\,\hat{\vb{z}} \]
+\(\langle\sin2\omega t\rangle=0\)이므로 평균 힘이 <b>0</b>이다. 밀리지 않는다.
+<b>해결:</b> 에너지가 실제로 흡수되려면 전하의 운동에 저항이 있어야 한다. 감쇠력 \(-\gamma m\vb{v}\)를 넣으면 속도가 \(\vb{E}\)와 완전히 \(90^\circ\) 어긋나지 않고 동위상 성분이 생기며, 그때 \(\langle\vb{v}\times\vb{B}\rangle\neq0\)이 되어 올바른 복사압이 나온다. 완전 반사체의 경우에는 Planck식 설명이 더 깔끔하다 — 경계조건에서 표면전류 \(\vb{K}\)를 구하고 그 위의 자기력 \(\tfrac12\vb{K}\times\vb{B}\)를 계산하면 \(2I/c\)가 정확히 나온다(Prob. 9.36).
+<b>교훈:</b> 거시적 보존법칙(운동량 흐름)은 \(P=I/c\)를 확실히 보장하지만, 미시적 그림은 세부 모형에 민감하다. 시험에서 "왜 빛이 미는가"를 물으면 <b>Maxwell 응력텐서/운동량밀도</b>로 답하는 것이 안전하다.
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> \(u,\vb{S},\vb{g}\)를 실수 장에서 유도하고 \(I=\tfrac12c\epsE_0^2\), \(P=I/c\)(반사체 2배)를 즉시 쓸 수 있으며, 2차량에 복소 표기를 쓸 때의 규칙을 안다.</div>

@@ -1,0 +1,14 @@
+<div class="exq"><b>상황.</b> Example 13.1의 줄(길이 \(b\))을 가운데 \(x=b/2\)에서 \(F_0\cos\omega t\)로 흔든다. 작은 감쇠 \(D\) 포함. 정상 상태 변위.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>모드별 구동 진동자.</div>
+<ol>
+<li>힘 분포(δ 함수): \(f_s(t)=\int F(x,t)\sin\frac{s\pi x}b\dd x=F_0\cos\omega t\sin\frac{s\pi}2\) — 짝수 \(s\)는 0.</li>
+<li>\(\ddot\eta_s+\frac D\rho\dot\eta_s+\omega_s^2\eta_s=\frac{2F_0}{\rho b}\sin\frac{s\pi}2\cos\omega t\), \(\omega_s^2=\frac{s^2\pi^2\tau}{\rho b^2}\).</li>
+<li>3장의 정상 상태 해 (\(2\beta\to D/\rho\), \(A\to\frac{2F_0}{\rho b}\sin\frac{s\pi}2\)):
+\[ \eta_s=\frac{2F_0\sin(s\pi/2)}{\rho b}\,\frac{\cos(\omega t-\delta_s)}{\sqrt{(\omega_s^2-\omega^2)^2+D^2\omega^2/\rho^2}},\qquad \tan\delta_s=\frac{D\omega/\rho}{\omega_s^2-\omega^2}. \]</li>
+<li>\(q(x,t)=\sum_s\eta_s(t)\sin\frac{s\pi x}b\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ q(x,t)=\sum_{s\ \rm odd}\frac{2F_0\sin(s\pi/2)\cos(\omega t-\delta_s)\sin(s\pi x/b)}{\rho b\sqrt{(\omega_s^2-\omega^2)^2+D^2\omega^2/\rho^2}}\ } \]
+<p class="note">감쇠가 작으면 \(\omega\approx\omega_r\) (\(r\) 홀수)에서 그 모드가 지배. 과도 해는 감쇠로 사라지므로 정상 상태만. <b>검산</b>: \(\omega\to0\)이면 정적 처짐 — \(\sum\frac{2F_0}{\rho b\omega_s^2}\sin\frac{s\pi}2\sin\frac{s\pi x}b=\sum\frac{2F_0b}{\tau s^2\pi^2}\ldots\), 가운데 처짐 \(\frac{2F_0b}{\tau\pi^2}\cdot\frac{\pi^2}8=\frac{F_0b}{4\tau}\) — 가운데에 힘 \(F_0\)을 걸면 두 반쪽 장력의 수직 성분 \(2\tau\cdot\frac{y}{b/2}=F_0\) → \(y=\frac{F_0b}{4\tau}\) ✓.</p></div>
+<div class="qz" data-q="ex13.2-a"><div class="qq"><b>+α</b> 구동 진동수를 \(\omega=\omega_2\)(2번째 모드의 공명 진동수)로 맞추면 공명이 일어나는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 모드 2는 \(f_2=0\)이라 전혀 구동되지 않는다(가운데가 마디). 다른 홀수 모드들의 비공명 응답만 생긴다.</p></div></div>
+<div class="qz" data-q="ex13.2-b"><div class="qq"><b>+α</b> 힘이 줄 전체에 균일하게 분포(\(F(x,t)=F_0\cos\omega t\), 단위 길이당)하면 \(f_s\)는? 어떤 모드가 구동되는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(f_s=F_0\cos\omega t\int_0^b\sin\frac{s\pi x}b\dd x=F_0\cos\omega t\,\frac{b}{s\pi}[1-(-1)^s]\) — 홀수 모드만(\(\frac{2b}{s\pi}\)), 진폭 \(\propto1/s\). 균일한 힘은 가운데에 대해 대칭이라 반대칭(짝수) 모드와 직교.</p></div></div>

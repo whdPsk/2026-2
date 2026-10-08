@@ -1,0 +1,17 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>\(\vb{E}_{\rm in}=-\vb{P}/3\eps\), \(\vb{B}_{\rm in}=\tfrac23\muz\vb{M}\); 밖은 각각 쌍극자
+\(\vb{p}_d=\tfrac43\pi R^{3}\vb{P}\), \(\vb{m}=\tfrac43\pi R^{3}\vb{M}\).</p>
+<p><b>내부:</b>
+\[\eps\vb{E}_{\rm in}\times\vb{B}_{\rm in}\cdot\tfrac43\pi R^{3}
+=-\frac{2\muz}{9}(\vb{P}\times\vb{M})\frac{4\pi R^{3}}{3}
+=\frac{8\pi\muz R^{3}}{27}(\vb{M}\times\vb{P}).\]</p>
+<p><b>외부:</b> 두 쌍극자 장의 곱을 각도 평균하면
+\(\big\langle[3(\vb{p}_d\!\cdot\!\hat{\vb{r}})\hat{\vb{r}}-\vb{p}_d]\times[3(\vb{m}\!\cdot\!\hat{\vb{r}})\hat{\vb{r}}-\vb{m}]\big\rangle=\vb{m}\times\vb{p}_d\)
+(\(\langle(\vb{c}\cdot\hat{\vb{r}})\hat{\vb{r}}\rangle=\vb{c}/3\) 이용). 따라서
+\[\eps\!\!\int_{r&gt;R}\!\!\vb{E}\times\vb{B}\,d\tau=\frac{\muz}{4\pi}(\vb{m}\times\vb{p}_d)\int_R^\infty\frac{dr}{r^{4}}
+=\frac{\muz(\vb{m}\times\vb{p}_d)}{12\pi R^{3}}=\frac{4\pi\muz R^{3}}{27}(\vb{M}\times\vb{P}).\]</p>
+<p>합(외부 : 내부 = 1 : 2):
+\[\boxed{\;\vb{p}_{em}=\frac{4}{9}\pi\muz R^{3}\,(\vb{M}\times\vb{P})\;}\]</p>
+<div class="alabel">감점 포인트</div>
+내부 기여만 계산하고 끝내는 것(전체의 \(2/3\)밖에 안 된다). 외부 쌍극자–쌍극자 적분을 반드시 해야 한다.</div><!--/sol-->

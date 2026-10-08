@@ -1,0 +1,20 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>Eq. 10.79에서 \(1/r\)로 가는 부분(=복사장)만 추린다. 모든 도함수는 \(t_0=t-r/c\)에서 평가:</p>
+\[ \mathbf E_{\rm rad}=-\frac{\mu_0}{4\pi}\frac{\ddot{\mathbf p}-\hat{\mathbf r}(\hat{\mathbf r}\cdot\ddot{\mathbf p})}{r}
+=\frac{\mu_0}{4\pi r}\,\hat{\mathbf r}\times(\hat{\mathbf r}\times\ddot{\mathbf p}),\qquad
+\mathbf B_{\rm rad}=-\frac{\mu_0}{4\pi rc}\big(\hat{\mathbf r}\times\ddot{\mathbf p}\big)=\frac1c\hat{\mathbf r}\times\mathbf E_{\rm rad}. \]
+<p>서로 수직이고 \(E/B=c\)이므로</p>
+\[ \mathbf S=\frac1{\mu_0}\mathbf E\times\mathbf B=\frac{1}{\mu_0c}|\mathbf E_{\rm rad}|^2\hat{\mathbf r}
+=\frac{\mu_0}{16\pi^2cr^2}\Big[\ddot p^2-(\hat{\mathbf r}\cdot\ddot{\mathbf p})^2\Big]\hat{\mathbf r}
+=\frac{\mu_0\,\ddot p^2}{16\pi^2c}\frac{\sin^2\Theta}{r^2}\hat{\mathbf r} \]
+<p>(\(\Theta\)는 \(\ddot{\mathbf p}\)에서 잰 각) — 바로 Eq. 11.59다. 적분:</p>
+\[ \int\sin^2\Theta\,d\Omega=2\pi\int_0^\pi\sin^3\Theta\,d\Theta=2\pi\int_{-1}^{1}(1-x^2)dx=2\pi\Big(2-\frac23\Big)=\frac{8\pi}{3} \]
+\[ \boxed{\;P(t_0)=\frac{\mu_0\,[\ddot{\mathbf p}(t_0)]^2}{6\pi c}\;}\quad\text{(Eq. 11.60)} \]
+<p><b>검산 1 (사인형)</b>: \(\mathbf p=p_0\cos\omega t\,\hat{\mathbf z}\Rightarrow\ddot p^2=\omega^4p_0^2\cos^2\omega t_0\), \(\langle\cos^2\rangle=\tfrac12\):</p>
+\[ \langle P\rangle=\frac{\mu_0p_0^2\omega^4}{12\pi c}\;\checkmark\ \text{(Eq. 11.22)} \]
+<p><b>검산 2 (이차형)</b>: \(\mathbf p=\tfrac12\ddot p_0t^2\hat{\mathbf z}\Rightarrow\ddot{\mathbf p}=\ddot p_0\hat{\mathbf z}\) 일정:</p>
+\[ P=\frac{\mu_0\ddot p_0^2}{6\pi c}\;\checkmark\ \text{(Prob. 11.26(c))} \]
+<p>이로써 Section 11.1.4의 근사 유도가 <b>정확한</b> 쌍극자 장으로부터도 그대로 나옴을 확인했다.</p>
+<div class="alabel">감점 포인트</div>
+<p>Eq. 10.79의 \(1/r^3\) 항까지 \(\mathbf S\)에 넣고 적분하려 드는 것. \(r^2\mathbf S\)가 \(r\to\infty\)에서 유한한 항만 복사에 기여한다.</p></div><!--/sol-->

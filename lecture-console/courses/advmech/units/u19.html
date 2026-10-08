@@ -1,0 +1,33 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 초등물리의 평행축 정리 \(I=I_{\rm CM}+Md^2\)은 대각 성분 하나에 대한 이야기다. 원점을 CM에서 벡터 \(\vb a\)만큼 옮기면 <b>비대각</b> 성분(관성곱)은 어떻게 바뀔까? 질점 하나(질량 \(M\), 위치 \(\vb a\))의 관성 텐서를 떠올리면 답의 꼴이 보일 것이다. 그리고 정육면체를 중심에서 보면 텐서는 어떤 모양일까?</div>
+
+<h4>11.6 다른 원점에 대한 관성 텐서 <span class="en">generalized parallel-axis theorem</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>Steiner의 일반화된 평행축 정리 <b>(필수)</b></div>
+<ol>
+<li>CM 원점 \(O\)의 축 \(x_i\)와 같은 방향이지만 원점이 \(Q\)인 축 \(X_i\). \(Q\)에서 \(O\)로의 벡터 \(\vb a\): \(X_i=a_i+x_i\).</li>
+<li>\[ J_{ij}=\sum m\left(\delta_{ij}\sum_k X_k^2-X_iX_j\right)=\sum m\left[\delta_{ij}\sum_k(x_k+a_k)^2-(x_i+a_i)(x_j+a_j)\right]. \]</li>
+<li>전개하면 세 묶음: \(x\)만 있는 항 \(=I_{ij}\), \(a\)만 있는 항 \(=M(a^2\delta_{ij}-a_ia_j)\), 교차항 \(\propto\sum m\,x_k\) — CM 원점이므로 <b>모두 0</b>.</li>
+<li>\[ \boxed{\ J_{ij}=I_{ij}+M\left(a^2\delta_{ij}-a_ia_j\right)\ } \]
+둘째 항 = CM에 놓인 질점 \(M\)의 (Q 기준) 관성 텐서. 대각이면 \(J_{11}=I_{11}+M(a_2^2+a_3^2)\) — 초등 정리(축 사이 거리 제곱).</li>
+<li><b>주의</b>: 한쪽이 반드시 CM이어야 한다. 두 임의의 점 사이 변환은 CM을 경유해 두 번 적용.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>정육면체의 CM 텐서 — Example 11.6</div>
+<ol>
+<li>모서리 원점 텐서(U16): \(J_{ii}=\tfrac23Mb^2\), \(J_{ij}=-\tfrac14Mb^2\). CM은 \(\vb a=(b/2,b/2,b/2)\).</li>
+<li>대각: \(I_{11}=J_{11}-M(a_2^2+a_3^2)=\tfrac23Mb^2-\tfrac12Mb^2=\tfrac16Mb^2\).</li>
+<li>비대각: \(I_{12}=J_{12}-M(-a_1a_2)=-\tfrac14Mb^2+\tfrac14Mb^2=0\).</li>
+<li>\[ \I_{\rm CM}=\tfrac16Mb^2\,\mathbb 1 . \]
+면에 수직인 축이 주축이고 셋이 같다. 게다가 \(\lambda\mathbb 1\lambda^{\mathsf T}=\mathbb 1\)이므로 <b>어느 방향의 축이든 주축</b>(U20, Example 11.7) — 관성 텐서만으로는 정육면체와 구를 구별할 수 없다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 평행축</div>
+\[ J_{ij}=I^{\rm CM}_{ij}+M(a^2\delta_{ij}-a_ia_j),\qquad \text{정육면체: }I_{\rm CM}=\tfrac16Mb^2\mathbb 1 \]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u19-1"><div class="qq">일반화된 평행축 정리를 유도하고, 교차항이 사라지는 이유를 명시하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 1. 교차항은 \(2\delta_{ij}\sum_ka_k\sum m x_k-a_i\sum mx_j-a_j\sum mx_i\) — 모두 \(\sum m\,x_k=0\)(CM 원점) 때문에 0.</p></div></div>
+
+<div class="qz" data-q="u19-2"><div class="qq">높이 \(h\), 밑면 반지름 \(R\)인 균일 원뿔(Problem 11-4)의 꼭짓점 기준 관성 모멘트가 \(I_3=\tfrac3{10}MR^2\), \(I_1=\tfrac3{20}M(R^2+4h^2)\)일 때, CM(꼭짓점에서 \(\tfrac34h\)) 기준 \(I_1\)을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(I_1^{\rm CM}=\tfrac3{20}M(R^2+4h^2)-M\left(\tfrac34h\right)^2=\tfrac3{20}MR^2+\left(\tfrac35-\tfrac9{16}\right)Mh^2=\tfrac3{20}M\left(R^2+\tfrac{h^2}{4}\right)\). \(I_3\)은 축 위 이동이라 불변.</p></div></div>
+
+<div class="qz" data-q="u19-3"><div class="qq">질량 \(M\), 길이 \(L\)인 가는 막대가 \(x\)축 위 \([0,L]\)에 있다. 원점(끝) 기준 텐서를 CM 텐서 + 평행축으로 구하라. 비대각은 왜 0인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>CM: \(\mathrm{diag}(0,\tfrac1{12}ML^2,\tfrac1{12}ML^2)\). \(\vb a=(L/2,0,0)\): \(M(a^2\delta_{ij}-a_ia_j)=\mathrm{diag}(0,\tfrac14,\tfrac14)ML^2\). 합: \(\mathrm{diag}(0,\tfrac13,\tfrac13)ML^2\). 비대각 \(-Ma_ia_j\)는 \(\vb a\)의 성분이 하나뿐이라 0.</p></div></div>

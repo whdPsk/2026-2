@@ -1,0 +1,16 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> \(\mathbf m\)을 자전축 성분과 수직 성분으로 나눈다. 축성분 \(M\cos\psi\,\hat{\mathbf z}\)는 시간에 무관(복사 없음). 수직 성분은 크기 \(M\sin\psi\)로 \(xy\) 평면에서 회전:</p>
+\[ \mathbf m_\perp=M\sin\psi[\cos\omega t\,\hat{\mathbf x}+\sin\omega t\,\hat{\mathbf y}]\;\Rightarrow\;\ddot{\mathbf m}=-\omega^2\mathbf m_\perp,\;|\ddot{\mathbf m}|^2=\omega^4M^2\sin^2\psi. \]
+<p>Prob. 11.11의 결과 \(P=\mu_0\ddot m^2/6\pi c^3\)에 대입:</p>
+\[ \boxed{\;P=\frac{\mu_0M^2\omega^4\sin^2\psi}{6\pi c^3}\;}\quad(\text{시간에 무관}) \]
+<p><b>(b)</b> 쌍극자의 적도 표면장 \(B=\dfrac{\mu_0M}{4\pi R_E^3}\), \(B=0.5\,\mathrm{G}=5\times10^{-5}\)T, \(R_E=6.4\times10^6\)m:</p>
+\[ M=\frac{4\pi R_E^3B}{\mu_0}=\frac{4\pi(6.4\times10^6)^3(5\times10^{-5})}{1.26\times10^{-6}}\approx\boxed{\;1.3\times10^{23}\ \mathrm{A\,m^2}\;} \]
+<p><b>(c)</b> \(\omega=2\pi/86400=7.3\times10^{-5}\,\mathrm{s^{-1}}\), \(\omega^4=2.8\times10^{-17}\), \(\sin^2 11^\circ=0.036\):</p>
+\[ P=\frac{(1.26\times10^{-6})(1.3\times10^{23})^2(2.8\times10^{-17})(0.036)}{6\pi(3\times10^8)^3}\approx\boxed{\;4\times10^{-5}\ \mathrm W\;} \]
+<p>전구 하나의 100만분의 1도 안 되는 출력 — 완전히 무시 가능.</p>
+<p><b>(d)</b> 펄사: \(M=\dfrac{4\pi R^3B}{\mu_0}=\dfrac{4\pi(10^4)^3(10^8)}{1.26\times10^{-6}}\approx1\times10^{27}\,\mathrm{A\,m^2}\), \(\omega=2\pi/10^{-3}=6.3\times10^3\,\mathrm{s^{-1}}\), \(\omega^4=1.6\times10^{15}\). \(\sin^2\psi\sim0.5\)로 잡으면</p>
+\[ P\approx\frac{(1.26\times10^{-6})(10^{27})^2(1.6\times10^{15})(0.5)}{6\pi(3\times10^8)^3}\approx\boxed{\;2\times10^{36}\ \mathrm W\;} \]
+<p>태양 광도(\(4\times10^{26}\)W)의 100억 배 — 펄사가 회전에너지를 잃으며 느려지는(spin-down) 주된 메커니즘이다.</p>
+<div class="alabel">감점 포인트</div>
+<p>자기축 성분도 복사한다고 착각하는 것. 회전 대칭인 성분은 \(\ddot{\mathbf m}=0\)이라 복사가 없다. 또 gauss→tesla(\(10^{-4}\)) 환산 실수.</p></div><!--/sol-->

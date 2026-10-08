@@ -1,0 +1,17 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<b>(a)</b> \(\tilde{\mathbf E}=\tilde{\mathbf E}_0(x,y)e^{i(kz-\omega t)}\)이므로 \(\partial_z\to ik\), \(\partial_t\to-i\omega\). \(\nabla\times\mathbf E=-\partial_t\mathbf B\)의 세 성분:
+\[\partial_yE_z-ikE_y=i\omega B_x,\quad ikE_x-\partial_xE_z=i\omega B_y,\quad \partial_xE_y-\partial_yE_x=i\omega B_z\]
+\(\nabla\times\mathbf B=\frac{1}{c^2}\partial_t\mathbf E\)의 세 성분:
+\[\partial_yB_z-ikB_y=-\frac{i\omega}{c^2}E_x,\quad ikB_x-\partial_xB_z=-\frac{i\omega}{c^2}E_y,\quad \partial_xB_y-\partial_yB_x=-\frac{i\omega}{c^2}E_z\]
+이것이 Eq. 9.181. 이 중 \(E_x,E_y,B_x,B_y\)를 포함한 네 식을 두 개씩 짝지어 푼다. 예: (ii)에서 \(B_x=\frac{1}{i\omega}(\partial_yE_z-ikE_y)\)를 (vi)에 대입하면
+\[\frac{k}{\omega}\partial_yE_z-\frac{ik^2}{\omega}E_y+\frac{i\omega}{c^2}E_y=\partial_xB_z \ \Rightarrow\ E_y=\frac{i}{(\omega/c)^2-k^2}\left(k\frac{\partial E_z}{\partial y}-\omega\frac{\partial B_z}{\partial x}\right)\]
+같은 방식으로
+\[\boxed{\begin{aligned} E_x&=\frac{i}{(\omega/c)^2-k^2}\left(k\partial_xE_z+\omega\partial_yB_z\right), & E_y&=\frac{i}{(\omega/c)^2-k^2}\left(k\partial_yE_z-\omega\partial_xB_z\right),\\ B_x&=\frac{i}{(\omega/c)^2-k^2}\left(k\partial_xB_z-\tfrac{\omega}{c^2}\partial_yE_z\right), & B_y&=\frac{i}{(\omega/c)^2-k^2}\left(k\partial_yB_z+\tfrac{\omega}{c^2}\partial_xE_z\right). \end{aligned}}\]
+<b>(b)</b> \(\nabla\cdot\mathbf E=\partial_xE_x+\partial_yE_y+ikE_z=0\)에 위 식을 넣으면 \(B_z\)의 교차 이계도함수가 상쇄되고(\(\partial_x\partial_yB_z-\partial_y\partial_xB_z=0\))
+\[\frac{ik\left(\partial_x^2+\partial_y^2\right)E_z}{(\omega/c)^2-k^2}+ikE_z=0\ \Rightarrow\ \boxed{\left[\partial_x^2+\partial_y^2+(\omega/c)^2-k^2\right]E_z=0}\]
+\(\nabla\cdot\mathbf B=0\)에서 똑같이
+\[\boxed{\left[\partial_x^2+\partial_y^2+(\omega/c)^2-k^2\right]B_z=0}\]
+(Eq. 9.181의 (i),(iv)를 써도 같은 결과가 나온다.) 결국 종방향 성분 \(E_z,B_z\)만 풀면 나머지는 미분으로 얻는다.
+<div class="alabel">감점 포인트</div>
+\((\omega/c)^2-k^2=0\)이면 Eq. 9.182가 정의되지 않는다 — 이 특이한 경우가 TEM 모드이고, 속 빈 도파관에서는 불가능(Prob. 9.29). 이 단서를 빼먹지 말 것.</div><!--/sol-->

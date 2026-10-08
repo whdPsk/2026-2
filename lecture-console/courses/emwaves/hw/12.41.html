@@ -1,0 +1,12 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>12.37의 식을 \(\vb{a}\)에 대해 <b>역으로 푸는</b> 것이 요령이다. 먼저 양변에 \(\vb{u}\cdot\)를 취한다:</p>
+\[ \vb{u}\cdot\vb{F}=\gamma m\Big[\vb{u}\cdot\vb{a}+\frac{u^{2}(\vb{u}\cdot\vb{a})}{c^{2}-u^{2}}\Big]=\gamma m(\vb{u}\cdot\vb{a})\frac{c^{2}}{c^{2}-u^{2}}=\gamma^{3}m(\vb{u}\cdot\vb{a}) \]
+\[ \Rightarrow\ \vb{u}\cdot\vb{a}=\frac{\vb{u}\cdot\vb{F}}{\gamma^{3}m}. \]
+<p>이것을 다시 대입하면(\(1/(c^{2}-u^{2})=\gamma^{2}/c^{2}\))</p>
+\[ \vb{a}=\frac{\vb{F}}{\gamma m}-\frac{\gamma^{2}}{c^{2}}\vb{u}\frac{\vb{u}\cdot\vb{F}}{\gamma^{3}m}=\frac{1}{\gamma m}\Big[\vb{F}-\frac{\vb{u}(\vb{u}\cdot\vb{F})}{c^{2}}\Big]. \]
+<p>이제 Lorentz 힘 \(\vb{F}=q(\vb{E}+\vb{u}\times\vb{B})\)를 넣는다. \(\vb{u}\cdot(\vb{u}\times\vb{B})=0\)이므로 \(\vb{u}\cdot\vb{F}=q\,\vb{u}\cdot\vb{E}\):</p>
+\[ \boxed{\ \vb{a}=\frac{q\sqrt{1-u^{2}/c^{2}}}{m}\Big[\vb{E}+\vb{u}\times\vb{B}-\frac{1}{c^{2}}\vb{u}(\vb{u}\cdot\vb{E})\Big]\ } \]
+<p>물리적 의미: 자기장은 결코 속력을 바꾸지 못하므로 \(\gamma\)를 변화시키는 것은 오직 \(\vb{u}\cdot\vb{E}\)뿐이고, 마지막 항이 바로 그 "\(\gamma\)를 키우는 데 쓰이는" 몫을 가속도에서 덜어낸다.</p>
+<div class="alabel">감점 포인트</div>
+\(\vb{a}=\vb{F}/(\gamma m)\)에서 멈추는 것 — 세로 성분 보정 \(-\vb{u}(\vb{u}\cdot\vb{E})/c^{2}\)이 핵심.</div><!--/sol-->

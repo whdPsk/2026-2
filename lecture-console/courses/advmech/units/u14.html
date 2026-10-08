@@ -1,0 +1,44 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 북극점에 진자를 매달아 흔들면, 진동면은 관성 공간에 고정되어 있고 지구가 그 밑에서 돈다 — 진동면은 하루에 한 바퀴 도는 것처럼 보일 것이다. 적도에서는? 그 사이 위도 \(\lambda\)에서는 회전 속도가 \(\omega\)의 몇 배일지 함수 꼴을 추측해 보라(힌트: U13에서 수평 운동에 영향을 준 것은 \(\boldsymbol\omega\)의 어느 성분이었나?).</div>
+
+<h4>10.4 Foucault 진자 <span class="en">the Foucault pendulum — Example 10.5</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>결합된 운동방정식 — 교재 식 (10.42)–(10.46) <b>(필수)</b></div>
+<ol>
+<li>원점을 진자의 평형점, \(z\)축 연직 위, \(x\) 남, \(y\) 동. 진폭이 작아 \(\dot z\ll\dot x,\dot y\) → \(\dot z\approx0\).</li>
+<li>\(\vb a_r=\vb g+\vb T/m-2\boldsymbol\omega\times\vb v_r\). 장력의 수평 성분은 \(T_x=-T\,x/l\), \(T_y=-T\,y/l\) (진자 길이 \(l\)).</li>
+<li>\(\boldsymbol\omega=(-\omega\cos\lambda,0,\omega\sin\lambda)\), \(\vb v_r=(\dot x,\dot y,0)\):
+\[ \boldsymbol\omega\times\vb v_r=(-\dot y\,\omega\sin\lambda,\ \dot x\,\omega\sin\lambda,\ -\dot y\,\omega\cos\lambda). \]</li>
+<li>수평 성분 (\(T\approx mg\), \(\alpha^2\equiv g/l\), \(\omega_z\equiv\omega\sin\lambda\)):
+\[ \ddot x+\alpha^2x=2\omega_z\dot y,\qquad \ddot y+\alpha^2y=-2\omega_z\dot x . \]
+<b>\(\boldsymbol\omega\)의 연직 성분만</b> 들어간다 — 예측의 답. 두 식은 \(\dot y\), \(\dot x\)로 서로 얽힌 <b>결합 방정식</b>(Ch.12 예고).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>복소 변수로 풀기 → 진동면이 \(\omega\sin\lambda\)로 회전 <b>(필수)</b></div>
+<ol>
+<li>\(q\equiv x+iy\). 첫 식 + \(i\times\)둘째 식:
+\[ \ddot q+\alpha^2q=2\omega_z(\dot y-i\dot x)=-2i\omega_z(\dot x+i\dot y)=-2i\omega_z\dot q \]
+\[ \Rightarrow\ \ddot q+2i\omega_z\dot q+\alpha^2q=0 . \]
+감쇠 진동자와 같은 꼴, 단 "감쇠 계수"가 순허수.</li>
+<li>\(q=e^{pt}\): \(p^2+2i\omega_zp+\alpha^2=0\) → \(p=-i\omega_z\pm i\sqrt{\alpha^2+\omega_z^2}\approx-i\omega_z\pm i\alpha\) (\(\alpha\gg\omega_z\)).
+\[ q(t)=e^{-i\omega_zt}\left(Ae^{i\alpha t}+Be^{-i\alpha t}\right). \]</li>
+<li>괄호는 지구가 돌지 않을 때의 해 \(q'(t)=x'+iy'\). 따라서 \(q=q'e^{-i\omega_zt}\): 실수·허수부를 비교하면
+\[ \begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}\cos\omega_zt&\sin\omega_zt\\-\sin\omega_zt&\cos\omega_zt\end{pmatrix}\begin{pmatrix}x'\\y'\end{pmatrix}. \]
+회전 행렬 — 진동면이 각속도 \(\omega_z=\omega\sin\lambda\)로 돈다 (위에서 보면 시계방향, 북반구).</li>
+<li>주기: \(T_F=\dfrac{2\pi}{\omega\sin\lambda}=\dfrac{\text{1 항성일}}{\sin\lambda}\). 극: 약 24시간(23h56m), 서울(37.5°): 약 39시간, 적도: 회전 없음.</li>
+</ol></div>
+
+<div class="callout"><b class="head">기하학적 해석.</b> \(\boldsymbol\omega\)를 연직 성분 \(\omega\sin\lambda\)와 수평 성분 \(\omega\cos\lambda\)로 나누면, 지표의 국소 좌표계는 연직축 둘레로 \(\omega\sin\lambda\)로 돈다. 진동면은 (국소적으로) 관성 공간에 고정되려 하므로 지면 기준으로는 \(-\omega\sin\lambda\)로 돈다. 수평 성분은 진자면을 수평축 둘레로 돌리려 하지만 중력이 연직을 붙잡아 효과가 없다. (평행 이동의 기하학적 위상 — 하루 동안 위도선을 따라 도는 동안 누적되는 회전각 \(2\pi\sin\lambda\).)</div>
+
+<div class="formula"><div class="ftitle">암기 — Foucault</div>
+\[ \ddot x+\alpha^2x=2\omega_z\dot y,\quad \ddot y+\alpha^2y=-2\omega_z\dot x,\quad \omega_z=\omega\sin\lambda \]
+\[ q=x+iy:\ \ddot q+2i\omega_z\dot q+\alpha^2q=0\ \Rightarrow\ q=q'e^{-i\omega_zt},\qquad T_F=\frac{2\pi}{\omega\sin\lambda} \]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u14-1"><div class="qq">(시험형) Foucault 진자의 결합 방정식을 \(q=x+iy\)로 풀어 진동면의 회전 각속도를 구하라. \(\alpha\gg\omega_z\) 근사가 어디서 쓰이는지 표시할 것.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 2. 근사는 특성근의 \(\sqrt{\alpha^2+\omega_z^2}\approx\alpha\)에서만 쓰인다 — 이것 덕분에 괄호 안이 정확히 "회전 없는 해"가 된다. 근사 없이도 진동면 회전 각속도는 정확히 \(\omega_z\)이고, 진동수만 \(\sqrt{\alpha^2+\omega_z^2}\)로 조금 바뀐다.</p></div></div>
+
+<div class="qz" data-q="u14-2"><div class="qq">서울(위도 37.5°, \(\sin37.5°\approx0.609\))에서 Foucault 진자의 진동면이 1시간에 몇 도 도는가? 한 바퀴 도는 데 걸리는 시간은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>지구는 1시간에 약 15.04°(항성일 기준). \(15.04°\times0.609\approx9.2°/\)h. 한 바퀴: \(23.93/0.609\approx39.3\) 시간. 북반구이므로 위에서 볼 때 시계방향.</p></div></div>
+
+<div class="qz" data-q="u14-3"><div class="qq">북극점에서의 Foucault 진자를 <b>관성계</b>에서 설명하고, 결과 \(\omega_z=\omega\)가 유도 2와 일치함을 확인하라. 적도에서 진동면이 돌지 않는 이유는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>극점: 매단 점이 자전축 위에 있어 진자에 작용하는 힘(중력, 장력)은 모두 진동면 안에 있다 → 진동면은 관성 공간에 고정, 지구가 그 밑에서 \(\omega\)로 돈다 → 지면에서 보면 \(-\omega\) ✓ (\(\sin90°=1\)). 적도: \(\boldsymbol\omega\)가 수평이라 연직 성분 0 — 국소 좌표계가 연직축 둘레로 돌지 않는다.</p></div></div>
+
+<div class="qz" data-q="u14-4"><div class="qq">(연결) Foucault 방정식 \(\ddot q+2i\omega_z\dot q+\alpha^2q=0\)은 균일 자기장 속 하전 입자의 2차원 조화 퍼텐셜 운동과 같은 꼴이다. 대응 관계를 써라(Larmor 정리).</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>Lorentz 힘 \(q_e\vb v\times\vb B\)와 Coriolis 힘 \(-2m\boldsymbol\omega\times\vb v=2m\vb v\times\boldsymbol\omega\)를 비교하면 \(q_e\vb B\leftrightarrow2m\boldsymbol\omega\), 즉 \(\omega\leftrightarrow q_eB/2m\) (Larmor 진동수). 약한 자기장의 효과는 Larmor 진동수로 도는 좌표계로 옮기면 1차에서 사라진다 — Foucault 진자에서 회전계로 가면 Coriolis가 사라지는 것과 같은 구조.</p></div></div>

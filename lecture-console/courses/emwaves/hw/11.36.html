@@ -1,0 +1,23 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> Prob. 11.28의 일반해에 \(K(t)=K_0\cos\omega t\)를 넣으면 양쪽으로 나가는 평면파:</p>
+\[ \boxed{\;\mathbf E=-\frac{\mu_0cK_0}{2}\cos\!\big[\omega(t-|x|/c)\big]\hat{\mathbf z},\qquad
+\mathbf B=\pm\frac{\mu_0K_0}{2}\cos\!\big[\omega(t-|x|/c)\big]\hat{\mathbf y}\;} \]
+<p>(위 부호는 \(x&gt;0\), 아래는 \(x&lt;0\).) 확인:</p>
+<ul>
+<li>\(\mathbf E\perp\mathbf B\perp\hat{\mathbf x}\), \(E/B=c\), 위상 일치 — 자유공간 평면파 ✓ (Maxwell 만족).</li>
+<li>접선 \(\mathbf E\) 연속: \(x=0^\pm\) 양쪽 모두 \(-\frac{\mu_0cK_0}{2}\cos\omega t\,\hat{\mathbf z}\) ✓.</li>
+<li>\(\mathbf B\) 도약: \(\mathbf B_{\rm above}-\mathbf B_{\rm below}=\mu_0K_0\cos\omega t\,\hat{\mathbf y}=\mu_0(\mathbf K\times\hat{\mathbf n})\) ✓.</li>
+</ul>
+<p><b>(b)</b> \(x&gt;0\)에서 \(\hat{\mathbf z}\times\hat{\mathbf y}=-\hat{\mathbf x}\)이므로</p>
+\[ \mathbf S=\frac1{\mu_0}\mathbf E\times\mathbf B=\frac{\mu_0cK_0^2}{4}\cos^2[\omega(t-x/c)]\,\hat{\mathbf x},\qquad
+\langle\mathbf S\rangle=\frac{\mu_0cK_0^2}{8}\hat{\mathbf x} \]
+<p>(\(x&lt;0\)에서는 \(-\hat{\mathbf x}\) 방향, 즉 언제나 평면에서 <b>바깥으로</b>).</p>
+<p>평면을 감싸는 얇은 pillbox(면적 \(A\))에 대해 \(\oint\langle\mathbf S\rangle\cdot d\mathbf a=2\cdot\frac{\mu_0cK_0^2}{8}A\):</p>
+\[ \boxed{\;\frac{\langle P\rangle}{A}=\frac{\mu_0cK_0^2}{4}\;} \]
+<p><b>(c)</b> 전류를 구동하는 주체가 하는 일률(단위면적당)은 장이 전류에 하는 일의 음수, 즉 \(-\mathbf E\cdot\mathbf K\) (평면 위 \(\mathbf E\) 값을 사용):</p>
+\[ -\mathbf E\cdot\mathbf K=+\frac{\mu_0cK_0}{2}\cos\omega t\cdot K_0\cos\omega t=\frac{\mu_0cK_0^2}{2}\cos^2\omega t,
+\qquad\Big\langle\cdot\Big\rangle=\frac{\mu_0cK_0^2}{4}\;\checkmark \]
+<p>정확히 (b)와 일치 — 공급한 에너지가 전부 복사로 나간다. (전기장이 전류와 <b>반대 방향</b>이라는 점이 핵심: 복사가 전류에 저항으로 작용한다. 이것이 자유공간 임피던스 \(\mu_0c=377\,\Omega\)의 물리적 의미다.)</p>
+<div class="alabel">감점 포인트</div>
+<p>(c)에서 \(\mathbf E\cdot\mathbf K\)의 부호를 반대로 잡아 "장이 전류에 에너지를 준다"고 쓰는 것. 그리고 pillbox 양면 합산(인수 2)을 빠뜨리는 실수.</p></div><!--/sol-->

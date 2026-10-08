@@ -1,0 +1,313 @@
+<div class="predict"><b>◈ 학습 목표.</b> (1) 9/3 Review Questions 8개(flux · 에너지밀도 · 복사압 · 방출계수 · 흡수계수 · 광학깊이 · 원천함수 · RT 해)에 <b>말로</b> 답한다. (2) 흡수만/방출만/둘 다 있는 복사전달식을 세우고 형식해 \(I_\nu=I_\nu(0)e^{-\tau_\nu}+\int_0^{\tau_\nu}S_\nu e^{-\tau'}d\tau'\)와 균일 층의 해 \(I_\nu(0)e^{-\tau_\nu}+S_\nu(1-e^{-\tau_\nu})\)를 직접 쓴다. (3) 등방 복사의 flux, 거리 d에서의 흑체 flux·복사압, 흡수에 의한 복사력과 복사압의 관계를 유도·해석한다. (4) PPT Q1–Q4(태양 세기, 화성 거리의 J·u, 태양계 반경, P=u/3)를 계산기로 푼다.</div>
+
+<div class="callout"><b class="head">이 단원의 원자료.</b> 9/3(목) 수업 = 플립 동영상 3개(플립 04 방출 또는 흡수 대기 · 플립 05 일반적인 대기 등) 시청 후 → Review Questions 구두 점검 → 보충(동영상에서 생략된 깊은 내용) → 예제 Q1–Q4. PPT는 Lecture02 FlippedLearning(파일 날짜 9/4). 수업 순서대로 정리했다. [[S0903.01, S0903.17]]</div>
+
+<h4>0. 복습 — Flux · 에너지밀도 · 복사압 <span class="en">Review: flux, energy density, pressure</span></h4>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 3 ① <span class="st">Review Questions</span></div>
+<ul><li>What is the flux?</li></ul>
+[[L02.s3a]]</div>
+<div class="explain"><b>부가설명 (수업 모범답)</b> 학생 답: "어떤 지점(면)에 입사하는 단위 시간당 · 단위 면적당 에너지". 교수님은 여기서 한 단계 더 나아가 <span class="hl">세기 \(I_\nu\)를 알면 flux를 어떻게 구하나</span>를 정량적으로 정리했다. \(dE=I_\nu\,dA\cos\theta\,dt\,d\nu\,d\Omega\)가 specific intensity의 정의이고, \(\cos\theta\)는 면적의 <b>투영</b>(projection) 때문이다. flux는 "에너지 ÷ 면적 ÷ 시간 (÷ 진동수)"이므로 나머지를 정리하면
+\[F_\nu=\int I_\nu\cos\theta\,d\Omega .\]
+<span class="star">강조</span> "이 관계식을 항상 기억하고 있어야겠어요. 이게 정리라고 생각하면 되겠어요." [[S0903.01]]</div>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 3 ② <span class="st">Review Questions</span></div>
+<ul><li>What is the radiation energy density?</li></ul>
+[[L02.s3b]]</div>
+<div class="explain"><b>부가설명 (수업 모범답)</b> 강의실을 예로: 여러 전등에서 나오는 복사, 블라인드를 열면 창밖에서 들어오는 복사 — 이 공간에 들어 있는 복사 에너지가 얼마인가가 에너지밀도 \(u_\nu\)다. 세기를 방향에 대해 적분하고 \(4\pi\)로 나누면 평균세기 \(J_\nu\), \(4\pi\) 대신 <b>빛의 속도 c</b>로 나누면 에너지밀도:
+\[u_\nu={1\over c}\int I_\nu\,d\Omega={4\pi\over c}J_\nu .\]
+단위는 에너지/부피/진동수 간격. <span class="hl">에너지밀도의 단위는 근본적으로 압력의 단위와 같다</span>(erg cm⁻³ = dyn cm⁻²) — 에너지를 c로 나누면 운동량, 운동량의 시간 변화율이 힘, 그것이 압력과 연결되기 때문. [[S0903.02]]</div>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 3 ③ <span class="st">Review Questions</span></div>
+<ul><li>What is the radiation pressure?</li></ul>
+[[L02.s3c]]</div>
+<div class="explain"><b>부가설명 (수업 모범답)</b> \(P_\nu=\dfrac1c\displaystyle\int I_\nu\cos^2\theta\,d\Omega\). c로 나누는 것은 압력이 <b>운동량 전달</b>이기 때문. \(\cos^2\theta\)의 두 \(\cos\theta\) 중 하나는 flux와 같은 면적 투영, 다른 하나는 광자가 가져온 운동량 중 <b>면에 수직인 성분</b>만 전달되기 때문이다. [[S0903.03]]</div>
+<div class="trap"><b>헷갈리는 포인트 — cos 개수와 1/c</b> 세 양을 나란히 보면 규칙이 없어 보인다: 에너지밀도 \(\cos^0\), flux \(\cos^1\), 복사압 \(\cos^2\). 그리고 <span class="hl">1/c는 flux에는 없고 에너지밀도·압력에는 있다</span>. 압력의 1/c는 에너지→운동량 변환, 에너지밀도의 1/c는 "흐름(세기)을 빛의 속도로 나눠 공간에 머무는 양"으로 바꾸는 것이라고 이해하면 된다. [[S0903.03]]</div>
+
+<h4>1. 방출계수 <span class="en">Emission coefficient jν</span></h4>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 3 ④ <span class="st">Review Questions</span></div>
+<ul><li>What is the emission coefficient (units)?</li></ul>
+[[L02.s3d]]</div>
+<div class="explain"><b>부가설명 (수업 모범답)</b> 기체 입자들이 있을 때 "한 움큼"을 잡고 그것이 방출하는 능력. 대개 <b>스펙트럼선</b>을 떠올리면 된다 — 예: Hα선을 본다면 단위 부피(또는 1 g)에 든 수소 원자들이 Hα로 낼 수 있는 에너지. 그 방출이 시선(line of sight)을 따라 전달되어 관측자에게 온다. [[S0903.04]]<br>
+성간 구름(또는 별 내부 물질)을 망원경으로 보면, 분해가 안 되면 전체가, 분해가 되면 CCD의 한 영역(한 시선 방향)에 들어온 복사를 보는 것이다. 옆에서 단면을 보면 <span class="hl">구름 뒤쪽에서 출발한 복사가 앞까지 오면서 방출된 것을 쭉 다 모으는 것</span>. 각 수소 원자가 Hα를 방출하는 능력을 \(j_\nu\)라 하고,
+\[ [j_\nu]=\text{erg s}^{-1}\,\text{cm}^{-3}\,\text{Hz}^{-1}\,\text{sr}^{-1}\]
+즉 <b>단위 부피 · 단위 시간 · 단위 진동수 · 단위 입체각당</b> 방출 에너지. [[S0903.05, F04.02]]</div>
+
+<div class="slide flip"><div class="sh">플립 04 · 0:00–4:28 <span class="st">방출만 있는 경우의 복사전달</span></div>
+<ol>
+<li>전 차시: 흡수·방출이 없는 공간에서는 \(dI_\nu/ds=0\) — specific intensity는 거리에 무관(보존). 매질을 통과하며 흡수·방출이 일어나면 이 식이 바뀐다. 이번 차시 내용: 복사의 방출과 흡수, 복사전달식과 그 해, 열적 복사. [[F04.01]]</li>
+<li>\(j_\nu\)(방출계수) = 단위 부피·시간·진동수·입체각당 생성 에너지. 흡수 쪽 \(-\kappa_\nu\) 항의 \(\kappa_\nu\)(흡수계수)는 [길이⁻¹] = [면적/부피] → "1 cm³ 물질이 행사하는 총 흡수 단면적". [[F04.02]]</li>
+<li>흡수계수 대신 <b>opacity</b> \(\kappa'_\nu=\kappa_\nu/\rho\) [cm² g⁻¹]를 쓰기도 함 → "1 g 물질이 행사하는 총 단면적". 둘 다 있는 경우는 어려우니 가장 간단한 경우부터: 방출만. 방출은 연속선에서도, 선복사에서도 나타날 수 있다. [[F04.03]]</li>
+<li>면적 \(dA\), 두께 \(ds\)인 얇은 층 안의 물질이 새로 만드는 에너지: \(dE_{\rm em}=j_\nu\,(dA\,ds)\,d\Omega\,dt\,d\nu\) (j가 단위 부피당이므로 부피·입체각·시간·진동수를 곱함). 여기에 외부에서 세기 \(I_\nu\)인 복사가 들어온다. [[F04.04]]</li>
+<li>통과 후 = 들어온 복사 + 새로 만든 복사. 수직 입사라 \(\cos\theta=1\). 세기 변화로 쓴 에너지 \(dI_\nu\,dA\,dt\,d\nu\,d\Omega\)와 같게 놓으면 \(dI_\nu=j_\nu\,ds\). <span class="hl">부피당 양에 거리 ds를 곱해서 면적당(세기 단위)으로 바뀐 것</span>. [[F04.05]]</li>
+<li>따라서 방출만 있을 때 \[ {dI_\nu\over ds}=j_\nu .\] free space에서는 우변이 0이었던 것. [[F04.06]]</li>
+</ol></div>
+<div class="explain"><b>부가설명</b> 수업: 방출만 있으면 \(dI_\nu=j_\nu ds\)이고, 구름을 뒤에서 앞까지 통과하며 <span class="hl">방출계수를 시선 따라 쭉 적분해 주면 그게 다 모여 specific intensity가 된다</span>: \(I_\nu=I_\nu(0)+\int j_\nu ds\). 단위도 \(j\cdot ds\) = 세기 단위로 맞는다. [[S0903.09]]</div>
+
+<h4>2. 흡수계수와 opacity <span class="en">Absorption coefficient κν, opacity</span></h4>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 3 ⑤ <span class="st">Review Questions</span></div>
+<ul><li>What is the absorption coefficient (units)?</li></ul>
+[[L02.s3e]]</div>
+<div class="explain"><b>부가설명 (수업 모범답)</b> 학생 답: "길이⁻¹, 흡수 단면적". 교수님 정리: \(\kappa_\nu\)의 단위는 <b>길이의 역수</b>(cm⁻¹). \[\kappa_\nu=n\,\sigma_\nu\] (n: 흡수 입자 수밀도 [cm⁻³], σ: 입자 하나의 흡수 단면적 [cm²]) → 곱하면 cm⁻¹. [[S0903.06, F04.07]]<br>
+예: Hα는 n=3→2로 떨어질 때 나오는 복사. 반대로 <b>n=2 상태</b>의 수소 원자에 Hα 광자가 오면 전자가 들뜨면서 흡수할 수 있다. 이 흡수(들뜸) 단면적 \(\sigma_\nu\)은 진동수의 함수이고 <span class="hl">양자역학으로 계산하는 양</span> — 교재에는 있지만 이 수업에서는 시간 관계로 거기까지 가지 않는다. [[S0903.07]]</div>
+
+<div class="slide flip"><div class="sh">플립 04 · 4:28–6:53 <span class="st">흡수만 있는 경우</span></div>
+<ol>
+<li>흡수만 있으면 매질이 들어오는 복사를 흡수. 그림의 공 8개 = 흡수 입자, 각각의 단면적 \(\sigma_\nu\) → \(\kappa_\nu=n\sigma_\nu\), 단위 [cm⁻³][cm²]=[cm⁻¹]. [[F04.06, F04.07]]</li>
+<li>얇은 층 통과 후 \(I_\nu\)가 \(I_\nu+dI_\nu\)로 — 깎여 나가므로 \(dI_\nu&lt;0\). [[F04.07]]</li>
+<li>흡수되어 사라진 에너지 \(=\kappa_\nu ds\times I_\nu\,dA\,dt\,d\nu\,d\Omega\). <span class="hl">\(\kappa_\nu ds\)는 무차원 — "흡수될 확률"</span>. [[F04.08]]</li>
+<li>\(dA\,dt\,d\Omega\,d\nu\)는 specific intensity 정의 때문에 붙는 공통 인자 → 소거: \[dI_\nu=-\kappa_\nu I_\nu\,ds\] (마이너스 = 흡수되어 사라짐). [[F04.09]]</li>
+</ol></div>
+<div class="intuit"><b>직관 — 퍼센티지로 깎인다</b> 흡수로 깎이는 양은 <b>들어온 양에 비례</b>: 많이 들어가면 많이 깎인다. "10% 흡수된다면 10개 들어가면 1개, 100개 들어가면 10개 깎이는" 식이다. 그래서 \(dI\propto -I\) → 지수함수 감소. [[S0903.10]]</div>
+
+<div class="slide flip"><div class="sh">플립 04 · 1:40–2:32 <span class="st">opacity — 1 g이 가진 단면적</span></div>
+<ol><li>\(\kappa_\nu\)=1 cm³ 물질의 총 흡수 단면적, opacity \(\kappa'_\nu=\kappa_\nu/\rho\)=1 g 물질의 총 단면적(cm² g⁻¹). 복사력·에딩턴 한계 등에서 "질량당"이 자연스러울 때 쓴다(아래 10절). [[F04.03]]</li></ol></div>
+
+<h4>3. 광학깊이 <span class="en">Optical depth τν</span></h4>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 3 ⑥ <span class="st">Review Questions</span></div>
+<ul><li>What is the optical depth (units)?</li></ul>
+[[L02.s3f]]</div>
+<div class="explain"><b>부가설명 (수업 모범답)</b> 광학깊이는 흡수계수에 길이를 곱해 <span class="hl">단위를 없앤 양 — 무차원</span>. 구름 그림에서 시선 길이 L이면 \(\tau_\nu=\kappa_\nu L\) (일반적으로 \(\int\kappa_\nu ds\)). "단위 길이당 흡수할 수 있는 능력 × 길이 = 흡수할 수 있는 능력". 기준은 <b>1</b>: τ&gt;1이면 optically thick(불투명), τ&lt;1이면 optically thin — 들여다볼 수 있다. [[S0903.07, S0903.08]]</div>
+<div class="intuit"><b>비유 — 흙탕물과 맑은 시냇물</b> 비 와서 흙탕물이 뒤섞여 흐르면 바닥이 안 보인다 → optically thick (빛이 바닥에 닿기 전에 다 흡수돼 사라짐). 흙이 다 가라앉은 고요한 시냇물은 바닥까지 투명하게 보인다 → optically thin. "얼마나 흡수가 잘 되느냐를 판단하는 것이 τ". [[S0903.08]]</div>
+<div class="trap"><b>STT 수치 의심</b> 녹음상 "2를 기준으로 해서 1보다 크면…" — 문맥·플립 05로 보면 기준은 <b>1</b>(녹음 "2"는 오인식). [[S0903.08, F05.03]]</div>
+
+<div class="slide flip"><div class="sh">플립 04 · 6:53–9:11 <span class="st">흡수만 — 광학깊이로 풀기 (I = I₀e^−τ)</span></div>
+<ol>
+<li>\(\kappa_\nu ds\)(미세 거리 ds 동안 흡수될 확률)을 \(d\tau_\nu\)로 정의하되 부호를 붙인다: \[d\tau_\nu\equiv-\kappa_\nu\,ds .\] 그러면 \(dI_\nu=-\kappa_\nu I_\nu ds=I_\nu\,d\tau_\nu\), 즉 \(dI_\nu/d\tau_\nu=I_\nu\). [[F04.10]]</li>
+<li><b>왜 마이너스?</b> 광자는 왼쪽→오른쪽 진행, s도 그 방향으로 증가. 그런데 광학깊이는 <span class="hl">관측자(오른쪽 끝)에서 멀어지는 방향으로</span> 잰다 → \(ds\)와 \(d\tau\)의 증가 방향이 반대라서 −. [[F04.11]]</li>
+<li>양변을 \(I_\nu\)로 나누면 \(dI_\nu/I_\nu=d\tau_\nu\). 왼쪽 끝에서 오른쪽 끝까지 적분: s는 0→s, τ는 \(\tau_\nu\)→0. [[F04.11, F04.12]]</li>
+<li>\(\displaystyle\int_{I_\nu(0)}^{I_\nu(s)}{dI\over I}=\int_{\tau_\nu}^{0}d\tau\) → \(\ln\dfrac{I_\nu(s)}{I_\nu(0)}=0-\tau_\nu=-\tau_\nu\). [[F04.12]]</li>
+<li>양변에 지수: \[I_\nu(s)=I_\nu(0)\,e^{-\tau_\nu}.\] 나오는 세기 = 들어간 세기 × 지수 감소 인자. [[F04.12, F04.13]]</li>
+<li>지수의 \(\tau_\nu\) = <b>총 광학깊이</b>(total optical depth). 적분 구간을 뒤집어 마이너스를 없애면 \[\tau_\nu=\int_0^{s}\kappa_\nu(s')\,ds' .\] [[F04.13]]</li>
+</ol></div>
+
+<div class="slide flip"><div class="sh">플립 05 · 0:00–3:23 <span class="st">광학깊이의 의미 · 생존확률 · 평균자유행로</span></div>
+<ol>
+<li>광학깊이 = 주어진 진동수(파장)에서 매질이 복사에 대해 <b>얼마나 불투명한가</b>. 크면 불투명(복사가 잘 통과 못함), 작으면 잘 통과. <b>무차원, 항상 양수</b>. \(\tau_\nu\ll1\): optically thin(흡수 잘 안 됨). [[F05.01]]</li>
+<li>\(\tau_\nu\gg1\): optically thick, 광학적으로 매우 두꺼운 매질 — 흡수가 강해 광자가 잘 통과 못함. [[F05.02]]</li>
+<li>\(e^{-\tau_\nu}\) = 들어간 복사가 얼마나 <b>살아남았는가</b> → <span class="hl">survival probability(생존확률)</span>. 최대 1(다 살아남음), 0이면 다 사라짐. [[F05.02, F05.03]]</li>
+<li>이 확률 분포로 광학깊이의 평균을 내면 \[\langle\tau\rangle=\int_0^\infty\tau\,e^{-\tau}d\tau=1 .\] 그래서 thick/thin의 기준을 <b>1</b>로 잡는다. [[F05.03]]</li>
+<li>차원만 보면 \(\tau\sim\kappa_\nu L\). τ=1이 되는 거리 \[\ell_\nu={1\over\kappa_\nu}={1\over n\sigma_\nu}\] = 그 진동수에서 광자의 <b>평균자유행로</b>(mean free path). 이 정도 거리를 지나면 광자가 흡수돼 사라졌다고 대략 말할 수 있다. [[F05.03, F05.04]]</li>
+</ol></div>
+<div class="apply"><b>수치 감각</b> python: \(e^{-0.1}=0.905\), \(e^{-1}=0.368\), \(e^{-3}=0.0498\), \(e^{-10}=4.5\times10^{-5}\). τ=1이면 약 37%만 살아남고, τ=3이면 5%. "τ≈1 표면까지 본다"는 말의 근거. [[F05.02, F05.04]]</div>
+
+<h4>4. 원천함수와 복사전달 방정식 <span class="en">Source function &amp; RT equation</span></h4>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 3 ⑦ <span class="st">Review Questions</span></div>
+<ul><li>What is the source function?</li></ul>
+[[L02.s3g]]</div>
+<div class="explain"><b>부가설명 (수업 모범답)</b> 학생 답: \(S_\nu=j_\nu/\kappa_\nu\). 복사전달식 \(\dfrac{dI_\nu}{ds}=j_\nu-\kappa_\nu I_\nu\)에서 출발. (방출만 → \(dI=j\,ds\); 흡수만 → \(dI=-\kappa I ds\), \(\kappa ds\)는 무차원이라 단위가 맞는다.) [[S0903.09]] 두 효과를 함께 쓰고 ds로 나눈 뒤 \(-\kappa_\nu\)로 나누면 \(d\tau_\nu=-\kappa_\nu ds\)로 바뀌며 \[{dI_\nu\over d\tau_\nu}=I_\nu-S_\nu,\qquad S_\nu\equiv{j_\nu\over\kappa_\nu}.\] [[S0903.10]]</div>
+
+<div class="slide flip"><div class="sh">플립 05 · 6:01–7:51 <span class="st">흡수 + 방출 → 일반적인 복사전달식</span></div>
+<ol>
+<li>방출만: \(dI_\nu/ds=j_\nu\). 흡수만: \(dI_\nu/ds=-\kappa_\nu I_\nu\) (ds로 나눴을 때). [[F05.08, F05.09]]</li>
+<li>둘 다 있는 매질: \[{dI_\nu\over ds}=j_\nu-\kappa_\nu I_\nu .\] [[F05.09]]</li>
+<li>양변을 \(-\kappa_\nu\)로 나누고 \(-\kappa_\nu ds=d\tau_\nu\) 사용 → 앞 항은 마이너스가 없어져 \(I_\nu\), 뒤 항은 \(-j_\nu/\kappa_\nu\). [[F05.09]]</li>
+<li>\(j_\nu/\kappa_\nu\equiv S_\nu\) = <b>source function(원천함수)</b>. 일반적인 복사전달 방정식: \[{dI_\nu\over d\tau_\nu}=I_\nu-S_\nu .\] 1차 미분방정식이고 푸는 방법은 잘 알려져 있다. [[F05.09]]</li>
+</ol></div>
+
+<div class="prof"><b>수업 중 부호 관례 설명 — "관점 차이"</b> \(d\tau=-\kappa ds\)의 마이너스는 관점 차이다. 관측자가 오른쪽에 있으면 s는 복사가 진행하는 방향으로 증가하는데, 광학깊이는 교재마다 다르게 잡는다(뒤에서부터 재거나, 관측자 쪽을 0으로 놓고 안쪽으로 재거나). <span class="hl">이 수업은 관측자 쪽 표면을 τ=0으로 잡고 안쪽으로 τ가 증가하는 관례</span>를 따른다 — 시냇물을 내려다볼 때 수면이 τ=0, 바닥 쪽으로 τ 증가. 그래서 s 증가 방향과 τ 증가 방향이 반대라 마이너스. [[S0903.10, S0903.11]]</div>
+<div class="trap"><b>함정 — 좌표 먼저 적기</b> 다른 교재(예: 깊이를 광선 진행 방향으로 재는 경우)는 \(dI/d\tau=-I+S\)처럼 부호가 반대로 보인다. 물리는 같다. 문제 풀 때 <b>τ=0이 어디인지(관측자 쪽)</b>와 경계조건 \(I_\nu(\tau=\tau_\nu)=I_\nu(0)\)을 먼저 적으면 부호 혼동이 없다. [[S0903.11, F04.11]]</div>
+
+<h4>5. 복사전달식의 해 <span class="en">Formal solution &amp; uniform slab</span></h4>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 3 ⑧ <span class="st">Review Questions</span></div>
+<ul><li>What is the solution of the RT equation for the medium with optical depth \(\tau_\nu\)?</li></ul>
+[[L02.s3h]]</div>
+<div class="explain"><b>부가설명</b> <span class="star">강조</span> "\(I_\nu(s)\)는 이거 이제 <span class="hl">여러분이 적을 수 있어야 돼요</span>. 두 가지 항으로." 미분방정식은 다 알고 있으니 양변에 마이너스를 곱해 정리하고 풀면 된다. [[S0903.11]] 아래 플립 유도와 해석 참고. 이 Review 질문에 대한 답 설명을 마친 뒤 교수님: "이런 질문에 스스로 답할 수 있으면 내용을 잘 알고 있는 것 — 정성적으로도, 정량적으로도 설명할 수 있어야." [[S0903.16, S0903.17]]</div>
+
+<div class="slide flip"><div class="sh">플립 05 · 7:51–9:25 <span class="st">형식해 유도 (적분인자)</span></div>
+<ol>
+<li>출발: \(\dfrac{dI_\nu}{d\tau_\nu}=I_\nu-S_\nu\). \(I_\nu\)를 좌변으로: \(\dfrac{dI_\nu}{d\tau_\nu}-I_\nu=-S_\nu\). [[F05.10]]</li>
+<li>형식해를 구하려면 양변에 \(e^{-\tau_\nu}\)를 곱한다: \(\left(\dfrac{dI_\nu}{d\tau_\nu}-I_\nu\right)e^{-\tau_\nu}=-S_\nu e^{-\tau_\nu}\). [[F05.10]]</li>
+<li>좌변은 하나의 미분으로 쓸 수 있다: \(\dfrac{d}{d\tau_\nu}\left(I_\nu e^{-\tau_\nu}\right)=\dfrac{dI_\nu}{d\tau_\nu}e^{-\tau_\nu}-I_\nu e^{-\tau_\nu}\) (곱의 미분, \(e^{-\tau}\)를 미분하면 \(-e^{-\tau}\)). 그래서 \[{d\over d\tau'}\left(I_\nu e^{-\tau'}\right)=-S_\nu e^{-\tau'} .\] [[F05.10]]</li>
+<li>적분 구간: 매질 왼쪽 끝 s=0 ↔ \(\tau'=\tau_\nu\), 오른쪽 끝(관측자 쪽) s ↔ \(\tau'=0\). 좌변 끝에서 우변 끝까지 적분: \[\Big[I_\nu e^{-\tau'}\Big]_{\tau'=\tau_\nu}^{\tau'=0}=-\int_{\tau_\nu}^{0}S_\nu e^{-\tau'}d\tau'=\int_0^{\tau_\nu}S_\nu e^{-\tau'}d\tau' .\] 마이너스를 없애면서 적분 구간을 0→\(\tau_\nu\)로 바꾼 것. [[F05.11]]</li>
+<li>좌변: s에서는 \(\tau'=0\)이라 \(I_\nu(s)\cdot1\), s=0에서는 \(\tau'=\tau_\nu\)라 \(I_\nu(0)e^{-\tau_\nu}\) → 좌변 \(=I_\nu(s)-I_\nu(0)e^{-\tau_\nu}\). [[F05.11, F05.12]]</li>
+<li>이항하면 <b>복사전달식의 형식해(formal solution)</b>: \[I_\nu(s)=I_\nu(0)\,e^{-\tau_\nu}+\int_0^{\tau_\nu}S_\nu(\tau')\,e^{-\tau'}\,d\tau' .\] [[F05.12]]</li>
+</ol></div>
+
+<div class="explain"><b>부가설명 — 두 항의 의미 (수업)</b> <b>첫 항</b>: 밖에서 들어온 복사가 광학깊이 \(\tau_\nu\)인 구름을 지나며 깎여 나간 정도 — 흡수만 있을 때의 지수 감소(다른 과목에서도 이미 배운 exponential decay). <b>둘째 항</b>: 광학깊이 \(\tau'\)인 지점에서 S로 방출된 것은 관측자까지 나오는 동안 \(e^{-\tau'}\)만큼 깎인다. 여기서 방출된 것은 이만큼, 저기서 방출된 것은 저만큼 깎이고 — <span class="hl">모든 지점에서 만들어진 복사가 나머지 경로를 지나 나오는 동안 깎이는 것을 다 더한 것</span>이 적분이다. [[S0903.12]]</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>균일 원천함수(S 일정) 층의 해</div><ol>
+<li>실제로는 위치마다 S가 변하지만, <b>일정하다고 가정</b>하면 적분 밖으로 나온다: \(\displaystyle\int_0^{\tau_\nu}S_\nu e^{-\tau'}d\tau'=S_\nu\left[-e^{-\tau'}\right]_0^{\tau_\nu}=S_\nu\left(1-e^{-\tau_\nu}\right)\). [[S0903.12]]</li>
+<li>따라서 \[I_\nu(s)=I_\nu(0)\,e^{-\tau_\nu}+S_\nu\left(1-e^{-\tau_\nu}\right).\] <span class="star">시험</span> "문제 풀 때 가장 많이 쓰는 식": s를 통과해 나온 세기 = 처음 들어간 것이 지수 인자만큼 깎인 것 + 중간에 원천함수로 만들어진 것. [[S0903.12, S0903.13]]</li>
+<li><b>Optically thick</b> (\(\tau_\nu\gg1\)): \(e^{-\tau_\nu}\to0\) → \(I_\nu\to S_\nu\). 배경 정보는 지워지고 원천함수만 보인다. [[S0903.13]]</li>
+<li><b>Optically thin</b> (\(\tau_\nu\ll1\)): \(e^{-\tau}\approx1-\tau\) → \(I_\nu\approx I_\nu(0)+\left(S_\nu-I_\nu(0)\right)\tau_\nu\). 배경이 없으면 \(I_\nu\approx S_\nu\tau_\nu=j_\nu L\) — 방출만 있을 때의 \(\int j\,ds\)와 일치. [[S0903.09, F05.01]]</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 흡수·방출과 복사전달</div><p><b>국소 전달 방정식</b></p>\[ {dI_\nu\over ds}=j_\nu-\kappa_\nu I_\nu,\quad S_\nu={j_\nu\over\kappa_\nu},\quad d\tau_\nu=-\kappa_\nu ds,\quad {dI_\nu\over d\tau_\nu}=I_\nu-S_\nu \]<p class="note">j: erg s⁻¹ cm⁻³ Hz⁻¹ sr⁻¹ (=I/길이), κ=nσ: cm⁻¹, opacity κ/ρ: cm² g⁻¹, τ: 무차원·양수. <i>조건: τ=0은 관측자 쪽 표면(수업 관례)</i></p><p><b>형식해 · 균일 층의 해</b></p>\[ I_\nu=I_\nu(0)e^{-\tau_\nu}+\int_0^{\tau_\nu}S_\nu e^{-\tau'}d\tau'\;\xrightarrow{S\ \rm const}\;I_\nu(0)e^{-\tau_\nu}+S_\nu(1-e^{-\tau_\nu}) \]<p class="note">첫 항은 살아남은 배경(생존확률 e⁻τ), 둘째 항은 층 자체의 방출이 깎이고 남은 것. <i>조건: 둘째 식은 S 일정</i></p><p><b>한계와 척도</b></p>\[ \tau\gg1:\ I\to S;\qquad \tau\ll1:\ I\simeq I_0+(S-I_0)\tau;\qquad \langle\tau\rangle=1,\ \ \ell_\nu=1/\kappa_\nu=1/(n\sigma_\nu) \]<p class="note">밝아질지 어두워질지는 S와 배경 I₀의 상대 크기로 정해진다(S&gt;I₀ 방출선, S&lt;I₀ 흡수선).</p></div>
+
+<h4>6. 흑체 · Planck 함수 · 밝기온도 <span class="en">Black body, brightness temperature</span></h4>
+
+<div class="explain"><b>부가설명 — 흑체는 optically thick</b> \(\tau\gg1\)에서 \(I_\nu=S_\nu\): 바로 소스 펑션이 specific intensity가 된다. 그런 것이 흑체 복사다. <span class="hl">흑체는 optically thick</span>(매우 dense하니까). 특히 흑체에서는 원천함수가 <b>Planck 함수</b>: \(S_\nu=B_\nu(T)\). [[S0903.13]] \[B_\nu(T)={2h\nu^3\over c^2}{1\over e^{h\nu/kT}-1}\] — "이 정도는 알고 있겠죠." 전파 영역(Rayleigh–Jeans, \(h\nu\ll kT\))에서는 \(e^{x}-1\approx x\)로 테일러 전개 → \[B_\nu\approx{2\nu^2kT\over c^2}\] h가 없어지고 <b>온도에 비례</b>. 주어진 진동수(예: Hα 6563 Å)라면 세기 ∝ 온도. [[S0903.14]]</div>
+<div class="explain"><b>부가설명 — 밝기온도</b> 관측된 세기를 \(I_\nu={2\nu^2kT_B\over c^2}\)로 <b>그냥 대응</b>시킨 온도가 brightness temperature \(T_B\): 관측 복사를 흑체로 간주했을 때 해당하는 온도(실제 복사는 흑체가 아닐 수 있고 정체는 모르지만 대응만 시킨다). 균일 층의 해에 대입하면(RJ, \(S=B_\nu(T)\)) \[T_B=T_{B0}\,e^{-\tau_\nu}+T\left(1-e^{-\tau_\nu}\right)\] T: 구름(복사를 내는 기체)의 실제 온도, \(\tau_\nu\): 광학깊이, \(T_{B0}\): 멀리서 구름으로 들어오는 배경의 밝기온도, \(T_B\): 망원경으로 실제 관측한 밝기온도. 관측으로 \(T_B, T_{B0}\)를 알면 구름의 온도와 광학깊이를 구할 수 있다 → 예제 1.5. [[S0903.15]]</div>
+<div class="prof"><b>수업 중 질문 — "j/κ로 정의한 S가 왜 물리적으로 세기와 같은 의미인가?"</b> 좋은 질문. 흑체 내부를 생각하면, 흑체 복사의 특성은 <b>온도에만</b> 의존하고 위치에 무관하다(태양은 중심과 바깥 온도가 달라 완벽한 흑체는 아니지만, ideal한 흑체 내부의 복사장은 위치에 무관). 그러면 \(dI_\nu/d\tau_\nu\)가 0이어야 한다(τ는 경로가 길어지면 변하는 거리 같은 양인데 I가 안 변하므로). \(0=I_\nu-S_\nu\) → <span class="hl">\(S_\nu=I_\nu\)</span>, 그리고 흑체의 세기를 Planck 함수로 기술한다. [[S0903.16]]</div>
+<div class="trap"><b>함정</b> "optically thick이면 항상 흑체"는 아니다. \(I\to S\)일 뿐이고, \(S=B_\nu(T)\)는 물질이 열평형(LTE)에 있을 때의 이야기. 산란이 우세하면 S는 B가 아니다(u05). [[S0903.13]]</div>
+
+<h4>7. 보충 ① 등방 복사의 flux <span class="en">Flux of isotropic radiation</span></h4>
+
+<div class="explain"><b>부가설명</b> 보충이라는 게 중요하지 않다는 뜻이 아니라, <span class="hl">동영상으로 설명하기엔 너무 깊이 들어가 생략한 내용</span>. 복사장이 isotropic하다면(흑체 복사, 흑체 내부 복사처럼 방향에 무관) total flux는? [[S0903.17]]</div>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 4 ① <span class="st">Flux of Isotropic Radiation</span></div>
+<ul><li>Total flux: \(F_\nu=F_\nu^+-F_\nu^-\)
+\[F_\nu=\int I_\nu\cos\theta\,d\Omega=I_\nu\int\cos\theta\sin\theta\,d\theta\,d\phi=2\pi I_\nu\int\sin\theta\cos\theta\,d\theta=2\pi I_\nu\int_{-1}^{1}\mu\,d\mu=0,\qquad\mu=\cos\theta\]</li></ul>
+[[L02.s4a]]</div>
+<div class="explain"><b>부가설명</b> 등방이라 \(I_\nu\)가 상수 → 적분 밖으로. 구면좌표에서 \(d\Omega=\sin\theta\,d\theta\,d\phi\), φ 적분은 2π. 수리물리에서처럼 \(\mu=\cos\theta\)로 바꾸면 \(\sin\theta\,d\theta=-d\mu\), θ: 0→π 이면 μ: 1→−1 — 마이너스로 적분 순서를 뒤집어 \(\int_{-1}^{1}\mu\,d\mu\). μ는 <b>홀함수</b>라 0. [[S0903.18]]<br><span class="hl">flux가 0이라고 복사장이 없는 게 아니다</span> — flux는 <b>벡터</b>(방향 평균)이기 때문. 위에서 내려오는 복사와 아래서 올라오는 복사가 상쇄된 것. 그래서 가상의 면(가상의 detector)을 두고 들어가는 것만, 나오는 것만 따로 재 보자. [[S0903.18]]</div>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 4 ② <span class="st">Flux of Isotropic Radiation</span></div>
+<ul><li>Outward flux: \[F_\nu^+=\int_0^{2\pi}\!\!\int_0^{\pi/2}I_\nu\cos\theta\sin\theta\,d\theta\,d\phi=2\pi I_\nu\int_0^1\mu\,d\mu=\pi I_\nu\]</li></ul>
+[[L02.s4b]]</div>
+<div class="explain"><b>부가설명</b> θ를 0→π/2(반구)만 적분 → μ: 0→1, \(\int_0^1\mu d\mu=1/2\) → \(\pi I_\nu\). <span class="hl">지난 시간 "flux = 흑체 Planck 함수 × π"의 π가 바로 여기서 나온다</span>(\(F_{\rm surf}=\pi B_\nu\)). [[S0903.18]]</div>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 4 ③ <span class="st">Flux of Isotropic Radiation</span></div>
+<ul><li>Inward flux: \[F_\nu^-=-\int_0^{2\pi}\!\!\int_{\pi/2}^{\pi}I_\nu\cos\theta\sin\theta\,d\theta\,d\phi=2\pi I_\nu\int_0^{-1}\mu\,d\mu=\pi I_\nu\]</li></ul>
+[[L02.s4c]]</div>
+<div class="explain"><b>부가설명</b> 들어가는 방향이라 앞의 마이너스 포함, θ: π/2→π(극각 0°의 반대쪽이 π) → μ: 0→−1. \(\int_0^{-1}\mu\,d\mu=+1/2\) → \(\pi I_\nu\). 총 flux가 0인 것은 <b>들어가는 양과 나가는 양이 같기</b> 때문. [[S0903.19]]<br>왜 보통 나가는 것만 생각하나? 태양 같은 소스라면 소스에서 나오는 것만 관측하기 때문. 태양 표면에 detector를 대면 거의 옆면(90°)으로 들어오는 복사부터 수직으로 오는 복사까지 모든 2π 방향의 복사를 적분한 것이 \(F^+\). [[S0903.19]]</div>
+
+<h4>8. 보충 ② 거리 d에서의 흑체 flux <span class="en">Black-body flux at distance d</span></h4>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 5 ① <span class="st">Black-body Flux at Distance d</span></div>
+<ul><li>At the surface of a star: \(F_{\nu,\rm surf}=\pi B_\nu\)<ul><li>\(B_\nu\) is the Planck function.</li></ul></li></ul>
+<p>[그림: 반지름 R인 별(구)과 거리 d 떨어진 관측점. 관측점에서 별 가장자리에 접하는 원뿔(반각 \(\theta_s\), 입체각 \(\Omega_s\)), 접점에서 반지름 R과 시선이 직각.]</p>
+[[L02.s5a]]</div>
+<div class="explain"><b>부가설명</b> flux가 거리 제곱에 반비례한다는 건 알고 있는데, \(F=\int I\cos\theta d\Omega\) 정의에는 <b>거리 정보가 없는 것처럼 보인다</b>. 사실 들어 있다 — 왜 그런지 해결해 보자. 표면에서는 Planck 함수 × π로 방출된다. 거리 d에서도 정말 \(1/d^2\)이 나오는가? detector의 법선을 별 중심 방향으로, φ는 법선 둘레로 0→2π, θ는 법선에서 잰다. [[S0903.20]]</div>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 5 ② <span class="st">Black-body Flux at Distance d</span></div>
+<ul><li>At a distance d from the star:
+\[F_{\nu,d}=\int_0^{2\pi}\!\!\int_0^{\theta_s}B_\nu\cos\theta\sin\theta\,d\theta\,d\phi=2\pi B_\nu\int_{\mu_s}^{1}\mu\,d\mu=\pi B_\nu(1-\mu_s^2)=\pi B_\nu\sin^2\theta_s=\pi B_\nu\left({R\over d}\right)^2\approx B_\nu\Delta\Omega_s\]</li></ul>
+[[L02.s5b]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>수업 칠판 풀이 순서</div><ol>
+<li>복사는 θ=0부터 별 가장자리 각 \(\theta_s\)까지에서만 온다(그 밖은 복사 없음). 별 표면 각 영역에서 오는 복사가 다 detector를 통과. \(B_\nu\)는 방향 무관 → 밖으로, φ 적분 → 2π. [[S0903.21]]</li>
+<li>\(\mu=\cos\theta\): θ=0 ↔ μ=1, \(\theta_s\) ↔ \(\mu_s\). \(\int_{\mu_s}^1\mu d\mu=\tfrac12(1-\mu_s^2)\). [[S0903.21]]</li>
+<li>\(1-\cos^2\theta_s=\sin^2\theta_s\). 접점에서 직각이므로 \(\sin\theta_s=R/d\) <b>(정확)</b> → \(F_{\nu,d}=\pi B_\nu(R/d)^2\). 여기까지 exact. [[S0903.21]]</li>
+<li>\(\pi R^2\) = 별 원반의 (투영) 면적, ÷\(d^2\) → <span class="hl">거리 제곱에 반비례</span>. 그리고 그 양 \(\pi R^2/d^2\)은 <b>소스가 차지하는 입체각</b>이다. [[S0903.21, S0903.22]]</li>
+</ol></div>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 5 ③ <span class="st">Black-body Flux at Distance d</span></div>
+<ul><li>where \(\Delta\Omega_s\) is the solid angle subtended by the source:
+\[\Delta\Omega_s=\int_0^{2\pi}\!\!\int_0^{\theta_s}d\Omega=2\pi(1-\cos\theta_s)\approx\pi\theta_s^2=\pi\left({R\over d}\right)^2\]</li></ul>
+[[L02.s5c]]</div>
+<div class="explain"><b>부가설명</b> 입체각을 정밀하게 계산: 각도 범위는 같고 피적분함수는 \(d\Omega\)뿐 → \(2\pi\int_0^{\theta_s}\sin\theta d\theta=2\pi(1-\cos\theta_s)\) (여기까지 exact). \(\theta_s\)가 작으면 테일러 전개 \(\cos\theta_s\approx1-\theta_s^2/2\) → \(\pi\theta_s^2\). small angle에서는 \(\sin\theta\approx\tan\theta\approx\theta\)이므로 \(\theta_s\approx R/d\). <span class="hl">소스의 (원반) 면적 ÷ 거리² = 소스가 차지하는 입체각</span> — 천문학적 상황에서는 거의 항상 잘 성립. 그래서 \(F_{\nu,d}\approx B_\nu\Delta\Omega_s\). [[S0903.22]]</div>
+<div class="apply"><b>수치 감각</b> 태양–지구: \(R_\odot/1\,{\rm au}=4.65\times10^{-3}\) rad → \(\Delta\Omega_\odot=\pi(4.65\times10^{-3})^2=6.8\times10^{-5}\) sr. exact \(2\pi(1-\cos\theta_s)\)와 근사의 차이는 10⁻⁵ 수준 이하(python). [[L02.s5c]]</div>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 5 ④ <span class="st">Black-body Flux at Distance d</span></div>
+<ul><li>Luminosity: \(L_\nu=4\pi R^2F_{\nu,\rm surf}=4\pi R^2\pi B_\nu=4\pi d^2F_{\nu,d}\)</li></ul>
+[[L02.s5d]]</div>
+<div class="explain"><b>부가설명</b> 정의상 거리 정보가 없어 보였던 flux가 멀어질수록 <b>소스가 차지하는 입체각이 줄어서</b> \(1/d^2\)로 감소 → 일반천문학에서 배운 flux와 일치. 광도 = 표면 flux × 표면적(4πR²): 관측자는 한 면으로 온 것만 보지만 실제로는 사방으로 퍼져 나가므로 4π. 거리 d에서 \(F_{\nu,d}=\pi B_\nu R^2/d^2\)를 쓰면 반지름 d인 구의 표면적을 곱해도 같은 광도 → <span class="hl">중간에 흡수되거나 새로 생기는 복사가 없다면 당연히 보존</span>. [[S0903.23]]</div>
+
+<h4>9. 보충 ③ 거리 d에서의 복사압 <span class="en">Radiation pressure at distance d</span></h4>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 6 ① <span class="st">Radiation Pressure</span></div>
+<ul><li>\[P_\nu={1\over c}\int I_\nu\cos^2\theta\,d\Omega\]</li></ul>
+[[L02.s6a]]</div>
+<div class="slide"><div class="sh">L02 · 슬라이드 6 ② <span class="st">Radiation Pressure</span></div>
+<ul><li>At a distance d from a star,
+\[P_\nu={2\pi\over c}B_\nu\int_0^{\theta_s}\cos^2\theta\sin\theta\,d\theta={2\pi\over c}B_\nu\int_{\mu_s}^1\mu^2d\mu={2\pi\over3c}B_\nu(1-\cos^3\theta_s)={2\pi\over3c}B_\nu\cdot{3\over2}\theta_s^2={\pi\over c}B_\nu\left({R\over d}\right)^2={1\over c}F_{\nu,d}\]</li></ul>
+<p>[그림: 슬라이드 5와 같은 별–원뿔 그림]</p>
+[[L02.s6b]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>단계 확인</div><ol>
+<li>방향 무관 \(B_\nu\) → 밖으로, φ 적분 → 2π. \(\mu=\cos\theta\) → \(\int_{\mu_s}^1\mu^2d\mu=\tfrac13(1-\mu_s^3)\). 여기까지 exact. [[S0903.24]]</li>
+<li>small angle: \(\cos^3\theta_s\approx(1-\theta_s^2/2)^3\approx1-\tfrac32\theta_s^2\) → \(1-\cos^3\theta_s\approx\tfrac32\theta_s^2\). 3/2가 1/3과 만나 \(\tfrac{2\pi}{3c}\cdot\tfrac32=\tfrac{\pi}{c}\). [[S0903.24]]</li>
+<li>\(\theta_s\approx R/d\) → \(P_\nu=\dfrac{\pi}{c}B_\nu\dfrac{R^2}{d^2}=\dfrac{F_{\nu,d}}{c}\). [[S0903.24]]</li>
+</ol></div>
+<div class="explain"><b>부가설명</b> 보통 <span class="hl">복사압 = flux ÷ 빛의 속도</span>. 단, 일반적이진 않다 — flux 정의는 \(\cos\theta\), 압력은 \(\cos^2\theta\). 소스가 멀리 있으면 \(\cos\theta\approx1\)이라 같아지는 것. [[S0903.25]]</div>
+
+<h4>10. 흡수에 의한 복사력 <span class="en">Radiation force by absorption</span></h4>
+
+<div class="explain"><b>부가설명</b> 복사압은 이렇게 정의되는데, <b>실제로 어떤 역할</b>을 할까? 압력 자체는 아무 역할을 못한다 — pressure gradient가 힘. 이것을 물리적으로 이해하기 위해 flux 벡터를 도입한다. [[S0903.25]]</div>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 7 ① <span class="st">Radiation Force by Absorption</span></div>
+<ul><li>Define the flux vector of radiation propagating in the \(\hat{\mathbf k}\)-direction. \[\mathbf F_\nu\equiv\int I_\nu\hat{\mathbf k}\,d\Omega\]
+<ul><li>\(\kappa_\nu\mathbf F_\nu\) = absorbed flux per unit length (per unit frequency) = energy absorbed per unit volume per unit time (per unit frequency)</li></ul></li></ul>
+[[L02.s7a]]</div>
+<div class="slide flip"><div class="sh">플립 05 · 3:23–5:09 <span class="st">flux 벡터와 흡수된 flux</span></div>
+<ol>
+<li>복사가 흡수되면 운동량을 전달해 힘을 행사. 수학적으로 기술하려고 flux 벡터를 정의. 1차시 flux(단위 시간·면적·진동수당 에너지)에는 \(\cos\theta\)가 붙었는데, 근본적으로 flux는 <b>벡터</b>. [[F05.05]]</li>
+<li>면적 \(d\mathbf A\)를 통과하는 복사 에너지 = \(\mathbf F_\nu\cdot d\mathbf A=\int I_\nu(\hat{\mathbf k}\cdot\hat{\mathbf n})d\Omega\,dA\); 면 법선과 \(\hat{\mathbf k}\) 사이 각이 θ → \(\int I_\nu\cos\theta d\Omega\,dA\). dA로 나누면 cosθ가 있는 flux 정의와 일치. 벡터 표현이 더 근본적. [[F05.05, F05.06]]</li>
+<li>\(\kappa_\nu\)는 [길이⁻¹]이므로 \(\kappa_\nu\mathbf F_\nu\) = absorbed flux <b>per unit length</b> (첨자 ν는 per unit frequency). [[F05.06, F05.07]]</li>
+<li>flux = 에너지 per unit area per unit time; area × length = volume → \(\kappa_\nu F_\nu\) = 단위 부피·시간·진동수당 흡수 에너지. [[F05.07]]</li>
+</ol></div>
+<div class="explain"><b>부가설명</b> 빛이 지나가는 방향이 \(\hat{\mathbf k}\). 관측하려면 면적을 놓아야 하고, 면 법선과 \(\hat{\mathbf k}\)를 내적하면 거기서 \(\cos\theta\)가 하나 나온다 — 벡터로 적었지만 <span class="hl">cosθ 인자를 은연중에 가진 표현, 좀 더 advanced한 표현</span>. 물질이 있어 흡수하면 \(\kappa_\nu\)(단위 길이당 흡수 능력) × flux = 흡수된 flux per unit length. 에너지/면적/시간에 /길이 → 단위 부피·시간당 흡수 에너지. [[S0903.25, S0903.26]]</div>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 7 ② <span class="st">Radiation Force by Absorption</span></div>
+<ul><li>Since \(p=E/c\) for photons, \(\kappa_\nu\mathbf F_\nu/c\) = the momentum absorbed per unit volume per unit time (per unit frequency) = the radiation force per unit volume (per unit frequency)</li></ul>
+[[L02.s7b]]</div>
+<div class="slide flip"><div class="sh">플립 05 · 5:09–7:01 <span class="st">운동량 → 힘</span></div>
+<ol>
+<li>광자의 운동량 = 에너지/c → \(\kappa_\nu F_\nu/c\) = 흡수된 광자가 가져다준 운동량 per unit volume per unit time (per unit frequency). [[F05.07]]</li>
+<li>운동량 ÷ 시간 = 힘 → <b>radiation force</b> per unit volume per unit frequency. 진동수로 적분하면 단위 부피당 총 복사력. 이 힘을 받으면 입자가 밀려날 수 있다. [[F05.08]]</li>
+</ol></div>
+<div class="explain"><b>부가설명</b> 복사가 흡수되면 광자가 가지고 있던 운동량이 물질에 전달되고, 물질은 작은 힘에 밀려나려 한다. 흡수 전에는 (물질의) 운동량 0 → 흡수되니까 운동량이 생김 → 시간당 운동량 변화율 = 힘. <span class="hl">복사력은 진짜 물리적인 힘 — flux가 와서 흡수계수 κ를 가진 매질에 흡수되어 전달된 운동량 때문에 매질이 받는 힘</span>. [[S0903.26]]</div>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 7 ③ <span class="st">Radiation Force by Absorption</span></div>
+<ul><li>Therefore, the total radiation force <b>per unit volume</b> is \[\mathbf F_{\rm rad}={1\over c}\int\kappa_\nu\mathbf F_\nu\,d\nu\]</li></ul>
+[[L02.s7c]]</div>
+<div class="slide"><div class="sh">L02 · 슬라이드 7 ④ <span class="st">Radiation Force by Absorption</span></div>
+<ul><li>Or, the total radiation force <b>per unit mass</b> is \[\mathbf f={1\over c\rho}\int\kappa_\nu\mathbf F_\nu\,d\nu={1\over c}\iint\kappa'_\nu I_\nu\hat{\mathbf k}\,d\nu\,d\Omega,\qquad\kappa'_\nu=\kappa_\nu/\rho:\ \text{opacity}\]</li></ul>
+[[L02.s7d]]</div>
+<div class="explain"><b>부가설명</b> 사람(논문)에 따라 per unit mass — 1 g 물질이 받는 힘 — 으로 정의. per unit volume을 밀도로 나누면 되고, ρ는 진동수와 무관하니 적분 안으로 넣어 \(\kappa_\nu/\rho=\kappa'_\nu\) = <b>opacity</b>. 단위는 질량당 면적(cm² g⁻¹): <span class="hl">1 g 물질이 빛을 흡수할 수 있는 총 단면적</span> — 이게 더 직관적일 수 있다(흡수계수는 1 cm³ 안 물질의 총 단면적). [[S0903.27]]</div>
+<div class="apply"><b>천체 적용 — 에딩턴 한계로 연결</b> 질량당 복사력 \(f=\kappa' F/c\)와 중력 \(GM/r^2\)를 비교: \(F=L/4\pi r^2\)이면 두 힘 모두 \(1/r^2\) → \(L_{\rm Edd}=4\pi GMc/\kappa'\) (HW1·예제 1.4 참고). 이제 이 실제 힘과 수학적으로 정의한 복사압이 어떤 관계인지 보자. [[S0903.27]]</div>
+
+<h4>11. 복사력 vs 복사압 — 복사압의 물리적 의미 <span class="en">Radiation force vs. pressure</span></h4>
+
+<div class="slide"><div class="sh">L02 · 슬라이드 8 ① <span class="st">Radiation Force vs. Pressure</span></div>
+<ul><li>\(\dfrac{dP_{\rm rad}}{ds}=F_{\rm rad}\ \Rightarrow\ P_{\rm rad}=\displaystyle\int F_{\rm rad}\,ds\)</li>
+<li>Consider a slab with optical depth \(\tau_\nu\).</li>
+<li>When \(F_\nu(0)\) is incident on the slab, \(F_\nu(s)=F_\nu(0)e^{-\tau'_\nu}\)</li></ul>
+<p>[그림: 초록 슬랩. 왼쪽에서 \(F_\nu(0)\) 입사, 왼쪽 면 \(\tau_\nu\), 오른쪽 면 0, s는 오른쪽으로 증가, \(d\tau'_\nu=-\kappa_\nu ds\).]</p>
+[[L02.s8a]]</div>
+<div class="slide"><div class="sh">L02 · 슬라이드 8 ② <span class="st">Radiation Force vs. Pressure</span></div>
+<ul><li>Since \[\int F_{\rm rad}ds={1\over c}\iint\kappa_\nu F_\nu\,d\nu\,ds={1\over c}\iint{\color{red}\kappa_\nu}F_\nu(0)e^{-\tau'_\nu}d\nu\,{\color{red}ds}={{\color{red}-1}\over c}\iint F_\nu(0)e^{-\tau'_\nu}d\nu\,{\color{red}d\tau'_\nu}={1\over c}\int F_\nu(0)(1-e^{-\tau_\nu})\,d\nu\]</li></ul>
+[[L02.s8b]]</div>
+<div class="slide"><div class="sh">L02 · 슬라이드 8 ③ <span class="st">Radiation Force vs. Pressure</span></div>
+<ul><li>one obtains \(P_{\rm rad}\cong\dfrac{F(0)}{c}\) in the limit of \(\tau_\nu\to\infty\).</li>
+<li>This is equal to the expression for \(P_{\rm rad}\) at distance d from a star.<ul><li>\(P_{\rm rad}\) corresponds to the radiation pressure when radiation is completely absorbed.</li></ul></li></ul>
+[[L02.s8c]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>수업 칠판 — 슬랩에 쌓이는 압력</div><ol>
+<li>pressure gradient가 힘: \(dP/ds=F_{\rm rad}\) → 복사압 = 힘을 경로 길이로 적분한 양. [[S0903.28]]</li>
+<li>광학깊이 \(\tau_\nu\) 슬랩, <b>흡수만</b>. 임의 위치 \(\tau'_\nu\)에서는 들어온 flux가 \(F_\nu(0)e^{-\tau'_\nu}\)로 decay. (오른쪽 면이 τ′=0인 수업 관례이므로 엄밀히는 입사면에서 잰 깊이 \(\tau_\nu-\tau'_\nu\)가 지수에 들어가지만, 최종 적분값 \(1-e^{-\tau_\nu}\)는 같다.) [[S0903.28]]</li>
+<li>수직 입사라 방향(cosθ) 고려 불필요. \(F_{\rm rad}=\frac1c\int\kappa_\nu F_\nu d\nu\)를 대입. [[S0903.28]]</li>
+<li>\(\kappa_\nu ds=-d\tau'_\nu\)로 바꾸고(빨간 부분), τ 적분은 지수만 의존 → \(\int_0^{\tau_\nu}e^{-\tau'}d\tau'=1-e^{-\tau_\nu}\): \[P_{\rm rad}={1\over c}\int F_\nu(0)\left(1-e^{-\tau_\nu}\right)d\nu .\] [[S0903.28]]</li>
+<li>\(\tau_\nu\to\infty\)이면 \(e^{-\tau_\nu}\to0\) → \(P_{\rm rad}=F(0)/c\) — 앞에서 구한 별에서 거리 d의 복사압과 <b>정확히 같다</b>. [[S0903.29]]</li>
+</ol></div>
+<div class="explain"><b>부가설명 — 복사압의 진짜 의미</b> <span class="star">강조</span> "이건 슬라이드 동영상에 있던 내용인데 <b>중요해서</b>." \(\tau\to\infty\)는 들어온 모든 복사가 매질에 100% 흡수된 것(통과 0). 따라서 <span class="hl">어떤 위치의 복사압 = 그 위치에서 모든 복사가 100% 흡수되었을 때 생기는 (가상의) 힘에 해당하는 압력</span>. 복사압은 복사장의 세기를 재는 하나의 양(에너지밀도·flux와 마찬가지)이지만 <b>그 자체로 실질적 의미를 갖지 않는다</b>. 공간 어딘가에 강한 복사, 어딘가에 약한 복사가 있다고 힘이 생기는 게 아니다 — <span class="hl">물질이 있어야 힘이 생긴다</span>. [[S0903.29]]</div>
+<div class="trap"><b>함정</b> 얇은 슬랩(τ≪1)은 \(P\approx F(0)\tau/c\)만 받는다 — 같은 복사장이라도 물질이 덜 흡수하면 힘이 작다. "복사압이 크면 무조건 밀린다"가 아니다. 완전 반사판이면 2F/c. [[L02.s8b, S0903.29]]</div>
+
+<h4>12. 수업 문제 Q1–Q4 <span class="en">In-class problems</span></h4>
+<div class="explain"><b>개요</b> 남은 시간 예제 연습. <span class="star">시험</span> "가급적 계산기 들고 다니세요." 풀이 전체는 예제 1.20–1.23. [[S0903.29, S0903.30]]
+<ul>
+<li><b>Q1 (예제 1.20)</b> 태양 L, R → \(F_\odot=L/4\pi R^2=6.33\times10^{10}\), \(I_\odot=F/\pi\approx2.0\times10^{10}\) erg s⁻¹ cm⁻² sr⁻¹. 단위 조심. [[L02.s10a, L02.s10b, S0903.30]]</li>
+<li><b>Q2 (예제 1.21)</b> 화성 거리: I는 거리 무관, 태양이 차지하는 입체각에서만 복사 → \(J=I\Delta\Omega/4\pi\approx4.6\times10^4\)(주어진 값으로 재계산하면 4.7×10⁴), \(u=4\pi J/c\approx2\times10^{-5}\) erg cm⁻³(슬라이드 단위의 s⁻¹은 오타). [[L02.s11a, L02.s11b, S0903.31]]</li>
+<li><b>Q3 (예제 1.22)</b> \(u=10^{-12}\) erg cm⁻³이 되는 거리 → \(1.0\times10^{17}\) cm ≈ 6700 au. [[L02.s12a, L02.s12b, S0903.32]]</li>
+<li><b>Q4 (예제 1.23)</b> 등방 복사(CMB): \(P_\nu=u_\nu/3\) → 복사의 γ=4/3. [[L02.s13a, L02.s13b, S0903.32, S0903.33]]</li>
+</ul></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u03-1"><div class="qq">뜨거운 가스는 항상 방출선으로 보이는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. \(I=I_0e^{-\tau}+S(1-e^{-\tau})\)에서 더 밝은 배경 앞(S&lt;I₀)이면 흡수선, S&gt;I₀이면 방출선. 온도만이 아니라 배경과 광학깊이를 비교한다.</p></div></div>
+
+
+<div class="qz" data-q="u03-2"><div class="qq">광학적으로 두꺼우면 항상 흑체인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. I→S일 뿐이다. 열평형(LTE)으로 S=Bν가 성립해야 흑체 세기에 접근한다. 흑체 내부에서 dI/dτ=0 → I=S=B가 수업의 설명.</p></div></div>
+
+
+<div class="qz" data-q="u03-3"><div class="qq">흡수계수를 2배로 늘리면 세기도 항상 2배인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. j가 그대로면 S=j/κ가 절반이 되고 τ는 2배. 얇은 한계에서는 I≈Sτ=jL로 변화 없음, 두꺼운 한계에서는 I→S로 오히려 절반. S를 고정하고 κ만 늘리면 I=S(1−e⁻τ)로 증가하지만 두꺼우면 포화.</p></div></div>
+
+<div class="qz" data-q="u03-4"><div class="qq">(말로 답하기) 방출계수·흡수계수·광학깊이의 정의와 단위를 말하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>jν: 단위 부피·시간·진동수·입체각당 방출 에너지(erg s⁻¹ cm⁻³ Hz⁻¹ sr⁻¹). κν=nσν: 길이⁻¹(cm⁻¹), 1 cm³ 물질의 총 흡수 단면적(opacity κ/ρ는 cm² g⁻¹). τν=∫κν ds: 무차원·양수, 1이 thick/thin 기준.</p></div></div>
+
+<div class="qz" data-q="u03-5"><div class="qq">dτ=−κ ds의 마이너스는 왜 붙는가? 이 수업의 τ=0은 어디인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>s는 광자 진행 방향(관측자 쪽)으로 증가하지만 τ는 관측자 쪽 표면을 0으로 두고 안쪽(관측자에서 멀어지는 방향)으로 증가하기 때문. 시냇물 수면이 τ=0.</p></div></div>
+
+<div class="qz" data-q="u03-6"><div class="qq">형식해 \(I_\nu(s)\)를 쓰고, S 일정일 때의 두 항을 말로 해석하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(I_\nu(s)=I_\nu(0)e^{-\tau_\nu}+\int_0^{\tau_\nu}S e^{-\tau'}d\tau'\) → \(I_0e^{-\tau}+S(1-e^{-\tau})\). 1항: 배경이 생존확률 e⁻τ만큼 살아남음. 2항: 각 지점 방출이 관측자까지 e^{−τ′}로 깎이고 남은 것의 합.</p></div></div>
+
+<div class="qz" data-q="u03-7"><div class="qq">e^{−τ}를 확률로 보면 ⟨τ⟩는? 평균자유행로를 n, σ로 쓰면?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>⟨τ⟩=∫τe^{−τ}dτ=1 (그래서 기준이 1). ℓ=1/κ=1/(nσ).</p></div></div>
+
+<div class="qz" data-q="u03-8"><div class="qq">등방 복사장의 순flux가 0인데 복사가 없는 것은 아닌 이유, 그리고 F⁺=πI의 의미는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>flux는 벡터라 반대 방향끼리 상쇄(∫₋₁¹μdμ=0). 나가는 반구만 적분하면 2πI∫₀¹μdμ=πI — 흑체 표면 flux πB의 π가 여기서 나온다.</p></div></div>
+
+<div class="qz" data-q="u03-9"><div class="qq">flux 정의에 거리가 없는데 왜 1/d²로 줄어드는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>I는 거리 무관이지만 소스가 차지하는 입체각 ΔΩ≈π(R/d)²가 줄기 때문. F_d=πB sin²θs=πB(R/d)²≈BΔΩ, L=4πR²πB=4πd²F_d.</p></div></div>
+
+<div class="qz" data-q="u03-10"><div class="qq">복사압의 물리적 의미를 슬랩 결과로 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>P=∫F_rad ds=(1/c)∫F(0)(1−e^{−τ})dν → τ→∞에서 F(0)/c. 복사가 100% 흡수되었을 때 물질이 받는 힘에 해당하는 압력. 물질이 없으면 힘은 없다.</p></div></div>
+
+
+<p class="note">출처: Lecture02 FlippedLearning 슬라이드 3–13 · 플립 04 방출 또는 흡수 대기 · 플립 05 일반적인 대기 · 9/3 강의 속기 · 상태: 9/3 수업 전면 재작성 — PPT·플립·속기 전수 대조</p>

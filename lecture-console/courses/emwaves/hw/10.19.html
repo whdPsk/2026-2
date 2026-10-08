@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(\rr=x-w(t_r)=c(t-t_r)\)에서 \(X\equiv x-ct\)로 두면
+\[ x-ct+ct_r=\sqrt{b^2+c^2t_r^2}\ \xrightarrow{\ \text{제곱}\ }\ \boxed{ct_r=\frac{b^2-X^2}{2X}} \]
+따라서
+\[ \rr=ct-ct_r=x-\frac{X^2+b^2}{2X},\qquad
+v(t_r)=\frac{c^2t_r}{\sqrt{b^2+c^2t_r^2}}=\frac{c^2t_r}{x-\rr}=c\,\frac{b^2-X^2}{b^2+X^2}. \]
+\(\boldsymbol{\rr}=\rr\hat{\vb{x}}\), \(\vb{v}=v\hat{\vb{x}}\)이므로 \(\rr c-\boldsymbol{\rr}\cdot\vb{v}=\rr(c-v)\). 계산하면
+\[ c-v=\frac{2cX^2}{X^2+b^2},\qquad \rr(c-v)=\frac{cX\big[X(x+ct)-b^2\big]}{X^2+b^2}=\frac{c(x-ct)\,(x^2-c^2t^2-b^2)}{(x-ct)^2+b^2}. \]
+\[ \boxed{V(x,t)=\frac{q}{4\pi\eps}\;\frac{b^2+(x-ct)^2}{(x-ct)\,\big(x^2-c^2t^2-b^2\big)}} \]
+\[ \boxed{\vb{A}=\frac{v}{c^2}V\,\hat{\vb{x}}=\frac{q}{4\pi\eps c}\;\frac{b^2-(x-ct)^2}{(x-ct)\,\big(x^2-c^2t^2-b^2\big)}\hat{\vb{x}}} \]
+(수치 검증: \(b=c=1,\ t=0,\ x=2\) → \(t_r=-0.75,\ w=1.25,\ \rr=0.75,\ v=-0.6\), \(V=\frac{q}{4\pi\eps}\frac{1}{0.75\times1.6}=\frac{5}{6}\frac{q}{4\pi\eps}\) — 위 공식과 일치 ✓)
+Prob. 10.18에 따라 이 표현은 \(x&gt;-ct\)에서만 유효하며, \(x&lt;-ct\)에서는 \(V=A=0\).
+<div class="alabel">감점 포인트</div>
+지연시간 방정식을 제곱할 때 \(c^2t_r^2\)이 양변에서 상쇄되어 <b>\(t_r\)에 대해 1차</b>가 된다는 점을 못 보고 근의 공식을 잘못 쓰는 것.</div><!--/sol-->

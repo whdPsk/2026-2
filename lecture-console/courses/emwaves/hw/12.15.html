@@ -1,0 +1,21 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+모두 \(+x\) 방향을 양으로 잡는다. 지면 기준: 경찰 \(\frac12c\), 도주차 \(\frac34c\), 총알 \(\frac57c\) (문제 12.4).
+
+<p>필요한 상대속도들:
+\[ v_{\text{도주}/\text{경찰}}=\frac{\frac34-\frac12}{1-\frac34\cdot\frac12}c=\frac{1/4}{5/8}c=\frac25c, \]
+\[ v_{\text{총알}/\text{도주}}=\frac{\frac57-\frac34}{1-\frac57\cdot\frac34}c=\frac{-1/28}{13/28}c=-\frac{1}{13}c, \]
+\[ v_{\text{총알}/\text{경찰}}=\frac13 c\ (\text{주어짐}),\qquad v_{\text{지면}/\text{경찰}}=-\tfrac12c\ \text{등}. \]</p>
+
+<table class="tbl"><tr><th>기준계 ↓ \ 대상 →</th><th>지면</th><th>경찰</th><th>도주차</th><th>총알</th></tr>
+<tr><th>지면</th><td>0</td><td>\(\frac12c\)</td><td>\(\frac34c\)</td><td>\(\frac57c\)</td></tr>
+<tr><th>경찰</th><td>\(-\frac12c\)</td><td>0</td><td>\(\frac25c\)</td><td>\(\frac13c\)</td></tr>
+<tr><th>도주차</th><td>\(-\frac34c\)</td><td>\(-\frac25c\)</td><td>0</td><td>\(-\frac{1}{13}c\)</td></tr>
+<tr><th>총알</th><td>\(-\frac57c\)</td><td>\(-\frac13c\)</td><td>\(+\frac{1}{13}c\)</td><td>0</td></tr></table>
+
+<p>마지막 열이 핵심: 도주차 기준으로 총알은 \(-\frac1{13}c\), 즉 <b>뒤로 멀어진다</b>.
+\[ \boxed{\text{모든 계에서 일치: 총알은 도주차를 맞히지 못한다 — 그들은 탈출한다}} \]
+"맞았다/못 맞았다"는 두 세계선의 <b>교차 여부</b>라는 사건이므로 계에 무관해야 하고, 실제로 그렇다.</p>
+
+<div class="alabel">감점 포인트</div>
+표를 채울 때 부호(방향)를 무시하고 크기만 적는 것. 특히 총알–도주차 항의 음수 부호가 "못 맞힌다"의 물리적 근거이므로 반드시 살려야 한다. 또 서로 반대 항목은 \(v_{A/B}=-v_{B/A}\)로 검산 가능.</div><!--/sol-->

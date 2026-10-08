@@ -1,0 +1,81 @@
+<div class="exq"><b>상황.</b> 진공에서 \(+\hat{\vb{z}}\)로 진행하고 \(x,y\)에 무관한 단색 평면파를 생각한다. 전기장이 \(\hat{\vb{x}}\) 방향으로 편광됐다고 하자. Maxwell 방정식이 요구하는 <b>\(\vb{B}\)의 방향·크기·위상</b>을 정하고, 그 결과로부터 에너지밀도 \(u\), Poynting 벡터 \(\vb{S}\), 운동량밀도 \(\vb{g}\), 그리고 시간평균인 <b>세기 \(I\)와 복사압 \(P_{\rm rad}\)</b>를 유도한다. 주어진 것은 진폭 \(E_0\), 각진동수 \(\omega\)(그리고 \(\omega=ck\)), 위상 \(\delta\)이다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>파동방정식만으로는 부족하다 — Maxwell 방정식 네 개가 <b>추가 구속</b>을 건다.</div>
+<ol>
+<li><b>시도해(ansatz).</b>
+\[ \tilde{\vb{E}}(z,t)=\tilde{\vb{E}}_0\ee^{\ii(kz-\omega t)},\qquad \tilde{\vb{B}}(z,t)=\tilde{\vb{B}}_0\ee^{\ii(kz-\omega t)}. \]
+각 데카르트 성분이 파동방정식을 만족하려면 \(\omega=ck\), \(c=1/\sqrt{\eps\muz}\).</li>
+
+<li><b>횡파성(transversality).</b> \(\divg\vb{E}=0\)에서 \(\ii k(\tilde E_0)_z=0\), 마찬가지로 \(\divg\vb{B}=0\)에서
+\[ (\tilde E_0)_z=(\tilde B_0)_z=0. \]
+진행 방향 성분은 존재할 수 없다.</li>
+
+<li><b>\(\vb{B}\)를 \(\vb{E}\)로부터.</b> Faraday 법칙 \(\curl\vb{E}=-\partial\vb{B}/\partial t\)에 대입하면 \(\ii k\,\hat{\vb{z}}\times\tilde{\vb{E}}_0=\ii\omega\tilde{\vb{B}}_0\), 즉
+\[ \tilde{\vb{B}}_0=\frac{k}{\omega}\left(\hat{\vb{z}}\times\tilde{\vb{E}}_0\right)=\frac1c\left(\hat{\vb{k}}\times\tilde{\vb{E}}_0\right). \]
+따라서 \(\vb{B}\perp\vb{E}\), \(\vb{B}\perp\hat{\vb{k}}\), 두 장은 <b>같은 위상</b>이고 \(B_0=E_0/c\). (네 번째 Maxwell 식은 새 정보를 주지 않는다.)</li>
+
+<li><b>\(\hat{\vb{x}}\) 편광일 때의 표준형.</b> \(\hat{\vb{z}}\times\hat{\vb{x}}=\hat{\vb{y}}\)이므로 실수부를 취해
+\[ \vb{E}(z,t)=E_0\cos(kz-\omega t+\delta)\,\hat{\vb{x}},\qquad \vb{B}(z,t)=\frac{E_0}{c}\cos(kz-\omega t+\delta)\,\hat{\vb{y}}. \]</li>
+
+<li><b>에너지밀도.</b> \(B^{2}=E^{2}/c^{2}=\eps\muz E^{2}\)이므로 전기·자기 기여가 <b>정확히 같다</b>:
+\[ u=\tfrac12\!\left(\eps E^{2}+\tfrac1{\muz}B^{2}\right)=\eps E^{2}=\eps E_0^{2}\cos^{2}(kz-\omega t+\delta). \]</li>
+
+<li><b>Poynting 벡터와 운동량밀도.</b> \(\hat{\vb{x}}\times\hat{\vb{y}}=\hat{\vb{z}}\):
+\[ \vb{S}=\frac1{\muz}(\vb{E}\times\vb{B})=c\eps E_0^{2}\cos^{2}(\cdots)\,\hat{\vb{z}}=cu\,\hat{\vb{z}},\qquad \vb{g}=\frac{1}{c^{2}}\vb{S}=\frac{u}{c}\hat{\vb{z}}. \]
+\(\vb{S}=u\,\vb{v}\) — 에너지밀도가 속도 \(c\)로 실려간다는 직관과 정확히 일치한다.</li>
+
+<li><b>시간평균.</b> 한 주기에 대해 \(\langle\cos^{2}\rangle=\tfrac12\):
+\[ \langle u\rangle=\tfrac12\eps E_0^{2},\qquad I\equiv\langle S\rangle=\tfrac12c\eps E_0^{2},\qquad \langle g\rangle=\tfrac12\frac{\eps E_0^{2}}{c}=\frac{I}{c^{2}}. \]</li>
+
+<li><b>복사압.</b> 시간 \(\Delta t\) 동안 넓이 \(A\)의 <b>완전흡수체</b>에 전달되는 운동량은 \(\Delta p=\langle g\rangle Ac\Delta t\)이므로
+\[ P_{\rm rad}=\frac{1}{A}\frac{\Delta p}{\Delta t}=\langle g\rangle c=\frac{I}{c}=\tfrac12\eps E_0^{2}. \]
+완전반사체는 운동량이 뒤집히므로 <b>두 배</b>다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \vb{E}=E_0\cos(kz-\omega t+\delta)\hat{\vb{x}},\quad \vb{B}=\frac{E_0}{c}\cos(kz-\omega t+\delta)\hat{\vb{y}} } \]
+\[ \boxed{\ \langle u\rangle=\tfrac12\eps E_0^{2},\qquad I=\tfrac12c\eps E_0^{2},\qquad P_{\rm rad}=\frac{I}{c}\ (\text{흡수}),\quad \frac{2I}{c}\ (\text{반사})\ } \]
+<p class="note">복사압의 미시적 그림: \(\vb{E}\)가 표면 전하를 \(\hat{\vb{x}}\)로 흔들면 \(\vb{B}\)가 그 전류에 \(q(\vb{v}\times\vb{B})\propto\hat{\vb{x}}\times\hat{\vb{y}}=\hat{\vb{z}}\) 방향 힘을 준다. 단, 흡수(=저항)가 없으면 속도가 장과 \(90^\circ\) 어긋나 평균 힘이 0이 되므로 감쇠가 필수다(Prob. 9.11). <b>주의</b>: \(u,S\)는 장의 <b>2차</b> 양이므로 복소 표기를 그대로 제곱하면 안 된다. 시간평균은 \(\langle u\rangle=\tfrac14\mathrm{Re}\!\left(\eps\tilde{\vb{E}}\cdot\tilde{\vb{E}}^{*}+\tfrac1{\muz}\tilde{\vb{B}}\cdot\tilde{\vb{B}}^{*}\right)\), \(\langle\vb{S}\rangle=\tfrac1{2\muz}\mathrm{Re}(\tilde{\vb{E}}\times\tilde{\vb{B}}^{*})\)를 쓸 것. <b>검산</b> ① 차원: \(\eps E^{2}\)=(C\(^2\)/N·m\(^2\))(N/C)\(^2\)=N/m\(^2\)=J/m\(^3\) ✓ 에너지밀도. \(I=c\langle u\rangle\)는 (m/s)(J/m\(^3\))=W/m\(^2\) ✓. \(P_{\rm rad}=I/c\)는 W·s/m\(^3\)=J/m\(^3\)=Pa ✓ — 압력과 에너지밀도가 같은 차원이라는 점이 핵심. ② 특수경우: \(\langle u\rangle\)의 전기·자기 기여가 각각 \(\tfrac14\eps E_0^2\)로 정확히 반반 ✓(진공 평면파의 특징). ③ \(P_{\rm rad}=\langle u\rangle\) — 아래 +α의 변형력 텐서 계산이 이를 독립적으로 재확인한다 ✓.</p></div>
+
+<div class="qz" data-q="ex9.2-a"><div class="qq"><b>+α</b> 응용 + 기하 바꾸기(솔라세일): 지구에 도달하는 햇빛의 세기는 \(I\approx1300\ \mathrm{W/m^{2}}\)이다. (a) 완전흡수체와 완전반사체에 작용하는 복사압을 구하고 대기압과 비교하라. (b) \(E_0\)와 \(B_0\)를 구하라. (c) 거울을 법선에서 각 \(\theta\)만큼 기울이면 표면에 작용하는 압력은 얼마인가? 반사율이 \(R\)일 때(수직입사)는?</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>(a) 복사압.</b>
+\[ P_{\rm abs}=\frac{I}{c}=\frac{1300}{3.00\times10^{8}}\approx4.3\times10^{-6}\ \mathrm{Pa},\qquad P_{\rm refl}=\frac{2I}{c}\approx8.7\times10^{-6}\ \mathrm{Pa}. \]
+대기압 \(1.0\times10^{5}\) Pa와 비교하면
+\[ \frac{P_{\rm abs}}{P_{\rm atm}}\approx\frac{4.3\times10^{-6}}{1.0\times10^{5}}\approx4\times10^{-11}. \]
+약 <b>400억분의 1</b>. 그래서 일상에서는 못 느끼지만, 우주에서 큰 돛(\(\sim10^{4}\,\mathrm{m^2}\))에 몇 달간 작용하면 유의미한 추력이 된다.</p>
+<p><b>(b) 장의 진폭.</b> \(I=\tfrac12c\eps E_0^{2}\)에서
+\[ E_0=\sqrt{\frac{2I}{c\eps}}=\sqrt{\frac{2(1300)}{(3.0\times10^{8})(8.85\times10^{-12})}}=\sqrt{\frac{2600}{2.66\times10^{-3}}}\approx\sqrt{9.8\times10^{5}}\approx1.0\times10^{3}\ \mathrm{V/m}. \]
+\[ B_0=\frac{E_0}{c}\approx\frac{1.0\times10^{3}}{3.0\times10^{8}}\approx3.3\times10^{-6}\ \mathrm{T}. \]</p>
+<p><b>(c) 경사 입사 완전반사.</b> 넓이 \(A\)의 거울에 법선각 \(\theta\)로 입사하면
+<br>• 단위시간당 거울에 도달하는 에너지: \(IA\cos\theta\) (투영 넓이).
+<br>• 그 운동량 흐름은 \(\hat{\vb{k}}\) 방향으로 \(IA\cos\theta/c\).
+<br>• 완전반사이면 <b>법선 성분만</b> 뒤집히고 접선 성분은 그대로 → 법선 방향 운동량 전달률은 \(2(IA\cos\theta/c)\cos\theta\).
+\[ \boxed{\ P_\perp=\frac{2I\cos^{2}\theta}{c}\ } \]
+(접선 방향으로는 알짜 힘이 없다.)
+<br>• <b>반사율 \(R\), 수직입사:</b> 입사 운동량 \(I/c\)가 들어오고 \(R\,I/c\)가 되돌아 나가므로 전달률은 \((1+R)I/c\):
+\[ \boxed{\ P=\frac{(1+R)I}{c}\ } \]</p>
+<p><b>검산</b> ① \(\theta=0\)이면 \(P_\perp=2I/c\) ✓ 완전반사. \(\theta\to90^\circ\)이면 \(P_\perp\to0\) ✓ 스치는 빛은 밀지 못한다. ② \(R=0\)이면 \(P=I/c\)(흡수), \(R=1\)이면 \(2I/c\) ✓ 두 극단을 잇는다. ③ (b) 검산: \(\tfrac12c\eps E_0^2=\tfrac12(3\times10^8)(8.85\times10^{-12})(10^3)^2\approx1.3\times10^{3}\) ✓ 원래 \(I\) 복원. ④ 차원: \(I/c\)=(W/m\(^2\))/(m/s)=J/m\(^3\)=Pa ✓.</p>
+</div></div>
+
+<div class="qz" data-q="ex9.2-b"><div class="qq"><b>+α</b> 다른 양 묻기 + 8장 연결: 이 평면파(식 9.49)에 대한 <b>Maxwell 변형력 텐서 \(\overleftrightarrow{\vb{T}}\)의 아홉 성분</b>을 모두 구하라. \(-\overleftrightarrow{\vb{T}}\)가 운동량 flux 밀도라는 사실을 이용해, 이 결과가 위에서 얻은 복사압과 일치함을 보여라. (Problem 9.13)</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 준비.</b> \(E_x=E,\ E_y=E_z=0\); \(B_y=B=E/c,\ B_x=B_z=0\). 핵심 관계는
+\[ \frac{B^{2}}{\muz}=\frac{E^{2}}{\muz c^{2}}=\eps E^{2}. \]
+그리고 \(T_{ij}=\eps\!\left(E_iE_j-\tfrac12\delta_{ij}E^{2}\right)+\frac1{\muz}\!\left(B_iB_j-\tfrac12\delta_{ij}B^{2}\right)\).</p>
+<p><b>2) 비대각 성분.</b> \(E\)는 \(x\)성분만, \(B\)는 \(y\)성분만 있으므로 \(i\ne j\)인 모든 곱 \(E_iE_j\)와 \(B_iB_j\)가 0. 따라서
+\[ T_{xy}=T_{xz}=T_{yz}=\cdots=0. \]</p>
+<p><b>3) 대각 성분.</b>
+\[ T_{xx}=\eps\!\left(E^{2}-\tfrac12E^{2}\right)+\frac1{\muz}\!\left(0-\tfrac12B^{2}\right)=\tfrac12\eps E^{2}-\tfrac12\eps E^{2}=0, \]
+\[ T_{yy}=\eps\!\left(0-\tfrac12E^{2}\right)+\frac1{\muz}\!\left(B^{2}-\tfrac12B^{2}\right)=-\tfrac12\eps E^{2}+\tfrac12\eps E^{2}=0, \]
+\[ T_{zz}=\eps\!\left(0-\tfrac12E^{2}\right)+\frac1{\muz}\!\left(0-\tfrac12B^{2}\right)=-\eps E^{2}=-u. \]
+\[ \boxed{\ \overleftrightarrow{\vb{T}}=\begin{pmatrix}0&amp;0&amp;0\\0&amp;0&amp;0\\0&amp;0&amp;-u\end{pmatrix},\qquad u=\eps E_0^{2}\cos^{2}(kz-\omega t+\delta)\ } \]</p>
+<p><b>4) 해석.</b> \(-\overleftrightarrow{\vb{T}}\)가 운동량 flux 밀도이므로, 유일하게 살아있는 성분은 \(-T_{zz}=+u\): <b>\(z\)방향 운동량이 \(z\)방향으로 단위넓이·단위시간당 \(u\)만큼 흐른다.</b> 이것을 직접 검증하면
+\[ (\text{운동량밀도})\times(\text{속도})=g\cdot c=\frac{u}{c}\cdot c=u\ \checkmark \]</p>
+<p><b>5) 복사압과의 일치.</b> 완전흡수 표면이 이 flux를 전부 받으면
+\[ P_{\rm rad}=\langle -T_{zz}\rangle=\langle u\rangle=\tfrac12\eps E_0^{2}=\frac{I}{c}\ \checkmark \]
+본문에서 운동량 전달로 얻은 값과 정확히 같다.</p>
+<p><b>검산</b> ① \(T_{xx}=T_{yy}=0\)은 "빛에는 <em>가로 방향</em> 응력이 없다"는 뜻 — 평면파는 진행 방향으로만 밀 뿐 옆으로 벌리거나 조이지 않는다 ✓ 직관과 일치. ② 대각합 \(\mathrm{tr}\overleftrightarrow{\vb{T}}=-u\)이고 일반적으로 \(\mathrm{tr}\overleftrightarrow{\vb{T}}=-u\)는 임의의 장에 대해 성립하는 항등식 — 여기서도 만족 ✓. ③ 8.2절의 정적 예(전하 구)에서는 \(T_{xx},T_{yy}\)가 0이 아니었다. 차이는 \(E^{2}\)와 \(B^{2}\) 기여가 여기서만 정확히 상쇄되기 때문 ✓ — "빛은 \(E\)와 \(B\)가 완벽히 균형 잡힌 특수한 장"이라는 것을 텐서가 말해준다. ④ 차원: \([T_{ij}]\)=N/m\(^2\)=[에너지밀도] ✓.</p>
+</div></div>

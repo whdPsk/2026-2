@@ -1,0 +1,456 @@
+{
+ "today": "2026-10-08",
+ "course": {
+  "info": "2026-2 천체물리학개론1 · 김웅태 교수 · 화·목 14:00–15:15, 21동 102호 · 플립러닝 병행(다글로 플립 영상)<br>교재: 구본철·김웅태 『천체물리학: 복사와 기체역학』(2022 개정판) · 수식은 Gaussian cgs 기본<br>범위 메모: 강의계획의 주제에 대응하는 교재1–8장·12–19장 학습노트. 실제 시험 범위는 교수 공지가 우선. 9–11장(원자·전이·분자)과20장 이후 MHD 등은 범위 확인 대상으로 이번 본문에서 제외. 모든 교재 문단·예제·연습문제의 전수 대조/수록은 아직 완료하지 않음.<br><b>자료 대기 중인 주제</b><br>· 열적 제동복사 (중간) — 9/29·10/1 반영 완료(Lecture08 PPT 대조 완료)<br>· 싱크로트론 복사 (중간) — 10/1·10/6 반영(플립 19–21), Lecture10 PPT 대조 완료(10/8) · 자가흡수는 강의 미진도<br>· 콤턴 산란·플라즈마 효과 (중간) — 10/6 콤프턴 도입(플립 22) 반영, 역콤프턴 파워 이후·HW3 문제지·교수의 실제 시험 범위 공지 대기<br>· 유체 기본방정식 (기말) — 중간 이후 강의 자료<br>· 평형·파동·충격파 (기말) — 10–11주차 자료<br>· 유체·중력 불안정 (기말) — 12–13주차 자료<br>· 초신성 잔해·비리얼 정리 (기말) — 14–15주차 자료"
+ },
+ "exams": [
+  {
+   "name": "중간고사",
+   "date": "2026-10-27",
+   "tentative": false,
+   "note": "복사 (교재 1–8장)"
+  },
+  {
+   "name": "기말고사",
+   "date": "2026-12-10",
+   "tentative": false,
+   "note": "기체역학 (교재 12–19장)"
+  }
+ ],
+ "rangeLabel": {
+  "1": "중간고사 범위 · 복사 (1–8장)",
+  "2": "기말고사 범위 · 기체역학 (12–19장)"
+ },
+ "rangeShort": {
+  "1": "중간 · 복사",
+  "2": "기말 · 기체역학"
+ },
+ "drive": {
+  "textbook": "https://drive.google.com/drive/folders/1P_M7O6jSRrC3ofFRWUT9j5i72osWhHfu",
+  "folder": "https://drive.google.com/drive/folders/1P_M7O6jSRrC3ofFRWUT9j5i72osWhHfu"
+ },
+ "chapters": {
+  "1": {
+   "ko": "복사의 기본 물리량과 그 특성",
+   "en": "",
+   "range": 1
+  },
+  "2": {
+   "ko": "선복사",
+   "en": "",
+   "range": 1
+  },
+  "3": {
+   "ko": "맥스웰 방정식과 전자기파",
+   "en": "",
+   "range": 1
+  },
+  "4": {
+   "ko": "전자기 복사의 방출",
+   "en": "",
+   "range": 1
+  },
+  "5": {
+   "ko": "제동복사",
+   "en": "",
+   "range": 1
+  },
+  "6": {
+   "ko": "싱크로트론 복사",
+   "en": "",
+   "range": 1
+  },
+  "7": {
+   "ko": "콤턴 산란",
+   "en": "",
+   "range": 1
+  },
+  "8": {
+   "ko": "플라즈마 효과",
+   "en": "",
+   "range": 1
+  },
+  "12": {
+   "ko": "유체의 기본",
+   "en": "",
+   "range": 2
+  },
+  "13": {
+   "ko": "평형",
+   "en": "",
+   "range": 2
+  },
+  "14": {
+   "ko": "파동",
+   "en": "",
+   "range": 2
+  },
+  "15": {
+   "ko": "충격파",
+   "en": "",
+   "range": 2
+  },
+  "16": {
+   "ko": "유체 불안정",
+   "en": "",
+   "range": 2
+  },
+  "17": {
+   "ko": "중력 불안정",
+   "en": "",
+   "range": 2
+  },
+  "18": {
+   "ko": "초신성 잔해",
+   "en": "",
+   "range": 2
+  },
+  "19": {
+   "ko": "비리얼 정리",
+   "en": "",
+   "range": 2
+  }
+ },
+ "units": [
+  {
+   "id": "u01",
+   "ch": 1,
+   "secs": "1.1",
+   "page": 3,
+   "title": "광도·플럭스·복사세기",
+   "en": "radiometry",
+   "sub": "같은 별을 멀리 옮겼을 때 변하는 양과 변하지 않는 양을 설명한다.",
+   "slug": "radiometry"
+  },
+  {
+   "id": "u02",
+   "ch": 1,
+   "secs": "1.1",
+   "page": 3,
+   "title": "복사장의 모멘트와 압력",
+   "en": "moments",
+   "sub": "Iν에서 평균세기·에너지밀도·플럭스·압력을 만들고 각도의 역할을 구분한다.",
+   "slug": "moments"
+  },
+  {
+   "id": "u03",
+   "ch": 1,
+   "secs": "1.2",
+   "page": 3,
+   "title": "흡수·방출과 복사전달",
+   "en": "transfer",
+   "sub": "균일 층의 전달식을 사용하고 얇은·두꺼운 한계에서 관측되는 양을 말한다.",
+   "slug": "transfer"
+  },
+  {
+   "id": "u04",
+   "ch": 1,
+   "secs": "1.3",
+   "page": 3,
+   "title": "흑체와 세 가지 온도",
+   "en": "blackbody",
+   "sub": "Planck·RJ·Wien 영역을 구분하고 밝기온도와 실제 온도를 분리한다.",
+   "slug": "blackbody"
+  },
+  {
+   "id": "u05",
+   "ch": 1,
+   "secs": "1.4",
+   "page": 3,
+   "title": "산란이 있는 복사전달",
+   "en": "scattering-transfer",
+   "sub": "1.4의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.",
+   "slug": "scattering-transfer"
+  },
+  {
+   "id": "u06",
+   "ch": 2,
+   "secs": "2.1–2.2",
+   "page": 38,
+   "title": "선복사와 아인슈타인 계수",
+   "en": "einstein",
+   "sub": "자발·유도 방출과 흡수를 구별하고 LTE·비LTE·메이저의 조건을 설명한다.",
+   "slug": "einstein"
+  },
+  {
+   "id": "u07",
+   "ch": 2,
+   "secs": "2.3–2.4",
+   "page": 38,
+   "title": "선폭·도플러·21cm 관측",
+   "en": "lineprofiles",
+   "sub": "선의 중심·폭·면적이 각각 어떤 물리 정보를 담는지 구분한다.",
+   "slug": "lineprofiles"
+  },
+  {
+   "id": "u08",
+   "ch": 3,
+   "secs": "3.1–4.4",
+   "page": 65,
+   "title": "맥스웰 방정식·퍼텐셜·다중극",
+   "en": "maxwell-multipoles",
+   "sub": "3.1 · 4.1 · 4.4의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.",
+   "slug": "maxwell-multipoles"
+  },
+  {
+   "id": "u09",
+   "ch": 3,
+   "secs": "3.2–3.4",
+   "page": 65,
+   "title": "전자기파·에너지·푸리에",
+   "en": "emwave",
+   "sub": "장 진폭·평균 파워·주파수 스펙트럼을 구분한다.",
+   "slug": "emwave"
+  },
+  {
+   "id": "u10",
+   "ch": 3,
+   "secs": "3.3",
+   "page": 65,
+   "title": "편광과 스톡스 변수",
+   "en": "polarization",
+   "sub": "선·원·타원·무편광을 Stokes 값과 연결하고 자기장 방향 추론의 조건을 말한다.",
+   "slug": "polarization"
+  },
+  {
+   "id": "u11",
+   "ch": 4,
+   "secs": "4.1–4.2",
+   "page": 81,
+   "title": "뒤처진 퍼텐셜과 복사장",
+   "en": "retarded",
+   "sub": "속도장과 복사장의 거리 의존성과 인과성을 설명한다.",
+   "slug": "retarded"
+  },
+  {
+   "id": "u12",
+   "ch": 4,
+   "secs": "4.3",
+   "page": 81,
+   "title": "라모 공식과 쌍극자 복사",
+   "en": "larmor",
+   "sub": "각도 분포·총파워·시간평균을 분리하고 coherent 합의 조건을 설명한다.",
+   "slug": "larmor"
+  },
+  {
+   "id": "u13",
+   "ch": 4,
+   "secs": "4.5–4.6",
+   "page": 81,
+   "title": "로렌츠 진동자와 선폭",
+   "en": "oscillator",
+   "sub": "Rayleigh·공명·Thomson 영역을 비교하고 수명–선폭 관계를 사용한다.",
+   "slug": "oscillator"
+  },
+  {
+   "id": "u14",
+   "ch": 4,
+   "secs": "4.6",
+   "page": 81,
+   "title": "톰슨 산란과 편광",
+   "en": "scattering",
+   "sub": "단면적의 뜻과 편광의 각도 의존성을 설명한다.",
+   "slug": "scattering"
+  },
+  {
+   "id": "u15",
+   "ch": 5,
+   "secs": "5.1",
+   "page": 111,
+   "title": "전자–이온 충돌과 제동복사",
+   "en": "brems-collision",
+   "sub": "충돌시간·충격매개변수·주파수 컷오프의 관계를 말하고 열적 집단과 구분한다.",
+   "slug": "brems-collision"
+  },
+  {
+   "id": "u16",
+   "ch": 5,
+   "secs": "5.2",
+   "page": 111,
+   "title": "열적 제동복사·방출측도",
+   "en": "thermal-brems",
+   "sub": "5.2의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.",
+   "slug": "thermal-brems"
+  },
+  {
+   "id": "u17",
+   "ch": 6,
+   "secs": "6.1",
+   "page": 126,
+   "title": "상대론적 전하의 복사와 분사",
+   "en": "relativistic-radiation",
+   "sub": "6.1의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.",
+   "slug": "relativistic-radiation"
+  },
+  {
+   "id": "u18",
+   "ch": 6,
+   "secs": "6.2–6.3",
+   "page": 126,
+   "title": "싱크로트론: 궤도·파워·단일전자",
+   "en": "synchrotron-single",
+   "sub": "6.2 · 6.3의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.",
+   "slug": "synchrotron-single"
+  },
+  {
+   "id": "u19",
+   "ch": 6,
+   "secs": "6.4–6.5",
+   "page": 126,
+   "title": "싱크로트론: 집단·자가흡수·냉각",
+   "en": "synchrotron-population",
+   "sub": "6.4 · 6.5의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.",
+   "slug": "synchrotron-population"
+  },
+  {
+   "id": "u20",
+   "ch": 7,
+   "secs": "7.1–7.4",
+   "page": 151,
+   "title": "콤턴·역콤턴·콤턴화",
+   "en": "compton",
+   "sub": "7.1 · 7.2 · 7.3 · 7.4의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.",
+   "slug": "compton"
+  },
+  {
+   "id": "u21",
+   "ch": 8,
+   "secs": "8.1–8.2",
+   "page": 172,
+   "title": "플라즈마 분산·DM·패러데이 회전",
+   "en": "plasma",
+   "sub": "8.1 · 8.2의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.",
+   "slug": "plasma"
+  },
+  {
+   "id": "u22",
+   "ch": 12,
+   "secs": "12.1–12.4",
+   "page": 287,
+   "title": "유체의 개념·미분·열역학",
+   "en": "fluid-description",
+   "sub": "12.1 · 12.2 · 12.3 · 12.4의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.",
+   "slug": "fluid-description"
+  },
+  {
+   "id": "u23",
+   "ch": 12,
+   "secs": "12.5",
+   "page": 287,
+   "title": "질량·운동량·에너지 보존",
+   "en": "fluid-conservation",
+   "sub": "12.5의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.",
+   "slug": "fluid-conservation"
+  },
+  {
+   "id": "u24",
+   "ch": 13,
+   "secs": "13.1–13.3",
+   "page": 306,
+   "title": "정역학 평형·원반·기체구",
+   "en": "hydrostatic",
+   "sub": "13.1 · 13.2 · 13.3의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.",
+   "slug": "hydrostatic"
+  },
+  {
+   "id": "u25",
+   "ch": 13,
+   "secs": "13.4–13.7",
+   "page": 306,
+   "title": "베르누이·소용돌이·난류",
+   "en": "bernoulli-vorticity",
+   "sub": "13.4 · 13.5 · 13.6 · 13.7의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.",
+   "slug": "bernoulli-vorticity"
+  },
+  {
+   "id": "u26",
+   "ch": 14,
+   "secs": "14.1–14.3",
+   "page": 331,
+   "title": "음파·이동 매질·성층 기체의 파동",
+   "en": "fluid-waves",
+   "sub": "14.1 · 14.2 · 14.3의 가정, 물리적 원인, 결과식과 한계 거동을 설명한다.",
+   "slug": "fluid-waves"
+  },
+  {
+   "id": "u27",
+   "ch": 15,
+   "secs": "15.1–15.2",
+   "page": 344,
+   "title": "파형 가팔라짐·특성선·리만 불변량",
+   "en": "characteristics",
+   "sub": "15.1 · 15.2의 가정, 물리적 원인, 결과식과 한계 거동을 설명한다.",
+   "slug": "characteristics"
+  },
+  {
+   "id": "u28",
+   "ch": 15,
+   "secs": "15.3–15.5",
+   "page": 344,
+   "title": "단열·경사·등온 충격파",
+   "en": "shock-jumps",
+   "sub": "15.3 · 15.4 · 15.5의 가정, 물리적 원인, 결과식과 한계 거동을 설명한다.",
+   "slug": "shock-jumps"
+  },
+  {
+   "id": "u29",
+   "ch": 16,
+   "secs": "16.1–16.3",
+   "page": 383,
+   "title": "Rayleigh–Taylor·Kelvin–Helmholtz·대류",
+   "en": "interface-instability",
+   "sub": "16.1 · 16.2 · 16.3의 가정, 물리적 원인, 결과식과 한계 거동을 설명한다.",
+   "slug": "interface-instability"
+  },
+  {
+   "id": "u30",
+   "ch": 16,
+   "secs": "16.4",
+   "page": 383,
+   "title": "열적 평형과 열불안정",
+   "en": "thermal-instability",
+   "sub": "16.4의 가정, 물리적 원인, 결과식과 한계 거동을 설명한다.",
+   "slug": "thermal-instability"
+  },
+  {
+   "id": "u31",
+   "ch": 17,
+   "secs": "17.1",
+   "page": 399,
+   "title": "Jeans 중력 불안정",
+   "en": "jeans",
+   "sub": "17.1의 가정, 물리적 원인, 결과식과 한계 거동을 설명한다.",
+   "slug": "jeans"
+  },
+  {
+   "id": "u32",
+   "ch": 17,
+   "secs": "17.2–17.3",
+   "page": 399,
+   "title": "회전 원반·Toomre Q·스윙 증폭",
+   "en": "disk-instability",
+   "sub": "17.2 · 17.3의 가정, 물리적 원인, 결과식과 한계 거동을 설명한다.",
+   "slug": "disk-instability"
+  },
+  {
+   "id": "u33",
+   "ch": 18,
+   "secs": "18.1–18.4",
+   "page": 417,
+   "title": "초신성 잔해의 네 단계",
+   "en": "supernova-remnant",
+   "sub": "18.1 · 18.2 · 18.3 · 18.4의 가정, 물리적 원인, 결과식과 한계 거동을 설명한다.",
+   "slug": "supernova-remnant"
+  },
+  {
+   "id": "u34",
+   "ch": 19,
+   "secs": "19.1–19.4",
+   "page": 431,
+   "title": "비리얼 정리·질량 추정·압력 구름",
+   "en": "virial",
+   "sub": "19.1 · 19.2 · 19.3 · 19.4의 가정, 물리적 원인, 결과식과 한계 거동을 설명한다.",
+   "slug": "virial"
+  }
+ ]
+}

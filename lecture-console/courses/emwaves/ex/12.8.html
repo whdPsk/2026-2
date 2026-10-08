@@ -1,0 +1,42 @@
+<div class="exq"><b>상황.</b> 정지해 있던 파이온(pion, 질량 \(m_\pi\))이 뮤온(질량 \(m_\mu\))과 중성미자(neutrino, 질량 0으로 근사)로 붕괴한다. 나오는 뮤온의 총 에너지 \(E_\mu\)를 두 질량 \(m_\pi,\ m_\mu\)만으로 표현하라. 질량 없는 입자는 \(E=pc\)를 만족한다는 점을 이용한다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span><b>전략: ① 4-운동량 보존 \(p_\pi=p_\mu+p_\nu\) → ② 모르는 중성미자를 한쪽으로 몰고 <em>제곱</em>해서 소거.</b></div>
+<ol>
+<li>보존식을 쓴다. \(p_\pi^\mu=p_\mu^\mu+p_\nu^\mu\). 파이온이 정지해 있으므로
+\[ E_{\text{before}}=m_\pi c^2,\qquad \vb p_{\text{before}}=\vb 0. \]
+따라서 운동량 보존은 \(\vb p_\nu=-\vb p_\mu\) — 두 입자는 정확히 반대 방향으로 튀어나간다.</li>
+<li><b>모르는 입자를 격리한다.</b> \(p_\nu=p_\pi-p_\mu\)로 쓰고 양변을 4-벡터 내적으로 제곱한다. 중성미자가 질량 0이므로 \(p_\nu\cdot p_\nu=0\):
+\[ 0=(p_\pi-p_\mu)\cdot(p_\pi-p_\mu)=p_\pi\cdot p_\pi+p_\mu\cdot p_\mu-2\,p_\pi\cdot p_\mu. \]</li>
+<li>불변량을 대입한다. \(p\cdot p=-m^2c^2\)이고, 파이온이 정지해 있으므로
+\[ p_\pi\cdot p_\mu=-\frac{E_\pi E_\mu}{c^2}+\vb p_\pi\!\cdot\!\vb p_\mu=-\frac{(m_\pi c^2)E_\mu}{c^2}+0=-m_\pi E_\mu. \]</li>
+<li>대입하고 정리한다:
+\[ 0=-m_\pi^2c^2-m_\mu^2c^2+2m_\pi E_\mu\ \Longrightarrow\ E_\mu=\frac{(m_\pi^2+m_\mu^2)c^2}{2m_\pi}. \]</li>
+<li>(불변량을 쓰지 않고 직접 풀어도 같다: \(E_\nu=|\vb p_\nu|c=|\vb p_\mu|c=\sqrt{E_\mu^2-m_\mu^2c^4}\)를 에너지 보존 \(E_\mu+E_\nu=m_\pi c^2\)에 넣고 제곱하면 근호가 사라지며 같은 식이 나온다. 불변량 방법이 훨씬 짧다.)</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ E_\mu=\frac{(m_\pi^2+m_\mu^2)\,c^2}{2m_\pi}\ } \]
+<p class="note">속도를 한 번도 구하지 않고 에너지를 얻었다 — 이것이 \(E^2-p^2c^2=m^2c^4\)의 위력이다. 수치로는 \(m_\pi c^2=139.6\) MeV, \(m_\mu c^2=105.7\) MeV이므로 \(E_\mu=(139.6^2+105.7^2)/(2\times139.6)=109.8\) MeV, 운동에너지는 겨우 \(4.1\) MeV. <b>검산</b>: (i) \(m_\mu\to m_\pi\) 극한이면 \(E_\mu\to m_\pi c^2\), 즉 뮤온이 정지 — 붕괴할 에너지 여유가 없을 때의 올바른 답 ✓. (ii) \(m_\mu\to0\)이면 \(E_\mu\to\tfrac12m_\pi c^2\) — 두 무질량 입자가 에너지를 반씩 나눠 갖는 대칭 결과 ✓. (iii) 언제나 \(E_\mu\ge m_\mu c^2\)인가? \((m_\pi^2+m_\mu^2)/(2m_\pi m_\mu)\ge1\)은 \((m_\pi-m_\mu)^2\ge0\)과 동치이므로 항상 성립 ✓. (iv) 차원: 질량²·\(c^2\)/질량 = 에너지 ✓.</p></div>
+<div class="qz" data-q="ex12.8-a"><div class="qq"><b>+α</b> 중성미자의 에너지 \(E_\nu\)와 뮤온의 속력 \(u_\mu\)를 구하고, \(m_\pi c^2=139.6\) MeV, \(m_\mu c^2=105.7\) MeV로 수치를 내라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>중성미자 에너지.</b> 에너지 보존에서 바로 나온다:</p>
+\[ E_\nu=m_\pi c^2-E_\mu=m_\pi c^2-\frac{(m_\pi^2+m_\mu^2)c^2}{2m_\pi} =\boxed{\ \frac{(m_\pi^2-m_\mu^2)c^2}{2m_\pi}\ } \]
+<p><b>뮤온 속력.</b> 일반 관계 \(\vb u=\vb p c^2/E\)를 쓴다. 운동량 크기는 중성미자와 같고 \(|\vb p_\mu|c=E_\nu\)이므로</p>
+\[ \frac{u_\mu}{c}=\frac{|\vb p_\mu|c}{E_\mu}=\frac{E_\nu}{E_\mu} =\boxed{\ \frac{m_\pi^2-m_\mu^2}{m_\pi^2+m_\mu^2}\ } \]
+<p><b>수치.</b> \(m_\pi^2\to139.6^2=19488\), \(m_\mu^2\to105.7^2=11172\) (MeV² 단위).</p>
+\[ E_\mu=\frac{19488+11172}{2(139.6)}=\frac{30660}{279.2}=109.8\ \mathrm{MeV},\qquad E_\nu=\frac{19488-11172}{279.2}=\frac{8316}{279.2}=29.8\ \mathrm{MeV}. \]
+\[ \frac{u_\mu}{c}=\frac{8316}{30660}=0.271\ \Rightarrow\ u_\mu=0.271c=8.1\times10^{7}\ \mathrm{m/s}. \]
+<p><b>검산</b>: (i) \(E_\mu+E_\nu=109.8+29.8=139.6\) MeV \(=m_\pi c^2\) ✓. (ii) 뮤온 운동에너지 \(=109.8-105.7=4.1\) MeV, \(\gamma_\mu=109.8/105.7=1.039\)이고 \(\beta=\sqrt{1-1/1.039^2}=0.271\) ✓ 일치. (iii) \(m_\mu\to0\)이면 \(u_\mu\to c\) ✓, \(m_\mu\to m_\pi\)이면 \(u_\mu\to0\) ✓.</p></div></div>
+<div class="qz" data-q="ex12.8-b"><div class="qq"><b>+α</b> (일반화) 중성미자가 실제로는 작지만 <b>0이 아닌</b> 질량 \(m_\nu\)를 갖는다면 \(E_\mu\)는 어떻게 바뀌는가? 일반식을 유도하고, 붕괴가 일어날 수 있는 조건을 밝혀라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>같은 전략, 오른쪽 값만 바뀐다.</b> \(p_\nu=p_\pi-p_\mu\)를 제곱하되 이번엔 \(p_\nu\cdot p_\nu=-m_\nu^2c^2\):</p>
+\[ -m_\nu^2c^2=-m_\pi^2c^2-m_\mu^2c^2+2m_\pi E_\mu. \]
+\[ \boxed{\ E_\mu=\frac{(m_\pi^2+m_\mu^2-m_\nu^2)\,c^2}{2m_\pi}\ } \]
+<p>대칭적으로 (\(\mu\leftrightarrow\nu\) 바꿔 같은 계산을 하면)</p>
+\[ E_\nu=\frac{(m_\pi^2+m_\nu^2-m_\mu^2)c^2}{2m_\pi}. \]
+<p><b>붕괴 조건.</b> 두 딸입자의 운동량 크기는</p>
+\[ |\vb p|c=\sqrt{E_\mu^2-m_\mu^2c^4}=\frac{c^2}{2m_\pi}\sqrt{\big[m_\pi^2-(m_\mu+m_\nu)^2\big]\big[m_\pi^2-(m_\mu-m_\nu)^2\big]} \]
+<p>(이 표현은 \(E_\mu^2-m_\mu^2c^4\)를 전개해 인수분해하면 나온다). 근호 안이 실수이려면</p>
+\[ \boxed{\ m_\pi\ \ge\ m_\mu+m_\nu\ } \]
+<p>즉 <b>어미입자 질량이 딸입자 질량 합보다 커야</b> 붕괴가 가능하다. 이것이 상대론 붕괴 운동학의 보편 규칙이다.</p>
+<p><b>검산</b>: (i) \(m_\nu\to0\)이면 본문 결과 \(E_\mu=(m_\pi^2+m_\mu^2)c^2/(2m_\pi)\)로 정확히 환원 ✓. (ii) \(m_\pi=m_\mu+m_\nu\)(문턱)이면 \(|\vb p|=0\)이라 두 입자가 정지 상태로 나오고, \(E_\mu=m_\mu c^2\)임을 위 식에 넣어 확인할 수 있다: \(\frac{(m_\mu+m_\nu)^2+m_\mu^2-m_\nu^2}{2(m_\mu+m_\nu)}=\frac{2m_\mu^2+2m_\mu m_\nu}{2(m_\mu+m_\nu)}=m_\mu\) ✓. (iii) 세 질량이 모두 같은 차원이고 \(E\)는 에너지 차원 ✓. (iv) 실제 \(m_\nu c^2\lesssim0.1\) eV이므로 보정은 \(m_\nu^2/(2m_\pi)\sim10^{-19}\) MeV — 완전히 무시 가능하다.</p></div></div>

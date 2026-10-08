@@ -1,0 +1,69 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> \(t=0\)에 두 원점이 겹친 순간 섬광이 터진다. \(K\)의 관측자는 자기 원점을 중심으로 퍼지는 구면파를 보고, \(K'\)의 관측자도 <i>자기</i> 원점을 중심으로 퍼지는 구면파를 본다(가정 II). 두 원점은 서로 멀어지는데 어떻게 둘 다 중심일 수 있을까? 무엇을 포기해야 하는가 — 절대 시간? 절대 길이?</div>
+
+<h4>14.3 Lorentz 변환 <span class="en">Lorentz transformation</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>두 가정에서 \(\gamma\)까지 — 교재 식 (14.5)–(14.14) <b>(필수)</b></div>
+<ol>
+<li>파면 조건(가정 II): \(\sum_j x_j^2-c^2t^2=0\), \(\sum_j x_j'^2-c^2t'^2=0\). \(t'=t\)를 가정하지 <b>않는다</b>. 횡방향: \(x_2'=x_2\), \(x_3'=x_3\).</li>
+<li>가장 단순한 선형 가정(사건 ↔ 사건 일대일):
+\[ x_1'=\gamma(x_1-vt),\qquad x_1=\gamma'(x_1'+vt') . \]
+\(K'\)의 원점 \(x_1'=0\)은 \(K\)에서 \(x_1=vt\) ✓. 가정 I(두 계 동등) → \(\gamma'=\gamma\).</li>
+<li>첫 식을 둘째에 대입해 \(t'\)를 풀면
+\[ t'=\gamma t+\frac{1-\gamma^2}{\gamma v}x_1 . \]</li>
+<li>가정 II: 광펄스는 \(x_1=ct\), \(x_1'=ct'\). 두 선형식에 넣으면 \(ct'=\gamma(c-v)t\), \(ct=\gamma(c+v)t'\). 곱하면 \(c^2tt'=\gamma^2(c^2-v^2)tt'\):
+\[ \boxed{\ \gamma=\frac1{\sqrt{1-v^2/c^2}}=\frac1{\sqrt{1-\beta^2}},\qquad \beta\equiv\frac vc\ } \]</li>
+<li>\(1-\gamma^2=-\gamma^2\beta^2\)를 3에 넣으면 \(t'=\gamma(t-vx_1/c^2)\). 정리:
+\[ x_1'=\gamma(x_1-vt),\quad x_2'=x_2,\quad x_3'=x_3,\quad t'=\gamma\left(t-\frac{vx_1}{c^2}\right) . \]
+역변환은 \(v\to-v\), 프라임 교환. \(v/c\to0\)에서 Galilei 변환으로 돌아온다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>속도 변환 — 교재 식 (14.16)–(14.17)</div>
+<ol>
+<li>\(\dd x_1'=\gamma(\dd x_1-v\dd t)\), \(\dd t'=\gamma(\dd t-v\dd x_1/c^2)\). 나누면
+\[ u_1'=\frac{u_1-v}{1-u_1v/c^2},\qquad u_{2,3}'=\frac{u_{2,3}}{\gamma\,(1-u_1v/c^2)} . \]
+횡방향 속도도 변한다(\(\dd t'\)이 변하므로).</li>
+<li>검산: \(u_1=c\) → \(u_1'=\frac{c-v}{1-v/c}=c\). 광속은 모든 계에서 \(c\) ✓.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>동시성의 상대성 — 문제 14-6 <b>(필수)</b></div>
+<ol>
+<li>\(K\)에서 같은 시각 \(t\)에 \(\Delta x\)만큼 떨어진 두 사건. \(t'=\gamma(t-vx/c^2)\)에서
+\[ \Delta t'=-\gamma\frac{v\,\Delta x}{c^2}\neq0 . \]</li>
+<li>동시성은 계에 따라 다르다. 길이 수축·시간 팽창·쌍둥이 역설은 모두 이 한 줄의 결과다. 앞쪽(\(+x\)) 사건이 \(K'\)에서는 <b>먼저</b> 일어난다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>길이 수축과 시간 팽창 — Example 14.1, 14.2 요약</div>
+<ol>
+<li><b>길이</b>: 막대가 \(K\)에 정지, 고유 길이 \(l_0=x_1(2)-x_1(1)\). \(K'\)에서는 <b>같은 \(t'\)</b>에 양 끝을 재야 한다. \(x_1'=\gamma(x_1-vt)\)에 \(t=t'/\gamma+vx_1/c^2\)을 넣으면 \(x_1'=x_1/\gamma-vt'\) → \(\Delta x_1'=l_0/\gamma\):
+\[ l=l_0\sqrt{1-\beta^2}\quad\text{(운동 방향만)} . \]</li>
+<li><b>시간</b>: 시계가 \(K\)의 한 점에 고정(\(\Delta x_1=0\)). \(\Delta t'=\gamma(\Delta t-v\Delta x_1/c^2)=\gamma\Delta t\).</li>
+<li><b>고유 시간</b> \(\tau\): 두 사건 <b>모두에 있는</b> 시계가 잰 시간. 모든 다른 관측자는 더 긴 간격을 잰다:
+\[ \Delta t=\gamma\,\Delta\tau\ \ge\ \Delta\tau . \]
+"움직이는 시계는 느리게 간다" — 시계 종류(원자·심장·모래시계)와 무관하다.</li>
+</ol></div>
+
+<div class="callout"><b class="head">Terrell 회전 — "보이는" 것 ≠ "측정되는" 것.</b> 길이 수축은 한 계의 동시각 좌표로 잰 결과다. 멀리서 눈(사진)으로 <i>보는</i> 경우엔 각 점에서 온 빛이 같은 순간 도착해야 하므로, 더 먼 모서리의 빛은 더 일찍 출발한 것이다. 그 결과 움직이는 정육면체는 찌그러져 보이지 않고 \(\sin^{-1}\beta\)만큼 <b>회전</b>해 보이며, 구는 여전히 구로 보인다(Terrell, 1959). 50년 넘게 아무도 의심하지 않았던 "타원체로 보인다"는 서술은 틀렸다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 5</span>rapidity — 쌍곡 회전 (문제 14-2)</div>
+<ol>
+<li>\(\tanh\alpha=\beta\)로 두면 \(\gamma=\cosh\alpha\), \(\gamma\beta=\sinh\alpha\):
+\[ x_1'=x_1\cosh\alpha-ct\sinh\alpha,\qquad ct'=ct\cosh\alpha-x_1\sinh\alpha . \]</li>
+<li>\(x_1'^2-c^2t'^2=x_1^2-c^2t^2\) (\(\cosh^2-\sinh^2=1\)). 원래 회전은 \(x^2+y^2\)을, Lorentz 변환은 \(x^2-c^2t^2\)을 보존한다. \(x_4=ict\)로 쓰면 허수각 \(i\alpha\)의 보통 회전(U44).</li>
+<li>같은 방향 두 부스트: \(\alpha=\alpha_1+\alpha_2\) — rapidity는 <b>더해진다</b>. 속도 덧셈 공식(Example 14.10)의 가장 짧은 증명.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — Lorentz 변환</div>
+\[ x'=\gamma(x-vt),\quad t'=\gamma\!\left(t-\frac{vx}{c^2}\right),\quad \gamma=\frac1{\sqrt{1-\beta^2}} \]
+\[ u'_\parallel=\frac{u_\parallel-v}{1-u_\parallel v/c^2},\quad u'_\perp=\frac{u_\perp}{\gamma(1-u_\parallel v/c^2)},\quad \Delta t'_{\rm sim}=-\gamma\frac{v\Delta x}{c^2} \]
+\[ l=l_0/\gamma,\qquad \Delta t=\gamma\Delta\tau \]
+<p class="note">함정: \(l_0\)과 \(\Delta\tau\)는 <b>물체·시계가 정지한 계</b>의 값. "누가 두 사건에 다 있는가?"를 먼저 물어라.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u40-1"><div class="qq">(시험형) \(x_1'=\gamma(x_1-vt)\), \(x_1=\gamma(x_1'+vt')\)와 광펄스 조건만으로 \(\gamma\)와 \(t'\)의 변환식을 유도하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 1의 3–5단계. 핵심: \(x=ct\), \(x'=ct'\) 대입 → \(ct'=\gamma(c-v)t\), \(ct=\gamma(c+v)t'\) → 곱해서 \(\gamma^2=1/(1-\beta^2)\). 그다음 \(t'=\gamma t+\frac{1-\gamma^2}{\gamma v}x\)에서 \(1-\gamma^2=-\gamma^2\beta^2\) → \(t'=\gamma(t-vx/c^2)\).</p></div></div>
+
+<div class="qz" data-q="u40-2"><div class="qq">우주선(\(\beta=0.6\)) 앞뒤 끝에서 우주선 기준으로 동시에 섬광이 터진다(고유 길이 \(L_0=90\,\)m). 지상 관측자에게 두 섬광의 시간차와 어느 쪽이 먼저인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>우주선 계를 "\(K\)", 지상을 "\(K'\)"로 두면 지상은 우주선에 대해 \(-v\)로 움직인다. \(\Delta t'=+\gamma v\Delta x/c^2\) (부호 반전), \(\gamma=1.25\): \(|\Delta t'|=1.25\times0.6\times90/(3\times10^8)=2.25\times10^{-7}\,\)s = 225 ns. 지상에서는 <b>뒤쪽</b> 섬광이 먼저 보인다(운동 방향 앞쪽이 늦다: "앞쪽 시계가 뒤처진다").</p></div></div>
+
+<div class="qz" data-q="u40-3"><div class="qq">\(K'\)에서 \(x_2'\) 방향으로 \(c\)로 가는 빛은 \(K\)에서 어떤 속도 벡터를 갖는가? 크기가 \(c\)인지 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>역변환: \(u_1=\frac{u_1'+v}{1+u_1'v/c^2}=v\), \(u_2=\frac{u_2'}{\gamma(1+u_1'v/c^2)}=c/\gamma\). \(u_1^2+u_2^2=v^2+c^2(1-v^2/c^2)=c^2\) ✓. 방향이 기울어 보이는 것 = 광행차(aberration): \(\sin\alpha=v/c\).</p></div></div>
+
+<div class="qz" data-q="u40-4"><div class="qq">길이 수축은 "실제로" 일어나는가, 아니면 측정의 착시인가? 한 문장으로 답하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>동시각의 정의가 계마다 다르다는 사실의 실제 결과이다 — 물질이 압축되는 것은 아니지만 측정 결과는 어떤 방법으로 재도 \(l_0/\gamma\)이다(예: 막대가 고정점을 지나는 시간 × \(v\), 문제 14-4). 반면 "눈에 보이는 모양"은 빛의 전파 시간이 더해져 달라진다(Terrell 회전).</p></div></div>

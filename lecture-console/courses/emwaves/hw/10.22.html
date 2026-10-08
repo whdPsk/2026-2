@@ -1,0 +1,10 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+Eq. 10.75: \(\vb{E}=\dfrac{q}{4\pi\eps}\dfrac{1-\beta^2}{(1-\beta^2\sin^2\theta)^{3/2}}\dfrac{\hat{\vb{R}}}{R^2}\), \(\beta=v/c\). 반지름 \(R\) 구면에서 \(d\vb{a}=R^2\sin\theta\,d\theta\,d\varphi\,\hat{\vb{R}}\)이고 \(R^2\)가 상쇄되므로
+\[ \oint\vb{E}\cdot d\vb{a}=\frac{q(1-\beta^2)}{4\pi\eps}\,2\pi\int_0^\pi\frac{\sin\theta\,d\theta}{(1-\beta^2\sin^2\theta)^{3/2}} . \]
+\(x=\cos\theta\)로 놓으면 \(1-\beta^2\sin^2\theta=(1-\beta^2)+\beta^2x^2\)이고
+\[ \int_{-1}^{1}\frac{dx}{(A+Bx^2)^{3/2}}=\left[\frac{x}{A\sqrt{A+Bx^2}}\right]_{-1}^{1}=\frac{2}{(1-\beta^2)\cdot 1}=\frac{2}{1-\beta^2}\quad(A=1-\beta^2,\ B=\beta^2). \]
+\[ \oint\vb{E}\cdot d\vb{a}=\frac{q(1-\beta^2)}{4\pi\eps}\cdot2\pi\cdot\frac{2}{1-\beta^2}=\boxed{\frac{q}{\eps}} \]
+Gauss 법칙 그대로. (Wheeler의 "계산하기 전에 답을 알라" — \(\gamma\)-플래트닝으로 적도 근처는 강해지고 극 근처는 약해지지만 <b>총 flux는 정확히 상쇄</b>된다.)
+<div class="alabel">감점 포인트</div>
+현재 위치가 아닌 지연 위치를 중심으로 잡으면 \(\theta\) 대칭성이 깨져 적분이 성립하지 않는다.</div><!--/sol-->

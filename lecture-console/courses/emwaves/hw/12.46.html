@@ -1,0 +1,16 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> 무한 선전하:</p>
+\[ \vb{E}_0=\frac{\lambda}{2\pi\eps}\frac{x_0\hat{\vb{x}}+y_0\hat{\vb{y}}}{x_0^{2}+y_0^{2}},\qquad \vb{B}_0=0. \]
+
+<p><b>(b)</b> \(S\)는 \(S_0\)에 대해 \(+x\)로 속력 \(v\). Eq. 12.111에서 \(\vb{B}_0=0\)이므로</p>
+\[ E_x=E_{0x},\qquad E_y=\gamma E_{0y},\qquad E_z=0. \]
+\[ \vb{E}=\frac{\lambda}{2\pi\eps}\frac{x_0\hat{\vb{x}}+\gamma y_0\hat{\vb{y}}}{x_0^{2}+y_0^{2}}. \]
+<p>좌표 변환 \(x_0=\gamma(x+vt),\ y_0=y\). 편의상 \(t=0\)(이 순간 도선은 \(x=0\)을 지난다)으로 두면 \(x_0=\gamma x,\ y_0=y\):</p>
+\[ \vb{E}=\frac{\lambda}{2\pi\eps}\frac{\gamma x\hat{\vb{x}}+\gamma y\hat{\vb{y}}}{\gamma^{2}x^{2}+y^{2}}=\frac{\lambda\gamma}{2\pi\eps}\frac{\boldsymbol{\mathcal{S}}}{\gamma^{2}x^{2}+y^{2}}, \]
+<p>여기서 \(\boldsymbol{\mathcal{S}}=x\hat{\vb{x}}+y\hat{\vb{y}}\)는 <b>현재</b> 도선 위치에서 관측점까지의 벡터. \(x=\mathcal{S}\cos\theta,\ y=\mathcal{S}\sin\theta\)로 쓰면</p>
+\[ \gamma^{2}x^{2}+y^{2}=\gamma^{2}\mathcal{S}^{2}\Big(1-\frac{v^{2}}{c^{2}}\sin^{2}\theta\Big), \]
+\[ \boxed{\ \vb{E}=\frac{\lambda}{2\pi\eps}\frac{(1-v^{2}/c^{2})^{1/2}}{1-(v^{2}/c^{2})\sin^{2}\theta}\ \frac{\hat{\boldsymbol{\mathcal{S}}}}{\mathcal{S}}\ } \]
+<p><b>답:</b> 그렇다. 장은 정확히 도선의 <b>순간(현재) 위치</b>에서 방사상으로 뻗어나온다 — 등속운동하는 점전하(Ex. 12.14)와 완전히 같은 구조이며, 각도의존 인자도 같은 \([1-(v^{2}/c^{2})\sin^{2}\theta]\) 꼴이다(점전하는 \(3/2\)제곱, 선전하는 1제곱). 앞뒤(\(\theta=0,\pi\))로는 약해지고 옆(\(\theta=\pi/2\))으로는 세진다.</p>
+<div class="alabel">감점 포인트</div>
+\(x_0=\gamma(x+vt)\)의 \(\gamma\)를 빼먹고 좌표만 바꾸는 것. 장 성분 변환과 좌표 변환을 <b>둘 다</b> 해야 한다.</div><!--/sol-->

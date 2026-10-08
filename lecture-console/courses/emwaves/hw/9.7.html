@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<b>(a)</b> \(\mu\Delta z\,\partial_t^2f=T\partial_z^2f\,\Delta z-\gamma\,\partial_tf\,\Delta z\):
+\[\boxed{\;T\frac{\partial^2 f}{\partial z^2}=\mu\frac{\partial^2 f}{\partial t^2}+\gamma\frac{\partial f}{\partial t}\;}\]
+<b>(b)</b> \(\tilde f=\tilde F(z)e^{-i\omega t}\) 대입: \(T\tilde F''=(-\mu\omega^2-i\gamma\omega)\tilde F\), 즉 \(\tilde F''=-\tilde k^2\tilde F\)와
+\[\tilde k^2=\frac{\mu\omega^2+i\gamma\omega}{T},\qquad \tilde F=\tilde A e^{i\tilde k z}.\]
+\(\tilde k\equiv k+i\kappa\)로 쓰면 \(k^2-\kappa^2=\mu\omega^2/T\), \(2k\kappa=\gamma\omega/T\)이고
+\[\boxed{k=\omega\sqrt{\frac{\mu}{2T}}\left[\sqrt{1+\left(\frac{\gamma}{\mu\omega}\right)^2}+1\right]^{1/2},\quad \kappa=\omega\sqrt{\frac{\mu}{2T}}\left[\sqrt{1+\left(\frac{\gamma}{\mu\omega}\right)^2}-1\right]^{1/2}}\]
+<b>(c)</b> \(\tilde f=\tilde Ae^{-\kappa z}e^{i(kz-\omega t)}\) — 진폭이 \(e^{-\kappa z}\)로 감쇠. 침투거리
+\[\boxed{d=\frac{1}{\kappa}=\frac{1}{\omega}\sqrt{\frac{2T}{\mu}}\left[\sqrt{1+(\gamma/\mu\omega)^2}-1\right]^{-1/2}}\]
+<b>(d)</b> 경계조건은 (질량 없는 매듭) \(\tilde A_I+\tilde A_R=\tilde A_T\), \(k_1(\tilde A_I-\tilde A_R)=\tilde k_2\tilde A_T\). 따라서
+\[\frac{\tilde A_R}{\tilde A_I}=\frac{k_1-\tilde k_2}{k_1+\tilde k_2}=\frac{(k_1-k_2)-i\kappa_2}{(k_1+k_2)+i\kappa_2} =\frac{(k_1^2-k_2^2-\kappa_2^2)-2i\kappa_2k_1}{(k_1+k_2)^2+\kappa_2^2}\]
+\[\boxed{A_R=A_I\sqrt{\frac{(k_1-k_2)^2+\kappa_2^2}{(k_1+k_2)^2+\kappa_2^2}},\qquad \delta_R=\tan^{-1}\!\left[\frac{-2\kappa_2k_1}{k_1^2-k_2^2-\kappa_2^2}\right]}\]
+<div class="alabel">감점 포인트</div>
+\(\tilde k_2\)의 제곱근에서 \(\kappa_2&gt;0\)인 가지를 골라야 한다(\(z\)가 커질 때 감쇠). 부호를 잘못 잡으면 발산하는 해가 나온다.</div><!--/sol-->

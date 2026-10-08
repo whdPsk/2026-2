@@ -1,0 +1,19 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+가장 깔끔한 방법은 <b>불변량 \(s\equiv-P^{\mu}_\text{tot}P_{\text{tot}\,\mu}c^{2}=E_\text{tot}^{2}-p_\text{tot}^{2}c^{2}\)</b>를 두 계에서 비교하는 것이다.
+
+<p><b>충돌형(중심운동량계):</b> 각각 에너지 \(E\), 운동량 \(\pm p\).
+\[ E_\text{tot}=2E,\quad p_\text{tot}=0\ \Rightarrow\ s=(2E)^{2}=4E^{2}. \]</p>
+
+<p><b>고정 표적계:</b> 한 입자는 정지(\(mc^{2}\)), 다른 입자는 에너지 \(\bar E\), 운동량 \(\bar p\) (\(\bar p^{2}c^{2}=\bar E^{2}-m^{2}c^{4}\)).
+\[ s=(\bar E+mc^{2})^{2}-\bar p^{2}c^{2}=\bar E^{2}+2\bar E mc^{2}+m^{2}c^{4}-\bar E^{2}+m^{2}c^{4}=2mc^{2}\bar E+2m^{2}c^{4}. \]</p>
+
+<p>\(s\)는 불변량이므로 두 표현이 같다:
+\[ 2mc^{2}\bar E+2m^{2}c^{4}=4E^{2}\ \Rightarrow\ \boxed{\bar E=\frac{2E^{2}}{mc^{2}}-mc^{2}} \]</p>
+
+<p><b>수치:</b> \(mc^{2}=1\,\text{GeV},\ E=30\,\text{GeV}\):
+\[ \bar E=\frac{2(30)^{2}}{1}-1=\boxed{1799\ \text{GeV}\approx 60\,E} \]
+고전적으로는 겨우 \(4E=120\,\text{GeV}\)에 그친다. (고전에서 \(4E\)인 이유: 상대속도가 2배 → 운동에너지 \(\propto v^{2}\)이므로 4배.) 상대론적 이득이 \(E\)에 비례해 커지므로, 현대 입자물리 실험은 거의 모두 <b>충돌빔(colliding beams)</b>을 쓴다.</p>
+
+<div class="alabel">감점 포인트</div>
+로런츠 변환으로 일일이 성분을 옮기다 계산 실수하는 것 — 이런 문제는 <b>불변량 \(s\)</b>를 쓰는 것이 정석이다. 또 \(\bar E\)가 "운동에너지"가 아니라 <b>총에너지</b>임에 주의(정지에너지 \(mc^{2}\)를 포함).</div><!--/sol-->

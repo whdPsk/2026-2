@@ -1,0 +1,42 @@
+<div class="exq"><b>상황.</b> \(S\)에서 어떤 입자가 시간 \(dt\) 동안 \(x\)방향으로 \(dx\)만큼 움직인다. 따라서 \(S\)에서의 속도는 \(u=dx/dt\)이다. \(\bar S\)는 \(S\)에 대해 \(+x\)로 속력 \(v\)로 움직인다. \(\bar S\)에서 본 이 입자의 속도 \(\bar u\)를 \(u,v\)로 표현하라. Galilei의 \(\bar u=u-v\)가 어떻게 수정되는지가 핵심이다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>속도는 <b>좌표의 비</b>이므로, 분자와 분모를 각각 Lorentz 변환한 뒤 나눈다.</div>
+<ol>
+<li>변위를 변환한다. \(\bar x=\gamma(x-vt)\)를 미분 형태로:
+\[ d\bar x=\gamma\,(dx-v\,dt). \]</li>
+<li>시간 간격도 변환한다 — <b>여기가 Galilei와 갈리는 지점</b>이다. \(\bar t=\gamma(t-vx/c^2)\)에서
+\[ d\bar t=\gamma\left(dt-\frac{v}{c^2}dx\right). \]
+Galilei라면 \(d\bar t=dt\)이지만, 상대론에서는 시간 간격도 위치 변화에 따라 달라진다.</li>
+<li>나눈다. \(\gamma\)가 소거된다:
+\[ \bar u=\frac{d\bar x}{d\bar t}=\frac{\gamma(dx-v\,dt)}{\gamma\left(dt-\dfrac{v}{c^2}dx\right)} =\frac{\dfrac{dx}{dt}-v}{1-\dfrac{v}{c^2}\dfrac{dx}{dt}}=\frac{u-v}{1-uv/c^2}. \]</li>
+<li>세 물체 표기로 바꾼다. 입자를 \(A\), \(S\)를 \(B\), \(\bar S\)를 \(C\)라 하면 \(u=v_{AB},\ \bar u=v_{AC},\ v=v_{CB}=-v_{BC}\)이므로
+\[ v_{AC}=\frac{v_{AB}+v_{BC}}{1+v_{AB}v_{BC}/c^2}. \]
+분모의 \(1+v_{AB}v_{BC}/c^2\)만 빼면 Galilei의 단순 덧셈이다.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \bar u=\frac{u-v}{1-uv/c^2}\qquad\Longleftrightarrow\qquad v_{AC}=\frac{v_{AB}+v_{BC}}{1+v_{AB}v_{BC}/c^2}\ } \]
+<p class="note">\(\gamma\)가 통째로 약분되어 결과에 나타나지 않는다는 점이 인상적이다. <b>검산</b>: \(u,v\ll c\)이면 분모 \(\to1\)이라 \(\bar u\to u-v\) — Galilei 속도 덧셈 회복 ✓. \(u=c\)를 넣으면 \(\bar u=(c-v)/(1-v/c)=c\) — 광속 불변 원리와 자동으로 정합 ✓. 차원: \(uv/c^2\) 무차원 ✓.</p></div>
+<div class="qz" data-q="ex12.6-a"><div class="qq"><b>+α</b> \(|u|&lt;c,\ |v|&lt;c\)이면 반드시 \(|\bar u|&lt;c\)임을 <em>대수적으로</em> 증명하라. 그리고 \(u=v=0.9c\)로 서로 마주 달리는 두 우주선의 상대속력을 구하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>증명.</b> \(c-\bar u\)를 통분해 인수분해한다:</p>
+\[ c-\bar u=c-\frac{u-v}{1-uv/c^2}=\frac{c\left(1-\dfrac{uv}{c^2}\right)-(u-v)}{1-uv/c^2} =\frac{c-\dfrac{uv}{c}-u+v}{1-uv/c^2}. \]
+<p>분자를 묶으면</p>
+\[ c-\frac{uv}{c}-u+v=c\left(1-\frac uc\right)+v\left(1-\frac uc\right)=\left(1-\frac uc\right)(c+v). \]
+\[ \boxed{\ c-\bar u=\frac{(1-u/c)(c+v)}{1-uv/c^2}\ } \]
+<p>\(|u|&lt;c\Rightarrow(1-u/c)&gt;0\), \(|v|&lt;c\Rightarrow(c+v)&gt;0\), 그리고 \(|uv|&lt;c^2\Rightarrow(1-uv/c^2)&gt;0\). 셋 다 양수이므로 \(c-\bar u&gt;0\), 즉 \(\bar u&lt;c\). 같은 방법으로</p>
+\[ c+\bar u=\frac{(1+u/c)(c-v)}{1-uv/c^2}&gt;0\ \Rightarrow\ \bar u&gt;-c. \]
+<p>따라서 \(|\bar u|&lt;c\). 또한 \(u=c\)이면 분자가 0이 되어 \(\bar u=c\) — 광속은 경계값이자 고정점이다.</p>
+<p><b>수치.</b> 우주선 A가 \(+0.9c\), 우주선 B가 \(-0.9c\)로 달린다. B의 기준계에서 본 A의 속력은 \(v=-0.9c\)인 계로 변환:</p>
+\[ \bar u=\frac{0.9c-(-0.9c)}{1-(0.9c)(-0.9c)/c^2}=\frac{1.8c}{1+0.81}=\frac{1.8}{1.81}c=0.9945c. \]
+<p>Galilei라면 \(1.8c\)였을 값이 \(0.994c\)로 눌린다 — 광속을 넘지 않는다 ✓.</p></div></div>
+<div class="qz" data-q="ex12.6-b"><div class="qq"><b>+α</b> (수직 방향으로 확장) \(y\)방향 속도 변환식 \(\bar u_y\)를 유도하라. 그리고 \(S\)에서 \(+y\)로 \(0.6c\)로 움직이는 입자를 \(v=0.8c\)로 움직이는 \(\bar S\)가 보면 속도와 방향은?</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>유도.</b> \(\bar y=y\)이므로 \(d\bar y=dy\). 분모는 그대로 \(d\bar t=\gamma(dt-\tfrac{v}{c^2}dx)\):</p>
+\[ \bar u_y=\frac{d\bar y}{d\bar t}=\frac{dy}{\gamma\left(dt-\dfrac{v}{c^2}dx\right)} =\frac{u_y}{\gamma\left(1-\dfrac{u_xv}{c^2}\right)}. \]
+\[ \boxed{\ \bar u_y=\frac{u_y}{\gamma\,(1-u_xv/c^2)},\qquad \bar u_z=\frac{u_z}{\gamma\,(1-u_xv/c^2)}\ } \]
+<p>수직 <em>좌표</em>는 변하지 않지만 수직 <em>속도</em>는 변한다 — 시간 간격이 변하기 때문이다.</p>
+<p><b>수치.</b> \(u_x=0,\ u_y=0.6c\), \(v=0.8c\Rightarrow\gamma=1/\sqrt{1-0.64}=5/3\).</p>
+\[ \bar u_x=\frac{0-0.8c}{1-0}=-0.8c,\qquad \bar u_y=\frac{0.6c}{(5/3)(1-0)}=0.36c. \]
+\[ |\bar u|=c\sqrt{0.8^2+0.36^2}=c\sqrt{0.64+0.1296}=\boxed{0.877c},\qquad \theta=\tan^{-1}\!\frac{0.36}{0.8}=\boxed{24.2^\circ}\ (+y\text{ 쪽으로 기울어진 }-x\text{ 방향}). \]
+<p><b>검산</b>: (i) 광속 미달 ✓ — 일반적으로 \(\bar u^2=v^2+u_y^2(1-\beta^2)\)이고 \(c^2-\bar u^2=(c^2-v^2)(1-u_y^2/c^2)&gt;0\)이므로 항상 \(|\bar u|&lt;c\)임이 보장된다. (ii) \(v\ll c\) 극한: \(\gamma\to1\)이라 \(\bar u_y\to u_y,\ \bar u_x\to-v\)로 Galilei 벡터 뺄셈이 회복된다 ✓. (iii) 이 각도 변화가 바로 <b>aberration(광행차)</b>과 headlight 효과의 근원이며, 광원이 빠르게 움직이면 복사가 진행 방향으로 쏠리는 이유다.</p></div></div>

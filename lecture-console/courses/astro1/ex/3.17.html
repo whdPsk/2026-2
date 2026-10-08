@@ -1,0 +1,12 @@
+<div class="exq"><span class="examtag">L05 슬라이드 7·8 적용 · 9/15 수업</span><br>A damped oscillator \(E(t)=E_0e^{-t/\tau}\cos(2\pi\nu_0t)\) for t ≥ 0 (0 for t &lt; 0). Find \(|\hat E(\nu)|^2\) near ν₀, its FWHM, and check Parseval. Take τ = 10 ns, ν₀ = 1 GHz.<br>(번역) 감쇄 조화진동자의 스펙트럼 모양·선폭을 구하고 Parseval 정리를 확인하라. [[L05.s7, L05.s8]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>FT → 로렌츠형 → 선폭</div><ol>
+<li>\(\cos=\frac12(e^{i2\pi\nu_0t}+e^{-i2\pi\nu_0t})\). ν ≈ ν₀ 근처에서는 한 항만 중요: \(\hat E(\nu)\approx\frac{E_0}2\int_0^\infty e^{-t/\tau}e^{i2\pi(\nu-\nu_0)t}dt=\frac{E_0/2}{1/\tau-i2\pi(\nu-\nu_0)}\). [[L05.s6]]</li>
+<li>\(|\hat E(\nu)|^2=\dfrac{E_0^2/4}{1/\tau^2+4\pi^2(\nu-\nu_0)^2}\) — 로렌츠(Lorentzian) 모양, 피크 \((E_0\tau/2)^2\).</li>
+<li>반값: \(2\pi|\nu-\nu_0|=1/\tau\) → FWHM \(\Delta\nu=1/(\pi\tau)=3.2\times10^7\) Hz. → \(\Delta\nu\cdot\tau=1/\pi\sim1\) (넓은 시간 ↔ 좁은 스펙트럼). [[S0915.24]]</li>
+<li>Parseval: \(\int E^2dt=E_0^2\tau/4\) (τ ≫ 1/ν₀), 주파수 쪽은 ±ν₀ 두 로렌츠 각각 \(E_0^2\tau/8\) → 합 \(E_0^2\tau/4\) ✓. (python 수치 FT로 반값점 비 0.51, 피크 (τ/2)² 확인) [[S0915.22, S0915.23]]</li>
+<li>에너지 스펙트럼: \(dW/dA\,d\nu=\frac c{2\pi}|\hat E(\nu)|^2\)(0~∞, 2배가 반영된 계수). [[S0915.25]]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>로렌츠형 스펙트럼, FWHM = 1/(πτ) ≈ 32 MHz (τ = 10 ns). 감쇠가 느릴수록(τ 큼) 선이 좁다 — 슬라이드 7 ③ "감쇄 조화진동자 ↔ 매우 좁은 봉우리". 이후 자연 선폭(Lorentz profile)의 원형.</p></div>
+<div class="trap"><b>함정</b>t = 0에서 갑자기 켜지는 경계(sharp feature)는 스펙트럼 날개(wing)를 넓게 만든다 — 로렌츠의 긴 꼬리. [[L05.s7, S0915.23]]</div>
+<div class="qz" data-q="ex3.17-a"><div class="qq"><b>+α</b> τ를 10배로 늘리면 FWHM은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>1/10 → ≈ 3.2 MHz.</p></div></div>
+<div class="qz" data-q="ex3.17-b"><div class="qq"><b>+α</b> 같은 진동을 −1 &lt; t &lt; 1 구간에서만 (감쇠 없이) 켰다 끄면 스펙트럼 모양은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>사각 펄스(길이 T = 2) × 사인 → ν₀에 중심을 둔 sinc², 중심에서 첫 영점까지 |ν − ν₀| = 1/T = 0.5, 양옆에 곁가지(ringing) — 슬라이드 7 ②.</p></div></div>

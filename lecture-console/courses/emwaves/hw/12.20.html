@@ -1,0 +1,25 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\[ I=-(c\Delta t)^{2}+(\Delta x)^{2}+(\Delta y)^{2}+(\Delta z)^{2}. \]
+
+<p>(a) \(\Delta x=5-10=-5,\ \Delta y=3-8=-5,\ \Delta z=0,\ c\Delta t=15-5=10\).
+\[ I=-100+(25+25)=\boxed{-50} \]
+(i) \(I\lt 0\) → <b>시간꼴(timelike)</b>.</p>
+<p>(ii) 동시가 되려면 \(c\Delta\bar t=0\)이고, 그러면 \(I=\bar d^{2}\ge0\)이어야 한다. \(I=-50\lt0\)이므로
+\[ \boxed{\text{동시가 되는 계는 없다}} \]</p>
+<p>(iii) 같은 지점이 되려면 \(\bar d=0\Rightarrow I=-(c\Delta\bar t)^{2}\le0\) — 가능하다. 그 계는 두 사건을 잇는 속도로 움직여야 한다:
+\[ \vb{v}=\frac{\Delta \vb{r}}{\Delta t}=\frac{(-5,-5,0)}{10/c}=\Bigl(-\tfrac12,-\tfrac12,0\Bigr)c. \]
+\[ \boxed{|\vb{v}|=\frac{c}{\sqrt2}\approx0.707c,\quad \text{방향}=-\frac{\hat{\vb{x}}+\hat{\vb{y}}}{\sqrt2}} \]
+(검산: \(\bar d=0\)일 때 \(c\Delta\bar t=\sqrt{50}\), 즉 고유시간 간격 \(\sqrt{50}/c\).)</p>
+
+<p>(b) \(\Delta x=2-5=-3,\ c\Delta t=1-3=-2\).
+\[ I=-4+9=\boxed{+5}\quad(\text{공간꼴, spacelike}) \]
+(ii) 동시 가능. \(\Delta\bar t=\gamma(\Delta t-v\Delta x/c^{2})=0\Rightarrow\)
+\[ v=\frac{c^{2}\Delta t}{\Delta x}=\frac{c^{2}(-2/c)}{-3}=\boxed{\tfrac23 c\ \ (+x\ \text{방향})} \]
+(iii) 같은 지점? \(I\gt0\)이므로 불가능:
+\[ \boxed{\text{그런 계는 없다}} \]</p>
+
+<p>정리: <b>시간꼴 → 같은 장소로 만들 수 있고 시간 순서 불변(인과 가능). 공간꼴 → 동시로 만들 수 있고 시간 순서 가변(인과 불가).</b></p>
+
+<div class="alabel">감점 포인트</div>
+\(I\)의 부호규약을 뒤집어 시간꼴/공간꼴을 반대로 판정하는 것(Griffiths는 \(I\lt0\)이 시간꼴). (iii)에서 요구 속도가 \(c\)를 넘지 않는지 반드시 확인 — 시간꼴이면 자동으로 \(\lt c\)이다.</div><!--/sol-->

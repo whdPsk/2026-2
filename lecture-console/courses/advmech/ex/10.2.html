@@ -1,0 +1,16 @@
+<div class="exq"><b>상황.</b> 마찰 없는 수평 회전목마(각속도 \(\omega\) 일정, 위에서 보아 반시계). 학생이 퍽을 민다. (a) 회전목마 위 관찰자가 보는 유효력 (b) 여러 초기 조건에서 회전계 궤적.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>실제 수평력 0 → 남는 것은 원심력과 Coriolis.</div>
+<ol>
+<li>원점 = 회전목마 중심(\(\ddot{\vb R}=0\)), \(\dot{\boldsymbol\omega}=0\), 수평 실제력 0 (수직항력과 중력은 상쇄):
+\[ \vb F_{\rm eff}=-m\boldsymbol\omega\times(\boldsymbol\omega\times\vb r)-2m\boldsymbol\omega\times\vb v_r . \]</li>
+<li>성분(\(\boldsymbol\omega=\omega\uv z\)): \(\ddot x=\omega^2x+2\omega\dot y\), \(\ddot y=\omega^2y-2\omega\dot x\).</li>
+<li>(b) 교재는 수치 적분(\(\omega=1\) rad/s, \(R=1\) m, 초기 위치 \((-0.5R,0)\))으로 그림 10-4를 그린다: 빠르면 금방 가장자리로, 중간 속력이면 여러 바퀴 고리를 그림, 45° 방향이면 고리를 만들거나 급격히 방향을 바꾼다.</li>
+<li><b>해석적으로</b>: 관성계에서 퍽은 등속 직선운동 \(\vb r_f(t)=\vb r_0+\vb v_{f0}t\). 회전계 좌표는 이를 \(-\omega t\) 돌린 것: \(x+iy=(x_f+iy_f)e^{-i\omega t}\). 초기 회전계 속도 \(\vb v_{r0}\)와 관성계 속도의 관계: \(\vb v_{f0}=\vb v_{r0}+\boldsymbol\omega\times\vb r_0\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \vb a_{\rm eff}=-\boldsymbol\omega\times(\boldsymbol\omega\times\vb r)-2\boldsymbol\omega\times\vb v_r,\qquad x+iy=\left[z_0+(v_{r0}+i\omega z_0)t\right]e^{-i\omega t}\ \ (z=x+iy) \]
+<p class="note"><b>검산</b> ① 해를 미분하면 \(\ddot z=-2i\omega\dot z+\omega^2z\) — 성분식과 같다 ✓. ② 관성계에서 정지한 퍽(\(v_{r0}=-i\omega z_0\))은 회전계에서 반지름 \(|z_0|\)인 원을 시계방향으로 돈다 ✓. ③ Coriolis는 일을 안 하므로 회전계 "에너지" \(\tfrac12v_r^2-\tfrac12\omega^2\rho^2\) 보존(U12 유도 3).</p></div>
+<div class="qz" data-q="ex10.2-a"><div class="qq"><b>+α</b> Problem 10-4: 초기 위치 \((-0.5R,0)\)에서 어떤 초기 속도로 밀면 퍽이 <b>관성계에서 정지</b>해 보이는가? 회전계에서의 운동은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(\vb v_{f0}=0\) → \(\vb v_{r0}=-\boldsymbol\omega\times\vb r_0=-\omega\uv z\times(-0.5R\uv x)=0.5\omega R\,\uv y\). 즉 \(+y\) 방향으로 \(0.5\omega R\).</p>
+<p>회전계: 반지름 \(0.5R\)인 원을 각속도 \(-\omega\)(시계방향)로 영원히 돈다. 검산: 원운동 구심 가속도 \(\omega^2(0.5R)\) (안쪽) = 원심 \(\omega^2\rho\) (바깥) + Coriolis \(2\omega v_r=2\omega(0.5\omega R)=\omega^2R\) (안쪽): \(-0.5+1=0.5\) ✓.</p></div></div>
+<div class="qz" data-q="ex10.2-b"><div class="qq"><b>+α</b> Problem 10-3: 표면에 정지마찰계수 \(\mu_s\)가 있다면 퍽을 중심에서 얼마까지 멀리 놓아도 미끄러지지 않는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>회전계에서 정지 → Coriolis 0. 원심력 \(m\omega^2\rho\le\mu_smg\) → \(\rho_{\max}=\mu_sg/\omega^2\).</p></div></div>

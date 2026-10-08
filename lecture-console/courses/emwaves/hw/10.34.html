@@ -1,0 +1,20 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+소스가 있는 Maxwell:
+\[ \divg\vb{E}=\frac{\rho_e}{\eps},\quad \curl\vb{E}=-\muz\vb{J}_m-\frac{\partial\vb{B}}{\partial t},\quad
+\divg\vb{B}=\muz\rho_m,\quad \curl\vb{B}=\muz\vb{J}_e+\muz\eps\frac{\partial\vb{E}}{\partial t}. \]
+\(\divg\vb{B}\ne0,\ \curl\vb{E}\ne-\dot{\vb{B}}\)이므로 \(\vb{B}=\curl\vb{A}\)만으로는 부족하다. 네 개의 퍼텐셜 \((V_e,\vb{A}_e;V_m,\vb{A}_m)\)를 도입하고
+\[ \boxed{\vb{E}=-\nabla V_e-\frac{\partial\vb{A}_e}{\partial t}-\curl\vb{A}_m,\qquad
+\vb{B}=\curl\vb{A}_e-\muz\eps\left(\nabla V_m+\frac{\partial\vb{A}_m}{\partial t}\right)} \]
+<b>검증.</b> \(\divg\vb{E}\)에서 \(\divg(\curl\vb{A}_m)=0\)이므로 전기 쪽 식은 그대로. \(\divg\vb{B}\)는 \(-\muz\eps\big[\nabla^2V_m+\partial(\divg\vb{A}_m)/\partial t\big]=\muz\rho_m\). \(\curl\vb{E}\) 식에 넣고 정리하면 \(\vb{A}_m\)에 대해 전기 쪽과 <b>동일한 구조</b>의 방정식이 나오고, \(\curl\vb{B}\) 식에서는 \(\curl\vb{A}_m\) 항이 서로 상쇄된다.
+
+Lorenz 게이지를 <b>두 벌</b> 쓰면
+\[ \divg\vb{A}_e=-\muz\eps\frac{\partial V_e}{\partial t},\qquad \divg\vb{A}_m=-\muz\eps\frac{\partial V_m}{\partial t} \]
+\[ \boxed{\Box^2V_e=-\frac{\rho_e}{\eps},\quad \Box^2\vb{A}_e=-\muz\vb{J}_e,\quad
+\Box^2V_m=-\frac{\rho_m}{\eps},\quad \Box^2\vb{A}_m=-\muz\vb{J}_m} \]
+따라서 지연 퍼텐셜은 네 벌 모두 같은 꼴:
+\[ \boxed{V_{e,m}=\frac{1}{4\pi\eps}\int\frac{\rho_{e,m}(\vb{r}',t_r)}{\rr}d\tau',\qquad
+\vb{A}_{e,m}=\frac{\muz}{4\pi}\int\frac{\vb{J}_{e,m}(\vb{r}',t_r)}{\rr}d\tau'} \]
+\(\rho_m=\vb{J}_m=0\)이면 \(V_m=\vb{A}_m=0\)이 되어 표준 형식으로 환원된다. 구조 전체가 duality \((\vb{E}\to c\vb{B},\ c\vb{B}\to-\vb{E})\)에 대해 대칭이다.
+<div class="alabel">감점 포인트</div>
+\(\vb{E}\)에 \(-\curl\vb{A}_m\)을 넣을 때 부호와 \(\muz\eps\) 인자 배치를 틀려 \(\curl\vb{B}\) 식에서 상쇄가 안 되는 것.</div><!--/sol-->

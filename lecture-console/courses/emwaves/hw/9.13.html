@@ -1,0 +1,14 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(\mathbf E=E_0\cos(kz-\omega t+\delta)\hat x\), \(\mathbf B=\frac{E_0}{c}\cos(kz-\omega t+\delta)\hat y\). 표기 \(C\equiv\cos^2(kz-\omega t+\delta)\).
+\[T_{ij}=\epsilon_0\!\left(E_iE_j-\tfrac12\delta_{ij}E^2\right)+\frac{1}{\mu_0}\!\left(B_iB_j-\tfrac12\delta_{ij}B^2\right)\]
+비대각 성분: \(\mathbf E\)는 \(x\)성분만, \(\mathbf B\)는 \(y\)성분만 있으므로 \(E_iE_j\), \(B_iB_j\)의 비대각항은 모두 0 → \(T_{ij}=0\ (i\neq j)\).<br>
+\[T_{xx}=\epsilon_0\!\left(E_0^2C-\tfrac12E_0^2C\right)-\frac{1}{2\mu_0}\frac{E_0^2C}{c^2}=\tfrac12\epsilon_0E_0^2C-\tfrac12\epsilon_0E_0^2C=0\]
+\[T_{yy}=-\tfrac12\epsilon_0E_0^2C+\frac{1}{\mu_0}\!\left(\frac{E_0^2C}{c^2}-\frac{E_0^2C}{2c^2}\right)=0\]
+\[T_{zz}=-\tfrac12\epsilon_0E_0^2C-\frac{E_0^2C}{2\mu_0c^2}=-\epsilon_0E_0^2C=-u\]
+\[\boxed{T_{zz}=-u=-\epsilon_0E_0^2\cos^2(kz-\omega t+\delta),\quad \text{나머지 모든 성분}=0}\]
+\(-\overleftrightarrow T\)가 운동량 flux density이므로 \(z\)방향으로 흐르는 \(z\)운동량의 flux는 \(-T_{zz}=u\):
+\[\boxed{\text{운동량 flux density}=u=\frac{S}{c}}\]
+말이 된다 — 파는 \(z\)방향으로만 운동량을 나르고, 옆으로 미는 성분(\(T_{xx},T_{yy}\))이나 전단(비대각)은 없다. 시간평균하면 \(\langle u\rangle=\frac12\epsilon_0E_0^2=I/c\) = 복사압(Eq. 9.65).
+<div class="alabel">감점 포인트</div>
+\(T_{xx}, T_{yy}\)에서 전기항과 자기항이 정확히 상쇄된다는 사실을 놓치기 쉽다(\(B^2=E^2/c^2\), \(1/\mu_0c^2=\epsilon_0\) 사용).</div><!--/sol-->

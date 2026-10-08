@@ -1,0 +1,49 @@
+<div class="exq"><b>상황.</b> 자기 쌍극자 \(\vb m\)의 모형으로, 정상전류 \(I\)가 흐르는 가로 \(l\)·세로 \(w\)인 직사각형 도선 고리를 생각한다. 전류를 도선 안에서 자유롭게 움직이는 전하 \(Q\)들의 흐름으로 본다. 여기에 균일 전기장 \(\vb E\)를 걸면 왼쪽 변에서 전하가 가속되고 오른쪽 변에서 감속된다. 고리 안 <b>모든 전하의 역학적 운동량 총합</b>을 구하라. 고리 자체는 정지해 있으므로 고전적으로는 0이 나와야 마땅한 양이다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>전류가 같아도 위·아래 변의 \(\gamma\)가 다르므로 \(\gamma Mu\)의 합이 상쇄되지 않는다.</div>
+<ol>
+<li><b>좌우 변은 상쇄된다.</b> 왼쪽·오른쪽 세로 변에서 전하는 서로 반대 방향(위·아래)으로 같은 상황이므로 그 운동량 기여가 상쇄된다. 위·아래 가로 변만 보면 된다.</li>
+<li><b>전류가 같다는 조건이 핵심이다.</b> 위 변에 \(N_+\)개의 전하가 속력 \(u_+\)로 오른쪽으로, 아래 변에 \(N_-\)개가 (더 느린) \(u_-\)로 왼쪽으로 흐른다. 어디에도 전하가 쌓이지 않으려면 전류가 네 변에서 모두 같아야 한다:
+\[ I=\frac{QN_+}{l}u_+=\frac{QN_-}{l}u_-\ \Longrightarrow\ N_\pm u_\pm=\frac{Il}{Q}. \]
+<b>즉 \(Nu\)가 위·아래에서 같다.</b></li>
+<li><b>고전적으로 계산하면 0이다.</b> \(p=Mu\)라면
+\[ P_{\text{classical}}=MN_+u_+-MN_-u_-=\frac{MIl}{Q}-\frac{MIl}{Q}=0. \]
+고리가 안 움직이니 당연한 결과다.</li>
+<li><b>상대론적으로 하면 0이 아니다.</b> \(p=\gamma Mu\)이므로
+\[ P=\gamma_+MN_+u_+-\gamma_-MN_-u_-=\frac{MIl}{Q}\,(\gamma_+-\gamma_-). \]
+\(Nu\)는 같지만 \(\gamma\)가 다르다 — 위쪽 전하가 더 빠르므로 \(\gamma_+&gt;\gamma_-\)이고 알짜 운동량이 오른쪽으로 남는다.</li>
+<li><b>\(\gamma_+-\gamma_-\)를 에너지로 구한다.</b> 전하가 왼쪽 변(높이 \(w\))을 올라오는 동안 전기력이 한 일은 \(QEw\)이고, 이것이 에너지 증가 \((\gamma_+-\gamma_-)Mc^2\)와 같다:
+\[ \gamma_+-\gamma_-=\frac{QEw}{Mc^2}. \]</li>
+<li><b>대입한다.</b> \(M,\ Q\)가 모두 소거된다 — 모형의 세부에 무관한 결과라는 뜻이다:
+\[ P=\frac{MIl}{Q}\cdot\frac{QEw}{Mc^2}=\frac{I\,l\,w\,E}{c^2}. \]</li>
+<li><b>벡터로 정리한다.</b> \(m=Ilw\)이고, \(\vb m\)은 지면 안쪽, \(\vb E\)는 위쪽, \(\vb p\)는 오른쪽 — 이는 정확히 \(\vb m\times\vb E\)의 방향이다.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \vb p_{\text{hidden}}=\frac{1}{c^2}\,(\vb m\times\vb E)\ } \]
+<p class="note">정지해 있는 자기 쌍극자가 선운동량을 갖는다! 이를 <b>숨은 운동량(hidden momentum)</b>이라 하며, 순전히 상대론적이면서 동시에 순전히 <em>역학적</em>(전하들의 운동량)이다. 그리고 이것은 같은 배치에서 장에 저장된 전자기 운동량(Eq. 8.45)을 <b>정확히 상쇄</b>한다. 그래야만 에너지 중심 정리(Example 12.12)가 요구하는 대로 "정지한 계의 총 운동량 = 0"이 성립한다. <b>검산</b>: (i) \(c\to\infty\)(비상대론 극한)이면 \(\vb p\to0\) — 3단계의 고전적 결과로 환원 ✓. (ii) 차원: \(\dfrac{[\mathrm{A\,m^2}][\mathrm{V/m}]}{\mathrm{m^2/s^2}}=\dfrac{\mathrm{A\,m\,V\,s^2}}{\mathrm{m^2}}=\dfrac{\mathrm{J\,s}}{\mathrm m}=\mathrm{kg\,m/s}\) ✓. (iii) \(\vb E=0\)이면 0 ✓, \(\vb E\parallel\vb m\)이면 0(아래 +α 참조). (iv) 답에 \(M,Q,N\)이 남지 않아 모형 독립적 ✓.</p></div>
+<div class="qz" data-q="ex12.13-a"><div class="qq"><b>+α</b> (기하 바꾸기) 전기장을 90° 돌려 <b>고리 평면에 수직</b>으로(즉 \(\vb E\parallel\vb m\)) 걸면 숨은 운동량은? 또 \(\vb E\)를 고리 평면 안에서 위 변의 전류 방향과 나란하게 돌리면?</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>경우 1: \(\vb E\parallel\vb m\)(고리면에 수직).</b> 공식으로는 \(\vb m\times\vb E=0\)이므로 \(\vb p=0\).</p>
+<p><em>왜 그런가(물리적 논증)</em>: 전기력이 고리면에 수직이므로 도선을 따라 움직이는 전하에 대해 <b>일을 전혀 하지 않는다</b>(\(\vb F\perp\vb u\)). 따라서 네 변 어디서도 \(\gamma\)가 달라지지 않고, 3단계의 고전적 상쇄가 그대로 유지된다. (전하는 도선 벽에 눌릴 뿐이다.)</p>
+\[ \boxed{\ \vb p_{\text{hidden}}=0\quad(\vb E\parallel\vb m)\ } \]
+<p><b>경우 2: \(\vb E\)가 고리 평면 안, 위 변의 전류 방향(가로)과 나란할 때.</b> 이제 <em>가로 변</em>에서는 전기력이 운동 방향과 평행하므로 위 변과 아래 변에서 전하가 각각 가속·감속되지만, 각 변 내부에서 속력이 위치에 따라 <em>변한다</em>. 대신 <b>세로 변</b>(왼쪽/오른쪽)에서 전하들이 서로 다른 \(\gamma\)로 흐르게 된다: 위 변을 지나며 얻은 에너지 차이 \(QEl\)이 세로 변의 \(\gamma\) 차이를 만든다.</p>
+<p>같은 계산을 세로 변에 대해 반복하면(이번엔 \(N_\pm u_\pm=Iw/Q\), \(\Delta\gamma=QEl/Mc^2\))</p>
+\[ |P|=\frac{MIw}{Q}\cdot\frac{QEl}{Mc^2}=\frac{Ilw\,E}{c^2}=\frac{mE}{c^2}, \]
+<p>크기는 같고 방향은 세로(위/아래)다. 벡터로 확인하면 \(\vb m\)(지면 안쪽) \(\times\ \vb E\)(가로) = 세로 방향 ✓.</p>
+\[ \boxed{\ \vb p_{\text{hidden}}=\frac{1}{c^2}(\vb m\times\vb E)\ \text{— 방향만 90° 회전, 크기 동일}\ } \]
+<p><b>교훈</b>: 공식 \(\vb p=(\vb m\times\vb E)/c^2\)는 특정 기하에서 유도했지만 <b>벡터식으로 옳다</b>. 두 경우 모두 벡터곱이 정확히 예측한다 — 유도 과정에서 "위/아래 변"이라고 부른 것이 본질이 아니라 <em>전기력이 전류 경로를 따라 한 일</em>이 본질이기 때문이다.</p>
+<p><b>검산</b>: 두 경우 모두 \(c\to\infty\)에서 0 ✓. 경우 1에서 \(\vb E\)가 일을 안 한다는 점은 \(\vb E\cdot\vb u=0\)으로 바로 확인된다 ✓.</p></div></div>
+<div class="qz" data-q="ex12.13-b"><div class="qq"><b>+α</b> (앞 단원과 연결, 수치) 이 숨은 운동량이 장 운동량 \(\vb p_{\text{em}}=\eps\int(\vb E\times\vb B)\,d\tau\)를 상쇄해야 하는 이유를 에너지 중심 정리로 논증하고, \(m=1\ \mathrm{A\,m^2}\), \(E=10^{6}\) V/m일 때 크기를 추정하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>논증.</b> Example 12.12의 정리는</p>
+\[ \vb P_{\text{tot}}=\frac{E_{\text{tot}}}{c^2}\frac{d\vb R_e}{dt} \]
+<p>이고, 여기서 \(\vb P_{\text{tot}}\)와 \(E_{\text{tot}}\)에는 <b>장과 물질 모두</b>가 포함된다. 지금 계(정상전류 고리 + 정적 전기장)는 완전한 정상상태이므로 에너지 분포가 시간에 무관하고, 따라서</p>
+\[ \frac{d\vb R_e}{dt}=0\ \Longrightarrow\ \vb P_{\text{tot}}=0. \]
+<p>그런데 장에는 실제로 \(\vb p_{\text{em}}=\eps\int(\vb E\times\vb B)d\tau\ne0\)이 저장되어 있다(Prob. 8.8 / Eq. 8.45의 결과: 균일 \(\vb E\) 속의 자기 쌍극자에 대해 \(\vb p_{\text{em}}=-\dfrac{1}{c^2}(\vb m\times\vb E)\)). 총합이 0이려면</p>
+\[ \vb p_{\text{em}}+\vb p_{\text{hidden}}=0\ \Longrightarrow\ \boxed{\ \vb p_{\text{hidden}}=-\vb p_{\text{em}}=+\frac{1}{c^2}(\vb m\times\vb E)\ } \]
+<p>본문에서 완전히 독립적인 방법(전하 하나하나의 \(\gamma Mu\) 합)으로 얻은 값과 정확히 일치한다 ✓. 만약 숨은 운동량이 없었다면 정지한 물체가 알짜 운동량을 갖는 셈이 되어 에너지 중심이 표류해야 하는데, 그럴 일이 없으므로 <b>숨은 운동량의 존재는 상대론이 강제하는 필연</b>이다.</p>
+<p><b>수치 추정.</b></p>
+\[ |\vb p|=\frac{mE}{c^2}=\frac{(1)(10^{6})}{9\times10^{16}}=1.1\times10^{-11}\ \mathrm{kg\,m/s}. \]
+<p>참고로 \(E=10^6\) V/m는 공기 절연파괴(\(3\times10^6\) V/m)에 육박하는 강한 장이고 \(m=1\ \mathrm{A\,m^2}\)도 큰 편인데, 그래도 \(10^{-11}\) 수준이다. 이 운동량을 1 g짜리 고리가 갖는다면 속력은 \(10^{-8}\) m/s — 측정이 극히 어렵다.</p>
+<p><b>검산</b>: (i) \(c\to\infty\)에서 양쪽 모두 0으로 가며 모순 없음 ✓. (ii) 차원 \(\mathrm{kg\,m/s}\) ✓. (iii) 부호: \(\vb p_{\text{em}}\)과 \(\vb p_{\text{hidden}}\)이 정확히 반대 방향이어야 한다는 요구가 두 독립 계산에서 자동으로 충족된다 — 이론의 일관성 검증 ✓. (iv) 만약 고리 대신 <em>영구자석</em>(원자 스핀에서 오는 \(\vb m\))이라면 이 고전적 논증이 그대로 적용되지 않으며, 실제로 그 경우 숨은 운동량이 없다는 것이 현대적 결론이다 — 모형에 따라 답이 달라지는 미묘한 주제다.</p></div></div>

@@ -1,0 +1,18 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+TM: \(B_z=0\), \(E_z\neq0\). 풀 방정식은 \(\left[\partial_x^2+\partial_y^2+\kappa^2\right]E_z=0\), \(\kappa^2=(\omega/c)^2-k^2\).<br>
+<b>경계조건이 다르다.</b> 벽에서 \(E^{\parallel}=0\)인데 \(E_z\)는 네 벽 모두에 대해 접선 성분이므로
+\[E_z(0,y)=E_z(a,y)=E_z(x,0)=E_z(x,b)=0 .\]
+변수분리하면 \(\cos\)가 아니라 \(\sin\)이 살아남는다:
+\[\boxed{E_z=E_0\sin\!\left(\frac{m\pi x}{a}\right)\sin\!\left(\frac{n\pi y}{b}\right)e^{i(kz-\omega t)},\qquad m,n=1,2,3,\dots}\]
+(\(m\) 또는 \(n\)이 0이면 \(E_z\equiv0\)이 되어 모드가 사라진다 → <b>TM 모드는 두 지수 모두 1 이상</b>.)<br>
+나머지 성분은 Eq. 9.182에 \(B_z=0\)을 넣어 얻는다:
+\[E_x=\frac{ik}{\kappa^2}\partial_xE_z,\quad E_y=\frac{ik}{\kappa^2}\partial_yE_z,\quad B_x=-\frac{i\omega}{c^2\kappa^2}\partial_yE_z,\quad B_y=\frac{i\omega}{c^2\kappa^2}\partial_xE_z .\]
+<b>Cutoff·속도(형태는 TE와 동일):</b>
+\[\boxed{\omega_{mn}=c\pi\sqrt{\left(\frac ma\right)^2+\left(\frac nb\right)^2},\quad k=\frac1c\sqrt{\omega^2-\omega_{mn}^2}}\]
+\[\boxed{v=\frac{\omega}{k}=\frac{c}{\sqrt{1-(\omega_{mn}/\omega)^2}},\qquad v_g=\frac{d\omega}{dk}=c\sqrt{1-(\omega_{mn}/\omega)^2}}\]
+<b>최저 모드 비:</b> 최저 TM은 \(\mathrm{TM}_{11}\), 최저 TE는 \(\mathrm{TE}_{10}\)(\(a\ge b\)):
+\[\boxed{\frac{\omega_{11}}{\omega_{10}}=\frac{\sqrt{(1/a)^2+(1/b)^2}}{1/a}=\sqrt{1+\frac{a^2}{b^2}}}\]
+항상 1보다 크므로 도파관의 진짜 cutoff는 언제나 \(\mathrm{TE}_{10}\)이 결정한다.
+<div class="alabel">감점 포인트</div>
+"Caution: 최저 TM 모드는?" — \(\mathrm{TM}_{10}\)이나 \(\mathrm{TM}_{01}\)은 존재하지 않는다. \(\sin\) 해와 \(m,n\ge1\) 조건을 반드시 짚을 것.</div><!--/sol-->

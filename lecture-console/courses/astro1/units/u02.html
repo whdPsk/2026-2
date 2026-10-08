@@ -1,0 +1,77 @@
+<div class="predict"><b>◈ 학습 목표.</b> \(I_\nu\) 하나에서 각도 가중치만 바꿔 평균세기 \(J_\nu\)(가중 1)·플럭스 \(F_\nu\)(\(\cos\theta\))·에너지밀도 \(u_\nu\)(1/c)·복사압 \(P_\nu\)(\(\cos^2\theta\)/c)를 만들고, 등방장에서 \(u=4\pi I/c\), \(P=u/3\), \(F=0\), 바깥 반구만 있을 때 \(F=\pi I\)를 직접 유도한다. 9/1 Q2에서 "꼭 기억하라"고 한 \(F=\pi I\)의 근거가 이 단원. <span class="star">시험</span> 유도 자체보다 <span class="hl">각 양이 각도를 어떻게 가중하는지 말로 설명 + 숫자 대입</span>.</div>
+
+<h4>평균세기 <span class="en">Mean intensity \(J_\nu\)</span></h4>
+<p>9/1 Review Q ⑦: specific intensity는 방향마다 다르다(형광등 예) → 방향 평균이 mean intensity. [[S0901.26]]</p>
+<div class="slide flip"><div class="sh">플립 02 · 7:14–9:30 <span class="st">평균세기와 축대칭·μ 치환</span></div>
+<ol><li>\(I_\nu\)를 알면 \(J_\nu\)를 구할 수 있다. \(J_\nu\)는 <b>각도(입체각)에 대한 평균</b>: 방향마다 다른 \(I_\nu\)를 모든 입체각에 대해 적분하고 전체 입체각 \(4\pi\)로 나눈다. \[ J_\nu=\frac{1}{4\pi}\int I_\nu\,d\Omega \] [[F02.10]]</li>
+<li>천체에서는 대부분 <b>축대칭(φ 방향 대칭)</b>을 가정할 수 있다 → \(I_\nu\)가 방위각 φ에 무관 → \(d\Omega=\sin\theta\,d\theta\,d\phi\)에서 φ 적분이 \(2\pi\)로 나온다. [[F02.11]]</li>
+<li>계산 편의상 \(\mu=\cos\theta\)로 치환: \(d\mu=-\sin\theta\,d\theta\) → \(\sin\theta\,d\theta=-d\mu\). [[F02.11]]</li>
+<li>\(\theta:0\to\pi\)이면 \(\mu:1\to-1\). 적분 구간을 뒤집어 마이너스를 없애면 \[ J_\nu=\frac{2\pi}{4\pi}\int_{-1}^{1}I_\nu(\mu)\,d\mu=\frac12\int_{-1}^{1}I_\nu(\mu)\,d\mu \] [[F02.12]]</li></ol></div>
+
+<h4>플럭스를 세기로 <span class="en">Flux from intensity</span></h4>
+<div class="slide flip"><div class="sh">플립 03 · 0:00–2:48 <span class="st">\(F_\nu=\int I_\nu\cos\theta\,d\Omega\), 잔스키, \(F_\lambda\)</span></div>
+<ol><li>flux 정의 \(dE=F_\nu\,dA\,dt\,d\nu\)와 세기 정의 \(dE=I_\nu\cos\theta\,dA\,dt\,d\nu\,d\Omega\)가 같아야 한다 → \(dA\,dt\,d\nu\) 상쇄 → \(dF_\nu=I_\nu\cos\theta\,d\Omega\)(입체각 \(d\Omega\)만큼의 기여라 \(d\)를 붙임). [[F03.01]]</li>
+<li>광자가 들어오는 모든 방향 Ω에 대해 적분: \[ F_\nu=\int I_\nu\cos\theta\,d\Omega=\int_0^{2\pi}\!\!d\phi\int_0^{\pi}I_\nu\cos\theta\sin\theta\,d\theta \] [[F03.01, F03.02]]</li>
+<li>단위는 3개로 나눔(면적·시간·진동수): erg s⁻¹ cm⁻² Hz⁻¹. 천체 flux는 워낙 작아서 전파천문학자 잔스키의 이름을 딴 <b>Jansky(Jy)</b>: 1 Jy = 10⁻²³ erg s⁻¹ cm⁻² Hz⁻¹. [[F03.02]]</li>
+<li>MKS로는 1 Jy = 10⁻²⁶ W m⁻² Hz⁻¹. [[F03.03]]</li>
+<li>파장으로 잰 flux \(F_\lambda\)(erg s⁻¹ cm⁻² cm⁻¹): \(\nu\sim\nu+d\nu\)와 \(\lambda\sim\lambda+d\lambda\) 구간의 에너지가 같아야 하므로 \(F_\lambda|d\lambda|=F_\nu|d\nu|\). [[F03.03]]</li>
+<li>절댓값은 음수를 없애기 위함. \(\nu=c/\lambda\) → \(F_\lambda=F_\nu\dfrac{c}{\lambda^2}\). \(F_\lambda\)를 쟀으면 \(F_\nu\)를, \(F_\nu\)를 쟀으면 \(F_\lambda\)를 구할 수 있다(광도와 똑같은 논리). [[F03.04]]</li></ol></div>
+<div class="trap"><b>STT 수치 의심</b> 플립 03 녹음상 "MKS 단위에서는 10의 마이너스 16승 walt/square m/h" → 정확히는 <b>10⁻²⁶ W m⁻² Hz⁻¹</b>(1 erg s⁻¹ cm⁻² = 10⁻³ W m⁻²이므로 10⁻²³×10⁻³). [[F03.03]]</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>\(F=\pi I\) — 9/1 Q2에서 "꼭 기억" [[S0901.30, L01.s6b]]</div><ol>
+<li>별 표면에서 바깥 반구(\(0\le\theta\le\pi/2\))로만 균일한 세기 \(I\)가 나가고 안쪽으로 들어오는 복사는 없다고 하자.</li>
+<li>\(F=\int_0^{2\pi}d\phi\int_0^{\pi/2}I\cos\theta\sin\theta\,d\theta=2\pi I\left[\tfrac12\sin^2\theta\right]_0^{\pi/2}=\pi I\).</li>
+<li>즉 \(\pi\)는 "입체각에 대해 cosθ 가중 적분"이 만든 factor — \(4\pi\)도 \(2\pi\)도 아니다. 태양: \(I_\odot=F_\odot/\pi=6.33\times10^{10}/\pi=2.0\times10^{10}\) erg s⁻¹ cm⁻² sr⁻¹.</li>
+<li>같은 \(I\)가 <b>전 구면에서 등방</b>이면 \(\int_{-1}^{1}\mu\,d\mu=0\) → 순 flux \(F=0\).</li></ol></div>
+
+<h4>복사 에너지밀도 <span class="en">Energy density \(u_\nu\)</span></h4>
+<div class="slide flip"><div class="sh">플립 03 · 2:48–5:58 <span class="st">\(u_\nu=\frac1c\int I_\nu d\Omega\), 등방이면 \(4\pi I_\nu/c\)</span></div>
+<ol><li>측정에 쓴 시간 \(dt\)와 그 복사가 차지하는 부피로 에너지밀도를 정의할 수 있다. [[F03.04]]</li>
+<li>\(dt\) 동안 \(dA\)를 통과한 복사는 광속 \(c\)로 \(c\,dt\)만큼 전진. 각도가 θ이므로 \(dA\)에 수직인 거리는 \(dl=c\,dt\cos\theta\). 원기둥 부피 \(dV=dA\,dl=c\,dA\,dt\cos\theta\). [[F03.05]]</li>
+<li>\(dt\) 동안 통과한 복사가 이 음영 부피 안에 머물러 있다. 에너지밀도 = 부피당 에너지, \(\nu\sim\nu+d\nu\) 구간만 보므로 \(d\nu\)로도 나눔: \[ du_\nu=\frac{dE}{dV\,d\nu}=\frac{I_\nu\cos\theta\,dA\,dt\,d\nu\,d\Omega}{c\,dA\,dt\cos\theta\,d\nu}=\frac{I_\nu}{c}d\Omega \] → \(u_\nu=\dfrac1c\int I_\nu d\Omega=\dfrac{4\pi}{c}J_\nu\). [[F03.06]]</li>
+<li>등방: 모든 방향으로 진행하는 복사가 같아 특정한 진행 방향이 없음 → \(I_\nu\)가 적분 밖으로: \(u_\nu=\dfrac{I_\nu}{c}\cdot2\pi\int_0^\pi\sin\theta\,d\theta\), 이 적분은 2. [[F03.07]]</li>
+<li>최종: \[ u_\nu=\frac{4\pi}{c}I_\nu\quad(\text{isotropic}) \] [[F03.08]]</li></ol></div>
+<div class="intuit"><b>직관</b> 에너지밀도는 "지금 이 상자 안에 들어 있는 빛"이라 방향을 따지지 않고 다 더한다(가중 1). 그래서 등방장에서도 0이 아니다. \(\cos\theta\)가 분자(\(dE\))와 분모(\(dV\))에서 상쇄되는 게 핵심.</div>
+
+<h4>복사압 <span class="en">Radiation pressure \(P_\nu\)</span></h4>
+<div class="slide flip"><div class="sh">플립 03 · 5:58–8:43 <span class="st">\(P_\nu=\frac1c\int I_\nu\cos^2\theta\,d\Omega\)</span></div>
+<ol><li>복사는 근본적으로 운동량을 갖는다: 에너지 \(E\)인 복사의 운동량 \(p=E/c\)(\(E=pc\)). 운동량을 전달하면 힘, 단위 면적당 힘이 압력 → 복사압 정의. [[F03.08]]</li>
+<li>θ 방향으로 진행하는 복사가 \(dA\)에 전달하는 <b>수직 방향</b> 운동량: \(dp=\dfrac{dE\cos\theta}{c}\). 압력 = 단위 면적당 힘, 힘 = 운동량 변화율: \(dP=\dfrac{dp}{dt\,dA}\). [[F03.09]]</li>
+<li>\(dP=\dfrac{dE\cos\theta}{c\,dt\,dA}\)에 \(dE=I_\nu\cos\theta\,dA\,dt\,d\nu\,d\Omega\) 대입 → cosθ가 두 개 → \(\cos^2\theta\). 모든 방향 적분이 복사압: \[ P_\nu=\frac1c\int I_\nu\cos^2\theta\,d\Omega \] [[F03.10]]</li></ol></div>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>등방장의 \(P=u/3\) (플립 정의에서 한 줄 더)</div><ol>
+<li>등방이면 \(P_\nu=\dfrac{2\pi I_\nu}{c}\int_{-1}^{1}\mu^2d\mu=\dfrac{2\pi I_\nu}{c}\cdot\dfrac23=\dfrac{4\pi I_\nu}{3c}\).</li>
+<li>\(u_\nu=4\pi I_\nu/c\)와 비교 → \(P_\nu=u_\nu/3\). 1/3은 모든 방향에 대한 \(\mu^2\) 평균.</li>
+<li>반대로 한 방향의 좁은 수직 빔이면 \(\mu=1\)뿐이라 \(P=u=F/c\)(완전 흡수판). 완전 반사판은 운동량이 뒤집혀 \(2F/c\).</li></ol></div>
+
+<h4>요약 — 각도 가중치 <span class="en">Summary</span></h4>
+<div class="slide flip"><div class="sh">플립 03 · 7:44–9:30 <span class="st">복사의 기본 물리량 요약</span></div>
+<ol><li>Specific intensity \(I_\nu\) = 단위 면적·시간·진동수·입체각당 에너지. 세기의 단위는 Jy sr⁻¹(잔스키 퍼 스테라디안)로도 쓴다. [[F03.10]]</li>
+<li>입체각에 대해 평균 → mean intensity \(J_\nu\). cosθ를 하나 곱하고 방향 적분 → flux \(F_\nu\). 그냥 적분하고 c로 나누면 → energy density \(u_\nu\). cos²θ를 곱해 적분하고 c로 나누면 → radiation pressure \(P_\nu\). [[F03.11]]</li></ol></div>
+<table class="simple"><tr><th>양</th><th>가중치</th><th>등방장</th><th>바깥 반구만(균일 I)</th></tr>
+<tr><td>\(J_\nu\)</td><td>\(\frac{1}{4\pi}\)·1</td><td>\(I\)</td><td>\(I/2\)</td></tr>
+<tr><td>\(F_\nu\)</td><td>\(\cos\theta\)</td><td>0</td><td>\(\pi I\)</td></tr>
+<tr><td>\(u_\nu\)</td><td>\(\frac1c\)·1</td><td>\(4\pi I/c\)</td><td>\(2\pi I/c\)</td></tr>
+<tr><td>\(P_\nu\)</td><td>\(\frac1c\cos^2\theta\)</td><td>\(4\pi I/3c=u/3\)</td><td>\(2\pi I/3c\)</td></tr></table>
+<div class="trap"><b>STT 교정</b> 플립 03 "에너지 intensity"는 문맥상 <b>energy density</b>, "잔습기"는 Jansky. 요약에서 "플럭스는 잔스키 퍼 스테라디안"이라고 들리지만 Jy sr⁻¹는 <b>세기(intensity)</b>의 단위이고 flux density는 Jy. [[F03.06, F03.10]]</div>
+<div class="apply"><b>천체 적용</b> 복사력이 물질에 힘을 주려면 광자가 흡수·산란되어 운동량을 전달해야 한다. 단위 부피 힘 \(f=\frac1c\int\kappa_\nu F_\nu d\nu\) → 중력과 같게 두면 에딩턴 광도(예제 1.4). 등방 복사장(예: 별 내부, 초기 우주)에서는 순 flux는 작아도 \(P=u/3\)가 압력으로 작용한다.</div>
+
+<div class="formula"><div class="ftitle">암기 — 복사장의 모멘트와 압력</div><p><b>에너지와 순수송</b></p>\[ J_\nu={1\over4\pi}\int I_\nu d\Omega,\quad u_\nu={4\pi J_\nu\over c},\quad F_\nu=\int I_\nu\mu\,d\Omega \]<p class="note">μ=cosθ. J와 u는 0차 모멘트, F는 1차 모멘트. <i>조건: 광선 방향 전체에 적분</i></p><p><b>압력의 각도 가중</b></p>\[ P_{\nu}={1\over c}\int I_\nu\mu^2d\Omega,\qquad P_\nu={u_\nu\over3}\quad(\text{isotropic}) \]<p class="note">1/3은 모든 방향에서 μ²를 평균한 값이다. 좁은 수직 빔이면 P=u. <i>조건: u/3은 등방 조건에서만</i></p><p><b>표면에서</b></p>\[ F=\pi I\quad(\text{바깥 반구 균일}),\qquad 1\,{\rm Jy}=10^{-23}\,{\rm erg\,s^{-1}cm^{-2}Hz^{-1}}=10^{-26}\,{\rm W\,m^{-2}Hz^{-1}} \]<p><b>물질에 주는 힘</b></p>\[ f_{\rm vol}={1\over c}\int \kappa_\nu F_\nu d\nu,\quad \kappa_{\nu,m}=\kappa_\nu/\rho \]<p class="note">κν는 길이⁻¹, 질량 흡수계수 κν,m는 cm² g⁻¹. <i>조건: 단순 흡수의 힘/부피; 산란은 운동량 전달계수 필요</i></p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u02-1"><div class="qq">등방장에서 F=0인데 P≠0인 이유는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>F의 μ는 앞뒤 부호가 반대여서 상쇄된다. P의 μ²는 양쪽 모두 양수이다. 에너지밀도 역시 방향에 관계없이 양수이다.</p></div></div>
+
+
+<div class="qz" data-q="u02-2"><div class="qq">F=πI와 F=0은 모순인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>적분 영역·경계조건이 다르다. 전 구면의 등방장에서는 순F=0, 바깥 반구의 균일 세기만 있으면 F⁺=πI.</p></div></div>
+
+
+<div class="qz" data-q="u02-3"><div class="qq">복사압 P=u/3을 태양빛 한 방향 빔에 적용할 수 있는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 등방성이 깨져 있다. 광선 방향 압력 성분은 좁은 빔에서 u이며, 물체의 반사·흡수 조건에 따라 전달되는 힘이 달라진다.</p></div></div>
+
+<div class="qz" data-q="u02-4"><div class="qq">u_ν=(1/c)∫I_ν dΩ 유도에서 cosθ가 사라지는 이유를 그림(원기둥 부피)으로 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>dt 동안 통과한 에너지 dE에 cosθ(투영 면적)가 있고, 그 빛이 머무는 부피 dV=c dA dt cosθ에도 cosθ(수직 거리)가 있어 비에서 상쇄된다.</p></div></div>
+
+<div class="qz" data-q="u02-5"><div class="qq">축대칭 복사장에서 J_ν를 μ 적분으로 쓰고, 적분 한계가 어떻게 바뀌는지 말하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>φ 적분이 2π, sinθdθ=−dμ, θ:0→π는 μ:1→−1. 구간을 뒤집어 J_ν=(1/2)∫₋₁¹ I_ν(μ)dμ.</p></div></div>
+
+<div class="qz" data-q="u02-6"><div class="qq">1 Jy를 SI로 바꾸고, 태양 I=2×10¹⁰ erg s⁻¹ cm⁻² sr⁻¹에서 표면 flux를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>1 Jy=10⁻²⁶ W m⁻² Hz⁻¹. F=πI≈6.3×10¹⁰ erg s⁻¹ cm⁻².</p></div></div>
+
+
+<p class="note">출처: 플립 02 복사세기(7:14–9:30, 평균세기) · 플립 03 플럭스밀도와 복사압 전 구간 · Lecture01 슬라이드 6(F=πI) · 9/1 강의 속기(평균세기·F=πI 설명) · 상태: 장부 기준 전수 반영(플립·속기 대조) / L02·9/3 수업 내용은 해당 그룹 단원에서 반영 · 교재 세부 대조 전</p>

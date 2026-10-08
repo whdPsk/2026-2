@@ -1,0 +1,69 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 지구의 각운동량을 태양 기준으로 쓰면 "공전 각운동량 + 자전 각운동량"으로 나뉜다고 배웠다. 이 분해는 어떤 계에서나 성립하는 일반 정리일까, 아니면 지구가 강체라서 성립할까? 그리고 고립계의 각운동량이 보존되려면 내력에 대해 무엇이 필요한지, U1에서 세운 추측을 다시 떠올려 보라.</div>
+
+<h4>9.4 계의 각운동량 <span class="en">angular momentum of the system</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>\(\vb L=\vb R\times\vb P+\sum\vb r'_\alpha\times\vb p'_\alpha\) — 질량중심 분해 <b>(필수)</b></div>
+<ol>
+<li>질량중심 기준 위치벡터를 도입한다(강의: \(\vb r_\alpha=\vb R+\vb r'_\alpha\), 교재 식 9.19). 미분하면 \(\dot{\vb r}_\alpha=\dot{\vb R}+\dot{\vb r}'_\alpha\).</li>
+<li>총각운동량에 대입해 네 항으로 전개:
+\[ \vb L=\sum_\alpha(\vb R+\vb r'_\alpha)\times m_\alpha(\dot{\vb R}+\dot{\vb r}'_\alpha)
+=\sum_\alpha m_\alpha\left[\vb R\times\dot{\vb R}+\vb R\times\dot{\vb r}'_\alpha+\vb r'_\alpha\times\dot{\vb R}+\vb r'_\alpha\times\dot{\vb r}'_\alpha\right]. \]</li>
+<li><b>핵심 항등식</b>: CM 기준 위치의 질량가중합은 0이다.
+\[ \sum_\alpha m_\alpha\vb r'_\alpha=\sum_\alpha m_\alpha(\vb r_\alpha-\vb R)=M\vb R-M\vb R=0 . \]
+해석: 이것은 "CM 좌표계에서 본 CM의 위치 × M" — 그 좌표계의 원점이 곧 CM이므로 영벡터. 미분하면 \(\sum m_\alpha\dot{\vb r}'_\alpha=0\)도 성립.</li>
+<li>가운데 두 항은 \(\vb R\times\od{}{t}\left(\sum m_\alpha\vb r'_\alpha\right)=0\), \(\left(\sum m_\alpha\vb r'_\alpha\right)\times\dot{\vb R}=0\)으로 사라진다.</li>
+<li>남은 것 (요약 4번):
+\[ \boxed{\ \vb L=\vb R\times\vb P+\sum_\alpha\vb r'_\alpha\times\vb p'_\alpha\ },\qquad \vb p'_\alpha=m_\alpha\dot{\vb r}'_\alpha . \]
+<b>궤도(orbital) 각운동량</b> = CM이 원점에 대해 가진 각운동량, <b>스핀(spin)</b> 각운동량 = CM에 대한 각운동량. 강체일 필요 없는 일반 정리다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>\(\dot{\vb L}=\vb N^{(\rm ext)}\) — 내부 토크와 강한 형태 <b>(필수)</b></div>
+<ol>
+<li>각 입자: \(\dot{\vb L}_\alpha=\dot{\vb r}_\alpha\times\vb p_\alpha+\vb r_\alpha\times\dot{\vb p}_\alpha=\vb r_\alpha\times\dot{\vb p}_\alpha\) (첫 항은 평행 벡터의 외적).</li>
+<li>힘을 대입해 합한다:
+\[ \dot{\vb L}=\sum_\alpha\vb r_\alpha\times\vb F^{(\rm ext)}_\alpha+\sum_\alpha\sum_{\beta\ne\alpha}\vb r_\alpha\times\vb f_{\alpha\beta}. \]</li>
+<li>이중합을 짝지어 묶는다:
+\[ \sum_{\alpha&lt;\beta}\left[\vb r_\alpha\times\vb f_{\alpha\beta}+\vb r_\beta\times\vb f_{\beta\alpha}\right]
+\overset{\text{약한}}{=}\sum_{\alpha&lt;\beta}(\vb r_\alpha-\vb r_\beta)\times\vb f_{\alpha\beta}=\sum_{\alpha&lt;\beta}\vb r_{\alpha\beta}\times\vb f_{\alpha\beta}. \]
+<b>약한 형태만으로는 여기서 멈춘다</b> — 각 쌍이 짝힘을 남길 수 있다.</li>
+<li><b>강한 형태</b> \(\vb f_{\alpha\beta}\parallel\vb r_{\alpha\beta}\)를 쓰면 \(\vb r_{\alpha\beta}\times\vb f_{\alpha\beta}=0\), 따라서
+\[ \boxed{\ \dot{\vb L}=\sum_\alpha\vb r_\alpha\times\vb F^{(\rm ext)}_\alpha=\vb N^{(\rm ext)}\ } \]</li>
+<li>요약 <b>5번</b>: 어떤 축에 대한 외부 토크 성분이 0이면 그 축 성분의 \(\vb L\)이 보존. 요약 <b>6번</b>: 내력이 강한 형태를 만족하면 총 내부 토크가 0 — 고립계의 각운동량은 외력 없이는 바꿀 수 없다.</li>
+</ol></div>
+
+<div class="typo"><b>교재 오류 (p.338, 결론 VI)</b>: "The total internal torque must vanish if the internal forces are central—that is, if \(\vb f_{\alpha\beta}=-\vb f_{\beta\alpha}\)"라고 되어 있으나 \(\vb f_{\alpha\beta}\)가 \(\vb r_{\alpha\beta}\) 방향이라는 조건이 빠졌다(김지훈 교수 오타표). 강의노트도 9/7판에서 같은 문장이었다가 9/9판에서 "강한 형태"로 수정되었다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>CM에 대한 각운동량의 운동방정식 — 원점이 가속해도 성립</div>
+<ol>
+<li>스핀 각운동량 \(\vb L_{\rm CM}\equiv\sum\vb r'_\alpha\times\vb p'_\alpha\)의 시간변화를 보자. 유도 1에서 \(\vb L_{\rm CM}=\vb L-\vb R\times\vb P\).</li>
+<li>미분: \(\dot{\vb L}_{\rm CM}=\vb N^{(\rm ext)}-\dot{\vb R}\times\vb P-\vb R\times\dot{\vb P}=\vb N^{(\rm ext)}-\vb R\times\vb F\) (\(\dot{\vb R}\parallel\vb P\)).</li>
+<li>\(\vb N^{(\rm ext)}-\vb R\times\vb F=\sum(\vb r_\alpha-\vb R)\times\vb F^{(\rm ext)}_\alpha=\sum\vb r'_\alpha\times\vb F^{(\rm ext)}_\alpha\equiv\vb N_{\rm CM}\). 따라서
+\[ \dot{\vb L}_{\rm CM}=\vb N_{\rm CM}. \]
+<b>CM은 가속하더라도(비관성 기준점이더라도) 이 식이 성립한다</b> — 강체 동역학(Ch.11)에서 CM을 기준점으로 쓰는 근거. 일반적인 가속 기준점에서는 성립하지 않는다.</li>
+<li>균일한 중력장에서는 \(\vb N_{\rm CM}=\sum m_\alpha\vb r'_\alpha\times\vb g=0\) — 던져진 물체의 스핀은 공중에서 변하지 않는다(Example 9.3).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 계의 각운동량 (요약 4–6)</div>
+\[ \vb L=\vb R\times M\dot{\vb R}+\sum_\alpha\vb r'_\alpha\times m_\alpha\dot{\vb r}'_\alpha,\qquad \sum_\alpha m_\alpha\vb r'_\alpha=0 \]
+\[ \dot{\vb L}=\vb N^{(\rm ext)}\ \ (\text{강한 형태}),\qquad \dot{\vb L}_{\rm CM}=\vb N_{\rm CM}\ \ (\text{CM이 가속해도}) \]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u03-1"><div class="qq">Example 9.3: 길이 \(a\)인 가벼운 줄 양 끝에 \(m_1,m_2\)가 달려 있다. 머리 위에서 \(m_2\)를 각속도 \(\dot\theta\)로 돌리다 놓았다. 이후 운동을 기술하고 줄의 장력을 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>놓은 뒤 외력은 중력뿐 → CM은 포물선. 균일 중력은 CM에 대한 토크가 0 → 스핀 각운동량 보존, 두 질점은 CM 주위를 같은 각속도로 계속 회전.</p>
+<p>CM은 \(m_2\)에서 \(b=\dfrac{m_1}{m_1+m_2}a\) 떨어진 곳. \(m_2\)의 원운동 구심력을 장력이 공급:
+\[ T=m_2b\dot\theta^2=\frac{m_1m_2}{m_1+m_2}a\dot\theta^2 . \]
+(\(\dot\theta\)는 놓은 뒤의 각속도 — 놓기 직전 \(m_1\)은 거의 정지, \(m_2\)의 속력 \(v_2\)이면 각운동량 보존으로 결정되지만 교재는 \(\dot\theta\)를 주어진 것으로 둔다.) <b>검산</b>: 환산질량 \(\mu a\dot\theta^2\) 꼴 — 상대좌표의 원운동 구심력과 일치 ✓.</p></div></div>
+
+<div class="qz" data-q="u03-2"><div class="qq">\(\vb L=\vb R\times\vb P+\vb L_{\rm CM}\) 분해에서 가운데 두 교차항이 사라지는 이유를, <b>\(\sum m_\alpha\vb r'_\alpha=0\)</b>과 <b>\(\sum m_\alpha\dot{\vb r}'_\alpha=0\)</b> 중 각각 어느 것이 어느 항을 죽이는지 명시하며 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(\sum m_\alpha\vb R\times\dot{\vb r}'_\alpha=\vb R\times\left(\sum m_\alpha\dot{\vb r}'_\alpha\right)=0\) ← <b>속도 항등식</b>.</p>
+<p>\(\sum m_\alpha\vb r'_\alpha\times\dot{\vb R}=\left(\sum m_\alpha\vb r'_\alpha\right)\times\dot{\vb R}=0\) ← <b>위치 항등식</b>.</p>
+<p>둘은 사실 같은 사실(위치 항등식)의 미분 관계다. \(\vb R\), \(\dot{\vb R}\)가 \(\alpha\)에 무관해 합 밖으로 나올 수 있다는 점이 결정적.</p></div></div>
+
+<div class="qz" data-q="u03-3"><div class="qq">(참/거짓) "임의의 기준점 \(Q\)에 대해 \(\dot{\vb L}_Q=\vb N_Q\)가 성립한다." 거짓이라면 성립하는 조건 세 가지를 들어라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>거짓.</b> 일반적으로 \(\dot{\vb L}_Q=\vb N_Q-M(\vb R-\vb r_Q)\times\ddot{\vb r}_Q\) (속도 \(\dot{\vb r}_Q\) 기준 각운동량의 경우). 성립 조건:</p>
+<p>① \(Q\)가 관성계에 고정(또는 등속) → \(\ddot{\vb r}_Q=0\). ② \(Q\)가 CM → \(\vb R-\vb r_Q=0\). ③ \(Q\)의 가속도가 \(Q\)에서 CM을 향하는 벡터 \(\vb R-\vb r_Q\)와 평행 → 외적 0. (여기서 \(\vb L_Q\)는 \(Q\)에 대한 상대 위치·상대 속도로 정의한 각운동량이다: \(\vb L_Q=\sum(\vb r_\alpha-\vb r_Q)\times m_\alpha(\dot{\vb r}_\alpha-\dot{\vb r}_Q)\). 미분하면 첫 항은 평행 벡터 외적으로 0, 둘째 항에서 \(-\sum m_\alpha(\vb r_\alpha-\vb r_Q)\times\ddot{\vb r}_Q\)가 남는다.)</p></div></div>
+
+<div class="qz" data-q="u03-4"><div class="qq">자기장 속 두 대전 입자처럼 내력이 약한 형태만 만족(강한 형태 위반)하는 계를 생각하자. 외력이 없을 때 역학적 각운동량 \(\sum\vb r_\alpha\times\vb p_\alpha\)의 변화율을 식으로 써라. 이것이 "각운동량 보존 법칙의 위반"인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+\[ \dot{\vb L}_{\rm mech}=\sum_{\alpha&lt;\beta}\vb r_{\alpha\beta}\times\vb f_{\alpha\beta}\neq0 . \]
+<p><b>위반이 아니다.</b> 이 경우 전자기장이 각운동량 \(\vb L_{\rm field}=\epsilon_0\int\vb r\times(\vb E\times\vb B)\,\dd\tau\)을 가지며, \(\vb L_{\rm mech}+\vb L_{\rm field}\)가 보존된다. 역학적 부분계만 보면 보존이 깨진 것처럼 보일 뿐 — U1 Note 3과 같은 논리.</p></div></div>

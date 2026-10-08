@@ -1,0 +1,21 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>힘은 \(F(x)=U_0[-\delta(x)+\delta(x-L)]\) — 들어갈 때 감속 충격, 나올 때 가속 충격. \(\delta(x)=\delta(t)/|v|\)이므로 각 충격에서 \(\int F\,dt=\mp U_0/v\).</p>
+<p>Prob. 11.31처럼 \(\Delta a=-\frac1{m\tau}\int F\,dt\). 세 구간 모두 \(F=0\)이므로 \(a\propto e^{t/\tau}\).</p>
+<p><b>(iii) \(x&gt;L\)</b> (시각 \(t&gt;T\)): 폭주 배제 \(\Rightarrow a=0\), \(v=v_f\) 일정.</p>
+<p><b>(ii) 장벽 내부</b> (\(0&lt;t&lt;T\)): \(t=T\)에서 \(\Delta a=-U_0/(m\tau v_f)\)이고 \(a(T^+)=0\)이므로 \(a(T^-)=U_0/(m\tau v_f)\):</p>
+\[ a(t)=\frac{U_0}{m\tau v_f}e^{(t-T)/\tau},\qquad
+v(t)=v_f-\frac{U_0}{mv_f}\Big[1-e^{(t-T)/\tau}\Big]. \]
+<p>이를 \(0\to T\)로 적분하면 장벽 폭:</p>
+\[ \boxed{\;L=v_fT-\frac{U_0}{mv_f}\Big(\tau e^{-T/\tau}+T-\tau\Big)\;} \]
+<p><b>(i) \(x&lt;0\)</b>: \(v(0)=v_f-\frac{U_0}{mv_f}(1-e^{-T/\tau})\), \(a(0^-)=a(0^+)-\frac{U_0}{m\tau v(0)}\), \(v_i=v(0)-\tau a(0^-)\). 정리하면</p>
+\[ \boxed{\;v_i=v_f-\frac{U_0}{mv_f}\left[1-\frac{1}{1+\dfrac{U_0}{mv_f^2}\big(e^{-T/\tau}-1\big)}\right]\;} \]
+<p><b>구체적 예</b>: 최종 운동에너지가 장벽의 절반, 즉 \(\tfrac12mv_f^2=\tfrac12U_0\Rightarrow U_0=mv_f^2\)로 잡자. 그러면 \(L\) 식이</p>
+\[ L=v_fT-v_f(\tau e^{-T/\tau}+T-\tau)=v_f\tau\big(1-e^{-T/\tau}\big)\;\Longrightarrow\;e^{T/\tau}=\frac{1}{1-L/(v_f\tau)} \]
+<p>가 되고, \(v_i\) 식은 \(v_i=v_fe^{T/\tau}\)로 간단해져</p>
+\[ \boxed{\;v_i=\frac{v_f}{1-L/(v_f\tau)}\;} \]
+<p>\(L=v_f\tau/4\)를 택하면 \(v_i=\dfrac{v_f}{3/4}=\dfrac43v_f\), 초기 운동에너지는</p>
+\[ \frac12mv_i^2=\frac{16}{9}\cdot\frac12mv_f^2=\frac{16}{9}\cdot\frac{U_0}{2}=\boxed{\;\frac89U_0\;&lt;\;U_0} \]
+<p>즉 장벽을 <b>넘을 에너지가 없는데도 통과</b>한다. 이유: \(x=0\)의 감속 충격 직후 남는 지수적 "여진(\(e^{t/\tau}\))"이 장벽 내부에서 입자를 계속 밀어주기 때문이다. 이는 Abraham–Lorentz 방정식이 갖는 병리(비인과적 예비가속의 시간역전 판)이며, 고전 점전하 이론의 한계를 보여준다.</p>
+<div class="alabel">감점 포인트</div>
+<p>\(\delta(x)\)를 \(\delta(t)\)로 바꿀 때 야코비안 \(1/|v|\)를 빠뜨리는 것 — 이것이 없으면 \(v\)에 대한 비선형성이 사라져 터널링이 나오지 않는다.</p></div><!--/sol-->

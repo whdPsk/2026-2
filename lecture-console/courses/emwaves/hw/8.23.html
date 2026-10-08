@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>Step 1: 일반 공식 \(\vb{p}=\eps\muz\int V\vb{J}\,d\tau\) (Eq. 8.46).</b><br>
+\(\vb{E}=-\nabla V\) 를 넣고 부분적분:
+\[p_i=\eps\varepsilon_{ijk}\!\int\! E_jB_k\,d\tau=-\eps\varepsilon_{ijk}\!\int\!(\partial_jV)B_k\,d\tau
+=\eps\!\int\! V(\curl\vb{B})_i\,d\tau=\eps\muz\!\int\! V J_i\,d\tau .\]
+(표면항은 \(\vb{E}\)가 국소화되어 있어 소멸.)</p>
+<p><b>Step 2: 쌍극자 근사.</b> 원점 근방의 전류에 대해 \(V(\vb{r})\approx V(0)-\vb{E}(0)\cdot\vb{r}\).
+정상 국소 전류이므로 \(\int\vb{J}\,d\tau=0\) (Eq. 1.108), 또
+\(\int(\vb{c}\cdot\vb{r})\vb{J}\,d\tau=-\vb{c}\times\vb{m}\) (Eq. 5.82). 따라서
+\[\int V\vb{J}\,d\tau=0-\big(-\vb{E}\times\vb{m}\big)=\vb{E}\times\vb{m}=-\vb{m}\times\vb{E}.\]</p>
+<p>\[\boxed{\;\vb{p}=-\eps\muz\,(\vb{m}\times\vb{E})=-\frac{1}{c^{2}}(\vb{m}\times\vb{E})\;}\]</p>
+<p><b>맥락.</b> 이 운동량은 정지한 계가 "운동량을 갖는다"는 역설을 낳고, 그 해결이 <b>숨은 운동량</b> \(\vb{p}_{\rm hid}=+\eps\muz(\vb{m}\times\vb{E})\) 다(12장). 총합은 0이라 계는 움직이지 않는다.</p>
+<div class="alabel">감점 포인트</div>
+\(\vb{E}\)가 무한대에서 0이 아니면(예: 균일장이 전 공간에) 적분이 수렴하지 않는다는 전제를 무시하는 것.</div><!--/sol-->

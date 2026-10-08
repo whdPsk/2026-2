@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>전략:</b> 직접 하지 말고 <b>회전 → \(x\)부스트 → 역회전</b>으로 조립한다.</p>
+\[ \Lambda=R(\varphi)\,\Lambda_x(\beta)\,R(-\varphi), \]
+<p>여기서 \(R(\varphi)\)는 \(z\)축 둘레 회전(시간성분은 건드리지 않음). 결과는 일반 부스트의 표준형이며, \(\boldsymbol\beta=(\beta\cos\varphi,\beta\sin\varphi,0)\)로 쓰면</p>
+\[ \Lambda^{0}_{\ 0}=\gamma,\qquad \Lambda^{0}_{\ i}=\Lambda^{i}_{\ 0}=-\gamma\beta_i,\qquad \Lambda^{i}_{\ j}=\delta_{ij}+(\gamma-1)\frac{\beta_i\beta_j}{\beta^{2}}. \]
+<p>성분을 써 넣으면 \(\Lambda^{1}_{\ 1}=1+(\gamma-1)\cos^{2}\varphi=\gamma\cos^{2}\varphi+\sin^{2}\varphi\) 등이 되어</p>
+\[ \boxed{\ \Lambda=\begin{pmatrix}
+\gamma & -\gamma\beta\cos\varphi & -\gamma\beta\sin\varphi & 0\\
+-\gamma\beta\cos\varphi & \gamma\cos^{2}\varphi+\sin^{2}\varphi & (\gamma-1)\sin\varphi\cos\varphi & 0\\
+-\gamma\beta\sin\varphi & (\gamma-1)\sin\varphi\cos\varphi & \gamma\sin^{2}\varphi+\cos^{2}\varphi & 0\\
+0&0&0&1\end{pmatrix}\ } \]
+<p><b>검산 3종:</b> ① \(\varphi=0\)이면 Eq. 12.24로 환원 ✓ ② \(\beta\to0\ (\gamma\to1)\)이면 단위행렬 ✓ ③ 공간블록은 대칭이고 \(\varphi\)에 대한 회전 \(\Lambda_x\) 켤레이므로 \(\det=\gamma\) ✓ (또는 \(\Lambda^{T}g\Lambda=g\)를 직접 확인.)</p>
+<div class="alabel">감점 포인트</div>
+공간블록을 단순히 \(\gamma\)를 곱한 대각행렬로 쓰는 것 — 운동방향 <b>성분만</b> \(\gamma\)배 되고 수직 성분은 그대로라, 사영연산자 \(\beta_i\beta_j/\beta^{2}\)가 반드시 들어간다.</div><!--/sol-->

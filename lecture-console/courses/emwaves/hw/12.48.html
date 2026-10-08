@@ -1,0 +1,20 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>좌표 설정: \(-q\)는 원점에서 \(-v\hat{\vb{x}}\), \(+q\)는 \((0,d,0)\)에서 \(+v\hat{\vb{x}}\). \(\beta=v/c\), \(\gamma=(1-\beta^2)^{-1/2}\). 교차 순간 상대위치는 속도에 수직(\(\theta=90^\circ\))이므로 등속전하 장의 각인자는 모두 \(\gamma\)가 된다.</p>
+
+<p><b>계 A (그림의 계).</b></p>
+\[ \vb{E}_A=-\frac{\gamma q}{4\pi\eps d^{2}}\hat{\vb{y}},\qquad \vb{B}_A=\frac{1}{c^{2}}(\vb{v}_-\times\vb{E}_A)=\frac{\muz\gamma qv}{4\pi d^{2}}\hat{\vb{z}} \]
+\[ \vb{F}_A=q(\vb{E}_A+v\hat{\vb{x}}\times\vb{B}_A)=-\frac{\gamma q^{2}}{4\pi\eps d^{2}}\Big(1+\frac{v^{2}}{c^{2}}\Big)\hat{\vb{y}} \]
+<p>전기력(인력)과 자기력이 <b>같은 방향</b>이다 — 두 전하의 부호도 반대, 속도도 반대이므로 <b>등가 전류는 나란하고</b>, 나란한 전류는 서로 끈다. 좋은 검산 포인트.</p>
+
+<p><b>계 B (\(+q\) 정지).</b> \(+v\hat{\vb{x}}\)로 부스트. \(-q\)의 속력은 속도덧셈으로 \(w=\dfrac{2v}{1+\beta^{2}}\), \(\gamma_w=\dfrac{1+\beta^{2}}{1-\beta^{2}}=\gamma^{2}(1+\beta^{2})\).</p>
+\[ \vb{E}_B=-\frac{\gamma^{2}(1+\beta^{2})q}{4\pi\eps d^{2}}\hat{\vb{y}},\qquad \vb{B}_B=\frac{\muz\gamma_w qw}{4\pi d^{2}}\hat{\vb{z}}=\frac{\muz\gamma^{2}qv}{2\pi d^{2}}\hat{\vb{z}} \]
+\[ \vb{F}_B=q\vb{E}_B=-\frac{\gamma^{2}(1+\beta^{2})q^{2}}{4\pi\eps d^{2}}\hat{\vb{y}}\qquad(\text{정지 → 자기력 없음}) \]
+<p>검산: \(+q\)가 \(B\)계에서 정지하므로 Eq. 12.68에 의해 \(F_{A,y}=F_{B,y}/\gamma\) ✓.</p>
+
+<p><b>계 C (\(-q\) 정지).</b> \(-v\hat{\vb{x}}\)로 부스트. 이제 <b>장의 원천이 정지</b>하므로 순수 Coulomb:</p>
+\[ \vb{E}_C=-\frac{q}{4\pi\eps d^{2}}\hat{\vb{y}},\qquad \vb{B}_C=0,\qquad \vb{F}_C=-\frac{q^{2}}{4\pi\eps d^{2}}\hat{\vb{y}} \]
+<p>검산: Eq. 12.66에 \(\beta_{\rm frame}=-\beta,\ u_x=+v\)를 넣으면 \(F_{C,y}=F_{A,y}/[\gamma(1+\beta^{2})]\) — 위 결과와 정확히 일치 ✓.</p>
+\[ \boxed{\ \vb{F}_A:\vb{F}_B:\vb{F}_C=\gamma(1+\beta^{2}):\gamma^{2}(1+\beta^{2}):1\ } \]
+<div class="alabel">감점 포인트</div>
+계 B와 C가 대칭이라고 생각해 같은 답을 쓰는 것 — B에서는 원천이 빠르게(\(w\)) 움직이고 C에서는 정지해 있어 전혀 다르다.</div><!--/sol-->

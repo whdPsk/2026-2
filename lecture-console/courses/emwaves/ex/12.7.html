@@ -1,0 +1,43 @@
+<div class="exq"><b>상황.</b> 정지질량이 각각 \(m\)인 점토 덩어리 두 개가 각각 \(\tfrac35c\)의 속력으로 정면 충돌한 뒤 달라붙어 하나의 덩어리가 된다. 합쳐진 덩어리의 정지질량 \(M\)은 얼마인가? 충돌 전후로 에너지와 운동량이 보존되지만 질량은 보존되지 않는다는 점을 확인하는 문제다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span><b>전략(이 절 내내 반복): ① 4-운동량 \(p^\mu=(E/c,\vb{p})\)을 보존시킨다 → ② 모르는 쪽 4-운동량의 <em>제곱</em>을 취해 불변량 \(p^\mu p_\mu=-m^2c^2\)로 질량을 뽑는다.</b></div>
+<ol>
+<li>초기 4-운동량을 적는다. \(\beta=3/5\Rightarrow\gamma=\dfrac{1}{\sqrt{1-9/25}}=\dfrac54\). 각 덩어리의 에너지는
+\[ E_1=E_2=\gamma mc^2=\frac54mc^2, \]
+운동량은 크기 \(\gamma mv=\tfrac54 m\cdot\tfrac35c=\tfrac34mc\)이고 서로 반대 방향.</li>
+<li>총 4-운동량:
+\[ p^\mu_{\text{tot}}=\left(\frac{E_1+E_2}{c},\ \vb{p}_1+\vb{p}_2\right)=\left(\frac{5}{2}mc,\ \vb 0\right). \]
+운동량 보존은 자명하다(전 0, 후 0). 따라서 합성 덩어리는 <b>정지</b>한다.</li>
+<li>불변량 제곱으로 질량을 뽑는다:
+\[ p^\mu_{\text{tot}}p_{\mu,\text{tot}}=-\left(\frac{E_{\text{tot}}}{c}\right)^2+|\vb p_{\text{tot}}|^2=-M^2c^2. \]
+\(\vb p_{\text{tot}}=0\)이므로 \(M c^2=E_{\text{tot}}=\tfrac52mc^2\).</li>
+<li>(같은 계산을 에너지 보존으로 직접 해도 된다: \(\tfrac54mc^2+\tfrac54mc^2=Mc^2\).)</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ M=\frac{E_{\text{tot}}}{c^2}=\frac52\,m\ \ (&gt;2m)\ } \]
+<p class="note">질량이 \(2m\to2.5m\)로 <b>증가</b>했다. 사라진 운동에너지 \(2(\gamma-1)mc^2=\tfrac12mc^2\)가 정확히 늘어난 정지에너지 \(\Delta Mc^2=\tfrac12mc^2\)와 같다. 고전적으로는 "열이 발생했다"고 말하는데, 상대론은 그 열에너지 \(U\)가 \(U/c^2\)만큼 질량에 실린다고 말한다 — 뜨거운 감자가 찬 감자보다 무겁다. <b>검산</b>: \(v\ll c\)이면 \(\gamma\to1+\tfrac12\beta^2\)이므로 \(M\to2m+\dfrac{mv^2}{c^2}\approx2m\) — 고전적 질량 보존이 회복된다(초과분은 \(c^2\)로 나뉘어 측정 불가). 차원: \(E/c^2\)는 질량 ✓. \(\gamma\ge1\)이므로 언제나 \(M\ge2m\) ✓.</p></div>
+<div class="qz" data-q="ex12.7-a"><div class="qq"><b>+α</b> (기하 바꾸기) 이번엔 한 덩어리만 \(\tfrac35c\)로 날아와 <em>정지해 있는</em> 같은 질량의 덩어리에 부딪혀 달라붙는다. 합성 덩어리의 질량 \(M\)과 속도 \(V\)를 구하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>① 4-운동량 보존.</b> \(\gamma=5/4\).</p>
+\[ E_{\text{tot}}=\gamma mc^2+mc^2=\frac54mc^2+mc^2=\frac94mc^2,\qquad p_{\text{tot}}=\gamma mv=\frac54m\cdot\frac35c=\frac34mc. \]
+<p><b>② 불변량 제곱.</b></p>
+\[ M^2c^4=E_{\text{tot}}^2-p_{\text{tot}}^2c^2=\left(\frac94\right)^2m^2c^4-\left(\frac34\right)^2m^2c^4=\frac{81-9}{16}m^2c^4=\frac{72}{16}m^2c^4, \]
+\[ \boxed{\ M=\frac{\sqrt{72}}{4}m=\frac{3\sqrt2}{2}m=2.121\,m\ } \]
+<p><b>속도.</b> 임의의 계에서 \(\vb V=\vb p c^2/E\):</p>
+\[ V=\frac{p_{\text{tot}}c^2}{E_{\text{tot}}}=\frac{(3/4)mc\cdot c^2}{(9/4)mc^2}=\boxed{\frac{c}{3}} \]
+<p><b>검산 1</b>: \(M=\gamma_V\cdot(\text{?})\) — 합성체의 에너지는 \(\gamma_V Mc^2\)여야 한다. \(\gamma_V=1/\sqrt{1-1/9}=3/(2\sqrt2)\)이므로 \(\gamma_VMc^2=\dfrac{3}{2\sqrt2}\cdot\dfrac{3\sqrt2}{2}mc^2=\dfrac{9}{4}mc^2\) ✓.</p>
+<p><b>검산 2</b>: 정면 충돌(본문)보다 \(M\)이 작다(\(2.121m&lt;2.5m\)). 당연하다 — 고정표적 충돌에서는 운동량 보존 때문에 운동에너지의 일부가 합성체의 병진운동으로 남아 정지질량으로 전환되지 못한다. 이것이 현대 가속기가 <b>충돌빔(colliding beam)</b>을 쓰는 이유다.</p>
+<p><b>검산 3</b>: \(v\ll c\) 극한이면 \(M\to2m\), \(V\to v/2\) — 고전적 완전비탄성충돌 결과 ✓.</p></div></div>
+<div class="qz" data-q="ex12.7-b"><div class="qq"><b>+α</b> (역방향) 본문처럼 대칭 정면 충돌을 하되 합성 질량이 \(M=3m\)이 되게 하려면 각 덩어리의 속력은? 이때 질량으로 전환된 운동에너지는 얼마인가?</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p>대칭 정면 충돌이므로 총 운동량은 0, 따라서 \(Mc^2=2\gamma mc^2\):</p>
+\[ \gamma=\frac{M}{2m}=\frac{3m}{2m}=\frac32. \]
+\[ \beta=\sqrt{1-\frac{1}{\gamma^2}}=\sqrt{1-\frac49}=\frac{\sqrt5}{3}, \]
+\[ \boxed{\ v=\frac{\sqrt5}{3}c=0.745c\ } \]
+<p><b>전환된 에너지.</b></p>
+\[ \Delta M c^2=(3m-2m)c^2=mc^2, \]
+<p>이는 처음 총 운동에너지 \(2(\gamma-1)mc^2=2(0.5)mc^2=mc^2\)와 정확히 같다 ✓ — 운동에너지가 남김없이 정지에너지로 바뀌었다(합성체가 정지하므로 당연).</p>
+<p><b>일반식.</b> 대칭 정면 충돌에서는 언제나</p>
+\[ M=2\gamma m\quad\Longleftrightarrow\quad \beta=\sqrt{1-\left(\frac{2m}{M}\right)^2}. \]
+<p><b>검산</b>: \(M\to2m\)이면 \(\beta\to0\) ✓ (정지 상태). \(M\to\infty\)이면 \(\beta\to1\) ✓. 그리고 \(M&lt;2m\)은 불가능 — 물리적으로 \(\beta\)가 허수가 되므로, 대칭 충돌에서 질량이 줄어들 수는 없다.</p></div></div>

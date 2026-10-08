@@ -1,0 +1,7 @@
+[
+ {"id":"lec9","kind":"lecture","title":"강의노트 지정 연습 — Ch.9","meta":"9/9 강의노트 (강의 식 9.44): \"Derive the further relationships (Exercises 9.90 and 9.91)\" — 교재 식 (9.90), (9.91)을 직접 유도. 채점 과제는 아니지만 강의 내용 = 시험 범위.",
+  "probs":[
+   {"num":"L9-1","ch":9,"unit":"u06","tag":"ex","title":"\\(\\sin\\zeta=\\sqrt{m_1T_1/(m_2T_2)}\\,\\sin\\psi\\) 유도 (교재 식 9.90)"},
+   {"num":"L9-2","ch":9,"unit":"u06","tag":"ex","title":"\\(\\tan\\psi=\\sin2\\zeta/[(m_1/m_2)-\\cos2\\zeta]\\) 유도 (교재 식 9.91–9.92)"}
+  ]}
+]

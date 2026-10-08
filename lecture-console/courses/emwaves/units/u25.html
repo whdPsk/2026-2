@@ -1,0 +1,220 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> U24의 세 효과(동시성 붕괴, 시간 팽창, 길이 수축)는 각각 별개의 사고실험에서 나왔다. 이제 이 셋을 한꺼번에 담는 좌표 변환식을 찾으려 한다. 먼저 <b>몇 개의 미지 함수</b>를 결정해야 하는지 세어 보라: \(\bar x,\bar y,\bar z,\bar t\)를 \(x,y,z,t\)로 쓰는 식 네 개. 그중 둘(\(\bar y,\bar z\))은 U24 유도 4에서 이미 결정되었다. 남은 둘을 정하는 데 필요한 입력은 무엇인가? <b>선형성 + 원점의 운동 + 광신호</b>, 이 세 가지면 충분하다는 것을 확인하게 될 것이다. 마지막으로 예측하라 — Galileo 변환이 \(t^2\)를 불변으로 남기고 회전이 \(x^2+y^2\)을 불변으로 남긴다면, Lorentz 변환은 무엇을 불변으로 남기겠는가?</div>
+
+<h4>12.1.3 Lorentz 변환 <span class="en">the Lorentz transformations</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>선형성 + 두 공준 → Lorentz 변환 (백지 유도)</div>
+<ol>
+<li><b>무대 설정과 용어.</b> "사건(event)"이란 특정 위치 \((x,y,z)\)에서 특정 시각 \(t\)에 일어나는 것이다. 폭죽이 터지는 것은 사건이지만, 유럽 여행은 사건이 아니다. 계 \(S\)에서 좌표 \((x,y,z,t)\)로 기술되는 <b>같은</b> 사건이 계 \(\bar S\)에서는 \((\bar x,\bar y,\bar z,\bar t)\)로 기술된다. 우리가 원하는 것은 두 언어 사이의 <b>사전</b>이다. 축은 표준 배치: \(\bar S\)가 \(x\)축을 따라 속력 \(v\)로 미끄러지고, 원점이 겹치는 순간을 \(t=\bar t=0\)으로 잡는다.</li>
+<li><b>입력 1 — 선형성.</b> 변환은 좌표에 대해 <b>선형</b>이어야 한다. 이유: 시공간이 <b>균질(homogeneous)</b>하다면, 두 사건 사이의 간격을 변환한 결과가 "그 사건들이 어디서/언제 일어났는가"에 의존해서는 안 된다. 비선형 항이 있으면 자를 원점 근처에서 쓸 때와 멀리서 쓸 때 다른 답을 준다. 또한 등속 직선 운동(관성 운동)이 모든 계에서 등속 직선 운동으로 남아야 한다는 요구도 선형성을 강제한다.</li>
+<li><b>입력 2 — 횡방향은 그대로.</b> U24 유도 4의 붓 자국 논증에 의해
+\[ \bar y=y,\qquad \bar z=z. \]
+(이것은 순환논법이 아니다 — 그 논증은 좌표 변환을 전혀 쓰지 않았다.)</li>
+<li><b>입력 3 — \(\bar S\)의 원점이 어떻게 움직이는가.</b> \(\bar x=0\)인 점들은 \(S\)에서 \(x=vt\)를 만족한다. 선형이면서 \(x-vt=0\)일 때 \(\bar x=0\)이 되려면
+\[ \bar x=A\,(x-vt) \]
+꼴이어야 한다. (\(A\)는 상수이며, 대칭성상 \(v\)에만 의존하고 \(v\)의 부호에는 의존하지 않는다 — 공간의 등방성.)</li>
+<li><b>입력 4 — 공준 1 (상호성).</b> \(\bar S\)에서 보면 \(S\)는 \(-v\)로 움직인다. 물리 법칙이 두 계에서 같은 형태라면 역변환도 같은 형태여야 하고, <b>같은</b> 상수 \(A\)를 가져야 한다:
+\[ x=A\,(\bar x+v\bar t). \]</li>
+<li><b>입력 5 — 공준 2 (광신호가 \(A\)를 결정한다).</b> \(t=\bar t=0\)에 원점에서 \(+x\) 방향으로 광펄스를 쏜다. 공준 2에 의해 <b>두 계 모두에서</b>
+\[ x=ct \quad\text{그리고}\quad \bar x=c\bar t. \]
+이 둘을 4단계·5단계 식에 넣는다:
+\[ c\bar t=A(ct-vt)=At(c-v),\qquad ct=A(c\bar t+v\bar t)=A\bar t(c+v). \]</li>
+<li><b>\(A\)를 뽑아낸다.</b> 두 식을 <b>곱하면</b> \(t\bar t\)가 양변에 나타나 소거된다 (이것이 이 유도의 트릭):
+\[ c^{2}t\bar t=A^{2}t\bar t\,(c-v)(c+v)=A^{2}t\bar t\,(c^{2}-v^{2}) \]
+\[ \Rightarrow\ A^{2}=\frac{c^{2}}{c^{2}-v^{2}}=\frac{1}{1-v^{2}/c^{2}} \ \Rightarrow\ \boxed{A=\gamma}. \]
+(\(v\to 0\)에서 \(A\to 1\)이어야 하므로 양의 근을 택한다.)</li>
+<li><b>시간 변환식을 얻는다.</b> \(\bar x=\gamma(x-vt)\)를 \(x=\gamma(\bar x+v\bar t)\)에 대입:
+\[ x=\gamma\big[\gamma(x-vt)+v\bar t\big] \ \Rightarrow\ \frac{x}{\gamma}=\gamma x-\gamma v t+v\bar t \ \Rightarrow\ v\bar t=\frac{x}{\gamma}-\gamma x+\gamma v t. \]
+\[ \bar t=\gamma t+\frac{x}{v}\left(\frac{1}{\gamma}-\gamma\right). \]
+괄호를 정리한다: \(\dfrac{1}{\gamma}-\gamma=\gamma\left(\dfrac{1}{\gamma^{2}}-1\right)=\gamma\big[(1-\beta^{2})-1\big]=-\gamma\beta^{2}\). 따라서
+\[ \bar t=\gamma t-\frac{x}{v}\gamma\frac{v^{2}}{c^{2}}=\gamma\left(t-\frac{vx}{c^{2}}\right). \]</li>
+<li><b>완성된 사전 (Eq. 12.18).</b>
+\[ \boxed{\ \bar x=\gamma(x-vt),\quad \bar y=y,\quad \bar z=z,\quad \bar t=\gamma\!\left(t-\frac{v}{c^{2}}x\right)\ } \]</li>
+<li><b>역변환 (Eq. 12.19) — 외우지 말고 유도하라.</b> \(S\)에서 보면 \(\bar S\)가 \(+v\)로 가고, \(\bar S\)에서 보면 \(S\)가 \(-v\)로 간다. 공준 1에 의해 형태는 같고 \(v\to-v\)만 하면 된다:
+\[ x=\gamma(\bar x+v\bar t),\quad y=\bar y,\quad z=\bar z,\quad t=\gamma\!\left(\bar t+\frac{v}{c^{2}}\bar x\right). \]
+직접 연립해서 풀어도 같은 결과가 나온다 (Prob. 12.12).</li>
+<li><b>즉시 확인할 두 극한.</b> (i) \(v\ll c\)이면 \(\gamma\to1\), \(vx/c^{2}\to0\)이므로 Galileo 변환 (Eq. 12.12)로 환원. (ii) \(v\to c\)이면 \(\gamma\to\infty\) — 관성계 사이의 상대속도가 \(c\)에 이를 수 없음이 변환식 자체에 새겨져 있다.</li>
+<li><b>고전 유도가 어디서 깨졌는가 (Griffiths의 서술 순서).</b> Galileo가 \(\bar x=x-vt\)를 쓴 것은 그림에서 \(x=d+vt\)로 놓고 \(d=\bar x\)라 <b>가정</b>했기 때문이다. 그러나 \(d\)는 \(S\)에서 잰 거리이고 \(\bar x\)는 \(\bar S\)에서 잰 거리다. \(\bar S\)에 정지한 막대이므로 \(S\)에서는 수축해 보인다: \(d=\bar x/\gamma\). 이것을 넣으면 곧바로 \(\bar x=\gamma(x-vt)\)가 나온다. <b>고전 유도의 유일한 오류는 \(d=\bar x\)라는 한 줄이었다.</b></li>
+</ol>
+</div>
+
+<div class="formula"><div class="ftitle">암기 — Lorentz 변환과 그 행렬 형태</div>
+\[ \bar x=\gamma(x-vt),\quad \bar y=y,\quad \bar z=z,\quad \bar t=\gamma\!\left(t-\frac{v}{c^{2}}x\right);\qquad
+x^{0}\equiv ct,\ \ \beta\equiv\frac{v}{c} \]
+\[ \begin{pmatrix}\bar x^{0}\\ \bar x^{1}\\ \bar x^{2}\\ \bar x^{3}\end{pmatrix}
+=\begin{pmatrix}\gamma & -\gamma\beta & 0 & 0\\ -\gamma\beta & \gamma & 0 & 0\\ 0&0&1&0\\ 0&0&0&1\end{pmatrix}
+\begin{pmatrix}x^{0}\\ x^{1}\\ x^{2}\\ x^{3}\end{pmatrix},\qquad
+\boxed{\ \bar x^{\mu}=\sum_{\nu=0}^{3}\Lambda^{\mu}_{\ \nu}x^{\nu}\ } \]
+<p class="note">\(x^{0}=ct\)로 바꾸면 시간의 단위가 초에서 <b>미터</b>로 바뀐다 — \(x^{0}\)의 1미터는 빛이 진공에서 1미터를 가는 데 걸리는 시간이다. 그러면 변환이 \(\gamma,\beta\)만으로 <b>대칭적</b>으로 쓰인다: \(\bar x^{0}=\gamma(x^{0}-\beta x^{1})\), \(\bar x^{1}=\gamma(x^{1}-\beta x^{0})\). 위 첨자 \(\mu\)는 <b>행</b>, 아래 첨자 \(\nu\)는 <b>열</b>이다. 이 추상적 표기의 장점: 상대 운동이 공통 \(x\bar x\)축을 따르지 않는 일반적 경우에도 \(\Lambda\)만 복잡해질 뿐 식의 <b>구조는 그대로</b>다. 회전 행렬과의 유사성은 우연이 아니다 — 회전은 "회전된 좌표계"로, Lorentz 변환은 "움직이는 좌표계"로 갈 때의 성분 변화다.</p></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>세 가지 기하 효과를 변환식 하나에서 재유도 (Ex. 12.4, Ex. 12.5)</div>
+<ol>
+<li><b>(가) 동시성의 상대성 — Ex. 12.4.</b> 사건 \(A\)는 \(x_A=0,\ t_A=0\), 사건 \(B\)는 \(x_B=b,\ t_B=0\). \(S\)에서 <b>동시</b>다. \(\bar S\)에서는:
+\[ \bar t_A=\gamma\!\left(0-\frac{v\cdot 0}{c^{2}}\right)=0,\qquad \bar t_B=\gamma\!\left(0-\frac{v b}{c^{2}}\right)=-\gamma\frac{v b}{c^{2}}. \]
+\(\bar t_B&lt;\bar t_A\): \(\bar S\)에서는 <b>\(B\)가 먼저</b> 일어난다. 시간차의 크기 \(\gamma v b/c^{2}\)는 <b>공간 분리 \(b\)에 비례</b>한다 — 이것이 "멀리 떨어진 시계일수록 더 크게 어긋난다"의 정량적 표현이다.</li>
+<li><b>기억할 형태.</b> \(\Delta\bar t=\gamma(\Delta t-v\Delta x/c^{2})\)에서 \(\Delta t=0\)이면 \(\Delta\bar t=-\gamma v\Delta x/c^{2}\). 부호 규칙: <b>움직이는 방향으로 앞에 있는 시계가 뒤처져 보인다</b>("leading clocks lag"). 이 한 줄이 U24의 모든 "역설" 해소의 열쇠였다.</li>
+<li><b>(나) Lorentz 수축 — Ex. 12.5.</b> \(\bar S\)에 정지한 막대(따라서 \(S\)에서 \(v\)로 오른쪽으로 감). 고유 길이는 \(\Delta\bar x=\bar x_r-\bar x_l\). \(S\)의 관측자가 길이를 재려면 <b>\(S\)에서 동시에</b> 양 끝을 읽어야 한다: \(t_r=t_l=t\).</li>
+<li>변환을 적용:
+\[ \Delta\bar x=\bar x_r-\bar x_l=\gamma(x_r-vt)-\gamma(x_l-vt)=\gamma(x_r-x_l)=\gamma\,\Delta x \]
+\[ \Rightarrow\ \boxed{\ \Delta x=\frac{\Delta\bar x}{\gamma}\ } \]
+<b>여기서 \(t_r=t_l\)을 쓴 것이 결정적이다.</b> 이 조건을 빼먹으면 결과가 나오지 않는다 — 길이 측정의 정의 자체에 동시성이 들어 있다는 사실이 대수적으로 드러난 것이다.</li>
+<li><b>(다) 시간 팽창.</b> \(\bar S\)에 정지한 시계(\(\Delta\bar x=0\))가 재는 두 사건. 역변환에서
+\[ \Delta t=\gamma\!\left(\Delta\bar t+\frac{v}{c^{2}}\Delta\bar x\right)=\gamma\,\Delta\bar t. \]
+<b>여기서는 \(\Delta\bar x=0\)이 결정적이다.</b> 시간 팽창은 "같은 장소" 조건, 길이 수축은 "같은 시각" 조건 — 두 공식의 전제가 서로 <b>쌍대</b>임을 반드시 기억하라. 공식만 외우고 전제를 놓치는 것이 이 단원 최대의 실점 요인이다.</li>
+</ol>
+</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>Einstein 속도 덧셈 규칙 (Ex. 12.6)과 \(u=c\) 점검</div>
+<ol>
+<li><b>설정.</b> 입자가 \(S\)에서 시간 \(\dd t\) 동안 \(\dd x\)만큼 이동한다: \(u=\dd x/\dd t\). 같은 이동이 \(\bar S\)에서는 \(\bar u=\dd\bar x/\dd\bar t\).</li>
+<li><b>변환식을 미분한다</b> (변환이 선형이므로 미분소에 그대로 적용된다):
+\[ \dd\bar x=\gamma(\dd x-v\,\dd t),\qquad \dd\bar t=\gamma\!\left(\dd t-\frac{v}{c^{2}}\dd x\right). \]</li>
+<li><b>나눈다.</b> \(\gamma\)가 소거되는 것에 주목 (이것이 결과가 \(\gamma\)를 포함하지 않는 이유):
+\[ \bar u=\frac{\dd\bar x}{\dd\bar t}=\frac{\dd x-v\,\dd t}{\dd t-(v/c^{2})\dd x} =\frac{(\dd x/\dd t)-v}{1-(v/c^{2})(\dd x/\dd t)} \]
+\[ \Rightarrow\ \boxed{\ \bar u_{\parallel}=\frac{u_{\parallel}-v}{1-u_{\parallel}v/c^{2}}\ } \]</li>
+<li><b>\(u=c\) 점검 (공준 2의 자기 무모순성).</b> \(u=c\)를 넣으면
+\[ \bar u=\frac{c-v}{1-cv/c^{2}}=\frac{c-v}{(c-v)/c}=c. \]
+<b>어떤 \(v\)에 대해서도</b> \(\bar u=c\). 우리가 공준 2를 입력으로 넣어 변환을 만들었고, 그 변환이 공준 2를 <b>모든</b> 관성계에 대해 자동으로 재생산한다 — 이론이 무모순임을 보이는 결정적 점검이다.</li>
+<li><b>수직 성분 (Prob. 12.14).</b> \(\dd\bar y=\dd y\)이지만 \(\dd\bar t\ne\dd t\)이므로 <b>수직 속도도 변한다</b>:
+\[ \bar u_{\perp}=\frac{\dd y}{\gamma\big(\dd t-(v/c^{2})\dd x\big)}=\frac{u_{\perp}}{\gamma\left(1-u_{\parallel}v/c^{2}\right)}. \]
+길이는 수직 방향으로 안 변하는데 속도는 변한다 — <b>분모의 시간이 변하기 때문</b>이다. 이 비대칭(\(\parallel\)에는 \(\gamma\)가 없고 \(\perp\)에는 있다)이 U26에서 "보통 속도는 나쁜 대상"이라는 결론의 씨앗이다.</li>
+<li><b>속도는 항상 \(c\) 미만으로 남는가?</b> \(u,v&lt;c\)이면 \(\bar u&lt;c\)임을 보이자. \(c-\bar u\)의 부호를 보면 되는데, \(u_\parallel = u\)로 두고
+\[ c-\bar u=c-\frac{u-v}{1-uv/c^{2}}=\frac{c-uv/c-u+v}{1-uv/c^{2}}=\frac{(c-u)(1+v/c)}{1-uv/c^{2}}. \]
+\(u&lt;c\), \(|v|&lt;c\)이면 분자·분모 모두 양수 → \(\bar u&lt;c\). <b>부분속도를 아무리 많이 합성해도 \(c\)를 넘지 못한다.</b></li>
+<li><b>왜 속도가 "더해지지" 않는가 — 더 깊은 답 (Prob. 12.19).</b> <b>rapidity</b> \(\theta\equiv\tanh^{-1}(v/c)\)를 정의하면, \(\tanh\)의 덧셈 정리
+\(\tanh(\theta_1+\theta_2)=\dfrac{\tanh\theta_1+\tanh\theta_2}{1+\tanh\theta_1\tanh\theta_2}\)
+가 정확히 Einstein 덧셈 규칙이다. 즉 <b>속도는 더해지지 않지만 rapidity는 더해진다</b>. 그리고 Lorentz 변환 행렬은 \(\gamma=\cosh\theta,\ \gamma\beta=\sinh\theta\)로 쓰면 <b>쌍곡 회전</b>이 된다 — 회전 행렬 \((\cos,\sin)\)과의 대응이 완벽해진다. rapidity는 \(-\infty\)에서 \(+\infty\)까지 가므로 "속도 제한"이 자연스럽게 사라진다.</li>
+</ol>
+</div>
+
+<h4>12.1.4 시공간의 구조 <span class="en">the structure of space-time</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>불변 간격, 세 부류, 그리고 인과율</div>
+<ol>
+<li><b>불변량을 찾는다.</b> 두 사건의 좌표 차 \(\Delta x^{\mu}\)에 대해
+\[ I\equiv -(\Delta x^{0})^{2}+(\Delta x^{1})^{2}+(\Delta x^{2})^{2}+(\Delta x^{3})^{2}=-c^{2}t^{2}+d^{2} \]
+를 정의한다 (\(t\) = 시간차, \(d\) = 공간 거리). 직접 확인:
+\[ -c^{2}\bar t^{2}+\bar x^{2}=-c^{2}\gamma^{2}\!\left(t-\frac{vx}{c^{2}}\right)^{2}+\gamma^{2}(x-vt)^{2} \]
+\[ =\gamma^{2}\!\left[-c^{2}t^{2}+2vxt-\frac{v^{2}x^{2}}{c^{2}}+x^{2}-2vxt+v^{2}t^{2}\right] =\gamma^{2}\!\left[-c^{2}t^{2}\!\left(1-\frac{v^{2}}{c^{2}}\right)+x^{2}\!\left(1-\frac{v^{2}}{c^{2}}\right)\right] \]
+\[ =-c^{2}t^{2}+x^{2}. \quad\blacksquare \]
+<b>\(t\)도 변하고 \(d\)도 변하지만 이 조합은 변하지 않는다.</b> 교차항 \(2vxt\)가 정확히 소거되는 것이 핵심이며, 이는 \(-\)부호 덕분이다.</li>
+<li><b>회전과의 대비.</b> 회전에서는 \(x^{2}+y^{2}\)이 불변이고 궤적은 <b>원</b>이다. Lorentz 변환에서는 \(x^{2}-c^{2}t^{2}\)이 불변이고 궤적은 <b>쌍곡선</b>이다. 이 하나의 부호 차이가 시공간에 원 기하가 아닌 <b>쌍곡 기하</b>를 부여한다. Lorentz 변환을 하면 사건의 좌표 \((x,t)\)는 <b>같은 쌍곡선 위</b>를 미끄러진다.</li>
+<li><b>세 부류.</b>
+<br>• \(I&lt;0\) (\(c^{2}t^{2}&gt;d^{2}\), 시간 항이 우세): <b>시간꼴 timelike</b>
+<br>• \(I&gt;0\) (\(d^{2}&gt;c^{2}t^{2}\), 공간 항이 우세): <b>공간꼴 spacelike</b>
+<br>• \(I=0\) (\(d=ct\)): <b>빛꼴 lightlike / null</b>
+불변량이므로 <b>이 분류는 모든 관성계에서 동일하다</b> — 어떤 Lorentz 변환도 시간꼴을 공간꼴로 바꿀 수 없다.</li>
+<li><b>시간꼴이 허용하는 것.</b> \(I&lt;0\)이면 \(d&lt;ct\), 즉 두 사건을 잇는 데 \(c\) 미만의 속력이면 충분하다. 따라서:
+<br>(i) 두 사건이 <b>같은 장소</b>에서 일어나는 관성계가 존재한다 (그 계로 가려면 \(v=d/t&lt;c\)로 달리면 된다 — 실현 가능).
+<br>(ii) <b>시간 순서가 절대적</b>이다: 어떤 관성계에서도 뒤바뀌지 않는다.
+<br>(iii) <b>인과적 연결이 가능</b>하다. 실제로 한 물체의 세계선 위의 두 점(자신의 과거와 미래)은 항상 시간꼴로 분리된다.</li>
+<li><b>공간꼴이 허용하는 것.</b> \(I&gt;0\)이면 \(d&gt;ct\): 신호가 \(c\)로도 못 간다. 따라서:
+<br>(i) 두 사건이 <b>동시</b>인 관성계가 존재한다 (\(\bar t=0\)이 되게 하는 \(v=c^{2}t/d\)를 요구하는데, \(d&gt;ct\)이므로 \(v&lt;c\) — 실현 가능).
+<br>(ii) 그 계보다 더 빠른 계로 가면 <b>시간 순서가 뒤집힌다</b>.
+<br>(iii) <b>인과적으로 연결될 수 없다</b> — 그러므로 순서가 뒤집혀도 아무 문제 없다.</li>
+<li><b>왜 순서가 뒤집혀도 인과율이 안 깨지는가 (핵심 논증).</b> \(\bar t=\gamma(t-vx/c^{2})\)에서 \(t&gt;0\)인데 \(\bar t&lt;0\)이 되려면
+\[ v&gt;\frac{c^{2}t}{x}. \]
+이런 \(v&lt;c\)가 존재하려면 \(\dfrac{c^{2}t}{x}&lt;c\), 즉 \(\boxed{ct&lt;x}\) — 정확히 <b>공간꼴</b> 조건이다.
+<br>그런데 공간꼴 분리 사건들은 <b>어떤 신호로도 서로에게 영향을 줄 수 없다</b>(그러려면 \(c\)를 넘어야 한다). 원인과 결과가 될 수 없는 두 사건의 선후는 <b>물리적으로 무의미</b>하다. 따라서 관측자마다 순서가 달라도 모순이 발생하지 않는다. 인과율이 위험해지려면 <b>인과적으로 연결된</b>(=시간꼴) 사건의 순서가 뒤집혀야 하는데, 방금 본 대로 그것은 불가능하다. \(\blacksquare\)</li>
+<li><b>따름정리 — 초광속이 왜 치명적인가.</b> 만약 어떤 신호가 \(c\)보다 빠르게 전달될 수 있다면, 그 신호는 공간꼴로 분리된 두 사건을 <b>인과적으로 연결</b>하게 된다. 그런데 그 두 사건의 순서는 계에 따라 뒤집히므로, 어떤 관성계에서는 <b>결과가 원인보다 먼저</b> 일어난다. 초광속 통신 금지는 임의의 규칙이 아니라 <b>인과율의 직접적 요구</b>다. (Prob. 12.6의 "광속보다 빠른 천체" 주장들이 왜 대부분 착시인지도 같은 맥락에서 다룬다.)</li>
+<li><b>Minkowski 도형과 광원뿔.</b> 상대론에서는 관례가 뒤집혀 <b>위치를 가로축, \(x^{0}=ct\)를 세로축</b>에 그린다. 그러면 속도는 기울기의 <b>역수</b>다: 정지 입자는 수직선, 광자는 \(45^{\circ}\)선, 속력 \(v\)인 로켓은 기울기 \(c/v=1/\beta\)의 직선. 입자의 궤적을 <b>세계선(world line)</b>이라 하며, 어떤 물체도 \(c\)를 넘을 수 없으므로 세계선의 기울기는 절대 \(1\)보다 작아질 수 없다. 원점에서 뻗어 나가는 두 \(45^{\circ}\)선이 만드는 위쪽 쐐기가 당신의 <b>미래</b>(도달 가능한 사건들), 아래쪽이 <b>과거</b>(당신에게 영향을 줄 수 있었던 사건들), 좌우 영역이 <b>"다른 곳(elsewhere)"</b>이다. 여기에 \(y\)축을 더하면 원뿔이 되므로 <b>광원뿔(light cone)</b>이라 부른다.</li>
+</ol>
+</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 5</span>4-벡터, 공변/반변 지표, Minkowski 계량, 불변량 만들기</div>
+<ol>
+<li><b>정의의 논리.</b> 1장에서 (3-)벡터를 "회전 아래에서 \((x,y,z)\)와 <b>같은 방식으로</b> 변환하는 세 성분의 조"로 정의했다. 이를 확장한다: <b>4-벡터</b>란 Lorentz 변환 아래에서 \((x^{0},x^{1},x^{2},x^{3})\)와 같은 방식으로 변환하는 네 성분의 조다:
+\[ \bar a^{\mu}=\sum_{\nu=0}^{3}\Lambda^{\mu}_{\ \nu}a^{\nu}. \]
+\(x\)축 방향 변환의 경우 구체적으로
+\[ \bar a^{0}=\gamma(a^{0}-\beta a^{1}),\quad \bar a^{1}=\gamma(a^{1}-\beta a^{0}),\quad \bar a^{2}=a^{2},\quad \bar a^{3}=a^{3}. \]</li>
+<li><b>4차원 스칼라곱.</b> 3차원 내적 \(\vb{A}\cdot\vb{B}=A_xB_x+A_yB_y+A_zB_z\)의 유비물이 있으나, 성분 곱의 단순 합이 <b>아니다</b> — 0번 성분에 <b>마이너스</b>가 붙는다:
+\[ -a^{0}b^{0}+a^{1}b^{1}+a^{2}b^{2}+a^{3}b^{3}. \]
+이것이 <b>불변</b>임은 유도 4의 계산과 같은 방식으로 확인된다 (Prob. 12.17). 회전 아래 내적이 불변인 것과 정확히 평행하다.</li>
+<li><b>마이너스를 관리하는 장치 — 공변 벡터.</b> 매번 부호를 손으로 챙기는 대신, <b>공변(covariant)</b> 벡터를 도입한다:
+\[ a_{\mu}\equiv(a_{0},a_{1},a_{2},a_{3})=(-a^{0},\,a^{1},\,a^{2},\,a^{3}). \]
+<b>지표 위치에 극도로 주의하라</b>: <b>위 첨자 = 반변(contravariant)</b>, <b>아래 첨자 = 공변(covariant)</b>. 시간 지표를 올리거나 내리면 마이너스가 붙고(\(a_{0}=-a^{0}\)), 공간 지표는 변화 없다(\(a_{1}=a^{1}\) 등).</li>
+<li><b>형식화 — Minkowski 계량.</b>
+\[ a_{\mu}=\sum_{\nu=0}^{3}g_{\mu\nu}a^{\nu},\qquad
+g_{\mu\nu}=\begin{pmatrix}-1&0&0&0\\ 0&1&0&0\\ 0&0&1&0\\ 0&0&0&1\end{pmatrix}. \]
+\(g_{\mu\nu}\)가 <b>지표를 내리는 연산자</b>이고, 역행렬 \(g^{\mu\nu}\)(수치적으로 같다)가 <b>올리는 연산자</b>다.</li>
+<li><b>불변량 만들기 — 실전 규칙.</b> 이제 스칼라곱은
+\[ \boxed{\ a^{\mu}b_{\mu}=a_{\mu}b^{\mu}=-a^{0}b^{0}+a^{1}b^{1}+a^{2}b^{2}+a^{3}b^{3}=\text{불변}\ } \]
+<b>Einstein 합 규약</b>: 곱에서 그리스 지표가 <b>한 번은 위, 한 번은 아래</b>로 반복되면 자동으로 \(0\)부터 \(3\)까지 합한다. (Einstein 본인이 자신의 가장 중요한 기여 중 하나로 꼽았다는 농담이 있다.)
+<br><b>실전 알고리즘</b>: 불변량을 만들고 싶으면 <b>4-벡터 두 개를 골라 위·아래 지표로 축약(contract)하라</b>. 나머지는 자동이다. U26·U27에서 이 규칙 하나로 모든 상대론적 역학 문제를 푼다.</li>
+<li><b>부호 규약 주의 (시험·논문에서 자주 혼동).</b> 스칼라곱을 \(-a^{0}b^{0}+\vb{a}\cdot\vb{b}\)로 정의할 수도 있고 전체 부호를 뒤집어 \(a^{0}b^{0}-\vb{a}\cdot\vb{b}\)로 정의할 수도 있다. 하나가 불변이면 다른 것도 불변이므로 물리는 같다. 계량의 대각 성분을 \((-,+,+,+)\)로 쓰면 Griffiths 규약, \((+,-,-,-)\)로 쓰면 반대 규약이다. <b>문제를 풀기 전에 어느 규약인지 먼저 확인하라.</b> Griffiths는 \((-,+,+,+)\)를 쓴다.</li>
+<li><b>불변 간격을 4-벡터 언어로.</b> 변위 4-벡터 \(\Delta x^{\mu}\)를 자기 자신과 축약한 것이 불변 간격이다:
+\[ I=(\Delta x)^{\mu}(\Delta x)_{\mu}. \]
+따라서 유도 4의 세 부류는 그대로 <b>4-벡터의 세 부류</b>다: \(a^{\mu}a_{\mu}&gt;0\) 공간꼴, \(&lt;0\) 시간꼴, \(=0\) 빛꼴.</li>
+<li><b>"시간은 그냥 네 번째 좌표인가?" — 아니다.</b> Minkowski의 유명한 선언("공간 그 자체와 시간 그 자체는 그림자로 사라지고, 둘의 결합만이 독립적 실재로 남으리라")은 아름답지만 과잉 해석하면 안 된다. 시간은 \(x,y,z\)와 <b>대등하지 않다</b>. 그 구별의 표지가 바로 <b>계량의 마이너스 부호</b>이며, 그 부호가 시공간에 원 기하 대신 <b>훨씬 풍부한 쌍곡 기하</b>를 부여한다. 시간꼴 쌍곡면은 <b>두 장(two sheets)</b>(과거와 미래)으로 분리되어 있고, 어떤 Lorentz 변환도 위 장에서 아래 장으로 점을 옮길 수 없다 — <b>이것이 시간의 방향이 불변인 기하학적 이유</b>다. 공간꼴 쌍곡면은 <b>한 장(one sheet)</b>이라 연결되어 있고, 그래서 공간꼴 사건의 시간 순서가 뒤집힐 수 있다.</li>
+</ol>
+</div>
+
+<div class="formula"><div class="ftitle">암기 — 불변 간격과 4-벡터 대수</div>
+\[ I\equiv(\Delta x)^{\mu}(\Delta x)_{\mu}=-c^{2}t^{2}+d^{2}
+=\begin{cases}
+&lt;0 & \text{시간꼴 — 같은 장소인 계 존재, 순서 절대, 인과 연결 가능}\\
+&gt;0 & \text{공간꼴 — 동시인 계 존재, 순서 뒤집힘 가능, 인과 연결 불가}\\
+=0 & \text{빛꼴 — 광신호로만 연결}
+\end{cases} \]
+\[ a_{\mu}=g_{\mu\nu}a^{\nu},\qquad g_{\mu\nu}=\mathrm{diag}(-1,1,1,1),\qquad \boxed{\ a^{\mu}b_{\mu}=-a^{0}b^{0}+\vb{a}\cdot\vb{b}=\text{Lorentz 불변}\ } \]
+<p class="note">두 사건이 <b>시간꼴</b>일 때 두 사건이 같은 장소에서 일어나는 계로 가는 속도는 \(v=d/t\ (&lt;c)\), <b>공간꼴</b>일 때 두 사건이 동시가 되는 계로 가는 속도는 \(v=c^{2}t/d\ (&lt;c)\) (Prob. 12.21). 두 공식이 \(v\leftrightarrow c^{2}/v\)로 서로 <b>역수 관계</b>임에 주목 — 광원뿔에 대한 반사 대칭이다. 시험에서 "이런 계가 존재하는가?"라는 질문은 <b>간격의 부호를 먼저 계산</b>하면 즉답할 수 있다.</p></div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u25-1"><div class="qq">(참/거짓 + 증명 또는 반례) "서로 다른 두 사건의 시간 순서는 모든 관성계에서 같다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>거짓.</b> <b>공간꼴</b>로 분리된 사건 쌍에 대해서는 순서가 뒤집히는 관성계가 반드시 존재한다.</p>
+<p><b>1) 일반 조건 유도.</b> \(S\)에서 사건 \(A\)가 \((x_A,t_A)\), \(B\)가 \((x_B,t_B)\), \(\Delta t\equiv t_B-t_A&gt;0\) (즉 \(S\)에서 \(A\)가 먼저), \(\Delta x\equiv x_B-x_A\). \(\bar S\)에서
+\[ \Delta\bar t=\gamma\!\left(\Delta t-\frac{v\,\Delta x}{c^{2}}\right). \]
+순서가 뒤집히려면 \(\Delta\bar t&lt;0\), 즉
+\[ v&gt;\frac{c^{2}\Delta t}{\Delta x}. \]
+그런 <b>물리적으로 가능한</b> \(v\) (\(|v|&lt;c\))가 존재할 조건은
+\[ \frac{c^{2}\Delta t}{\Delta x}&lt;c \quad\Longleftrightarrow\quad c\,\Delta t&lt;\Delta x \quad\Longleftrightarrow\quad I=-c^{2}\Delta t^{2}+\Delta x^{2}&gt;0. \]
+<b>정확히 공간꼴 조건이다.</b></p>
+<p><b>2) 구체적 반례 (Prob. 12.20 스타일).</b> \(S\)에서 사건 \(A\): \((x_A=5,\,ct_A=15)\), 사건 \(B\): \((x_B=10,\,ct_B=5)\) (임의 단위).
+\[ \Delta x=5,\quad c\,\Delta t=-10 \ \Rightarrow\ I=-(-10)^{2}+5^{2}=-100+25=-75&lt;0. \]
+이것은 <b>시간꼴</b>이므로 순서가 뒤집히지 <b>않는다</b>. 반례로 쓰려면 공간꼴을 잡아야 한다. 사건 \(A\): \((x=0,\,ct=0)\), 사건 \(B\): \((x=3\,\mathrm{m},\ ct=1\,\mathrm{m})\).
+\[ I=-1+9=8&gt;0\ \ (\text{공간꼴}). \]
+\(v/c&gt;\dfrac{c\Delta t}{\Delta x}=\dfrac{1}{3}\)인 계, 예컨대 \(\beta=\tfrac{1}{2}\)를 잡으면 \(\gamma=2/\sqrt3\)이고
+\[ c\,\Delta\bar t=\gamma\big(c\Delta t-\beta\,\Delta x\big)=\frac{2}{\sqrt3}\left(1-\frac{3}{2}\right)=-\frac{1}{\sqrt3}&lt;0. \]
+<b>순서가 뒤집혔다.</b> \(\beta=1/3\)이면 \(\Delta\bar t=0\) (동시), \(\beta&lt;1/3\)이면 원래 순서. 세 가지가 모두 실현된다.</p>
+<p><b>3) 그럼에도 인과율은 안전한 이유.</b> 위 두 사건은 \(3\,\mathrm{m}\) 떨어져 있는데 시간차는 빛이 \(1\,\mathrm{m}\) 가는 시간뿐이다. 어떤 신호도 \(A\)에서 \(B\)로 갈 수 없다. <b>인과적으로 무관한 두 사건의 선후는 물리적 내용이 없다.</b></p>
+<p><b>4) 참인 명제로 고쳐 쓰기 (시험에서 요구되는 마무리).</b> "<b>시간꼴 또는 빛꼴</b>로 분리된 두 사건의 시간 순서는 모든 관성계에서 같다." 이것은 참이며, 증명은 위 조건의 대우다: \(c\Delta t\ge\Delta x\)이면 \(v&gt;c^{2}\Delta t/\Delta x\ge c\)를 요구하게 되어 불가능하다. \(\blacksquare\)</p>
+</div></div>
+
+<div class="qz" data-q="u25-2"><div class="qq">(계산, Prob. 12.4/12.15 스타일) 무법자들이 \(\tfrac34 c\)로 도주하고, 경찰차는 \(\tfrac12 c\)로 추격하며, 경찰차 기준 총구 속도 \(\tfrac13 c\)로 총을 쏜다. (a) 지면 기준 총알 속력은? (b) 총알이 무법자를 따라잡는가? 무법자 기준 총알 속도를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>(a) 지면 기준 총알 속력.</b> 총알(A)–경찰차(B)–지면(C):
+\[ v_{AC}=\frac{v_{AB}+v_{BC}}{1+v_{AB}v_{BC}/c^{2}}=\frac{\tfrac13 c+\tfrac12 c}{1+\tfrac16}=\frac{\tfrac56 c}{\tfrac76}=\boxed{\tfrac57 c\approx0.714c}. \]
+(Galileo였다면 \(\tfrac56 c\approx0.833c\). 상대론이 값을 줄였다.)</p>
+<p><b>(b) 무법자 기준.</b> 무법자 계 \(\bar S\)는 지면에 대해 \(v=\tfrac34 c\)로 간다. 총알의 지면 속도 \(u=\tfrac57 c\):
+\[ \bar u=\frac{u-v}{1-uv/c^{2}}=\frac{\tfrac57-\tfrac34}{1-\tfrac57\cdot\tfrac34}=\frac{\tfrac{20-21}{28}}{1-\tfrac{15}{28}}=\frac{-\tfrac{1}{28}}{\tfrac{13}{28}}=\boxed{-\tfrac{1}{13}c\approx-0.077c}. \]</p>
+<p><b>해석.</b> 총알은 무법자 기준으로 <b>뒤로 멀어진다</b> — 따라잡지 못한다. 지면에서 보면 총알(\(0.714c\))이 무법자(\(0.75c\))보다 느리므로 당연한 결과이고, 두 계의 결론이 <b>일치</b>한다 (일치해야만 한다 — "총알이 무법자를 맞히는가"는 국소적 사건의 존재 여부이므로 불변이다).</p>
+<p><b>교훈 (자주 출제).</b> 상대론적 속도 덧셈은 <b>항상 Galileo보다 작은 값</b>을 준다. 그래서 "고전적으로는 따라잡는데 상대론적으로는 못 따라잡는" 상황이 생긴다. 계산 절차를 정형화하면: (1) 모든 속도를 <b>하나의 기준계</b>(보통 지면)로 환산, (2) 그다음 필요한 계로 한 번 더 변환. 여러 번 합성할 때는 rapidity \(\theta=\tanh^{-1}\beta\)를 쓰면 단순 덧셈이 된다: \(\theta_{\text{총알,지면}}=\theta_{\text{총알,경찰}}+\theta_{\text{경찰,지면}}\).</p>
+</div></div>
+
+<div class="qz" data-q="u25-3"><div class="qq">(계산) 계 \(S\)에서 사건 \(A\)는 \((x=0,\ t=0)\), 사건 \(B\)는 \((x=b,\ t=b/(2c))\)에 일어난다. (a) 간격을 분류하라. (b) 두 사건이 동시가 되는 관성계의 속도를 구하고 그 계에서의 공간 분리를 구하라. (c) 두 사건이 같은 장소에서 일어나는 계가 존재하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>(a) 분류.</b> \(\Delta x=b\), \(c\,\Delta t=b/2\).
+\[ I=-(c\Delta t)^{2}+(\Delta x)^{2}=-\frac{b^{2}}{4}+b^{2}=\frac{3b^{2}}{4}&gt;0 \ \Rightarrow\ \boxed{\text{공간꼴 spacelike}}. \]</p>
+<p><b>(b) 동시가 되는 계.</b> \(\Delta\bar t=\gamma(\Delta t-v\Delta x/c^{2})=0\)에서
+\[ v=\frac{c^{2}\Delta t}{\Delta x}=\frac{c^{2}\cdot b/(2c)}{b}=\boxed{\frac{c}{2}}. \]
+\(v=c/2&lt;c\)이므로 물리적으로 가능하다 — (a)의 공간꼴 판정과 일관된다.</p>
+<p>그 계에서의 분리: <b>간격 불변성을 쓰는 것이 가장 빠르다.</b> 동시이므로 \(I=(\Delta\bar x)^{2}\), 따라서
+\[ \Delta\bar x=\sqrt{I}=\frac{\sqrt3}{2}b\approx 0.866\,b. \]
+<b>직접 변환으로 검산:</b> \(\gamma=1/\sqrt{1-1/4}=2/\sqrt3\),
+\[ \Delta\bar x=\gamma(\Delta x-v\Delta t)=\frac{2}{\sqrt3}\left(b-\frac{c}{2}\cdot\frac{b}{2c}\right)=\frac{2}{\sqrt3}\cdot\frac{3b}{4}=\frac{\sqrt3}{2}b. \ \checkmark \]</p>
+<p><b>(c) 같은 장소인 계?</b> <b>존재하지 않는다.</b> 필요한 속도는 \(v=\Delta x/\Delta t=b/(b/2c)=2c&gt;c\)로 불가능하다. 불변량으로 보는 편이 더 근본적이다: 그런 계가 있다면 \(\Delta\bar x=0\)이므로 \(I=-(c\Delta\bar t)^{2}\le 0\)이어야 하는데, \(I=3b^{2}/4&gt;0\)이므로 모순이다. <b>간격의 부호는 불변이므로 어떤 변환으로도 바꿀 수 없다.</b></p>
+<p><b>덤 — 순서 뒤집기.</b> \(S\)에서는 \(A\)가 먼저다. \(v&gt;c/2\)인 계에서는 \(B\)가 먼저다. \(v=c/2\)에서는 동시. 세 시나리오가 모두 물리적으로 실현 가능하며, 두 사건이 서로에게 신호를 보낼 수 없으므로 아무 문제 없다.</p>
+</div></div>
+
+<div class="qz" data-q="u25-4"><div class="qq">(개념 설명) 4-벡터란 무엇이며, 왜 "네 개의 숫자를 나열한 것"만으로는 4-벡터가 아닌가? 그리고 \(a^{\mu}b_{\mu}\)가 불변인 것이 실전에서 왜 그렇게 유용한가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 정의는 "성분"이 아니라 "변환 방식"이다.</b> 4-벡터는 네 개의 수의 모음이 아니라, <b>Lorentz 변환 아래에서 \((ct,x,y,z)\)와 똑같이 변환하는</b> 네 성분의 조다:
+\[ \bar a^{\mu}=\Lambda^{\mu}_{\ \nu}a^{\nu}. \]
+3차원에서도 마찬가지였다 — \((T,\ p,\ V)\)처럼 아무 세 물리량을 모아 놓아도 벡터가 아니고, 회전 아래에서 \((x,y,z)\)처럼 변환해야 벡터다.</p>
+<p><b>2) 반례.</b> \((E,\ \vb{p})\)는 4-벡터다 (U26에서 증명). 그러나 \((\gamma,\ \vb{u})\)나 \((m,\ \vb{u})\)는 4-벡터가 <b>아니다</b> — 보통 속도 \(\vb{u}\)는 분자와 분모가 <b>둘 다</b> 변환되기 때문에 Lorentz 행렬로 선형 변환되지 않는다 (U26 유도 1). 또 \((t,\ \vb{F})\)도 4-벡터가 아니다 (U27 유도 5: \(\vb{F}=\dd\vb{p}/\dd t\)의 나쁜 변환 성질).</p>
+<p><b>3) 왜 불변량이 유용한가 — 세 가지 이유.</b>
+<br><b>(i) 계 선택의 자유.</b> \(a^{\mu}b_{\mu}\)가 모든 계에서 같은 값이므로, <b>가장 계산하기 쉬운 계에서 계산하고 그 값을 아무 계에나 가져다 쓸 수 있다</b>. U27의 붕괴 문제에서 "모입자 정지계에서 계산" 트릭이 정확히 이것이다.
+<br><b>(ii) 미지의 속도를 소거한다.</b> \(p^{\mu}p_{\mu}=-m^{2}c^{2}\)는 \(E\)와 \(|\vb{p}|\)를 <b>속도를 전혀 구하지 않고</b> 연결한다.
+<br><b>(iii) 법칙의 형태를 보장한다.</b> 공준 1은 "물리 법칙이 모든 관성계에서 같은 형태"를 요구한다. 방정식의 <b>양변이 같은 랭크의 텐서</b>이면 이것이 자동으로 만족된다 — 이를 <b>공변적(covariant) 형식</b>이라 한다. 12.3절에서 Maxwell 방정식을 이 형태로 다시 쓸 때 이 아이디어가 절정에 이른다.</p>
+<p><b>4) 지표 관리 실전 규칙.</b> (i) 같은 지표가 <b>위·아래로</b> 반복되면 합(축약). (ii) 축약된 지표는 이름을 바꿔도 무방(dummy). (iii) 방정식 양변의 <b>자유 지표(free index)는 위치와 개수가 일치</b>해야 한다 — 한쪽에 \(a^{\mu}\)가 있는데 다른 쪽에 \(b_{\mu}\)가 있으면 그 식은 틀렸다. 이 세 규칙만으로 계산 오류의 대부분을 잡아낼 수 있다.</p>
+<p><b>5) 부호 규약 재확인.</b> Griffiths는 \(g_{\mu\nu}=\mathrm{diag}(-1,+1,+1,+1)\)를 쓰므로 <b>시간꼴이 음수</b>다. 입자물리 문헌은 \((+,-,-,-)\)를 자주 쓰고 그러면 시간꼴이 양수다. 답만 보고 "부호가 틀렸다"고 판단하기 전에 규약을 확인하라.</p>
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> 선형성·원점 조건·광신호만으로 \(A=\gamma\)를 뽑아 Lorentz 변환 전체를 백지에서 유도하고, 그 변환에서 동시성·수축·팽창을 각각의 전제(같은 시각 / 같은 장소)와 함께 재유도하며, \(I=-c^2t^2+d^2\)의 불변성을 대수로 보이고 세 부류의 인과적 의미와 "순서 뒤집힘 ⟺ 공간꼴"을 증명할 수 있으며, \(a^\mu b_\mu\)로 불변량을 만드는 규칙을 자유롭게 쓴다.</div>

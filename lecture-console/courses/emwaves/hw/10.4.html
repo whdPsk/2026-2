@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\[ \vb{E}=-\frac{\partial\vb{A}}{\partial t}=A_0\omega\cos(kx-\omega t)\,\hat{\vb{y}},\qquad
+\vb{B}=\curl\vb{A}=\frac{\partial A_y}{\partial x}\hat{\vb{z}}=A_0k\cos(kx-\omega t)\,\hat{\vb{z}} . \]
+\(\divg\vb{E}=\partial E_y/\partial y=0\) ✓, \(\divg\vb{B}=0\) ✓ (진공, \(\rho=0\)).
+
+Faraday: \((\curl\vb{E})_z=\partial E_y/\partial x=-A_0\omega k\sin(kx-\omega t)\), \(-\partial B_z/\partial t=-A_0k\omega\sin(kx-\omega t)\) → 항등적으로 성립 ✓ (조건 없음).
+
+Ampère–Maxwell: \((\curl\vb{B})_y=-\partial B_z/\partial x=A_0k^2\sin(kx-\omega t)\), \(\muz\eps\,\partial E_y/\partial t=\muz\eps A_0\omega^2\sin(kx-\omega t)\). 두 식이 같으려면
+\[ k^2=\muz\eps\,\omega^2\ \Longrightarrow\ \boxed{\omega=ck} \]
+즉 진공 분산관계. 참고로 이 퍼텐셜은 \(\divg\vb{A}=0\)이고 \(V=0\)이므로 Coulomb 게이지이자 Lorenz 게이지이다.
+<div class="alabel">감점 포인트</div>
+Faraday 법칙만 확인하고 "조건 없음"이라고 답하는 경우 — 조건은 Ampère–Maxwell에서 나온다.</div><!--/sol-->

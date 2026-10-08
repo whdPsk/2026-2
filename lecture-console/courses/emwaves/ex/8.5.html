@@ -1,0 +1,61 @@
+<div class="exq"><b>상황.</b> "자기 크레인이 폐차를 들어올린다"를 가장 단순하게 모형화한다. 폐차 대신 반지름 \(a\), 단위길이 전하 \(\lambda\)인 <b>부도체</b> 고리가 각속도 \(\omega\)로 돌고 있어 전류 \(I=\lambda\omega a\)를 만든다. 위에는 고정된 자석이 있고, 고리 위치에서 자석 장의 <em>반지름 성분</em>이 \(B_s\)이다(균일 장으로는 들어올릴 수 없으므로 비균일이어야 한다). 고리가 \(\dd z\)만큼 올라갈 때 (i) 위로 한 일, (ii) 그 에너지의 출처를 정량적으로 밝힌다. 명제 "자기력은 일을 하지 않는다"와 어떻게 양립하는가?</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>수직 방향 일 \(=+2\pi a^{2}\lambda\omega B_s\dd z\), 회전 방향 일 \(=-2\pi a^{2}\lambda\omega B_s\dd z\). 합은 0.</div>
+<ol>
+<li><b>들어올리는 힘.</b> 고리 전류 \(I\)가 반지름 방향 자기장 \(B_s\) 속에 있으면 \(\dd\vb{F}=I\,\dd\vb{l}\times\vb{B}\)의 <em>수직</em> 성분이 살아남는다(\(\hat{\boldsymbol\varphi}\times\hat{\vb{s}}=-\hat{\vb{z}}\)):
+\[ F_z=2\pi a I B_s=2\pi a^{2}\lambda\omega B_s. \]</li>
+
+<li><b>올라가며 얻는 위치에너지.</b>
+\[ \dd W_{\rm lift}=F_z\,\dd z=2\pi a^{2}\lambda\omega B_s\,\dd z. \tag{i} \]</li>
+
+<li><b>동시에 무슨 일이 일어나는가.</b> 고리가 \(\dd z\) 올라가면 고리가 감싸는 자속이 바뀐다. 시각 \(t\)의 고리와 \(t+\dd t\)의 고리를 잇는 "띠"(옆면, 넓이 \(2\pi a\,\dd z\))를 통과하는 자속이
+\[ \dd\Phi=B_s\,(2\pi a\,\dd z) \]
+이고, 이것이 운동기전력(motional emf)을 만든다: \(\mathcal E=-\dd\Phi/\dd t\).</li>
+
+<li><b>기전력을 단위전하당 힘으로 환산.</b> 고리 둘레를 따라 균일하므로 \(\mathcal E=f(2\pi a)\), 즉
+\[ f=-B_s\frac{\dd z}{\dd t}. \]
+이 \(f\)는 원주 <em>반대</em> 방향이다 — 전류(회전)를 방해한다. 이것이 자기력의 <b>수평 성분</b>이다.</li>
+
+<li><b>제동 토크와 회전 일.</b> 길이 \(\dd l\) 조각에 작용하는 힘은 \(f\lambda\,\dd l\), 팔길이 \(a\):
+\[ N=a\left(-B_s\frac{\dd z}{\dd t}\right)\lambda(2\pi a)=-2\pi a^{2}\lambda B_s\frac{\dd z}{\dd t}. \]
+회전에 한 일은 \(\dd W_{\rm rot}=N\,\dd\phi=N\omega\,\dd t\):
+\[ \dd W_{\rm rot}=-2\pi a^{2}\lambda\omega B_s\,\dd z. \tag{ii} \]</li>
+
+<li><b>합산.</b> (i)+(ii)\(=0\). 고리가 얻은 위치에너지는 정확히 회전운동에너지에서 나왔다. 자기장은 에너지의 <em>형태를 바꾸는 중개자</em>였을 뿐, 알짜 일은 0이다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \dd W_{\rm lift}=2\pi a^{2}\lambda\omega B_s\,\dd z=-\dd W_{\rm rot}\quad\Longrightarrow\quad \dd W_{\rm mag}^{\rm net}=0\ } \]
+<p class="note">"자기력이 일을 안 한다"는 \(\vb{F}=q\vb{v}\times\vb{B}\perp\vb{v}\)에서 곧바로 나온다. 겉보기 모순은 힘을 <em>수직 성분</em>만 보고 속도를 <em>수직 성분</em>만 봤기 때문. 실제 전하 속도는 회전 + 상승의 합이고, 자기력은 그 <b>알짜</b> 속도에 수직이다. 수직 성분이 한 (+)일과 수평 성분이 한 (−)일이 정확히 상쇄된다. <b>검산</b> ① 차원: \(\lambda\omega a^{2}B_s\) = (C/m)(1/s)(m\(^2\))(T) = C·m/s·T = N ✓, \(\times\dd z\)로 J ✓. ② 극한: \(\omega\to0\)이면 전류가 없어 힘도 0, 일도 0 ✓. \(B_s\to0\)(균일장)이면 들어올릴 수 없다 ✓. ③ 특수경우 환원: (i)에서 \(2\pi aI=\)(전류)×(둘레)이고 \(F=2\pi aIB_s\)는 6장의 \(\vb{F}=\oint I\dd\vb{l}\times\vb{B}\)와 동일 ✓. ④ 부호: (ii)가 음수 — Lenz 법칙(변화를 방해)과 일관 ✓.</p></div>
+
+<div class="qz" data-q="ex8.5-a"><div class="qq"><b>+α</b> 정량화: 고리의 질량이 \(m\)이고 (얇은 고리이므로 관성모멘트 \(=ma^{2}\)) 초기 각속도가 \(\omega_0\), 자석의 \(B_s\)가 상승 구간에서 대략 일정하다고 하자. (a) 높이 \(\Delta z\)만큼 올라갔을 때 각속도 감소량 \(\Delta\omega\)를 구하라. (b) 고리가 <b>더 이상 올라가지 못하는</b>(자기력이 무게와 같아지는) 높이를 구하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>(a) 각속도 감소.</b> 회전운동에너지 \(K=\tfrac12(ma^{2})\omega^{2}\)의 변화가 (ii)이므로
+\[ \dd K=ma^{2}\omega\,\dd\omega=\dd W_{\rm rot}=-2\pi a^{2}\lambda\omega B_s\,\dd z. \]
+양변에서 \(a^{2}\omega\)가 상쇄된다(!):
+\[ \frac{\dd\omega}{\dd z}=-\frac{2\pi\lambda B_s}{m}\;\Longrightarrow\; \boxed{\ \Delta\omega=-\frac{2\pi\lambda B_s}{m}\,\Delta z\ } \]
+즉 각속도는 높이에 <b>선형</b>으로 감소한다. (더 깔끔하게는 각운동량으로: \(N=-2\pi a^{2}\lambda B_s\dot z\)이므로 \(\dd L=ma^{2}\dd\omega=-2\pi a^{2}\lambda B_s\dd z\) — 같은 식.)</p>
+<p><b>(b) 정지 높이.</b> 들어올리는 힘은 \(F_z(z)=2\pi a^{2}\lambda\omega(z)B_s\)이고 \(\omega(z)=\omega_0-\frac{2\pi\lambda B_s}{m}z\). \(F_z=mg\)가 되는 순간 상승이 멈춘다:
+\[ 2\pi a^{2}\lambda B_s\left(\omega_0-\frac{2\pi\lambda B_s}{m}z\right)=mg \;\Longrightarrow\; \boxed{\ z_{\max}=\frac{m}{2\pi\lambda B_s}\left(\omega_0-\frac{mg}{2\pi a^{2}\lambda B_s}\right)\ } \]
+(괄호가 음수면 애초에 뜨지도 못한다: 뜰 조건은 \(\omega_0&gt;\dfrac{mg}{2\pi a^{2}\lambda B_s}\).)</p>
+<p><b>검산</b> ① 차원: \(\frac{2\pi\lambda B_s}{m}\Delta z\)=(C/m)(T)(m)/(kg)=C·T/kg=(C)(kg/(C·s))/kg=1/s ✓ 각속도. ② 극한: \(\lambda\to0\)이면 \(\Delta\omega\to0\)이고 동시에 뜨지도 못한다 ✓. \(m\to\infty\)면 \(\Delta\omega\to0\)(무거우면 안 느려짐)이지만 뜰 조건도 깨진다 ✓. ③ \(\Delta\omega\)가 \(a\)에 무관한 것이 흥미롭다 — 토크와 관성모멘트가 똑같이 \(a^{2}\)로 스케일하기 때문 ✓. ④ 에너지 총량: \(\tfrac12ma^2(\omega_0^2-\omega^2)=mgz\)를 직접 확인해도 같은 답이 나온다 ✓.</p>
+</div></div>
+
+<div class="qz" data-q="ex8.5-b"><div class="qq"><b>+α</b> 앞 단원(6장)과 연결: 고리를 자기 쌍극자 \(m=I\pi a^{2}\)로 보면 힘은 \(F_z=m\,\partial B_z/\partial z\)이다. \(\divg\vb{B}=0\)을 이용해 이 표현이 본문의 \(F_z=2\pi aIB_s\)와 <b>같은 식</b>임을 보여라. 그리고 "균일한 장에서는 들어올릴 수 없다"가 왜 두 표현 모두에서 자명한지 설명하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 축 근처에서 \(B_s\)와 \(\partial B_z/\partial z\)의 관계.</b> 원통좌표에서 축대칭 장(\(\partial/\partial\varphi=0\))에 대해
+\[ \divg\vb{B}=\frac1s\frac{\partial}{\partial s}(sB_s)+\frac{\partial B_z}{\partial z}=0. \]
+축 근처에서 \(\partial B_z/\partial z\)를 \(s\)에 무관하다고 근사하고 \(s\)에 대해 적분하면
+\[ sB_s=-\frac{s^{2}}{2}\frac{\partial B_z}{\partial z}\;\Longrightarrow\; B_s(s)=-\frac{s}{2}\frac{\partial B_z}{\partial z}. \]
+고리 위치 \(s=a\)에서 \(\displaystyle \frac{\partial B_z}{\partial z}=-\frac{2B_s}{a}\).</p>
+<p><b>2) 쌍극자 힘과 비교.</b> 6장의 결과 \(\vb{F}=\nabla(\vb{m}\cdot\vb{B})\)에서 축방향 성분은 \(F_z=m\,\partial B_z/\partial z\)이고 \(m=I\pi a^{2}\):
+\[ F_z=I\pi a^{2}\left(-\frac{2B_s}{a}\right)=-2\pi a I B_s. \]
+크기는 본문의 \(2\pi aIB_s\)와 <b>완전히 같다</b> ✓ (부호 차이는 \(B_s\)의 방향 규약 — 자석이 위에서 끌어당기는 배치에서는 \(B_s\)와 전류 방향의 조합이 위쪽 힘을 준다).</p>
+<p><b>3) 균일 장이면?</b>
+<br>• 쌍극자 표현: \(\vb{B}\)가 균일이면 \(\partial B_z/\partial z=0\) → \(F_z=0\).
+<br>• 고리 표현: 균일 \(\vb{B}=B\hat{\vb{z}}\)이면 \(B_s=0\) → \(F_z=0\). (균일 장에서는 \(\oint I\dd\vb{l}\times\vb{B}=I(\oint\dd\vb{l})\times\vb{B}=0\), 알짜 힘은 없고 토크만 있다.)
+<br>두 표현이 같은 이유를 위에서 \(\divg\vb{B}=0\)로 이었으므로, 이 결론도 자동으로 일치한다.</p>
+<p><b>검산</b>: \(\divg\vb{B}=0\)이라는 <em>가장 기본적인</em> 성질 하나로 "쌍극자 힘 공식"과 "고리 위 Lorentz 힘"이 동치임이 나온다 — 쌍극자를 작은 전류고리의 극한으로 정의한 것과 일관 ✓. 차원: \([m][\partial B/\partial z]\)=(A·m\(^2\))(T/m)=A·m·T=N ✓.</p>
+</div></div>

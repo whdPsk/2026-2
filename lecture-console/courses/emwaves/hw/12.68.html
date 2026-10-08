@@ -1,0 +1,17 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> \(A^{\mu}=(V/c,\vb{A})\)는 4-벡터이므로 (역)부스트로</p>
+\[ \frac{V}{c}=\gamma\Big(\frac{\bar V}{c}+\beta\bar A_x\Big)=\gamma\beta\bar A_x\ \Rightarrow\ V=\gamma v\bar A_x,\qquad \bar A_x=\frac{\muz}{4\pi}\frac{(\vb{m}\times\bar{\vb{r}})_x}{\bar r^{3}}. \]
+<p><b>좌표 정리.</b> \(t=0\)에서 \(\bar x=\gamma x,\ \bar y=y,\ \bar z=z\). \(x\)성분은 \(\bar x\)를 포함하지 않으므로</p>
+\[ (\vb{m}\times\bar{\vb{r}})_x=m_y\bar z-m_z\bar y=m_yz-m_zy=(\vb{m}\times\vb{R})_x, \]
+<p>반면 분모는 수축을 받는다:</p>
+\[ \bar r^{2}=\gamma^{2}x^{2}+y^{2}+z^{2}=\gamma^{2}R^{2}\Big(1-\frac{v^{2}}{c^{2}}\sin^{2}\theta\Big). \]
+<p>따라서</p>
+\[ V=\gamma v\frac{\muz}{4\pi}\frac{(\vb{m}\times\vb{R})_x}{\gamma^{3}R^{3}(1-\tfrac{v^{2}}{c^{2}}\sin^{2}\theta)^{3/2}},\qquad v(\vb{m}\times\vb{R})_x=\vb{v}\cdot(\vb{m}\times\vb{R})=\vb{R}\cdot(\vb{v}\times\vb{m}) \]
+\[ \boxed{\ V=\frac{1}{4\pi\eps}\frac{\hat{\vb{R}}\cdot(\vb{v}\times\vb{m})}{c^{2}R^{2}}\frac{1-v^{2}/c^{2}}{\big[1-(v^{2}/c^{2})\sin^{2}\theta\big]^{3/2}}\ } \]
+
+<p><b>(b)</b> \(v\ll c\)에서 각도인자 \(\to1\)이므로</p>
+\[ V\approx\frac{1}{4\pi\eps}\frac{\vb{p}\cdot\hat{\vb{R}}}{R^{2}},\qquad \boxed{\ \vb{p}=\frac{\vb{v}\times\vb{m}}{c^{2}}\ } \]
+<p>즉 <b>움직이는 자기쌍극자는 전기쌍극자로도 보인다</b>. (Ex. 12.13의 hidden momentum \(\vb{p}_{\rm hid}=(\vb{m}\times\vb{E})/c^{2}\)와 쌍을 이루는, "\(\vb{E}\)와 \(\vb{B}\)가 섞인다"의 쌍극자 버전이다.)</p>
+<div class="alabel">감점 포인트</div>
+\(\bar A_x\)를 \(S\)좌표로 옮기면서 \(\bar x=\gamma x\)의 \(\gamma\)를 잊는 것. 분자는 \(\bar x\)를 안 쓰지만 <b>분모 \(\bar r^{3}\)</b>는 반드시 수축 인자를 받는다.</div><!--/sol-->

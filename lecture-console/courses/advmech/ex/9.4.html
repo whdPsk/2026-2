@@ -1,0 +1,20 @@
+<div class="exq"><b>상황.</b> 속도 \(v\)로 날던 질량 \(M\)의 포탄이 세 조각으로 폭발: \(m_1=M/2\)는 원래 방향, \(m_2=M/6\)는 반대 방향, \(m_3=M/3\)는 정지. 폭발로 방출된 에너지 \(E=5\times\tfrac12Mv^2\). 각 조각의 속도.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>미지수 두 개(\(k_1,k_2\)), 방정식 두 개(운동량, 에너지).</div>
+<ol>
+<li>\(v_1=k_1v\), \(v_2=-k_2v\) (\(k_1,k_2&gt;0\) — 문제의 방향 조건), \(v_3=0\).</li>
+<li><b>운동량</b>(폭발은 내력, 순간적이라 중력 충격량 무시): \(Mv=\frac M2k_1v-\frac M6k_2v\ \Rightarrow\ k_2=3k_1-6\).</li>
+<li><b>에너지</b>(내부 에너지 \(E\)가 운동에너지로): \(E+\tfrac12Mv^2=\tfrac12\frac M2k_1^2v^2+\tfrac12\frac M6k_2^2v^2\). \(E=\tfrac52Mv^2\)이므로 좌변 \(=3Mv^2\):
+\[ 6=\frac{k_1^2}{2}+\frac{k_2^2}{6}. \]</li>
+<li>대입: \(6=\frac{k_1^2}{2}+\frac{(3k_1-6)^2}{6}=2k_1^2-6k_1+6\ \Rightarrow\ k_1(k_1-3)=0\).</li>
+<li>\(k_1=0\) → \(k_2=-6\): \(k_2&gt;0\) 위반, 버림. \(k_1=3\) → \(k_2=3\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ v_1=3v,\quad v_2=-3v,\quad v_3=0\ } \]
+<p class="note"><b>검산</b> ① 운동량: \(\frac M2\cdot3v-\frac M6\cdot3v=Mv\) ✓. ② 에너지: \(\tfrac12\frac M2 9v^2+\tfrac12\frac M6 9v^2=\frac94Mv^2+\frac34Mv^2=3Mv^2=\tfrac12Mv^2+E\) ✓. ③ CM계에서 보면: CM 속도 \(v\), 조각 CM 속도 \(2v,-4v,-v\) — CM계 운동량 \(\frac M2(2v)+\frac M6(-4v)+\frac M3(-v)=0\) ✓, CM계 에너지 \(=E\) ✓ (\(Mv^2+\frac43Mv^2+\frac16Mv^2=\frac52Mv^2\)).</p></div>
+<div class="qz" data-q="ex9.4-a"><div class="qq"><b>+α</b> 숫자 바꾸기: 같은 질량 배분에서 방출 에너지가 \(E=\lambda\cdot\tfrac12Mv^2\)라 하자. \(k_1\)을 \(\lambda\)로 구하고, 조각 2가 반대 방향으로 가려면 \(\lambda\)가 얼마 이상이어야 하는지 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>에너지: \(1+\lambda=\frac{k_1^2}{2}+\frac{(3k_1-6)^2}{6}=2k_1^2-6k_1+6\ \Rightarrow\ 2k_1^2-6k_1+5-\lambda=0\), \(k_1=\dfrac{3+\sqrt{2\lambda-1}}{2}\) (큰 근; \(k_2=3k_1-6\)이 양이려면 \(k_1&gt;2\)).</p>
+<p>\(k_2&gt;0\iff k_1&gt;2\iff\sqrt{2\lambda-1}&gt;1\iff\lambda&gt;1\). \(\lambda=5\)이면 \(k_1=(3+3)/2=3\) ✓.</p>
+<p>\(\lambda=1\)일 때 \(k_1=2\), \(k_2=0\) — 조각 2가 정지. 또 \(\lambda\ge1/2\)이어야 실근이 존재: 방향 조건(\(m_3\) 정지, 한 직선)이 에너지에 최소 요구를 건다.</p></div></div>
+<div class="qz" data-q="ex9.4-b"><div class="qq"><b>+α</b> 개념: 이 문제에서 "\(m_3\)가 정지"라는 조건을 빼면 해가 정해지는가? 세 조각이 한 직선 위에서 움직인다고 할 때 미지수와 방정식 수를 세어 보고, CM계에서 \(E\)가 어떻게 분배되는지로 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>미지수 \(v_1,v_2,v_3\) 세 개, 방정식은 운동량 하나 + 에너지 하나 = 두 개 → <b>1-매개변수 해족</b>. 보존법칙만으로는 폭발의 세부(에너지가 조각들에 어떻게 나뉘는가)를 정할 수 없다.</p>
+<p>CM계에서 \(\sum m_\alpha v'_\alpha=0\), \(\sum\tfrac12m_\alpha v'^2_\alpha=E\) — 3차원 속도 공간의 평면과 타원면의 교선(1차원 곡선)이 해 집합. 추가 조건(\(v'_3=-v\), 즉 \(m_3\) LAB 정지)이 곡선 위 한 점을 고른다.</p></div></div>

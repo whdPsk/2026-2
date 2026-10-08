@@ -1,0 +1,20 @@
+<div class="exq"><b>상황.</b> Apollo 계획 Saturn V 1단: 초기 질량 \(m_0=2.8\times10^6\) kg, 1단 연료 \(2.1\times10^6\) kg, 평균 추력 \(37\times10^6\) N, 배기 속력 \(u=2600\) m/s. 연소 종료 속력과 (Problem 9-58의 식 9.166으로) 연소 종료 고도를 구한다. (오타표: 교재의 "Problem 9-57"은 9-58.)</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>추력 → 연소율 → 시간 → 속력 → 고도.</div>
+<ol>
+<li><b>연소율</b>: thrust \(=-u\dot m\) → \(\alpha=|\dot m|=\dfrac{37\times10^6}{2600}=1.42\times10^4\) kg/s.</li>
+<li><b>연소 시간</b>: \(t_b=\dfrac{m_0-m_b}{\alpha}=\dfrac{2.1\times10^6}{1.42\times10^4}=148\) s (≈2.5분). \(m_b=0.7\times10^6\) kg, \(m_0/m_b=4\).</li>
+<li><b>속력</b>(식 9.165): \(v_b=-gt_b+u\ln\dfrac{m_0}{m_b}=-9.8(148)+2600\ln4=-1450+3604=2.16\times10^3\) m/s.</li>
+<li><b>고도</b>(식 9.166):
+\[ y_b=ut_b-\tfrac12gt_b^2-\frac{m_bu}{\alpha}\ln\frac{m_0}{m_b}. \]
+\(=2600(148)-4.9(148)^2-\dfrac{0.7\times10^6\cdot2600}{1.42\times10^4}(1.386)=384800-107300-177700\approx9.98\times10^4\) m.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ v_b\approx2.16\ \mathrm{km/s},\qquad y_b\approx100\ \mathrm{km}\ } \]
+<p class="note"><b>검산</b> ① 이륙 조건: 추력 \(37\) MN &gt; 무게 \(2.8\times10^6\times9.8=27.4\) MN ✓. ② 중력 손실 \(gt_b=1.45\) km/s — 이상 속도 \(u\ln4=3.6\) km/s의 40%를 중력이 빼앗는다. 빨리 태울수록(큰 \(\alpha\)) 손실이 작다: 자유공간과 달리 <b>중력하에서는 연소 속도가 중요</b>. ③ 실제 고도는 이것의 약 2/3 — 경로가 기울고 공기저항이 있다.</p></div>
+<div class="qz" data-q="ex9.12-a"><div class="qq"><b>+α</b> 식 9.166 유도: \(v(t)=-gt+u\ln\dfrac{m_0}{m_0-\alpha t}\)를 \(0\)에서 \(t_b\)까지 적분해 \(y_b\) 식을 얻어라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(\int_0^{t_b}u\ln\frac{m_0}{m}\dd t\)에서 \(\dd t=-\dd m/\alpha\): \(\dfrac u\alpha\int_{m_b}^{m_0}(\ln m_0-\ln m)\dd m=\dfrac u\alpha\left[(m_0-m_b)\ln m_0-(m_0\ln m_0-m_0-m_b\ln m_b+m_b)\right]\)
+\(=\dfrac u\alpha\left[m_0-m_b-m_b\ln\dfrac{m_0}{m_b}\right]\).</p>
+<p>\(m_0-m_b=\alpha t_b\)이므로 \(=ut_b-\dfrac{um_b}{\alpha}\ln\dfrac{m_0}{m_b}\). 중력항 \(-\tfrac12gt_b^2\)을 더하면 식 9.166 ✓ (Example 9.13의 식 9.167과 같은 식).</p></div></div>
+<div class="qz" data-q="ex9.12-b"><div class="qq"><b>+α</b> 연소 후 관성 상승: 연소 종료 뒤 (중력 일정, 공기 없음 가정) 추가로 올라가는 높이와 최고 고도를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(\Delta y=v_b^2/2g=(2160)^2/19.6\approx2.38\times10^5\) m. 최고 고도 ≈ 100 + 238 = 338 km.</p>
+<p>(이 고도에서는 \(g\)가 약 10% 줄어드므로 상수 \(g\) 가정은 대략적. 또 1단만의 가상 계산 — 실제로는 2단이 점화된다.)</p></div></div>

@@ -1,0 +1,13 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>두 전류를 같은 비율 \(\alpha(t):0\to1\) 로 함께 키운다:
+\(i_a=\alpha I_a,\ i_b=\alpha I_b\).</p>
+<p>역기전력을 이기며 전원이 하는 일:
+\[dW=-\big(\mathcal{E}_a i_a+\mathcal{E}_b i_b\big)dt,\qquad
+\mathcal{E}_a=-\Big(L_a\frac{di_a}{dt}+M\frac{di_b}{dt}\Big),\ \text{(b도 유사)}\]
+\[W=\int_0^1\!\Big[(L_aI_a+MI_b)I_a+(L_bI_b+MI_a)I_b\Big]\alpha\,d\alpha .\]
+\(\int_0^1\alpha\,d\alpha=\tfrac12\) 이므로
+\[\boxed{\;U=\tfrac12 L_aI_a^{2}+\tfrac12 L_bI_b^{2}+M I_aI_b\;}\]
+(상호 인덕턴스 항은 \(1/2\)가 붙지 않는다 — \(M I_aI_b\) 가 두 번 나타나기 때문.)</p>
+<div class="alabel">감점 포인트</div>
+상호항에도 \(\tfrac12\)를 붙이는 실수. \(M_{ab}=M_{ba}=M\) 이라 두 교차항이 합쳐진다.</div><!--/sol-->

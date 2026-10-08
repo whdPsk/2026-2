@@ -1,0 +1,336 @@
+{
+ "today": "2026-10-08",
+ "course": {
+  "info": "2026-2 전자기파와 광학 · 박철환 교수 · 월·수 9:30–10:45(보강 분산으로 9:25 시작), 56동 106호 · 연습 월·수 8시대<br>교재: Griffiths <i>Introduction to Electrodynamics</i> 5판 Ch.8–12<br>평가: 과제 10% · 출석 20% · 중간 35% · 기말 35% · 1/3 이상 결석 시 F<br><b>출제 비중</b>: 교과서 Example + 모범답안 공개된 숙제 문제(optional 포함)를 그대로/변형 <b>80% 이상</b>, 강의노트 <b>20%</b>. 과제로 내지 않은 Problem은 출제하지 않음. Example·과제 기반 문제는 <b>영어 원문</b>으로 출제 · 계산기 금지<br><b>9/23 eTL 공지</b>: 출석 태그를 못 한 경우 출석 불인정(일관 기준). 학점 구간·+/0/− 비율·등수는 문의해도 알려주지 않음 — 기존 문서의 정량 기준은 삭제됨."
+ },
+ "exams": [
+  {
+   "name": "중간고사",
+   "date": "2026-10-28",
+   "tentative": false,
+   "note": "수 9:30–10:50, 56동 106호 · 8–10장"
+  },
+  {
+   "name": "기말고사",
+   "date": "2026-12-14",
+   "tentative": false,
+   "note": "월 9:30–10:50, 56동 106호 · 11–12장 + 중간고사 문제 변형"
+  }
+ ],
+ "rangeLabel": {
+  "1": "중간고사 범위 · Ch.8–10",
+  "2": "기말고사 범위 · Ch.11–12 (+중간 문제 변형)"
+ },
+ "rangeShort": {
+  "1": "중간 · 8–10장",
+  "2": "기말 · 11–12장"
+ },
+ "drive": {
+  "textbook": "https://drive.google.com/file/d/1EUCrMTtwikV0rtUbxpneSpJR_5gitj-Y/view",
+  "folder": "https://drive.google.com/drive/folders/1yxYL3B-LR_fB-NHkt91h96AqpT362JkS"
+ },
+ "chapters": {
+  "8": {
+   "ko": "보존 법칙",
+   "en": "Conservation Laws",
+   "range": 1
+  },
+  "9": {
+   "ko": "전자기파",
+   "en": "Electromagnetic Waves",
+   "range": 1
+  },
+  "10": {
+   "ko": "퍼텐셜과 장",
+   "en": "Potentials and Fields",
+   "range": 1
+  },
+  "11": {
+   "ko": "복사",
+   "en": "Radiation",
+   "range": 2
+  },
+  "12": {
+   "ko": "전기역학과 상대성",
+   "en": "Electrodynamics and Relativity",
+   "range": 2
+  }
+ },
+ "units": [
+  {
+   "id": "u1",
+   "ch": 8,
+   "secs": "8.1.1–8.1.2",
+   "page": 386,
+   "title": "전하와 에너지 — 연속방정식과 Poynting 정리",
+   "en": "Charge, Energy & Poynting's Theorem",
+   "sub": "모든 보존법칙의 원형(prototype)이 여기서 만들어진다 — \"밀도 + 흐름\"이라는 문법을 익히면 나머지 세 단원은 같은 틀의 복사본이다."
+  },
+  {
+   "id": "u2",
+   "ch": 8,
+   "secs": "8.2.1–8.2.2",
+   "page": 391,
+   "title": "전기동역학에서의 뉴턴 제3법칙과 Maxwell 변형력 텐서",
+   "en": "Newton's Third Law & the Maxwell Stress Tensor",
+   "sub": "제3법칙이 깨지는 순간 운동량 보존이 위태로워진다 — 그 구조를 살리는 도구가 변형력 텐서다."
+  },
+  {
+   "id": "u3",
+   "ch": 8,
+   "secs": "8.2.3–8.2.4",
+   "page": 396,
+   "title": "운동량 보존과 각운동량",
+   "en": "Conservation of Momentum & Angular Momentum",
+   "sub": "정지해 있고 아무것도 변하지 않는 정적인 장이 운동량과 각운동량을 <em>실제로</em> 품고 있다 — 이 장의 가장 반직관적인 결론."
+  },
+  {
+   "id": "u4",
+   "ch": 8,
+   "secs": "8.3",
+   "page": 403,
+   "title": "자기력은 일을 하지 않는다",
+   "en": "Magnetic Forces Do No Work",
+   "sub": "\"그럼 자기 크레인이 폐차를 들어올릴 때 일을 하는 건 누구인가?\" — 이 한 질문에 정확히 답할 수 있으면 전자기 에너지 흐름을 이해한 것이다."
+  },
+  {
+   "id": "u5",
+   "ch": 9,
+   "secs": "9.1.1–9.1.2",
+   "page": 414,
+   "title": "1차원 파동과 사인파",
+   "en": "Waves in One Dimension & Sinusoidal Waves",
+   "sub": "전자기파를 배우기 전에, \"파동\"이라는 수학적 대상이 무엇인지부터 못 박아 둔다"
+  },
+  {
+   "id": "u6",
+   "ch": 9,
+   "secs": "9.1.3–9.1.4",
+   "page": 420,
+   "title": "경계 조건: 반사와 투과, 편광",
+   "en": "Boundary Conditions & Polarization",
+   "sub": "줄에서 미리 풀어 두는 \"반사·투과\" 문제 — 전자기파 버전은 이 계산의 복사판이다"
+  },
+  {
+   "id": "u7",
+   "ch": 9,
+   "secs": "9.2.1–9.2.2",
+   "page": 425,
+   "title": "진공 중 파동방정식과 단색 평면파",
+   "en": "Wave Equation & Monochromatic Plane Waves",
+   "sub": "Maxwell 방정식만으로 \"빛\"이 튀어나오는 장면 — 이 장의 심장",
+   "star": true
+  },
+  {
+   "id": "u8",
+   "ch": 9,
+   "secs": "9.2.3",
+   "page": 430,
+   "title": "전자기파의 에너지와 운동량",
+   "en": "Energy and Momentum in EM Waves",
+   "sub": "빛이 \"민다\"는 사실 — 강도 \\(I\\), 복사압 \\(P=I/c\\), 그리고 시간평균의 기술"
+  },
+  {
+   "id": "u9",
+   "ch": 9,
+   "secs": "9.3.1–9.3.2",
+   "page": 432,
+   "title": "선형 매질에서의 전파와 수직 입사",
+   "en": "Linear Media & Normal Incidence",
+   "sub": "\\(\\eps\\muz\\to\\epsilon\\mu\\) 치환 하나로 매질을 정복하고, 유리창의 4% 반사를 계산한다"
+  },
+  {
+   "id": "u10",
+   "ch": 9,
+   "secs": "9.3.3",
+   "page": 436,
+   "title": "비스듬한 입사: Snell, Fresnel, Brewster",
+   "en": "Oblique Incidence",
+   "sub": "기하광학 3법칙이 \"지수 맞추기\"만으로 나오고, 나머지 전부는 Fresnel 식이 결정한다",
+   "star": true
+  },
+  {
+   "id": "u11",
+   "ch": 9,
+   "secs": "9.4.1–9.4.2",
+   "page": 442,
+   "title": "도체 속 파동과 도체면 반사",
+   "en": "Waves in Conductors & Reflection at a Conducting Surface",
+   "sub": "파수가 복소수가 되는 순간 — 침투 깊이, 위상 지연, 그리고 금속 거울"
+  },
+  {
+   "id": "u12",
+   "ch": 9,
+   "secs": "9.4.3",
+   "page": 447,
+   "title": "유전율의 진동수 의존성 — 분산",
+   "en": "The Frequency Dependence of Permittivity",
+   "sub": "굴절률이 색에 따라 달라지는 이유를 전자 하나짜리 모형으로 끝까지 밀어붙인다"
+  },
+  {
+   "id": "u13",
+   "ch": 9,
+   "secs": "9.5.1–9.5.2",
+   "page": 454,
+   "title": "도파관과 직사각형 도파관의 TE 모드",
+   "en": "Wave Guides & TE Waves in a Rectangular Wave Guide",
+   "sub": "경계가 파동에게 허락하는 것만 살아남는다 — 이산 모드와 차단 진동수"
+  },
+  {
+   "id": "u14",
+   "ch": 9,
+   "secs": "9.5.3",
+   "page": 460,
+   "title": "동축 전송선",
+   "en": "The Coaxial Transmission Line",
+   "sub": "도체를 하나 더 넣으면 TEM이 살아난다 — 차단 없는 전송"
+  },
+  {
+   "id": "u15",
+   "ch": 10,
+   "secs": "10.1.1–10.1.2",
+   "page": 466,
+   "title": "스칼라·벡터 퍼텐셜과 게이지 변환",
+   "en": "Scalar and Vector Potentials & Gauge Transformations",
+   "sub": "여섯 개의 장 성분을 네 개의 퍼텐셜로 줄이고, 그 대가로 얻은 \"잉여 자유도\"가 바로 게이지다."
+  },
+  {
+   "id": "u16",
+   "ch": 10,
+   "secs": "10.1.3–10.1.4",
+   "page": 470,
+   "title": "Coulomb 게이지와 Lorenz 게이지, 퍼텐셜 형태의 로런츠 힘",
+   "en": "Coulomb and Lorenz Gauges",
+   "sub": "Coulomb 게이지의 \\(V\\)는 달까지 즉시 전달된다 — 그런데도 인과율은 멀쩡하다. 왜?"
+  },
+  {
+   "id": "u17",
+   "ch": 10,
+   "secs": "10.2.1–10.2.2",
+   "page": 474,
+   "title": "지연 퍼텐셜과 Jefimenko 방정식",
+   "en": "Retarded Potentials & Jefimenko's Equations",
+   "sub": "퍼텐셜은 \\(t\\to t_r\\)만 하면 되지만, <b>장</b>에 같은 짓을 하면 완전히 틀린다. 그 차이가 이 절의 전부다."
+  },
+  {
+   "id": "u18",
+   "ch": 10,
+   "secs": "10.3.1",
+   "page": 480,
+   "title": "Liénard–Wiechert 퍼텐셜",
+   "en": "Liénard–Wiechert Potentials",
+   "sub": "점전하인데도 \\(\\displaystyle\\int\\rho(\\vb{r}',t_r)\\dd\\tau'\\neq q\\)다. 다가오는 기차가 실제보다 길어 보이는 것과 똑같은 이유로."
+  },
+  {
+   "id": "u19",
+   "ch": 10,
+   "secs": "10.3.2",
+   "page": 486,
+   "title": "움직이는 점전하의 장",
+   "en": "The Fields of a Moving Point Charge",
+   "sub": "\\(1/\\rr^2\\)의 속도장과 \\(1/\\rr\\)의 가속도장. 후자가 바로 빛이다."
+  },
+  {
+   "id": "u20",
+   "ch": 11,
+   "secs": "11.1.1–11.1.2",
+   "page": 496,
+   "title": "복사란 무엇인가 · 전기 쌍극자 복사",
+   "en": "What Is Radiation? & Electric Dipole Radiation",
+   "sub": "\"무한대까지 살아남는 것은 오직 \\(1/r\\)짜리 장뿐이다\" — 이 한 문장이 11장 전체의 입장권이다.",
+   "star": true
+  },
+  {
+   "id": "u21",
+   "ch": 11,
+   "secs": "11.1.3–11.1.4",
+   "page": 503,
+   "title": "자기 쌍극자 복사와 임의 소스의 복사",
+   "en": "Magnetic Dipole Radiation & Radiation from an Arbitrary Source",
+   "sub": "같은 계산을 전류 고리에 반복하면 \\(c^2\\)가 하나 더 붙고, 그 대가로 복사는 \\((\\omega b/c)^2\\)배로 죽는다."
+  },
+  {
+   "id": "u22",
+   "ch": 11,
+   "secs": "11.2.1–11.2.2",
+   "page": 511,
+   "title": "Larmor 공식과 Liénard 공식",
+   "en": "The Larmor and Liénard Formulas",
+   "sub": "가속도 장만이 복사다. 그리고 \\(v\\to c\\)에서 \\(\\gamma^6\\)가 모든 것을 지배한다."
+  },
+  {
+   "id": "u23",
+   "ch": 11,
+   "secs": "11.3.1–11.3.2",
+   "page": 517,
+   "title": "복사 반작용과 자기력",
+   "en": "Radiation Reaction & the Self-Force",
+   "sub": "에너지 보존이 \\(\\vb{F}_{\\rm rad}=m\\tau\\dot{\\vb{a}}\\)를 요구하고, 그 대가로 폭주해와 선가속이라는 두 마리 괴물이 나온다."
+  },
+  {
+   "id": "u24",
+   "ch": 12,
+   "secs": "12.1.1–12.1.2",
+   "page": 532,
+   "title": "아인슈타인의 공준과 상대성의 기하",
+   "en": "Einstein's Postulates & the Geometry of Relativity",
+   "sub": "공준은 단 두 줄인데, 거기서 동시성·시간·길이가 차례로 무너진다."
+  },
+  {
+   "id": "u25",
+   "ch": 12,
+   "secs": "12.1.3–12.1.4",
+   "page": 548,
+   "title": "Lorentz 변환과 시공간의 구조",
+   "en": "The Lorentz Transformations & the Structure of Space-Time",
+   "sub": "세 개의 사고실험을 하나의 \"사전\"으로 압축하면, 그 사전이 스스로 기하를 드러낸다."
+  },
+  {
+   "id": "u26",
+   "ch": 12,
+   "secs": "12.2.1–12.2.2",
+   "page": 562,
+   "title": "고유시간·고유속도와 상대론적 에너지·운동량",
+   "en": "Proper Time, Proper Velocity, Relativistic Energy and Momentum",
+   "sub": "\"분모를 불변량으로 바꾸라\" — 이 한 줄의 처방이 \\(p=\\gamma m\\vb{u}\\)와 \\(E=\\gamma mc^2\\)를 동시에 낳는다."
+  },
+  {
+   "id": "u27",
+   "ch": 12,
+   "secs": "12.2.3–12.2.4",
+   "page": 566,
+   "title": "상대론적 운동학과 동역학",
+   "en": "Relativistic Kinematics & Dynamics",
+   "sub": "\"4-운동량을 보존시키고, 모르는 쪽을 몰아넣고, 제곱하라\" — 이 세 동작이 모든 충돌·붕괴 문제를 푼다."
+  },
+  {
+   "id": "u28",
+   "ch": 12,
+   "secs": "12.3.1–12.3.2",
+   "page": 578,
+   "title": "상대론적 현상으로서의 자기력과 장의 변환",
+   "en": "Magnetism as a Relativistic Phenomenon & How the Fields Transform",
+   "sub": "자기법칙을 단 한 줄도 쓰지 않고, 정전기학 + 상대성만으로 \\(F=quB\\)를 뽑아낸다.",
+   "star": true
+  },
+  {
+   "id": "u29",
+   "ch": 12,
+   "secs": "12.3.3–12.3.4",
+   "page": 590,
+   "title": "장 텐서와 텐서 표기의 전기동역학",
+   "en": "The Field Tensor & Electrodynamics in Tensor Notation",
+   "sub": "Maxwell 방정식 네 개가 두 줄로, Lorentz 힘이 한 줄로 줄어든다.",
+   "star": true
+  },
+  {
+   "id": "u30",
+   "ch": 12,
+   "secs": "12.3.5",
+   "page": 596,
+   "title": "상대론적 퍼텐셜",
+   "en": "Relativistic Potentials",
+   "sub": "10장 전체가 \\(\\Box^{2}A^{\\mu}=-\\muz J^{\\mu}\\) 한 줄로 접힌다."
+  }
+ ]
+}

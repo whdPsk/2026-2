@@ -1,0 +1,46 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 파동방정식 \(\Psi''=\ddot\Psi/v^2\)의 해로 \(f(x-vt)\)를 넣어 보면, 함수 \(f\)의 모양과 무관하게 해가 되는가? 그렇다면 가장 일반적인 해는 무엇일까? 그리고 끝이 고정된 줄에서 펄스가 반사되면 뒤집힐까? 밀도가 다른 두 줄의 이음매에서는 얼마나 반사될까?</div>
+
+<h4>13.6 파동방정식의 일반해 <span class="en">general solutions — d'Alembert</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>\(\Psi=f(x+vt)+g(x-vt)\) <b>(필수)</b></div>
+<ol>
+<li>새 변수 \(\xi=x+vt\), \(\eta=x-vt\). 연쇄법칙:
+\[ \frac{\partial^2\Psi}{\partial x^2}=\Psi_{\xi\xi}+2\Psi_{\xi\eta}+\Psi_{\eta\eta},\qquad \frac1{v^2}\frac{\partial^2\Psi}{\partial t^2}=\Psi_{\xi\xi}-2\Psi_{\xi\eta}+\Psi_{\eta\eta}. \]</li>
+<li>파동방정식 ⟺ \(\dfrac{\partial^2\Psi}{\partial\xi\,\partial\eta}=0\).</li>
+<li>\(\eta\)로 적분하면 \(\partial\Psi/\partial\xi\)는 \(\xi\)만의 함수 → 다시 적분:
+\[ \boxed{\ \Psi(x,t)=f(x+vt)+g(x-vt)\ } \]
+\(g\): 모양을 유지하며 \(+x\)로 속력 \(v\), \(f\): \(-x\)로. 주기적일 필요 없음.</li>
+<li><b>고정단 반사</b>: \(x=0\)에서 \(\Psi=0\) 항상 → 왼쪽으로 가는 \(f(x+vt)\)에 "거울상" \(-f(-x+vt)\)을 더하면 경계조건 만족. 반사파는 <b>뒤집혀</b> 돌아온다. 양 끝 고정이면 주기 \(2L/v\)로 왕복 — \(\omega_1=\pi v/L\)과 일치.</li>
+</ol></div>
+
+<h4>13.7 변수분리와 정상파 <span class="en">separation of the wave equation</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>\(\Psi=\psi(x)\chi(t)\) → Helmholtz 방정식</div>
+<ol>
+<li>대입 후 나누면 \(\frac{v^2}{\psi}\psi''=\frac1\chi\ddot\chi\) — 좌변은 \(x\)만, 우변은 \(t\)만의 함수 → 둘 다 상수 \(-\omega^2\).</li>
+<li>\(\ddot\chi+\omega^2\chi=0\), \(\psi''+k^2\psi=0\) (Helmholtz, 시간 무관 형 — 교재의 "time-dependent"는 오타표대로 "time-independent"), \(k=\omega/v=2\pi/\lambda\).</li>
+<li>해: \(e^{\pm ikx}e^{\pm i\omega t}\)의 조합. 일반해는 모든 허용된 \(\omega\)에 대한 합 = Fourier 표현이므로 "조화 진동을 가정"한 것은 제약이 아니다.</li>
+<li><b>정상파</b>: 같은 진폭의 반대 방향 진행파의 합 \(Ae^{i(\omega t-kx)}+Ae^{i(\omega t+kx)}\) → 실수부 \(2A\cos kx\cos\omega t\). 마디 위치 고정. 경계조건(\(x=0\) 고정)을 넣으면 \(\sin kx\).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>밀도가 다른 두 줄의 반사·투과 — Example 13.3 <b>(필수)</b></div>
+<ol>
+<li>\(x&lt;0\): 밀도 \(\rho_1\), \(x&gt;0\): \(\rho_2\), 장력 같음. 같은 \(\omega\), 다른 파수 \(k_i=\omega\sqrt{\rho_i/\tau}\).
+\[ \Psi_1=Ae^{i(\omega t-k_1x)}+Be^{i(\omega t+k_1x)},\qquad \Psi_2=Ce^{i(\omega t-k_2x)} . \]</li>
+<li><b>경계조건</b> \(x=0\): ① \(\Psi\) 연속(줄이 끊기지 않음) ② \(\partial\Psi/\partial x\) 연속(꺾이면 \(\Psi''\to\infty\) → 무한 가속도, 또는 질량 없는 이음매에 알짜 힘 0).
+\[ A+B=C,\qquad -k_1A+k_1B=-k_2C . \]</li>
+<li>\[ \boxed{\ \frac BA=\frac{k_1-k_2}{k_1+k_2},\qquad \frac CA=\frac{2k_1}{k_1+k_2}\ } \]
+투과파는 항상 같은 위상. \(\rho_2&gt;\rho_1\)(무거운 쪽으로)이면 \(B/A&lt;0\) — 반사파 뒤집힘(\(\rho_2\to\infty\): 고정단). 가벼운 쪽으로 가면 같은 위상(자유단 극한).</li>
+<li>에너지 비: \(R=\left(\frac{k_1-k_2}{k_1+k_2}\right)^2\), \(T=\frac{k_2}{k_1}\left|\frac CA\right|^2=\frac{4k_1k_2}{(k_1+k_2)^2}\), \(R+T=1\) ✓. (투과 에너지에 \(k_2/k_1\)이 붙는 이유: 에너지 흐름 \(\propto\tau\omega k|A|^2\) — 파수에 비례. 전자기파의 Fresnel 식과 같은 꼴.)</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 일반해, 반사</div>
+\[ \Psi=f(x+vt)+g(x-vt);\quad \psi''+k^2\psi=0,\ k=\omega/v;\quad \frac BA=\frac{k_1-k_2}{k_1+k_2},\ \frac CA=\frac{2k_1}{k_1+k_2},\ R+T=1 \]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u36-1"><div class="qq">(시험형) \(\xi=x+vt\), \(\eta=x-vt\) 치환으로 파동방정식의 일반해를 유도하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 1. 교차항 \(\pm2\Psi_{\xi\eta}\)의 부호가 공간·시간 미분에서 반대인 것이 핵심 — 차가 \(4\Psi_{\xi\eta}=0\).</p></div></div>
+
+<div class="qz" data-q="u36-2"><div class="qq">Example 13.3의 \(B/A\), \(C/A\)를 경계조건으로 유도하고 \(R+T=1\)을 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 3. \(R+T=\frac{(k_1-k_2)^2+4k_1k_2}{(k_1+k_2)^2}=1\) ✓.</p></div></div>
+
+<div class="qz" data-q="u36-3"><div class="qq">줄의 오른쪽 끝이 수직 방향으로 자유롭게 미끄러지는 질량 없는 고리에 연결되어 있다(자유단). 경계조건과 반사파의 부호는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>질량 없는 고리에 알짜 힘 0 → \(\tau\,\partial\Psi/\partial x=0\) (기울기 0). 거울상은 \(+f\) — 반사파가 <b>뒤집히지 않는다</b>. Example 13.3에서 \(\rho_2\to0\) (\(k_2\to0\)): \(B/A\to+1\) ✓.</p></div></div>

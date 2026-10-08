@@ -1,0 +1,12 @@
+<div class="exq"><b>상황.</b> 고유 길이 \(l_0\)인 막대가 \(K\)의 \(x_1\)축에 정지해 있다. \(K'\)(속도 \(v\))의 관측자가 <b>자기 계의 같은 시각 \(t'\)</b>에 양 끝 좌표를 읽어 길이를 잰다. Lorentz 변환으로 길이 수축을 유도하라.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>핵심은 "어느 계에서 동시인가".</div>
+<ol>
+<li>\(x_1'(i)=\gamma[x_1(i)-vt(i)]\) (\(i=1,2\)). 빼면 \(x_1'(2)-x_1'(1)=\gamma\{[x_1(2)-x_1(1)]-v[t(2)-t(1)]\}\).</li>
+<li>\(t(2)\ne t(1)\)이다 — \(K'\)에서 동시인 두 읽기는 \(K\)에서 동시가 아니다. \(t'(2)=t'(1)\)을 \(t'=\gamma(t-vx_1/c^2)\)에 쓰면 \(t(2)-t(1)=\frac v{c^2}[x_1(2)-x_1(1)]=\frac{v}{c^2}l_0\).</li>
+<li>대입: \(l'=\gamma\left(l_0-\frac{v^2}{c^2}l_0\right)=\gamma l_0(1-\beta^2)=\frac{l_0}\gamma\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ l'=l_0\sqrt{1-\beta^2}\ } \]
+<p class="note"><b>검산</b> ① \(\beta\to0\): \(l'=l_0\) ✓. ② 대칭: \(K'\)에 정지한 막대는 \(K\)에서 수축 ✓ (역변환). ③ 수직 방향은 변하지 않음 (\(x_2'=x_2\)). 흔한 실수: \(\Delta t=0\)(K에서 동시)로 두면 \(l'=\gamma l_0\) — 틀린 계에서 동시성을 잡은 것.</p></div>
+<div class="qz" data-q="ex14.1-a"><div class="qq"><b>+α</b> 막대가 자기 정지계에서 \(x\)축과 각 \(\theta_0\)를 이룬다. \(x\)축 방향으로 \(v\)로 움직이는 관측자가 재는 길이와 각은? (문제 14-11)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(l_x=l_0\cos\theta_0/\gamma\), \(l_y=l_0\sin\theta_0\). \(l=l_0\sqrt{\cos^2\theta_0(1-\beta^2)+\sin^2\theta_0}=l_0\sqrt{1-\beta^2\cos^2\theta_0}\), \(\tan\theta=\gamma\tan\theta_0\) — 막대가 수직 쪽으로 더 서 보인다.</p></div></div>
+<div class="qz" data-q="ex14.1-b"><div class="qq"><b>+α</b> 길이 100 m 우주선이 지상에서 99 m로 측정된다. 속력은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\sqrt{1-\beta^2}=0.99\) → \(\beta^2=0.0199\), \(\beta\approx0.141\) (약 \(4.2\times10^7\,\)m/s).</p></div></div>

@@ -1,0 +1,12 @@
+<div class="exq"><span class="examtag">PPT Q4 · 9/3 수업 문제</span><br>Find the relation between the radiation pressure \(P_\nu\) and energy density \(u_\nu\) for isotropic radiation (<b>as in the cosmic microwave radiation</b>).<br>
+(번역) 등방 복사(우주배경복사처럼)에 대해 복사압 \(P_\nu\)와 에너지밀도 \(u_\nu\)의 관계를 구하라. [[L02.s13a]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>정의대로 (수업 중 학생 풀이)</div><ol>
+<li>에너지밀도: 등방이면 \(I_\nu\)가 밖으로 → \(u_\nu=\dfrac1c\displaystyle\int I_\nu d\Omega=\dfrac{4\pi I_\nu}{c}\). [[S0903.33, L02.s3b]]</li>
+<li>복사압: \(P_\nu=\dfrac1c\displaystyle\int I_\nu\cos^2\theta\,d\Omega=\dfrac{2\pi I_\nu}{c}\int_{-1}^{1}\mu^2d\mu=\dfrac{2\pi I_\nu}{c}\cdot\dfrac23=\dfrac{4\pi I_\nu}{3c}\). (φ 적분 2π, \(\mu=\cos\theta\).) [[S0903.33, L02.s6a]]</li>
+<li>둘을 나누면 공통인자 \(4\pi I_\nu/c\)가 소거 → \(P_\nu=\tfrac13u_\nu\). 진동수에 무관하므로 적분해도 \(P=u/3\). [[L02.s13b, S0903.33]]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과 (PPT 답과 대조)</div><p>\(P_\nu=\dfrac13u_\nu\). [[L02.s13b]] 상태방정식 \(P=(\gamma-1)u\)와 비교하면 등방 복사는 \(\gamma=4/3\).</p></div>
+<div class="apply"><b>수업 보충 — 왜 이걸 이야기하나</b> 기체의 상태방정식(에너지와 압력의 관계)을 \(P=(\gamma-1)u\)로 쓰고, γ는 adiabatic index = 비열비(정압 비열/정적 비열). 단원자 이상기체 \(\gamma=5/3\), 이원자 분자 \(7/5\), <span class="hl">등방 복사는 \(\gamma=4/3\)</span> — "논문 보다 보면 radiation의 경우 감마가 4/3이다라는 말이 많이 나와요." 중간고사 이후 기체역학에서 이 관계를 쓴다. [[S0903.33]]</div>
+<div class="trap"><b>STT 의심</b> 녹음 "PU가 3분의 2 이온" — 결론은 P=u/3(2/3은 μ² 적분값). "3분의 1.5분의 7" = 이원자 7/5, "algebraic index/b열 b" = adiabatic index/비열비. [[S0903.33]]</div>
+<div class="qz" data-q="ex1.23-a"><div class="qq"><b>+α</b> CMB(T=2.725 K)의 에너지밀도와 복사압은? (a=7.566×10⁻¹⁵ erg cm⁻³ K⁻⁴)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>u=aT⁴=4.17×10⁻¹³ erg cm⁻³, P=u/3=1.39×10⁻¹³ dyn cm⁻².</p></div></div>
+<div class="qz" data-q="ex1.23-b"><div class="qq"><b>+α</b> 모든 광자가 한 방향(θ=0)으로만 가는 평행 빔이면 P와 u의 관계는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>cos²θ=1이라 u=F/c, P=F/c → P=u (γ=2에 해당). 등방일 때 1/3은 각도 평균 ⟨cos²θ⟩=1/3에서 나온다.</p></div></div>

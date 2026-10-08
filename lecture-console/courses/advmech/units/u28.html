@@ -1,0 +1,46 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 자유도 \(n\)인 보존계가 안정 평형 근처에서 흔들린다. 퍼텐셜을 평형점에서 Taylor 전개하면 1차 항은 왜 사라질까? 운동에너지의 계수 \(m_{jk}(q)\)는 좌표에 의존할 수 있는데, 작은 진동에서는 어디서 평가해야 할까? 그리고 그렇게 얻은 문제가 강체의 주축 문제(U18)와 수학적으로 무엇이 같고 무엇이 다를지 먼저 비교해 보라.</div>
+
+<h4>12.4 결합 진동의 일반 이론 <span class="en">general problem of coupled oscillations</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>작은 진동 근사: \(T=\tfrac12\sum m_{jk}\dot q_j\dot q_k\), \(U=\tfrac12\sum A_{jk}q_jq_k\) <b>(필수)</b></div>
+<ol>
+<li>보존계, 평형 \(q_k=0\) (평형에서 재도록 좌표를 옮김). 평형에서는 모든 \(\dot q,\ddot q=0\)이므로 Lagrange 방정식에서 \(\pd U{q_k}\big|_0=0\).</li>
+<li>변환식이 시간을 명시적으로 포함하지 않으면 \(T=\tfrac12\sum_{jk}m_{jk}(q)\dot q_j\dot q_k\) (속도의 동차 2차식, 7장).</li>
+<li>\(U\) 전개: 상수는 0으로, 1차 항은 1번에 의해 0,
+\[ U\approx\tfrac12\sum_{jk}A_{jk}q_jq_k,\qquad A_{jk}=\frac{\partial^2U}{\partial q_j\partial q_k}\bigg|_0=A_{kj}. \]
+안정 평형 → \(U\)는 양정치(positive definite).</li>
+<li>\(m_{jk}(q)=m_{jk}(0)+\ldots\) — <b>같은 차수</b>를 유지하려면 \(T\)도 속도의 2차까지만: \(m_{jk}\)를 평형에서 평가한 상수로 둔다. (오타표: 교재 식 12.34–12.35의 \(m_{jk}\)는 평형값 \(M_{jk}(q_0)\)과 구별해 써야 한다.)</li>
+<li>따라서 \(\{m\}\), \(\{A\}\)는 대칭인 \(n\times n\) 상수 행렬. \(m_{jk}\ (j\ne k)\ne0\)이면 <b>동적 결합</b>(속도 결합), \(A_{jk}\ne0\)이면 <b>정적 결합</b>.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>영년방정식 \(|A_{jk}-\omega^2m_{jk}|=0\) — 교재 식 (12.36)–(12.44) <b>(필수)</b></div>
+<ol>
+<li>Lagrange 방정식: \(\sum_j(A_{jk}q_j+m_{jk}\ddot q_j)=0\), \(k=1,\ldots,n\).</li>
+<li>\(q_j=a_je^{i(\omega t-\delta)}\) (\(a_j\) 실수):
+\[ \sum_j(A_{jk}-\omega^2m_{jk})a_j=0 . \]</li>
+<li>자명하지 않은 해:
+\[ \boxed{\ \det\left(A_{jk}-\omega^2m_{jk}\right)=0\ } \]
+— \(\omega^2\)에 대한 \(n\)차식. 근 \(\omega_r^2\): <b>고유진동수</b>. 각 \(\omega_r\)마다 비율 \(a_{1r}:a_{2r}:\cdots\) → <b>고유벡터</b> \(\vb a_r\).</li>
+<li>\(\omega\)가 실수인 이유(교재의 물리적 논증): 허수부가 있으면 \(T+U\)가 시간에 따라 단조 증가/감소 — 보존계와 모순. (수학적으로는 \(A,m\)이 실대칭이고 \(m\)이 양정치이기 때문, U20과 같은 증명.)</li>
+<li>일반해: \(q_j(t)=\sum_r\alpha_ra_{jr}\cos(\omega_rt-\delta_r)\) — 모든 모드의 중첩. \(q_j\) 자체는 정규 좌표가 아니다.</li>
+<li><b>주축 문제와의 비교</b>: U18은 \(\det(I-\lambda\mathbb 1)=0\) (\(m\)이 항등 행렬인 경우). 여기서는 "일반화 고유값 문제" \(A\vb a=\omega^2m\vb a\) — \(m\)이 가중치 역할.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>Example 12.1 — 일반 형식으로 두 결합 진동자 재현</div>
+<ol>
+<li>\(U=\tfrac12\kappa x_1^2+\tfrac12\kappa_{12}(x_2-x_1)^2+\tfrac12\kappa x_2^2=\tfrac12(\kappa+\kappa_{12})x_1^2+\tfrac12(\kappa+\kappa_{12})x_2^2-\kappa_{12}x_1x_2\).</li>
+<li>\(A_{11}=A_{22}=\kappa+\kappa_{12}\), \(A_{12}=A_{21}=-\kappa_{12}\) (교차항 \(-\kappa_{12}x_1x_2\)가 \(\tfrac12(A_{12}+A_{21})x_1x_2\)로 나뉨에 주의). \(m=M\mathbb 1\).</li>
+<li>\(|A-\omega^2m|=0\)은 U26의 행렬식과 동일 → 같은 \(\omega_{1,2}\).</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 일반 결합 진동</div>
+\[ T=\tfrac12\dot{\vb q}^{\mathsf T}m\dot{\vb q},\quad U=\tfrac12\vb q^{\mathsf T}A\vb q,\quad A_{jk}=\partial_j\partial_kU|_0,\quad (A-\omega_r^2m)\vb a_r=0,\quad |A-\omega^2m|=0 \]
+<p class="note">절차: ① \(T,U\) 쓰기 → ② \(m,A\) 대칭 행렬 → ③ 영년방정식 → ④ 각 \(\omega_r\)의 고유벡터 비율 → ⑤ 정규 좌표(U29).</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u28-1"><div class="qq">작은 진동 근사에서 \(U\)의 1차 항이 사라지는 이유와 \(m_{jk}\)를 평형에서 평가하는 이유를 각각 한 문장으로.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>평형점에서 일반화 힘 \(-\partial U/\partial q_k=0\)이기 때문(평형의 정의). \(T\)는 이미 속도의 2차이므로 \(m_{jk}(q)\)의 \(q\) 의존성은 3차 이상의 항만 만든다 — \(U\)를 2차까지 자른 것과 같은 차수를 유지하려면 상수만 남긴다.</p></div></div>
+
+<div class="qz" data-q="u28-2"><div class="qq">\(U=\tfrac12\kappa x_1^2+\tfrac12\kappa(x_2-x_1)^2\) (벽–\(m\)–\(m\), 오른쪽 끝 자유), \(T=\tfrac12m(\dot x_1^2+\dot x_2^2)\). 고유진동수를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(A=\kappa\begin{pmatrix}2&-1\-1&1\end{pmatrix}\). \(\lambda=m\omega^2/\kappa\): \((2-\lambda)(1-\lambda)-1=0\) → \(\lambda^2-3\lambda+1=0\) → \(\lambda=\frac{3\mp\sqrt5}{2}\). \(\omega^2=\frac{\kappa}{m}\cdot\frac{3\mp\sqrt5}2\) (≈0.382, 2.618 — 황금비!).</p></div></div>
+
+<div class="qz" data-q="u28-3"><div class="qq">(개념) 이중 진자처럼 \(m_{jk}\)가 비대각인 계에서 "동적 결합"이란 무엇인가? 좌표를 바꿔 없앨 수 있는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>한 좌표의 가속도가 다른 좌표의 방정식에 나타나는 결합(\(m_{12}\ddot q_2\) 항). 정규 좌표로 가면 \(m\)과 \(A\)가 <b>동시에</b> 대각화되므로 둘 다 사라진다(U29). Example 12.5(CO₂)에서는 먼저 좌표 변환으로 동적 결합을 없앤 뒤 푼다.</p></div></div>

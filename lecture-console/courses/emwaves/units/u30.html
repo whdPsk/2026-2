@@ -1,0 +1,180 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 10장에서 \(V\)와 \(\vb{A}\)는 서로 다른 종류의 양처럼 보였다 — 하나는 스칼라, 하나는 벡터. 그런데 둘의 파동방정식은 형태가 똑같았다. 이것이 우연일까? 그리고 Lorenz 게이지 \(\divg\vb{A}=-\frac{1}{c^2}\partial V/\partial t\)는 왜 하필 그 조합이었을까? Coulomb 게이지 \(\divg\vb{A}=0\)은 왜 상대론적으로 나쁜 선택일까?</div>
+
+<h4>12.3.5 상대론적 퍼텐셜 <span class="en">relativistic potentials</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>\(A^{\mu}=(V/c,\ \vb{A})\)가 4-vector임을 확인하기</div>
+<ol>
+<li><b>출발점 (10장).</b>
+\[ \vb{E}=-\nabla V-\frac{\partial\vb{A}}{\partial t},\qquad \vb{B}=\curl\vb{A}. \]</li>
+<li><b>주장.</b> \(V\)와 \(\vb{A}\)는 하나의 4-vector를 이룬다:
+\[ \boxed{\;A^{\mu}=\Big(\frac{V}{c},\ A_x,\ A_y,\ A_z\Big)\;} \]
+(\(V/c\)로 두어야 차원이 맞는다.)</li>
+<li><b>검증 전략.</b> \(A^{\mu}\)로부터 만든 다음 조합이 U29의 \(F^{\mu\nu}\)를 정확히 재현하는지 본다:
+\[ \boxed{\;F^{\mu\nu}=\partial^{\mu}A^{\nu}-\partial^{\nu}A^{\mu}\;} \]
+여기서 미분은 <b>공변 좌표 \(x_\mu\)에 대한 것</b>임에 주의: \(\partial^{\mu}\equiv\partial/\partial x_{\mu}\). 시간 성분에서 부호가 뒤집힌다:
+\[ \partial^{0}=\frac{\partial}{\partial x_0}=-\frac{\partial}{\partial x^{0}}=-\frac{1}{c}\frac{\partial}{\partial t},\qquad \partial^{i}=\frac{\partial}{\partial x^{i}} . \]</li>
+<li><b>\(\mu=0,\nu=1\) 확인.</b>
+\[ F^{01}=\partial^{0}A^{1}-\partial^{1}A^{0} =-\frac{1}{c}\frac{\partial A_x}{\partial t}-\frac{\partial}{\partial x}\Big(\frac{V}{c}\Big) =\frac{1}{c}\Big(-\nabla V-\frac{\partial\vb{A}}{\partial t}\Big)_x=\frac{E_x}{c}\ \ \checkmark \]
+\(\nu=2,3\)도 같은 방식으로 \(E_y/c,\ E_z/c\)를 준다 — 첫 번째 퍼텐셜 관계식 전체를 재현한다.</li>
+<li><b>\(\mu=1,\nu=2\) 확인.</b>
+\[ F^{12}=\partial^{1}A^{2}-\partial^{2}A^{1}=\frac{\partial A_y}{\partial x}-\frac{\partial A_x}{\partial y}=(\curl\vb{A})_z=B_z\ \ \checkmark \]
+\(F^{23}=B_x\), \(F^{31}=B_y\)도 마찬가지 — 두 번째 관계식 전체를 재현한다.</li>
+<li><b>결론.</b> \(F^{\mu\nu}\)가 텐서이고 \(\partial^{\mu}\)가 (반변) 4-vector 연산자이므로, 위 관계를 만족하는 \(A^{\mu}\)는 4-vector여야 한다. <b>\(V\)와 \(\vb{A}\)가 별개의 양이라는 인상은 3차원 언어의 착시</b>였다. 그래서 10장에서 두 파동방정식이 같은 꼴이었던 것이다.</li>
+<li><b>즉각적 응용.</b> 4-vector임을 알았으니 변환 규칙이 공짜다:
+\[ \bar V=\gamma(V-vA_x),\qquad \bar A_x=\gamma\Big(A_x-\frac{v}{c^{2}}V\Big),\qquad \bar A_y=A_y,\ \ \bar A_z=A_z . \]
+정지 전하의 \(V_0=q/4\pi\eps r_0\), \(\vb{A}_0=0\)에서 출발하면, 등속 운동 전하의 퍼텐셜(Liénard–Wiechert)이 계산 두 줄로 나온다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>게이지 자유와 Lorenz 조건 \(\partial_{\mu}A^{\mu}=0\)</div>
+<ol>
+<li><b>퍼텐셜은 유일하지 않다.</b> 임의의 스칼라 함수 \(\lambda(x^{\mu})\)에 대해
+\[ A^{\mu}\ \longrightarrow\ A'^{\mu}=A^{\mu}+\partial^{\mu}\lambda \]
+로 바꿔도 장은 변하지 않는다.</li>
+<li><b>증명.</b>
+\[ F'^{\mu\nu}=\partial^{\mu}(A^{\nu}+\partial^{\nu}\lambda)-\partial^{\nu}(A^{\mu}+\partial^{\mu}\lambda) =F^{\mu\nu}+\big(\partial^{\mu}\partial^{\nu}\lambda-\partial^{\nu}\partial^{\mu}\lambda\big)=F^{\mu\nu}. \]
+편미분의 교환 가능성 때문에 추가항이 정확히 상쇄된다. ∎</li>
+<li><b>3차원 번역.</b> \(\partial^{0}\lambda=-\frac1c\partial\lambda/\partial t\), \(\partial^{i}\lambda=(\nabla\lambda)_i\)이므로 \(A^0=V/c\)에서
+\[ V\ \to\ V-\frac{\partial\lambda}{\partial t},\qquad \vb{A}\ \to\ \vb{A}+\nabla\lambda . \]
+10장에서 손으로 확인했던 게이지 변환이 <b>4차원 한 줄</b>로 압축된다.</li>
+<li><b>왜 이 자유가 필요한가.</b> \(F^{\mu\nu}=\partial^\mu A^\nu-\partial^\nu A^\mu\)를 비동차 Maxwell 방정식에 대입하면
+\[ \partial_{\nu}\big(\partial^{\mu}A^{\nu}-\partial^{\nu}A^{\mu}\big)=\partial^{\mu}\big(\partial_{\nu}A^{\nu}\big)-\Box^{2}A^{\mu}=\muz J^{\mu} \]
+가 되는데, 첫 항 때문에 네 성분이 서로 뒤엉켜 <b>손댈 수 없는 방정식</b>이다.</li>
+<li><b>Lorenz 게이지.</b> 게이지 자유를 써서 다음을 강제한다:
+\[ \boxed{\;\partial_{\mu}A^{\mu}=0\;} \]
+3차원으로 풀어쓰면
+\[ \frac{\partial A^{0}}{\partial x^{0}}+\divg\vb{A}=\frac{1}{c^{2}}\frac{\partial V}{\partial t}+\divg\vb{A}=0 \;\Longleftrightarrow\; \divg\vb{A}=-\frac{1}{c^{2}}\frac{\partial V}{\partial t} \]
+— 10장의 Lorenz 조건 그대로다. <b>왜 하필 그 조합이었는지</b>가 이제 답해졌다: 그것이 4-발산이기 때문이다.</li>
+<li><b>항상 도달 가능한가? (그렇다).</b> 주어진 \(A^{\mu}\)가 \(\partial_\mu A^\mu=f\ne0\)이라 하자. \(A'^{\mu}=A^{\mu}+\partial^{\mu}\lambda\)로 두면
+\[ \partial_{\mu}A'^{\mu}=f+\Box^{2}\lambda . \]
+따라서 \(\Box^{2}\lambda=-f\)를 만족하는 \(\lambda\)를 찾으면 된다. 이는 비동차 파동방정식이고 <b>항상 해가 존재한다</b>(지연 적분으로 구성 가능). 그러므로 Lorenz 게이지는 언제나 잡을 수 있다.</li>
+<li><b>결정적 장점 — 불변성.</b> \(\partial_\mu A^\mu\)는 위·아래 지표가 짝지어진 <b>Lorentz 스칼라</b>다. 한 계에서 0이면 <b>모든 계에서 0</b>이다. 즉 Lorenz 게이지를 한 번 잡으면 계를 바꿔도 유지된다.</li>
+<li><b>잔여 자유.</b> Lorenz 조건을 걸어도 \(\Box^{2}\lambda=0\)인 \(\lambda\)만큼의 자유가 남는다. 이 잔여 게이지 자유가 나중에 전자기파의 편광 자유도를 세는 데 쓰인다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>\(\Box^{2}A^{\mu}=-\muz J^{\mu}\)</div>
+<ol>
+<li><b>출발.</b> 유도 2의 4단계 식
+\[ \partial^{\mu}\big(\partial_{\nu}A^{\nu}\big)-\Box^{2}A^{\mu}=\muz J^{\mu},\qquad \Box^{2}\equiv\partial_{\nu}\partial^{\nu}=\nabla^{2}-\frac{1}{c^{2}}\frac{\partial^{2}}{\partial t^{2}} . \]</li>
+<li><b>Lorenz 조건 적용.</b> \(\partial_\nu A^\nu=0\)이므로 첫 항이 통째로 사라진다:
+\[ \boxed{\;\Box^{2}A^{\mu}=-\muz J^{\mu}\;} \]</li>
+<li><b>성분 확인, \(\mu=0\).</b> \(A^{0}=V/c\), \(J^{0}=c\rho\):
+\[ \Big(\nabla^{2}-\frac{1}{c^{2}}\frac{\partial^{2}}{\partial t^{2}}\Big)\frac{V}{c}=-\muz c\rho \;\Longrightarrow\; \nabla^{2}V-\frac{1}{c^{2}}\frac{\partial^{2}V}{\partial t^{2}}=-\frac{\rho}{\eps} \]
+(\(\muz c^{2}=1/\eps\)). 10장의 \(V\) 파동방정식 ✓</li>
+<li><b>성분 확인, \(\mu=1,2,3\).</b>
+\[ \nabla^{2}\vb{A}-\frac{1}{c^{2}}\frac{\partial^{2}\vb{A}}{\partial t^{2}}=-\muz\vb{J} \]
+10장의 \(\vb{A}\) 파동방정식 ✓</li>
+<li><b>동차 방정식은 어디로 갔나.</b> \(\partial_\nu G^{\mu\nu}=0\)(즉 \(\divg\vb{B}=0\)과 Faraday)은 <b>따로 부과할 필요가 없다</b>. \(F^{\mu\nu}=\partial^\mu A^\nu-\partial^\nu A^\mu\)로 쓰는 순간 순환 항등식
+\[ \partial_{\lambda}F^{\mu\nu}+\partial^{\mu}F^{\nu\lambda}+\partial^{\nu}F^{\lambda\mu}=0 \]
+이 편미분 교환성만으로 <b>항등적으로</b> 성립하기 때문이다. 퍼텐셜을 도입하는 순간 Maxwell 방정식의 절반이 공짜가 된다.</li>
+<li><b>전하 보존은 정합성 조건.</b> \(\Box^{2}A^\mu=-\muz J^\mu\)에 \(\partial_\mu\)를 걸면 \(\Box^{2}(\partial_\mu A^\mu)=-\muz\partial_\mu J^\mu\). 좌변은 Lorenz 조건에 의해 0이므로 \(\partial_\mu J^\mu=0\)이어야 한다. <b>전하가 보존되지 않으면 Lorenz 게이지를 유지할 수 없다</b> — 게이지 대칭과 전하 보존의 깊은 연결(Noether 정리)의 첫 징후다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>10장 전체가 한 줄로 접히는 방식</div>
+<ol>
+<li><b>10장에서 무엇을 했나.</b> (i) 퍼텐셜 도입, (ii) 게이지 선택, (iii) 두 개의 비동차 파동방정식 유도, (iv) 지연 퍼텐셜로 해 구성, (v) 움직이는 점전하의 Liénard–Wiechert 퍼텐셜, (vi) 그로부터 장 계산. 상당한 분량이었다.</li>
+<li><b>지금 그것이 무엇인가.</b> (i)–(iii)이 통째로
+\[ \Box^{2}A^{\mu}=-\muz J^{\mu}\quad\text{(Lorenz 게이지 }\partial_\mu A^\mu=0\text{에서)} \]
+한 줄이다. 스칼라와 벡터를 따로 다룰 이유가 없었다.</li>
+<li><b>지연 해도 한 줄.</b> 위 방정식의 해는
+\[ A^{\mu}(\vb{r},t)=\frac{\muz}{4\pi}\int\frac{J^{\mu}(\vb{r}',t_r)}{\scriptstyle\ell}\,\dd\tau',\qquad t_r=t-\frac{\ell}{c} \]
+(\(\ell=|\vb{r}-\vb{r}'|\)). 10장의 지연 \(V\)와 지연 \(\vb{A}\) 두 식이 하나로 합쳐진다. 지연 시간이 자동으로 나오는 이유도 명백하다 — \(\Box^{2}\)가 파동 연산자이기 때문이다.</li>
+<li><b>Liénard–Wiechert도 한 줄.</b> 점전하가 세계선 \(w^{\mu}(\tau)\)를 따라 움직일 때
+\[ A^{\mu}=-\frac{q}{4\pi\eps c}\,\frac{\eta^{\mu}}{\eta^{\nu}\ell_{\nu}},\qquad \ell^{\mu}\equiv x^{\mu}-w^{\mu}(t_r) \]
+(\(\eta^\mu\)는 지연 시각에서의 4-속도). 10장의 \(V\) 식과 \(\vb{A}\) 식, 그리고 그 안의 \((1-\hat{\boldsymbol\ell}\cdot\vb{v}/c)\)라는 정체불명의 인자가 <b>4-내적 \(\eta^\nu\ell_\nu\) 하나</b>로 정리된다.</li>
+<li><b>구조의 요약.</b> 전기동역학 전체가 세 가지 원리로 환원된다:
+<ul>
+<li><b>게이지 불변성</b>: \(A^{\mu}\to A^{\mu}+\partial^{\mu}\lambda\)로 물리가 안 변한다.</li>
+<li><b>Lorentz 공변성</b>: 모든 식이 4-vector/텐서 방정식이다.</li>
+<li><b>전하 보존</b>: \(\partial_{\mu}J^{\mu}=0\).</li>
+</ul>
+이 셋을 요구하면 \(\Box^{2}A^{\mu}=-\muz J^{\mu}\)가 사실상 강제된다. 20세기 게이지 이론(약전자기 통일, 양자색역학)은 전부 이 틀의 확장이다.</li>
+<li><b>11장(복사)도 여기 걸려 있다.</b> \(J^\mu=0\)인 영역에서 \(\Box^{2}A^{\mu}=0\) — 진공 파동방정식. 전자기파의 존재, 속력 \(c\), 횡파성, 편광 두 개가 모두 이 한 줄과 게이지 조건에서 나온다. <b>전자기파와 광학 과목의 출발점이 정확히 이 식</b>이다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 퍼텐셜 4종 세트</div>
+\[ A^{\mu}=\Big(\frac{V}{c},\ \vb{A}\Big),\qquad F^{\mu\nu}=\partial^{\mu}A^{\nu}-\partial^{\nu}A^{\mu},\qquad A^{\mu}\to A^{\mu}+\partial^{\mu}\lambda \]
+\[ \text{Lorenz 게이지:}\ \ \boxed{\partial_{\mu}A^{\mu}=0} \qquad\Longrightarrow\qquad \boxed{\;\Box^{2}A^{\mu}=-\muz J^{\mu}\;} \]
+<p class="note">\(\Box^{2}=\partial_\nu\partial^\nu=\nabla^{2}-\dfrac{1}{c^{2}}\dfrac{\partial^{2}}{\partial t^{2}}\) (d'Alembertian). 부호 규약 주의: \((+,-,-,-)\) 계량을 쓰는 책은 \(\Box^2\)의 부호가 반대라 \(\Box^{2}A^\mu=+\muz J^\mu\)로 쓴다. 물리는 같다. U29의 규약 경고를 그대로 적용할 것.</p></div>
+
+<div class="formula"><div class="ftitle">암기 — 지연 해와 Liénard–Wiechert</div>
+\[ A^{\mu}(\vb{r},t)=\frac{\muz}{4\pi}\int\frac{J^{\mu}(\vb{r}',t_r)}{|\vb{r}-\vb{r}'|}\,\dd\tau' \]
+\[ \text{점전하: }\ A^{\mu}=-\frac{q}{4\pi\eps c}\frac{\eta^{\mu}}{\eta^{\nu}\ell_{\nu}},\qquad \ell^{\mu}=x^{\mu}-w^{\mu}(t_r) \]
+<p class="note">10장의 결과 전부(지연 퍼텐셜, Liénard–Wiechert, 등속 전하의 장)가 이 두 줄의 성분 전개일 뿐이다. 시험에서 "10장과 12장의 관계를 논하라"가 나오면 이 압축 구조를 설명하는 것이 정답이다.</p></div>
+
+<div class="callout"><b class="head">Coulomb 게이지는 왜 상대론적으로 나쁜가.</b> Coulomb 게이지의 정의 \(\divg\vb{A}=0\)은 순수한 <b>3차원</b> 조건이라 Lorentz 스칼라가 아니다. 한 계에서 성립하도록 맞춰 놓아도, 부스트하면 깨진다. 새 계에서 다시 성립시키려면 <b>계를 바꿀 때마다 추가 게이지 변환을 수행</b>해야 한다. 이런 사정 때문에 Coulomb 게이지에서의 \(A^{\mu}\)는 엄밀히 말해 진짜 4-vector가 아니다. 반면 Lorenz 게이지 \(\partial_\mu A^\mu=0\)은 스칼라 방정식이라 한 번 걸면 모든 계에서 유지된다. 정전기 문제에서는 Coulomb 게이지가 편하지만, <b>상대론·복사·양자장론에서는 Lorenz 게이지</b>가 표준인 이유다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u30-1"><div class="qq">[참/거짓 + 증명] "Coulomb 게이지 조건 \(\divg\vb{A}=0\)은 한 관성계에서 성립하면 모든 관성계에서 성립한다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>거짓.</b></p>
+<p><b>증명 (반례 구성).</b> \(\divg\vb{A}=\partial_i A^{i}\)는 <b>공간 지표만</b> 축약한 것으로, 4차원 스칼라가 아니다. 완전한 4-발산은
+\[ \partial_{\mu}A^{\mu}=\frac{1}{c^{2}}\frac{\partial V}{\partial t}+\divg\vb{A} \]
+이고, 이것만이 불변량이다.</p>
+<p>\(S\)에서 \(\divg\vb{A}=0\)이라 하자. 그러면 \(\partial_\mu A^\mu=\dfrac{1}{c^{2}}\dfrac{\partial V}{\partial t}\)이며, 이 값은 불변이므로 \(\bar S\)에서도 같다:
+\[ \frac{1}{c^{2}}\frac{\partial\bar V}{\partial\bar t}+\bar\nabla\cdot\bar{\vb{A}}=\frac{1}{c^{2}}\frac{\partial V}{\partial t} . \]
+일반적으로 \(\dfrac{\partial\bar V}{\partial\bar t}\ne\dfrac{\partial V}{\partial t}\)이므로 \(\bar\nabla\cdot\bar{\vb{A}}\ne0\)이다. ∎</p>
+<p><b>구체적 반례.</b> 정지한 점전하: \(S_0\)에서 \(V_0=q/4\pi\eps r_0\), \(\vb{A}_0=0\)이므로 \(\divg\vb{A}_0=0\) ✓ (Coulomb 게이지 성립). \(S\)로 부스트하면 \(A^\mu\) 변환에 의해
+\[ \vb{A}=\frac{\vb{v}}{c^{2}}V\ne0 \]
+이고 \(V\)가 위치에 의존하므로 \(\divg\vb{A}=\dfrac{\vb{v}}{c^{2}}\cdot\nabla V\ne0\). Coulomb 게이지가 깨졌다.</p>
+<p><b>Lorenz 게이지는 어떤가.</b> 반대로 참이다. \(\partial_\mu A^\mu\)는 위·아래 지표가 짝지어진 <b>Lorentz 스칼라</b>이므로, 한 계에서 0이면 모든 계에서 0이다. 이것이 상대론적 전기동역학에서 Lorenz 게이지를 쓰는 결정적 이유다.</p>
+<p><b>귀결.</b> Coulomb 게이지에서는 계를 바꿀 때마다 별도의 게이지 변환을 덧붙여야 하므로, 그 게이지에서의 \(A^\mu\)는 "진짜 4-vector"가 아니다. 게이지 조건이 물리를 바꾸지는 않지만, <b>어떤 대칭성이 명백해 보이는가</b>는 바꾼다.</p>
+</div></div>
+
+<div class="qz" data-q="u30-2"><div class="qq">[계산·증명] 임의로 주어진 퍼텐셜 \(A^{\mu}\)에 대해 Lorenz 게이지 조건을 만족시키는 게이지 함수 \(\lambda\)가 항상 존재함을 보여라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>설정.</b> 주어진 \(A^{\mu}\)가 \(\partial_\mu A^\mu=f(x^\nu)\ne0\)이라 하자. 게이지 변환
+\[ A'^{\mu}=A^{\mu}+\partial^{\mu}\lambda \]
+후에 \(\partial_\mu A'^\mu=0\)이 되도록 \(\lambda\)를 고르고 싶다.</p>
+<p><b>조건식.</b>
+\[ \partial_\mu A'^\mu=\partial_\mu A^\mu+\partial_\mu\partial^\mu\lambda=f+\Box^{2}\lambda . \]
+따라서 필요한 조건은
+\[ \boxed{\;\Box^{2}\lambda=-f\;} \]</p>
+<p><b>해의 존재.</b> 이것은 원천 \(f\)를 갖는 <b>비동차 파동방정식</b>이며, 정확히 \(\Box^{2}A^\mu=-\muz J^\mu\)와 같은 형태다. 그 해는 지연 적분으로 명시적으로 구성된다:
+\[ \lambda(\vb{r},t)=\frac{1}{4\pi}\int\frac{f(\vb{r}',t_r)}{|\vb{r}-\vb{r}'|}\,\dd\tau',\qquad t_r=t-\frac{|\vb{r}-\vb{r}'|}{c} . \]
+(적절한 경계조건 아래에서) 항상 존재한다. ∎</p>
+<p><b>따라서.</b> Lorenz 게이지는 <b>일반성을 전혀 잃지 않는</b> 선택이다. 어떤 물리적 상황에서도 잡을 수 있다.</p>
+<p><b>잔여 자유.</b> 조건을 만족한 뒤에도 \(\Box^{2}\lambda'=0\)인 \(\lambda'\)를 더할 자유가 남는다(제차 파동방정식의 해). 이 <b>잔여 게이지 자유</b>가 중요한 이유: \(A^\mu\)는 성분이 4개인데, Lorenz 조건 하나와 잔여 자유 하나가 각각 1개씩 깎아 내어 물리적 자유도는 \(4-1-1=2\)가 된다. 이것이 정확히 <b>전자기파의 편광 상태 두 개</b>다. 광자가 스핀 1인데도 세 가지가 아니라 두 가지 편광만 갖는 이유가 여기 있다 — 전자기파와 광학 과목에서 이 계산을 다시 만나게 된다.</p>
+</div></div>
+
+<div class="qz" data-q="u30-3"><div class="qq">[계산] \(A^{\mu}\)가 4-vector라는 사실만 써서, 등속 \(\vb{v}\)로 움직이는 점전하의 \(V\)와 \(\vb{A}\)의 관계를 구하라. 그 결과를 U28 유도 4와 대조하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>1단계 — 정지계.</b> 전하의 정지계 \(S_0\)에서
+\[ A_0^{\mu}=\Big(\frac{V_0}{c},\ 0,0,0\Big),\qquad V_0=\frac{q}{4\pi\eps r_0}. \]</p>
+<p><b>2단계 — 역변환.</b> \(S\)가 \(S_0\)에 대해 \(-x\)로 움직인다고 보면(즉 전하가 \(S\)에서 \(+x\)로 \(v\)), 4-vector 역변환 규칙:
+\[ A^{0}=\gamma\Big(A_0^{0}+\beta A_0^{1}\Big)=\gamma\frac{V_0}{c},\qquad A^{1}=\gamma\Big(A_0^{1}+\beta A_0^{0}\Big)=\gamma\beta\frac{V_0}{c}. \]</p>
+<p><b>3단계 — 읽어내기.</b>
+\[ V=\gamma V_0,\qquad A_x=\frac{\gamma\beta V_0}{c}=\frac{v}{c^{2}}\big(\gamma V_0\big)=\frac{v}{c^{2}}V . \]
+벡터로:
+\[ \boxed{\;\vb{A}=\frac{\vb{v}}{c^{2}}\,V\;} \]</p>
+<p><b>해석.</b> 등속 운동하는 전하(또는 임의의 등속 전하 분포)에서는 벡터 퍼텐셜이 스칼라 퍼텐셜에 <b>단순 비례</b>한다. 계산 두 줄로 얻었다.</p>
+<p><b>4단계 — 장과의 정합성 확인.</b> \(\vb{B}=\curl\vb{A}=\curl\big(\tfrac{\vb{v}}{c^2}V\big)=-\tfrac{1}{c^{2}}\vb{v}\times\nabla V\). 등속 운동의 경우 \(\vb{E}\approx-\nabla V-\partial\vb{A}/\partial t\)를 정리하면 결국
+\[ \vb{B}=\frac{1}{c^{2}}\big(\vb{v}\times\vb{E}\big) \]
+가 되는데, 이는 U28 유도 4에서 얻은 관계와 <b>정확히 같다</b> ✓</p>
+<p><b>5단계 — Liénard–Wiechert로.</b> \(V=\gamma V_0\)에서 \(r_0\)를 \(S\) 좌표로 바꾸면(U28 유도 4의 좌표 변환)
+\[ V=\frac{q}{4\pi\eps}\frac{1}{R\sqrt{1-(v^{2}/c^{2})\sin^{2}\theta}} \]
+— 10장에서 지연 퍼텐셜로 힘겹게 얻었던 등속 전하의 퍼텐셜이다. <b>"\(A^\mu\)는 4-vector다"라는 한 문장이 10장의 긴 계산을 대체한다.</b></p>
+<p><b>교훈.</b> 상대론의 실용적 위력은 "어려운 문제를 쉬운 계에서 풀고 변환해 오는 것"이다. 정지계에서 Coulomb 법칙 한 줄 → 부스트 → 완성.</p>
+</div></div>
+
+<div class="qz" data-q="u30-4"><div class="qq">[개념·서술] \(\Box^{2}A^{\mu}=-\muz J^{\mu}\) 한 줄이 Maxwell 방정식 4개와 전하 보존을 어떻게 모두 담고 있는지 설명하라. 무엇이 명시적으로 들어 있고, 무엇이 자동으로 따라 나오는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p><b>(1) 자동으로 따라 나오는 것 — 동차 Maxwell 방정식 둘.</b></p>
+<p>\(\divg\vb{B}=0\)과 \(\curl\vb{E}=-\partial\vb{B}/\partial t\)는 <b>퍼텐셜을 도입하는 순간</b> 공짜다. \(F^{\mu\nu}=\partial^{\mu}A^{\nu}-\partial^{\nu}A^{\mu}\)로 정의하면 순환 항등식
+\[ \partial_{\lambda}F^{\mu\nu}+\partial^{\mu}F^{\nu\lambda}+\partial^{\nu}F^{\lambda\mu}=0 \]
+이 편미분의 교환 가능성만으로 항등적으로 성립하며, 이것이 곧 \(\partial_\nu G^{\mu\nu}=0\)이다. 3차원 언어로는 "\(\curl\)의 \(\divg\)는 0", "\(\nabla\)의 \(\curl\)은 0"이라는 익숙한 항등식이다. <b>퍼텐셜로 쓸 수 있다는 사실 자체가 Maxwell 방정식 절반과 동치</b>다.</p>
+<p><b>(2) 명시적으로 담긴 것 — 비동차 Maxwell 방정식 둘.</b></p>
+<p>\(\mu=0\) 성분이 Gauss 법칙(의 퍼텐셜 판)이고, \(\mu=1,2,3\) 성분이 Ampère–Maxwell 법칙(의 퍼텐셜 판)이다. 정확히는 \(\partial_\nu F^{\mu\nu}=\muz J^\mu\)에 Lorenz 조건을 결합한 형태다.</p>
+<p><b>(3) 정합성 조건으로 들어 있는 것 — 전하 보존.</b></p>
+<p>양변에 \(\partial_\mu\)를 걸면
+\[ \Box^{2}\big(\partial_{\mu}A^{\mu}\big)=-\muz\,\partial_{\mu}J^{\mu}. \]
+Lorenz 게이지에서 좌변은 0이므로 \(\partial_\mu J^\mu=0\)이 <b>필수</b>다. 즉 전하가 보존되지 않는 원천을 넣으면 방정식이 게이지 조건과 충돌해 해가 존재하지 않는다.</p>
+<p><b>(4) 함께 명시해야 하는 것 — 게이지 조건.</b></p>
+<p>\(\Box^{2}A^{\mu}=-\muz J^{\mu}\)는 <b>\(\partial_\mu A^\mu=0\)과 짝을 이루어야만</b> Maxwell 방정식과 동치다. 게이지 조건 없이 이 식만 쓰면 물리적으로 다른 이론이 된다. 시험 답안에서 게이지 조건을 빠뜨리면 감점된다.</p>
+<p><b>구조 요약표.</b></p>
+<ul>
+<li>퍼텐셜 존재 (\(F=\partial A-\partial A\)) ⟹ 동차 방정식 2개 (자동)</li>
+<li>\(\Box^{2}A^{\mu}=-\muz J^{\mu}\) + Lorenz ⟺ 비동차 방정식 2개</li>
+<li>위 둘의 정합성 ⟹ 전하 보존 (자동)</li>
+<li>게이지 자유 \(A^\mu\to A^\mu+\partial^\mu\lambda\) ⟹ 물리적 자유도 2개 = 편광 2개</li>
+</ul>
+<p><b>마지막 한 문장.</b> 전기동역학은 "전하 보존 원천에 결합한, 게이지 불변한 4-vector 장의 파동방정식"이다. 이 문장 하나가 1–11장 전체다.</p>
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> \(A^\mu=(V/c,\vb{A})\)에서 출발해 \(F^{\mu\nu}=\partial^\mu A^\nu-\partial^\nu A^\mu\)를 검증하고, 게이지 자유 → Lorenz 조건 → \(\Box^{2}A^\mu=-\muz J^\mu\)까지 한 호흡에 유도하며, 10장 전체가 여기 어떻게 담기는지 설명할 수 있다.</div>

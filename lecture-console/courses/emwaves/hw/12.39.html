@@ -1,0 +1,21 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>계량 부호는 \((-,+,+,+)\), 고유속도 \(\eta^{\mu}=\gamma(c,\vb{u})\), \(\dd t/\dd\tau=\gamma\).</p>
+
+<p><b>(a)</b> \(\dd\gamma/\dd t=\gamma^{3}(\vb{u}\cdot\vb{a})/c^{2}\)를 쓰면</p>
+\[ \alpha^{0}=\gamma\frac{\dd(\gamma c)}{\dd t}=\gamma c\cdot\gamma^{3}\frac{\vb{u}\cdot\vb{a}}{c^{2}}=\boxed{\ \frac{\gamma^{4}(\vb{u}\cdot\vb{a})}{c}\ } \]
+\[ \boldsymbol{\alpha}=\gamma\frac{\dd(\gamma\vb{u})}{\dd t}=\boxed{\ \gamma^{2}\vb{a}+\gamma^{4}\frac{\vb{u}(\vb{u}\cdot\vb{a})}{c^{2}}\vphantom{\frac{a}{b}}\ } \]
+
+<p><b>(b)</b> \(g\equiv\gamma^{4}(\vb{u}\cdot\vb{a})/c^{2}\)로 두면 \(\alpha^{0}=cg\), \(\boldsymbol\alpha=\gamma^{2}\vb{a}+g\vb{u}\). 그러면</p>
+\[ \alpha^{\mu}\alpha_{\mu}=-(\alpha^{0})^{2}+\boldsymbol\alpha\cdot\boldsymbol\alpha=-c^{2}g^{2}+\gamma^{4}a^{2}+2\gamma^{2}g(\vb{u}\cdot\vb{a})+g^{2}u^{2}. \]
+<p>\(u^{2}-c^{2}=-c^{2}/\gamma^{2}\)이므로</p>
+\[ =\gamma^{4}a^{2}+2\gamma^{6}\frac{(\vb{u}\cdot\vb{a})^{2}}{c^{2}}-\gamma^{6}\frac{(\vb{u}\cdot\vb{a})^{2}}{c^{2}}=\boxed{\ \gamma^{4}\Big[a^{2}+\gamma^{2}\frac{(\vb{u}\cdot\vb{a})^{2}}{c^{2}}\Big]\ } \]
+<p>부호가 양이다 — \(\alpha^{\mu}\)는 항상 <b>공간꼴(spacelike)</b>이며, 순간정지계에서 \(\alpha^{\mu}=(0,\vb{a}_0)\)이므로 이 불변량은 고유가속도의 제곱 \(a_0^{2}\)이다.</p>
+
+<p><b>(c)</b> \(\eta^{\mu}\eta_{\mu}=-c^{2}\)은 <b>상수</b>이다. \(\tau\)로 미분하면 \(2\eta^{\mu}\alpha_{\mu}=0\), 즉 \(\boxed{\eta^{\mu}\alpha_{\mu}=0}\). (4-속도와 4-가속도는 Minkowski 의미에서 직교.)</p>
+
+<p><b>(d)</b> \(K^{\mu}=\dd p^{\mu}/\dd\tau=m\,\dd\eta^{\mu}/\dd\tau\)이므로</p>
+\[ \boxed{\ K^{\mu}=m\alpha^{\mu}\ },\qquad K^{\mu}\eta_{\mu}=m\,\alpha^{\mu}\eta_{\mu}=\boxed{\,0\,} \]
+<p>이 조건은 "질량이 일정하면 4-힘은 4-속도와 직교한다"는 뜻이며, 4개 성분 중 하나만 독립적이지 않음을 말한다(에너지 방정식은 운동량 방정식에 종속).</p>
+<div class="alabel">감점 포인트</div>
+\(\alpha^{\mu}\alpha_{\mu}\)를 계산하며 \(-(\alpha^0)^2\)의 마이너스를 빠뜨리는 것(그러면 불변량이 아니게 된다).</div><!--/sol-->

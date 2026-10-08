@@ -1,0 +1,15 @@
+<div class="exq"><b>상황.</b> U26의 계에서 \(\kappa_{12}=\kappa\)로 두고, 5단계 절차로 고유진동수·고유벡터·정규 좌표를 구한다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>절차 ①–⑤.</div>
+<ol>
+<li>① \(T,U\): Example 12.1. ② \(A=\kappa\begin{pmatrix}2&-1\-1&2\end{pmatrix}\), \(m=M\mathbb 1\).</li>
+<li>③ \(\omega_1=\sqrt{3\kappa/M}\), \(\omega_2=\sqrt{\kappa/M}\).</li>
+<li>④ \(r=1\): \((2\kappa-3\kappa)a_{11}-\kappa a_{21}=0\) → \(a_{11}=-a_{21}\). \(r=2\): \((2\kappa-\kappa)a_{12}-\kappa a_{22}=0\) → \(a_{12}=a_{22}\). 정규화: \(a_{11}=-a_{21}=a_{12}=a_{22}=\frac1{\sqrt{2M}}\).</li>
+<li>⑤ \(x_1=a_{11}\eta_1+a_{12}\eta_2\), \(x_2=-a_{11}\eta_1+a_{12}\eta_2\) → \(\eta_1=\frac{x_1-x_2}{2a_{11}}\), \(\eta_2=\frac{x_1+x_2}{2a_{12}}\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+<div class="tblwrap"><table><tr><th>모드</th><th>진동수</th><th>입자 운동</th></tr>
+<tr><td>1</td><td>\(\sqrt{3\kappa/M}\)</td><td>반대 위상, 속도 같은 크기 반대 방향</td></tr>
+<tr><td>2</td><td>\(\sqrt{\kappa/M}\)</td><td>같은 위상 — 가운데 용수철이 강체 막대처럼</td></tr></table></div>
+<p class="note">정규 좌표는 \(\eta_1\propto x_1-x_2\), \(\eta_2\propto x_1+x_2\) — U26 유도 2와 같다 ✓.</p></div>
+<div class="qz" data-q="ex12.3-a"><div class="qq"><b>+α</b> 초기에 \(x_1(0)=D\), \(x_2(0)=0\), 속도 0. \(\eta_1(t)\), \(\eta_2(t)\)와 \(x_1(t)\)를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\eta_r=\sqrt{M/2}(x_1\mp x_2)\): \(\eta_1(0)=\eta_2(0)=\sqrt{M/2}D\) → \(\eta_r=\sqrt{M/2}D\cos\omega_rt\). \(x_1=\frac1{\sqrt{2M}}(\eta_1+\eta_2)=\tfrac D2(\cos\sqrt3\omega_2t+\cos\omega_2t)\) — 진동수 비 \(\sqrt3\)는 무리수라 \(x_1\)은 주기적이지 않다.</p></div></div>
+<div class="qz" data-q="ex12.3-b"><div class="qq"><b>+α</b> 질점 3개(질량 \(M\), 모든 용수철 \(\kappa\), 양 끝 벽)의 진동수를 구하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(A=\kappa\begin{pmatrix}2&-1&0\-1&2&-1\0&-1&2\end{pmatrix}\). U32 공식(\(\tau/d\to\kappa\), \(n=3\)): \(\omega_r=2\sqrt{\kappa/M}\sin(r\pi/8)\) → \(0.765,\ 1.414,\ 1.848\sqrt{\kappa/M}\). 가운데(\(r=2\), \(\sqrt{2\kappa/M}\))가 결합 없는 진동수 — "홀수 개면 하나는 가운데"(교재 그림 12-3b).</p></div></div>

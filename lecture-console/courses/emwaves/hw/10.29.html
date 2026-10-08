@@ -1,0 +1,14 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+(a) \(q_1\)은 정지 → 순수 Coulomb 장, \(\vb{B}_1=0\).
+\[ \boxed{\vb{F}_2=\frac{q_1q_2}{4\pi\eps\,(b^2+c^2t^2)}\hat{\vb{x}}} \]
+(b) \[ I_2=\frac{q_1q_2}{4\pi\eps}\int_{-\infty}^{\infty}\frac{dt}{b^2+c^2t^2}=\frac{q_1q_2}{4\pi\eps}\cdot\frac{\pi}{bc}=\boxed{\frac{q_1q_2}{4\eps bc}} \]
+(c) Prob. 10.18에 의해 원점은 \(t&gt;0\)에서만 \(q_2\)를 본다 → \(t&lt;0\)이면 \(\vb{F}_1=0\).
+\(t&gt;0\)에서 지연시간: \(\sqrt{b^2+c^2t_r^2}=c(t-t_r)\) → \(t_r=\dfrac{c^2t^2-b^2}{2c^2t}\), \(\rr=\dfrac{c^2t^2+b^2}{2ct}\),
+\[ v(t_r)=\frac{c^2t_r}{\rr}=c\,\frac{c^2t^2-b^2}{c^2t^2+b^2}\ \Longrightarrow\ \frac{c-v}{c+v}=\frac{b^2}{c^2t^2}. \]
+Prob. 10.21(a)의 "왼쪽" 공식 \(E=\dfrac{q_2}{4\pi\eps\rr^2}\dfrac{c-v}{c+v}\) (방향 \(-\hat{\vb{x}}\))에 대입:
+\[ \boxed{\vb{F}_1=-\frac{q_1q_2}{4\pi\eps}\frac{4b^2}{(b^2+c^2t^2)^2}\hat{\vb{x}}\ \ (t&gt;0),\qquad \vb{F}_1=0\ (t&lt;0)} \]
+(d) \[ I_1=-\frac{q_1q_2b^2}{\pi\eps}\int_0^\infty\frac{dt}{(b^2+c^2t^2)^2}=-\frac{q_1q_2b^2}{\pi\eps}\cdot\frac{\pi}{4cb^3}=\boxed{-\frac{q_1q_2}{4\eps bc}=-I_2} \]
+<b>물리:</b> 매 순간 Newton 제3법칙은 <b>깨진다</b>(\(\vb{F}_1\ne-\vb{F}_2\)). 그러나 시간 전체에 걸친 <b>총 충격량은 정확히 상쇄</b>된다 — 장이 잠시 운동량을 빌렸다가 돌려준 것.
+<div class="alabel">감점 포인트</div>
+\(t&lt;0\)에서 \(\vb{F}_1=0\)임(지평선!)을 놓치고 \(-\infty\)부터 적분하면 답이 두 배가 된다.</div><!--/sol-->

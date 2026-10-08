@@ -1,0 +1,18 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+도선은 중성(\(\rho=0\))이고 \(I(t)=I_0\theta(t)\Rightarrow \dot I(t)=I_0\delta(t)\). 선전류 치환 \(\vb{J}d\tau'\to I\,d\vb{l}'\).
+
+<b>전기장</b> (Eq. 10.36, 첫 두 항 소멸):
+\[ \vb{E}=-\frac{\muz}{4\pi}\int\frac{\dot I(t_r)}{\rr}dz'\,\hat{\vb{z}}
+=-\frac{\muz I_0}{4\pi}\hat{\vb{z}}\int_{-\infty}^{\infty}\frac{\delta(t-\sqrt{s^2+z^2}/c)}{\sqrt{s^2+z^2}}dz . \]
+\(u=\sqrt{s^2+z^2}\) 치환: \(\int\to 2\int_s^\infty\frac{\delta(t-u/c)}{\sqrt{u^2-s^2}}du=\dfrac{2c}{\sqrt{c^2t^2-s^2}}\).
+\[ \boxed{\vb{E}=-\frac{\muz I_0c}{2\pi\sqrt{(ct)^2-s^2}}\hat{\vb{z}}}\ \ \text{✓ Ex. 10.2와 일치} \]
+
+<b>자기장</b> (Eq. 10.38), \(\hat{\vb{z}}\times\rhat=(s/\rr)\hat{\boldsymbol\varphi}\):
+\[ B_\varphi=\frac{\muz}{4\pi}\int\left[\frac{I(t_r)}{\rr^2}+\frac{\dot I(t_r)}{c\rr}\right]\frac{s}{\rr}dz . \]
+첫 항: \(|z|\le Z\equiv\sqrt{c^2t^2-s^2}\)만 기여, \(\int_{-Z}^{Z}\frac{s\,dz}{(s^2+z^2)^{3/2}}=\frac{2Z}{s\,ct}\) → \(\dfrac{\muz I_0 Z}{2\pi s\,ct}\).
+둘째 항: 델타함수 → \(\dfrac{\muz I_0 s}{2\pi ct\,Z}\).
+\[ B_\varphi=\frac{\muz I_0}{2\pi ct}\cdot\frac{Z^2+s^2}{sZ}=\frac{\muz I_0}{2\pi ct}\cdot\frac{c^2t^2}{sZ}
+\ \Longrightarrow\ \boxed{\vb{B}=\frac{\muz I_0}{2\pi s}\frac{ct}{\sqrt{(ct)^2-s^2}}\hat{\boldsymbol\varphi}} \]
+<div class="alabel">감점 포인트</div>
+\(\dot I\)의 델타함수 기여(둘째 항)를 빠뜨리면 \(\vb{B}\)가 틀린다 — "정상전류니까 \(\dot I=0\)"이 아니라 켜지는 순간의 \(\delta\)가 살아 있다.</div><!--/sol-->

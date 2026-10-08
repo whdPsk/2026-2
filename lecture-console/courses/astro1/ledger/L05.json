@@ -1,0 +1,118 @@
+[
+ {
+  "id": "L05.s1",
+  "loc": "슬라이드 1",
+  "raw": "EM Waves — Introduction to Astrophysics I, 2026 Fall, Woong-Tae Kim",
+  "note": "",
+  "skip": "표지"
+ },
+ {
+  "id": "L05.s2",
+  "loc": "슬라이드 2",
+  "raw": "Questions? • Feel free to ask any questions you had while watching the flipped-learning animations.",
+  "note": "",
+  "skip": "질문 안내(내용 없음)"
+ },
+ {
+  "id": "L05.s3a",
+  "loc": "슬라이드 3 ①",
+  "raw": "Review Questions • For the EM waves with E'_x = ε₀ cos β cos(kz − ωt), E'_y = ε₀ sin β sin(kz − ωt), discuss how the polarization of the waves changes as |β| ≤ π/2 varies.",
+  "note": "원문 텍스트 추출은 수식이 빠짐 → 이미지로 확정"
+ },
+ {
+  "id": "L05.s3b",
+  "loc": "슬라이드 3 ②",
+  "raw": "Review Questions • What are the four Stokes parameters, and what is the physical meaning of each?",
+  "note": ""
+ },
+ {
+  "id": "L05.s3c",
+  "loc": "슬라이드 3 ③",
+  "raw": "Review Questions • What is the Lorentz gauge? Why do we use the Lorentz gauge?",
+  "note": "PPT 표기 'Lorentz gauge'(표준 명칭은 Lorenz gauge)"
+ },
+ {
+  "id": "L05.s3d",
+  "loc": "슬라이드 3 ④",
+  "raw": "Review Questions • What is the retarded time?",
+  "note": ""
+ },
+ {
+  "id": "L05.s3e",
+  "loc": "슬라이드 3 ⑤",
+  "raw": "Review Questions • What is the retarded potential?",
+  "note": ""
+ },
+ {
+  "id": "L05.s4",
+  "loc": "슬라이드 4",
+  "raw": "Energy Conservation • The energy equation in vacuum: ∂u/∂t + ∇·S = 0  —[E = E₀e^{i(k·x−ωt)}]→  ωu − k·S = 0 • The energy density u is given by u = (1/8π)(E² + B²) = E²/4π, with the time average ⟨u⟩ = ⟨E²/4π⟩ = (E₀²/4π)⟨cos²(kz − ωt)⟩ = E₀²/8π = B₀²/8π • Poynting flux: S = (c/4π) E×B = (cE²/4π) k̂ = S k̂;  ⟨S⟩ = ⟨cE²/4π⟩ = (cE₀²/4π)⟨cos²(kz − ωt)⟩ = cE₀²/8π • These give ⟨S⟩ = c⟨u⟩. – That is, the velocity of energy flow is c.",
+  "note": ""
+ },
+ {
+  "id": "L05.s5",
+  "loc": "슬라이드 5",
+  "raw": "Radiation Spectrum • The spectrum of radiation depends on the time variation of the electric field. – We can ignore the magnetic field, since it mimics the electric field. – Knowing only the electric field at one point, one cannot give a meaning to the spectrum of radiation at a precise instant. [그림: 왼쪽 — 'Light electric field' vs 'Time' 일정한 사인파, 'Monochromatic waves have only one frequency ν₀.' / 오른쪽 — 무지개색 배경 위에서 진동이 점점 빨라지는 파형(chirp), 'This wave has many frequencies. The frequency increases in time'] • Fourier transform of the (square of) electric fields gives a spectrum. • If we record the radiation field for time Δt, we can only define the spectrum to within a frequency resolution Δν, where ΔνΔt ≥ 1. – If one observes signals over T, the width of the finest features in the spectrum is Δν ~ 1/T.",
+  "note": ""
+ },
+ {
+  "id": "L05.s6",
+  "loc": "슬라이드 6",
+  "raw": "Fourier Transform • We can express the time varying electric field E(t) in terms of a Fourier transform: Ê(ν) = ∫_{−∞}^{+∞} E(t) e^{i2πνt} dt,  E(t) = ∫_{−∞}^{+∞} Ê(ν) e^{−i2πνt} dν – All the information about the frequency behavior of E(t) is contained in Ê(ν). • For real E(t), Ê(−ν) = ∫_{−∞}^{+∞} E(t) e^{−i2πνt} dt = Ê*(ν) – The negative frequencies can be eliminated. • Parseval theorem: ∫_{−∞}^{+∞} E²(t) dt = ∫_{−∞}^{+∞} |Ê(ν)|² dν – Total energy in the real space is the same as in the Fourier space.",
+  "note": ""
+ },
+ {
+  "id": "L05.s7",
+  "loc": "슬라이드 7",
+  "raw": "Fourier Transform [그림: 시간 영역 E(t) ↔ 주파수 영역 |Ê(ν)|² 세 쌍 — ① 가우스 함수(넓은 가우스) ↔ 좁은 가우스; ② 유한한 사인 함수(−1<t<1 구간만 진동) ↔ ν≈2 근처 봉우리(양옆 작은 물결); ③ 감쇄 조화진동자(급히 켜지고 지수적으로 감쇠) ↔ ν≈5에 매우 좁은 봉우리] • Sharp features ↔ ringing • Narrow feature in time domain ↔ broad spectrum • Broad feature in time domain ↔ narrow spectrum",
+  "note": ""
+ },
+ {
+  "id": "L05.s8",
+  "loc": "슬라이드 8",
+  "raw": "Energy Spectrum • Energy per unit time per unit area (= Poynting vector = Power/area): S = (c/4π) E×B = (c/4π) E² k̂  ⇒  dP/dA = dW/(dt dA) = (c/4π) E²(t) ⇒ dW/dA = (c/4π)∫_{−∞}^{+∞} E²(t) dt = (c/4π)∫_{−∞}^{+∞} |Ê(ν)|² dν = (c/2π)∫_{0}^{+∞} |Ê(ν)|² dν ⇒ [박스] dW/(dA dν) = (c/2π)|Ê(ν)|² = the energy per unit area per unit frequency • Since dA = r²dΩ, the energy per unit solid angle per unit frequency is given by dW/(dΩ dν) = c r²|Ê(ν)|²/2π • In terms of the angular frequency ω (= 2πν), Ê(ν) = 2πÊ(ω), so that dW/(dΩ dω) = c r²|Ê(ω)|²",
+  "note": ""
+ },
+ {
+  "id": "L05.s9",
+  "loc": "슬라이드 9",
+  "raw": "Definitions of the Stokes Parameters: I = ⟨|E_x|²⟩ + ⟨|E_y|²⟩, Q = ⟨|E_x|²⟩ − ⟨|E_y|²⟩, U = 2 Re⟨E_x E_y*⟩, V = −2 Im⟨E_x E_y*⟩  —[E_x = ε₁e^{iφ₁}e^{i(kz−ωt)}, E_y = ε₂e^{iφ₂}e^{i(kz−ωt)}]→  I = ε₁² + ε₂², Q = ε₁² − ε₂², U = 2ε₁ε₂ cos φ, V = −2ε₁ε₂ sin φ, with φ ≡ φ₁ − φ₂ [그림: 하늘 좌표 — x축 위쪽 '북', y축 왼쪽 '동'; 세로선 +Q, 가로선 −Q, 왼쪽 위 대각선 +U, 왼쪽 아래 대각선 −U] • I = I_{0°} + I_{90°}: Total brightness of the wave, independent of polarization. • Q = I_{0°} − I_{90°}: Difference in intensity between horizontal and vertical linear polarizations • U = I_{45°} − I_{−45°}: Difference in intensity between polarization at ±45° • V = I_RCP − I_LCP: Difference in intensity between right- and left-circular polarizations – V > 0: for RCP and V < 0 for LCP",
+  "note": ""
+ },
+ {
+  "id": "L05.s10",
+  "loc": "슬라이드 10",
+  "raw": "Measurements of Stokes Parameters • Define I_{0°} ≡ 2⟨E_x²⟩ = 2ε₁²⟨cos²(ωt − φ₁)⟩ = ε₁²;  I_{90°} ≡ 2⟨E_y²⟩ = ε₂²  [박스: E_x = ε₁cos(kz − ωt + φ₁), E_y = ε₂cos(kz − ωt + φ₂)];  I_{45°} ≡ 2⟨((E_x + E_y)/√2)²⟩ = ½(ε₁² + ε₂²) + 2ε₁ε₂⟨cos(ωt − φ₁)cos(ωt − φ₂)⟩ = ½(ε₁² + ε₂² + 2ε₁ε₂ cos φ), where 2cos(ωt − φ₁)cos(ωt − φ₂) = cos(φ₂ − φ₁) + cos(2ωt − φ₁ − φ₂) is used.  I_{135°} ≡ 2⟨((−E_x + E_y)/√2)²⟩ = ½(ε₁² + ε₂² − 2ε₁ε₂ cos φ) • Then, I, Q, and U can be obtained by I = I_{0°} + I_{90°} = ⇕ + ⇔;  Q = I_{0°} − I_{90°} = ⇕ − ⇔;  U = I_{45°} − I_{135°} = ⤡(↖↘) − ⤢(↙↗) [그림: 편광필터 투과축 화살표]",
+  "note": ""
+ },
+ {
+  "id": "L05.s11",
+  "loc": "슬라이드 11",
+  "raw": "Quasi-monochromatic Waves • The monochromatic waves just treated are said to be completely or 100% polarized, since the electric vector displays a simple, nonrandom directional behavior in time. • In practice we never see a single monochromatic component but rather a superposition of many components, each with its own polarization. • For quasi-monochromatic waves with bandwidth Δω ≪ ω, we define I ≡ ⟨E_{x0}E_{x0}*⟩ + ⟨E_{y0}E_{y0}*⟩ = ⟨ε₁² + ε₂²⟩, Q ≡ ⟨E_{x0}E_{x0}*⟩ − ⟨E_{y0}E_{y0}*⟩ = ⟨ε₁² − ε₂²⟩, U ≡ ⟨E_{x0}E_{y0}*⟩ + ⟨E_{y0}E_{x0}*⟩ = 2⟨ε₁ε₂ cos φ⟩, V ≡ i(⟨E_{x0}E_{y0}*⟩ − ⟨E_{y0}E_{x0}*⟩) = −2⟨ε₁ε₂ sin φ⟩ • Using the Schwartz inequality, ⟨E_{x0}E_{x0}*⟩⟨E_{y0}E_{y0}*⟩ ≥ ⟨E_{x0}E_{y0}*⟩⟨E_{y0}E_{x0}*⟩, one can show I² ≥ Q² + U² + V².",
+  "note": ""
+ },
+ {
+  "id": "L05.s12",
+  "loc": "슬라이드 12",
+  "raw": "Degree of Polarization • In general, EM waves are partially polarized: (I, Q, U, V)ᵀ = (I − √(Q²+U²+V²), 0, 0, 0)ᵀ [completely unpolarized component] + (√(Q²+U²+V²), Q, U, V)ᵀ [completely (elliptically) polarized component] • Degree of Polarization: Π ≡ I_pol/I = √(Q²+U²+V²)/I • For partially linearly polarized waves (V = 0), – The maximum intensity, I_max, will occur when the filter is aligned with the plane of polarization. – Unpolarized light has equal intensity in every direction. On average, only half of it passes through any linear polarizer. • I_max = 0.5 I_unpol + I_pol • I_min = 0.5 I_unpol  ⇒  Π = I_pol/I = I_pol/(I_pol + I_unpol) = (I_max − I_min)/(I_max + I_min)",
+  "note": ""
+ },
+ {
+  "id": "L05.s13",
+  "loc": "슬라이드 13",
+  "raw": "Polarization by Dust • Aligned, non-spherical dust grains – Interstellar dust grains are generally non-spherical. – Their short axes tend to align with the magnetic field B. – The absorption and emission efficiencies depend on the direction of the electric field E relative to the grain axes. [그림: 길쭉한 타원 먼지 알갱이, 짧은 축 방향으로 화살표] • Polarization by Dust Extinction – A dust grain absorbs light more efficiently when E ∥ long axis. – The transmitted light is therefore polarized along the short axis of the grains. – Since the short axes tend to align with the magnetic field, E_extinction ∥ B. [그림: 'Background Star Emits Unpolarized Radiation' → 세로 자기장 B 선들 사이에 'Most Likely Grain Orientation'(장축 ⊥ B)으로 놓인 먼지들 → 'Polarized Light Transmitted', 관측자 쪽 E가 B와 평행]",
+  "note": ""
+ },
+ {
+  "id": "L05.s14",
+  "loc": "슬라이드 14",
+  "raw": "Polarization of Starlight • Due to extinction by dust grains aligned in the presence of a magnetic field. – Degree of polarization is of the order of 1.5%. [그림: 은하 좌표(galactic longitude 180→0→180, latitude −50~50) 위 별빛 편광 벡터 지도(축척 막대 5%); 대부분 은하면에 나란한 막대, Ophiuchus·Taurus·Perseus·CrA·Orion 표시]",
+  "note": ""
+ },
+ {
+  "id": "L05.s15",
+  "loc": "슬라이드 15",
+  "raw": "Polarization by Thermal Dust Emission • By Kirchhoff's law, the direction with stronger absorption also has stronger thermal emission. – Dust grains emit more strongly with E ∥ long axis. – This leads to E_emission ⊥ B. [그림: 왼쪽 — 'Aligned grains'가 세로 B를 따라 정렬, 'Polarization of thermal radiation', 'Polarized radiation' E ⊥ B / 오른쪽 — 'Magnetic field and column density measured by Planck towards the Taurus molecular cloud.' 색=기둥밀도(주황 높음, 파랑 낮음), 무늬=자기장 방향]",
+  "note": ""
+ }
+]

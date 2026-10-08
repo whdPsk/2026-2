@@ -1,0 +1,171 @@
+<div class="predict"><b>◈ 학습 목표.</b> ① 선윤곽 함수 φ(ν)의 정규화·단위(Hz⁻¹)와 τ_ν=τ₀φ(ν)로 흡수선·방출선이 "저절로" 생기는 과정을 설명한다. ② 세 전이(A₂₁, B₁₂J̄, B₂₁J̄)의 의미와 단위, detailed balance → 아인슈타인 관계식을 유도한다. ③ j_ν, κ_ν를 아인슈타인 계수로 쓰고(시험에서 "적을 수 있어야") 유도방출을 음의 흡수로 묶는 이유를 말한다. ④ Source function → LTE면 B_ν(T), 일반적으로 B_ν(T_ex); 메이저 조건. ⑤ 유도/자발 비 = photon occupation number → 21 cm에서는 중요, 광학에선 무시. ⑥ 키르히호프 분광 3법칙을 RT 해로 설명하고 PPT Q1·Q2(T_ex, τ, κ)를 푼다.</div>
+
+<h4>스펙트럼선과 선윤곽 함수 <span class="en">Line profile function</span></h4>
+
+<div class="slide flip"><div class="sh">플립 07 · 0:00–5:48 <span class="st">스펙트럼선, 선윤곽, 흡수선·방출선의 생성</span></div>
+<ol>
+<li>이번 차시: 아인슈타인 계수, 선복사의 방출·흡수계수, 방출선·흡수선. 스펙트럼선은 <b>지문</b>과 같다 — 원소마다 파장이 달라 천체의 원자·이온·분자 존재를 확인하는 핵심 관측 수단. 선은 에너지 준위 사이 전자 전이로 생긴다. 예: O III(전자 8개 중 2개 잃어 6개). [[F07.01]]</li>
+<li>바깥 p 오비탈 2전자의 상호작용으로 다섯 개의 주요 준위 → 예: 5007 Å(~500 nm) 선. 준위 간격이 원소·분자마다 달라 fingerprint가 된다. [[F07.02]]</li>
+<li>NGC 1667(Seyfert 은하) 스펙트럼: Hα, Hβ, [O III], [O II], [N II]는 연속선보다 높은 방출선, Hγ 등은 연속선보다 파인 흡수선. [[F07.03]]</li>
+<li>완벽한 선이면 \(\delta(\nu-\nu_0)\)이지만 실제로는 ν₀ 주위로 퍼진 윤곽(대표: Gaussian 열적 도플러 넓어짐) → <b>line profile function</b>으로 정의. [[F07.04]]</li>
+<li>\(\phi(\nu)\)는 정규화 \(\int\phi(\nu)d\nu=1\)을 만족 → <span class="hl">단위는 진동수의 역수(Hz⁻¹)</span>. 이를 써서 \(\tau_\nu=\tau_0\phi(\nu)\). [[F07.05]]</li>
+<li>\(\tau_0\): 선중심 쪽 광학깊이의 크기를 나타내는 양 — φ가 Hz⁻¹이므로 τ₀는 Hz 단위. 흡수만 있으면 \(I_\nu=I_0e^{-\tau_\nu}\); φ는 ν₀에서 멀면 ≈0 → [[F07.06]]</li>
+<li>지수 ≈1(연속선 그대로), ν₀에 가까워지며 φ↑ → 지수 감소 → 파이고, ν₀ 지나 다시 증가 → <span class="hl">RT 식이 흡수선을 자동으로 만든다</span>. [[F07.07]]</li>
+<li>방출만 있으면 \(I_\nu=S_\nu(1-e^{-\tau_\nu})\) — 흡수선 꼴을 뒤집고 1 더한 꼴: 선중심 최대, 가장자리 ≈0 → 방출선. 아인슈타인은 이를 <b>두 준위</b>만으로 기술. [[F07.08]]</li>
+</ol></div>
+
+<div class="slide"><div class="sh">L03 · 슬라이드 3 <span class="st">Review Questions ③</span></div><ul><li>What is the line profile function? [[L03.s3c]]</li></ul></div>
+<div class="explain"><b>부가설명 (9/8)</b> 스펙트럼(Intensity vs ν)을 보면 흑체 같은 연속선 위에 군데군데 파인 흡수선·솟은 방출선 — 그 선 모양을 기술하는 함수가 line profile function이다. 적분이 1이 되도록 정규화 → 단위 Hz⁻¹ (φ 자체는 차원이 진동수⁻¹). [[S0908.05]] 원래 델타 함수여야 하는데 넓어지는 이유: 가장 큰 것은 도플러(시선 방향 랜덤 운동 → 청·적색이동), 그리고 natural broadening(아인슈타인 A와 관련, 본질적으로 모든 선은 유한한 폭), 그리고 pressure broadening — 자세히는 U07. [[S0908.06]]<br>
+학생 질문(τ₀ 단위): \(\tau_\nu=\tau_0\phi\)에서 τ₀는 무차원이 아니라 Hz 단위. 우리가 결국 필요한 건 <b>진동수에 대해 적분한 총량</b>(흡수된 총 개수) — 적분하면 φ는 1이 되므로 단위 문제는 적분으로 해결된다. [[S0908.16]]</div>
+
+<h4>두 준위와 세 가지 전이 <span class="en">Einstein A₂₁, B₁₂, B₂₁</span></h4>
+
+<div class="slide flip"><div class="sh">플립 07 · 6:48–10:28 <span class="st">통계가중치와 세 전이</span></div>
+<ol>
+<li>준위 1, 2, 간격 \(\Delta E=h\nu_0\). \(g_1, g_2\): 통계가중치(statistical weight) — 그 준위에 허용되는 상태(전자)의 수로 해석. [[F07.09]]</li>
+<li>① 자발 방출(spontaneous emission): 높은 준위의 전자는 저절로 내려오려 한다(모든 계는 낮은 에너지로). 단위 시간당 횟수 = <b>A₂₁ [s⁻¹]</b>. [[F07.10]]</li>
+<li>A는 a(utomatic)…, "2→1". ② 흡수: 평균세기 J̄인 빛을 흡수해 1→2. 빛이 있어야 하므로 \(B_{12}\bar J\)가 s⁻¹ (단위 시간당 1→2 전이 수). [[F07.11]]</li>
+<li>③ 유도 방출(stimulated emission): 같은 hν₀ 빛이 지나가면 "친구 따라 강남 간다"처럼 덩달아 내려옴 → 똑같은 파장의 빛이 두 개. [[F07.12]]</li>
+<li>역시 빛이 필요 → \(B_{21}\bar J\) [s⁻¹] = 단위 시간당 유도 전이 수. [[F07.13]]</li>
+</ol></div>
+
+<div class="slide"><div class="sh">L03 · 슬라이드 3 <span class="st">Review Questions ④⑤</span></div><ul>
+<li>What are the Einstein A₂₁ coefficient (units)? [[L03.s3d]]</li>
+<li>What are the Einstein B₁₂ and B₂₁ coefficients (units)? [[L03.s3e]]</li></ul></div>
+<div class="explain"><b>부가설명 (9/8)</b> A₂₁: 2(upper)→1(lower)로 내려오는 시간당 횟수, 단위 <b>s⁻¹</b>. 수소 기체를 보면 바닥 상태 원자도, n=2 원자도 있다. 비 오는 날 수증기량이 일정해도 컵의 물로 들어가는 수와 증발하는 수가 같은 평형이듯, <span class="hl">개별 원자의 상태는 계속 바뀌지만 집단은 시간 불변</span>. 높은 에너지 상태는 낮은 상태로 가려 한다 — "서 있으면 앉고 싶고, 앉으면 눕고 싶고, 누우면 잠들죠". [[S0908.07]]<br>
+"1억 개 중 1천만 개가 떨어진다"처럼 집단에 대해 정의되는 시간당 비율. B₂₁: 복사(평균세기 J̄)의 자극으로 2→1 — \(B_{21}\bar J\)가 s⁻¹이므로 <b>B의 단위 = s⁻¹ ÷ (J 단위)</b>. J 단위는 erg s⁻¹cm⁻²sr⁻¹Hz⁻¹(에너지를 면적·시간·입체각·진동수 4개로 나눔) → B: erg⁻¹ cm² sr Hz. B₁₂: stimulated absorption. 그 외 영향 요소가 더 있다… [[S0908.08]]<br>
+… 충돌 들뜸·가라앉음(collisional excitation/de-excitation, C₁₂, C₂₁): 온도↑ → 속도 ∝√T → 충돌. 하지만 열평형 가정에서는 결과에 영향이 없어 교재에서 굳이 설명하지 않는다. [[S0908.09]]</div>
+<div class="prof"><b>수업 질문 — 유도방출은 왜 일어나나?</b>(9/8) 우스갯소리로 "나는 가만히 있고 싶은데 친구가 지나가면 덩달아 가고 싶다". 근본적으로는 광자가 가진 진동 전기장(dipole electric field)이 전자의 양자 상태에 섭동(perturbation)을 주어 전이를 일으킨다 — 양자역학 2학기(섭동론) 내용이고 교재 뒷부분에 있다. [[S0908.01]] (9/10 재질문) "에너지를 얻는데 떨어진다?" → 지나가는 빛의 전기장 변화가 교란을 주어 전자가 내려온다고 이해하면 된다. [[S0910.16]]</div>
+
+<h4>Detailed balance → 아인슈타인 관계식 <span class="en">Einstein relations</span></h4>
+
+<div class="slide"><div class="sh">L03 · 슬라이드 3 <span class="st">Review Questions ⑥⑦</span></div><ul>
+<li>What is detailed balance? [[L03.s3f]]</li>
+<li>Write the relations among the Einstein coefficients. [[L03.s3g]]</li></ul></div>
+
+<div class="slide flip"><div class="sh">플립 08 · 0:00–4:12 <span class="st">열평형에서 아인슈타인 관계 유도</span></div>
+<ol>
+<li>열평형이면 통계물리의 Boltzmann 식: \({n_2\over n_1}={g_2\over g_1}e^{-h\nu_0/kT}\) (hν₀=ΔE). [[F08.01]]</li>
+<li>평형: 1→2 단위 시간·부피당 전이 수 = 2→1 전이 수: \(n_2A_{21}+n_2B_{21}\bar J=n_1B_{12}\bar J\) (좌: 자발+유도, 우: 흡수). [[F08.02]]</li>
+<li>항상 성립해야 평형. J̄로 정리: \(\bar J={A_{21}/B_{21}\over (n_1B_{12})/(n_2B_{21})-1}\), Boltzmann 대입 → \(\bar J={A_{21}/B_{21}\over (g_1B_{12}/g_2B_{21})e^{h\nu_0/kT}-1}\). 열역학적 평형에서는 복사장도 Planck: \(\bar J=B_\nu(T)\). [[F08.03]]</li>
+<li>A, B는 원자의 고유한 성질(양자역학으로 결정) → <span class="hl">온도에 무관하게 성립해야</span>: 분자의 계수가 같고, 지수 앞 계수가 1일 때만 유일한 해. [[F08.04]]</li>
+<li>⟹ \(A_{21}={2h\nu^3\over c^2}B_{21}\), \(g_1B_{12}=g_2B_{21}\) = Einstein relation. 미지수 3개(A₂₁, B₂₁, B₁₂)에 식 2개 → 하나만 알면 됨. 간단하면 양자역학 계산, 복잡한 원자·분자는 실험실 측정. [[F08.05]]</li>
+<li>주로 A를 계산·측정해 나머지를 구한다 — 이것만 전문적으로 연구하는 사람들의 결과를 쓰면 된다. 이제 A, B로 방출·흡수계수를 쓴다: 방출계수 = 단위 부피·시간·입체각·진동수당 방출 에너지. [[F08.06]]</li>
+</ol></div>
+
+<div class="explain"><b>부가설명 (9/8)</b> <b>Detailed balance(미세 균형)</b>: 준위가 3개, 4개여도 <span class="hl">모든 준위쌍·모든 가능한 전이에 대해</span> 시간당 정방향 전이 수 = 역방향 전이 수. 2준위면 \(n_2A_{21}+n_2B_{21}\bar J=n_1B_{12}\bar J\). [[S0908.10]] 열역학적 평형: 그런 기체를 평형 복사장(Planck 함수로 기술) 안에 넣으면 \(\bar J=B_\nu\), 점유비는 Boltzmann, g는 statistical weight(축퇴도, degeneracy). [[S0908.11]] 대입하면 T에 대한 항등식이 되어 관계가 나온다. 기억하기 쉽다: "A₂₁은 B₂₁에 Planck 함수의 계수(2hν³/c²)를 곱한 것, 그리고 g₁B₁₂=g₂B₂₁." 하나만 알면 나머지 둘 — 수소는 해석적, 복잡한 원소는 수치적으로 양자 계산. <b>A의 크기</b>: 수소의 강한 선(발머선 등) ~10⁷–10⁸ s⁻¹ — 원자가 많으면 엄청 강함; 약한 것은 ~10⁻¹⁵ s⁻¹(21 cm). [[S0908.12]] 21 cm의 A를 처음 계산한 사람은 van de Hulst(STT "반대 하럴스트") — 10⁻¹⁵로 아주 작다. A가 작아도 원자 수가 많으면 선은 강할 수 있다. [[S0908.13]]</div>
+<div class="trap"><b>함정 — B의 정의(convention)</b>이 강의는 B를 평균세기 J̄에 대해 정의한다. 에너지밀도 u_ν로 정의하는 책은 \(A/B=8\pi h\nu^3/c^3\) — 계수를 혼용하지 말 것. 또 \(g_1B_{12}=g_2B_{21}\)이지 \(B_{12}=B_{21}\)이 아니다. [[F08.05]]</div>
+
+<h4>방출계수와 흡수계수 <span class="en">j_ν and κ_ν</span></h4>
+
+<div class="slide"><div class="sh">L03 · 슬라이드 3 <span class="st">Review Questions ⑧</span></div><ul><li>Write the emission coefficient j_ν in terms of A₂₁. [[L03.s3h]]</li></ul></div>
+<div class="slide"><div class="sh">L04 · 슬라이드 3 <span class="st">Review Questions ①</span></div><ul><li>Write the absorption coefficient κ_ν in terms of B₁₂ and B₂₁. [[L04.s3a]]</li></ul></div>
+
+<div class="slide flip"><div class="sh">플립 08 · 5:03–8:09 <span class="st">방출계수와 적분 선세기</span></div>
+<ol>
+<li>2→1 전이율 A₂₁ × 상위 준위 수밀도 n₂ = 단위 부피·시간당 전이 수; 에너지 hν; 사방으로 퍼지므로 ÷4π(입체각당). [[F08.07]]</li>
+<li>φ(ν)가 Hz⁻¹을 설명 → \(j_\nu={h\nu\over4\pi}\phi(\nu)n_2A_{21}\). <span class="star">시험</span><span class="hl">"여러분 이것은 적을 수 있어야 합니다."</span> [[F08.08]]</li>
+<li>흡수와 유도방출이 없으면(대개 optically thin) \(dI/ds=j_\nu\) → \(I_\nu=\int j_\nu ds\), 시선 방향 적분. [[F08.09]]</li>
+<li>배경 없는 매질을 망원경으로 보면 적분은 매질 폭에 대한 것 → \(\int n_2ds=N_2\) (상위 준위 원자의 기둥밀도). 진동수로 적분 = integrated line intensity: \(\int I_\nu d\nu={h\nu\over4\pi}N_2A_{21}\) (φ 적분=1). [[F08.10]]</li>
+<li>관측으로 선 적분값(실제로는 플럭스; 거리 알면 세기로) 측정 → A는 양자역학으로, hν는 알고 있으므로 <b>N₂(상위 준위 기둥밀도)</b>를 구한다. 크기를 알면 수밀도까지 — 천체 물리량 탐사. [[F08.11]]</li>
+</ol></div>
+
+<div class="slide flip"><div class="sh">플립 09 · 0:00–3:35 <span class="st">흡수계수, 음의 흡수, κ>0인 이유</span></div>
+<ol>
+<li>같은 요령: \(\kappa_\nu={h\nu\over4\pi}\phi(\nu)(n_1B_{12}-n_2B_{21})\). 앞항 = 1→2 흡수, 뒤 항 = 유도방출 — 엄밀히 방출인데 흡수 쪽에 쓰는 이유: B₁₂, B₂₁ 모두 <b>들어오는 복사가 필요</b>하므로 negative absorption으로 −부호를 붙여 쓰는 것이 훨씬 편리. [[F09.01]]</li>
+<li>RT식 \(dI/ds=j_\nu-\kappa_\nu I_\nu\)에서 \(-(\kappa_1-\kappa_2)I_\nu\)처럼 써도 같은 결과 → 관례. 그리고 \(\kappa_\nu=n_1\sigma_\nu\)(하위 준위 수밀도 × 흡수 단면적). [[F09.02]]</li>
+<li>n₁B₁₂를 꺼내면 \(\kappa_\nu={h\nu\over4\pi}\phi n_1B_{12}\left[1-{n_2/g_2\over n_1/g_1}\right]\). LTE면 비가 Boltzmann 인자 \(e^{-h\nu/kT}\le1\) → 괄호 항상 양수 → κ>0. [[F09.03]]</li>
+<li>예외: 메이저(κ&lt;0, Boltzmann 불성립). 열평형이면 \(\kappa_\nu={h\nu\over4\pi}\phi n_1B_{12}(1-e^{-h\nu/kT})\). τ는 κ의 시선 적분 → [[F09.04]]</li>
+<li>T 일정이면 \(\tau_\nu\propto N_1\)(하위 준위 기둥밀도) — 입자가 많을수록 τ↑. \((1-e^{-h\nu/kT})\)는 <b>유도방출 보정항</b>(앞이 true absorption). 가시광은 hν≫kT라 대개 무시, [[F09.05]]</li>
+<li>전파는 hν 작아 상당할 수 있어 무시 불가. [[F09.06]]</li>
+</ol></div>
+
+<div class="explain"><b>부가설명 (9/8 리뷰)</b> j_ν 정의는 "에너지 / (시간·부피·입체각·진동수)". 전이 하나가 hν 광자 → 에너지, 사방으로 → ÷4π(입체각당), upper에서 내려오는 수 n₂A₂₁ → 시간당 부피당, 진동수당은 φ(ν). → \(j_\nu={h\nu\over4\pi}\phi n_2A_{21}\), \(\kappa_\nu={h\nu\over4\pi}\phi(n_1B_{12}-n_2B_{21})\). [[S0908.14]] "복잡한 개념이지만 한번 익숙해지면 그렇게 어렵지 않다 — <span class="hl">복사를 수학적으로 기술하려면 다 기억하고 있어야 한다</span>." [[S0908.15]]<br>
+<b>9/10 리뷰</b>: κ_ν = 사방… n₁B₁₂ − n₂B₂₁. "유도방출인데 왜 흡수에?" — RT식을 제대로 쓰면 \(dI/ds\) = (자발: j) + (유도방출 ∝I) − (유도흡수 ∝I). 뒤 둘 다 I_ν에 비례하므로 −κ_νI_ν로 묶는다; negative absorption이 곧 emission. [[S0910.01]] RT식을 푸는 게 목적인데 결과에 차이가 없고 훨씬 편리해서. [[S0910.02]]<br>
+<b>9/10 학생 질문</b>(흡수계수식이 어떻게 그렇게?) — j_ν부터 다시: 2→1 전이로 hν 광자 하나, 사방으로 나가는데 세기는 입체각당이므로 ÷4π; n₂A₂₁ = 시간당 부피당 떨어지는 수 → 에너지/sr/부피/시간; φ는 브로드닝으로 퍼진 것(Hz⁻¹) — j_ν 정의와 정확히 같다. 흡수는 \((h\nu/4\pi)\phi n_1B_{12}I_\nu\), 유도방출 \(n_2B_{21}I_\nu\) → 묶어서 −κ_νI_ν. [[S0910.09]]</div>
+
+<h4>Source function, LTE, 들뜸 온도 <span class="en">S_ν, LTE, T_ex</span></h4>
+
+<div class="slide"><div class="sh">L04 · 슬라이드 5 <span class="st">Source Function</span></div><ul>
+<li>Using the expressions for the emission/absorption coefficients \(j_\nu={h\nu\over4\pi}\phi(\nu)n_2A_{21}\), \(\kappa_\nu={h\nu\over4\pi}\phi(\nu)(n_1B_{12}-n_2B_{21})\), one can write an expression for the source function
+\[ S_\nu={j_\nu\over\kappa_\nu}={n_2A_{21}\over n_1B_{12}-n_2B_{21}}={A_{21}\over B_{21}}{1\over{n_1B_{12}\over n_2B_{21}}-1}={2h\nu^3\over c^2}{1\over{n_1/g_1\over n_2/g_2}-1} \] [[L04.s5a]]</li>
+<li>In LTE, \(S_\nu\) becomes equal to the Planck function \(B_\nu(T)\). [[L04.s5b]]</li>
+<li>In general, n₂/n₁ does not follow the Boltzmann equation. In this case, one can define the <b>excitation temperature</b> \(T_{\rm ex}\) such that \({n_2\over n_1}={g_2\over g_1}e^{-h\nu/kT_{\rm ex}}\) — Then, \(S_\nu=B_\nu(T_{\rm ex})\). [[L04.s5c]]</li>
+</ul></div>
+<div class="explain"><b>부가설명 (9/10)</b> 이 슬라이드는 "동영상에 담기에 너무 양이 많아서" 넣은 보충 — <span class="star">강조</span><span class="hl">덜 중요하다는 뜻의 보충이 아니라 이것도 중요하다.</span> 정의 \(S=j/\kappa\)에 대입하면 hν/4π·φ는 공통으로 약분, 분자에서 A₂₁, 분모에서 B₂₁을 꺼내고 Einstein 관계(A/B=2hν³/c², g₁B₁₂=g₂B₂₁)를 쓰면 마지막 식 — 여기까지는 아무 가정이 없다. [[S0910.11]] LTE(국소 열역학 평형: 밀도가 충분히 높아 충돌이 활발)면 점유가 Boltzmann → 분모가 \(e^{h\nu/kT}-1\) → 정확히 흑체. 일반적으로는 Boltzmann을 따르지 않지만, 실제 n₂/n₁을 Boltzmann 식으로 설명하는 온도 하나를 만들 수 있다. [[S0910.12]] 그것이 <b>들뜸 온도 T_ex</b>, 그러면 \(S_\nu=B_\nu(T_{\rm ex})\). Planck 함수 원래의 T는 <b>kinetic temperature</b>(입자 운동, 평균 운동에너지 (3/2)kT). 비유: 흑체가 아니어도 총 플럭스로 T_eff를 정의했듯 T_ex도 Boltzmann식으로 정의한 온도. <span class="hl">HI 21 cm에서는 T_ex를 spin temperature라 부른다</span> — 바닥 상태가 전자·양성자 스핀의 평행/반평행(hyperfine)으로 갈라지기 때문. [[S0910.13]]<br>
+9/8 Q1 풀이 때도: T_ex = "평형이 아니어도 볼츠만 식으로 레벨 점유비를 설명해 주는 온도 — 들뜸을 설명해 주는 온도". [[S0908.29]]</div>
+<div class="trap"><b>STT 교정</b>"불순환/불추방 방정식" → Boltzmann 방정식, "Pipefine" → hyperfine, "생태 온도" → kinetic temperature. [[S0910.13]]</div>
+
+<h4>메이저 <span class="en">Maser</span></h4>
+
+<div class="slide"><div class="sh">L04 · 슬라이드 6 <span class="st">Maser</span></div><ul>
+<li>The absorption coefficient can be written as \(\kappa_\nu=n_1\sigma_\nu={h\nu\over4\pi}\phi(\nu)n_1B_{12}\left(1-{n_2/g_2\over n_1/g_1}\right)\) [[L04.s6a]]</li>
+<li>Usual situations, \({n_2/g_2\over n_1/g_1}={n_2\over n_1}{g_1\over g_2}=\exp\left(-{E_{12}\over kT_{\rm ex}}\right)&lt;1\) ➔ \(\kappa_\nu&gt;0\) [[L04.s6b]]</li>
+<li>If \({n_2/g_2\over n_1/g_1}&gt;1\) (inverted populations), \(\kappa_\nu&lt;0\) — Results in radiation amplification: <b>maser</b>! (OH, H₂O, SiO, etc.) Microwave Amplification by Stimulated Emission of Radiation [그림: pumping → short-lived state → rapid decay → metastable state(점 7개) → ground(점 2개), Maser light] [[L04.s6c]]</li>
+</ul></div>
+<div class="explain"><b>부가설명 (9/10)</b> 학생 질문 "자연에서 κ가 음수인 경우?" — 좋은 질문: 레이저 물리의 레이저, 천문학의 메이저. 정의상 κ는 양수여야 하지만 유도방출을 negative로 넣었기 때문에 음수가 될 수 있다. [[S0910.11]] \(\kappa_\nu=n_1\sigma_\nu\): σ_ν는 원자 하나의 흡수 단면적, κ는 단위 길이⁻¹ = 단위 부피당 면적. 흡수하려면 하위 준위에 있어야 하므로 n₁. 보통은 괄호 비가 \(e^{-E_{12}/kT_{ex}}\) &lt; 1 → κ>0 → 들어온 복사가 e^{−τ}로 깎인다. 그런데 비가 1보다 크면 κ&lt;0 — 통계가중치를 고려해 상위가 더 많은 상태. [[S0910.14]]<br>
+<b>메이저 기작</b>: 바닥 상태 전자가 충돌·복사 흡수로 높은 준위로 올라감(pumping). OH, H₂O, SiO 등은 바로 바닥으로보다 <b>중간 준위로 떨어질 확률이 더 크고</b>, 그 준위는 metastable — A가 매우 작아(수명 1/A가 10만·100만 년) 오래 머문다 → 인구 반전(그림: 아래 2, 위 7). 맞는 진동수 빛이 지나가면 유도방출로 와르르 — 1개가 2개, 2개가 이웃 분자를 또 유도… → <span class="hl">음의 τ이므로 지수적 증폭(exponential growth)</span>. MASER = Microwave Amplification by Stimulated Emission of Radiation, 레이저는 Light — 실험실 레이저는 대개 optical. [[S0910.15]]<br>
+펌핑은 충격파(가열), 입자 충돌 등으로 빈번히 일어나며 원자 구조가 맞아야 한다; metastable 준위의 A가 작은 것은 "자연이 정해 놓은 것". 한국천문연구원 <b>KVN</b>이 메이저 관측으로 좋은 연구를 많이 했다 — 별 탄생 영역, AGB 별 등 늙은 별 주변. 왜 이렇게 많이 발견되는지는 아직 잘 모른다. [[S0910.16]] 메이저가 천체 주변 동심원처럼 보이기도. 학생 질문(지수 증폭이 오래 유지되려면?) → <span class="hl">메이저는 지속되지 않는다</span> — 다 떨어지면 다시 펌핑될 때까지 기다려야; 오늘 관측돼도 몇 년 후엔 보장 없음(시간 변동). [[S0910.17]]</div>
+<div class="trap"><b>함정</b>인구 반전 조건은 \(n_2/g_2&gt;n_1/g_1\)이지 n₂>n₁이 아니다. 21 cm는 n₂/n₁≈3이어도(상위 75%) 가중치당으로는 상위가 살짝 적어 반전이 아니다(예제 2.1). [[L04.s6c]]</div>
+
+<h4>유도방출 vs 자발방출 <span class="en">Spontaneous vs. Stimulated Emission</span></h4>
+
+<div class="slide"><div class="sh">L03 · 슬라이드 8 <span class="st">Spontaneous vs. Stimulated Emission</span></div><ul>
+<li>The rate ratio of the stimulated to spontaneous emission is \({B_{21}\bar J\over A_{21}}={c^2\over2h\nu^3}\bar J={1\over e^{h\nu/kT}-1}\) (photon occupation number) [[L03.s8a]]</li>
+<li>For H I 21cm lines, hν/k = 0.068 K. \({B_{21}\bar J\over A_{21}}\approx{kT\over h\nu}={T\over0.068\,{\rm K}}\sim40\left({T\over2.7\,{\rm K}}\right)\) — The stimulated emission by the CMBR is important for H I 21cm lines. [[L03.s8b]]</li>
+<li>However, the photon occupation number is generally small for optical lines with large hν. — In this case, the stimulated transitions can be ignored. [[L03.s8c]]</li>
+</ul></div>
+<div class="explain"><b>부가설명 (9/8)</b> 학생 질문(자발 vs 유도의 상대 세기)에 대한 답으로 다룸 — 밀도가 매우 높으면 충돌 등도 있고, 전파에서는 유도방출이 중요, 광학에서는 아님. [[S0908.15]] 분자 = 복사 자극으로 떨어지는 시간당 횟수, 분모 = 자발. A/B 관계를 쓰고 흑체 복사장 안이라면 J̄=B_ν → 계수가 사라지고 \(1/(e^{h\nu/kT}-1)\) = <b>photon occupation number</b>(광자는 Bose–Einstein 통계; +1이면 Fermi–Dirac). [[S0908.25]] 21 cm는 ν≈1.4 GHz로 에너지가 매우 작아 hν/k=0.068 K → 테일러 전개로 ≈kT/hν = T/0.068 K, CMB 2.7 K면 ≈40: <span class="hl">21 cm에서는 유도 전이가 자발 전이보다 40배 강하다 → 반드시 고려</span>. hν가 커질수록 이 비는 1보다 훨씬 작아진다. [[S0908.25]] 그래서 광학선에서는 유도 전이를 무시하고 A₂₁만 쓰고, 전파에서는 반드시 고려 — 진동수에 따라 다르다. [[S0908.26]]</div>
+<div class="apply"><b>수치 (python)</b>hν/k(21 cm) = 0.0682 K. T=2.7 K: RJ 근사 39.6, 정확한 \(1/(e^x-1)\)=39.1. 가시광 500 nm·5800 K 흑체장: 0.007 ≪ 1. 예제 2.12. [[L03.s8b, L03.s8c]]</div>
+
+<h4>키르히호프의 분광 3법칙과 RT 해 <span class="en">Kirchhoff's three laws of line radiation</span></h4>
+
+<div class="slide"><div class="sh">L04 · 슬라이드 3 <span class="st">Review Questions ②③</span></div><ul>
+<li>What are Kirchhoff’s three laws of line radiation? [[L04.s3b]]</li>
+<li>Use the solution of the RT equation to explain the Kirchhoff’s three laws. [[L04.s3c]]</li></ul></div>
+
+<div class="slide flip"><div class="sh">플립 09 · 4:30–11:16 <span class="st">세 법칙을 RT 해로</span></div>
+<ol>
+<li>(1학년 천문학 실험) ① 밀한 기체·고체·액체 → 흑체 연속선, ② 밀도 낮은 기체 → 방출선, ③ 뜨거운 광원 앞의 차가운 기체 → 흡수선. [[F09.06]]</li>
+<li>열방출이면 S=B. 배경 없으면 \(I_\nu=B_\nu(T)[1-e^{-(\tau_{\rm cont}+\tau_{\rm line})}]\) — τ_cont(연속, ν에 천천히 변함) + τ_line(선, 빨리 변함). [[F09.07]]</li>
+<li>매우 두꺼우면 지수→0 → \(I_\nu=B_\nu\): <b>제1법칙</b>(dense → 흑체처럼). 얇으면 테일러 → \(I_\nu\approx B_\nu(\tau_{\rm cont}+\tau_{\rm line})\). [[F09.08]]</li>
+<li>얇으면 연속선은 B×(작은 값)으로 흑체보다 약하고, 선 진동수에서 τ_line만큼 더 → 방출선(그림의 마지막 경우, <b>제2법칙 방출선</b>). [[F09.09]]</li>
+<li>흡수: 밝은 배경 천체 앞 차가운 구름: \(I_\nu=I_\nu(0)e^{-\tau}+B_\nu(T)(1-e^{-\tau})\) → \(I_\nu-I_\nu(0)=[B_\nu(T)-I_\nu(0)](1-e^{-\tau})\). [[F09.10]]</li>
+<li>RJ(hν≪kT): 세기 ∝ 밝기온도 → \(T_B-T_{B0}=(T-T_{B0})(1-e^{-\tau})\). [[F09.11]]</li>
+<li>\((1-e^{-\tau})&gt;0\)이므로 <b>T &lt; T_B0</b>(차가운 구름이 뜨거운 천체 앞) → 음수 → 연속선보다 파인 흡수선(<b>두 번째 법칙</b>), <b>T &gt; T_B0</b> → 방출선(<b>세 번째 법칙</b>). [[F09.12]]</li>
+<li>선복사 학습 마침. [[F09.13]]</li>
+</ol></div>
+<div class="explain"><b>부가설명 (9/10)</b> 지난 시간의 "열복사에 대한 키르히호프 법칙"(S=B)과는 다른 것. 1학년부터 알던 세 법칙(뜨겁고 밀한 기체 → 연속, 앞에 차가운 기체 → 흡수, 희박한 기체 → 방출선)을 RT 해로 설명할 수 있느냐는 질문 — 배경 I₀, S=B. [[S0910.02]] \(I_\nu=I_0e^{-\tau}+B_\nu(1-e^{-\tau})\): 앞은 흡수, 뒤는 방출. 밀도 높은 기체면 τ 커서 앞항이 사라지고 흑체(1법칙). 흡수는 배경이 깎이는 것. τ = 연속 + 선 성분으로 나누면, 얇은 경우 연속은 B보다 깎이고 특정 선에서 연속보다 높은 방출. <span class="hl">"이 RT 해가 키르히호프의 세 가지 법칙을 다 포함한다."</span> <span class="star">강조</span><span class="hl">이 해와, 플럭스 = 세기 × 광원의 입체각(F≈IΩ)은 천문학을 하는 이상 계속 쓰니 기억하라.</span> [[S0910.03]]</div>
+<div class="prof"><b>수업 질문 — optically thick이면 표면만 보나?</b>(9/10) "두꺼우면 흑체가 되는데, 표면 근처에서 나오는 것만 고려하는 것?" → 같은 얘기다. 완전히 두꺼우면 뒤에서 들어오는 건 관측자까지 못 오고, 중간에서 만든 것도 다 흡수된다 → 표면(대략 τ≈1)만 본다. 태양: 안으로 갈수록 온도가 올라가지만 우리가 보는 건 τ≈1 표면 온도에 해당하는 흑체. 내부 광자는 흡수·재방출의 랜덤 과정을 무수히 겪다가 바깥(아무것도 없는 쪽)으로 새어 나온다. [[S0910.10]]</div>
+
+<h4>PPT Q1·Q2 — 21 cm 흡수/방출로 τ와 T_ex 구하기 <span class="en">Q1, Q2</span></h4>
+
+<div class="slide"><div class="sh">L03 · 슬라이드 9 <span class="st">Q1</span></div><ul>
+<li>[그림: quasar(T_B = 500 K) → cloud(T, τ) → 망원경; on-source / off-source 시선] We make H I 21 cm observations of a cloud which happens to have a 500 K continuum source behind it. We see the following sort of line profiles. Find \(\tau_{\nu_0}\), the excitation temperature \(T_{\rm ex}\) of the cloud. [그림: off-source 20 K 방출선; on-source 500 K → 400 K 흡수선] [[L03.s9a]]</li></ul>
+<div class="ans"><b>ANSWER</b> \(\tau_{\nu_0}=0.273\), \(T_{\rm ex}=83.3\) K</div> [[L03.s9b]]</div>
+<div class="explain"><b>부가설명 (9/8)</b> 우리은하 성간 구름을 전파로 관측: 망원경을 살짝 돌려 배경에 500 K 연속광원(퀘이사)이 있는 방향(on)과 없는 방향(off)을 본다(같은 구름이라고 가정 — 실제로는 확인 어렵다). off는 배경이 없으니 방출선, on은 흡수선. [[S0908.27]] 학생 답 "27.5"는 너무 작다. 써야 할 식은 RT 해(이미 많이 쓴 식): \(T_B=T_{B0}e^{-\tau}+T_{\rm ex}(1-e^{-\tau})\). τ_ν=τ₀φ(ν): 선중심에서 멀면 τ≈0 → 평평한 T_B0, ν₀ 근처에서 τ↑ → 지수 감소 → 흡수선이 "자연스럽게" 생기고, off는 \(T(1-e^{-\tau})\) → 뒤집어 올린 방출선. 선윤곽 함수와 RT식만으로 선 모양을 수학적으로 만들어 낸다. [[S0908.28]] off: \(20=T_{\rm ex}(1-e^{-\tau})\), on: \(400=500e^{-\tau}+T_{\rm ex}(1-e^{-\tau})\) — 미지수 2, 식 2. 빼면 T_ex 항 소거 → \(500e^{-\tau}=380\) → τ, 대입 → T_ex. [[S0908.29]] CMB를 고려해야 하나? 측정했다면 넣어야 — 마이크로파 근처면 중요할 수 있고 광학이면 거의 무관; 문제에 언급이 없으니 무시. 학생 질문 "세기와 온도는 선형이 아닌데?" → RJ 극한(21 cm 전파). <span class="hl">τ를 측정하려면 반드시 배경 광원 앞의 흡수선이 필요</span> — 방출선만으로는 τ를 절대 측정할 수 없다. [[S0908.30]] 그런데 원하는 구름 뒤에 퀘이사 같은 점광원이 있어야 하므로 모든 구름의 τ를 구할 수는 없다 — 상당히 어려운 문제. [[S0908.31]] 풀이: 예제 2.10.</div>
+
+<div class="slide"><div class="sh">L03 · 슬라이드 10 <span class="st">Q2</span></div><ul>
+<li>Assuming that the depth of the cloud (with τ_ν = 0.274) along the line of sight is 5 pc, find the number of absorptions per cm, κ_ν, in the cloud at the frequency of the line.</li>
+<li>Assuming that the cloud density is constant, how deep in pc would the line of sight distance have to be for the cloud to become optically thick? [[L03.s10a]]</li></ul>
+<div class="ans"><b>ANSWER</b> \(\kappa_\nu=1.78\times10^{-20}\) cm⁻¹, \(l=18.2\) pc</div> [[L03.s10b]]</div>
+<div class="explain"><b>부가설명</b> τ=κL(균일) → κ=0.274/(5×3.086×10¹⁸ cm). τ=1이 되는 길이는 5 pc/0.274 = 18.2 pc. "두 개 연관된 문제, 어렵지 않죠." [[S0908.31]] 풀이: 예제 2.11.</div>
+<div class="trap"><b>수치 의심</b>Q1 답 슬라이드 0.273 vs Q2의 0.274: ln(500/380)=0.2744 → 0.274가 정확(0.273은 반올림 차). 녹음 "833km" → 83.3 K, "0.74" → 0.274, "1.78910만 20승" → 1.78×10⁻²⁰. [[L03.s9b, S0908.29, S0908.31]]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u06-1"><div class="qq">유도방출이 흡수계수 식에 마이너스로 들어가는 이유는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도방출도 유도흡수처럼 입사 세기 I_ν에 비례하므로 RT식에서 −κI 항에 함께 묶는 것이 편리하다(negative absorption = emission). 같은 모드의 광자를 추가하므로 빔을 증가시키는 역할이며, 자발방출 j와 중복해 더하지 않는다.</p></div></div>
+
+<div class="qz" data-q="u06-2"><div class="qq">n₂>n₁이면 언제나 메이저인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. n₂/g₂>n₁/g₁이 조건이다. 21 cm는 n₂/n₁≈3이지만 g₂/g₁=3이라 가중치당 점유는 상위가 e^{−0.068/T}만큼 조금 작다 → κ>0.</p></div></div>
+
+<div class="qz" data-q="u06-3"><div class="qq">21cm에서 유도방출을 무시하기 쉬운가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 흑체장에서 유도/자발=1/(exp(hν/kT)−1)≈T/0.068 K. CMB만으로도 약 40 → 반드시 고려. 광학선은 ≪1이라 무시.</p></div></div>
+
+<div class="qz" data-q="u06-4"><div class="qq">j_ν를 A₂₁로 쓰고 각 인자가 j_ν의 단위(에너지/시간/부피/입체각/진동수) 중 무엇을 담당하는지 말하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>j_ν=(hν/4π)φ(ν)n₂A₂₁. hν=에너지, n₂A₂₁=단위 부피·시간당 전이 수, 1/4π=입체각당(등방), φ=진동수당(Hz⁻¹).</p></div></div>
+
+<div class="qz" data-q="u06-5"><div class="qq">Detailed balance와 "온도 무관" 논리로 아인슈타인 관계 두 개를 쓰라. 미지수와 식의 수는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>n₂A₂₁+n₂B₂₁J̄=n₁B₁₂J̄, J̄=B_ν, Boltzmann 대입 → A₂₁=(2hν³/c²)B₂₁, g₁B₁₂=g₂B₂₁. 미지수 3, 식 2 → 하나(주로 A)만 알면 된다.</p></div></div>
+
+<div class="qz" data-q="u06-6"><div class="qq">RT 해로 키르히호프 세 법칙을 설명하라(밝기온도 형태).</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>T_B=T_B0e^{−τ}+T(1−e^{−τ}). τ≫1 → T_B=T(흑체 연속, 1법칙). 배경 없음·얇음 → T_B≈Tτ_ν, 선에서 τ 크므로 방출선. 배경 있음: T_B−T_B0=(T−T_B0)(1−e^{−τ}) → T&lt;T_B0이면 흡수선, T>T_B0이면 방출선.</p></div></div>
+
+<div class="qz" data-q="u06-7"><div class="qq">방출선만 관측해서 τ를 알 수 없는 이유와, Q1에서 τ와 T_ex를 분리하는 방법은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>방출선 T_B=T_ex(1−e^{−τ})는 두 미지수의 곱 꼴이라 하나의 식뿐이다. 배경 광원 앞 흡수선(on)과 옆(off)을 함께 보면 식 두 개 → 빼서 500e^{−τ}=380 → τ=0.274, T_ex=83.3 K.</p></div></div>
+
+<p class="note">출처: Lecture03 슬라이드 3, 8–10 · Lecture04 슬라이드 3, 5–6 · 플립 07·08·09 · 9/8 강의 속기(00:04–27:58, 41:34–1:08:14) · 9/10 강의 속기(00:04–07:30, 20:42–42:46) · 예제 2.1, 2.10–2.12, 2.15 · 상태: 장부 기준 전수 반영</p>

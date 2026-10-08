@@ -1,0 +1,12 @@
+<div class="exq"><b>상황.</b> \(q_j=\sum_ra_{jr}\eta_r\)이고 \(a_{jr}\)이 \(m\)-직교정규일 때, \(\eta_r\)이 \(\ddot\eta_r+\omega_r^2\eta_r=0\)을 만족함을 Lagrange 방정식으로 직접 보인다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>\(T\)와 \(U\)를 \(\eta\)로 쓰기.</div>
+<ol>
+<li>\(\dot q_j=\sum_ra_{jr}\dot\eta_r\). \(T=\tfrac12\sum_{jk}m_{jk}\sum_ra_{jr}\dot\eta_r\sum_sa_{ks}\dot\eta_s=\tfrac12\sum_{rs}\left(\sum_{jk}m_{jk}a_{jr}a_{ks}\right)\dot\eta_r\dot\eta_s=\tfrac12\sum_r\dot\eta_r^2\).</li>
+<li>\(U=\tfrac12\sum_{rs}\left(\sum_{jk}A_{jk}a_{jr}a_{ks}\right)\eta_r\eta_s\). 고유값 방정식 \(\sum_jA_{jk}a_{js}=\omega_s^2\sum_jm_{jk}a_{js}\)을 쓰면 괄호 \(=\omega_s^2\delta_{rs}\) → \(U=\tfrac12\sum_r\omega_r^2\eta_r^2\).</li>
+<li>\(L=\tfrac12\sum_r(\dot\eta_r^2-\omega_r^2\eta_r^2)\) → \(\ddot\eta_r+\omega_r^2\eta_r=0\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ L=\tfrac12\sum_r(\dot\eta_r^2-\omega_r^2\eta_r^2),\qquad \ddot\eta_r+\omega_r^2\eta_r=0\ } \]
+<p class="note">행렬 언어: \(\mathsf a^{\mathsf T}m\mathsf a=\mathbb 1\), \(\mathsf a^{\mathsf T}A\mathsf a=\Omega^2\) — 하나의 합동 변환이 두 이차형식을 동시에 대각화. 가능한 이유는 \(m\)이 양정치이기 때문.</p></div>
+<div class="qz" data-q="ex12.2-a"><div class="qq"><b>+α</b> 정규 좌표에서의 총에너지 \(E=\tfrac12\sum(\dot\eta_r^2+\omega_r^2\eta_r^2)\)가 모드별로 따로 보존됨을 보이고, 이것이 "모드 사이에 에너지가 오가지 않는다"는 뜻임을 설명하라. 그런데 U27의 맥놀이에서는 에너지가 오간다 — 모순인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>각 \(\eta_r\)이 독립 조화진동자이므로 \(E_r\) 각각 상수. 맥놀이에서 오가는 것은 <b>진동자(좌표 \(x_1,x_2\))</b> 사이의 에너지이지 모드 사이가 아니다 — 두 모드 에너지는 일정하고, 그 간섭 패턴이 \(x_1\), \(x_2\)의 에너지를 바꾼다. 모순 아님.</p></div></div>
+<div class="qz" data-q="ex12.2-b"><div class="qq"><b>+α</b> 초기조건 \(\vb q(0)\), \(\dot{\vb q}(0)\)이 주어졌을 때 \(\eta_r(0)\)을 구하는 공식을 써라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\vb q=\mathsf a\boldsymbol\eta\)에 \(\mathsf a^{\mathsf T}m\)을 곱하면 \(\boldsymbol\eta=\mathsf a^{\mathsf T}m\vb q\), 즉 \(\eta_r(0)=\sum_{jk}a_{jr}m_{jk}q_k(0)\). 속도도 같은 식.</p></div></div>

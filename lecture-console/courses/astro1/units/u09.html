@@ -1,0 +1,140 @@
+<div class="predict"><b>◈ 학습 목표.</b> ① 맥스웰 방정식에서 에너지 방정식(\(u\), Poynting 벡터 \(\mathbf S\))과 진공 파동방정식을 유도하고, 평면파에서 \(\mathbf k\perp\mathbf E\perp\mathbf B\), \(|\mathbf E|=|\mathbf B|\), \(\omega=ck\)를 끌어낸다. ② 시간평균 \(\langle u\rangle=E_0^2/8\pi\), \(\langle S\rangle=cE_0^2/8\pi\) → "에너지는 빛의 속도로 흐른다"를 말한다. ③ 스펙트럼 = 전기장의 시간 변화를 푸리에 변환한 것, 분해능 \(\Delta\nu\Delta t\gtrsim1\)을 위상차로 설명한다. ④ 푸리에 변환 정의·실함수 성질·Parseval 정리, 시간–주파수 폭의 반비례 관계(그림 3쌍)를 안다. ⑤ <b>에너지 스펙트럼 \(dW/d\Omega\,d\omega=cr^2|\hat E(\omega)|^2\)</b>(교수님 "기억해 두세요")을 유도한다. — 9/15 PPT 슬라이드 4–8 + 플립 10.</div>
+
+<h4>에너지 방정식과 Poynting 벡터 <span class="en">Flip 10 · energy equation</span></h4>
+<div class="slide flip"><div class="sh">플립 10 · 2:29–4:21 <span class="st">에너지 방정식 유도</span></div>
+<ol>
+<li>\(\nabla\cdot(\mathbf E\times\mathbf B)\)를 계산한다. 벡터 항등식: \(\nabla\cdot(\mathbf E\times\mathbf B)=\mathbf B\cdot(\nabla\times\mathbf E)-\mathbf E\cdot(\nabla\times\mathbf B)\). [[F10.04]]</li>
+<li>\(\nabla\times\mathbf E=-\frac1c\partial_t\mathbf B\)(패러데이), \(\nabla\times\mathbf B=\frac{4\pi}c\mathbf j+\frac1c\partial_t\mathbf E\)(앙페르–맥스웰)를 넣는다: \(\nabla\cdot(\mathbf E\times\mathbf B)=-\frac1c\mathbf B\cdot\partial_t\mathbf B-\frac{4\pi}c\mathbf j\cdot\mathbf E-\frac1c\mathbf E\cdot\partial_t\mathbf E\). [[F10.04]]</li>
+<li>\(\mathbf B\cdot\partial_t\mathbf B=\frac12\partial_t B^2\), \(\mathbf E\cdot\partial_t\mathbf E=\frac12\partial_t E^2\)로 묶으면 \(\nabla\cdot(\mathbf E\times\mathbf B)=-\frac1{2c}\partial_t(E^2+B^2)-\frac{4\pi}c\mathbf j\cdot\mathbf E\). [[F10.04]]</li>
+<li>이항하고 \(c/4\pi\)를 곱해 정리하면 \(\displaystyle{\partial\over\partial t}\Big({E^2+B^2\over8\pi}\Big)+\nabla\cdot\Big({c\over4\pi}\mathbf E\times\mathbf B\Big)=-\mathbf j\cdot\mathbf E\). [[F10.04]]</li>
+<li>\(u\equiv(E^2+B^2)/8\pi\) = 전자기파가 가진 <b>에너지 밀도</b>(단위 erg cm⁻³). \(\mathbf S\equiv\frac c{4\pi}\mathbf E\times\mathbf B\) = <b>Poynting 벡터</b> = 전자기파가 흘러갈 때 시간당·면적당 통과하는 에너지 = 우리가 말하는 복사 flux. (가우스 단위의 식.) [[F10.05]]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">암기 — 에너지 방정식 (가우스 단위)</div>\[ {\partial u\over\partial t}+\nabla\cdot\mathbf S=-\mathbf j\cdot\mathbf E,\qquad u={E^2+B^2\over8\pi},\qquad\mathbf S={c\over4\pi}\mathbf E\times\mathbf B \]<p class="note">진공(\(\mathbf j=0\))이면 우변 0 — 에너지 보존. 우변 \(-\mathbf j\cdot\mathbf E\)는 장이 전하에 해 주는 일(전하가 있으면 장의 에너지가 줄어듦). [[F10.04, F10.05, S0915.01]]</p></div>
+
+<h4>진공 파동방정식과 평면파 <span class="en">Flip 10 · wave equation, plane wave</span></h4>
+<div class="slide flip"><div class="sh">플립 10 · 4:21–6:05 <span class="st">전기장·자기장의 파동방정식</span></div>
+<ol>
+<li>진공: \(\rho=0,\ \mathbf j=0\). 벡터 항등식 \(\nabla\times(\nabla\times\mathbf E)=\nabla(\nabla\cdot\mathbf E)-\nabla^2\mathbf E\). [[F10.06]]</li>
+<li>좌변은 패러데이 식으로 \(\nabla\times(-\frac1c\partial_t\mathbf B)=-\frac1c\partial_t(\nabla\times\mathbf B)\), 여기에 앙페르–맥스웰 식(j = 0)을 넣으면 \(-\frac1{c^2}\partial_t^2\mathbf E\). [[F10.06]]</li>
+<li>첫 번째 맥스웰 방정식에서 진공이면 \(\nabla\cdot\mathbf E=0\) → 우변 첫 항 소거. 정리하면 \(\displaystyle\nabla^2\mathbf E-{1\over c^2}{\partial^2\mathbf E\over\partial t^2}=0\) — <b>전기장의 파동방정식</b>. [[F10.07]]</li>
+<li>1차원 파동방정식 \(\partial_x^2 f=\frac1{a^2}\partial_t^2 f\)를 3차원으로 일반화한 꼴이고 전파 속도는 c. 자기장도 같은 방식으로 \(\nabla^2\mathbf B-\frac1{c^2}\partial_t^2\mathbf B=0\). → <span class="hl">전기장과 자기장은 파동처럼 전파된다.</span> [[F10.07]]</li>
+</ol></div>
+<div class="slide flip"><div class="sh">플립 10 · 6:05–9:40 <span class="st">평면파 해와 그 성질</span></div>
+<ol>
+<li>평면파 해: \(\mathbf E=\mathbf E_0e^{i(\mathbf k\cdot\mathbf x-\omega t)}\), \(\mathbf B=\mathbf B_0e^{i(\mathbf k\cdot\mathbf x-\omega t)}\). ω = 각진동수(angular frequency), \(\mathbf k=k\hat{\mathbf k}\) = 파동 벡터(wave vector): \(\hat{\mathbf k}\)는 파동(광자)이 전파하는 방향의 단위벡터, 크기 k. [[F10.08]]</li>
+<li>\(k=2\pi/\lambda\) = wave number, \(\omega=2\pi\nu\). 지난 차시의 \(\nu\lambda=c\) 양변에 2π를 곱하면 \(\omega=2\pi c/\lambda=ck\) — 위 해의 분산관계 \(\omega=ck\)가 여기서 나온다. [[F10.09]]</li>
+<li>진공 맥스웰 방정식에 대입: 지수함수라서 \(\nabla\to i\mathbf k\), \(\partial_t\to-i\omega\). 그러면 \(\mathbf k\cdot\mathbf E=0\), \(\mathbf k\cdot\mathbf B=0\), \(\mathbf B=\hat{\mathbf k}\times\mathbf E\), \(\mathbf E=\mathbf B\times\hat{\mathbf k}\). [[F10.10]]</li>
+<li>뜻: \(\mathbf k,\mathbf E,\mathbf B\)는 <b>서로 수직</b>(횡파)이고, \(\hat{\mathbf k}\)의 크기가 1이므로 <span class="hl">\(|\mathbf E|=|\mathbf B|\)</span>. 이렇게 크기가 같아지는 것이 가우스(cgs) 단위의 편리한 점 — 앞으로 계속 가우스 단위로 기술한다. [[F10.11]]</li>
+</ol></div>
+<div class="trap"><b>함정 · SI와 섞지 말 것</b>SI에서는 \(|\mathbf E|=c|\mathbf B|\), \(u=\frac12(\varepsilon_0E^2+B^2/\mu_0)\). 이 과목은 가우스 단위라 \(|\mathbf E|=|\mathbf B|\), \(u=(E^2+B^2)/8\pi\). 한 식 안에 ε₀·μ₀와 4π/c가 같이 나오면 틀린 것. [[F10.11, S0915.01]]</div>
+
+<h4>에너지 보존 — 에너지는 c로 흐른다 <span class="en">L05 slide 4 · Energy Conservation</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 4 <span class="st">Energy Conservation</span></div>
+<ul>
+<li>The energy equation in vacuum: \(\dfrac{\partial u}{\partial t}+\nabla\cdot\mathbf S=0\) \(\;\xrightarrow{\ \mathbf E=\mathbf E_0e^{i(\mathbf k\cdot\mathbf x-\omega t)}\ }\;\) \(\omega u-\mathbf k\cdot\mathbf S=0\)</li>
+<li>The energy density <i>u</i> is given by \(u=\dfrac1{8\pi}(\mathbf E^2+\mathbf B^2)=\dfrac{\mathbf E^2}{4\pi}\), with the time average \(\langle u\rangle=\Big\langle\dfrac{\mathbf E^2}{4\pi}\Big\rangle=\dfrac{E_0^2}{4\pi}\langle\cos^2(kz-\omega t)\rangle=\dfrac{E_0^2}{8\pi}=\dfrac{B_0^2}{8\pi}\)</li>
+<li>Poynting flux: \(\mathbf S=\dfrac c{4\pi}\mathbf E\times\mathbf B=\dfrac{cE^2}{4\pi}\hat{\mathbf k}=S\hat{\mathbf k}\); \(\langle S\rangle=\Big\langle\dfrac{cE^2}{4\pi}\Big\rangle=\dfrac{cE_0^2}{4\pi}\langle\cos^2(kz-\omega t)\rangle=\dfrac{cE_0^2}{8\pi}\)</li>
+<li>These give \(\langle S\rangle=c\langle u\rangle\).<ul><li>That is, the velocity of energy flow is <i>c</i>.</li></ul></li>
+</ul> [[L05.s4]]</div>
+<div class="explain"><b>부가설명</b>
+<p><b>(1) 평면파 대입.</b> 에너지 방정식은 진공에서 우변이 0. 평면파라면 시간 미분은 \(-i\omega\), 공간 미분은 \(i\mathbf k\)가 나오므로, i를 떼어내면 \(\omega u-\mathbf k\cdot\mathbf S=0\). [[S0915.01]]</p>
+<p><b>(2) 에너지 밀도.</b> 가우스 단위에서 자기장과 전기장의 진폭이 같으므로 \(E^2+B^2=2E^2\) → \(u=E^2/4\pi\). 실수부만 보면 \(\cos(kz-\omega t)\)가 붙고, 제곱의 한 주기 평균 \(\langle\cos^2\rangle=1/2\)이라 \(\langle u\rangle=E_0^2/8\pi\). [[S0915.01, S0915.02]]</p>
+<p><b>(3) Poynting 플럭스.</b> 정의 \(\frac c{4\pi}\mathbf E\times\mathbf B\)에서 E와 B는 크기가 같고 서로 수직, 방향은 \(\hat{\mathbf k}\)(복사가 전파하는 방향) → \(S=cE^2/4\pi\) = 시간당·면적당 에너지. 시간평균도 cos²에서 1/2 → \(cE_0^2/8\pi\). [[S0915.02]]</p>
+<p><b>(4) 결론.</b> 두 평균을 비교하면 <span class="hl">에너지 플럭스 = 빛의 속도 × 에너지 밀도</span>, 즉 에너지는 빛의 속도로 전파된다. (1)의 \(\omega u=kS\)에 넣어도 \(\omega/k=c\) — 파동의 전파 속도가 c라는 같은 관계. [[S0915.02]]</p></div>
+<div class="formula"><div class="ftitle">암기 — 평면파의 시간평균 에너지</div>\[ \langle u\rangle={E_0^2\over8\pi},\qquad\langle S\rangle={cE_0^2\over8\pi}=c\langle u\rangle \]<p class="note">E₀는 실수 정현파의 <b>피크</b> 진폭(⟨cos²⟩ = 1/2가 이미 들어감). RMS 진폭을 쓰면 8π → 4π. 세기·플럭스는 장의 <b>제곱</b>에 비례. [[L05.s4, S0915.02]]</p></div>
+<div class="apply"><b>수치 감각 — 지구에서 받는 햇빛</b>태양 상수 \(F\approx1.36\times10^6\) erg s⁻¹ cm⁻²를 \(\langle S\rangle\)로 놓으면 \(E_0=\sqrt{8\pi F/c}\approx0.034\) statV/cm(≈ 1.0×10³ V/m), \(\langle u\rangle=F/c\approx4.5\times10^{-5}\) erg cm⁻³. (실제 햇빛은 무편광·광대역이므로 "등가 단색파"의 진폭이라는 뜻.) → 예제 3.15. [[L05.s4]]</div>
+
+<h4>복사 스펙트럼 = 전기장의 시간 변화 <span class="en">L05 slide 5 · Radiation Spectrum</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 5 <span class="st">Radiation Spectrum</span></div>
+<ul>
+<li>The spectrum of radiation depends on the <b><i>time variation</i></b> of the electric field.<ul>
+<li>We can ignore the magnetic field, since it mimics the electric field.</li>
+<li>Knowing only the electric field at one point, one cannot give a meaning to the spectrum of radiation at a precise instant.</li></ul></li>
+<li>[그림: 왼쪽 — 'Light electric field' vs 'Time'의 일정한 사인파: "Monochromatic waves have only one frequency ν₀." / 오른쪽 — 무지개색 배경에서 진동이 점점 빨라지는 파형: "This wave has many frequencies. The frequency increases in time"]</li>
+<li>Fourier transform of the (square of) electric fields gives a spectrum.</li>
+<li>If we record the radiation field for time Δ<i>t</i>, we can only define the spectrum to within a frequency resolution Δ<i>ν</i>, where \(\Delta\nu\Delta t\ge1\).<ul><li>If one observes signals over <i>T</i>, the width of the finest features in the spectrum is \(\Delta\nu\sim1/T\).</li></ul></li>
+</ul> [[L05.s5]]</div>
+<div class="intuit"><b>비유 — 절대음감 맞추기</b>예능에서 음 하나를 들려주고 계이름을 맞추는 문제: <span class="hl">너무 짧게 들려주면 맞히기 어렵고, 길게 들으면 훨씬 쉽다.</span> 복사 스펙트럼도 같다. 소리의 음계가 주파수와 관련 있듯이, 빛의 스펙트럼은 "전기장이 시간에 따라 어떻게 변하는가"다. 피아노 건반 하나(단색파, monochromatic)를 쳐도 아주 짧은 순간만 보면 진동수를 알 수 없고, 한 주기 이상을 길게 볼수록 판단이 쉬워진다. [[S0915.16, S0915.17]]</div>
+<div class="explain"><b>부가설명</b>
+<p>일반적으로 빛은 단색이 아니라 여러 진동수가 섞여 있다. 그림 오른쪽처럼 처음엔 느리게 변하다가 갑자기 빠르게 진동하는 파형은 저주파·고주파가 섞인 것 — 대부분의 경우가 이렇다. 자기장은 전기장을 (수직 방향으로) 그대로 따라가니 굳이 따로 다룰 필요가 없다. <span class="hl">한 지점·한 순간의 전기장 값만으로는 스펙트럼을 알 수 없고, 시간에 대해 오랫동안 추적해야 한다</span> — 이것을 수학적으로 하는 것이 푸리에 변환이고, 그래서 푸리에 변환을 배운다. 에너지 스펙트럼이므로 장의 제곱(\(E^2\))과 연결된다. [[S0915.18, S0915.19]]</p>
+<p>ν는 실제 진동수(Hz), \(\omega=2\pi\nu\)는 각진동수(angular frequency) — 앞으로 섞어 쓰지만 여기서는 ν로 이야기한다. [[S0915.19]]</p></div>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>왜 \(\Delta\nu\Delta t\gtrsim1\)인가 — 위상차로 보기 [[S0915.19, S0915.20]]</div><ol>
+<li>진동수 ν와 ν + Δν인 두 파동 \(\cos(2\pi\nu t)\), \(\cos(2\pi(\nu+\Delta\nu)t)\)이 동시에 출발했다고 하자.</li>
+<li>위상(phase)이 진폭의 변화를 결정하므로 중요하다. 시간 t 뒤 두 위상의 차이는 \(2\pi(\nu+\Delta\nu)t-2\pi\nu t=2\pi\Delta\nu\,t\).</li>
+<li>두 진동수를 구별하려면 관측하는 동안 위상차가 대략 한 바퀴(2π) 이상 벌어져야 한다: \(2\pi\Delta\nu\,\Delta t\gtrsim2\pi\).</li>
+<li>2π로 나누면 \(\Delta\nu\,\Delta t\gtrsim1\). <b>정확한 식이 아니라 대략적인 기준</b>이다.</li>
+<li>관측 시간 T 동안 신호를 받으면 분해할 수 있는 진동수 폭은 \(\Delta\nu\sim1/T\). <span class="hl">오래 들을수록(관측할수록) 진동수를 더 잘 구별한다 — 빛도 마찬가지.</span></li>
+</ol></div>
+<div class="apply"><b>수치 감각</b>1 ns 동안만 기록한 신호 → Δν ~ 1 GHz. 500 nm 빛(ν ≈ 6.0×10¹⁴ Hz)이라면 Δλ = λΔν/ν ≈ 8×10⁻⁴ nm(분해능 R = ν/Δν ≈ 6×10⁵). 1 μs 기록 → Δν ~ 1 MHz. → 예제 3.16, 3.2. [[L05.s5, S0915.20]]</div>
+
+<h4>푸리에 변환 <span class="en">L05 slide 6 · Fourier Transform</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 6 <span class="st">Fourier Transform</span></div>
+<ul>
+<li>We can express the time varying electric field <i>E</i>(<i>t</i>) in terms of a Fourier transform:
+\[ \hat E(\nu)=\int_{-\infty}^{+\infty}E(t)e^{i2\pi\nu t}dt,\qquad E(t)=\int_{-\infty}^{+\infty}\hat E(\nu)e^{-i2\pi\nu t}d\nu \]
+<ul><li>All the information about the frequency behavior of <i>E</i>(<i>t</i>) is contained in \(\hat E(\nu)\).</li></ul></li>
+<li>For real <i>E</i>(<i>t</i>), \(\displaystyle\hat E(-\nu)=\int_{-\infty}^{+\infty}E(t)e^{-i2\pi\nu t}dt=\hat E^*(\nu)\)<ul><li>The negative frequencies can be eliminated.</li></ul></li>
+<li>Parseval theorem: \(\displaystyle\int_{-\infty}^{+\infty}E^2(t)dt=\int_{-\infty}^{+\infty}|\hat E(\nu)|^2d\nu\)<ul><li>Total energy in the real space is the same as in the Fourier space.</li></ul></li>
+</ul> [[L05.s6]]</div>
+<div class="explain"><b>부가설명</b>
+<p><b>(1) 정의와 규격화.</b> \(E(t)\)에 \(e^{i2\pi\nu t}\)를 곱해 −∞~∞로 적분한 ν의 함수 \(\hat E(\nu)\)에 진동수 정보가 전부 담긴다. 부호를 바꿔 다시 적분(역변환)하면 원래 \(E(t)\)가 나온다. 지수에 \(\omega\)를 쓰는 경우엔 한쪽(또는 양쪽)에 \(1/2\pi\)(또는 \(1/\sqrt{2\pi}\)) 규격화 인자가 붙는 convention이 있는데, <b>\(2\pi\nu\)를 쓰면 규격화 인자가 필요 없다</b>. [[S0915.21, S0915.22]]</p>
+<p><b>(2) 실함수.</b> \(E(t)\)가 실수면 전체의 복소켤레를 취해도 같으므로 \(\hat E(-\nu)=\hat E^*(\nu)\). 물리적으로 ν는 항상 양수지만, 수학적으로 쓰다 보니 음의 진동수가 나온다(음의 시간 = 과거라고 생각할 수 있듯이). 실신호에서는 음진동수 부분이 양진동수의 복소켤레 → <b>중복(redundant) 정보</b>라 없앨 수 있다. [[S0915.22]]</p>
+<p><b>(3) Parseval.</b> 이 성질을 이용해 증명: \(E^2\)(또는 /8π 한 에너지 밀도)의 전체 시간 적분 = 진동수 공간 적분 → <span class="hl">총에너지는 보존된다</span>. 교수님: "나중에 한번 쓰니까 정리를 해봤어요." [[S0915.22, S0915.23]]</p></div>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>Parseval 정리 (한 줄씩)</div><ol>
+<li>\(\int E^2dt=\int E(t)\Big[\int\hat E(\nu)e^{-i2\pi\nu t}d\nu\Big]dt\) (E 하나를 역변환으로 대체).</li>
+<li>적분 순서를 바꾸면 \(=\int\hat E(\nu)\Big[\int E(t)e^{-i2\pi\nu t}dt\Big]d\nu=\int\hat E(\nu)\hat E(-\nu)d\nu\).</li>
+<li>실함수이므로 \(\hat E(-\nu)=\hat E^*(\nu)\) → \(=\int|\hat E(\nu)|^2d\nu\). ∎ [[L05.s6, S0915.22]]</li>
+</ol></div>
+
+<h4>시간 영역 ↔ 주파수 영역 <span class="en">L05 slide 7</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 7 <span class="st">Fourier Transform</span></div>
+<ul>
+<li>[그림: 시간 영역 E(t) ↔ 주파수 영역 |Ê(ν)|² 세 쌍 — ① 가우스 함수(넓은 가우스) ↔ 좁은 가우스; ② 유한한 사인 함수(−1 &lt; t &lt; 1 구간만 진동) ↔ ν ≈ 2 근처 봉우리(양옆 작은 물결); ③ 감쇄 조화진동자(급히 켜지고 지수적으로 감쇠) ↔ ν ≈ 5에 매우 좁은 봉우리]</li>
+<li>Sharp features ↔ ringing</li>
+<li>Narrow feature in time domain ↔ broad spectrum</li>
+<li>Broad feature in time domain ↔ narrow spectrum</li>
+</ul> [[L05.s7]]</div>
+<div class="explain"><b>부가설명</b>
+<p><b>① 가우스 ↔ 가우스.</b> 가우스 함수의 푸리에 변환은 가우스. 시간 영역에서 넓으면 주파수 영역에서는 좁아진다(상호성). [[S0915.23, S0915.24]]</p>
+<p><b>② 유한한 사인 = 사각 펄스(square pulse) × 무한 사인.</b> 두 함수 <b>곱</b>의 푸리에 변환 = 각 푸리에 변환의 <b>합성곱(convolution)</b>. 사각 펄스(그 구간만 1, 나머지 0)의 FT는 sinc 함수 \(\sin x/x\)(세기는 sinc²), 무한 사인의 FT는 델타 함수 → 합성곱하면 사인 진동수로 옮겨진 sinc. 양옆의 작은 물결이 그 sinc의 곁가지 — 경계가 날카로우면(sharp feature) 스펙트럼에 <b>ringing</b>이 생긴다. (전산천문학에서 배운 내용.) [[S0915.23, S0915.24]]</p>
+<p><b>③ 감쇄 조화진동자 = 지수 감쇠 × 진동.</b> 오래 지속되는(시간 영역에서 넓은) 진동 → 아주 좁은 봉우리. <span class="hl">좁은 것은 넓게, 넓은 것은 좁게.</span> 감쇠시간 τ이면 선폭(FWHM) \(\Delta\nu=1/(\pi\tau)\) — \(\Delta\nu\Delta t\sim1\)의 구체적 예(→ 예제 3.17). [[S0915.24]]</p></div>
+<div class="trap"><b>함정</b>"짧은 펄스인데 한 진동수만 가진다"는 불가능 — 시간적으로 국소화하려면 여러 진동수를 합쳐야 한다. 또 \(\hat E\) 자체가 아니라 <b>\(|\hat E|^2\)</b>(복소켤레와의 곱)가 에너지 스펙트럼이다. [[L05.s7, S0915.23]]</div>
+
+<h4>에너지 스펙트럼 <span class="en">L05 slide 8 · Energy Spectrum</span> <span class="star">기억</span></h4>
+<div class="slide"><div class="sh">L05 · 슬라이드 8 <span class="st">Energy Spectrum</span></div>
+<ul>
+<li>Energy per unit time per unit area (= Poynting vector = Power/area):
+\[ \mathbf S={c\over4\pi}\mathbf E\times\mathbf B={c\over4\pi}E^2\hat{\mathbf k}\ \Rightarrow\ {dP\over dA}={dW\over dt\,dA}={c\over4\pi}E^2(t) \]
+\[ \Rightarrow\ {dW\over dA}={c\over4\pi}\int_{-\infty}^{+\infty}E^2(t)dt={c\over4\pi}\int_{-\infty}^{+\infty}|\hat E(\nu)|^2d\nu={c\over2\pi}\int_0^{+\infty}|\hat E(\nu)|^2d\nu \]
+\[ \Rightarrow\ \boxed{{dW\over dA\,d\nu}={c\over2\pi}|\hat E(\nu)|^2}\ \text{ = the energy per unit area per unit frequency} \]</li>
+<li>Since \(dA=r^2d\Omega\), the energy per unit solid angle per unit frequency is given by \(\displaystyle{dW\over d\Omega\,d\nu}={cr^2|\hat E(\nu)|^2\over2\pi}\)</li>
+<li>In terms of the angular frequency ω (= 2πν), \(\hat E(\nu)=2\pi\hat E(\omega)\), so that \(\displaystyle{dW\over d\Omega\,d\omega}=cr^2|\hat E(\omega)|^2\)</li>
+</ul> [[L05.s8]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>Poynting → 단위 입체각·단위 각진동수당 에너지 [[S0915.25, S0915.26]]</div><ol>
+<li>\(S=\frac c{4\pi}|\mathbf E\times\mathbf B|\), \(|\mathbf E|=|\mathbf B|\)이고 수직 → \(S=\frac c{4\pi}E^2\), 방향 \(\hat{\mathbf k}\). S는 <b>파워/면적</b>이고 파워 = 시간당 에너지(광도와 같은 개념) → \(dW/dt\,dA=\frac c{4\pi}E^2(t)\).</li>
+<li>양변에 dt를 곱해 −∞~∞로 적분 → \(dW/dA=\frac c{4\pi}\int E^2dt\).</li>
+<li>Parseval로 진동수 공간 적분으로 바꾼다. 실함수라 \(|\hat E(\nu)|^2\)는 우함수 → −∞~∞ 적분 = 0~∞ 적분의 2배 → 계수 \(c/4\pi\times2=c/2\pi\).</li>
+<li>ν에 대해 미분(적분의 역과정) → \(dW/dA\,d\nu=\frac c{2\pi}|\hat E(\nu)|^2\) = 단위 면적·단위 진동수당 에너지.</li>
+<li>세기처럼 단위 입체각당으로: \(dA=r^2d\Omega\) → \(dW/d\Omega\,d\nu=cr^2|\hat E(\nu)|^2/2\pi\) = 단위 입체각·단위 진동수당 통과하는 복사 에너지.</li>
+<li>각진동수로: 항상 \(I_\nu d\nu=I_\omega d\omega\)(어느 변수로 쓰든 성립), \(d\omega/d\nu=2\pi\) → \(dW/d\Omega\,d\omega=\frac1{2\pi}dW/d\Omega\,d\nu\). 여기에 \(\hat E(\nu)=2\pi\hat E(\omega)\)를 넣으면 \(|\hat E(\nu)|^2\)에서 \((2\pi)^2\)이 나오고, 분모의 2π 두 개와 상쇄 → <b>2π가 사라진다</b>: \(dW/d\Omega\,d\omega=cr^2|\hat E(\omega)|^2\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">암기 — 에너지 스펙트럼 <span class="star">기억</span></div>\[ {dW\over dA\,d\nu}={c\over2\pi}|\hat E(\nu)|^2,\qquad {dW\over d\Omega\,d\nu}={cr^2|\hat E(\nu)|^2\over2\pi},\qquad {dW\over d\Omega\,d\omega}=cr^2|\hat E(\omega)|^2 \]<p class="note">\(\hat E(\omega)\)는 \(\frac1{2\pi}\int E e^{i\omega t}dt\) convention → \(\hat E(\nu)=2\pi\hat E(\omega)\). 교수님: <span class="hl">"이 식 하나 기억을 해두세요. 나중에 쓸 거니까."</span> 앞으로 가속하는 전하의 전기장을 구하고 → 푸리에 변환 → 이 식에 넣어 관측자가 받는 단위 입체각·단위 각진동수당 에너지를 계산한다(제동복사·싱크로트론 등). [[L05.s8, S0915.26]]</p></div>
+<div class="trap"><b>함정 · 2π와 2배</b>① −∞~∞ → 0~∞로 바꿀 때의 <b>2배</b>(음진동수 제거)를 빠뜨리면 c/4π로 남는다. ② ν ↔ ω 변환 시 \(\hat E\) 자체의 2π와 \(d\omega=2\pi d\nu\)의 2π를 둘 다 챙겨야 한다. 결과: \(dW/d\Omega\,d\nu=2\pi\,dW/d\Omega\,d\omega\). [[L05.s8, S0915.25, S0915.26]]</div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u09-1"><div class="qq">E 진폭을 3배로 하면 평균 복사 에너지 흐름은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>9배. \(\langle S\rangle=cE_0^2/8\pi\) — 파워는 장의 제곱에 비례한다.</p></div></div>
+
+<div class="qz" data-q="u09-2"><div class="qq">유한 펄스인데 완벽히 한 주파수만 갖는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 시간적 국소화를 만들려면 여러 주파수 성분을 합쳐야 한다(유한 사인 = 사각 펄스 × 사인 → sinc 폭 ~ 1/T).</p></div></div>
+
+<div class="qz" data-q="u09-3"><div class="qq">복소 Fourier 변환을 그냥 제곱해도 파워인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 복소켤레를 곱한 절댓값 제곱 \(|\hat E|^2=\hat E\hat E^*\)이다. \(\hat E^2\)는 복소수가 될 수 있다.</p></div></div>
+
+<div class="qz" data-q="u09-4"><div class="qq">\(\langle S\rangle=c\langle u\rangle\)를 평면파 시간평균으로 보이고, 그 물리적 의미를 한 문장으로.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(|\mathbf E|=|\mathbf B|\) → \(u=E^2/4\pi\), \(S=cE^2/4\pi\); ⟨cos²⟩ = 1/2로 \(\langle u\rangle=E_0^2/8\pi\), \(\langle S\rangle=cE_0^2/8\pi\). 에너지가 빛의 속도로 흐른다.</p></div></div>
+
+<div class="qz" data-q="u09-5"><div class="qq">\(\Delta\nu\Delta t\gtrsim1\)을 위상차로 설명하라. 0.1 s 동안 관측하면 분해할 수 있는 진동수 폭은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>ν와 ν + Δν의 위상차는 2πΔν t. 관측 시간 동안 이것이 ~2π 이상 벌어져야 구별 가능 → ΔνΔt ≳ 1. 0.1 s → Δν ~ 10 Hz.</p></div></div>
+
+<div class="qz" data-q="u09-6"><div class="qq">\(dW/dA\,d\nu=\frac c{2\pi}|\hat E(\nu)|^2\)에서 c/4π가 아니라 c/2π인 이유는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>실함수 E(t)에서 \(|\hat E(\nu)|^2\)는 우함수라 −∞~∞ 적분을 0~∞ 적분의 2배로 쓰기 때문(음진동수는 중복 정보).</p></div></div>
+
+<div class="qz" data-q="u09-7"><div class="qq">평면파를 진공 맥스웰 방정식에 넣으면 무엇을 알 수 있나? (세 가지)</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\mathbf k\cdot\mathbf E=\mathbf k\cdot\mathbf B=0\)(횡파), \(\mathbf B=\hat{\mathbf k}\times\mathbf E\)(E⊥B), 가우스 단위에서 \(|\mathbf E|=|\mathbf B|\). 파동방정식에서 ω = ck.</p></div></div>
+
+<p class="note">출처: Lecture05 EMWaves 슬라이드 4–8 · 플립 10(에너지 방정식·파동방정식·평면파) · 9/15 강의 속기(에너지 보존 리뷰, 절대음감 비유~에너지 스펙트럼 구간) · 상태: PPT·플립·속기 전수 반영 / 교재 세부 대조 전</p>

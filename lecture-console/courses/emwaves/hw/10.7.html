@@ -1,0 +1,17 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+(a) \(\divg\vb{J}=-\frac{\dot q}{4\pi}\divg\!\left(\frac{\hat{\vb{r}}}{r^2}\right)=-\dot q\,\delta^3(\vb{r})\), \(\partial\rho/\partial t=\dot q\,\delta^3(\vb{r})\).
+\(\boxed{\divg\vb{J}+\partial\rho/\partial t=0}\) ✓
+
+(b) Coulomb 게이지에서 \(\nabla^2V=-\rho/\eps\) (Poisson) 이므로 <b>즉각적으로</b>
+\[ V(\vb{r},t)=\frac{1}{4\pi\eps}\int\frac{\rho(\vb{r}',t)}{\rr}d\tau'=\frac{q(t)}{4\pi\eps r}. \]
+\(\vb{A}\)는 \(\nabla^2\vb{A}-\muz\eps\ddot{\vb{A}}=-\muz\vb{J}+\muz\eps\nabla(\partial V/\partial t)\)를 만족해야 한다. 우변을 계산하면
+\[ \muz\eps\nabla\frac{\partial V}{\partial t}=\muz\eps\frac{\dot q}{4\pi\eps}\nabla\frac1r=-\frac{\muz\dot q}{4\pi}\frac{\hat{\vb{r}}}{r^2},\qquad
+-\muz\vb{J}=+\frac{\muz\dot q}{4\pi}\frac{\hat{\vb{r}}}{r^2} \]
+합이 0이다. 따라서 \(\boxed{V=\dfrac{q(t)}{4\pi\eps r},\quad \vb{A}=0}\)
+
+(c) \(\vb{E}=-\nabla V=\dfrac{q(t)}{4\pi\eps r^2}\hat{\vb{r}},\ \vb{B}=0\).
+검증: \(\divg\vb{E}=q(t)\delta^3(\vb{r})/\eps=\rho/\eps\) ✓; \(\divg\vb{B}=0\) ✓; \(\curl\vb{E}=0=-\partial\vb{B}/\partial t\) ✓;
+\(\curl\vb{B}=0\) 이고 \(\muz\vb{J}+\muz\eps\partial\vb{E}/\partial t=-\frac{\muz\dot q}{4\pi r^2}\hat{\vb{r}}+\frac{\muz\dot q}{4\pi r^2}\hat{\vb{r}}=0\) ✓.
+<div class="alabel">감점 포인트</div>
+Coulomb 게이지 \(V\)가 "지금 이 순간"의 \(\rho\)로 정해진다는 점(비인과적으로 보이는 것)을 지연 퍼텐셜과 혼동하는 실수.</div><!--/sol-->

@@ -1,0 +1,10 @@
+<div class="exq"><span class="examtag">HW2-2 연계</span><br>xy 평면에서 반지름 \(r_0\), 각속도 \(\omega\)로 도는 전하 \(q\)(비상대론). 관측 방향이 z축과 각 θ를 이룰 때 시간평균 각분포와 편광을 구하라. [[F15.11]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>원운동 = 90° 위상차 두 선진동</div><ol>
+<li>가속도 크기는 \(r_0\omega^2\)로 일정, 방향은 \(\hat a=(\cos\omega t,\sin\omega t,0)\)로 회전.</li>
+<li>시선 \(\hat n=(\sin\theta,0,\cos\theta)\): \(\sin^2\alpha=1-(\hat a\cdot\hat n)^2=1-\cos^2\omega t\,\sin^2\theta\) → 평균 \(1-\tfrac12\sin^2\theta=\tfrac12(1+\cos^2\theta)\). [[F15.07]]</li>
+<li>\(\langle dP/d\Omega\rangle=\dfrac{q^2r_0^2\omega^4}{4\pi c^3}\cdot\dfrac{1+\cos^2\theta}{2}\), 적분하면 \(P=\dfrac{2q^2r_0^2\omega^4}{3c^3}\)(가속도 크기가 일정하므로 라모 그대로).</li>
+<li>편광: 복사장은 가속도의 하늘 평면 투영. z축 시선(θ=0)에서는 두 성분이 같은 크기·90° 위상차 → 원편광. 궤도면 시선(θ=90°)에서는 한 성분만 보임 → 선편광. 중간은 타원편광. [[F15.11]]</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>평균 각분포 \(\propto1+\cos^2\theta\) (축 방향이 궤도면 방향의 2배). 축=원편광, 궤도면=선편광, 중간=타원편광. 무편광 톰슨 산란 각분포와 같은 꼴 — 두 수직 진동의 합이라는 같은 구조.</p></div>
+<div class="qz" data-q="ex4.2-a"><div class="qq"><b>+α</b> 같은 전하가 한 축으로 진폭 r₀, 진동수 ω로 단진동할 때와 원운동할 때 평균 총파워의 비는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>단진동 ⟨a²⟩ = r₀²ω⁴/2, 원운동 a² = r₀²ω⁴ → 원운동이 2배.</p></div></div>
+<div class="qz" data-q="ex4.2-b"><div class="qq"><b>+α</b> θ = 60°에서 본 선편광도(타원의 축비로)는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>두 투영 성분 진폭이 1과 cos60° = 0.5. 세기 비 0.25 → 선편광도 (1−0.25)/(1+0.25) = 0.6 (나머지는 원편광 성분).</p></div></div>

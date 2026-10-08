@@ -1,0 +1,17 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(n_1=1\)(공기)→\(n_2=2.42\), \(\mu_1=\mu_2=\mu_0\)이므로 \(\beta=n_2/n_1=2.42\), \(\alpha=\cos\theta_T/\cos\theta_I\). 평행(p) 편광:
+\[\frac{\tilde E_{0R}}{\tilde E_{0I}}=\frac{\alpha-\beta}{\alpha+\beta},\qquad \frac{\tilde E_{0T}}{\tilde E_{0I}}=\frac{2}{\alpha+\beta}.\]
+<b>(a)</b> \(\theta_I=0\Rightarrow\alpha=1\):
+\[\boxed{\frac{\tilde E_{0R}}{\tilde E_{0I}}=\frac{1-2.42}{1+2.42}=-0.415,\qquad \frac{\tilde E_{0T}}{\tilde E_{0I}}=\frac{2}{3.42}=0.585}\]
+(음수 = \(180^\circ\) 위상 반전; 세기로는 \(R=0.172\), \(T=0.828\).)<br>
+<b>(b)</b> Brewster: \(\alpha=\beta\) → \(\tan\theta_B\simeq n_2/n_1\):
+\[\boxed{\theta_B=\tan^{-1}(2.42)=67.5^\circ}\]
+<b>(c)</b> \(|\tilde E_{0R}|=\tilde E_{0T}\) → \(|\alpha-\beta|=2\). \(\alpha=\beta-2=0.42\)는 해가 없고(제곱하면 모순), \(\alpha=\beta+2=4.42\):
+\[\frac{\cos\theta_T}{\cos\theta_I}=4.42,\qquad \sin\theta_T=\frac{\sin\theta_I}{2.42}.\]
+\(s\equiv\sin\theta_I\)로 두면 \(1-\dfrac{s^2}{5.856}=19.54(1-s^2)\Rightarrow 19.37s^2=18.54\Rightarrow s=0.978\).
+\[\boxed{\theta_{\text{cross}}\approx78.1^\circ}\]
+검산: \(\cos\theta_I=0.207\), \(\sin\theta_T=0.404\), \(\cos\theta_T=0.915\) → \(\alpha=4.42\), \(\frac{\tilde E_{0R}}{\tilde E_{0I}}=\frac{2.00}{6.84}=0.293\), \(\frac{\tilde E_{0T}}{\tilde E_{0I}}=\frac{2}{6.84}=0.292\) \(\checkmark\)<br>
+<b>그래프 개형:</b> \(\tilde E_{0R}/\tilde E_{0I}\)는 \(-0.415\)에서 출발 → \(67.5^\circ\)에서 0 → \(90^\circ\)에서 \(+1\). \(\tilde E_{0T}/\tilde E_{0I}\)는 \(0.585\)에서 단조 감소 → \(90^\circ\)에서 0. 둘은 \(78.1^\circ\)에서 교차.
+<div class="alabel">감점 포인트</div>
+교차각은 Brewster 각 <b>이후</b>(반사 진폭이 부호를 바꾼 뒤)에 나온다. \(\alpha=\beta-2\) 가지를 검토 없이 채택하면 해가 없다는 것을 놓친다.</div><!--/sol-->

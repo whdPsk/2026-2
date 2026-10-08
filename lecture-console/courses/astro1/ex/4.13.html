@@ -1,0 +1,11 @@
+<div class="exq"><span class="examtag">PPT Review Q④ · 9/17 수업</span><br>State Larmor's formula for the power radiated by a charge \(q\) undergoing acceleration \(a\).<br>(가속도 \(a\)로 가속하는 전하 \(q\)가 복사하는 파워에 대한 라모 공식을 써라.) 덧붙여, 1 statvolt cm⁻¹(=300 V cm⁻¹) 전기장에서 가속되는 전자의 복사 파워를 구하라. [[L06.s3d]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>공식과 수치</div><ol>
+<li>\(dP/d\Omega=\dfrac{q^2a^2}{4\pi c^3}\sin^2\Theta\), 입체각 적분 \(8\pi/3\) → \(P=\dfrac{2q^2a^2}{3c^3}\). [[F15.07, F15.10]]</li>
+<li>외우는 법: 분자 2·q²·a², 분모 3·c³ ("2가 3개, 3이 2개"). [[F15.11, S0917.10]]</li>
+<li>조건: β≪1(κ=1, β 무시) — 비상대론적 가속 전하. [[S0917.12]]</li>
+<li>수치: \(a=eE/m_e=4.80\times10^{-10}/9.11\times10^{-28}=5.27\times10^{17}\) cm s⁻², \(P=2e^2a^2/3c^3=1.6\times10^{-15}\) erg s⁻¹ (python).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>\(P=\dfrac{2q^2a^2}{3c^3}\) (Gaussian), 전자는 \(2e^2a^2/3c^3\). 예시 수치 ≈ 1.6×10⁻¹⁵ erg s⁻¹ — 전자 하나는 아주 약하다. 100% 선편광, \(\sin^2\Theta\) 패턴.</p></div>
+<div class="trap"><b>함정</b>SI로는 \(P=q^2a^2/(6\pi\varepsilon_0c^3)\). 이 과목은 Gaussian cgs — 단위계를 섞지 말 것.</div>
+<div class="qz" data-q="ex4.13-a"><div class="qq"><b>+α</b> 양성자가 같은 전기장에서 가속될 때 복사 파워는 전자의 몇 배?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>a ∝ 1/m → P ∝ 1/m² → (m_e/m_p)² ≈ 3.0×10⁻⁷배. 그래서 복사는 거의 전자가 담당.</p></div></div>
+<div class="qz" data-q="ex4.13-b"><div class="qq"><b>+α</b> x = x₀cos ωt로 진동하는 전자(x₀ = 10⁻⁸ cm, λ = 5000 Å)의 평균 복사 파워는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>⟨P⟩ = e²ω⁴x₀²/3c³, ω = 3.77×10¹⁵ s⁻¹ → ≈ 5.7×10⁻⁵ erg s⁻¹.</p></div></div>

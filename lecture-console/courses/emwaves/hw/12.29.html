@@ -1,0 +1,20 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+(a) 모든 운동이 \(x\)축 위. \(\bar u=\dfrac{u-v}{1-uv/c^{2}}\)이므로
+\[ \sum_\text{after} m\bar u-\sum_\text{before} m\bar u=\sum_i \pm\,m_i\frac{u_i-v}{1-u_iv/c^{2}}. \]
+분모가 입자마다 <b>다르다</b>는 것이 결정적이다. 갈릴레이 때처럼 공통인수로 묶이지 않으므로, \(\sum m u\)가 앞뒤로 같다는 사실만으로는 \(\sum m\bar u\)가 같아지지 않는다.
+<p>구체적 반례: 질량 \(m\)인 두 입자가 \(S\)에서 \(+\frac34c\)와 \(-\frac34c\)로 정면충돌해 정지한 덩어리가 된다고 하자(\(p=0\to0\), 보존). \(v=\frac34c\)인 \(\bar S\)에서:
+\[ \bar u_1=\frac{\frac34-\frac34}{1-\frac9{16}}c=0,\qquad \bar u_2=\frac{-\frac34-\frac34}{1+\frac9{16}}c=-\frac{3/2}{25/16}c=-\frac{24}{25}c, \]
+충돌 전 \(\sum m\bar u=-\frac{24}{25}mc\). 충돌 후 덩어리(질량 \(M\))는 \(\bar u=-\frac34c\)이므로 \(-\frac34Mc\). 두 값이 같으려면 \(M=\frac{32}{25}m\)여야 하는데, 이는 \(S\)에서 요구되는 값과 일반적으로 모순이다.
+\[ \boxed{p=mu\ \text{정의로는 운동량 보존이 상대성 원리와 양립하지 않는다}} \]</p>
+
+<p>(b) \(p^{\mu}=m\eta^{\mu}\)로 정의하면 \(p^{\mu}\)는 <b>4-벡터</b>이고, 로런츠 변환은 <b>선형</b>이다:
+\[ \bar p^{1}=\gamma_v\Bigl(p^{1}-\beta_v p^{0}\Bigr),\qquad \bar p^{0}=\gamma_v\Bigl(p^{0}-\beta_v p^{1}\Bigr). \]
+선형성 때문에 합에 그대로 적용된다:
+\[ \sum\bar p^{1}=\gamma_v\Bigl(\sum p^{1}-\beta_v\sum p^{0}\Bigr). \]
+따라서 \(S\)에서 \(\sum p^{1}\)과 \(\sum p^{0}\)가 <b>둘 다</b> 보존되면, \(\bar S\)에서 \(\sum\bar p^{1}\)도 보존된다.
+\[ \boxed{\text{운동량 보존이 모든 관성계에서 성립하려면 }p^{0}=E/c\ \text{(에너지)도 반드시 보존되어야 한다}} \]
+즉 상대론에서는 <b>에너지 보존과 운동량 보존이 하나의 4-벡터 보존 법칙</b>으로 통합된다. (고전 극한에서 이 요구가 "질량 보존"으로 환원되는 것도 확인할 수 있다: \(p^0\approx mc+\frac{1}{2}mu^2/c\).)</p>
+
+<div class="alabel">감점 포인트</div>
+(b)에서 "4-벡터니까 당연히 보존"이라고 끝내는 것. 핵심은 <b>변환의 선형성 + 시간 성분(에너지)의 동시 보존</b>이라는 두 조건이며, 후자를 명시하지 않으면 논증이 성립하지 않는다.</div><!--/sol-->

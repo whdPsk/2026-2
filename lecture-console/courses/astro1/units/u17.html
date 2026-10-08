@@ -1,0 +1,159 @@
+<div class="predict"><b>◈ 학습 목표.</b> 빛의 속도에 가까운 전하의 복사를 다룬다. ① 상대론적 라모 공식 \(P=\tfrac{2q^2}{3c^3}\gamma^4(a_\perp^2+\gamma^2a_\parallel^2)\)을 쓰고, 왜 수직 가속은 \(\gamma^4\), 평행 가속은 \(\gamma^6\)인지(Lorentz 변환) 말로 설명한다. ② Liénard–Wiechert 복사장에서 <b>받는(received) 파워</b>(\(\kappa^{-6}\))와 <b>방출한(emitted) 파워</b>(\(\kappa^{-5}\))가 \(dt/dt'=\kappa=1-\hat{\mathbf n}\cdot\boldsymbol\beta\) 하나만큼 다른 이유를 기하학으로 이해한다. ③ \(\boldsymbol\beta\parallel\dot{\boldsymbol\beta}\), \(\boldsymbol\beta\perp\dot{\boldsymbol\beta}\) 두 경우의 파워 패턴과 총 파워(\(\gamma^6\), \(\gamma^4\))를 따라가고, <span class="hl">복사가 진행 방향 반각 \(\sim1/\gamma\) 원뿔에 몰리는 beaming</span>을 그림으로 그린다. 10/1 PPT09 슬라이드 5–15 + 녹음 후반 "보충(rigorous)" 부분 + 플립 19 앞부분. 출제 스타일상 <b>유도 세부보다 \(\gamma\) 의존성·beaming 각·시간 압축의 물리</b>가 핵심.</div>
+
+<h4>Review ③ 상대론적 라모 공식 <span class="en">power with a∥ and a⊥</span></h4>
+<div class="slide"><div class="sh">L09 · 슬라이드 3 ③ <span class="st">Review Questions</span></div>
+<ul><li>Write the expression for the total power radiated by a relativistic electron with parallel acceleration \(a_\parallel\) and perpendicular acceleration \(a_\perp\) relative to its velocity.</li></ul> [[L09.s3c]]</div>
+<div class="explain"><b>모범답</b> 전자 하나이므로 라모 공식 \(P=\dfrac{2e^2a^2}{3c^3}\)에서 출발. 가속도를 속도에 평행·수직 성분으로 나누면
+\[ P=\frac{2e^2}{3c^3}\gamma^4\left(a_\perp^2+\gamma^2a_\parallel^2\right) \]
+<span class="hl">수직 성분은 \(\gamma^4\), 평행 성분은 \(\gamma^6\)</span>. [[L09.s3c, D1001.08]]<br>
+왜 \(\gamma\)가 붙나 — <b>Lorentz 변환</b> 때문. 매우 빠른 입자의 가속도를 (입자의 순간) 정지 좌표계에서 재면, 속도 방향에 평행한 성분은 \(\gamma^3\), 수직 성분은 \(\gamma^2\)이 붙는다(\(a'_\parallel=\gamma^3a_\parallel\), \(a'_\perp=\gamma^2a_\perp\)). 정지계에서는 비상대론 라모 공식이 그대로 맞고 복사 파워(에너지/시간)는 Lorentz 불변이므로, 제곱하면 \(\gamma^6\), \(\gamma^4\). 역학·전자기학의 Lorentz 변환에서 오는 것이고, 디테일은 아래 보충(슬라이드 5–15)에서 rigorous하게. [[D1001.08]]</div>
+<div class="slide flip"><div class="sh">플립 19 · 2:37–3:30 <span class="st">비상대론 라모 → 상대론적 확장</span></div>
+<ol><li>라모 공식: 전하 \(q\), 가속도 \(a\)인 입자가 방출하는 파워 \(P=\dfrac{2q^2a^2}{3c^3}\) — 이미 학습한 <b>non-relativistic</b> 결과. [[F19.04]]</li>
+<li>relativistic으로 확장하면 가속도의 수직 방향 성분은 \(\gamma^4a_\perp^2\), 수평(평행) 방향은 \(\gamma^6\)이 더 들어가 \(P=\dfrac{2q^2}{3c^3}\gamma^4(a_\perp^2+\gamma^2a_\parallel^2)\). 이 변형 관계는 특수상대론의 Lorentz 변환으로도, 다양한 각도로도 증명할 수 있지만 시간이 많이 걸려 생략하고 여기서 출발한다(→ 10/1 수업 보충에서 증명). [[F19.04]]</li>
+<li>\(\gamma\)는 Lorentz 인자, \(a_\perp\)·\(a_\parallel\)은 각각 <b>속도에 대해</b> 수직·평행인 가속도 성분. [[F19.05]]</li></ol></div>
+<div class="trap"><b>STT 교정 (10/1)</b>"22제곱 33제곱" → \(2e^2/3c^3\), "아모르 공식" → Larmor 공식, "오렌지 변환/오른쪽에는" → Lorentz 변환. 녹음의 "퍼펜디큘러는 감마 제곱, 패러렐은 감마 세제곱"은 <b>가속도(진폭)</b>에 붙는 인자 — 파워로는 제곱해서 \(\gamma^4\), \(\gamma^6\). [[D1001.08]]</div>
+
+<h4>받는 파워 <span class="en">Received power</span></h4>
+<div class="slide"><div class="sh">L09 · 슬라이드 5 ① <span class="st">Received Power</span></div>
+<ul><li>Recall that the <b>radiation field</b> at point \(P\) by an accelerated charge is
+\[ \mathbf E(\mathbf x,t)=\frac qc\left[\frac{\hat{\mathbf n}\times\{(\hat{\mathbf n}-\boldsymbol\beta)\times\dot{\boldsymbol\beta}\}}{\kappa^3R}\right]_{\rm ret},\qquad \mathbf B(\mathbf x,t)=[\hat{\mathbf n}\times\mathbf E]_{\rm ret} \]
+where \(\hat{\mathbf n}\equiv\mathbf R(t')/R(t')\), \(\boldsymbol\beta\equiv\mathbf v(t')/c\), \(\kappa\equiv1-\hat{\mathbf n}\cdot\boldsymbol\beta\)</li>
+<li>[그림: 원점 O에서 전하 위치 \(\mathbf x_0(t')\)로 가는 벡터, 곡선 궤적 위 속도 \(\mathbf v(t')\), 관측점 P까지의 \(\mathbf x\)와 \(\mathbf R=\mathbf x-\mathbf x_0(t')\)]</li></ul> [[L09.s5a]]</div>
+<div class="slide"><div class="sh">L09 · 슬라이드 5 ② <span class="st">Received Power</span></div>
+<ul><li>The power pattern <b>received</b> by an observer at P is
+\[ \frac{dP}{d\Omega}=R^2(\mathbf S\cdot\hat{\mathbf n})=\frac{q^2}{4\pi c}\left[\frac{|\hat{\mathbf n}\times\{(\hat{\mathbf n}-\boldsymbol\beta)\times\dot{\boldsymbol\beta}\}|^2}{\kappa^6}\right]_{\rm ret} \]</li>
+<li>– Depends on both \(\beta\) and \(\dot\beta\).</li>
+<li>– The \(\kappa\) term is responsible for the beaming effect of emitted radiation.</li></ul> [[L09.s5b]]</div>
+<div class="explain"><b>부가설명 (10/1 보충)</b> 복사장 식은 엄밀히 다 유도하진 않았고 결과만 받아들였다. \(\hat{\mathbf n}\) = 전자에서 관측자를 향한 단위벡터, \(\boldsymbol\beta\) = 상대론적 속도(\(v/c\)), \(\kappa\) = <b>Doppler parameter</b> — 관측자 방향과 전자 속도 방향 사이 각도에 따라 변하며 <span class="hl">beaming 효과를 설명하는 항</span>. [[D1001.22]]<br>
+파워 = 포인팅 벡터 \(\mathbf S=\dfrac{c}{4\pi}\mathbf E\times\mathbf B\)(복사장에서 \(|\mathbf E|=|\mathbf B|\)). 포인팅 벡터는 단위 시간·단위 면적당 에너지인데 \(P\)는 시간당 에너지이므로, 면적을 입체각으로 바꾸려고 \(R^2\)를 곱한다 → 단위 입체각당 파워. \(\mathbf E\)를 제곱하니 \(\kappa^3\to\kappa^6\), \(R^2\)는 \(1/R\)의 제곱과 상쇄. [[D1001.22]]<br>
+일반적으로 \(\beta\)와 \(\dot\beta\) 모두에 의존한다. <b>예전(비상대론, 라모)</b>에는 \(\beta\ll1\)이라 \(\beta\)를 무시했지만(\(\kappa\to1\)), 지금은 \(\beta\approx1\)이라 \(\hat{\mathbf n}\)·\(\boldsymbol\beta\) 모두 크기 ~1 → <b>\(\kappa\) 항을 없앨 수 없다</b>. 그리고 이 값은 모두 <b>retarded time</b>에서 계산한 값을 써야 한다. [[D1001.22]]</div>
+
+<h4>\(dt/dt'=\kappa\) <span class="en">retarded time vs observer time</span></h4>
+<div class="slide"><div class="sh">L09 · 슬라이드 6 ① <span class="st">dt/dt′</span></div>
+<ul><li>The received power is determined by the acceleration of a charge at the retarded time \(t'=t-R(t')/c\).</li>
+<li>Since \(R^2(t')=|\mathbf x-\mathbf x(t')|^2\),
+\[ 2R\frac{dR}{dt'}=2[\mathbf x-\mathbf x(t')]\cdot(-\mathbf v)=-2R\,\hat{\mathbf n}\cdot\mathbf v\ \Longrightarrow\ \frac{dR}{dt'}=-\hat{\mathbf n}\cdot\mathbf v \]
+we obtain
+\[ 1=\frac{dt}{dt'}-\frac1c\frac{dR(t')}{dt'}=\frac{dt}{dt'}+\hat{\mathbf n}\cdot\boldsymbol\beta\ \Longrightarrow\ \frac{dt}{dt'}=1-\hat{\mathbf n}\cdot\boldsymbol\beta=\kappa \]</li></ul> [[L09.s6a]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">판서 (10/1)</span>retarded time 미분 [[D1001.22]]</div><ol>
+<li>retarded time과 관측자 시간(프라임 없는 \(t\))의 변환 관계가 필요. 정의 \(t'=t-R(t')/c\), \(R\) = 소스(전자)와 관측자 사이 거리.</li>
+<li>\(\mathbf R=\mathbf x-\mathbf x_0(t')\): \(\mathbf x_0\)는 전자 위치, \(\mathbf x\)는 원점 기준 관측자 위치. 제곱 \(R^2=|\mathbf x-\mathbf x_0(t')|^2\)을 \(t'\)로 미분하면 좌변 \(2R\,dR/dt'\), 우변은 \(\mathbf x_0\)만 미분 → 전자의 속도 \(\mathbf v\)가 나온다.</li>
+<li>\(\mathbf x-\mathbf x_0=R\hat{\mathbf n}\)(\(\hat{\mathbf n}\)은 \(\mathbf R\) 방향 단위벡터) → \(2R\,dR/dt'=-2R\,\hat{\mathbf n}\cdot\mathbf v\) → \(dR/dt'=-\hat{\mathbf n}\cdot\mathbf v\).</li>
+<li>\(t=t'+R/c\)를 \(t'\)로 미분: 좌변 1, 마이너스·마이너스가 플러스가 되고 \(c\)로 나눠 \(\beta\) → \(dt/dt'=1-\hat{\mathbf n}\cdot\boldsymbol\beta=\kappa\). <span class="hl">신기하게도 \(\kappa\)의 정의 그 자체</span>. [[D1001.23]]</li></ol></div>
+<div class="slide"><div class="sh">L09 · 슬라이드 6 ② <span class="st">dt/dt′ — Geometrical interpretation</span></div>
+<ul><li>Consider a situation that a moving source emits radiation as it moves from point 1 to point 2 at velocity \(v\) over the time span \(dt'\).</li>
+<li>The difference in arrival times \(dt\) of the radiation emitted at 1 and 2 is equal to \(dt'\) minus the time taken for radiation to propagate a distance \(d=v\,dt'\cos\theta\):
+\[ dt=dt'\left(1-\frac vc\cos\theta\right)=\kappa\,dt' \]</li>
+<li>[그림: 점 1 → 2로 \(v\,dt'\) 이동, θ 방향으로 나가는 평행한 두 광선; 1에서 나간 광선이 \(c\,dt'\) 진행했고 그중 \(v\,dt'\cos\theta\) 구간이 빨간색으로 표시]</li></ul> [[L09.s6b]]</div>
+<div class="explain"><b>부가설명 · 기하학적 의미</b> 전자가 x축 방향으로 속도 \(v\)로 움직이며 θ 방향으로 복사를 낸다. 1에서 한 번, \(dt'\) 뒤 2에서 한 번. 전자가 1→2로 가는 \(dt'\) 동안 1에서 나간 복사는 이미 빛의 속도로 \(c\,dt'\)만큼 앞서 달려가 있다. 2에서 나간 복사는 1에서 나간 것보다 <b>\(v\,dt'\cos\theta\)만큼 덜 달리면 된다</b> → 도착 시간차가 \(dt'\)보다 짧아져 \(dt=dt'(1-\beta\cos\theta)=\kappa\,dt'\). 즉 <span class="hl">관측자에게 다가오며 내는 신호는 도착 간격이 \(\kappa\)배로 압축</span>된다(delay time이 \(\kappa\)만큼 줄어드는 효과). [[L09.s6b, D1001.23, D1001.24]]</div>
+<div class="intuit"><b>직관</b>앞으로 달리며 1초마다 공을 던지면, 공을 받는 사람에게는 1초보다 짧은 간격으로 도착한다 — 내가 다음 공을 던질 때 이미 거리를 좁혀 놨으니까. \(\beta\to1\), \(\theta\to0\)이면 \(\kappa\approx1/2\gamma^2\)로 극단적으로 압축 → 싱크로트론 펄스(U18)의 \(\gamma^3\)이 여기서 나온다.</div>
+<div class="trap"><b>STT 교정</b>"카드타임/루타일 타임/리터 타임/retire time" → retarded time, "inhibitor" → (unit) vector, "48분의 10" → \(c/4\pi\), "VTT prime cosine center" → \(v\,dt'\cos\theta\), "카파 프라임" → \(\kappa\,dt'\). [[D1001.22, D1001.23]]</div>
+
+<h4>방출한 파워 <span class="en">Emitted power: κ⁶ → κ⁵</span></h4>
+<div class="slide"><div class="sh">L09 · 슬라이드 7 <span class="st">Emitted Power</span></div>
+<ul><li>For relativistic charges, there is a difference between the emitted and received power.</li>
+<li>Since the energy flux received by an observer between \(t_1=T_1+R(T_1)/c\) and \(t_2=T_2+R(T_2)/c\) is
+\[ \int_{T_1+R(T_1)/c}^{T_2+R(T_2)/c}[\mathbf S\cdot\hat{\mathbf n}]_{\rm ret}dt=\int_{T_1}^{T_2}(\mathbf S\cdot\hat{\mathbf n})\frac{dt}{dt'}dt' \]
+<b>the energy flux emitted</b> is given by \(\mathbf S\cdot\hat{\mathbf n}\,\dfrac{dt}{dt'}=\kappa\,\mathbf S\cdot\hat{\mathbf n}\) (evaluated at \(t'\))</li>
+<li>Therefore, the emitted power per unit solid angle is
+\[ \frac{dP_{\rm em}}{d\Omega}=R^2(\mathbf S\cdot\hat{\mathbf n})\frac{dt}{dt'}=\frac{q^2}{4\pi c}\frac{|\hat{\mathbf n}\times\{(\hat{\mathbf n}-\boldsymbol\beta)\times\dot{\boldsymbol\beta}\}|^2}{\kappa^5}\quad\text{evaluated at }t' \]</li>
+<li>– Different from \(dP/d\Omega\) by a factor of \(\kappa=1-\hat{\mathbf n}\cdot\boldsymbol\beta=1-\beta\cos\theta\).</li></ul> [[L09.s7]]</div>
+<div class="explain"><b>부가설명</b> 표기: 소문자 \(t\) = 관측자 시간, 대문자 \(T\) = 소스(전자) 입장의 시간(retarded). 관측자가 \(t_1\)~\(t_2\) 동안 받은 에너지 플럭스 = 포인팅 플럭스(시간당·면적당)를 시간 적분한 것(→ 면적당 에너지). 이것을 retarded time으로 <b>변수 변환</b>하면 적분 한계의 \(R/c\)가 상쇄되어 \(T_1\), \(T_2\)만 남고, 피적분 함수에 \(dt/dt'\)가 붙는다. 이렇게 소스 시간으로 적분한 양을 \(dt'\)로 미분한 것이 <span class="hl">전자가 실제로 방출한 파워(emitted power) = received × \(\kappa\)</span>. [[D1001.24]]<br>
+그래서 입체각당 emitted power는 분모가 \(\kappa^6\)에서 \(\kappa^5\)로 — <b>Doppler parameter \(\kappa\) 인자 하나만 다르다</b>. 일반 경우 계산은 어려우니 두 특수 경우: ① 속도와 가속도가 같은 방향(싱크로트론은 아님), ② 수직(싱크로트론은 가속도가 속도에 수직). [[D1001.25]]</div>
+<div class="trap"><b>헷갈리기 쉬운 점</b>received(\(\kappa^{-6}\))는 관측자 시계로 잰 시간당 에너지, emitted(\(\kappa^{-5}\))는 전자 시계(\(t'\))로 잰 시간당 에너지. 같은 에너지 덩어리를 압축된 시간(\(dt=\kappa\,dt'\))에 받으므로 받는 파워가 \(1/\kappa\)배 크다. 총 에너지 손실(전자의 감속)을 따질 땐 emitted를 쓴다. 녹음 "mzd power" → emitted power, "포인트 플러스" → Poynting flux. [[D1001.24]]</div>
+
+<h4>경우 ① \(\boldsymbol\beta\parallel\dot{\boldsymbol\beta}\) <span class="en">linear acceleration</span></h4>
+<div class="slide"><div class="sh">L09 · 슬라이드 8 <span class="st">When β ∥ β̇</span></div>
+<ul><li>If \(\boldsymbol\beta\parallel\dot{\boldsymbol\beta}\), \(\hat{\mathbf n}\times\{(\hat{\mathbf n}-\boldsymbol\beta)\times\dot{\boldsymbol\beta}\}=\hat{\mathbf n}\times(\hat{\mathbf n}\times\dot{\boldsymbol\beta})\)
+so that
+\[ \frac{dP_{\rm em}}{d\Omega}=\frac{q^2}{4\pi c}\frac{\dot\beta^2\sin^2\theta}{(1-\beta\cos\theta)^5}=\frac{q^2}{4\pi c^3}\frac{a^2\sin^2\theta}{(1-\beta\cos\theta)^5} \]
+where \(a=c\dot\beta\). θ : angle between \(\boldsymbol\beta\) and \(\hat{\mathbf n}\)</li>
+<li>If non-relativistic (\(\beta\ll1\)), \(\dfrac{dP_{\rm em}}{d\Omega}=\dfrac{q^2}{4\pi c^3}a^2\sin^2\theta\) : dipole radiation</li>
+<li>[그림: \(\dot{\boldsymbol\beta}\parallel\boldsymbol\beta\) 화살표(위)와 \(\hat{\mathbf n}\) 사이 각 θ; 무지개색 3D 도넛형 쌍극자 파워 패턴(가속 축 방향으로 0)]</li></ul> [[L09.s8]]</div>
+<div class="explain"><b>부가설명</b> 좌표: 관측 방향 \(\hat{\mathbf n}\), 속도·가속도가 같은 축. \(\boldsymbol\beta\times\dot{\boldsymbol\beta}=0\)이라 그 항을 빼면 \(\hat{\mathbf n}\times(\hat{\mathbf n}\times\dot{\boldsymbol\beta})\)만 남고, 크기는 \(\dot\beta\sin\theta\)(단위벡터 크기 1) → 제곱해 \(\sin^2\theta\), 분모 \(\kappa^5=(1-\beta\cos\theta)^5\). \(\dot\beta\)를 \(a/c\)로. [[D1001.25]]<br>
+\(\beta\to0\)이면 분모가 1 → <span class="hl">이미 배운 쌍극자(dipole) 복사 패턴(라모)</span>과 같은 결과. 상대론적이면 분모만 바뀌는데, <b>분모가 0에 가까워지는 방향</b>(\(\cos\theta\to1\), 즉 \(\theta\approx0\) — 속도 방향)으로 파워가 커진다 → 원래 가속 축에 수직이던 쌍극자 로브가 <b>속도 방향으로 쏠린다</b>. 그림은 3D 패턴을 잘라 본 단면. [[D1001.25]]</div>
+<div class="slide"><div class="sh">L09 · 슬라이드 9 <span class="st">When β ∥ β̇ — relativistic</span></div>
+<ul><li>If relativistic (\(\beta\to1\)), we use the Lorentz factor \(\gamma^2=\dfrac{1}{1-\beta^2}\) to approximate
+\[ 1-\beta\cos\theta\approx1-\left(1-\frac{1}{2\gamma^2}\right)\left(1-\frac{\theta^2}{2}\right)\approx\frac{1+\gamma^2\theta^2}{2\gamma^2} \]</li>
+<li>Then, the angular distribution of the emitted power is
+\[ \frac{dP_{\rm em}}{d\Omega}\approx\frac{8q^2a^2\gamma^8(\gamma\theta)^2}{\pi c^3(1+\gamma^2\theta^2)^5} \]
+: peaks at \(\gamma\theta_{\max}=1/2\).</li>
+<li>[그림: 가로축 \(\gamma\theta\) 0–2, 세로축 정규화된 \(dP_{\rm em}/d\Omega\) — 0에서 0, \(\gamma\theta=0.5\)에서 최대 1, 이후 빠르게 감소] <b>Beaming effect</b> [그림: 속도 \(\mathbf v\)(위) 방향으로 좁게 쏠린 두 로브(β≈1)와 아래쪽의 원래 작은 쌍극자(β≪1), \(\theta_{\max}\) 표시]</li></ul> [[L09.s9]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">판서 (10/1)</span>Taylor 전개 → 피크 각 [[D1001.26]]</div><ol>
+<li>복잡하니 \(\beta\approx1\), \(\gamma\gg1\)로 \(\kappa\)를 전개. \(1-\beta^2=1/\gamma^2\)에서 \(1-\beta\approx1/2\gamma^2\), 즉 \(\beta\approx1-\dfrac{1}{2\gamma^2}\).</li>
+<li>로브는 θ가 작을 때만 나오므로 \(\cos\theta\approx1-\theta^2/2\). 곱해서 정리하면 1이 없어지고 \(\dfrac{1+\gamma^2\theta^2}{2\gamma^2}\)만 남는다(2차 미소항 \(\theta^2/4\gamma^2\) 무시).</li>
+<li>대입, \(\sin\theta\approx\theta\): \((2\gamma^2)^5\theta^2/(1+\gamma^2\theta^2)^5\times q^2a^2/4\pi c^3=\dfrac{8q^2a^2\gamma^8(\gamma\theta)^2}{\pi c^3(1+\gamma^2\theta^2)^5}\) (python 검산 ✓).</li>
+<li>\(\gamma\theta\)의 함수로 그리면: \(\gamma\theta=0\)에서는 분자 때문에 0, \(\gamma\theta\)가 크면 5승 때문에 사라짐 → 그 사이 최대. \(\dfrac{d}{dx}\dfrac{x^2}{(1+x^2)^5}=0\Rightarrow x^2=1/4\) → <span class="hl">\(\gamma\theta_{\max}=1/2\)</span>(python 0.500).</li></ol></div>
+<div class="explain"><b>그림 해석 — beaming</b> \(\beta\to0\)이면 쌍극자: 가속 방향(=속도 방향)으로는 파워가 없고 옆으로 퍼진다. 속도가 커지면 두 로브가 <b>속도 방향으로 쏠려서</b> 좁아진다. \(\theta_{\max}\approx\dfrac{1}{2\gamma}\sim\dfrac1\gamma\). 단면이고 실제론 회전대칭 → <b>아이스크림 콘</b> 같은 모양으로, 콘의 벽 방향으로 복사가 나간다. <span class="hl">정확히 속도 방향(θ = 0)으로는 0</span>. 이것이 <b>beaming 효과</b>. [[L09.s9, D1001.26, D1001.27]]</div>
+<div class="slide"><div class="sh">L09 · 슬라이드 10 <span class="st">When β ∥ β̇ — total power</span></div>
+<ul><li>The total emitted power is
+\[ P_{\rm em}=\int\frac{dP_{\rm em}}{d\Omega}d\Omega=\frac{q^2a^2}{4\pi c^3}2\pi\int_0^\pi\frac{\sin^3\theta}{(1-\beta\cos\theta)^5}d\theta=\frac{q^2a^2}{2c^3}\int_{-1}^{1}\frac{1-\mu^2}{(1-\beta\mu)^5}d\mu=\frac{q^2a^2}{2c^3}\cdot\frac{4}{3(1-\beta^2)^3}=\frac{2q^2a^2\gamma^6}{3c^3}\ \propto\gamma^6 \]</li>
+<li>This recovers the Larmor formula for non-relativistic (γ=1) dipole radiation.</li></ul> [[L09.s10]]</div>
+<div class="explain"><b>부가설명</b> 근사식이 아니라 <b>full expression</b>으로 입체각 적분 — \(\cos\theta=\mu\)로 치환하면 어렵지 않다. \((1-\beta^2)^{-3}=\gamma^6\): 속도와 가속도가 평행하면 라모 대비 <span class="hl">\(\gamma^6\)만큼의 부스트</span>. 이건 exact 계산이고, Lorentz 변환으로도 얼마든지 얻을 수 있다. \(\gamma=1\)이면 라모 공식. [[L09.s10, D1001.27]]</div>
+<div class="apply"><b>수치 (python)</b>\(\gamma=10,100\)에서 \(\int dP_{\rm em}/d\Omega\,d\Omega\)를 수치적분 → \(\tfrac23\gamma^6\)(단위 \(q^2a^2/c^3\))과 비 1.000000 ✓. \(\gamma=10\)이면 같은 가속도에서 라모의 10⁶배.</div>
+
+<h4>경우 ② \(\boldsymbol\beta\perp\dot{\boldsymbol\beta}\) <span class="en">circular motion — synchrotron case</span></h4>
+<div class="slide"><div class="sh">L09 · 슬라이드 11 <span class="st">When β ⊥ β̇ — setup</span></div>
+<ul><li>Let us take \(\boldsymbol\beta\) and \(\dot{\boldsymbol\beta}\) parallel to the z- and x-axes, respectively.</li>
+<li>Set \(\hat{\mathbf n}=(\sin\theta\cos\varphi,\ \sin\theta\sin\varphi,\ \cos\theta)\). Then, \(\hat{\mathbf n}-\boldsymbol\beta=(\sin\theta\cos\varphi,\ \sin\theta\sin\varphi,\ \cos\theta-\beta)\).
+\[ (\hat{\mathbf n}-\boldsymbol\beta)\times\dot{\boldsymbol\beta}=\begin{vmatrix}\hat{\mathbf x}&\hat{\mathbf y}&\hat{\mathbf z}\\ \sin\theta\cos\varphi&\sin\theta\sin\varphi&\cos\theta-\beta\\ \dot\beta&0&0\end{vmatrix}=\dot\beta(0,\ \cos\theta-\beta,\ -\sin\theta\sin\varphi) \]
+\[ \hat{\mathbf n}\times\{(\hat{\mathbf n}-\boldsymbol\beta)\times\dot{\boldsymbol\beta}\}=\dot\beta\begin{vmatrix}\hat{\mathbf x}&\hat{\mathbf y}&\hat{\mathbf z}\\ \sin\theta\cos\varphi&\sin\theta\sin\varphi&\cos\theta\\ 0&\cos\theta-\beta&-\sin\theta\sin\varphi\end{vmatrix} \]
+\[ =\hat{\mathbf x}\dot\beta(-\sin^2\theta\sin^2\varphi-\cos^2\theta+\beta\cos\theta)+\hat{\mathbf y}\dot\beta\sin^2\theta\sin\varphi\cos\varphi+\hat{\mathbf z}\dot\beta\sin\theta\cos\varphi(\cos\theta-\beta) \]
+\[ =\hat{\mathbf x}\dot\beta(-1+\sin^2\theta\cos^2\varphi+\beta\cos\theta)+\hat{\mathbf y}\dot\beta\sin^2\theta\sin\varphi\cos\varphi+\hat{\mathbf z}\dot\beta\sin\theta\cos\varphi(\cos\theta-\beta) \]</li>
+<li>[그림: \(\boldsymbol\beta\parallel\hat{\mathbf z}\)(위), \(\dot{\boldsymbol\beta}\parallel\hat{\mathbf x}\), 관측 방향 \(\hat{\mathbf n}\)의 극각 θ·방위각 φ]</li></ul> [[L09.s11]]</div>
+<div class="explain"><b>부가설명</b> 가속도 = x축, 속도 = z축, 관측자는 임의 방향(극각 θ, 방위각 φ) — 구면좌표의 임의 단위벡터. \(\boldsymbol\beta=(0,0,\beta)\)이므로 빼면 z성분에서만 \(-\beta\). \(\dot{\boldsymbol\beta}\)는 x 성분만 있으니 외적을 "정말 무식한 방법으로" 계산하면 x는 0, y와 z만 남는다. 그 결과와 \(\hat{\mathbf n}\)을 다시 외적하고, x 성분의 \(\sin^2\varphi\)를 \(1-\cos^2\varphi\)로 바꿔 한 번 더 정리. [[D1001.27, D1001.28]]</div>
+<div class="slide"><div class="sh">L09 · 슬라이드 12 <span class="st">When β ⊥ β̇ — power pattern</span></div>
+<ul><li>Then,
+\[ |\hat{\mathbf n}\times\{(\hat{\mathbf n}-\boldsymbol\beta)\times\dot{\boldsymbol\beta}\}|^2=\dot\beta^2(-1+\sin^2\theta\cos^2\varphi+\beta\cos\theta)^2+a^2\sin^4\theta\sin^2\varphi\cos^2\varphi+a^2\sin^2\theta\cos^2\varphi(\cos^2\theta-2\beta\cos\theta+\beta^2) \]</li>
+<li>By collecting terms containing \(\cos^2\varphi\) separately, one can write
+\[ |\hat{\mathbf n}\times\{(\hat{\mathbf n}-\boldsymbol\beta)\times\dot{\boldsymbol\beta}\}|^2=\dot\beta^2(1-\beta\cos\theta)^2+\dot\beta^2\cos^2\varphi\sin^2\theta(\beta^2-1)=\dot\beta^2(1-\beta\cos\theta)^2-\dot\beta^2\cos^2\varphi\sin^2\theta/\gamma^2 \]</li>
+<li>Therefore, the angular distribution of the emitted power is
+\[ \frac{dP_{\rm em}}{d\Omega}=\frac{q^2}{4\pi c}\frac{|\hat{\mathbf n}\times\{(\hat{\mathbf n}-\boldsymbol\beta)\times\dot{\boldsymbol\beta}\}|^2}{\kappa^5}=\frac{q^2a^2}{4\pi c^3}\frac{1}{(1-\beta\cos\theta)^3}\left[1-\frac{\sin^2\theta\cos^2\varphi}{\gamma^2(1-\beta\cos\theta)^2}\right],\qquad\dot\beta=a/c \]</li></ul> [[L09.s12]]</div>
+<div class="explain"><b>부가설명</b> 크기 제곱 = x² + y² + z² 성분 제곱의 합(내적). \(\cos^2\varphi\)가 있는 항과 없는 항으로 묶으면, 없는 쪽은 \((1-\beta\cos\theta)^2=\kappa^2\), 있는 쪽은 \(\beta^2-1=-1/\gamma^2\)이 붙는다. emitted power에 넣으면 분모 \(\kappa^5\) 중 첫 항의 \(\kappa^2\)가 상쇄되어 공통 인자 \(1/\kappa^3\), 둘째 항엔 \(\kappa^2\)가 분모에 남는다. [[D1001.28]]</div>
+<div class="trap"><b>슬라이드 표기</b>슬라이드 12 첫 식의 둘째·셋째 항은 \(a^2\)로 적혀 있지만 첫 항과 맞추려면 \(\dot\beta^2\)(\(=a^2/c^2\))로 읽어야 한다(최종식은 \(\dot\beta=a/c\)로 일관). 정리 결과는 python 수치 대입(임의 θ·φ·β)으로 확인. [[L09.s12]]</div>
+<div class="slide"><div class="sh">L09 · 슬라이드 13 <span class="st">When β ⊥ β̇ — γ ≫ 1</span></div>
+<ul><li>For \(\gamma\gg1\), \(1-\beta\cos\theta\approx1-\left(1-\dfrac{1}{2\gamma^2}\right)\left(1-\dfrac{\theta^2}{2}\right)\approx\dfrac{1+\gamma^2\theta^2}{2\gamma^2}\)
+so that
+\[ \frac{dP_{\rm em}}{d\Omega}\approx\frac{2q^2a^2\gamma^6}{\pi c^3(1+\gamma^2\theta^2)^3}\left[1-\frac{4\gamma^2\theta^2\cos^2\varphi}{(1+\gamma^2\theta^2)^2}\right] \]</li>
+<li>➔ Most energy is concentrated in a small angle with \(\theta\le1/\gamma\).</li>
+<li>[그림: 회색 3D 타원체 파워 패턴(\(\dot{\boldsymbol\beta}\), \(\boldsymbol\beta\) 축); "at the φ = π/2 plane" 단면 — 가속도 \(\mathbf a\) 방향의 작은 로브와 속도 \(\mathbf v\) 방향으로 길게 뻗은 로브, 반각 \(1/\gamma\); 오른쪽 \(dP_{\rm em}/d\Omega\) vs \(\gamma\theta\)(0–2) — \(\gamma\theta=0\)에서 최대, \(\gamma\theta\sim1\)–2에서 0으로]</li></ul> [[L09.s13]]</div>
+<div class="explain"><b>부가설명</b> 같은 근사(θ 작고 β≈1, γ 큼)를 쓰면 위 식. \(\gamma\theta\)의 함수로 그리면 <span class="hl">대부분의 에너지가 θ ≲ 1/γ인 작은 각</span>에 집중. 원래 가속도 방향 축에 대칭인 쌍극자가, 수직인 속도 방향으로 빔이 쏠린다. 뒤쪽(가속도 쪽)의 작은 로브는 사실상 중요하지 않다. 3D 그림은 β가 그리 크지 않은 경우 — β가 크면 너무 좁아 교재에 그림으로 담기 어렵다. <b>상대론적으로 움직이면 복사가 진행 방향으로 집중</b>된다는 것이 요점. [[L09.s13, D1001.29]]<br>
+경우 ①과 달리 \(\theta=0\)(정확히 속도 방향)에서 <b>최대</b>라는 점도 비교.</div>
+<div class="slide"><div class="sh">L09 · 슬라이드 14 <span class="st">When β ⊥ β̇ — total power</span></div>
+<ul><li>The total emitted power is
+\[ P_{\rm em}=\int\frac{dP_{\rm em}}{d\Omega}d\Omega=\frac{q^2a^2}{4\pi c^3}\left[2\pi\int_0^\pi\frac{\sin\theta\,d\theta}{(1-\beta\cos\theta)^3}-\frac{1}{\gamma^2}\int_0^\pi\frac{\sin^3\theta\,d\theta}{(1-\beta\cos\theta)^5}\int_0^{2\pi}\cos^2\varphi\,d\varphi\right] \]
+\[ =\frac{q^2a^2}{4\pi c^3}\left[2\pi\frac{2}{(1-\beta^2)^2}-\frac{1}{\gamma^2}\cdot\frac{4}{3(1-\beta^2)^3}\cdot\pi\right]=\frac{q^2a^2}{4\pi c^3}\cdot\frac{8\pi\gamma^4}{3}=\frac{2q^2a^2\gamma^4}{3c^3}\ \propto\gamma^4 \]</li>
+<li>Again, this recovers the Larmor formula for non-relativistic (γ=1) dipole radiation.</li></ul> [[L09.s14]]</div>
+<div class="explain"><b>부가설명</b> 이것도 rigorous하게 입체각 적분. 첫 항은 φ가 없어 \(2\pi\)를 꺼내고, 둘째 항은 φ 적분(\(\pi\))을 따로. \(4\pi\gamma^4-\tfrac{4\pi}{3}\gamma^4=\tfrac{8\pi}{3}\gamma^4\). 결과는 경우 ①과 같은 모양인데 <span class="hl">유일한 차이는 \(\gamma^6\)이 아니라 \(\gamma^4\)</span>. 수직이니까 Lorentz 변환으로 얻은 결과(Review ③)와 정확히 같다 → 완전한 증명. \(\gamma=1\)이면 라모. [[L09.s14, D1001.30]]</div>
+<div class="apply"><b>수치 (python)</b>\(\gamma=10,100\)에서 이중적분 → \(\tfrac23\gamma^4\)과 비 1.000000 ✓. 같은 크기의 가속도라도 평행 가속이 \(\gamma^2\)배 더 복사한다 — 하지만 자기장 속 전자는 수직 가속만 받는다(U18).</div>
+
+<h4>일반적인 경우 <span class="en">General cases (Liénard)</span></h4>
+<div class="slide"><div class="sh">L09 · 슬라이드 15 <span class="st">General Cases</span></div>
+<ul><li>In general, the acceleration \(\mathbf a\) of a charge can be decomposed into the parallel component \(\mathbf a_\parallel\) and the perpendicular component \(\mathbf a_\perp\) to its velocity:
+– \(\mathbf a=\mathbf a_\parallel+\mathbf a_\perp\) and \(a^2=a_\parallel^2+a_\perp^2\)</li>
+<li>The total power can then be written as
+\[ P_{\rm em}=\frac{2q^2\gamma^4}{3c^3}(a_\perp^2+\gamma^2a_\parallel^2)=\frac{2q^2\gamma^6}{3c^3}\left(\frac{a_\perp^2}{\gamma^2}+a_\parallel^2\right)=\frac{2q^2\gamma^6}{3c^3}\left(\frac{a_\perp^2}{\gamma^2}+a^2-a_\perp^2\right) \]
+\[ =\frac{2q^2\gamma^6}{3c^3}(a^2-\beta^2a_\perp^2)=\frac{2q^2\gamma^6}{3c}\left[\dot\beta^2-(\boldsymbol\beta\times\dot{\boldsymbol\beta})^2\right]\quad\text{valid for general }\dot{\boldsymbol\beta}\text{ and }\boldsymbol\beta. \]
+where we used \(a=\dot\beta c\), \(a_\perp=|(\boldsymbol\beta/\beta)\times\dot{\boldsymbol\beta}|c\)</li></ul> [[L09.s15]]</div>
+<div class="explain"><b>부가설명</b> 가속도는 벡터라 수직 + 평행의 합, 크기 제곱은 각각의 제곱합. 수직은 \(\gamma^4\), 평행은 \(\gamma^6\). \(\gamma^6\)을 끄집어내고 \(a_\parallel^2=a^2-a_\perp^2\)로 바꾸면 \(\dfrac{1}{\gamma^2}-1=-\beta^2\) → \(a^2-\beta^2a_\perp^2\). 유도는 안 했지만 일반적인 \(\boldsymbol\beta\), \(\dot{\boldsymbol\beta}\)에 대한 식(Liénard)과 같다 — <span class="hl">특정한 두 경우로 구한 결과가 아주 일반적인 결과와 같다</span>. 여기까지 비밍 효과와 파워 패턴. [[L09.s15, D1001.30]]</div>
+<div class="trap"><b>STT 교정 (10/1 보충 후반)</b>"프랑크 패턴" → (쌍극자) 파워 패턴, "typoid location" → dipole radiation, "물레타비스" → relativistic, "비밀 효과" → beaming 효과, "로렌츠 배너" → Lorentz 변환, "컴벤트 클러" → perpendicular, "베탄다스" → \(\dot\beta\), "카파오" → \(\kappa^2\), "밀라미니 각마" → \(1/\gamma\)(추정), "불그러스/일그러스" → rigorous. [[D1001.25, D1001.26, D1001.27, D1001.28, D1001.29, D1001.30]]</div>
+
+<div class="formula"><div class="ftitle">암기 — 상대론적 전하의 복사와 분사</div><p><b>상대론적 라모(Liénard) 총파워</b></p>\[ P={2q^2\over3c^3}\gamma^4\left(a_\perp^2+\gamma^2a_\parallel^2\right)={2q^2\gamma^6\over3c^3}\left(a^2-\beta^2a_\perp^2\right)={2q^2\gamma^6\over3c}\left[\dot\beta^2-(\boldsymbol\beta\times\dot{\boldsymbol\beta})^2\right] \]<p class="note">β∥β̇: \(2q^2a^2\gamma^6/3c^3\), β⊥β̇: \(2q^2a^2\gamma^4/3c^3\). γ→1에서 라모 식. <i>조건: 실험실 시간(t′)당 방출파워, Gaussian cgs</i></p><p><b>received vs emitted, 시간 압축</b></p>\[ \frac{dt}{dt'}=\kappa=1-\hat{\mathbf n}\cdot\boldsymbol\beta,\qquad \frac{dP}{d\Omega}\propto\frac{|\cdots|^2}{\kappa^6},\quad\frac{dP_{\rm em}}{d\Omega}\propto\frac{|\cdots|^2}{\kappa^5} \]<p class="note">θ = 0, γ ≫ 1이면 \(\kappa\approx1/2\gamma^2\); 작은 θ에서 \(\kappa\approx(1+\gamma^2\theta^2)/2\gamma^2\).</p><p><b>beaming</b></p>\[ \theta\sim1/\gamma\quad(\beta\parallel\dot\beta:\ \gamma\theta_{\max}=1/2,\ \theta=0\text{에서 }0;\quad\beta\perp\dot\beta:\ \theta=0\text{에서 최대}) \]<p class="note">아이스크림 콘(평행) / 진행 방향 연필 빔(수직).</p><p><b>(교재 보충) Doppler 인자와 세기 변환</b></p>\[ \delta={1\over\gamma(1-\beta\cos\theta)},\quad\nu=\delta\nu',\quad{I_\nu\over\nu^3}=\mathrm{invariant}\Rightarrow I_\nu(\nu)=\delta^3I'_{\nu'}(\nu/\delta) \]<p class="note">수업 미언급(교재 선행). 정면(θ = 0)에서 δ ≈ 2γ — 예제 6.1.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u17-1"><div class="qq">상대론적 원운동에서 a⊥v이면 γ⁶을 그대로 곱하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 수직 가속은 \(\gamma^4a_\perp^2\)(일반식 \(\gamma^6(a^2-\beta^2a_\perp^2)\)에서 괄호의 \(1-\beta^2\)가 \(\gamma^{-2}\)을 줌). 평행 가속만 \(\gamma^6\). 슬라이드 14의 직접 적분도 \(\propto\gamma^4\). [[L09.s14, L09.s15]]</p></div></div>
+
+<div class="qz" data-q="u17-2"><div class="qq">짧은 관측 펄스가 반드시 짧은 소스 방출시간을 뜻하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. 관측자 쪽으로 움직이며 방출하면 도착 간격이 \(dt=\kappa\,dt'=(1-\beta\cos\theta)dt'\)로 압축된다(앞서 나간 빛을 소스가 뒤쫓아 감). [[L09.s6b, D1001.23]]</p></div></div>
+
+<div class="qz" data-q="u17-3"><div class="qq">received power와 emitted power는 왜 \(\kappa\) 하나만큼 다른가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>같은 에너지를 관측자 시간 \(dt\)로 나누느냐 소스 시간 \(dt'\)로 나누느냐의 차이. 관측자가 받은 플럭스를 retarded time으로 변수 변환하면 \(dt/dt'=\kappa\)가 붙어 emitted = received × κ → 분모 \(\kappa^6\to\kappa^5\). [[L09.s7, D1001.24]]</p></div></div>
+
+<div class="qz" data-q="u17-4"><div class="qq">\(dt/dt'=\kappa\)를 그림(점 1 → 2)으로 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>1에서 나간 빛은 \(dt'\) 동안 \(c\,dt'\) 앞서 감. 그동안 소스가 \(v\,dt'\) 이동해 2에서 다시 방출 → 2의 빛은 \(v\,dt'\cos\theta\)만큼 덜 달림 → 도착시간차 \(dt'-v\,dt'\cos\theta/c=\kappa\,dt'\). [[L09.s6b, D1001.23]]</p></div></div>
+
+<div class="qz" data-q="u17-5"><div class="qq">β∥β̇일 때 파워 패턴의 최대 각과, 정확히 속도 방향의 파워는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(dP/d\Omega\propto(\gamma\theta)^2/(1+\gamma^2\theta^2)^5\) → \(\gamma\theta_{\max}=1/2\). 속도 방향(θ = 0)은 \(\sin^2\theta=0\)이라 0 — 속은 빈 아이스크림 콘. [[L09.s9, D1001.26]]</p></div></div>
+
+<div class="qz" data-q="u17-6"><div class="qq">비상대론에서는 무시하던 \(\kappa\) 항을 왜 상대론에서는 무시할 수 없나?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\kappa=1-\hat{\mathbf n}\cdot\boldsymbol\beta\)에서 β ≪ 1이면 κ ≈ 1이지만, β ≈ 1이면 \(\hat{\mathbf n}\)과 \(\boldsymbol\beta\)가 둘 다 크기 ~1이라 진행 방향에서 κ가 \(1/2\gamma^2\)까지 작아진다 → \(\kappa^{-5}\)가 엄청난 각도 의존(beaming)을 만든다. [[L09.s5b, D1001.22]]</p></div></div>
+
+<div class="qz" data-q="u17-7"><div class="qq">γ = 100인 전자에서 beaming 원뿔의 반각은 대략 몇 도인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(1/\gamma=0.01\) rad ≈ 0.57°. (γ = 10⁴이면 10⁻⁴ rad ≈ 0.006°, 전체 각 2/γ ≈ 0.011° — 예제 6.12.) [[L09.s13]]</p></div></div>
+
+<p class="note">출처: Lecture09 PPT 슬라이드 3③·5–15 · 10/1 녹음(09:44–11:29, 39:43–67:09 보충) · 플립 19(2:37–3:30) · 교재 p.126–129(Doppler 보충은 교재 선행) · 상태: 강의 반영 · L09 해당 슬라이드·D1001 보충 구간 전 항목 인용</p>

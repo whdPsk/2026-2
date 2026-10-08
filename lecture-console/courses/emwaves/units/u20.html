@@ -1,0 +1,117 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 정지한 점전하도, 등속으로 흐르는 정상 전류도 에너지를 가진 장을 만든다. 그런데 왜 이들은 "복사하지 않는다"고 말할까? 반지름 \(r\)의 거대한 구를 상상하고, 그 표면을 빠져나가는 알짜 일률이 \(r\to\infty\)에서 0이 아니려면 장의 세기가 \(r\)에 어떻게 의존해야 하는지 먼저 손으로 써 보라. 그리고 진동하는 쌍극자가 내는 복사 일률이 \(\omega\)의 몇 제곱에 비례할지 짐작해 보라 — 하늘이 파랗다는 사실이 힌트다.</div>
+
+<h4>11.1.1 복사의 정의: \(1/r\) 생존 기준 <span class="en">the 1/r survival criterion</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>왜 "복사 = \(1/r\)로 떨어지는 장"인가</div><ol>
+<li>원점 근처에 국소화된 소스를 두고, 반지름 \(r\)의 거대한 구를 통과하는 일률을 적는다:
+\[ P(r,t)=\oint \vb{S}\cdot \dd\vb{a}=\frac{1}{\muz}\oint (\vb{E}\times\vb{B})\cdot \dd\vb{a}. \]</li>
+<li>전자기 "소식"은 빛의 속도로 오므로, 지금 구를 통과하는 에너지는 지연 시각 \(t_0=t-r/c\)에 소스를 떠난 것이다. 따라서 소스가 실제로 방출한 복사 일률은
+\[ P_{\rm rad}(t_0)=\lim_{r\to\infty} P\!\left(r,\,t_0+\frac{r}{c}\right), \]
+즉 \(t_0\)를 고정한 채 구를 무한히 키우는 극한이다. <b>이 극한이 0이 아닌 것만이 "다시 돌아오지 않는 에너지"</b>이고, 그것을 복사라 부른다.</li>
+<li>구의 넓이는 \(4\pi r^2\)이므로, 극한이 유한하고 0이 아니려면 \(|\vb{S}|\)가 정확히 \(1/r^2\)로 떨어져야 한다. \(\vb{S}\sim \vb{E}\times\vb{B}\)이므로 결국
+\[ \boxed{\;\vb{E}\sim \frac{1}{r},\qquad \vb{B}\sim\frac{1}{r}\;}\]
+인 성분만이 복사에 기여한다. \(1/r^3\)짜리 \(\vb{S}\)라면 \(P\sim 1/r\to 0\)이 되어 복사가 아니다.</li>
+<li>이 기준으로 정전기·정자기를 판정한다. Coulomb 법칙: \(\vb{E}\sim 1/r^2\) (총전하 0이면 더 빠르게). Biot–Savart: \(\vb{B}\sim1/r^2\) (혹은 더 빠르게). 따라서 \(S\sim 1/r^4\), \(P\sim 1/r^2\to0\). <b>정적인 소스는 복사하지 않는다.</b></li>
+<li>반면 Jefimenko 방정식(10.36, 10.38)에는 \(\dot\rho\)와 \(\dot{\vb{J}}\)를 포함한 항이 있고, 이 항들만이 \(1/\rr\)로 떨어진다. <b>시간에 따라 변하는 소스, 구체적으로 가속하는 전하가 복사의 유일한 원천</b>이라는 결론이 여기서 나온다.</li>
+<li>따라서 11장의 작업 순서가 고정된다: (i) \(\vb{E},\vb{B}\) 중 \(1/r\) 부분만 골라낸다 → (ii) 그것으로 \(1/r^2\)짜리 \(\vb{S}\)를 만든다 → (iii) 큰 구 위에서 적분한다 → (iv) \(r\to\infty\). 앞으로 나오는 모든 계산은 이 네 단계의 반복이다.</li>
+</ol></div>
+
+<h4>11.1.2 진동 전기 쌍극자 <span class="en">the oscillating electric dipole</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>지연 스칼라 퍼텐셜 \(V\)와 세 개의 근사</div><ol>
+<li>모형: \(z\)축 위에 거리 \(d\)만큼 떨어진 두 개의 작은 금속구를 가는 도선으로 연결하고, 전하를 왕복시킨다. 위쪽 구의 전하가 \(q(t)=q_0\cos(\omega t)\)이면
+\[ \vb{p}(t)=p_0\cos(\omega t)\,\hat{\vb{z}},\qquad p_0\equiv q_0 d. \]</li>
+<li>지연 퍼텐셜(10.26)을 그대로 적는다:
+\[ V(\vb{r},t)=\frac{1}{4\pi\eps}\left\{\frac{q_0\cos[\omega(t-\rr_+/c)]}{\rr_+}-\frac{q_0\cos[\omega(t-\rr_-/c)]}{\rr_-}\right\}, \]
+코사인 법칙에 의해 \(\rr_\pm=\sqrt{r^2\mp rd\cos\theta+(d/2)^2}\).</li>
+<li><b>근사 1 (\(d\ll r\)) — "완전 쌍극자"</b>. \(d\)에 대해 1차까지만 남긴다(0차는 두 항이 정확히 상쇄되어 아무것도 안 남는다):
+\[ \rr_\pm\approx r\left(1\mp\frac{d}{2r}\cos\theta\right),\qquad \frac{1}{\rr_\pm}\approx\frac{1}{r}\left(1\pm\frac{d}{2r}\cos\theta\right). \]
+<i>쓰이는 곳</i>: 분모의 \(1/\rr_\pm\) 전개.</li>
+<li><b>근사 2 (\(d\ll \lambda=2\pi c/\omega\)) — "지연 위상차가 작다"</b>. 코사인의 인수에 들어간 \(\rr_\pm\)을 전개하면 위상이 \(\pm\omega d\cos\theta/2c\)만큼 어긋나는데, 이 각이 작다고 보고 \(\cos\epsilon\approx1,\ \sin\epsilon\approx\epsilon\):
+\[ \cos[\omega(t-\rr_\pm/c)]\approx\cos[\omega(t-r/c)]\mp\frac{\omega d}{2c}\cos\theta\,\sin[\omega(t-r/c)]. \]
+<i>쓰이는 곳</i>: 코사인의 위상 전개. 이 항이 바로 나중에 \(\omega\)를 하나 만들어 준다.</li>
+<li>두 전개를 대입하고 \(d\)의 1차만 남기면 <b>완전 쌍극자의 정확한(근사 3 이전) 퍼텐셜</b>:
+\[ V(r,\theta,t)=\frac{p_0\cos\theta}{4\pi\eps r}\left\{-\frac{\omega}{c}\sin[\omega(t-r/c)]+\frac{1}{r}\cos[\omega(t-r/c)]\right\}. \]
+검산: \(\omega\to0\)이면 둘째 항만 남아 정전기 쌍극자 \(V=p_0\cos\theta/4\pi\eps r^2\)를 정확히 재현한다.</li>
+<li><b>근사 3 (\(r\gg \lambda\)) — "복사 영역(radiation zone)"</b>. 괄호 안 두 항의 비는 \((\omega/c):(1/r)\), 즉 둘째 항이 \(\lambda/r\)배로 작다. 버린다:
+\[ \boxed{\;V(r,\theta,t)=-\frac{p_0\omega}{4\pi\eps c}\left(\frac{\cos\theta}{r}\right)\sin[\omega(t-r/c)]\;} \]
+<i>쓰이는 곳</i>: \(1/r\)보다 빨리 떨어지는 모든 항의 제거. 세 근사를 합치면 \(d\ll\lambda\ll r\)이고, 근사 2·3이 근사 1을 포함한다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>벡터 퍼텐셜 \(\vb{A}\)와 복사장 \(\vb{E}_{\rm rad},\vb{B}_{\rm rad}\)</div><ol>
+<li>도선의 전류는 \(I(t)=\dd q/\dd t=-q_0\omega\sin(\omega t)\). 지연 벡터 퍼텐셜은
+\[ \vb{A}(\vb{r},t)=\frac{\muz}{4\pi}\int_{-d/2}^{d/2}\frac{-q_0\omega\sin[\omega(t-\rr/c)]}{\rr}\,\hat{\vb{z}}\,\dd z. \]</li>
+<li>여기서 핵심 관찰: <b>적분 자체가 이미 \(d\)라는 인수를 만들어 낸다.</b> 따라서 \(d\)의 1차까지만 원한다면 피적분함수를 중심값(\(\rr\to r\))으로 대체해도 된다:
+\[ \vb{A}(r,\theta,t)=-\frac{\muz p_0\omega}{4\pi r}\sin[\omega(t-r/c)]\,\hat{\vb{z}}. \]
+(근사 1·2만 썼고, 근사 3은 아직 쓰지 않았다 — \(\vb{A}\)는 이미 \(1/r\)이다.)</li>
+<li>\(\nabla V\)를 구면좌표에서 계산하고 근사 3으로 \(1/r^2\) 항을 버린다:
+\[ \nabla V\approx \frac{p_0\omega^2}{4\pi\eps c^2}\left(\frac{\cos\theta}{r}\right)\cos[\omega(t-r/c)]\,\hat{\vb{r}}. \]
+(\(\partial_r\)이 \(\sin\)의 인수 \(-\omega r/c\)를 때릴 때만 \(\omega\)가 하나 더 나오고 \(1/r\)이 유지된다. \(\hat{\boldsymbol\theta}\) 성분은 \(1/r^2\)이라 버려진다.)</li>
+<li>한편
+\[ \frac{\partial\vb{A}}{\partial t}=-\frac{\muz p_0\omega^2}{4\pi r}\cos[\omega(t-r/c)]\left(\cos\theta\,\hat{\vb{r}}-\sin\theta\,\hat{\boldsymbol\theta}\right). \]
+(\(\hat{\vb{z}}=\cos\theta\,\hat{\vb{r}}-\sin\theta\,\hat{\boldsymbol\theta}\)를 썼다.)</li>
+<li>\(\vb{E}=-\nabla V-\partial\vb{A}/\partial t\). \(1/\eps c^2=\muz\)를 쓰면 <b>\(\hat{\vb{r}}\) 성분이 정확히 상쇄</b>되고 횡파만 남는다:
+\[ \boxed{\;\vb{E}=-\frac{\muz p_0\omega^2}{4\pi}\left(\frac{\sin\theta}{r}\right)\cos[\omega(t-r/c)]\,\hat{\boldsymbol\theta}\;}\]
+이 상쇄가 우연이 아니라는 것이 중요하다 — 복사장은 반드시 전파 방향에 수직이어야 한다.</li>
+<li>\(\vb{B}=\curl \vb{A}\)에서 \(\frac{1}{r}\partial_r(rA_\theta)\) 구조를 쓰면 두 항이 나오는데, 근사 3이 \(1/r^2\)짜리를 지운다:
+\[ \boxed{\;\vb{B}=-\frac{\muz p_0\omega^2}{4\pi c}\left(\frac{\sin\theta}{r}\right)\cos[\omega(t-r/c)]\,\hat{\boldsymbol\varphi}\;}\]</li>
+<li>결과 점검: \(\vb{E}\perp\vb{B}\perp\hat{\vb{r}}\), 위상이 같고, \(E_0/B_0=c\). 자유 공간 전자기파가 갖춰야 할 조건을 전부 만족한다. 진폭이 \(1/r\)로 줄어드는 <b>구면파</b>이지만, 큰 \(r\)에서 좁은 영역만 보면 평면파와 구별되지 않는다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>Poynting 벡터, 도넛 모양 세기 분포, 총 복사 일률</div><ol>
+<li>\[ \vb{S}=\frac{1}{\muz}(\vb{E}\times\vb{B})=\frac{\muz}{c}\left\{\frac{p_0\omega^2}{4\pi}\left(\frac{\sin\theta}{r}\right)\cos[\omega(t-r/c)]\right\}^2\hat{\vb{r}}. \]
+\(\hat{\boldsymbol\theta}\times\hat{\boldsymbol\varphi}=\hat{\vb{r}}\)이므로 에너지는 순수하게 바깥으로만 흐른다.</li>
+<li>한 주기 시간평균: \(\langle\cos^2\rangle=1/2\). 따라서 세기(intensity)는
+\[ \langle\vb{S}\rangle=\left(\frac{\muz p_0^2\omega^4}{32\pi^2 c}\right)\frac{\sin^2\theta}{r^2}\,\hat{\vb{r}}. \]</li>
+<li>각분포 읽기: \(\sin^2\theta\)이므로 <b>쌍극자 축(\(\theta=0,\pi\)) 방향으로는 복사가 정확히 0</b>이고, 적도면(\(\theta=\pi/2\))에서 최대다. 3차원으로 그리면 축을 꿰뚫은 도넛 모양.</li>
+<li>구면 적분. \(\dd a=r^2\sin\theta\,\dd\theta\,\dd\varphi\)의 \(r^2\)이 \(1/r^2\)를 정확히 잡아먹는다(이것이 유도 1의 "\(1/r\) 생존 기준"이 작동하는 순간):
+\[ \langle P\rangle=\frac{\muz p_0^2\omega^4}{32\pi^2 c}\int_0^{2\pi}\!\!\dd\varphi\int_0^\pi \sin^3\theta\,\dd\theta = \frac{\muz p_0^2\omega^4}{32\pi^2 c}\cdot 2\pi\cdot\frac{4}{3}. \]</li>
+<li>\[ \boxed{\;\langle P\rangle=\frac{\muz p_0^2\omega^4}{12\pi c}\;}\]
+\(r\)이 완전히 사라졌다는 점을 확인하라 — 이것이 "무한대까지 도달하는 에너지"의 서명이다.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 진동 전기 쌍극자의 복사장</div>
+\[ \vb{E}_{\rm rad}=-\frac{\muz p_0\omega^2}{4\pi}\frac{\sin\theta}{r}\cos[\omega(t-r/c)]\,\hat{\boldsymbol\theta},\qquad \vb{B}_{\rm rad}=\frac{1}{c}\,\hat{\vb{r}}\times\vb{E}_{\rm rad} \]
+<p class="note">외울 것은 세 가지: 진폭에 \(\omega^2\), 각의존성에 \(\sin\theta\), 거리의존성에 \(1/r\). \(\vb{E}\)는 \(\hat{\boldsymbol\theta}\)(자오선 방향), \(\vb{B}\)는 \(\hat{\boldsymbol\varphi}\)(위도 방향). 자기 쌍극자에서는 이 둘이 정확히 뒤바뀐다.</p></div>
+
+<div class="formula"><div class="ftitle">암기 — 세기와 총 일률</div>
+\[ \langle \vb{S}\rangle=\frac{\muz p_0^2\omega^4}{32\pi^2 c}\frac{\sin^2\theta}{r^2}\hat{\vb{r}},\qquad \boxed{\langle P\rangle=\frac{\muz p_0^2\omega^4}{12\pi c}} \]
+<p class="note">\(32\pi^2\to12\pi\)로 가는 인수 \(8\pi/3\)는 \(\int\sin^2\theta\,\dd\Omega\)다. 시험장에서 계수를 잊었다면 \(\langle S\rangle\)만 세우고 즉석에서 적분하면 된다. \(\omega^4\)는 절대 잊지 말 것.</p></div>
+
+<div class="callout"><b class="head">\(\omega^4\)가 하늘을 파랗게 만든다 (Ex. 11.1).</b> 햇빛이 대기를 지나며 원자를 작은 쌍극자로 진동시키면, 재복사되는 세기가 \(\omega^4\)에 비례한다. 백색광 중 파란빛(\(\lambda\approx400\,\)nm)은 붉은빛(\(\approx700\,\)nm)보다 \((700/400)^4\approx9.4\)배 강하게 산란된다 → 우리가 올려다보는 하늘은 파랗다. 게다가 전자기파는 횡파라 쌍극자는 태양광선에 수직한 평면에서만 진동하고, \(\sin^2\theta\) 때문에 관측자 시선 방향으로 진동하는 쌍극자는 관측자에게 빛을 보내지 못한다 → 태양에서 \(90^\circ\) 떨어진 하늘의 빛은 <b>편광</b>되어 있다(편광 선글라스로 확인 가능). 노을이 붉은 것은 같은 동전의 뒷면이다: 지평선 방향의 햇빛은 훨씬 긴 대기 경로를 지나며 파란색이 이미 다 산란되어 빠져나갔고, 남은 것이 붉은색이다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u20-1"><div class="qq">(참/거짓 + 증명 또는 반례) "모든 가속하는 전하 분포는 복사한다." 특히, 반지름이 \(R(t)=R_0\cos\omega t\)로 진동하는 균일 대전 구껍질을 판정하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>거짓.</b> 반례가 바로 문제에 주어진 숨쉬는 구껍질이다. 껍질 위의 모든 점전하는 확실히 가속하고 있다. 그러나 구대칭이 유지되므로 <b>Gauss 법칙</b>에 의해 \(r&gt;R_0\)인 모든 외부 점에서 \(\vb{E}=(Q/4\pi\eps r^2)\hat{\vb{r}}\)로 <i>정확히 일정</i>하다. 반지름이 어떻게 요동치든 외부 전기장은 변하지 않는다. 또 전류는 순수 방사 방향이고 구대칭이므로 \(\vb{B}=0\)(Ampère 법칙, 대칭성). 따라서 \(\vb{S}=0\), 복사는 0이다.<br><br>
+근본 이유 두 가지를 반드시 적을 것: (i) 유도 1의 기준은 "가속"이 아니라 "장에 \(1/r\) 성분이 있는가"이며, 이 배치의 외부 장은 \(1/r^2\)뿐이다. (ii) Poynting 벡터는 장의 <b>이차식</b>이므로 <b>중첩 원리를 따르지 않는다</b>. 개별 전하가 각각 복사할 "일률"을 더하는 것은 무의미하고, 이 경우 모든 방향에서 완전 상쇄 간섭이 일어난 것으로 해석하면 된다. 등속 회전하는 균일 대전 고리(정상 전류 → 정적 장)도 같은 부류의 반례다.
+</div></div>
+
+<div class="qz" data-q="u20-2"><div class="qq">(차원해석) 계수 \(1/12\pi\)를 모른다고 하자. \(\langle P\rangle\)이 \(p_0\)에 대해 이차라는 사실만 인정하고, 나머지는 \(\muz,\ \omega,\ c\)만으로 지어질 수 있다고 가정하여 \(\omega\)와 \(c\)의 지수를 <b>차원해석만으로</b> 결정하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+\(\langle P\rangle=k\,\muz p_0^2\,\omega^a c^b\)로 놓는다(\(k\)는 무차원).<br>
+단위 정리: \([\muz]=\mathrm{H/m}=\mathrm{kg\cdot m\cdot A^{-2}s^{-2}}=\mathrm{kg\cdot m\cdot C^{-2}}\), \([p_0^2]=\mathrm{C^2m^2}\). 따라서
+\[ [\muz p_0^2]=\mathrm{kg\cdot m^3}. \]
+그리고 \([\omega^a c^b]=\mathrm{s^{-a}}\cdot\mathrm{m^b s^{-b}}\). 전체를 와트 \(\mathrm{kg\,m^2 s^{-3}}\)와 맞춘다:
+\[ \mathrm{kg\;m^{3+b}\;s^{-a-b}}=\mathrm{kg\;m^{2}\;s^{-3}}. \]
+\(\mathrm{m}\): \(3+b=2\Rightarrow b=-1\). \(\mathrm{s}\): \(-a-b=-3\Rightarrow a=3-b=4\).<br>
+\[ \therefore\ \langle P\rangle\propto \frac{\muz p_0^2\omega^4}{c}. \]
+<b>차원해석만으로 \(\omega^4\)가 강제된다.</b> 유도의 모든 디테일을 잊어도 이 지수는 복원할 수 있다는 점이 시험에서 매우 유용하다. (남는 무차원 계수 \(k=1/12\pi\)만 실제 적분에서 나온다.) 같은 방식으로 \(\langle S\rangle\)에 \(1/r^2\)가 붙어야 함도 "구 면적 \(\times\) 세기 = \(r\)에 무관"에서 곧바로 나온다.
+</div></div>
+
+<div class="qz" data-q="u20-3"><div class="qq">(Example 변형, 계산기 없이) 안테나의 <b>복사 저항</b>을 정의하고 \(R_{\rm rad}\propto (d/\lambda)^2\)임을 보여라. \(d=5\,\)cm, \(\lambda=3\,\)m(FM 대역)일 때 \(R_{\rm rad}\)이 옴 단위로 대략 얼마인지 어림하라(계수 \(790\,\Omega\)는 주어짐).</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>정의</b>: 같은 평균 일률을 열로 소모시킬 등가 저항. 도선에 흐르는 전류의 진폭이 \(I_0=q_0\omega\)이므로 저항의 평균 소모는 \(\langle P\rangle=\tfrac12 I_0^2 R_{\rm rad}\).<br><br>
+<b>유도</b>: \(p_0=q_0d=(I_0/\omega)d\)를 \(\langle P\rangle=\muz p_0^2\omega^4/12\pi c\)에 대입하면
+\[ \langle P\rangle=\frac{\muz I_0^2 d^2\omega^2}{12\pi c}\ \Longrightarrow\ R_{\rm rad}=\frac{2\langle P\rangle}{I_0^2}=\frac{\muz d^2\omega^2}{6\pi c}. \]
+\(\omega=2\pi c/\lambda\)를 넣으면 \(\omega^2/c=4\pi^2c/\lambda^2\), 따라서
+\[ R_{\rm rad}=\frac{2\pi \muz c}{3}\left(\frac{d}{\lambda}\right)^2. \]
+\(\muz c=4\pi\times10^{-7}\times3\times10^8\approx377\,\Omega\)(자유공간 임피던스)이므로 계수는 \(2\pi\times377/3\approx790\,\Omega\). ✓<br><br>
+<b>수치</b>: \(d/\lambda=0.05/3\approx1/60\), 제곱하면 \(1/3600\). \(790/3600\approx0.22\,\Omega\).<br>
+<b>해석</b>: 보통 라디오 회로의 저항은 수 \(\Omega\)~수백 \(\Omega\)이므로 이 정도면 무시할 만하다 — 짧은 도선은 형편없는 안테나다. 결정적인 것은 \(d\) 자체가 아니라 <b>\(d/\lambda\)</b>이며, 실제 안테나를 \(\lambda/2\) 규모로 만드는 이유가 바로 이것이다(그때는 근사 2가 깨져서 이 공식 자체를 쓸 수 없고, 완전한 계산이 필요하다).
+</div></div>
+
+<div class="qz" data-q="u20-4"><div class="qq">(개념) 쌍극자 축 방향으로 복사가 정확히 0인 이유를, \(\sin^2\theta\)라는 수식을 인용하지 말고 물리적으로 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+복사장은 <b>횡파</b>이므로, \(\hat{\vb{r}}\) 방향으로 진행하는 파의 \(\vb{E}\)는 \(\hat{\vb{r}}\)에 수직해야 한다. 멀리서 본 복사장은 본질적으로 "가속도 벡터를 시선에 수직한 평면에 투영한 것"에 비례한다 — 실제로 임의 소스에 대한 일반식이 \(\vb{E}_{\rm rad}\propto \hat{\vb{r}}\times(\hat{\vb{r}}\times\ddot{\vb{p}})=(\hat{\vb{r}}\cdot\ddot{\vb{p}})\hat{\vb{r}}-\ddot{\vb{p}}\), 즉 정확히 투영 연산이다.<br><br>
+관측자가 쌍극자 축 위에 있으면 \(\ddot{\vb{p}}\parallel\hat{\vb{r}}\)이므로 투영 성분이 0 → 아무것도 보이지 않는다. 적도면에서는 \(\ddot{\vb{p}}\perp\hat{\vb{r}}\)이라 투영이 온전히 살아남아 최대. 즉 "전하가 나에게서 멀어졌다 가까워졌다 하는 운동은 나에게 빛을 보내지 못하고, 내 시선을 가로질러 흔들리는 운동만 보인다." 유도 3에서 \(\nabla V\)의 \(\hat{\vb{r}}\) 성분과 \(\partial\vb{A}/\partial t\)의 \(\hat{\vb{r}}\) 성분이 정확히 상쇄된 것이 이 사실의 계산적 형태다.
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> 백지에서 세 근사(\(d\ll r,\ d\ll\lambda,\ r\gg\lambda\))를 각각 어디에 쓰는지 말하면서 \(V\to\vb{A}\to\vb{E},\vb{B}\to\langle\vb{S}\rangle\to\langle P\rangle=\muz p_0^2\omega^4/12\pi c\)까지 끊김 없이 유도할 수 있다.</div>

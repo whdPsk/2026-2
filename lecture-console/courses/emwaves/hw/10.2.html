@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+Ex. 10.1: \(|x|&lt;ct\)에서 \(\vb{E}=-\frac{\muz k}{2}(ct-|x|)\hat{\vb{z}},\ \vb{B}=\pm\frac{\muz k}{2c}(ct-|x|)\hat{\vb{y}}\), 그 밖에서는 0. 상자는 \(d&lt;x&lt;d+h\) (높이 \(h\)가 \(x\)방향).
+
+에너지 밀도: \(\eps E^2/2=\eps\muz^2k^2(ct-x)^2/8=\muz k^2(ct-x)^2/(8c^2)\), \(B^2/2\muz=\muz k^2(ct-x)^2/(8c^2)\) — 전기·자기 기여가 <b>정확히 같다</b>.
+\[ u=\frac{\muz k^2}{4c^2}(ct-x)^2 . \]
+(a) \(t_1=d/c\)이면 파면이 상자의 안쪽 면에 막 도달 → \(W(t_1)=0\). \(t_2=(d+h)/c\)이면 파면이 바깥 면에 도달:
+\[ W(t_2)=lw\!\int_d^{d+h}\!\frac{\muz k^2}{4c^2}(d+h-x)^2dx=\boxed{\frac{\muz k^2\,l\,w\,h^3}{12c^2}} \]
+(b) \(\vb{S}=\frac{1}{\muz}\vb{E}\times\vb{B}\), \(\hat{\vb{z}}\times\hat{\vb{y}}=-\hat{\vb{x}}\)이므로
+\[ \vb{S}=\frac{\muz k^2}{4c}(ct-x)^2\,\hat{\vb{x}}\quad(x&gt;0), \]
+즉 에너지는 \(+x\)로 흐른다. \(t_1&lt;t&lt;t_2\) 동안 바깥 면(\(x=d+h\))에는 아직 장이 없으므로 유출은 0:
+\[ \boxed{\frac{dW}{dt}=lw\,\frac{\muz k^2}{4c}(ct-d)^2} \]
+(c) \(\int_{t_1}^{t_2}\frac{dW}{dt}dt=\frac{lw\,\muz k^2}{4c}\cdot\frac{1}{c}\left[\frac{(ct-d)^3}{3}\right]_{d/c}^{(d+h)/c}=\frac{\muz k^2 lwh^3}{12c^2}\) — (a)와 완전 일치. ∎
+<div class="alabel">감점 포인트</div>
+\(t_1\)에서 파면이 "이제 막" 닿았으므로 에너지가 0인데, \(u\)를 그냥 적분해서 0이 아닌 값을 쓰는 실수.</div><!--/sol-->

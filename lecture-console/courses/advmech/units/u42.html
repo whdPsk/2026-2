@@ -1,0 +1,37 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> Mary(30세)는 \(0.8c\)로 8광년 떨어진 행성에 갔다 돌아오고, 쌍둥이 Frank는 지구에 남는다. Frank는 "Mary의 시계가 느리다"고 하고, Mary는 "Frank가 움직이니 Frank의 시계가 느리다"고 한다. 둘이 다시 만나 나이를 비교하면 결과는 하나뿐이다. 누가 더 젊을까? 대칭은 어디서 깨질까?</div>
+
+<h4>14.6 쌍둥이 역설 <span class="en">twin paradox</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>Frank(관성계)의 계산 <b>(필수)</b></div>
+<ol>
+<li>편도 거리 8 ly, 속도 \(0.8c\) → 편도 10년, 왕복 20년. Frank는 50세.</li>
+<li>Mary의 시계는 \(\gamma=1/\sqrt{1-0.64}=5/3\)배 느리다 → 편도 \(10\times0.6=6\)년, 왕복 12년. Mary는 42세.</li>
+<li>가속·감속 시간은 무시할 만하다. <b>시계 가설</b>: 순간 시계 속도는 순간 속력으로만 정해진다(가속도 자체는 틱 속도를 바꾸지 않는다).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>대칭은 왜 깨지는가 — 동시선의 도약</div>
+<ol>
+<li>Frank는 줄곧 한 관성계에 있다. Mary는 반환점에서 <b>관성계를 바꾼다</b>(가속을 몸으로 느낀다). 두 사람은 대칭이 아니다.</li>
+<li>Mary의 편도(외행) 관성계에서, 도착 순간(Mary 시간 6년)과 "동시인" Frank의 시각은? Mary에게는 Frank의 시계가 느리므로 \(6\times0.6=3.6\)년.</li>
+<li>복귀 관성계로 갈아타면 동시선이 기울기를 바꾼다. 복귀 계에서 "지금"인 Frank의 시각은 \(20-3.6=16.4\)년. <b>도약 12.8년</b> — 이 구간은 Mary의 어떤 관성계 계산에도 잡히지 않는다.</li>
+<li>합계: \(3.6+12.8+3.6=20\)년 ✓. 각 관성 구간에서 "상대의 시계가 느리다"는 주장은 모두 옳고, 모순은 동시성의 상대성(U40 유도 3)이 흡수한다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>고유 시간 = 세계선의 "길이" (U44 예고)</div>
+<ol>
+<li>\(\dd\tau=\dd t\sqrt{1-u^2/c^2}\) → \(\tau=\int\sqrt{1-u^2/c^2}\,\dd t\).</li>
+<li>두 사건(출발·재회)을 잇는 세계선 중 <b>관성 운동(직선)이 고유 시간을 최대로</b> 한다 — Euclid 기하에서 직선이 가장 짧은 것과 반대 부호. 꺾인 세계선의 Mary가 더 젊다.</li>
+<li>변분 원리 관점: 자유 입자의 작용 \(S=-mc^2\int\dd\tau\)가 극값 → 관성 운동. 이것이 U45의 Lagrangian \(L=-mc^2/\gamma\)의 기원.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 쌍둥이</div>
+\[ \tau_{\rm Mary}=\frac{T_{\rm Frank}}{\gamma},\qquad \tau=\int\!\sqrt{1-u^2/c^2}\,\dd t\ \ (\text{직선 세계선에서 최대}) \]
+<p class="note">\(\beta=0.8\): \(\gamma=5/3\), 8 ly 편도 → Frank 20년, Mary 12년. 신호 분석은 Example 14.5.</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u42-1"><div class="qq">(시험형) 쌍둥이 역설이 "역설이 아님"을 설명하라. 어떤 쌍둥이가 관성계에 있는지 어떻게 판정하는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>재회하는 두 세계선을 비교하므로 결과는 하나. 가속을 느끼는(가속도계가 반응하는) 쪽이 관성계를 바꾼 쪽이다 — Mary. 관성계 Frank의 계산(Mary 12년, Frank 20년)이 옳다. Mary가 자기 두 관성계에서 각각 계산하면 반환 순간 동시선이 도약해 Frank의 12.8년이 더해져 결국 같은 결과를 얻는다.</p></div></div>
+
+<div class="qz" data-q="u42-2"><div class="qq">Mary가 \(0.6c\)로 같은 8 ly 행성에 다녀오면 두 사람의 나이 차는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>\(\gamma=1.25\). Frank: 편도 \(8/0.6=13.3\)년, 왕복 26.7년. Mary: \(26.7/1.25=21.3\)년. 차 5.3년. (\(0.8c\)일 때 8년보다 작다.)</p></div></div>
+
+<div class="qz" data-q="u42-3"><div class="qq">외행 중 Mary의 관성계에서, Mary가 행성에 도착한 순간과 동시인 Frank의 나이를 구하라(출발 시 30세). 복귀 관성계로 바꾼 직후에는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>외행 계에서 Frank 시계는 느리다: Mary 6년 경과 → Frank 3.6년 경과, 33.6세. 복귀 계에서는 Frank가 \(30+20-3.6=46.4\)세. 반환 순간 "Frank의 지금"이 12.8년 도약한다.</p></div></div>

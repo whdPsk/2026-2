@@ -1,0 +1,22 @@
+<div class="exq"><b>상황.</b> 밀도 \(\rho\)가 균일하고 반지름 \(a\), 질량 \(M\)인 꽉 찬 반구가 있다. 평평한 면을 \(xz\)평면(\(y=0\))에, 볼록한 쪽을 \(+y\)에 둔다. 질량중심 \(\vb R=(X,Y,Z)\)를 구한다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>대칭으로 \(X=Z=0\), \(Y\)는 원판 조각 적분.</div>
+<ol>
+<li><b>밀도</b>: \(\rho=\dfrac{M}{\tfrac23\pi a^3}\).</li>
+<li><b>대칭</b>: 반구는 \(x\to-x\), \(z\to-z\)에 대해 불변. \(X=\frac1M\int x\,\dd m\)은 홀함수를 대칭 구간에서 적분 → 0. 같은 이유로 \(Z=0\). \(y\)는 \([0,a]\)라 대칭이 아니다.</li>
+<li><b>조각 고르기</b>: \(y\)가 일정한 얇은 원판(두께 \(\dd y\), 반지름 \(\sqrt{a^2-y^2}\)):
+\[ \dd m=\rho\pi(a^2-y^2)\,\dd y . \]</li>
+<li><b>적분</b>:
+\[ Y=\frac{\rho\pi}{M}\int_0^a y(a^2-y^2)\,\dd y=\frac{\rho\pi}{M}\left[\frac{a^2y^2}{2}-\frac{y^4}{4}\right]_0^a=\frac{\rho\pi a^4}{4M}. \]</li>
+<li>\(\rho\)를 대입: \(Y=\dfrac{\pi a^4}{4}\cdot\dfrac{3}{2\pi a^3}=\dfrac{3a}{8}\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \vb R=\left(0,\ \tfrac38a,\ 0\right)\ } \]
+<p class="note"><b>검산</b> ① 차원: 길이 ✓. ② 범위: \(0&lt;3a/8&lt;a/2\) — 질량이 평면 쪽에 몰려 있으니 반구 껍질(\(a/2\))보다 낮아야 한다 ✓. ③ 다른 방법: 반구 껍질들(\(r\), 높이 \(r/2\), 질량 \(\propto r^2\dd r\))을 쌓으면 \(\frac{\int(r/2)r^2\dd r}{\int r^2\dd r}=\frac38a\) ✓. ④ 좌표 의존성: 원점을 구의 중심이 아닌 곳에 잡으면 \(\vb R\)의 성분은 바뀌지만 점은 같다(강의 Note 1).</p></div>
+<div class="qz" data-q="ex9.1-a"><div class="qq"><b>+α</b> 기하 바꾸기: 안쪽 반지름 \(r_1\), 바깥쪽 반지름 \(r_2\)인 두꺼운 반구 껍질의 질량중심을 구하라 (Problem 9-1). \(r_1\to0\), \(r_1\to r_2\) 극한을 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>반구에서 반구를 뺀다(음의 질량). 반지름 \(r\)인 꽉 찬 반구: 질량 \(\propto r^3\), \(Y=3r/8\).
+\[ Y=\frac{r_2^3\cdot\tfrac38r_2-r_1^3\cdot\tfrac38r_1}{r_2^3-r_1^3}=\frac38\,\frac{r_2^4-r_1^4}{r_2^3-r_1^3}. \]</p>
+<p>\(r_1\to0\): \(3r_2/8\) ✓ (꽉 찬 반구). \(r_1\to r_2=a\): 분자·분모를 \(r_2-r_1\)로 나누면 \(\frac38\cdot\frac{4a^3}{3a^2}=\frac a2\) ✓ (얇은 껍질).</p></div></div>
+<div class="qz" data-q="ex9.1-b"><div class="qq"><b>+α</b> 합성 물체: 반지름 \(a\)인 꽉 찬 반구 위에 밑면 반지름 \(a\), 높이 \(h\)인 꽉 찬 원뿔을 밑면끼리 붙였다(같은 밀도, Problem 9-3). 질량중심이 정확히 붙인 면에 오려면 \(h/a\)는?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>붙인 면을 \(y=0\), 원뿔은 \(+y\), 반구는 \(-y\). 원뿔: 질량 \(\propto\tfrac13\pi a^2h\), CM \(+h/4\). 반구: 질량 \(\propto\tfrac23\pi a^3\), CM \(-3a/8\).</p>
+\[ \tfrac13a^2h\cdot\frac h4-\tfrac23a^3\cdot\frac{3a}{8}=0\ \Rightarrow\ \frac{h^2}{12}=\frac{a^2}{4}\ \Rightarrow\ h=\sqrt3\,a . \]
+<p>(이 모양은 붙인 면 위에서 어떤 방향으로 기울여도 중립 평형 — "오뚝이" 설계의 경계 조건. \(h&lt;\sqrt3a\)이면 CM이 반구 쪽에 있어 세우면 복원된다.)</p></div></div>

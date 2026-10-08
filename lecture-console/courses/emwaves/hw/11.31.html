@@ -1,0 +1,16 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p><b>(a)</b> \(a=\tau\dot a+F/m\)을 \(t=0\) 둘레로 적분:</p>
+\[ 0=\tau\,\Delta a+\frac1m\int k\delta(t)dt\;\Longrightarrow\;\Delta a=-\frac{k}{m\tau}. \]
+<p>두 구간뿐이다: \(t&lt;0\)에서 \(a=A_ie^{t/\tau}\), \(t&gt;0\)에서 \(a=A_fe^{t/\tau}\). 폭주해 배제 \(\Rightarrow A_f=0\), 따라서 \(\Delta a=0-A_i=-k/m\tau\Rightarrow A_i=k/m\tau\):</p>
+\[ \boxed{\;a(t)=\begin{cases}\dfrac{k}{m\tau}e^{t/\tau},&t&lt;0\\[4pt]0,&t&gt;0\end{cases}
+\qquad
+v(t)=\begin{cases}\dfrac km e^{t/\tau},&t&lt;0\\[4pt]\dfrac km,&t&gt;0\end{cases}\;} \]
+<p>속도는 연속이고 최종속도 \(k/m\)은 소박한 충격량 결과와 같다. 하지만 입자는 <b>차이기 전부터</b> 움직이기 시작한다(preacceleration, 시간규모 \(\tau\sim10^{-23}\)s).</p>
+<p><b>(b)</b> 외력이 한 일: \(W=\int k\delta(t)v(t)dt=k\,v(0)=\dfrac{k^2}{m}\).</p>
+<p>최종 운동에너지: \(K_f=\dfrac12m\Big(\dfrac km\Big)^2=\dfrac{k^2}{2m}\).</p>
+<p>복사에너지: \(W_{\rm rad}=m\tau\displaystyle\int_{-\infty}^{0}\Big(\frac{k}{m\tau}\Big)^2e^{2t/\tau}dt=m\tau\frac{k^2}{m^2\tau^2}\cdot\frac\tau2=\dfrac{k^2}{2m}\).</p>
+\[ \boxed{\;K_f+W_{\rm rad}=\frac{k^2}{2m}+\frac{k^2}{2m}=\frac{k^2}{m}=W\;\checkmark} \]
+<p>흥미롭게도 충격 에너지의 <b>정확히 절반</b>이 복사로 날아간다.</p>
+<div class="alabel">감점 포인트</div>
+<p>\(W=\int Fv\,dt\)에서 \(v(0)\)를 \(0\)(충돌 전 정지)으로 잡는 것. 예비가속 때문에 \(v(0)=k/m\)이며, 이를 놓치면 에너지가 맞지 않는다.</p></div><!--/sol-->

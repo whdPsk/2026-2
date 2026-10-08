@@ -1,0 +1,105 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 원자핵 산란 실험에서는 입자 하나하나의 충돌 변수(조준 거리) \(b\)를 고를 수도 잴 수도 없다. 그렇다면 실험으로 비교할 수 있는 양은 무엇일까? 단단한 공(반지름 \(R\))에 점입자를 쏘면, 전체로 보아 "몇 개가 산란되는가"를 결정하는 넓이는 얼마일까? 그리고 그 공에 튕긴 입자는 어느 방향으로 많이 갈까 — 앞? 옆? 뒤?</div>
+
+<h4>9.9 산란 단면적 <span class="en">scattering cross sections</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">정의</span>미분 산란 단면적 — 강의 식 (9.51)–(9.52)</div>
+<ol>
+<li>입사 선속 밀도(intensity) \(I\): 빔에 수직인 단위 넓이를 단위 시간에 지나는 입자 수.</li>
+<li>CM 각 \(\theta\) 방향 입체각 \(\dd\Omega'\)로 단위 시간에 산란되는 입자 수를 \(\dd N\)이라 하면
+\[ \sigma(\theta)\,\dd\Omega'=\frac{\dd N}{I}\qquad\Longleftrightarrow\qquad \sigma(\theta)=\od{\sigma}{\Omega'}=\frac1I\od{N}{\Omega'} . \]
+차원은 넓이/스테라디안 → "단면적". 해석: 입사빔에서 <b>이만큼의 넓이</b>를 지나는 입자들이 \(\dd\Omega'\)로 간다.</li>
+<li>\(\sigma(\theta)\)는 표적 입자 하나당 정의(교재 식 9.116: "표적 입자당 상호작용 수 / 단위 넓이당 입사 입자 수").</li>
+</ol></div>
+
+<div class="prof"><b>교수님 말 (9/30 녹음 00:00–05:28) — σ를 읽는 법.</b> 입자 하나가 아니라 <b>빔이 연속적으로 들어와 산란되는 상황</b>을 생각하고, 검출기를 표적 둘레로 돌려 가며 "각 \(\theta\)에서 몇 개가 잡히는가"를 묻는다. \(\dd N\)을 단위 넓이당 입사 수 \(I\)로 나누었으니 남는 차원은 <b>넓이</b>다 — 그래서 '단면적'. 빔 전체에 대해 모으면 결국 "특정 \(\theta\)에서 산란된 입자를 검출할 확률에 <em>비례</em>하는 양"으로 쓰인다(정의 방식은 책마다 조금씩 다르다). 단, 전단면적이 발산할 수도 있으므로(U9) 글자 그대로의 확률로 정의하면 안 된다는 말도 덧붙였다(43:00).</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>충돌 변수와 각운동량 — 강의 식 (9.53)</div>
+<ol>
+<li><b>충돌 변수 \(b\)</b>: 힘이 없었다면 지나갔을 직선(상대 궤도의 입사 점근선)과 산란 중심 사이의 수직 거리.</li>
+<li>등가 1체 문제(질량 \(\mu\), 상대속도 \(u_1\))에서 각운동량
+\[ l=\mu u_1b=b\sqrt{2\mu E},\qquad E=T'_0=\tfrac12\mu u_1^2\ \ (U(\infty)=0). \]
+(교재 식 9.114의 \(l=m_1u_1b\)는 \(m_2\)가 고정된 산란 중심일 때의 LAB 표현.)</li>
+<li>중심력이 주어지면 \((E,b)\)가 궤도를, 따라서 산란각 \(\theta(b,E)\)를 완전히 정한다. 양자역학에서는 궤도가 없으니 진폭·확률로 기술한다(강의 코멘트).</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>\(\sigma(\theta)=\dfrac{b}{\sin\theta}\left|\dfrac{\dd b}{\dd\theta}\right|\) — 강의 식 (9.54)–(9.55) <b>(필수)</b></div>
+<ol>
+<li>중심력이면 빔 축 둘레로 축대칭 → 방위각을 적분해
+\[ \dd\Omega'=\int_0^{2\pi}\sin\theta\,\dd\theta\,\dd\phi=2\pi\sin\theta\,\dd\theta . \]</li>
+<li><b>입자 수 보존</b>: 충돌 변수가 \(b\sim b+\dd b\)인 고리(넓이 \(2\pi b\,\dd b\))로 들어온 입자는 전부 \(\theta\sim\theta+\dd\theta\)로 나간다(교재 그림 9-21):
+\[ I\cdot2\pi b\,|\dd b|=I\cdot\sigma(\theta)\cdot2\pi\sin\theta\,|\dd\theta| . \]</li>
+<li>따라서
+\[ \boxed{\ \sigma(\theta)=\frac{b}{\sin\theta}\left|\od{b}{\theta}\right|\ } \]
+절댓값은 보통 \(b\)가 커질수록 \(\theta\)가 작아져 \(\dd b/\dd\theta&lt;0\)이기 때문. 문제는 이제 <b>\(b(\theta)\)를 구하는 것</b>으로 환원된다.</li>
+<li>\(b(\theta)\)가 여러 값을 가지면(무지개 산란 등) 각 가지의 기여를 더한다.</li>
+</ol></div>
+
+<div class="prof"><b>교수님 말 (9/30 녹음 01:41–03:24) — 고리 그림.</b> 빔에는 서로 다른 \(b\)를 가진 입자가 한꺼번에 들어온다. 특정 \(\theta\) 근처의 작은 입체각에 들어가는 입자 수는 <b>\(b\) 값만으로</b> 정해진다고 가정하는 것이 출발점이고, 전체 산란이 빔 축 둘레로 대칭이므로 "거리 \(b\), 두께 \(\dd b\)인 고리"로 들어온 입자가 통째로 같은 \(\theta\)의 띠로 나간다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>궤도적분으로 \(b(\theta)\) 얻기 — 강의 식 (9.56)–(9.57)</div>
+<ol>
+<li>8장 결과(교재 식 8.31): 중심력장에서 두 반지름 사이의 각 변화
+\[ \Delta\Theta=\int_{r_{\min}}^{r_{\max}}\frac{(l/r^2)\,\dd r}{\sqrt{2\mu\left[E-U-\dfrac{l^2}{2\mu r^2}\right]}}. \]</li>
+<li>궤도는 근접점 A를 지나는 직선에 대해 대칭(교재 그림 9-22). 근접점에서 나가는 점근선까지의 각을 \(\Theta\)라 하면 들어올 때도 \(\Theta\)이므로
+\[ \theta=\pi-2\Theta . \]</li>
+<li>\(r_{\max}=\infty\), \(l=b\sqrt{2\mu E}\)를 넣고 정리하면(분자·분모를 \(\sqrt{2\mu E}\)로 나눔)
+\[ \boxed{\ \Theta(b)=\int_{r_{\min}}^\infty\frac{(b/r^2)\,\dd r}{\sqrt{1-\dfrac{b^2}{r^2}-\dfrac{U(r)}{E}}}\ },\qquad E=T'_0 . \]
+\(r_{\min}\)은 근호 안이 0이 되는 선회점(최근접 거리).</li>
+<li><b>검산 — 자유 입자</b>: \(U=0\)이면 \(r_{\min}=b\), \(\Theta=\int_b^\infty\frac{b\,\dd r}{r\sqrt{r^2-b^2}}=\frac\pi2\) → \(\theta=0\) ✓.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>CM → LAB 변환 — 강의 식 (9.58)–(9.61), 교재 (9.124)–(9.132)</div>
+<ol>
+<li>같은 입자들을 두 좌표계에서 세므로 \(\sigma(\theta)\,\dd\Omega'=\sigma(\psi)\,\dd\Omega\):
+\[ \sigma(\psi)=\sigma(\theta)\,\frac{\sin\theta}{\sin\psi}\left|\od{\theta}{\psi}\right| . \]</li>
+<li>속도 삼각형의 사인 법칙: \(v'_1\sin(\theta-\psi)=V\sin\psi\) →
+\[ \frac{\sin(\theta-\psi)}{\sin\psi}=\frac{m_1}{m_2}\equiv x . \]</li>
+<li>이 관계를 미분해 \(\dd\theta/\dd\psi\)를 구하고 정리하면 (\(x&lt;1\))
+\[ \sigma(\psi)=\sigma(\theta)\,\frac{\left[x\cos\psi+\sqrt{1-x^2\sin^2\psi}\right]^2}{\sqrt{1-x^2\sin^2\psi}},\qquad \theta=\sin^{-1}(x\sin\psi)+\psi . \]</li>
+<li><b>두 극한 (필수)</b>
+<ul><li>\(m_1=m_2\) (\(x=1\)): \(\theta=2\psi\), \(\sigma(\psi)=4\cos\psi\;\sigma(\theta)\big|_{\theta=2\psi}\).</li>
+<li>\(m_1\ll m_2\) (\(x\approx0\)): \(\theta\approx\psi\), \(\sigma(\psi)\approx\sigma(\theta)\big|_{\theta=\psi}\).</li></ul>
+검산(\(x=1\)): \(\dd\Omega'/\dd\Omega=\dfrac{\sin2\psi\cdot2}{\sin\psi}=4\cos\psi\) ✓.</li>
+<li><b>전단면적</b>은 LAB·CM에서 같다(세는 입자가 같다). 단 \(m_1&gt;m_2\)이면 LAB 적분은 \(\psi_{\max}\)까지만.</li>
+</ol></div>
+
+<div class="prof"><b>교수님 말 (9/30 녹음 07:50–10:52) — CM↔LAB 각의 두 극한.</b> 세는 입자 수 \(\dd N\)은 어느 계에서 보든 같아야 하므로 변환식이 나온다. \(x=m_1/m_2\)로 두고 \(\sin(\theta-\psi)=x\sin\psi\)를 풀면 \(\theta=\psi+\sin^{-1}(x\sin\psi)\). ① \(x=1\)(질량이 같음): \(\theta=2\psi\). ② \(x\to0\)(\(m_2\)가 훨씬 무거움 — 가벼운 입자를 무거운 원자에 쏘는 경우): \(\sin^{-1}\) 항이 사라져 \(\theta\approx\psi\), 즉 LAB에서 보는 산란각과 CM에서 보는 산란각이 거의 같다. Rutherford 실험(α입자 → 금)을 LAB 각으로 바로 비교해도 되는 이유.</div>
+
+<div class="trap"><b>함정 — \(x\)의 정의 방향</b> \(x=m_1/m_2\) (입사/표적)이다. 뒤집어 외우면 두 극한이 서로 바뀐다. 9/30 녹음(09:08)에서는 STT가 "n2분의 n1"로 적혀 있어 강의노트 식 (9.59)의 \(m_1/m_2\)와 같다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 5</span>강체구 산란 (Example 9.11) — 등방성과 \(\sigma_t=\pi(R_1+R_2)^2\)</div>
+<ol>
+<li>분자(반지름 \(R_1\))가 정지한 먼지(반지름 \(R_2\), 훨씬 무거움 — 오타표: "산란 과정 내내 정지")에 충돌. 먼지가 고정이므로 LAB = CM, \(\psi=\theta\).</li>
+<li>접촉 순간 두 중심을 잇는 선(법선)과 입사 방향 사이의 각(입사각)을 \(\alpha\)라 하면 \(b=(R_1+R_2)\sin\alpha\). 반사 법칙(입사각 = 반사각)으로 진행 방향이 \(\pi-2\alpha\)만큼 꺾이므로 \(\psi=\pi-2\alpha\). (교재 그림 9-23은 여각을 \(\alpha\)로 잡아 \(b=(R_1+R_2)\cos\alpha\)로 쓴다 — 같은 내용.)</li>
+<li>따라서 \(b=(R_1+R_2)\sin(\pi/2-\psi/2)=(R_1+R_2)\cos(\psi/2)\), \(|\dd b/\dd\psi|=\tfrac12(R_1+R_2)\sin(\psi/2)\).</li>
+<li>\[ \sigma(\psi)=\frac{(R_1+R_2)\cos(\psi/2)\cdot\tfrac12(R_1+R_2)\sin(\psi/2)}{2\sin(\psi/2)\cos(\psi/2)}=\frac{(R_1+R_2)^2}{4}. \]
+<b>각도와 무관(등방성)</b> — 예측의 답: 앞·옆·뒤로 고르게 간다.</li>
+<li>\(\sigma_t=\int\sigma\,\dd\Omega=4\pi\cdot\frac{(R_1+R_2)^2}{4}=\pi(R_1+R_2)^2\) — 기하학적 단면 그대로 ✓.</li>
+</ol></div>
+
+<div class="formula"><div class="ftitle">암기 — 산란 단면적</div>
+\[ \sigma(\theta)=\frac1I\od{N}{\Omega'}=\frac{b}{\sin\theta}\left|\od{b}{\theta}\right|,\qquad \dd\Omega'=2\pi\sin\theta\,\dd\theta \]
+\[ \theta=\pi-2\Theta,\qquad \Theta(b)=\int_{r_{\min}}^\infty\frac{(b/r^2)\,\dd r}{\sqrt{1-b^2/r^2-U/T'_0}},\qquad l=\mu u_1b=b\sqrt{2\mu T'_0} \]
+\[ \sigma(\psi)=\sigma(\theta)\frac{\sin\theta}{\sin\psi}\left|\od\theta\psi\right|;\quad m_1=m_2:\ \sigma(\psi)=4\cos\psi\,\sigma(2\psi) \]
+<p class="note">강체구: \(\sigma=(R_1+R_2)^2/4\) (등방), \(\sigma_t=\pi(R_1+R_2)^2\).</p></div>
+
+<h4>체크포인트</h4>
+
+<div class="qz" data-q="u08-1"><div class="qq">\(\sigma(\theta)=\dfrac{b}{\sin\theta}\left|\dfrac{\dd b}{\dd\theta}\right|\)를 입자 수 보존에서 유도하라. 왜 \(2\pi\)가 양변에서 약분되는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>유도 2. 들어오는 고리 넓이 \(2\pi b\,\dd b\)의 \(2\pi\)는 방위각 적분, 나가는 입체각 \(2\pi\sin\theta\,\dd\theta\)의 \(2\pi\)도 방위각 적분 — <b>축대칭(중심력)</b> 덕분에 방위각 \(\phi\)로 들어온 입자는 같은 \(\phi\)로 나간다. 비중심력이면 \(\phi\)가 섞여 이렇게 간단히 쓸 수 없다.</p></div></div>
+
+<div class="qz" data-q="u08-2"><div class="qq">강체구(반지름 \(a\), 고정)에 점입자를 쏠 때 \(b\)와 \(\theta\)의 관계를 반사 법칙으로 구하고 \(\sigma(\theta)=a^2/4\)를 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>접촉점에서 법선과 입사선의 각 \(\alpha\): \(b=a\sin\alpha\). 반사로 방향이 \(\pi-2\alpha\) 꺾임 → \(\theta=\pi-2\alpha\), \(\alpha=\pi/2-\theta/2\), \(b=a\cos(\theta/2)\).</p>
+<p>\(|\dd b/\dd\theta|=\tfrac a2\sin(\theta/2)\). \(\sigma=\dfrac{a\cos(\theta/2)\cdot\tfrac a2\sin(\theta/2)}{2\sin(\theta/2)\cos(\theta/2)}=\dfrac{a^2}{4}\) ✓. \(\sigma_t=\pi a^2\) ✓.</p></div></div>
+
+<div class="qz" data-q="u08-3"><div class="qq">등질량 산란(\(m_1=m_2\))에서 CM 단면적이 등방 \(\sigma(\theta)=\sigma_0\)이면 LAB 단면적 \(\sigma(\psi)\)는? LAB에서 전단면적을 적분해 \(4\pi\sigma_0\)와 같은지 확인하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(\sigma(\psi)=4\cos\psi\,\sigma_0\), \(0\le\psi\le\pi/2\). 앞쪽으로 몰린다.</p>
+<p>\(\int_0^{\pi/2}4\sigma_0\cos\psi\cdot2\pi\sin\psi\,\dd\psi=8\pi\sigma_0\cdot\tfrac12=4\pi\sigma_0\) ✓.</p></div></div>
+
+<div class="qz" data-q="u08-4"><div class="qq">\(U=0\)일 때 \(\Theta(b)=\pi/2\)임을 적분으로 보이고, 이것이 \(\theta=0\)(산란 없음)을 뜻함을 확인하라. 인력 퍼텐셜(\(U&lt;0\))이면 \(\Theta\)는 \(\pi/2\)보다 큰가 작은가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(r=b/\sin\chi\) 또는 \(u=b/r\) 치환: \(\Theta=\int_0^1\frac{\dd u}{\sqrt{1-u^2}}=\frac\pi2\) → \(\theta=\pi-\pi=0\) ✓.</p>
+<p>인력이면 궤도가 중심 쪽으로 더 휘어 근접점 전후로 더 많이 돈다: \(\Theta&gt;\pi/2\) → \(\theta&lt;0\) (반대쪽으로 꺾임). 단면적은 \(|\theta|\)로 계산하므로 공식은 그대로 — Rutherford 공식이 인력·척력에서 같은 이유(U9).</p></div></div>
+
+<div class="qz" data-q="u08-5"><div class="qq">\(\sin(\theta-\psi)=x\sin\psi\) (\(x=m_1/m_2\))에서 \(\theta(\psi)\)를 풀고, \(x=1\)과 \(x\to0\)에서 CM 각과 LAB 각의 관계를 구하라. 미분 단면적 \(\sigma\)가 "넓이"의 차원을 갖는 이유도 한 줄로 말하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<p>\(\theta-\psi=\sin^{-1}(x\sin\psi)\) → \(\theta=\psi+\sin^{-1}(x\sin\psi)\). \(x=1\): \(\theta=2\psi\) (LAB 각은 \(\pi/2\)까지만). \(x\to0\): \(\theta\approx\psi\) — 무거운 표적은 거의 안 움직이니 LAB ≈ CM.</p>
+<p>차원: \(\sigma\,\dd\Omega'=\dd N/I\) = (단위 시간당 입자 수)/(단위 시간·단위 넓이당 입자 수) = 넓이. 입사빔 단면에서 "이만큼의 넓이"를 지난 입자가 \(\dd\Omega'\)로 간다는 뜻.</p></div></div>

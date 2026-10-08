@@ -1,0 +1,148 @@
+<div class="predict"><b>◈ 먼저 예측하기.</b> 지금까지 \(\epsilon\)을 상수로 두었지만, 프리즘이 빛을 색깔별로 갈라놓는다는 사실은 \(n=\sqrt{\epsilon_r}\)이 \(\omega\)의 함수임을 뜻한다. 물질 속 전자를 <b>스프링에 매달린 감쇠 진동자</b>로 모형화해 보라. 강제 진동자의 응답은 공명 아래에서 구동력과 같은 위상, 위에서 반대 위상이 된다 — 그렇다면 \(\omega&lt;\omega_0\)와 \(\omega&gt;\omega_0\)에서 굴절률의 대소는 어떻게 갈릴까? 그리고 감쇠가 있으면 응답에 허수부가 생기는데, 허수부가 붙은 굴절률은 물리적으로 무엇을 뜻할까(U11의 \(\ee^{-\kappa z}\)를 떠올리라)?</div>
+
+<div class="prof"><b>강의노트 고유 · 10/7 도입 — 왜 "분산"인가</b>
+지난 시간의 위상 속도 \(v_p=\omega/k\)와 군속도 \(v_g=\dd\omega/\dd k\)를 복습하며 시작했다. 진공에서는 \(\omega=ck\)라서 파수 벡터가 무엇이든 속도가 \(c\) 하나뿐이고, 두 속도를 구별할 일이 없다. 물질이 있으면 사정이 달라진다 — 파동의 전기장이 물질 속 전하(전자)를 흔들고, 흔들린 전하가 다시 장에 영향을 주기 때문에 \(\omega\)가 \(k\)에 <b>단순 비례하지 않는</b> 복잡한 함수가 된다. 그 결과 굴절률 \(n\)이 진동수마다 달라지는 것이 분산이고, "파장이 짧은 빛이 더 많이 꺾인다"는 익숙한 사실을 모형으로 설명하는 것이 이 절의 목표다.
+<br>복습 중 수면파가 예로 나왔다(무리와 그 안의 잔물결이 서로 다른 속도로 움직인다). 깊은 물의 수면파에서 위상 속도가 군속도의 2배라는 것은 표준 결과이며, 녹음의 "2배"도 이 얘기로 들린다.
+<br>모형의 대상은 <b>속박 전자</b>다. 강의에서는 절연체뿐 아니라 금속에도 자유 전자 외에 속박 전자가 있어 같은 모형이 적용된다고 짚었다.</div>
+
+<h4>9.4.3 강제·감쇠 전자 진동자 <span class="en">the driven damped oscillator model</span></h4>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 1</span>세 개의 힘 — 복원력·감쇠력·구동력</div>
+<ol>
+<li><b>복원력.</b> 전자가 평형에서 \(x\)만큼 벗어나면 원자가 되돌리려 한다. 변위가 작으면 어떤 퍼텐셜이든 \(U\approx\tfrac12 m\omega_0^2x^2\)로 근사되므로 \(F_{\rm bind}=-m\omega_0^2x\). <b>\(\omega_0\)는 원자의 고유 진동수</b>이고, 전형적으로 자외선 영역이다(원자의 결합 에너지가 몇 eV이므로).</li>
+<li><b>감쇠력.</b> 진동하는 전자는 복사로 에너지를 잃고 이웃과 충돌한다. 가장 단순한 모형은 속도에 비례하는 항 \(F_{\rm damp}=-m\gamma\dot x\). \(\gamma\)는 흡수선의 <b>폭</b>을 결정하게 된다.</li>
+<li><b>구동력.</b> 지나가는 파동의 전기장이 전자를 흔든다: \(F_{\rm drive}=qE=qE_0\cos\omega t\). (자기력 \(qv\times B\)는 \(v/c\)만큼 작아 무시.)</li>
+<li>운동방정식:
+\[ m\ddot x+m\gamma\dot x+m\omega_0^2 x=qE_0\cos\omega t \]
+<b>이것은 새 물리가 아니라 역학 1학년의 강제 감쇠 진동자다.</b> 전자기학의 모든 분산 현상이 이 한 줄에서 나온다.</li>
+<li><b>강의의 관전 포인트.</b> 이 문제에서 물어야 할 것은 단 하나, 구동 진동수 \(\omega\)가 고유 진동수 \(\omega_0\)와 <b>얼마나 가까운가</b>다. 둘이 같아지면 감쇠가 없을 때 응답의 분모가 0이 된다(공명). 이후의 모든 그림은 이 분모 \(\omega_0^2-\omega^2\)의 부호와 크기로 읽는다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 2</span>복소 표기로 정상 상태 해 구하기</div>
+<ol>
+<li>\(\tilde x\)를 도입하고 구동을 \(qE_0\ee^{-\ii\omega t}\)로 쓴다(실수부가 물리):
+\[ \frac{\dd^2\tilde x}{\dd t^2}+\gamma\frac{\dd\tilde x}{\dd t}+\omega_0^2\tilde x=\frac{q}{m}E_0\ee^{-\ii\omega t} \]</li>
+<li>정상 상태에서는 전자가 구동과 <b>같은 진동수</b>로 흔들린다: \(\tilde x=\tilde x_0\ee^{-\ii\omega t}\). 대입하면 미분이 대수로 바뀐다:
+\[ (-\omega^2-\ii\gamma\omega+\omega_0^2)\tilde x_0=\frac{qE_0}{m} \]</li>
+<li>따라서
+\[ \boxed{\;\tilde x_0=\frac{q/m}{\omega_0^2-\omega^2-\ii\gamma\omega}\,E_0\;} \]
+<b>분모가 복소수</b>라는 것이 핵심이다. 그 편각이 구동력 대비 전자 운동의 위상 지연이다.</li>
+<li><b>위상의 세 국면</b>(감쇠가 작을 때):
+<br>• \(\omega\ll\omega_0\): 분모 \(\approx\omega_0^2&gt;0\) — 전자가 구동력과 <b>같은 위상</b>으로 움직인다.
+<br>• \(\omega=\omega_0\): 분모 \(=-\ii\gamma\omega\) — 위상 \(90^\circ\) 지연, 진폭 최대(<b>공명</b>).
+<br>• \(\omega\gg\omega_0\): 분모 \(\approx-\omega^2&lt;0\) — 구동력과 <b>반대 위상</b>. 전자가 너무 무거워 따라가지 못하고 반대로 튄다.
+<br>이 부호 뒤집힘이 곧 굴절률이 1보다 커졌다 작아졌다 하는 이유다.</li>
+</ol></div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 3</span>쌍극자 모멘트 → 분극 → 복소 유전율</div>
+<ol>
+<li>전자 하나의 쌍극자 모멘트: \(\tilde p=q\tilde x=\dfrac{q^2/m}{\omega_0^2-\omega^2-\ii\gamma\omega}\tilde E\). 장을 따라 전자가 변위한 만큼 쌍극자가 생긴다는 것뿐이다. 분극 \(\vb P\)는 <b>단위 부피당 쌍극자 모멘트</b>이므로, 분자 하나의 쌍극자 모멘트에 단위 부피당 분자 수 \(N\)을 곱하면 된다(강의 순서: 전자 하나 → 분자 하나 → \(\times N\)).</li>
+<li>실제 원자에는 결합 세기가 다른 전자가 여럿 있다. 전자마다(모드 \(j\)마다) 고유 진동수 \(\omega_j\)도, 감쇠 상수 \(\gamma_j\)도 다르다고 두고 일반화한다. 첨자 \(j\)는 "분자 안의 \(j\)번째 모드에 있는 전자"를 가리킨다(수업 중 질문에 대한 답). 분자당 고유진동수 \(\omega_j\)인 전자가 \(f_j\)개 있다 하고(진동자 세기, \(\sum_j f_j=\) 분자당 전자 수), 단위 부피당 분자 수를 \(N\)이라 하면
+\[ \tilde{\vb P}=\frac{Nq^2}{m}\left(\sum_j\frac{f_j}{\omega_j^2-\omega^2-\ii\gamma_j\omega}\right)\tilde{\vb E} \]</li>
+<li>\(\tilde{\vb P}=\eps\tilde\chi_e\tilde{\vb E}\), \(\tilde\epsilon=\eps(1+\tilde\chi_e)\)이므로
+\[ \boxed{\;\tilde\epsilon_r=1+\frac{Nq^2}{m\eps}\sum_j\frac{f_j}{\omega_j^2-\omega^2-\ii\gamma_j\omega}\;} \]
+<b>\(\epsilon\)이 복소수가 되었다.</b> 정전기학에서 실수 상수였던 유전율이, 시간 의존 장에서는 응답 함수이므로 복소수인 것이 정상이다.</li>
+<li>파동방정식은 형태가 그대로이므로 \(\tilde k=\sqrt{\tilde\epsilon\mu}\,\omega\). 희박 매질(기체)에서는 둘째 항이 작아 \(\sqrt{1+x}\approx1+x/2\):
+\[ \tilde n\equiv\frac{c\tilde k}{\omega}\approx1+\frac{Nq^2}{2m\eps}\sum_j\frac{f_j}{\omega_j^2-\omega^2-\ii\gamma_j\omega} \]</li>
+<li><b>실수부·허수부의 역할 분담.</b> \(\tilde k=k+\ii\kappa\)로 쓰면 \(\ee^{\ii(\tilde kz-\omega t)}=\ee^{-\kappa z}\ee^{\ii(kz-\omega t)}\):
+<br>• \(k\) (실수부) → 위상 속도, 굴절률 → <b>분산(dispersion)</b>
+<br>• \(\kappa\) (허수부) → 지수 감쇠 → <b>흡수(absorption)</b>
+<br>분자를 실수화하면
+\[ \kappa=\frac{Nq^2\omega^2}{2m\eps c}\sum_j\frac{f_j\gamma_j}{(\omega_j^2-\omega^2)^2+\gamma_j^2\omega^2} \]
+\(\gamma_j\)가 분자에 있으므로 <b>감쇠가 없으면 흡수도 없다</b> — 당연하지만 확인할 가치가 있다.</li>
+<li><b>흡수 계수</b>는 세기(\(\propto|E|^2\)) 기준이므로
+\[ \alpha\equiv2\kappa \]</li>
+</ol></div>
+
+<div class="prof"><b>강의노트 고유 · 실수부와 허수부의 그림 — "공명 근처에서만" 거꾸로 간다</b>
+합 안의 한 항을 실수부와 허수부로 나누면
+\[ \frac{1}{\omega_j^2-\omega^2-\ii\gamma_j\omega}=\frac{\omega_j^2-\omega^2}{(\omega_j^2-\omega^2)^2+\gamma_j^2\omega^2}+\ii\,\frac{\gamma_j\omega}{(\omega_j^2-\omega^2)^2+\gamma_j^2\omega^2} \]
+<br>• <b>실수부(굴절률).</b> 감쇠를 잊으면 \(1/(\omega_j^2-\omega^2)\)이다. \(\omega&lt;\omega_j\)에서 양수이고, \(\omega\)가 \(\omega_j\)에 다가갈수록 \(+\infty\)로 커지다가, \(\omega_j\)를 넘는 순간 \(-\infty\)에서 다시 올라온다. 즉 공명에서 떨어진 곳에서는 어디서나 <b>진동수가 커지면 \(n\)도 커진다</b>(정상 분산). 감쇠 \(\gamma_j\)가 발산을 유한한 봉우리와 골로 깎아 주고, 그 봉우리(\(\omega\approx\omega_j-\gamma_j/2\))와 골(\(\omega\approx\omega_j+\gamma_j/2\)) 사이의 좁은 구간에서만 \(n\)이 진동수에 대해 감소한다. 이상 분산은 일반적인 거동이 아니라 <b>공명 근처에만 있는 예외</b>다.
+<br>• <b>허수부(흡수).</b> \(\omega\approx\omega_j\) 근처에서 분자 \(\gamma_j\omega\)는 거의 \(\gamma_j\omega_j\)로 일정하고, 분모만 \(\omega=\omega_j\)에서 최소(\(\gamma_j^2\omega_j^2\))가 되었다가 다시 커진다. 그래서 허수부는 공명마다 폭이 \(\gamma_j\) 정도인 <b>봉우리</b> 하나씩이다.
+<br>• 공명이 여러 개면 이 모양이 \(\omega_1,\omega_2,\dots\)마다 반복된다. 실수부의 "뒤집힘"과 허수부의 "봉우리"는 항상 같은 자리에 있다.</div>
+
+<div class="derive"><div class="dtitle"><span class="tag">유도 4</span>투명 영역의 Cauchy 공식 — 프리즘과 무지개의 정량화</div>
+<ol>
+<li>공명에서 멀리 떨어진 <b>투명 영역</b>(\(\gamma_j\omega\ll|\omega_j^2-\omega^2|\))에서는 감쇠를 버릴 수 있다:
+\[ n\approx1+\frac{Nq^2}{2m\eps}\sum_j\frac{f_j}{\omega_j^2-\omega^2} \]</li>
+<li>가시광은 대부분 물질의 최저 공명(자외선)보다 아래에 있으므로 \(\omega&lt;\omega_j\), 즉 <b>분모가 양수</b> ⇒ \(n&gt;1\). 유리·물이 \(n&gt;1\)인 이유가 여기서 나온다.</li>
+<li>\(\omega\ll\omega_j\)로 전개:
+\[ \frac{1}{\omega_j^2-\omega^2}=\frac{1}{\omega_j^2}\left(1-\frac{\omega^2}{\omega_j^2}\right)^{-1}\approx\frac{1}{\omega_j^2}\left(1+\frac{\omega^2}{\omega_j^2}\right) \]
+\[ \Rightarrow\ n\approx1+\frac{Nq^2}{2m\eps}\left(\sum_j\frac{f_j}{\omega_j^2}\right)\left[1+\omega^2\frac{\sum_j f_j/\omega_j^4}{\sum_j f_j/\omega_j^2}\right] \]</li>
+<li>\(\omega=2\pi c/\lambda\)를 넣으면 \(\omega^2\propto1/\lambda^2\):
+\[ \boxed{\;n=1+A\left(1+\frac{B}{\lambda^2}\right)\;}\qquad(\text{Cauchy 공식}) \]
+\(A\)를 굴절 계수, \(B\)를 분산 계수라 부른다.</li>
+<li><b>결론:</b> \(\lambda\)가 짧을수록(파란빛) \(n\)이 크다 ⇒ 더 많이 꺾인다. 프리즘의 스펙트럼 순서, 무지개에서 보라가 안쪽인 이유, 렌즈의 색수차가 전부 이 \(1/\lambda^2\) 항이다.</li>
+<li><b>정상 분산 vs 이상 분산.</b> 투명 영역에서 \(\dd n/\dd\omega&gt;0\)인 것을 <b>정상 분산</b>이라 한다. 공명 바로 근처(\(\omega\approx\omega_j\))에서는 분모가 부호를 바꾸며 \(\dd n/\dd\omega&lt;0\)이 되는데 이를 <b>이상 분산(anomalous dispersion)</b>이라 하고, 정확히 그 구간에서 흡수가 최대다. 즉 "굴절률이 거꾸로 가는 곳 = 빛이 잡아먹히는 곳"이다.</li>
+</ol></div>
+
+<div class="prof"><b>강의노트 고유 · 저주파 굴절률은 고주파 공명들의 기여를 모은 것</b>
+강의에서 "굉장히 중요하다"고 짚은 지점. 우리가 관심 있는 진동수가 모든 \(\omega_j\)보다 한참 낮으면 공명에서 멀기 때문에 \(\gamma_j\)를 작다고 보고 <b>실수부만</b> 남기면 된다(허수부의 기여는 무시). 그 극한에서
+\[ n(\omega\to0)\approx1+\frac{Nq^2}{2m\eps}\sum_j\frac{f_j}{\omega_j^2} \]
+이다. 읽는 법: 낮은 진동수에서의 굴절률은 그 진동수 근처의 무언가가 정하는 것이 아니라, <b>훨씬 위쪽(고주파)에 있는 공명 하나하나가 남긴 양(+)의 꼬리</b>를 전부 더한 값이다. 공명 \(j\)의 몫은 \(f_j/\omega_j^2\)에 비례하므로, 세기가 크고 진동수가 낮은 공명일수록 많이 기여한다. 공명을 하나 지나 위로 올라가면 그 공명의 몫은 부호가 바뀌어 빠지고, 더 위에 있는 공명들의 몫만 남는다 — 유도 4의 Cauchy 공식은 이 합을 \(\omega^2\)의 1차까지 전개한 것일 뿐이다.
+<br>희박하지 않은 매질에서는 같은 말을 \(\epsilon_r\)로 하면 된다: \(\epsilon_r(0)=1+\dfrac{Nq^2}{m\eps}\displaystyle\sum_j\dfrac{f_j}{\omega_j^2}\).</div>
+
+<div class="trap"><b>녹음 불명확 — 확인 필요 (10/7)</b>
+STT 품질이 낮아 아래 구간은 내용을 복원하지 못했다. 본문에는 반영하지 않았으니 필기·교재와 대조할 것.
+<br>• <b>08:36–09:18</b>: 굴절률 \(n\)과 함께 "0.03 정도"라는 수치가 나오는데 무엇의 값인지(예: 파장에 따른 \(n\)의 변화 폭인지) 들리지 않는다.
+<br>• <b>23:23</b>: 여러 공명이 있을 때의 실수부 그림을 설명하다가 "진동수가 0인" 경우를 언급한 문장 — 무엇이 0일 수 있다는 것인지 불명확.
+<br>• <b>25:12</b>: 공명들의 기여를 더해 정적(DC) 유전율을 말하는 대목에서 "전자보다 이온이 더 중요하다"로 들리는 말이 있다. 낮은 진동수의 유전율에는 전자 외의 공명(이온의 운동)이 크게 기여한다는 취지로 짐작되지만 확인되지 않았다.</div>
+
+<div class="formula"><div class="ftitle">암기 — 분산 모형 3단</div>
+\[ \tilde x_0=\frac{q/m}{\omega_0^2-\omega^2-\ii\gamma\omega}E_0 \quad\Longrightarrow\quad \tilde\epsilon_r=1+\frac{Nq^2}{m\eps}\sum_j\frac{f_j}{\omega_j^2-\omega^2-\ii\gamma_j\omega} \]
+\[ \tilde n=n+\ii\frac{c\kappa}{\omega}:\quad n\ \to\ \text{분산},\qquad \kappa\ \to\ \text{흡수},\qquad \alpha=2\kappa,\qquad n=1+A\Big(1+\frac{B}{\lambda^2}\Big) \]
+<p class="note">공명 아래 \(n&gt;1\), 공명 위 \(n&lt;1\). \(\gamma_j\)가 분자에 있으므로 감쇠 없이는 흡수도 없다.</p></div>
+
+<div class="callout"><b class="head">\(n&lt;1\)인데 왜 상대론과 충돌하지 않는가.</b> X선 영역에서는 대부분 원자 공명보다 위라 \(n&lt;1\)이 되고, 위상 속도 \(v=c/n\)이 \(c\)를 넘는다. 그러나 위상 속도는 <b>무한히 긴 단색파의 마루가 움직이는 속도</b>일 뿐 어떤 신호도 나르지 않는다. 정보는 파속(wave packet)의 <b>군속도</b> \(v_g=\dd\omega/\dd k\)로 전달되고, 이는 언제나 \(c\) 이하다. 실제로 X선이 유리 표면에서 <b>전반사</b>되는(\(n&lt;1\)이므로 성긴 매질로 가는 셈) 현상은 X선 망원경 설계의 기반이다.</div>
+
+<h4>체크포인트 <span class="en">closed-book checkpoints</span> <span class="exam-tag">기출 스타일</span></h4>
+
+<div class="qz" data-q="u12-1"><div class="qq">(참/거짓 + 증명 또는 반례) "모든 투명한 물질에서 굴절률은 1보다 크다."</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>거짓.</b> 유도 4의 2단계는 "가시광이 최저 공명보다 아래에 있을 때"라는 조건부였다.
+<b>반례:</b> X선 영역(\(\omega\gg\omega_j\)). 모든 공명이 아래에 있으므로 \(\omega_j^2-\omega^2&lt;0\)이고
+\[ n\approx1-\frac{Nq^2}{2m\eps}\sum_j\frac{f_j}{\omega^2-\omega_j^2}\;&lt;\;1 \]
+극단적으로 \(\omega\gg\) 모든 \(\omega_j\)에서 \(\sum f_j=Z\)(원자번호)이므로
+\[ n\approx1-\frac{Nq^2Z}{2m\eps\omega^2}=1-\frac{\omega_p^2}{2\omega^2} \]
+(\(\omega_p\): 플라즈마 진동수). 같은 이유로 <b>플라즈마와 전리층</b>에서도 \(n&lt;1\)이다.
+<b>주의할 점:</b> 이것이 상대론 위반이 아닌 이유는 위 callout 참조. "투명"과 "\(n&gt;1\)"은 독립적인 성질이다.
+</div></div>
+
+<div class="qz" data-q="u12-2"><div class="qq">(점근 분석, 지수 명시) 공명에서 아주 멀리 떨어진 두 극한 \(\omega\ll\omega_0\)와 \(\omega\gg\omega_0\)에서 흡수 계수 \(\alpha=2\kappa\)가 \(\omega\)의 몇 승에 비례하는가? 앞의 결과가 하늘의 색과 어떻게 연결되는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+\[ \kappa=\frac{Nq^2\omega^2}{2m\eps c}\frac{f\gamma}{(\omega_0^2-\omega^2)^2+\gamma^2\omega^2} \]
+<b>(a) \(\omega\ll\omega_0\):</b> 분모 \(\to\omega_0^4\)(상수). 따라서
+\[ \alpha\propto\omega^{2}\cdot\omega^{0}=\boxed{\omega^{2}} \]
+<b>(b) \(\omega\gg\omega_0\):</b> 분모 \(\to\omega^4\). 따라서
+\[ \alpha\propto\frac{\omega^2}{\omega^4}=\boxed{\omega^{-2}} \]
+<b>하늘과의 연결 — 단, 정확히 하라.</b> 여기서 나온 \(\omega^2\)은 <b>흡수</b>(장의 감쇠)의 지수다. Rayleigh 산란의 그 유명한 \(\omega^4\)은 흡수가 아니라 <b>재복사(산란) 일률</b>의 지수이며, 그 유도는 U20에서 한다: 강제 진동하는 쌍극자의 복사 일률이 \(\propto\omega^4|\tilde x_0|^2\)이고 \(\omega\ll\omega_0\)에서 \(|\tilde x_0|\)가 상수이므로 \(P\propto\omega^4\).
+<b>공통 뿌리는 같다.</b> 두 결과 모두 "구동 진동수가 공명보다 훨씬 낮으면 응답 진폭은 진동수에 무관하고, 진동수 의존성은 방출 쪽에서만 나온다"는 사실에서 온다. 시험에서 \(\omega^2\)과 \(\omega^4\)을 혼동하는 것이 대표적 감점 포인트다.
+</div></div>
+
+<div class="qz" data-q="u12-3"><div class="qq">(계산, 계산기 없이) 어떤 기체가 \(\lambda=400\) nm에서 \(n-1=3.0\times10^{-4}\), \(\lambda=700\) nm에서 \(n-1=2.7\times10^{-4}\)이다. Cauchy 계수 \(A,B\)를 구하고, 파란빛과 빨간빛의 굴절 정도 차이를 백분율로 답하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+\(n-1=A(1+B/\lambda^2)\). 두 식을 나누면
+\[ \frac{3.0}{2.7}=\frac{1+B/\lambda_1^2}{1+B/\lambda_2^2},\qquad \lambda_1^2=0.16,\ \lambda_2^2=0.49\ (\mu\mathrm{m}^2) \]
+\(1.111(1+B/0.49)=1+B/0.16\). 좌변 \(=1.111+2.268B\), 우변 \(=1+6.25B\).
+\[ 0.111=3.982B\ \Rightarrow\ B\approx0.0279\ \mu\mathrm{m}^2 \]
+\(A\): \(2.7\times10^{-4}=A(1+0.0279/0.49)=A(1.057)\Rightarrow A\approx2.55\times10^{-4}\).
+<b>차이:</b> \((3.0-2.7)/2.7\approx11\%\). 굴절각 자체는 \(n-1\)에 비례하는 작은 편향이므로, 파란빛이 빨간빛보다 <b>약 11% 더 꺾인다</b>.
+<b>감각 확인:</b> \(\sqrt B\approx0.17\ \mu\)m — 이것이 대략 최저 공명 파장(자외선) 스케일이며, Cauchy 전개가 가시광에서 잘 듣는 이유이자 자외선에 가까워질수록 깨지는 이유다.
+</div></div>
+
+<div class="qz" data-q="u12-4"><div class="qq">(개념) 이상 분산 구간에서 \(\dd n/\dd\omega&lt;0\)이면 군속도 \(v_g=\dd\omega/\dd k\)가 \(c\)를 넘거나 심지어 음수가 될 수 있다. 이것이 인과율을 깨지 않는 이유를 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>핵심:</b> 군속도는 <b>흡수가 무시될 때만</b> 파속 봉우리의 속도로 해석할 수 있다. 그런데 이상 분산 구간은 정의상 흡수가 최대인 구간이므로, 그 전제가 바로 그곳에서 무너진다.
+<b>무슨 일이 일어나는가.</b> 매질이 파속의 <b>뒷부분을 앞부분보다 더 강하게 흡수</b>하면 남은 파형의 무게중심이 앞으로 이동한다. 봉우리가 "빨리 도착한 것처럼" 보이지만, 새로 만들어진 정보는 없다 — 이미 도착해 있던 앞자락이 재형성된 것뿐이다.
+<b>진짜 인과 속도는 파면 속도(front velocity)</b>, 즉 "신호가 전혀 없던 곳에 처음 도달하는 불연속의 속도"다. Sommerfeld와 Brillouin이 보인 바에 따르면 파면 속도는 \(\omega\to\infty\) 극한의 굴절률로 결정되고 \(n(\infty)=1\)이므로 <b>항상 정확히 \(c\)</b>다. 어떤 매질도 이를 바꾸지 못한다.
+<b>한 줄 답안:</b> "군속도는 흡수가 없을 때만 물리적 의미를 갖는데 이상 분산 구간은 흡수 구간이다. 인과율을 지키는 것은 군속도가 아니라 언제나 \(c\)인 파면 속도다."
+</div></div>
+
+<div class="qz" data-q="u12-5"><div class="qq">(계산 + 개념, 계산기 없이 · 10/7 강의) 희박한 기체의 분자에 공명이 둘 있다: \((\omega_1,f_1)\)과 \((\omega_2,f_2)=(2\omega_1,\,4f_1)\). 감쇠는 무시한다. (a) \(\omega\to0\)에서 \(n-1\)에 대한 두 공명의 기여 비를 구하라. (b) \(\omega_1&lt;\omega&lt;\omega_2\)인 투명 구간에서 각 공명의 기여 부호는? (c) \(\omega=\sqrt2\,\omega_1\)에서 \(n\)은 1보다 큰가 작은가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div>
+<b>(a)</b> \(\omega\to0\)에서 공명 \(j\)의 몫은 \(f_j/\omega_j^2\)에 비례한다.
+\[ \frac{f_1}{\omega_1^2}\ :\ \frac{4f_1}{(2\omega_1)^2}=1:1 \]
+진동수가 두 배 높은 공명이지만 세기가 네 배라서 <b>정확히 절반씩</b> 기여한다. 저주파 굴절률은 이렇게 위쪽 공명들의 꼬리를 더한 값이다.
+<b>(b)</b> 각 항은 \(f_j/(\omega_j^2-\omega^2)\). \(\omega&gt;\omega_1\)이므로 공명 1의 몫은 <b>음(−)</b>, \(\omega&lt;\omega_2\)이므로 공명 2의 몫은 <b>양(+)</b>.
+<b>(c)</b> \(\omega^2=2\omega_1^2\)을 넣으면
+\[ \frac{f_1}{\omega_1^2-2\omega_1^2}+\frac{4f_1}{4\omega_1^2-2\omega_1^2}=\frac{f_1}{\omega_1^2}\,(-1+2)=+\frac{f_1}{\omega_1^2}\ &gt;\ 0 \]
+따라서 \(n&gt;1\). 지나온 공명이 굴절률을 깎지만, 아직 위에 남아 있는 더 센 공명의 꼬리가 이긴다.
+<b>일반화:</b> 공명을 하나씩 지날 때마다 \(n-1\)은 \(-\infty\) 쪽에서 다시 시작해 다음 공명까지 단조 증가한다(정상 분산). 감소하는 구간은 감쇠가 살아 있는 공명 바로 근처뿐이다.
+</div></div>
+
+<div class="callout"><b class="head">숙달 기준.</b> 강제 감쇠 진동자에서 복소 유전율까지 유도하고, 실수부/허수부를 분산/흡수로 해석하며, Cauchy 공식을 전개로 얻을 수 있다. 저주파 굴절률을 "위쪽 공명들의 기여 합"으로 설명할 수 있다.</div>

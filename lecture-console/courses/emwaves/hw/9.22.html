@@ -1,0 +1,17 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\(\tilde{\mathbf E}=\tilde E_0e^{-\kappa z}e^{i(kz-\omega t)}\hat x\), \(\tilde{\mathbf B}=\frac{\tilde k}{\omega}\tilde E_0e^{-\kappa z}e^{i(kz-\omega t)}\hat y\), \(|\tilde k|^2=k^2+\kappa^2\).<br>
+<b>(a)</b> Prob. 9.12의 공식:
+\[\langle u\rangle=\frac14\left(\epsilon|\tilde{\mathbf E}|^2+\frac1\mu|\tilde{\mathbf B}|^2\right) =\frac14\left[\epsilon+\frac{k^2+\kappa^2}{\mu\omega^2}\right]E_0^2e^{-2\kappa z}.\]
+Eq. 9.128에서 \(k^2-\kappa^2=\mu\epsilon\omega^2\), 즉 \(\epsilon=\dfrac{k^2-\kappa^2}{\mu\omega^2}\). 대입하면
+\[\boxed{\langle u\rangle=\frac{k^2}{2\mu\omega^2}E_0^2e^{-2\kappa z}}\]
+전기·자기 기여를 따로 보면
+\[\langle u_E\rangle=\frac{k^2-\kappa^2}{4\mu\omega^2}E_0^2e^{-2\kappa z},\qquad \langle u_B\rangle=\frac{k^2+\kappa^2}{4\mu\omega^2}E_0^2e^{-2\kappa z}.\]
+\[\boxed{\langle u_B\rangle-\langle u_E\rangle=\frac{\kappa^2}{2\mu\omega^2}E_0^2e^{-2\kappa z}\;&gt;\;0\ \ \text{(항상 자기 기여 우세)}}\]
+(\(\kappa\to0\), 즉 비도체 극한에서만 둘이 같아진다.)<br>
+<b>(b)</b>
+\[\langle\mathbf S\rangle=\frac{1}{2\mu}\mathrm{Re}(\tilde{\mathbf E}\times\tilde{\mathbf B}^*) =\frac{1}{2\mu}\mathrm{Re}\!\left(\frac{\tilde k^*}{\omega}\right)E_0^2e^{-2\kappa z}\hat z\]
+\[\boxed{I=\langle S\rangle=\frac{k}{2\mu\omega}E_0^2e^{-2\kappa z}}\]
+검산: \(\langle S\rangle/\langle u\rangle=\omega/k=v\) — 에너지가 위상속도로 흐른다.
+<div class="alabel">감점 포인트</div>
+\(|\tilde k|^2=k^2+\kappa^2\)이고 \(\mathrm{Re}(\tilde k)=k\)라는 차이. 세기에는 \(k\)만, 에너지밀도에는 \(k^2+\kappa^2\)이 들어간다.</div><!--/sol-->

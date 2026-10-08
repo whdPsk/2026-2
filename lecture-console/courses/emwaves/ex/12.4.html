@@ -1,0 +1,41 @@
+<div class="exq"><b>상황.</b> \(\bar S\)가 \(S\)에 대해 \(+x\) 방향으로 속력 \(v\)로 움직인다. \(S\)에서 사건 \(A\)는 \((x_A,t_A)=(0,0)\), 사건 \(B\)는 \((x_B,t_B)=(b,0)\)에서 일어난다 — \(S\)에서는 동시다. (i) 이 두 사건이 \(\bar S\)에서도 동시인가? (ii) \(S\)의 관측자가 \(t=0\)에 \(\bar S\)의 모든 시계를 한꺼번에 들여다보면 뭐라고 읽히는가? (iii) \(\bar S\)에 고정된 시계 하나를 계속 지켜보면 시간 팽창이 나오는가? 세 질문을 Lorentz 변환만으로 답하라.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>변환식 \(\bar t=\gamma\!\left(t-\dfrac{v}{c^2}x\right)\)의 \(x\)-항이 모든 "역설"의 원천이다.</div>
+<ol>
+<li><b>(i) 동시성.</b> 변환식에 두 사건을 넣는다.
+\[ \bar x_A=\gamma(0-0)=0,\quad \bar t_A=\gamma\left(0-\frac{v}{c^2}\cdot0\right)=0, \]
+\[ \bar x_B=\gamma(b-0)=\gamma b,\quad \bar t_B=\gamma\left(0-\frac{v}{c^2}b\right)=-\gamma\frac{vb}{c^2}. \]
+\(\bar t_B&lt;0=\bar t_A\)이므로 \(\bar S\)에서는 <b>B가 A보다 먼저</b> 일어났다. 동시성은 절대적이지 않다.</li>
+<li><b>(ii) 시계 어긋남.</b> \(S\)의 \(t=0\) 순간에 \(\bar S\)의 시계들을 읽으면
+\[ \bar t=\gamma\left(0-\frac{v}{c^2}x\right)=-\gamma\frac{v}{c^2}x. \]
+즉 위치에 <b>비례</b>해서 어긋난다. 원점 왼쪽(\(x&lt;0\))의 시계는 <em>앞서</em> 있고, 오른쪽(\(x&gt;0\))의 시계는 <em>뒤처져</em> 있다. 원점의 기준시계만 \(\bar t=0\)을 가리킨다.</li>
+<li>이것은 상호적이다. 역변환 \(t=\gamma(\bar t+\tfrac{v}{c^2}\bar x)\)에 \(\bar t=0\)을 넣으면 \(t=\gamma v\bar x/c^2\)로, \(\bar S\)가 보기엔 \(S\)의 시계들이 어긋나 있다. 누구도 틀리지 않았다.</li>
+<li><b>(iii) 시간 팽창.</b> 이번엔 \(\bar S\)에 <b>고정된 시계 하나</b>(\(\bar x=a\), 즉 \(\Delta\bar x=0\))를 본다. 역변환 \(t=\gamma(\bar t+\tfrac{v}{c^2}\bar x)\)에서 \(\bar x\)가 상수이므로
+\[ \Delta t=\gamma\,\Delta\bar t\quad\Longrightarrow\quad \Delta\bar t=\frac{1}{\gamma}\Delta t. \]
+움직이는 시계가 느리게 간다.</li>
+<li><b>고정하는 변수가 무엇인지가 관건이다.</b> 시간 팽창에서는 \(\bar x\)를 고정한다(하나의 움직이는 시계를 추적). 만약 \(x\)를 고정하면 <em>지나가는 서로 다른 \(\bar S\) 시계들</em>을 차례로 보는 것이라 어느 한 시계가 느린지 알 수 없다.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \bar t_B-\bar t_A=-\gamma\frac{v b}{c^2},\qquad \bar t\big|_{t=0}=-\gamma\frac{v}{c^2}x,\qquad \Delta\bar t\big|_{\Delta\bar x=0}=\frac{\Delta t}{\gamma}\ } \]
+<p class="note">세 결과 모두 \(\bar t=\gamma(t-vx/c^2)\)에서 <em>무엇을 고정하느냐</em>만 바꿔 얻었다. <b>검산</b>: \(v\ll c\)에서 \(\gamma\to1\)이고 \(vx/c^2\to0\)이므로 \(\bar t\to t\) — Galilei 변환의 절대시간이 회복되고, 세 효과가 모두 사라진다. 차원: \(vx/c^2\)는 시간, \(\gamma\)는 무차원 ✓. 순서 뒤집힘은 \(b\ne0\)인 공간꼴 사건쌍에서만 일어난다.</p></div>
+<div class="qz" data-q="ex12.4-a"><div class="qq"><b>+α</b> (역방향) \(S\)에서 동시인 두 사건이 \(b=300\,\mathrm{m}\) 떨어져 있다. 어떤 관측자 \(\bar S\)가 이 둘의 시간차를 \(1\,\mu\mathrm{s}\)로 측정했다면 \(\bar S\)의 속력은?</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p>조건: \(|\Delta\bar t|=\gamma\dfrac{vb}{c^2}=1\times10^{-6}\,\mathrm{s}\). 이를 \(\gamma\beta\)로 정리한다:</p>
+\[ \gamma\beta=\frac{c^2|\Delta\bar t|}{cb}=\frac{c\,|\Delta\bar t|}{b}=\frac{(3\times10^{8})(1\times10^{-6})}{300}=\frac{300}{300}=1. \]
+<p>\(\gamma\beta=1\)을 풀면 \(\beta^2/(1-\beta^2)=1\Rightarrow\beta^2=1/2\):</p>
+\[ \boxed{\ \beta=\frac{1}{\sqrt2}=0.707,\qquad v=2.12\times10^{8}\,\mathrm{m/s},\quad \gamma=\sqrt2\ } \]
+<p><b>확인</b>: \(\gamma vb/c^2=\sqrt2\times(0.707\times3\times10^8)\times300/(9\times10^{16})=1.414\times2.121\times10^{8}\times300/9\times10^{16}\) \(=9.0\times10^{10}/9\times10^{16}=1.0\times10^{-6}\,\mathrm{s}\) ✓.</p>
+<p><b>부호까지 묻는다면</b>: \(\bar S\)가 \(+x\)로 움직이므로 \(x=b&gt;0\)에 있는 사건 \(B\)가 <em>먼저</em> 일어났다고 보고한다. \(\bar S\)가 \(-x\)로 움직이면 반대로 \(A\)가 먼저다.</p></div></div>
+<div class="qz" data-q="ex12.4-b"><div class="qq"><b>+α</b> 이번엔 \(S\)에서 \(A=(0,0)\), \(B=(b,\,2b/c)\)라 하자. 어떤 관성계에서도 순서가 뒤집히지 않음을 보이고, 두 사건이 <em>같은 장소</em>에서 일어나는 기준계의 속도와 그 계에서의 시간 간격(=고유시간)을 구하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>1) 간격 분류.</b> 불변 간격을 계산한다:</p>
+\[ I=(c\Delta t)^2-(\Delta x)^2=(2b)^2-b^2=3b^2&gt;0\ \Rightarrow\ \text{시간꼴(timelike)}. \]
+<p><b>2) 순서 불변 증명.</b> 임의의 \(|\beta|&lt;1\)에 대해</p>
+\[ \bar t_B=\gamma\left(\frac{2b}{c}-\frac{v}{c^2}b\right)=\frac{\gamma b}{c}\,(2-\beta). \]
+<p>\(|\beta|&lt;1\)이므로 \(2-\beta&gt;1&gt;0\), 따라서 \(\bar t_B&gt;0=\bar t_A\) — 어떤 관성계에서도 A가 먼저다. (일반론: 시간꼴 간격은 인과적으로 연결될 수 있으므로 순서가 절대적이어야 한다.)</p>
+<p><b>3) 같은 장소가 되는 계.</b> \(\bar x_B=\gamma(b-v\cdot 2b/c)=0\)을 풀면</p>
+\[ b\left(1-\frac{2v}{c}\right)=0\ \Rightarrow\ \boxed{\ v=\frac{c}{2}\ }\qquad(\gamma=\tfrac{2}{\sqrt3}). \]
+<p><b>4) 그 계에서의 시간 간격 = 고유시간.</b></p>
+\[ \Delta\bar t=\frac{\gamma b}{c}(2-\tfrac12)=\frac{2}{\sqrt3}\cdot\frac{b}{c}\cdot\frac32=\frac{\sqrt3\,b}{c}. \]
+<p><b>불변량 검산</b>: \(c\Delta\tau=\sqrt{I}=\sqrt{3b^2}=\sqrt3\,b\Rightarrow\Delta\tau=\sqrt3\,b/c\) ✓ — 두 방법이 일치한다. 이 계는 두 사건을 잇는 입자의 정지계이고, 그 입자의 속력은 당연히 \(\Delta x/\Delta t=b/(2b/c)=c/2\)로 위에서 구한 \(v\)와 같다 ✓.</p></div></div>

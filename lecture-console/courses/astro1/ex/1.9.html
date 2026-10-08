@@ -1,0 +1,10 @@
+<div class="exq"><span class="examtag">개념 계산 · U05 산란(예습)</span><br><b>상황.</b> 직선으로 통과하는 시간 \(L/c=1\)년, 산란 광학깊이 \(\tau=100\)인 균일 층. 광자가 빠져나오기까지 걸리는 시간의 차수는? [[F05.04]]</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>무작위 보행 확산 시간</div><ol>
+<li>한 걸음 = 평균자유행로 \(\ell=1/\kappa=L/\tau\) (τ=1이 되는 거리). [[F05.04]]</li>
+<li>N걸음 후 변위 \(\sqrt N\ell\) → \(\sqrt N\ell=L\) → \(N\sim\tau^2=10^4\)번.</li>
+<li>한 걸음 시간 \(\ell/c=(L/c)/\tau=0.01\)년 → 총 \(N\ell/c=\tau\,L/c=100\)년.</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div><p>탈출 시간 차수 ≈ 100년(직선의 τ배). 정확한 계수는 경계와 기하에 따라 달라진다.</p></div>
+<div class="intuit"><b>직관</b> e^{−τ}는 "한 번도 상호작용하지 않고 통과할 확률"(생존확률)일 뿐 — 순수 산란이면 광자는 결국 나오지만 τ² 번 헤매느라 늦게 나온다. [[F05.02]]</div>
+<div class="qz" data-q="ex1.9-a"><div class="qq"><b>+α</b> τ를 10배(1000)로 키우면 산란 횟수와 탈출 시간은?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>N∼10⁶ (100배), t∼τL/c=1000년 (10배). L/c가 그대로라는 가정.</p></div></div>
+<div class="qz" data-q="ex1.9-b"><div class="qq"><b>+α</b> 흡수 확률 ε=10⁻⁴이면 τ=100 층에서 광자가 흡수되기 전에 빠져나올 가능성이 큰가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>흡수까지 평균 1/ε=10⁴번 산란 ≈ 탈출에 필요한 τ²=10⁴번과 같은 수준 → τ*=√ε·τ=1, 경계 사례(상당수가 흡수됨).</p></div></div>

@@ -1,0 +1,32 @@
+<div class="exq"><b>상황.</b> 뮤온(muon)은 정지해 있을 때 평균 \(2\times10^{-6}\,\mathrm{s}\)만에 붕괴한다. 이 뮤온이 실험실 기준계에서 빛속도의 \(3/5\)로 날아가고 있다. 실험실에 앉아 있는 관측자가 재는 이 뮤온의 평균 수명은 얼마인가? 주어진 것은 고유수명 \(\tau=2\times10^{-6}\,\mathrm{s}\)와 속력 \(u=\tfrac35 c\)이고, 구할 것은 실험실 시간 간격 \(\Delta t\)이다.</div>
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>두 사건(생성·붕괴)이 뮤온의 <em>같은 위치</em>에서 일어나므로 뮤온계 시간이 곧 proper time이다.</div>
+<ol>
+<li>사건을 명확히 한다. (a) 뮤온 생성, (b) 뮤온 붕괴. 뮤온 정지계 \(\bar S\)에서 이 두 사건은 <b>같은 공간점</b>에서 일어난다(\(\Delta\bar x=0\)). 이런 특별한 기준계에서 잰 시간 간격이 고유시간 \(\Delta\tau=2\times10^{-6}\,\mathrm{s}\)이다.</li>
+<li>고유시간은 불변량이므로, 임의의 관성계에서의 시간 간격은 \(\Delta t=\gamma\,\Delta\tau\)이다. 이것이 "움직이는 시계는 느리게 간다"의 정량적 표현이며, 여기서 뮤온의 내부 붕괴 과정 자체가 시계 역할을 한다.</li>
+<li>\(\beta=u/c=3/5\)를 넣어 \(\gamma\)를 계산한다.
+\[ \gamma=\frac{1}{\sqrt{1-(3/5)^2}}=\frac{1}{\sqrt{1-9/25}}=\frac{1}{\sqrt{16/25}}=\frac54. \]</li>
+<li>따라서 \(\Delta t=\tfrac54\times 2\times10^{-6}\,\mathrm{s}\).</li>
+</ol></div>
+<div class="formula"><div class="ftitle">결과</div>
+\[ \boxed{\ \Delta t=\gamma\,\tau=\frac54\,(2\times10^{-6}\,\mathrm{s})=2.5\times10^{-6}\,\mathrm{s}\ } \]
+<p class="note">실험실에서 보면 뮤온이 25% 더 오래 산다. 이것은 시계 장치의 결함이 아니라 시간 자체의 성질이며, 우주선(cosmic ray) 뮤온이 지표까지 도달하는 실제 현상으로 확인된다. <b>검산</b>: \(v\ll c\)이면 \(\gamma\to1\)이라 \(\Delta t\to\tau\)로 뉴턴적 절대시간이 회복된다. \(\gamma\)는 무차원이므로 좌·우변 모두 시간 차원 \([\mathrm{T}]\)로 맞다. 또 \(\gamma\ge1\)이므로 항상 \(\Delta t\ge\tau\) — 부호 방향도 옳다.</p></div>
+<div class="qz" data-q="ex12.1-a"><div class="qq"><b>+α</b> 이 뮤온은 붕괴하기 전까지 실험실 기준계에서 평균 몇 m를 날아가는가? 그리고 <em>뮤온 자신의 기준계</em>에서 같은 거리를 계산해 두 답이 모순되지 않음을 보여라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p><b>실험실 기준계.</b> 뮤온은 \(u=\tfrac35c=1.8\times10^{8}\,\mathrm{m/s}\)로 \(\Delta t=2.5\times10^{-6}\,\mathrm{s}\) 동안 난다.</p>
+\[ d=u\,\Delta t=(1.8\times10^{8})(2.5\times10^{-6})=450\ \mathrm{m}. \]
+<p><b>뮤온 기준계.</b> 뮤온은 자기가 정지해 있다고 보고, 대신 실험실(과 출발점–붕괴점 사이의 거리)이 자기 쪽으로 \(\tfrac35c\)로 다가온다고 본다. 뮤온 입장에서 시간은 고유수명 \(\tau=2\times10^{-6}\,\mathrm{s}\)뿐이므로 지나간 거리는</p>
+\[ \bar d=u\,\tau=(1.8\times10^{8})(2\times10^{-6})=360\ \mathrm{m}. \]
+<p><b>모순 없음.</b> 450 m는 실험실에 <em>정지해 있는</em> 자로 잰 고유길이이고, 뮤온이 보는 360 m는 그 길이가 Lorentz 수축한 값이다:</p>
+\[ \bar d=\frac{d}{\gamma}=\frac{450}{5/4}=360\ \mathrm{m}\ \checkmark \]
+<p>즉 실험실은 "시간이 늘어나서" 멀리 갔다고 설명하고, 뮤온은 "거리가 줄어들어서" 도달했다고 설명한다. 같은 물리, 다른 서술이다.</p></div></div>
+<div class="qz" data-q="ex12.1-b"><div class="qq"><b>+α</b> (역방향 질문) 뮤온이 실험실에서 평균 <b>1 km</b>를 날아가게 하려면 속력을 얼마로 해야 하는가? \(\beta\)와 \(\gamma\)를 구하라.</div>
+<div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div>
+<div class="qa"><div class="alabel">Answer</div>
+<p>실험실에서의 비행거리는 \(d=u\,\Delta t=(\beta c)(\gamma\tau)=\gamma\beta\,c\tau\). 이 조합 \(\gamma\beta\)가 답을 지배한다는 것이 핵심이다.</p>
+\[ \gamma\beta=\frac{d}{c\tau}=\frac{1000}{(3\times10^{8})(2\times10^{-6})}=\frac{1000}{600}=\frac53. \]
+<p>이제 \(\gamma\beta=\beta/\sqrt{1-\beta^2}\)를 풀면</p>
+\[ \frac{\beta^2}{1-\beta^2}=\frac{25}{9}\ \Rightarrow\ 9\beta^2=25-25\beta^2\ \Rightarrow\ \beta^2=\frac{25}{34}, \]
+\[ \boxed{\ \beta=\sqrt{25/34}=0.857,\qquad \gamma=\sqrt{1+(\gamma\beta)^2}=\sqrt{1+25/9}=\frac{\sqrt{34}}{3}=1.944\ } \]
+<p><b>확인</b>: \(\gamma\beta=1.944\times0.857=1.667=5/3\) ✓. \(u=0.857c=2.57\times10^{8}\,\mathrm{m/s}\), \(\Delta t=1.944\times2\times10^{-6}=3.89\times10^{-6}\,\mathrm{s}\), \(d=2.57\times10^8\times3.89\times10^{-6}\approx1000\,\mathrm{m}\) ✓.</p>
+<p><b>주의할 점</b>: 비상대론적으로 계산하면 \(d=u\tau\)이므로 1 km를 가려면 \(u=1000/(2\times10^{-6})=5\times10^{8}\,\mathrm{m/s}&gt;c\)가 되어 불가능하다. 상대론이 \(\gamma\)만큼 여유를 준 덕분에 \(u&lt;c\)로 가능해진다.</p></div></div>

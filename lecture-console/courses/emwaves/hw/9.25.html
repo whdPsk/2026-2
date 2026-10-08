@@ -1,0 +1,15 @@
+<div class="stmt"></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+전자구름 중심에서 \(d\)만큼 벗어난 핵에 걸리는 복원력은 \(F=-\dfrac{q^2d}{4\pi\epsilon_0a^3}\)이므로 용수철 상수 \(k_{\text{sp}}=\dfrac{q^2}{4\pi\epsilon_0a^3}\):
+\[\omega_0=\sqrt{\frac{q^2}{4\pi\epsilon_0 m a^3}}.\]
+\(q^2/4\pi\epsilon_0=2.30\times10^{-28}\), \(a^3=1.25\times10^{-31}\,\mathrm m^3\), \(m=9.11\times10^{-31}\):
+\[\omega_0^2=\frac{2.30\times10^{-28}}{1.25\times10^{-31}\cdot9.11\times10^{-31}}=2.02\times10^{33}\ \Rightarrow\ \boxed{\omega_0=4.5\times10^{16}\ \mathrm{rad/s}}\]
+\[\lambda_0=\frac{2\pi c}{\omega_0}=4.2\times10^{-8}\ \mathrm m=42\ \mathrm{nm}\ \Rightarrow\ \boxed{\text{자외선(UV)}}\]
+(가시광 400–700 nm보다 짧다. 실제 원자의 공명도 UV에 있으므로 정성적으로 맞다 — 그래서 가시광 영역에서 \(dn/d\omega&gt;0\), 즉 정상분산.)<br>
+Cauchy: \(n=1+A\left(1+\dfrac{B}{\lambda^2}\right)\), \(A=\dfrac{Nq^2}{2m\epsilon_0\omega_0^2}\), \(B=\dfrac{4\pi^2c^2}{\omega_0^2}\).<br>
+0°C, 1기압 수소: 분자수밀도 \(2.69\times10^{25}\,\mathrm m^{-3}\), \(\mathrm H_2\)당 전자 2개 → \(N=5.4\times10^{25}\,\mathrm m^{-3}\).
+\[A=\frac{5.4\times10^{25}\cdot(1.6\times10^{-19})^2}{2\cdot9.11\times10^{-31}\cdot8.85\times10^{-12}\cdot2.02\times10^{33}}\approx\boxed{4.2\times10^{-5}}\]
+\[B=\frac{4\pi^2(3\times10^8)^2}{2.02\times10^{33}}\approx\boxed{1.8\times10^{-15}\ \mathrm m^2}\]
+측정값 \(1.36\times10^{-4}\), \(7.7\times10^{-15}\)과 비교하면 각각 약 3배, 4배 작다. <b>자릿수는 맞음</b> — 이렇게 조야한 모형치고는 훌륭하다.
+<div class="alabel">감점 포인트</div>
+\(N\)을 "분자수"로 쓸지 "전자수"로 쓸지 명시할 것(\(\mathrm H_2\)는 2배). 또 \(a\)를 지름으로 착각하면 \(\omega_0\)가 \(2^{3/2}\)배 틀린다.</div><!--/sol-->
