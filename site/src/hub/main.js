@@ -16,7 +16,7 @@ function dday(exams) {
 }
 
 function card(c) {
-  const last = c.lastLecture ? `<div class="hb-last"><span>최근 강의</span> ${esc(c.lastLecture.date)} · ${c.lastLecture.title}</div>` : '';
+  const last = c.lastLecture ? `<div class="hb-last"><span>최근 반영</span> ${esc(c.lastLecture.date)} · ${c.lastLecture.title}</div>` : '';
   return `<a class="hb-card" href="./${c.slug}/">
   <div class="hb-top"><i>${c.mark}</i><div><h2>${c.title}</h2><p class="hb-sub">${c.markSub}</p></div>${dday(c.exams)}</div>
   <p class="hb-blurb">${esc(c.blurb || '')}</p>

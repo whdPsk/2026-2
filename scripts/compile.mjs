@@ -114,7 +114,7 @@ export function compileCourse(slug, { today = todayKST(), log = console.log } = 
     course: meta.course || {}, exams: meta.exams || [], rangeLabel: meta.rangeLabel, rangeShort: meta.rangeShort,
     drive: meta.drive || {}, chapters: meta.chapters,
     units, examples, lectures, hw: hwSets, probmap, frontier, covered,
-    counts: { mid: nmid, fin: meta.units.length - nmid, units: meta.units.length, lectures: lects.filter((L) => L.kind !== 'cancel').length },
+    counts: { mid: nmid, fin: meta.units.length - nmid, units: meta.units.length, lectures: lects.filter((L) => L.kind !== 'cancel' && L.kind !== 'notice').length },
     ledger: { rows: ledger.rows, hasLedger: Object.keys(C.sources).length > 0 },
     lab,
     storageKey: slug + '.v1',
