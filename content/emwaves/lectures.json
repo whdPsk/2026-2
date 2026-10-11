@@ -101,5 +101,33 @@
     "<b>10/7 강의·과제</b>: 종방향 장에서 횡방향 네 성분을 얻는 Maxwell 방정식 전개와, 단일 도체의 빈 도파관에서 TEM이 불가능한 이유가 필수 복습이다. 경계조건을 빠뜨리지 말 것."
    ]
   }
+ },
+ {
+  "id": "notice1011hw0916",
+  "date": "2026-10-11",
+  "dow": "일",
+  "kind": "notice",
+  "title": "9/16 과제 채점 완료 · 모범답안 안내",
+  "file": "eTL 9/16 과제 채점 공지",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/390711",
+  "summary": [
+   "9/16 수업 복습 과제의 채점이 완료되어 eTL 성적이 공개됐다.",
+   "학생 모범답안 PDF가 공지에 첨부됐다. 원문은 eTL 로그인 후 확인할 수 있다."
+  ],
+  "unitNotes": {}
+ },
+ {
+  "id": "notice1011hw0928",
+  "date": "2026-10-11",
+  "dow": "일",
+  "kind": "notice",
+  "title": "9/28 과제 채점 완료 · 모범답안 안내",
+  "file": "eTL 9/28 과제 채점 공지",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/390726",
+  "summary": [
+   "9/28 수업 복습 과제의 채점이 완료되어 eTL 성적이 공개됐다.",
+   "학생 모범답안 PDF가 공지에 첨부됐다. 원문은 eTL 로그인 후 확인할 수 있다."
+  ],
+  "unitNotes": {}
  }
 ]
