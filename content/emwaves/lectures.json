@@ -129,5 +129,91 @@
    "학생 모범답안 PDF가 공지에 첨부됐다. 원문은 eTL 로그인 후 확인할 수 있다."
   ],
   "unitNotes": {}
+ },
+ {
+  "id": "1012",
+  "date": "2026-10-12",
+  "dow": "월",
+  "kind": "note",
+  "title": "도파관 마무리 → 시간 의존 전하·전류와 퍼텐셜",
+  "file": "10/12 다글로 강의 녹음",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/EcfqDrrG4a7VzbND?fileMetaId=2de780b0-e986-4269-a62b-01dedab5ff51",
+  "summary": [
+   "직사각형 도파관의 변수분리·경계조건·모드 완비성을 마무리하고 차단 진동수, 위상속도와 군속도를 구분. TM 모드와 횡방향 장 복원도 다뤘다.",
+   "시간에 따라 변하는 \\(\\rho,\\mathbf J\\)에는 순간적인 정전기·정자기 공식만 쓸 수 없다. \\(\\mathbf B=\\nabla\\times\\mathbf A\\), \\(\\mathbf E=-\\nabla V-\\partial_t\\mathbf A\\)를 도입하고 게이지 자유도, Coulomb/Lorenz 게이지의 방정식 구조를 비교했다.",
+   "시간에 따라 켜지는 무한 직선 전류를 지연 퍼텐셜로 푸는 Example 10.2의 설정에 진입. <b>10/12 과제:</b> Example 복습과 Problem 9.32 필수, 9.29·9.30 선택(10/13 23:59 마감)."
+  ],
+  "examples": [
+   "10.2"
+  ],
+  "unitNotes": {
+   "u13": [
+    "10/12 녹음: 직사각형 도파관의 경계조건과 변수분리, 차단·위상·군속도를 마무리."
+   ],
+   "u15": [
+    "10/12 녹음: \\(\\mathbf E=-\\nabla V-\\partial_t\\mathbf A\\), \\(\\mathbf B=\\nabla\\times\\mathbf A\\)와 게이지 자유도를 도입."
+   ],
+   "u16": [
+    "Coulomb 게이지와 Lorenz 게이지에서 퍼텐셜 방정식의 결합·분리를 비교. §10.1.4의 로런츠 힘법칙 퍼텐셜 표현은 10/12 교수 공지상 <b>수업·시험 제외</b>."
+   ],
+   "u17": [
+    "Example 10.2의 시간 의존 무한 직선 전류와 지연시각 조건을 준비."
+   ]
+  }
+ },
+ {
+  "id": "notice1012scope",
+  "date": "2026-10-12",
+  "dow": "월",
+  "kind": "notice",
+  "title": "수업 범위 정정 — §9.5.3 보충, §10.1.4 시험 제외",
+  "file": "eTL 교수 공지",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/391047",
+  "summary": [
+   "§9.5.3 동축 전송선은 건너뛴 부분으로 10/14 수업에서 다루겠다고 공지. §10.1.4 <b>퍼텐셜 형태의 로런츠 힘법칙은 수업하지 않고 시험에서도 제외</b>."
+  ],
+  "unitNotes": {
+   "u14": [
+    "10/12 교수 공지: 건너뛴 §9.5.3은 10/14 수업에서 보충 예정."
+   ],
+   "u16": [
+    "10/12 교수 공지: §10.1.4 퍼텐셜 형태의 Lorentz 힘법칙은 시험 범위에서 제외."
+   ]
+  }
+ },
+ {
+  "id": "1014",
+  "date": "2026-10-14",
+  "dow": "수",
+  "kind": "note",
+  "title": "지연 퍼텐셜의 미분·Example 10.2와 E/B 계산",
+  "file": "10/14 다글로 녹음 2개 · eTL 과제",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/G-JebzM1GI6ecwMa?fileMetaId=d4ab701b-3df5-427f-9c99-abfde2d70c87",
+  "summary": [
+   "지연시각 \\(t_r=t-|\\mathbf r-\\mathbf r\\prime|/c\\)가 관측 위치에 의존하므로 \\(\\nabla\\)를 지연 퍼텐셜에 작용시킬 때 <b>연쇄법칙</b>을 적용. \\(1/R\\)의 라플라시안과 작은 구면의 경계 플럭스를 연결해 원천 항을 설명했다.",
+   "Example 10.2: 전류를 켠 뒤 \\(R&lt;ct\\)인 도선 부분만 관측점에 기여. 벡터 퍼텐셜 \\(\\mathbf A\\)를 적분한 다음 \\(\\mathbf E=-\\partial_t\\mathbf A\\), \\(\\mathbf B=\\nabla\\times\\mathbf A\\)로 장을 복원하며 늦은 시간의 정자기 극한을 확인한다.",
+   "<b>10/14 과제:</b> Example 10.2의 생략된 적분과 E/B 계산 필수, 9.33·10.10·10.11 선택. 10/18(일) 23:59 마감. 10/14 녹음의 일부 STT 용어는 부정확해 식과 eTL 문항 기준으로 정리했다."
+  ],
+  "examples": [
+   "10.2"
+  ],
+  "unitNotes": {
+   "u17": [
+    "10/14 녹음: \\(t_r\\)의 위치 의존성을 미분할 때 \\(\\nabla t_r=-\\hat{\\mathbf R}/c\\)를 포함. Example 10.2의 기여 범위 \\(R&lt;ct\\), \\(\\mathbf A\\) 적분 후 E/B 복원과 정적 극한을 연습한다."
+   ]
+  }
+ },
+ {
+  "id": "notice1011hw0923",
+  "date": "2026-10-11",
+  "dow": "일",
+  "kind": "notice",
+  "title": "9/23 과제 채점 완료 · 모범답안 공지",
+  "file": "eTL 공지",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/390866",
+  "summary": [
+   "9/23 과제 점수와 모범답안이 eTL에 공개됨."
+  ],
+  "unitNotes": {}
  }
 ]

@@ -333,5 +333,47 @@
   "kind": "hw",
   "date": "2026-10-08",
   "url": "https://myetl.snu.ac.kr/courses/305248/assignments/383621"
+ },
+ "L12": {
+  "title": "Lecture12 Plasma Effects (PPT)",
+  "short": "PPT12",
+  "kind": "ppt",
+  "date": "2026-10-13",
+  "url": "https://drive.google.com/file/d/1rxGGD_o5EY5ttcA7ygn0KPyTfFojSWA8/view"
+ },
+ "D1013": {
+  "title": "10/13 플라즈마 강의 녹음",
+  "short": "녹음10/13",
+  "kind": "transcript",
+  "date": "2026-10-13",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/z2M_SXM3ehAcdJc3?fileMetaId=527f616d-23f8-4320-99aa-28d2ff8dbfc9"
+ },
+ "F25": {
+  "title": "플립 25 · 플라즈마 진동",
+  "short": "플립25",
+  "kind": "video",
+  "date": "2026-10-13",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/6eptjUDjhLqTHMoc?fileMetaId=9ab3888f-e786-4e0e-94cb-72c9196405c0"
+ },
+ "F26": {
+  "title": "플립 26 · 플라즈마 분산관계",
+  "short": "플립26",
+  "kind": "video",
+  "date": "2026-10-13",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/LgFqeMNPllbugZen?fileMetaId=14122b93-4477-40e4-955c-98afba5b3135"
+ },
+ "F27": {
+  "title": "플립 27 · 분산측도",
+  "short": "플립27",
+  "kind": "video",
+  "date": "2026-10-13",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/PiBYXXcJdE7fRGdz?fileMetaId=555424bc-01f8-460c-a9eb-770a58e2bef1"
+ },
+ "D1012HW2": {
+  "title": "10/12 HW2 조교 해설 녹음",
+  "short": "HW2해설",
+  "kind": "transcript",
+  "date": "2026-10-12",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/H3DTMfq1eR87sZC0?fileMetaId=9f7935fe-7981-4532-96c4-f4709c22f773"
  }
 }

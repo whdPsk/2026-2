@@ -404,5 +404,84 @@
    "연습 시간에는 과제 문제와 시험 문제 풀이를 진행한다."
   ],
   "unitNotes": {}
+ },
+ {
+  "id": "1012",
+  "date": "2026-10-12",
+  "dow": "월",
+  "kind": "note",
+  "title": "Ch.10 마무리 — 회전계 Lagrangian·Hamiltonian, 지구의 유효 중력·Coriolis 힘",
+  "file": "Lecture_Note_Chapter_10_20261012.pdf · 10/12 강의 녹음",
+  "url": "https://drive.google.com/file/d/1f5lQ6RSMBM4p6zUqPnb_kJzRvdhxwUlF/view",
+  "summary": [
+   "고정계와 회전계의 시간미분 관계를 복습하고, 평행이동 가속·Euler 힘·원심력·Coriolis 힘을 각각 구별. 회전 원판 위 마찰 없는 퍽의 궤적은 <b>관찰 좌표계와 초기조건</b>에 따라 다르게 보인다는 예로 설명했다.",
+   "회전계의 Lagrangian에서 \\(\\boldsymbol\\omega\\times\\mathbf r\\) 항을 전개하고 정준운동량은 관성계의 운동량과 일치함을 확인. Hamiltonian은 \\(H_{\\rm rot}=H_{\\rm inertial}-\\boldsymbol\\omega\\cdot\\mathbf L\\)로 바뀐다(노트 Note 6).",
+   "지표면에서는 원심력 항을 유효 중력에 흡수한다. 적도 원심 가속도는 중력의 약 0.35%; 북반구 수평 운동의 Coriolis 편향은 오른쪽, 남반구는 왼쪽. <b>지정 Example 10.2–10.5</b>."
+  ],
+  "examples": [
+   "10.2",
+   "10.3",
+   "10.4",
+   "10.5"
+  ],
+  "unitNotes": {
+   "u11": [
+    "10/12 복습: 고정계의 \\(d\\mathbf Q/dt\\)와 회전계의 시간미분을 구별하고, 각 겉보기힘이 어느 가속도 항에서 오는지 재현한다."
+   ],
+   "u12": [
+    "회전 원판 위 퍽: 관성계에서는 직선, 회전계에서는 원심력·Coriolis 힘으로 휘는 궤적. 회전계 Lagrangian을 전개해 Hamiltonian의 \\(-\\boldsymbol\\omega\\cdot\\mathbf L\\) 항까지 연결한다."
+   ],
+   "u13": [
+    "지표면의 \\(\\mathbf g_{\\rm eff}=\\mathbf g_0-\\boldsymbol\\omega\\times[\\boldsymbol\\omega\\times(\\mathbf R+\\mathbf r)]\\). \\(r\\ll R\\) 근사와 북·남반구 Coriolis 편향을 구분한다."
+   ]
+  }
+ },
+ {
+  "id": "1014",
+  "date": "2026-10-14",
+  "dow": "수",
+  "kind": "note",
+  "title": "푸코 진자 완료 → Ch.11 강체 운동·관성텐서 도입",
+  "file": "Lecture_Note_Chapter_11_20261014.pdf · 10/14 강의 녹음",
+  "url": "https://drive.google.com/file/d/1Jht3ydcV0DsGPykNUFxT8jblq-l7osgW/view",
+  "summary": [
+   "<b>시험 강조:</b> 교수님이 푸코 진자 관련 문제를 낼 예정이라고 언급. \\(q=x+iy\\)로 결합 방정식을 풀면 진동과 위도 의존 세차 \\(\\omega\\sin\\lambda\\)를 분리할 수 있다. 북극은 지구 자전 주기, 적도는 세차 0.",
+   "강체는 질량중심의 병진과 그 둘레의 회전으로 분해. 함께 회전하는 body frame에서는 입자 좌표가 고정되고 \\(\\mathbf v_\\alpha=\\mathbf V+\\boldsymbol\\omega\\times\\mathbf r_\\alpha\\). 회전 에너지에서 관성텐서 \\(I_{ij}=\\sum m_\\alpha(r_\\alpha^2\\delta_{ij}-x_{\\alpha i}x_{\\alpha j})\\)를 도입한다.",
+   "강의노트는 \\(T_{\\rm rot}=\\tfrac12\\boldsymbol\\omega\\cdot I\\boldsymbol\\omega\\), \\(\\mathbf L=I\\boldsymbol\\omega\\), 일반적으로 \\(\\mathbf L\\not\\parallel\\boldsymbol\\omega\\)까지 제시한다. <b>지정 Example 11.1–11.4</b>. 시험 범위는 시험 주 월요일까지 진행분; 팽이 부분은 제외 예정이라고 녹음에서 안내."
+  ],
+  "examples": [
+   "10.5",
+   "11.1",
+   "11.2",
+   "11.3",
+   "11.4"
+  ],
+  "unitNotes": {
+   "u14": [
+    "<b>10/14 출제 언급:</b> 푸코 진자 문제 예정. \\(\\ddot q+2i\\omega\\sin\\lambda\\,\\dot q+(g/l)q=0\\)에서 진동과 세차를 분리하고 극·적도 한계를 검산한다."
+   ],
+   "u15": [
+    "강체의 병진+회전 분해와 body frame 정의. 회전계와 함께 움직이는 입자는 \\(\\mathbf v_{\\alpha,\\rm body}=0\\)이고 관성계에서는 \\(\\mathbf V+\\boldsymbol\\omega\\times\\mathbf r_\\alpha\\)."
+   ],
+   "u16": [
+    "Ch.11 노트 §11.2: \\(I_{ij}=\\sum m_\\alpha(r_\\alpha^2\\delta_{ij}-x_{\\alpha i}x_{\\alpha j})\\), 대각은 관성모멘트·비대각은 관성곱, 대칭성으로 독립 성분 6개. 연속체는 \\(\\sum m\\to\\int\\rho\\,dV\\)."
+   ],
+   "u17": [
+    "Ch.11 노트 §11.3: \\(\\mathbf L=I\\boldsymbol\\omega\\), \\(T_{\\rm rot}=\\tfrac12\\boldsymbol\\omega\\cdot\\mathbf L\\). 주축 방향이 아니면 \\(\\mathbf L\\)과 \\(\\boldsymbol\\omega\\)가 평행하지 않다."
+   ]
+  }
+ },
+ {
+  "id": "notice1014hw1",
+  "date": "2026-10-14",
+  "dow": "수",
+  "kind": "notice",
+  "title": "첫 번째 과제 공지 — 10/26 수업 전 손글씨 제출",
+  "file": "eTL 과제 1 공지 · HW1.pdf",
+  "url": "https://myetl.snu.ac.kr/courses/305140/discussion_topics/392283",
+  "summary": [
+   "T&M 5판 연습문제 <b>9-11, 9-35, 9-46, 9-50, 10-9, 10-12, 10-13</b>. 10/26(월) 수업 전, 종이에 손으로 작성해 조교에게 오프라인 제출."
+  ],
+  "unitNotes": {}
  }
 ]

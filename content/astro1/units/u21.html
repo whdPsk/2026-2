@@ -1,3 +1,5 @@
+<!-- 2026-10-14 source update -->
+<div class="callout"><b class="head">10/13 실제 강의·지정 문제.</b> 플라즈마 진동의 중성 회복력 → \(\omega_p\) → 분산식 → \(v_p,v_g\) → cutoff·소멸파·반사 → DM·굴절을 한 흐름으로 재현한다. [[F25.01, F26.01, F27.01, L12.s2, L12.s3, D1013.01, D1013.02]]<br>Q1: 600·1400 MHz, 지연 0.4 s에서 \(DM=42.5\,\mathrm{pc\,cm^{-3}}\). Q2: 지수 밀도모형에서 \(d=1.16\,\mathrm{kpc}\). Q3: 실제 \(d=2\,\mathrm{kpc}\)라면 \(\bar n_e=0.021\,\mathrm{cm^{-3}}\). Q4: 모형 평균 \(0.043\,\mathrm{cm^{-3}}\)와 차이를 저밀도 버블 등 시선 구조로 해석한다. [[L12.s4, L12.s5, L12.s6, D1013.03, D1013.04]]</div>
 <div class="predict"><b>◈ 학습 목표.</b> 8.1 · 8.2의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.</div>
 
 <h4>중간 <span class="en">약 45분</span></h4>
@@ -19,4 +21,22 @@
 <div class="qz" data-q="u21-3"><div class="qq">EM과DM은 같은 밀도 정보를 주는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. EM∝∫n²ds, DM=∫nds라서 덩어리 구조에 대한 민감도가 다르다.</p></div></div>
 
 
-<p class="note">출처: 교재 p.172–180 · 상태: 교재 선행 · 교재175쪽 DM 지연 계수,178쪽 회전각·좌우원편광 관계 직접 확인</p>
+<h4>10/13 지정 문제 Q1–Q4 — 분산측도에서 거리와 밀도까지</h4>
+<div class="derive"><div class="dtitle"><span class="tag">Q1</span>600 MHz와 1400 MHz의 도착 시각 차이 0.4 s</div>
+<p>\(\Delta t=4.15\,{\rm ms}\,DM[(\nu_{\rm low}/{\rm GHz})^{-2}-(\nu_{\rm high}/{\rm GHz})^{-2}]\)에 대입한다. \(0.4\,{\rm s}=400\,{\rm ms}\) 단위 변환을 먼저 하고,
+\[ DM=\frac{400}{4.15(0.6^{-2}-1.4^{-2})}\simeq42.5\ {\rm pc\,cm^{-3}}. \]
+고주파가 먼저 도착하므로 부호가 양수여야 한다. [[L12.s5, D1013.03]]</p></div>
+<div class="derive"><div class="dtitle"><span class="tag">Q2</span>은하중심 방향의 지수 밀도모형</div>
+<p>태양의 은하중심거리 \(R_0=8.2\,{\rm kpc}\), 모형의 척도길이 \(L=3\,{\rm kpc}\). 중심을 향해 거리 \(s\)를 가면 \(R=R_0-s\)이므로, 태양 부근 밀도 \(n_0=0.03\,{\rm cm^{-3}}\)을 기준으로 \(n_e(s)=n_0e^{s/L}\). 따라서
+\[ DM(d)=\int_0^d n_0e^{s/L}ds=n_0L(e^{d/L}-1),\qquad
+d=L\ln\!\left(1+\frac{DM}{n_0L}\right)\simeq1.16\,{\rm kpc}. \]
+여기서는 \(L\)을 pc로 바꾸어 \(n_0L\)이 \({\rm pc\,cm^{-3}}\)가 되도록 계산한다. [[L12.s5, D1013.03]]</p></div>
+<div class="derive"><div class="dtitle"><span class="tag">Q3–Q4</span>실제 거리와 모형의 차이 해석</div>
+<p>독립 관측으로 실제 거리가 \(2\,{\rm kpc}\)라면 측정 DM으로부터
+\[ \bar n_{e,\rm obs}=\frac{42.5\ {\rm pc\,cm^{-3}}}{2000\ {\rm pc}}\simeq0.021\ {\rm cm^{-3}}. \]
+반면 같은 거리까지 모형을 적분하면
+\[ \bar n_{e,\rm model}=\frac{n_0L}{d}(e^{d/L}-1)
+=\frac{0.03\times3000}{2000}(e^{2/3}-1)\simeq0.043\ {\rm cm^{-3}}. \]
+차이는 단순 모형이 시선의 저밀도 구조를 담지 못해서 생길 수 있다. 수업에서는 초신성 폭발이 만든 버블을 <em>가능한</em> 설명으로 들었고, 유일한 정답으로 단정하지 않았다. [[L12.s6, D1013.04]]</p></div>
+<div class="qz" data-q="u21-4"><div class="qq">플라즈마에서 위상속도가 \(c\)보다 커도 펄서 신호가 먼저 도착하지 않는 이유와, 충돌 없는 경우 \(\omega&lt;\omega_p\)의 에너지 처리를 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>분산식에서 \(v_p=\omega/k&gt;c\)지만 에너지·정보와 연결된 군속도 \(v_g=d\omega/dk=c\sqrt{1-\omega_p^2/\omega^2}&lt;c\). cutoff 아래는 \(k\)가 허수라 내부 장이 깊이에 따라 감쇠한다. 이상적인 충돌 없는 매질에 열손실이 없으므로 입사 에너지는 반사된다. [[L12.s3, D1013.02]]</p></div></div>
+<p class="note">출처: 10/13 Lecture12·다글로 강의 녹음·플립 25–27 [[L12.s2, L12.s3, L12.s4, L12.s5, L12.s6, D1013.01, D1013.02, D1013.03, D1013.04, F25.01, F26.01, F27.01]]</p>

@@ -1,7 +1,82 @@
 [
- {"id":"lec9","kind":"lecture","title":"강의노트 지정 연습 — Ch.9","meta":"9/9 강의노트 (강의 식 9.44): \"Derive the further relationships (Exercises 9.90 and 9.91)\" — 교재 식 (9.90), (9.91)을 직접 유도. 채점 과제는 아니지만 강의 내용 = 시험 범위.",
-  "probs":[
-   {"num":"L9-1","ch":9,"unit":"u06","tag":"ex","title":"\\(\\sin\\zeta=\\sqrt{m_1T_1/(m_2T_2)}\\,\\sin\\psi\\) 유도 (교재 식 9.90)"},
-   {"num":"L9-2","ch":9,"unit":"u06","tag":"ex","title":"\\(\\tan\\psi=\\sin2\\zeta/[(m_1/m_2)-\\cos2\\zeta]\\) 유도 (교재 식 9.91–9.92)"}
-  ]}
+ {
+  "id": "lec9",
+  "kind": "lecture",
+  "title": "강의노트 지정 연습 — Ch.9",
+  "meta": "9/9 강의노트 (강의 식 9.44): \"Derive the further relationships (Exercises 9.90 and 9.91)\" — 교재 식 (9.90), (9.91)을 직접 유도. 채점 과제는 아니지만 강의 내용 = 시험 범위.",
+  "probs": [
+   {
+    "num": "L9-1",
+    "ch": 9,
+    "unit": "u06",
+    "tag": "ex",
+    "title": "\\(\\sin\\zeta=\\sqrt{m_1T_1/(m_2T_2)}\\,\\sin\\psi\\) 유도 (교재 식 9.90)"
+   },
+   {
+    "num": "L9-2",
+    "ch": 9,
+    "unit": "u06",
+    "tag": "ex",
+    "title": "\\(\\tan\\psi=\\sin2\\zeta/[(m_1/m_2)-\\cos2\\zeta]\\) 유도 (교재 식 9.91–9.92)"
+   }
+  ]
+ },
+ {
+  "id": "HW1",
+  "kind": "hw",
+  "title": "공식 과제 1 · T&M 5판 Ch.9–10",
+  "due": "2026-10-26",
+  "meta": "eTL 10/14 공지 · 10/26(월) 수업 전, 종이 손글씨로 조교에게 오프라인 제출 · <a href=\"https://myetl.snu.ac.kr/courses/305140/discussion_topics/392283\" target=\"_blank\" rel=\"noopener\">공지·HW1.pdf ↗</a>. 문제 번호와 마감은 확인했고, 문항 원문을 확인하지 못한 상태여서 상세 풀이 대신 관련 단원을 연결함.",
+  "probs": [
+   {
+    "num": "9-11",
+    "ch": 9,
+    "unit": "u01",
+    "tag": "req",
+    "title": "T&M 5판 연습문제 9-11 — 정확한 문항·단원 연결은 공지 첨부 PDF 확인"
+   },
+   {
+    "num": "9-35",
+    "ch": 9,
+    "unit": "u05",
+    "tag": "req",
+    "title": "T&M 5판 연습문제 9-35 — 정확한 문항·단원 연결은 공지 첨부 PDF 확인"
+   },
+   {
+    "num": "9-46",
+    "ch": 9,
+    "unit": "u08",
+    "tag": "req",
+    "title": "T&M 5판 연습문제 9-46 — 정확한 문항·단원 연결은 공지 첨부 PDF 확인"
+   },
+   {
+    "num": "9-50",
+    "ch": 9,
+    "unit": "u09",
+    "tag": "req",
+    "title": "T&M 5판 연습문제 9-50 — 정확한 문항·단원 연결은 공지 첨부 PDF 확인"
+   },
+   {
+    "num": "10-9",
+    "ch": 10,
+    "unit": "u12",
+    "tag": "req",
+    "title": "T&M 5판 연습문제 10-9 — 정확한 문항·단원 연결은 공지 첨부 PDF 확인"
+   },
+   {
+    "num": "10-12",
+    "ch": 10,
+    "unit": "u13",
+    "tag": "req",
+    "title": "T&M 5판 연습문제 10-12 — 정확한 문항·단원 연결은 공지 첨부 PDF 확인"
+   },
+   {
+    "num": "10-13",
+    "ch": 10,
+    "unit": "u14",
+    "tag": "req",
+    "title": "T&M 5판 연습문제 10-13 — 정확한 문항·단원 연결은 공지 첨부 PDF 확인"
+   }
+  ]
+ }
 ]

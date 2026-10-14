@@ -3,7 +3,7 @@
   "id": "hw1007",
   "kind": "hw",
   "title": "10월 7일 수업 복습 과제 · 도파관",
-    "meta": "eTL 과제 · 필수 1문항과 선택 1문항 · 10/11(일) 23:59 마감. 10/11 제출본의 필수 유도·TEM 증명을 대조함. 선택 문제는 제출본에 없으며 첨부 식 이미지는 확인 후 보충.",
+  "meta": "eTL 과제 · 필수 1문항과 선택 1문항 · 10/11(일) 23:59 마감. 10/11 제출본의 필수 유도·TEM 증명을 대조함. 선택 문제는 제출본에 없으며 첨부 식 이미지는 확인 후 보충.",
   "due": "2026-10-11",
   "probs": [
    {
@@ -100,7 +100,7 @@
   "id": "hw0923",
   "kind": "hw",
   "title": "9월 23일 수업 복습 과제",
-  "meta": "eTL 과제",
+  "meta": "eTL 과제 · <a href=\"https://myetl.snu.ac.kr/courses/305132/discussion_topics/390866\" target=\"_blank\" rel=\"noopener\">10/11 모범답안 공지 ↗</a>",
   "due": "2026-09-27",
   "probs": [
    {
@@ -1827,6 +1827,73 @@
     "unit": "u30",
     "tag": "",
     "title": "매질 속 전자기학의 텐서 형식: (a) \\(D^{\\mu\\nu}\\)와 \\(\\partial_\\nu D^{\\mu\\nu}=J_f^{\\mu}\\), (b) 쌍대텐서 \\(H^{\\mu\\nu}\\), (c) Minkowski 구성관계가 정지 매질에서 \\(\\vb{D}=\\epsilon\\vb{E},\\ \\vb{H}=\\vb{B}/\\mu\\)를 주는지, (d) 속도 \\(\\vb{u}\\)로 움직이는 매질의 관계식."
+   }
+  ]
+ },
+ {
+  "id": "hw1012",
+  "kind": "hw",
+  "title": "10월 12일 수업 복습 과제 · 도파관",
+  "due": "2026-10-13",
+  "meta": "eTL 과제 · 10/13(화) 23:59 마감 · <a href=\"https://myetl.snu.ac.kr/courses/305132/assignments/384786\" target=\"_blank\" rel=\"noopener\">과제 원문 ↗</a>. 강의 범위 Example 복습, 9.32 필수, 9.29·9.30 선택. 제출본은 Drive에서 확인.",
+  "probs": [
+   {
+    "num": "9.32",
+    "ch": 9,
+    "unit": "u13",
+    "tag": "req",
+    "title": "Griffiths Problem 9.32 — eTL 첨부 도형·조건 확인"
+   },
+   {
+    "num": "9.29",
+    "ch": 9,
+    "unit": "u13",
+    "tag": "opt",
+    "title": "Griffiths Problem 9.29 — eTL 첨부 도형·조건 확인"
+   },
+   {
+    "num": "9.30",
+    "ch": 9,
+    "unit": "u13",
+    "tag": "opt",
+    "title": "Griffiths Problem 9.30 — eTL 첨부 도형·조건 확인"
+   }
+  ]
+ },
+ {
+  "id": "hw1014",
+  "kind": "hw",
+  "title": "10월 14일 수업 복습 과제 · 지연 퍼텐셜",
+  "due": "2026-10-18",
+  "meta": "eTL 과제 · 10/18(일) 23:59 마감 · <a href=\"https://myetl.snu.ac.kr/courses/305132/assignments/385652\" target=\"_blank\" rel=\"noopener\">과제 원문 ↗</a>. 필수는 Example 10.2에서 강의가 생략한 적분과 E/B 계산.",
+  "probs": [
+   {
+    "num": "D1014-1",
+    "ch": 10,
+    "unit": "u17",
+    "tag": "req",
+    "title": "Example 10.2의 \\(\\mathbf A\\)를 직접 적분하고 \\(\\mathbf E,\\mathbf B\\)를 구하라."
+   },
+   {
+    "num": "9.33",
+    "ch": 9,
+    "unit": "u14",
+    "tag": "opt",
+    "title": "Griffiths Problem 9.33 — eTL 첨부 도형·조건 확인"
+   },
+   {
+    "num": "10.10",
+    "ch": 10,
+    "unit": "u17",
+    "tag": "opt",
+    "title": "Griffiths Problem 10.10 — eTL 첨부 도형·조건 확인"
+   },
+   {
+    "num": "10.11",
+    "ch": 10,
+    "unit": "u17",
+    "tag": "opt",
+    "title": "Griffiths Problem 10.11 — eTL 첨부 도형·조건 확인"
    }
   ]
  }

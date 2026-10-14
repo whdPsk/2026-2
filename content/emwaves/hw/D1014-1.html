@@ -1,0 +1,6 @@
+<div class="stmt"><p>eTL 10/14 필수: Example 10.2의 지연 벡터퍼텐셜을 직접 적분하고, 그 결과에서 전기장과 자기장을 계산하라.</p></div><!--/stmt-->
+<div class="sol"><p>도선에서 관측점까지 \(R=\sqrt{s^2+z^2}\), 지연시각 \(t_r=t-R/c\). 전류를 켠 뒤 신호가 도달한 구간은 \(|z|&lt;L=\sqrt{c^2t^2-s^2}\)이며 \(ct\le s\)에서는 장이 0이다.</p>
+\[ A_z=\frac{\mu_0 I_0}{4\pi}\int_{-L}^{L}\frac{dz}{\sqrt{s^2+z^2}}=\frac{\mu_0 I_0}{2\pi}\ln\frac{ct+\sqrt{c^2t^2-s^2}}s. \]
+<p>전하밀도가 0인 설정에서 \(V=0\), \(\mathbf E=-\partial_t\mathbf A\), \(\mathbf B=\nabla\times\mathbf A\)를 쓴다.</p>
+\[ E_z=-\frac{\mu_0 I_0 c}{2\pi\sqrt{c^2t^2-s^2}},\qquad B_\varphi=\frac{\mu_0 I_0}{2\pi s}\frac{ct}{\sqrt{c^2t^2-s^2}}. \]
+<p>검산: \(t\to\infty\)에서 \(E_z\to0\), \(B_\varphi\to\mu_0I_0/(2\pi s)\). 상세 적분은 Example 10.2 풀이에도 있다. 전류를 순간적으로 켠 이상화 때문에 파면 근처 식은 발산한다.</p></div><!--/sol-->
