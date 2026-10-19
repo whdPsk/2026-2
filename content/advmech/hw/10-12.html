@@ -1,0 +1,11 @@
+<div class="stmt"><p>북위 \(\lambda\)에서 연직선과 지구 중심을 향한 방향 사이의 작은 각 \(\epsilon\)을 구하고 최대값을 각초로 환산한다.</p></div><!--/stmt-->
+<div class="sol">
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>원심 가속도의 수평·방사 성분</div>
+<ol>
+<li>지구 중심 방향의 순수 중력을 \(g_0\), 반지름을 \(R\)라 한다. 원심 가속도의 적도 방향 수평 성분은 \(R\omega^2\sin\lambda\cos\lambda\), 방사 바깥 성분은 \(R\omega^2\cos^2\lambda\).</li>
+<li>유효 중력의 방사 안쪽 성분은 \(g_0-R\omega^2\cos^2\lambda\). 작은 각에서
+\[\boxed{\epsilon\simeq\frac{R\omega^2\sin\lambda\cos\lambda}{g_0-R\omega^2\cos^2\lambda}}.\]</li>
+<li>\(q=R\omega^2/g_0\), \(t=\tan\lambda\)라 쓰면 \(\epsilon\simeq qt/(1+t^2-q)\). 미분하여 \(t^2=1-q\)에서 최대이며 \(\epsilon_{\max}\simeq q/[2\sqrt{1-q}]\). \(R=6.37\times10^6\) m, \(\omega=7.29\times10^{-5}\) s\(^{-1}\), \(g_0=9.8\) m s\(^{-2}\)를 넣으면 약 \(3.56\times10^2\) 각초(약 5.9 각분)다.</li>
+</ol></div>
+<p class="note">최대 위도는 정확히 45°가 아니라 약간 낮다. 분모의 원심력 보정을 무시하면 45°가 된다.</p>
+</div><!--/sol-->

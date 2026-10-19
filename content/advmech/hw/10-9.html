@@ -1,0 +1,10 @@
+<div class="stmt"><p>북위 \(\lambda\)에서 속력 \(V_0\), 수평 위 고도각 \(\alpha\)로 정동쪽 발사한 포물체의 착지 시 측면 편향을 지구 자전 각속도 \(\omega\)의 1차까지 구한다.</p></div><!--/stmt-->
+<div class="sol">
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>동쪽 속도에 작용하는 Coriolis 가속도</div>
+<ol>
+<li>동·북·위를 각각 \(x,y,z\)로 두면 \(\boldsymbol\omega=\omega(0,\cos\lambda,\sin\lambda)\), 0차 동쪽 속도 \(v_x=V_0\cos\alpha\). Coriolis 가속도의 북쪽 성분은 \(a_y=-2(\boldsymbol\omega\times\mathbf v)_y=-2\omega\sin\lambda\,V_0\cos\alpha\), 즉 남쪽이다.</li>
+<li>0차 비행 시간 \(T=2V_0\sin\alpha/g\). 1차 측면 변위 크기는 \(|y(T)|=|a_y|T^2/2\)이므로
+\[\boxed{d=\frac{4V_0^3}{g^2}\,\omega\sin\lambda\,\sin^2\alpha\cos\alpha}.\]</li>
+</ol></div>
+<p class="note">동쪽 속도가 일정하다는 것은 자전 0차 근사다. 자전이 비행 시간 자체에 주는 보정은 여기에 곱하면 2차가 되므로 버린다.</p>
+</div><!--/sol-->

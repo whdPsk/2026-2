@@ -369,6 +369,27 @@
   "date": "2026-10-13",
   "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/PiBYXXcJdE7fRGdz?fileMetaId=555424bc-01f8-460c-a9eb-770a58e2bef1"
  },
+ "D1019HW3": {
+  "title": "10/19 HW3 조교 해설 녹음",
+  "short": "HW3해설",
+  "kind": "transcript",
+  "date": "2026-10-19",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/7NisNu84yOmPrAfG?fileMetaId=3b03ab1f-a9e5-4788-bde4-eed4ff32ec81"
+ },
+ "N1017": {
+  "title": "10/17 HW3 채점·해설 일정 공지",
+  "short": "HW3공지",
+  "kind": "notice",
+  "date": "2026-10-17",
+  "url": "https://myetl.snu.ac.kr/courses/305248/discussion_topics/393175"
+ },
+ "N1019": {
+  "title": "10/19 중간고사 안내 공지",
+  "short": "중간공지",
+  "kind": "notice",
+  "date": "2026-10-19",
+  "url": "https://myetl.snu.ac.kr/courses/305248/discussion_topics/393762"
+ },
  "D1012HW2": {
   "title": "10/12 HW2 조교 해설 녹음",
   "short": "HW2해설",

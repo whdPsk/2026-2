@@ -1,0 +1,12 @@
+<div class="stmt"><p>고정 중심의 반발력 \(F(r)=k/r^3\) (\(k>0\))에 속력 \(u_0\)로 입사한 질량 \(m\)의 고전적 미분 산란 단면적을 구한다.</p></div><!--/stmt-->
+<div class="sol">
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>유효 각운동량으로 궤도각을 구한 뒤 미분</div>
+<ol>
+<li>\(U(r)=k/(2r^2)\)를 \(U(\infty)=0\)으로 택한다. 각운동량 \(L=mu_0b\), 에너지 \(E=mu_0^2/2\)이다. 방사 운동의 \(1/r^2\) 항을 묶으면 궤도각 계수는 \(\nu=\sqrt{1+mk/L^2}=\sqrt{1+k/(mu_0^2b^2)}\).</li>
+<li>접근·이탈 구간의 방위각 변화는 \(\Delta\phi=\pi/\nu\). 따라서 산란각 \(\theta=\pi-\Delta\phi=\pi(1-1/\nu)\), 즉
+\[b^2=\frac{k}{mu_0^2}\frac{(\pi-\theta)^2}{\theta(2\pi-\theta)}.\]</li>
+<li>축대칭 공식 \(d\sigma/d\Omega=|d(b^2)/d\theta|/(2\sin\theta)\)를 쓰면
+\[\boxed{\frac{d\sigma}{d\Omega}=\frac{k\pi^2(\pi-\theta)}{mu_0^2\,\theta^2(2\pi-\theta)^2\sin\theta}}.\]</li>
+</ol></div>
+<p class="note">작은 \(b\)일수록 큰 산란각. \(k/(mu_0^2)\)의 차원은 길이의 제곱이므로 단면적 차원도 맞는다.</p>
+</div><!--/sol-->

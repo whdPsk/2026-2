@@ -1,0 +1,13 @@
+<div class="stmt"><p>지표면의 연직선을 기준으로 높이 \(h\)에서 물체를 놓는다. \(T=\sqrt{2h/g}\)와 자전 각속도 \(\omega\)의 2차 근사를 써 남쪽 편향을 Coriolis, 원심력의 높이 변화, 중력의 높이 변화로 나눈다.</p></div><!--/stmt-->
+<div class="sol">
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>세 효과가 모두 같은 차수인 이유</div>
+<ol>
+<li>동·북·위를 \(x,y,z\)로 잡고 \(z(t)=h-gt^2/2\), \(T^2=2h/g\)로 둔다. 1차 Coriolis 동쪽 편향은 \(a_x=2\omega g t\cos\lambda\)에서 \(v_x=\omega g t^2\cos\lambda\).</li>
+<li>이 동쪽 속도에 다시 작용하는 Coriolis 가속도의 북쪽 성분은 \(a_{y,1}=-2\omega\sin\lambda\,v_x=-2\omega^2g t^2\sin\lambda\cos\lambda\). 두 번 적분하면 남쪽 변위 \(d_1=(2/3)(h^2/g)\omega^2\sin\lambda\cos\lambda\).</li>
+<li>지표면 연직선은 지표면의 중력과 원심력 합으로 정한다. 높이 \(z\)에서 원심력의 수평 성분은 지표면보다 \(\omega^2z\sin\lambda\cos\lambda\)만큼 더 남쪽을 향한다. \(\int_0^T(T-t)z(t)\,dt=5h^2/(6g)\)이므로 \(d_2=(5/6)(h^2/g)\omega^2\sin\lambda\cos\lambda\).</li>
+<li>중력의 높이 효과에서는 크기 변화 \(g_0(R+z)\simeq g_0(1-2z/R)\)와, 연직선이 방사 방향에서 기울었기 때문에 높이 \(z\)에서 생기는 수평 위치 차이를 함께 고려한다. 두 효과를 합치면 지표면 기준 중력의 남쪽 가속도 차이는 \(3\omega^2z\sin\lambda\cos\lambda\). 따라서 \(d_3=3(5/6)(h^2/g)\omega^2\sin\lambda\cos\lambda=(5/2)(h^2/g)\omega^2\sin\lambda\cos\lambda\).</li>
+<li>세 계수를 더하면 \(2/3+5/6+5/2=4\). 최종 남쪽 편향은
+\[\boxed{d=d_1+d_2+d_3=\frac{4h^2\omega^2\sin\lambda\cos\lambda}{g}}.\]</li>
+</ol></div>
+<p class="note">중력의 크기 변화만 포함하면 세 번째 계수 5/2가 나오지 않는다. 연직선과 지구 중심 방향의 기하학적 차이도 같은 차수로 보존한다.</p>
+</div><!--/sol-->

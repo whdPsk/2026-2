@@ -1,0 +1,10 @@
+<div class="stmt"><p>길이 \(b\), 선밀도 \(\rho\)인 균일한 사슬의 자유 끝이 탁자에 닿고 다른 끝은 높이 \(b\)에 있다. 위 끝을 놓은 뒤 \(x\)만큼 떨어졌을 때 탁자가 사슬에 주는 힘을 구한다.</p></div><!--/stmt-->
+<div class="sol">
+<div class="derive"><div class="dtitle"><span class="tag">풀이</span>쌓인 사슬의 무게 + 들어오는 운동량의 정지</div>
+<ol>
+<li>탁자 위에 쌓인 길이는 \(x\), 움직이는 부분은 \(b-x\). 사슬은 낙하 중 자유낙하하므로 \(v^2=2gx\).</li>
+<li>쌓인 부분의 무게는 \(\rho gx\). 매초 탁자에 닿아 정지하는 질량은 \(\dot m=\rho v\)이므로, 유입 운동량을 없애는 데 필요한 추가 힘은 \(\dot m v=\rho v^2=2\rho gx\).</li>
+<li>따라서 탁자의 반작용력은 \(\boxed{N=\rho gx+\rho v^2=3\rho gx}\) (\(0\le x<b\)).</li>
+</ol></div>
+<p class="note">검산: \(x=0\)에서는 0, 낙하 끝 직전에는 \(3\rho gb\). 전부 쌓인 뒤 정지하면 \(N=\rho gb\)로 바뀐다. 충돌 과정의 힘을 정적 무게와 혼동하지 않는다.</p>
+</div><!--/sol-->

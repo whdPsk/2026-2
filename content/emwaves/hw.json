@@ -1896,5 +1896,16 @@
     "title": "Griffiths Problem 10.11 — eTL 첨부 도형·조건 확인"
    }
   ]
+ },
+ {
+  "id": "hw1019",
+  "kind": "hw",
+  "title": "10월 19일 수업 복습 과제 · Jefimenko 식과 지연 퍼텐셜",
+  "due": "2026-10-20",
+  "meta": "eTL 과제 · 10/20(화) 23:59 마감 · <a href=\"https://myetl.snu.ac.kr/courses/305132/assignments/386279\" target=\"_blank\" rel=\"noopener\">과제 원문 ↗</a>. 강의 범위의 모든 Example을 답을 보지 않고 풀 수 있게 복습. Problem 10.14 필수, 10.13 선택.",
+  "probs": [
+   {"num":"10.14","ch":10,"unit":"u17","tag":"req","title":"Griffiths Problem 10.14 — 시간에 선형인 전류의 Jefimenko 자기장"},
+   {"num":"10.13","ch":10,"unit":"u17","tag":"opt","title":"Griffiths Problem 10.13 — 시간에 선형인 전하밀도의 Jefimenko 전기장"}
+  ]
  }
 ]

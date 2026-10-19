@@ -56,34 +56,34 @@
   "id": "HW3",
   "kind": "hw",
   "title": "HW3 · 교재 p.187–190 연습문제",
-  "meta": "eTL 과제 · 10/15(목) 14:00 마감 · p.187 문제 8, 9(4번 제외), p.188 문제 10, p.190 문제 17. 10/12 작성한 자체 풀이 PDF와 대조한 핵심 유도·가정·검산을 각 문제에 공개. <a href=\"https://drive.google.com/file/d/1CWMT97X8u_IXgf-atTkdelruoGiIoIf_/view\" target=\"_blank\" rel=\"noopener\">자세한 풀이 PDF ↗</a> (Drive 권한 필요할 수 있음).",
+  "meta": "eTL 과제 · 10/15(목) 14:00 마감 · p.187 문제 8, 9(4번 제외), p.188 문제 10, p.190 문제 17. 10/17 채점 완료. 10/12 작성한 자체 풀이 PDF와 대조한 핵심 유도·가정·검산을 각 문제에 공개. <a href=\"https://drive.google.com/file/d/1CWMT97X8u_IXgf-atTkdelruoGiIoIf_/view\" target=\"_blank\" rel=\"noopener\">자체 풀이 PDF ↗</a> · <a href=\"https://daglo.ai/workspace/ws-edac7bd799b3e351/board/7NisNu84yOmPrAfG?fileMetaId=3b03ab1f-a9e5-4788-bde4-eed4ff32ec81\" target=\"_blank\" rel=\"noopener\">10/19 조교 해설 녹음 ↗</a> (Drive·다글로 권한 필요할 수 있음).",
   "due": "2026-10-15",
   "probs": [
    {
     "num": "HW3-8",
     "ch": 8,
-    "unit": "u21",
+    "unit": "u16",
     "tag": "req",
     "title": "교재 p.187 문제 8"
    },
    {
     "num": "HW3-9",
     "ch": 8,
-    "unit": "u21",
+    "unit": "u16",
     "tag": "req",
     "title": "교재 p.187 문제 9 — (4) 제외"
    },
    {
     "num": "HW3-10",
     "ch": 8,
-    "unit": "u21",
+    "unit": "u19",
     "tag": "req",
     "title": "교재 p.188 문제 10"
    },
    {
     "num": "HW3-17",
     "ch": 8,
-    "unit": "u21",
+    "unit": "u20",
     "tag": "req",
     "title": "교재 p.190 문제 17"
    }

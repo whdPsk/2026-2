@@ -1,0 +1,92 @@
+{
+  "checked_at_kst": "2026-10-20T00:45:00+09:00",
+  "scope": "2026-10-14 이후 세 과목 eTL 과제·공지·모듈, Drive 과목 폴더와 하위 폴더, 다글로 보드",
+  "sources": {
+    "etl": "확인",
+    "drive": "확인",
+    "daglo": "확인"
+  },
+  "items": [
+    {
+      "course": "advmech",
+      "source": "etl",
+      "id": "discussion:305140:392283",
+      "date": "2026-10-14",
+      "status": "기존 항목 수정",
+      "location": "content/advmech/hw.json; content/advmech/lectures.json",
+      "note": "HW1 첫 문항 번호 9-19로 교정"
+    },
+    {
+      "course": "advmech",
+      "source": "drive",
+      "id": "1zeZCrPsco4Val3PcmsO-ucqd-vVtg0kR",
+      "date": "2026-10-18",
+      "status": "반영",
+      "location": "content/advmech/hw.json; content/advmech/hw/"
+    },
+    {
+      "course": "advmech",
+      "source": "daglo",
+      "id": "_tbB1_JWN0l4tReP",
+      "date": "2026-10-19",
+      "status": "반영; 강의 노트 템플릿 완료",
+      "location": "content/advmech/lectures.json"
+    },
+    {
+      "course": "emwaves",
+      "source": "etl",
+      "id": "assignment:305132:386279",
+      "date": "2026-10-19",
+      "status": "반영",
+      "location": "content/emwaves/hw.json"
+    },
+    {
+      "course": "emwaves",
+      "source": "daglo",
+      "id": "vYQ2V6RMpfObF4n9",
+      "date": "2026-10-19",
+      "status": "반영; 강의 노트 템플릿 완료",
+      "location": "content/emwaves/lectures.json"
+    },
+    {
+      "course": "emwaves",
+      "source": "drive",
+      "id": "12Oddy3576u93y_Xh-pbCaKw_v3hAO3S7",
+      "date": "2026-10-18",
+      "status": "기존 풀이와 대조; 새 강의 내용 없음",
+      "location": "content/emwaves/hw/D1014-1.html"
+    },
+    {
+      "course": "astro1",
+      "source": "drive",
+      "id": "1RB9H-tclHZ5DH2Xxf9aS3PxpgO2yGj6Y",
+      "date": "2026-10-14",
+      "status": "기존 HW3 풀이와 중복",
+      "location": "content/astro1/hw/"
+    },
+    {
+      "course": "astro1",
+      "source": "etl",
+      "id": "discussion:305248:393175",
+      "date": "2026-10-17",
+      "status": "반영",
+      "location": "content/astro1/lectures.json; content/astro1/ledger/N1017.json"
+    },
+    {
+      "course": "astro1",
+      "source": "etl",
+      "id": "discussion:305248:393762",
+      "date": "2026-10-19",
+      "status": "반영",
+      "location": "content/astro1/lectures.json; content/astro1/ledger/N1019.json"
+    },
+    {
+      "course": "astro1",
+      "source": "daglo",
+      "id": "7NisNu84yOmPrAfG",
+      "date": "2026-10-19",
+      "status": "반영; 강의 노트 템플릿 완료",
+      "location": "content/astro1/lectures.json; content/astro1/ledger/D1019HW3.json"
+    }
+  ]
+}
