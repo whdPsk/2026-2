@@ -396,5 +396,19 @@
   "kind": "transcript",
   "date": "2026-10-12",
   "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/H3DTMfq1eR87sZC0?fileMetaId=9f7935fe-7981-4532-96c4-f4709c22f773"
+ },
+ "L13": {
+  "title": "Lecture13 Faraday Rotation (PPT)",
+  "short": "PPT13",
+  "kind": "ppt",
+  "date": "2026-10-20",
+  "url": "https://drive.google.com/file/d/1PipkYSt2rB6WH4oFybzgcRn_FrqBvrH3/view"
+ },
+ "D1020": {
+  "title": "10/20 자화 플라즈마·패러데이 회전 강의 녹음",
+  "short": "녹음10/20",
+  "kind": "transcript",
+  "date": "2026-10-20",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/qR6nDdRAQQnOV1jZ?fileMetaId=9ba7adcc-cfad-4496-870a-b61dcfb21ee7"
  }
 }

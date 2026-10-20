@@ -1,4 +1,5 @@
 <!-- 2026-10-14 source update -->
+<div class="callout"><b class="head">10/20 Lecture13 · 중간고사 범위 끝.</b> 자기장 속 두 원편광의 전자 응답 → 분산·파수 차이 → 선편광 회전 → RM·DM으로 시선 자기장 계산까지 이어진다. 교수님은 <span class="hl">패러데이 회전까지가 10/27 중간고사 범위</span>라고 밝혔다. [[L13.s1, L13.s4, L13.s5, D1020.12]]</div>
 <div class="callout"><b class="head">10/13 실제 강의·지정 문제.</b> 플라즈마 진동의 중성 회복력 → \(\omega_p\) → 분산식 → \(v_p,v_g\) → cutoff·소멸파·반사 → DM·굴절을 한 흐름으로 재현한다. [[F25.01, F26.01, F27.01, L12.s2, L12.s3, D1013.01, D1013.02]]<br>Q1: 600·1400 MHz, 지연 0.4 s에서 \(DM=42.5\,\mathrm{pc\,cm^{-3}}\). Q2: 지수 밀도모형에서 \(d=1.16\,\mathrm{kpc}\). Q3: 실제 \(d=2\,\mathrm{kpc}\)라면 \(\bar n_e=0.021\,\mathrm{cm^{-3}}\). Q4: 모형 평균 \(0.043\,\mathrm{cm^{-3}}\)와 차이를 저밀도 버블 등 시선 구조로 해석한다. [[L12.s4, L12.s5, L12.s6, D1013.03, D1013.04]]</div>
 <div class="predict"><b>◈ 학습 목표.</b> 8.1 · 8.2의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.</div>
 
@@ -6,7 +7,7 @@
 
 <p>플라즈마의 자유 전자는 외부 전기장에 반응해 진동하고 빛의 분산관계를 바꾼다. 차갑고 비자화된 이상 플라즈마에서는 플라즈마 주파수보다 낮은 전자기파가 진행파로 전파되지 못한다. 위상속도는 c보다 클 수 있지만 정보와 에너지를 운반하는 군속도는 c보다 작다.</p><p>전파 펄스는 낮은 주파수 성분이 더 늦게 도착한다. 지연은 시선방향 전자 기둥밀도인 DM에 비례하고ν⁻²로 변한다. 제동복사의 EM이 n²에 민감했던 것과 달리 DM은n에 선형이다. 두 관측량을 함께 사용하면 매질의 밀도 구조를 제약할 수 있다.</p><p>자기장이 있으면 좌·우원편광의 위상속도가 조금 달라진다. 선편광은 두 원편광의 합이므로 상대위상이 누적되며 편광면이 회전한다. 회전각은 파장의제곱에 비례한다. 시선방향 자기장의 부호가 바뀌면 RM에서 상쇄되므로 절댓값 자기장만 측정하는 것이 아니다.</p>
 
-<div class="callout"><b class="head">강의·교재 강조점.</b> 교재175쪽 DM 지연 계수,178쪽 회전각·좌우원편광 관계 직접 확인 / 후속 강의·HW 강조점은 아직 미반영.</div>
+<div class="callout"><b class="head">강의·교재 강조점.</b> 교재 175쪽 DM 지연 계수와 178쪽 회전각·좌우원편광 관계를 확인. 10/20 수업에서는 원편광의 전자 운동, RM의 부호, Crab pulsar의 DM·RM 결합을 다뤘다. [[L13.s2, L13.s5, L13.s6, D1020.10]]</div>
 
 <div class="formula"><div class="ftitle">암기 — 플라즈마 분산·DM·패러데이 회전</div><p><b>플라즈마 분산</b></p>\[ \omega^2=\omega_p^2+c^2k^2,\quad\omega_p^2={4\pi n_ee^2\over m_e},\quad v_g=c\sqrt{1-\omega_p^2/\omega^2} \]<p class="note">νp≈8.98×10³√(ne/cm⁻³) Hz. <i>조건: 차가운 비자화·충돌 무시 플라즈마</i></p><p><b>펄스 분산 지연</b></p>\[ \Delta t=4.15\,\mathrm{ms}\,{DM\over\mathrm{pc\,cm^{-3}}}\left[\left({\nu_1\over\mathrm{GHz}}\right)^{-2}-\left({\nu_2\over\mathrm{GHz}}\right)^{-2}\right] \]<p class="note">DM=∫ne ds, 낮은 주파수를ν1로 놓으면양의지연. <i>조건: ν≫νp; GHz/ms 단위의 계수</i></p><p><b>패러데이 회전</b></p>\[ \chi(\lambda)=\chi_0+RM\lambda^2,\quad RM=0.812\int n_e[\mathrm{cm^{-3}}]B_\parallel[\mu\mathrm G]ds[\mathrm{pc}] \]<p class="note">λ는m, RM은rad m⁻². 부호는B∥의 양의 방향 정의와 함께 사용. <i>조건: 단순 foreground screen; 방출/회전 혼합과nπ 모호성은 별도</i></p></div>
 
@@ -40,3 +41,34 @@ d=L\ln\!\left(1+\frac{DM}{n_0L}\right)\simeq1.16\,{\rm kpc}. \]
 차이는 단순 모형이 시선의 저밀도 구조를 담지 못해서 생길 수 있다. 수업에서는 초신성 폭발이 만든 버블을 <em>가능한</em> 설명으로 들었고, 유일한 정답으로 단정하지 않았다. [[L12.s6, D1013.04]]</p></div>
 <div class="qz" data-q="u21-4"><div class="qq">플라즈마에서 위상속도가 \(c\)보다 커도 펄서 신호가 먼저 도착하지 않는 이유와, 충돌 없는 경우 \(\omega&lt;\omega_p\)의 에너지 처리를 설명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>분산식에서 \(v_p=\omega/k&gt;c\)지만 에너지·정보와 연결된 군속도 \(v_g=d\omega/dk=c\sqrt{1-\omega_p^2/\omega^2}&lt;c\). cutoff 아래는 \(k\)가 허수라 내부 장이 깊이에 따라 감쇠한다. 이상적인 충돌 없는 매질에 열손실이 없으므로 입사 에너지는 반사된다. [[L12.s3, D1013.02]]</p></div></div>
 <p class="note">출처: 10/13 Lecture12·다글로 강의 녹음·플립 25–27 [[L12.s2, L12.s3, L12.s4, L12.s5, L12.s6, D1013.01, D1013.02, D1013.03, D1013.04, F25.01, F26.01, F27.01]]</p>
+
+<h4>10/20 Lecture13 — 자기장 속 플라즈마와 패러데이 회전</h4>
+<div class="slide"><div class="sh">L13 · 슬라이드 1 <span class="st">가정과 선편광 분해</span></div><p>전자 전류가 포함된 Maxwell 방정식에 \(e^{i(kz-\omega t)}\)를 대입한다. 외부의 거의 일정한 \(\mathbf B_0=B_0\hat{\mathbf z}\)가 파동의 자기장보다 우세하고 빛도 \(+z\)로 진행한다고 둔다. 입사 \(x\) 선편광은 같은 진폭의 LCP와 RCP의 합이다. [[L13.s1, D1020.01, D1020.02]]</p></div>
+<div class="slide"><div class="sh">L13 · 슬라이드 2–3 <span class="st">두 모드에 대한 전자 응답</span></div><p>이 강의의 복소수 규약에서 \(E_y=-iE_x\)는 LCP, \(E_y=+iE_x\)는 RCP이다. 전자 운동방정식 \(m_e\dot{\mathbf v}=-e(\mathbf E+\mathbf v\times\mathbf B_0/c)\)를 각 모드에 풀면 LCP의 전자 속도 진폭이 더 작다. LCP에서는 전기력과 자기력이 서로 반대이고 입사파가 정한 \(\omega\)는 같으므로 궤도 반지름도 더 작다. [[L13.s2, L13.s3, D1020.03, D1020.04]]</p></div>
+<div class="intuit"><b>직관.</b> 같은 박자로 전자를 흔들 때 LCP에서는 자기력이 전기력의 효과를 일부 상쇄한다. 전자의 응답은 작아지지만 굴절률은 RCP보다 커져 LCP의 <em>위상속도</em>는 더 낮다. 전자 속도와 파동 위상속도를 혼동하지 말자. [[L13.s3, L13.s4, D1020.04, D1020.05]]</div>
+<div class="slide"><div class="sh">L13 · 슬라이드 4–5 <span class="st">파수 차이에서 RM까지</span></div><p>방출원이 정한 \(\omega\)는 두 모드에 공통이다. 따라서 위상속도가 다른 두 모드는 \(k_L&gt;k_R\)로 진행하며, 누적 위상차의 절반만큼 합성 선편광 방향이 회전한다. 고주파·약자기장 근사에서 회전은 \(\lambda^2\)에 비례하고 시선 자기장 성분에 민감하다. [[L13.s4, L13.s5, D1020.05, D1020.06, D1020.07]]</p></div>
+<div class="formula"><div class="ftitle">Lecture13 — 두 원편광과 관측량</div>
+\[\omega_B={eB_\parallel\over m_ec},\qquad k_L&gt;k_R,\qquad \Delta\chi=\tfrac12\int(k_L-k_R)\,ds=RM\lambda^2\]
+\[RM=0.812\int n_e[\mathrm{cm^{-3}}]B_\parallel[\mu\mathrm G]ds[\mathrm{pc}]\quad[\mathrm{rad\,m^{-2}}],\qquad DM=\int n_e\,ds\]
+\[\langle B_\parallel\rangle_{n_e}[\mu\mathrm G]={RM\over0.812\,DM}\simeq1.23{RM\over DM}\]
+<p class="note">여기서 \(B_\parallel&gt;0\)은 관측자 쪽이며 평균은 전자밀도 가중 평균이다. \(RM\)의 부호는 자기장 방향을, \(DM\)은 전자 기둥밀도를 나타낸다. \(EM=\int n_e^2ds\)와도 구별한다. [[L13.s5, D1020.07, D1020.10]]</p></div>
+<div class="trap"><b>관측 함정.</b> 출발 편광각 \(\chi_0\)를 모르면 단일 파장의 절대 편광각으로 RM을 바로 정할 수 없다. 두 파장 이상에서 \(\chi(\lambda)=\chi_0+RM\lambda^2\)의 기울기를 구한다. 선편광각은 \(180^\circ\)마다 같아 보이므로 파장 간 \(n\pi\) 모호성도 확인한다. [[L13.s5, D1020.08]]</div>
+<div class="apply"><b>천체 적용 · Crab pulsar.</b> 강의의 \(d=2\,\mathrm{kpc}\), \(DM\simeq60\,\mathrm{pc\,cm^{-3}}\), \(RM\simeq-25\,\mathrm{rad\,m^{-2}}\)이면 \(\bar n_e=60/2000=0.030\,\mathrm{cm^{-3}}\), \(\langle B_\parallel\rangle_{n_e}=1.23(-25)/60\simeq-0.51\,\mu\mathrm G\)이다. 음의 부호는 평균 시선 자기장이 관측자에게서 멀어짐을 뜻한다. [[L13.s6, D1020.10]]</div>
+<div class="prof"><b>교수님 말.</b> EM은 \(n_e^2\), DM은 \(n_e\), RM은 \(n_eB_\parallel\)의 경로 적분이다. 세 측도를 혼동하지 말고, 성간 자기장의 전형적 크기와 단위를 감각적으로 기억하라고 강조했다. RM 부호의 공간 분포는 은하 자기장의 방향 반전 가능성을 보여 주지만 그 형성 원인은 아직 열린 문제로 설명했다. [[D1020.01, D1020.07, L13.s6, D1020.11]]</div>
+<div class="apply"><b>관측 적용.</b> 선편광된 싱크로트론 복사가 자화된 플라즈마를 지나면 파장에 따라 편광각이 달라진다. RM은 시선 자기장과 열전자에 민감하다. 싱크로트론 밝기로 자기장 세기를 추정할 때 쓰는 에너지 등분배 가정은 별도의 모델 가정이다. [[D1020.09]]</div>
+::qz u21-5
+같은 \(\omega\)로 전파하는 두 원편광 중 LCP의 위상속도가 더 작을 때 파수는 어느 쪽이 더 큰가? 선편광은 왜 회전하는가? [[L13.s4]]
+::a
+\(k=\omega/v_p\)이므로 \(k_L&gt;k_R\). 진행하면서 상대위상이 누적되고, 같은 진폭의 두 원편광을 다시 합하면 선편광의 방향이 변한다. 회전각은 위상차의 절반이다. [[L13.s4, L13.s5, D1020.06]]
+::end
+::qz u21-6
+RM이 음수이고 DM은 양수일 때 무엇을 알 수 있는가? RM이 거의 0이면 자기장이 없다는 뜻인가? [[L13.s5]]
+::a
+강의의 부호 규약에서는 전자밀도로 가중한 시선 자기장이 평균적으로 관측자에게서 멀어진다. RM이 작아도 서로 반대인 자기장 구간이 상쇄될 수 있으므로 자기장이 없다고 단정할 수 없다. [[L13.s5, L13.s6, D1020.07, D1020.11]]
+::end
+::qz u21-7
+출발 편광각이 알려지지 않은 광원의 10 cm와 20 cm 편광각으로 RM을 구할 때 무엇을 빼고, 어떤 모호성을 확인해야 하는가? [[D1020.08]]
+::a
+두 편광각 차이를 \(0.20^2-0.10^2=0.03\,\mathrm{m^2}\)로 나누어 RM의 후보값을 구한다. 관측 편광각은 \(\pi\) 주기이므로 각도 차이에 \(n\pi\)를 더한 후보도 검토한다. [[L13.s5, D1020.08]]
+::end
+<p class="note">출처: 10/20 Lecture13 PPT·다글로 수업 녹음. PDF 수식·그림의 자동 텍스트 추출은 불완전해, 수치와 방향은 녹음의 설명과 대조했다. [[L13.s1, L13.s2, L13.s3, L13.s4, L13.s5, L13.s6, D1020.01, D1020.02, D1020.03, D1020.04, D1020.05, D1020.06, D1020.07, D1020.08, D1020.09, D1020.10, D1020.11, D1020.12]]</p>
