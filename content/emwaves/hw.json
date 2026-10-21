@@ -19,14 +19,14 @@
     "unit": "u13",
     "tag": "opt",
     "title": "Griffiths 식 (9.175)을 처음부터 유도하라. eTL 첨부 이미지의 식은 아직 대조가 필요하다."
-   }
+  }
   ]
  },
  {
   "id": "hw0930",
   "kind": "hw",
   "title": "9월 30일 수업 복습 과제",
-  "meta": "eTL 과제 · 10/5(월) 휴강으로 마감이 화요일(10/6 23:59)까지",
+  "meta": "eTL 과제 · 10/5(월) 휴강으로 마감이 화요일(10/6 23:59)까지 · 10/21 채점 완료·성적 공개. <a href=\"https://myetl.snu.ac.kr/courses/305132/discussion_topics/395051\" target=\"_blank\" rel=\"noopener\">모범답안 정정 공지 ↗</a>",
   "due": "2026-10-06",
   "probs": [
    {
@@ -1906,6 +1906,16 @@
   "probs": [
    {"num":"10.14","ch":10,"unit":"u17","tag":"req","title":"Griffiths Problem 10.14 — 시간에 선형인 전류의 Jefimenko 자기장"},
    {"num":"10.13","ch":10,"unit":"u17","tag":"opt","title":"Griffiths Problem 10.13 — 시간에 선형인 전하밀도의 Jefimenko 전기장"}
+  ]
+ },
+ {
+  "id": "hw1021",
+  "kind": "hw",
+  "title": "10월 21일 수업 복습 과제 · Liénard–Wiechert 퍼텐셜",
+  "due": "2026-10-25",
+  "meta": "eTL 과제 · 10/25(일) 23:59 마감 · <a href=\"https://myetl.snu.ac.kr/courses/305132/assignments/386900\" target=\"_blank\" rel=\"noopener\">과제 원문 ↗</a>. 강의 범위 Example을 답 없이 다시 풀고 Liénard–Wiechert 식을 혼자 유도할 것. Problem 10.17 필수.",
+  "probs": [
+   {"num":"10.17","ch":10,"unit":"u18","tag":"req","title":"Griffiths Problem 10.17 — 등속 점전하의 퍼텐셜을 현재 위치와 각도만으로 나타내기"}
   ]
  }
 ]

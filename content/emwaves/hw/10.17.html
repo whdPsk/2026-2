@@ -11,5 +11,11 @@ r^2-c^2t^2=R^2+2t(\vb{R}\cdot\vb{v})-(c^2-v^2)t^2 . \]
 \[ D=R^2v^2\cos^2\theta+c^2R^2-v^2R^2=c^2R^2\left(1-\frac{v^2}{c^2}\sin^2\theta\right). \]
 \[ \boxed{V(\vb{r},t)=\frac{1}{4\pi\eps}\frac{q}{R\sqrt{1-v^2\sin^2\theta/c^2}}} \]
 \(v\ll c\)에서 \(V\approx q/4\pi\eps R\) — 놀랍게도 <b>현재 위치</b> 기준의 Coulomb 형태. (지연 위치에서 정보가 왔음에도!)
+<div class="alabel">다른 풀이 · 지연 거리에서 바로 시작</div>
+\(s=|\vb r-\vb w(t_r)|=c(t-t_r)\), \(\boldsymbol\beta=\vb v/c\)라 두면 지연 위치에서 관측점까지의 벡터는 \(\vb s=\vb R+\boldsymbol\beta s\)이다. 양변의 제곱에서
+\[ (1-\beta^2)s^2-2R\beta\cos\theta\,s-R^2=0. \]
+물리적인 양의 근은 \(s=R[\beta\cos\theta+\sqrt{1-\beta^2\sin^2\theta}]/(1-\beta^2)\)이다. Liénard–Wiechert 분모를 정리하면
+\[ s(1-\hat{\vb s}\cdot\boldsymbol\beta)=s(1-\beta^2)-R\beta\cos\theta=R\sqrt{1-\beta^2\sin^2\theta}. \]
+따라서 위 식이 다시 나온다. <b>검산:</b> \(\theta=0\)에서는 \(V=q/(4\pi\eps R)\), \(\theta=\pi/2\)에서는 그 값의 \(\gamma\)배다. \(v\to0\) 극한도 Coulomb 식으로 돌아간다.
 <div class="alabel">감점 포인트</div>
 \(\theta\)를 지연 위치 기준 각으로 착각하는 것 — \(\theta\)는 <b>현재</b> 위치에서 잰 \(\vb{R}\)와 \(\vb{v}\) 사이 각이다.</div><!--/sol-->

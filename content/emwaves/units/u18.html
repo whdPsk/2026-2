@@ -1,5 +1,9 @@
 <div class="predict"><b>◈ 먼저 예측하기.</b> 궤적 \(\vb{w}(t)\)를 따라 움직이는 점전하 \(q\)의 지연 퍼텐셜을 구하려 한다. 가장 자연스러운 추측은 \(V=\dfrac{1}{4\pi\eps}\dfrac{q}{\rr}\) (\(\rr\)은 지연 위치까지의 거리)이다. 이 추측이 <b>왜 틀리는지</b> 생각해 보라. 힌트: 총 전하를 구하려면 \(\rho\)를 <b>한 순간</b>에 걸쳐 적분해야 하는데, 지연 적분은 각 부분을 <b>서로 다른 시각</b>에 평가한다. 이 효과가 점전하 극한에서 사라질까, 남을까? 그리고 남는다면 그 크기는 무엇에 의존할까?</div>
 
+<div class="prof"><b>10/21 수업·과제 연결.</b> 지연시각을 고정된 수처럼 미분하면 \(1-\hat{\boldsymbol{\rr}}\cdot\vb v/c\) 인자가 빠진다. \(\rr=|\vb r-\vb w(t_r)|=c(t-t_r)\)를 암묵 미분하면
+\[ \frac{\partial t_r}{\partial t}=\frac{1}{1-\rhat\cdot\vb v/c},\qquad \nabla t_r=-\frac{\rhat}{c(1-\rhat\cdot\vb v/c)}. \]
+여기서 \(\vb v=\dot{\vb w}(t_r)\). 먼저 지연근과 인자를 검산한 뒤 Example 10.3을 유도하고, 필수 과제 <b>Problem 10.17</b>에서 현재 위치 \(\vb R\)로 다시 쓴다. 수업 말미의 장 계산은 시작 단계이므로 최종 \(\vb E,\vb B\) 공식을 10/21 완료 진도로 세지 않는다.</div>
+
 <h4>10.3.1 지연 시각의 유일성 <span class="en">uniqueness of the retarded time</span></h4>
 
 <div class="derive"><div class="dtitle"><span class="tag">유도 1</span>\(v&lt;c\)이면 지연점은 <b>많아야 하나</b>다 (그리고 보통은 정확히 하나)</div>
