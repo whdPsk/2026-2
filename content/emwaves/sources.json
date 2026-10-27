@@ -1,0 +1,23 @@
+{
+ "N1027": {
+  "title": "시험 관련 안내 및 전기와 자기 기출 문제 (10/27 확인)",
+  "short": "시험안내",
+  "kind": "notice",
+  "date": "2026-10-27",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/396231"
+ },
+ "EM26M": {
+  "title": "2026-1 전기와 자기 중간고사 · EandM1_2026S_midterm_v2.pdf",
+  "short": "26-1중간",
+  "kind": "notice",
+  "date": "2026-04-29",
+  "url": "https://myetl.snu.ac.kr/courses/305132/files/9511667/download"
+ },
+ "EM26F": {
+  "title": "2026-1 전기와 자기 기말고사 · EandM1_2026S_final_v3.pdf",
+  "short": "26-1기말",
+  "kind": "notice",
+  "date": "2026-06-15",
+  "url": "https://myetl.snu.ac.kr/courses/305132/files/9511628/download?wrap=1"
+ }
+}
