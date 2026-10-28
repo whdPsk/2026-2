@@ -1,0 +1,416 @@
+{
+ "cutoff_kst": "2026-10-28T15:54:38+09:00",
+ "checked_kst": "2026-10-28T16:02:00+09:00",
+ "note": "제출본 및 모범답안 PDF 내용 확인은 사용자 담당. 전파광 HW/모범답안 폴더 재열람 제외. 제출본 식별 제목은 저장하지 않음.",
+ "folders": [
+  {
+   "folder_id": "12R1_nxBLwIOPUfzOW7KB2dRoQqidPnx8",
+   "files": [
+    {
+     "id": "1F37VYI56QnOYP0QZKXhw2poKaAL-z43g",
+     "title": "속기",
+     "modified_at": "2026-09-29T07:57:40.084Z",
+     "kind": "application/vnd.google-apps.folder"
+    },
+    {
+     "id": "1BEFL_zoN-eiCklDL4kpLmR9j590HAV7L",
+     "title": "HW",
+     "modified_at": "2026-09-29T07:55:31.223Z",
+     "kind": "application/vnd.google-apps.folder"
+    },
+    {
+     "id": "1-ZaHYy42OXzUY6tF16CFs1xY2Y4RAIWv",
+     "title": "LectureNote",
+     "modified_at": "2026-09-29T07:52:56.247Z",
+     "kind": "application/vnd.google-apps.folder"
+    },
+    {
+     "id": "1jEaTILHauRwFta4oOw2t8Xugx4Qr_3Nz",
+     "title": "Thornton_Marion_typos.pdf",
+     "modified_at": "2026-04-16T18:59:04.000Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1-KGsd24uenfSFLuVs7lcD8g-5Kk42l7I",
+     "title": "Classical-Dynamics-of-Particles-and-Systems.pdf",
+     "modified_at": "2025-06-09T03:06:47.000Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1_P0snh19XVZk4sH8PIwKmPvQH7NvLB7F",
+     "title": "Marion-solution-5ed.pdf",
+     "modified_at": "2025-06-09T03:06:47.000Z",
+     "kind": "application/pdf"
+    }
+   ]
+  },
+  {
+   "folder_id": "1yxYL3B-LR_fB-NHkt91h96AqpT362JkS",
+   "files": [
+    {
+     "id": "1mQppzSfVeV4rtTv8Xhp-aZFHhBbl9C9d",
+     "title": "기출",
+     "modified_at": "2026-10-27T08:12:00.908Z",
+     "kind": "application/vnd.google-apps.folder"
+    },
+    {
+     "id": "1x5HXvEg9NSI5f96EvGz00SzgrJ2n7vJa",
+     "title": "전자기파와_광학_연습_프로젝트_2026년_2학기.pdf",
+     "modified_at": "2026-10-22T13:18:35.831Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1cqPGVLFN3NR-r2ZopjhSe6fnQ5faVbSh",
+     "title": "HW",
+     "modified_at": "2026-09-05T22:33:44.706Z",
+     "kind": "application/vnd.google-apps.folder"
+    },
+    {
+     "id": "1iNtmw-gdkvwqRUMvBTodS4HqfRTYTViQ",
+     "title": "guide.html",
+     "modified_at": "2026-09-05T22:06:19.923Z",
+     "kind": "text/html"
+    },
+    {
+     "id": "1r3y8oK32h6NSYE6eWrO4UnMKT3TcKBs1",
+     "title": "전자기파와광학_2026년2학기.pdf",
+     "modified_at": "2026-09-05T21:45:48.352Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1K9BHmSKsFmtI_F4aCmu3kEJRnc_1Uyiw",
+     "title": "Introduction to Electrodynamics, Fourth Edition (David J. Griffiths) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "modified_at": "2026-04-07T09:04:32.000Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1Y5KxDmQyWGaOt0lJZN2kcJ6r-6H92SwU",
+     "title": "Introduction to Electrodynamics 5th Edition (Griffiths David J.).pdf",
+     "modified_at": "2026-03-23T18:45:40.000Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1dpaaErPEaJgFgZfhfsRLW3Veaa0Nwudo",
+     "title": "Instructor's Solution Manual_Introduction to Electrodynamics_4th Edition.pdf",
+     "modified_at": "2026-03-04T13:00:35.000Z",
+     "kind": "application/pdf"
+    }
+   ]
+  },
+  {
+   "folder_id": "1P_M7O6jSRrC3ofFRWUT9j5i72osWhHfu",
+   "files": [
+    {
+     "id": "1NdY6yORVl5ikxU-TahcMCBkvhOS93jF5",
+     "title": "guide-v2.html",
+     "modified_at": "2026-09-26T11:15:19.233Z",
+     "kind": "text/html"
+    },
+    {
+     "id": "11TtKWPHBy64b56DgO85Sp3JCi_ohloEj",
+     "title": "속기",
+     "modified_at": "2026-09-26T08:53:53.004Z",
+     "kind": "application/vnd.google-apps.folder"
+    },
+    {
+     "id": "1ggfmcWoFRnKOtFlR1XzMtsYgdwii4T7Y",
+     "title": "HW",
+     "modified_at": "2026-09-15T01:08:36.915Z",
+     "kind": "application/vnd.google-apps.folder"
+    },
+    {
+     "id": "1hrfJJ_X5WxgmobE5BBQOxTTrwaKT9rEK",
+     "title": "PPT",
+     "modified_at": "2026-09-06T01:01:46.499Z",
+     "kind": "application/vnd.google-apps.folder"
+    }
+   ]
+  },
+  {
+   "folder_id": "1F37VYI56QnOYP0QZKXhw2poKaAL-z43g",
+   "files": []
+  },
+  {
+   "folder_id": "1BEFL_zoN-eiCklDL4kpLmR9j590HAV7L",
+   "files": [
+    {
+     "id": "1zeZCrPsco4Val3PcmsO-ucqd-vVtg0kR",
+     "title": "HW1.pdf",
+     "modified_at": "2026-10-18T14:25:16.061Z",
+     "kind": "application/pdf"
+    }
+   ]
+  },
+  {
+   "folder_id": "1-ZaHYy42OXzUY6tF16CFs1xY2Y4RAIWv",
+   "files": [
+    {
+     "id": "1Divxjh-GDhFMQHcwDLU8bhKYinVT12xw",
+     "title": "Lecture_Note_Chapter_11_20261026.pdf",
+     "modified_at": "2026-10-26T02:53:58.096Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1qp1GFOdCl5fg-TlN8WaRmuhItir9tooy",
+     "title": "Lecture_Note_Chapter_11_20261021.pdf",
+     "modified_at": "2026-10-21T02:02:56.267Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1Jht3ydcV0DsGPykNUFxT8jblq-l7osgW",
+     "title": "Lecture_Note_Chapter_11_20261014.pdf",
+     "modified_at": "2026-10-14T02:01:19.552Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1f5lQ6RSMBM4p6zUqPnb_kJzRvdhxwUlF",
+     "title": "Lecture_Note_Chapter_10_20261012.pdf",
+     "modified_at": "2026-10-14T02:00:54.843Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1WRnuJvT3wi90qIs6bajHH_9RncLOT6p3",
+     "title": "Lecture_Note_Chapter_10_20261007.pdf",
+     "modified_at": "2026-10-07T02:01:03.459Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1bdzN1-ifSUWDGwKjBVD5qFSjf5gOndtL",
+     "title": "Lecture_Note_Chapter_09_20260928.pdf",
+     "modified_at": "2026-09-29T07:53:25.502Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1yNSoxJTnnjSK5yqbmQtfX6MIa3mHr4v7",
+     "title": "Lecture_Note_Chapter_09_20260923.pdf",
+     "modified_at": "2026-09-29T07:53:18.735Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "130bbNfa3CLkBpCi80XmasQhubqsoqoXY",
+     "title": "20260923 Inelastic Scattering.pdf",
+     "modified_at": "2026-09-29T07:53:13.668Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1jegDpV_5P-s1vm6D84HDKJKtXg-6mfyv",
+     "title": "Lecture_Note_Chapter_09_20260909.pdf",
+     "modified_at": "2026-09-29T07:53:08.579Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1otqGKwhxNVqTJCYOjldzI6lx93A92kPE",
+     "title": "Lecture_Note_Chapter_09_20260907.pdf",
+     "modified_at": "2026-09-29T07:53:03.906Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1HF-5tG3Gw42y_lp-HNKnF8xsitdwkv6B",
+     "title": "Course_Introduction_20260902.pdf",
+     "modified_at": "2026-09-29T07:52:45.357Z",
+     "kind": "application/pdf"
+    }
+   ]
+  },
+  {
+   "folder_id": "11TtKWPHBy64b56DgO85Sp3JCi_ohloEj",
+   "files": [
+    {
+     "id": "1MHCbY26Ao4HOyXlso5x4UjgSoDniUfxo",
+     "title": "천체물리학개론 HW3해설.txt",
+     "modified_at": "2026-10-26T20:14:32.362Z",
+     "kind": "text/plain"
+    },
+    {
+     "id": "1oQi7sm8baixTwvRatHisL0ujZv6qBum4",
+     "title": "0922_천물개1.txt",
+     "modified_at": "2026-09-26T08:59:27.298Z",
+     "kind": "text/plain"
+    },
+    {
+     "id": "1RAuvHqD5vRnKA-j-OPnwy59n4iVuE_36",
+     "title": "0917_천물개1.txt",
+     "modified_at": "2026-09-26T08:59:03.182Z",
+     "kind": "text/plain"
+    },
+    {
+     "id": "1HF7gfyUdjYxqa2cj-sgletGeDvPdNtdX",
+     "title": "0915_천물개1.txt",
+     "modified_at": "2026-09-26T08:58:47.909Z",
+     "kind": "text/plain"
+    },
+    {
+     "id": "1dYRCjed0wJeDZjTxUAhPn840gY7UpD8Z",
+     "title": "0910_천물개1.txt",
+     "modified_at": "2026-09-26T08:58:29.124Z",
+     "kind": "text/plain"
+    },
+    {
+     "id": "1dfjnZGiNFWL5CxWjgqlWurCKeJu6K2z2",
+     "title": "0908_천물개1.txt",
+     "modified_at": "2026-09-26T08:57:57.774Z",
+     "kind": "text/plain"
+    },
+    {
+     "id": "1Kdk5ivLTpPT15N5zVThsneIQb87Tdf1d",
+     "title": "0903_천물개1.txt",
+     "modified_at": "2026-09-26T08:57:33.912Z",
+     "kind": "text/plain"
+    },
+    {
+     "id": "1DITEFSqjGP68P9Lcc9zYv8XIWWvA9orm",
+     "title": "0901_천물개1.txt",
+     "modified_at": "2026-09-26T08:57:01.819Z",
+     "kind": "text/plain"
+    }
+   ]
+  },
+  {
+   "folder_id": "1ggfmcWoFRnKOtFlR1XzMtsYgdwii4T7Y",
+   "files": [
+    {
+     "id": "1CWMT97X8u_IXgf-atTkdelruoGiIoIf_",
+     "title": "HW3.pdf",
+     "modified_at": "2026-10-14T06:47:23.161Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1cN0PN4M6BXbHTQouQBRFzaE9DVRXYeOH",
+     "title": "hw2.pdf",
+     "modified_at": "2026-09-22T07:01:31.143Z",
+     "kind": "application/pdf"
+    }
+   ]
+  },
+  {
+   "folder_id": "1hrfJJ_X5WxgmobE5BBQOxTTrwaKT9rEK",
+   "files": [
+    {
+     "id": "1plCbuHGKy4rN0tmtAQBmgdH4pfwYaGuZ",
+     "title": "Lecture14_HDEquations.pdf",
+     "modified_at": "2026-10-22T04:56:32.445Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1PipkYSt2rB6WH4oFybzgcRn_FrqBvrH3",
+     "title": "Lecture13_FaradayRotation.pdf",
+     "modified_at": "2026-10-20T04:30:35.135Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1bPEMJMjhms6WYko8kSY7Mfks9TAlMRBV",
+     "title": "exp2_extra_lab.zip",
+     "modified_at": "2026-10-13T10:49:49.068Z",
+     "kind": "application/zip"
+    },
+    {
+     "id": "1rxGGD_o5EY5ttcA7ygn0KPyTfFojSWA8",
+     "title": "Lecture12_PlasmaEffects_FlippedLearning.pdf",
+     "modified_at": "2026-10-13T10:47:05.500Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1xajWzGRMQHr1rCxkeHCDtijc_Wc3UEMj",
+     "title": "Lecture10_Synchro_Compton_FlippedLearning.pdf",
+     "modified_at": "2026-10-13T10:47:02.848Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "15WjbrPGCEZCxKks2YKzSiP8JOpTj89uR",
+     "title": "Lecture11_FlippedLearning.pdf",
+     "modified_at": "2026-10-13T10:46:55.697Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1lD7r2zX1ay7x3be01qbRovyDT9jmk0GW",
+     "title": "Lecture11_Compton_FlippedLearning.pdf",
+     "modified_at": "2026-10-08T04:43:23.985Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1iogritDv2V9LoBdCVZWgTsfhFopBWL3t",
+     "title": "Lecture09_Synchrotron_FlippedLearning.pdf",
+     "modified_at": "2026-10-01T09:13:38.044Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "11CnmhTaodYbqr1xqbrLneBvcsfl9c1MX",
+     "title": "Lecture08_Bremsstrahlung_FlippedLearning.pdf",
+     "modified_at": "2026-09-30T00:10:47.024Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1dkTArTElJftYuWGHJdTUN8_EekVby0IC",
+     "title": "Lecture07_MovingCharges_Bremsstrahlung_FlippedLearning.pdf",
+     "modified_at": "2026-09-26T06:09:46.991Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "193_66wKxjQe2Sk7uzRM0aZJLqXwkji3E",
+     "title": "Lecture06_MovingCharges_FlippedLearning.pdf",
+     "modified_at": "2026-09-26T06:09:30.948Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1fubk_xzIoxQ4TwtXZccMriK1-Uo8E_77",
+     "title": "Lecture05_EMWaves_FlippedLearning.pdf",
+     "modified_at": "2026-09-16T05:05:31.902Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1O3OXvDeu-FHZliMc9HTbHUA3KMmeReSD",
+     "title": "Lecture04_LineRadiation_FlippedLearning.pdf",
+     "modified_at": "2026-09-16T05:05:16.567Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1E3-KLxdHuL9rfDaSWLjhW7wQU8KwmeTJ",
+     "title": "Lecture03_Radiation_FlippedLearning.pdf",
+     "modified_at": "2026-09-08T16:40:06.653Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1gPGLOHRbmOkz3DM_AEOMZW4xXfqxUepY",
+     "title": "Lecture02_FlippedLearning.pdf",
+     "modified_at": "2026-09-06T03:45:20.125Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1LAAzQHDUNC5YArQZmeAELe2TPmzbyvup",
+     "title": "Lecture01_Radiation Basics.pdf",
+     "modified_at": "2026-09-06T01:02:35.456Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1m5qAFtVqV_GCGjzBEfkVdo6zGqw3Oqlg",
+     "title": "Lecture00_Introduction.pdf",
+     "modified_at": "2026-09-06T01:01:39.625Z",
+     "kind": "application/pdf"
+    }
+   ]
+  },
+  {
+   "folder_id": "1mQppzSfVeV4rtTv8Xhp-aZFHhBbl9C9d",
+   "files": [
+    {
+     "id": "1s_cWcl8Jpuz-YRz__drtdUmjEo2rP3wL",
+     "title": "EandM1_2026S_midterm_v2 (1).pdf",
+     "modified_at": "2026-10-27T08:12:08.390Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1mV5Avk7M3B0jwwDVdn1iNjoUGMpn79Pp",
+     "title": "EandM1_2026S_final_v3.pdf",
+     "modified_at": "2026-10-27T08:12:05.444Z",
+     "kind": "application/pdf"
+    },
+    {
+     "id": "1I2ngtaFlPYWzbh_eV51KbZyRe67HiDlQ",
+     "title": "EandM1_2026S_midterm_v2.pdf",
+     "modified_at": "2026-10-27T08:11:55.978Z",
+     "kind": "application/pdf"
+    }
+   ]
+  }
+ ]
+}

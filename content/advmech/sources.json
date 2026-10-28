@@ -33,5 +33,19 @@
     "kind": "hw",
     "date": "2026-10-26",
     "url": "https://myetl.snu.ac.kr/courses/305140/discussion_topics/396292"
+  },
+  "D1028": {
+    "title": "10/28 HW2 강의 해설·Euler 방정식의 사영",
+    "short": "D1028",
+    "kind": "transcript",
+    "date": "2026-10-28",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/WT1hDJddvMembOsj?fileMetaId=ab38457c-e9ab-44ba-9fed-ad8c008ee393"
+  },
+  "N1028": {
+    "title": "10/28 15:45 중간고사 장소 변경 공지",
+    "short": "N1028",
+    "kind": "notice",
+    "date": "2026-10-28",
+    "url": "https://myetl.snu.ac.kr/courses/305140/discussion_topics/397293"
   }
 }
