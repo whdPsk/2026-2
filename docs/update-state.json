@@ -92,7 +92,7 @@
   "last_attempt": {
     "cutoff_at_kst": "2026-10-28T15:54:38+09:00",
     "inventory_checked_at_kst": "2026-10-28T16:02:00+09:00",
-    "status": "validated_pending_publication",
+    "status": "deployed_with_pending_sources",
     "sources": {
       "etl": "3개 본강의·2개 연습 공지/모듈, 전파광·천물개 과제 재확인",
       "drive": "등록 루트·강의자료 하위 폴더 재확인; 신규·수정 없음",
@@ -107,7 +107,13 @@
       "daglo:sUN2uR9TyHg3fXTq — 원본 파일 없음",
       "천물개 HW3해설.txt 전체 줄 단위 대조"
     ],
-    "note": "확인된 신규 자료 25개 구간 반영. checked_at_kst는 전체 성공 기록 유지."
+    "note": "확인된 신규 자료 25개 구간 반영. checked_at_kst는 전체 성공 기록 유지.",
+    "publication": {
+      "status": "success",
+      "commit": "60e275ae157f8b1078dcacc1fd02fc17f7ddedf1",
+      "run_url": "https://github.com/whdPsk/2026-2/actions/runs/40647780722",
+      "site_url": "https://whdpsk.github.io/2026-2/"
+    }
   },
   "previous_attempt": {
     "cutoff_at_kst": "2026-10-28T11:00:00+09:00",
