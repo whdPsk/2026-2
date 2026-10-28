@@ -1,5 +1,6 @@
 <div class="predict"><b>◈ 먼저 예측하기.</b> 관성계에서는 \(\dot{\vb L}=\vb N\)이지만 \(\vb L=\I\boldsymbol\omega\)의 \(\I\)는 물체계에서만 상수다. 그러면 물체계에서 쓴 운동방정식에는 어떤 추가 항이 붙을까(U11의 연산자 공식을 떠올려라)? 외력이 없어도 \(\boldsymbol\omega\)의 물체계 성분이 시간에 따라 변할 수 있을까?</div>
 
+<div class="prof"><b>10/26 강의·시험 범위 확정.</b> 회전 운동에너지를 Euler 각으로 쓰는 목적은 복잡한 토크 계산과 에너지 기반 Lagrange 해석을 연결하기 위해서다. 자유 강체의 질량중심계에서는 \(\mathcal L=T_{\rm rot}\). 교재 11.9(p.448)까지가 중간 범위다. [[D1026.22, D1026.23, L1026.3, N1026.3]]</div>
 <h4>11.9 강체의 Euler 방정식 <span class="en">Euler's equations for a rigid body</span></h4>
 
 <div class="derive"><div class="dtitle"><span class="tag">유도 1</span>토크 방정식에서 — 교재 식 (11.115)–(11.120) <b>(필수)</b></div>
@@ -35,6 +36,9 @@
 \[ \boxed{\ I_1\dot\omega_1=(I_2-I_3)\omega_2\omega_3+N_1\ \ (\text{순환})\ } \]
 <p class="note">출발: \((\dot{\vb L})_{\rm body}+\boldsymbol\omega\times\vb L=\vb N\). 자유 운동에서 \(T\)와 \(L^2\) 보존.</p></div>
 
+<div class="trap"><b>순환 치환과 순환좌표는 다르다.</b> 일반 비대칭 강체에서 θ가 순환좌표라는 결론은 성립하지 않는다. \(\psi\)의 Lagrange 식은 세 번째 Euler 식을 직접 주지만, \(\theta,\phi\) 식 자체를 나머지 두 Euler 식이라고 동일시할 수 없다. 교수님은 두 각의 식도 직접 전개하고 정리해 보라고 지정했다. 교재 p.446의 주의와 대조한다. [[D1026.24, D1026.25, D1026.26, D1026.27]]</div>
+<div class="explain"><b>외부 토크가 있을 때.</b> 관성계에서만 단순한 \(d\mathbf L/dt=\mathbf N\)을 출발점으로 쓸 수 있다. 물체계 미분에는 \(\boldsymbol\omega\times\mathbf L\)을 더한다. 주축계의 \(L_i=I_i\omega_i\)를 넣어 외적을 성분별로 계산하면 위의 일반 Euler 식을 얻는다. [[D1026.28, D1026.29, L1026.4]]</div>
+<p>Levi-Civita 기호는 순환 순열 123·231·312에 +1, 한 번 교환하면 −1, 같은 첨자가 있으면 0이다. 다음 시간에는 지정한 유도를 이어서 확인한다고 예고했다. [[D1026.30]]</p>
 <h4>체크포인트</h4>
 
 <div class="qz" data-q="u22-1"><div class="qq">(시험형) \((\dd\vb L/\dd t)_{\rm fixed}=\vb N\)에서 Euler 방정식 세 개를 유도하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 1. \((\boldsymbol\omega\times\vb L)_1=\omega_2L_3-\omega_3L_2=(I_3-I_2)\omega_2\omega_3\) → \(I_1\dot\omega_1+(I_3-I_2)\omega_2\omega_3=N_1\) ✓.</p></div></div>

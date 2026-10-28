@@ -1,14 +1,33 @@
-<div class="predict"><b>◈ 학습 목표.</b> 12.1 · 12.2 · 12.3 · 12.4의 핵심 개념과 적용 조건을 설명하고 대표 계산을 수행한다.</div>
-
-<h4>기말 <span class="en">약 45분</span></h4>
-
-<p>유체는 많은 입자의 평균을 작은 부피요소의 밀도·속도·압력으로 기술하는 연속체 모형이다. 평균을 낼 만큼 입자가 많아야 하면서, 관심 있는 거시 길이에 비해서는 부피요소가 작아야 한다. 충돌이 적은 플라즈마도 집단효과로 유체 기술이 가능할 수 있지만 등방 압력·국소평형이 자동으로 보장되는 것은 아니다.</p><p>Euler 기술은 고정 위치에서 값을 보고, Lagrange 기술은 움직이는 유체입자를 따라간다. 한 입자가 경험하는 변화율은 시간 변화와 공간을 이동하면서 생기는 변화의 합인 물질미분이다. 정상유동∂/∂t=0이어도 입자가 공간구배를 따라 이동하면 가속된다.</p><p>압력은 입자의 무작위 운동이 만드는 운동량 흐름이다. 벌크 속도v와 열운동을 나누지 않으면 운동에너지와 내부에너지를 중복 계산하게 된다. 이상기체의 평균분자량μ는 단순한 원자 질량뿐 아니라 이온화로 늘어난 자유 입자 수도 반영한다.</p><p>유선은 한 시각의 속도에 접하고, 입자경로는 한 입자의 시간 궤적이다. 정상유동에서 둘이 일치하지만 일반 비정상 유동에서는 다르다. 유체입자는 항상 같은 분자들의 딱딱한 작은 공이 아니라 연속체의 물질요소라는 점도 기억하자.</p>
-
-<div class="callout"><b class="head">강의·교재 강조점.</b> 목차 대응 · 본문 전수 대조 전 / 후속 강의·HW 강조점은 아직 미반영.</div>
-
-<div class="formula"><div class="ftitle">암기 — 유체의 개념·미분·열역학</div><p><b>물질미분</b></p>\[ {D\over Dt}={\partial\over\partial t}+\mathbf v\cdot\nabla \]<p class="note">고정 위치의 시간변화+입자가 공간구배를 지나는 효과. <i>조건: 연속체 속도장이 정의되어 있을 때</i></p><p><b>이상기체</b></p>\[ P={\rho kT\over\mu m_H},\quad e={P\over(\gamma-1)\rho},\quad h=e+{P\over\rho} \]<p class="note">e는단위질량당내부에너지, h는비엔탈피. <i>조건: 고정 조성·일정 비열비 γ; 이온화/분자자유도 변화는 별도</i></p><p><b>단열과 등온 음속</b></p>\[ c_s^2=\left({\partial P\over\partial\rho}\right)_s={\gamma P\over\rho},\quad c_T^2={P\over\rho} \]<p class="note">빠른 변화로 열교환이 없으면단열, 열이빠르게 조절되면등온. <i>조건: 이상기체, 각각 지정한 열역학 경로</i></p></div>
-
+<div class="predict"><b>◈ 학습 목표.</b> 유체 근사의 조건을 판정하고, 물질미분·이류·열운동과 평균유동의 차이를 설명한다. 10/22 강의는 비압축성까지 진행했다.</div>
+<div class="prof"><b>10/22 전환점.</b> 복사 이후 유체역학은 행성 형성·은하 형성 등의 실제 연구에 쓰인다. 교수님은 성적을 연구 적성과 동일시하지 말고, 근거를 비판적으로 확인하며 질문하는 태도를 강조했다. 이 내용은 기말 학습 영역이며 중간 범위는 패러데이 회전까지다. [[D1022.01, D1022.02]]</div>
+<h4>유체와 연속체 조건</h4>
+<div class="slide"><div class="sh">L14 · 슬라이드 2–3 <span class="st">Fluid / Fluid Description</span></div><p>유체는 흐르는 물질이다. 액체·기체·플라즈마 등을 거시적 밀도·압력·속도장으로 기술한다. 많은 입자의 평균이 의미를 가지면서 물리량의 공간 변화를 분해하려면</p>\[L\gg\ell\gg\lambda_{\rm mfp},\quad\mathbf u=\mathbf v+\mathbf w,\quad\langle\mathbf w\rangle=0.\]
+<p>\(L\)은 관심 길이, \(\ell\)은 유체요소 크기, \(\lambda_{\rm mfp}\)는 평균자유행로다. 충돌이 빈번하면 평균 속도를 따라가는 물질요소를 거의 같은 입자 집합으로 생각할 수 있다. 미시 입자의 출입이 전혀 없다는 뜻은 아니다. [[L14.s2, L14.s3, D1022.03, D1022.04, D1022.05, D1022.06]]</p></div>
+<div class="derive"><div class="dtitle"><span class="tag">계산</span>평균자유행로와 충돌시간</div>\[\lambda_{\rm mfp}=\frac1{n\sigma},\qquad t_{\rm coll}=\frac{\lambda_{\rm mfp}}v=\frac1{n\sigma v}.\]
+<p>중성 ISM에서 \(\sigma\sim10^{-15}\ {\rm cm^2}\), \(n\sim1\ {\rm cm^{-3}}\)이면 \(\lambda\sim10^{15}\) cm. \(T\sim100\) K에서 수소 속력은 약 1 km/s이므로 충돌시간은 약 300년이다. 절대 시간만 보지 말고 pc 크기 구름과 길이 비를 비교한다. Bohr 반지름 약 0.5 Å, 수소 100 K에서 1 km/s·10⁴ K에서 10 km/s의 크기 감각도 강조했다. [[L14.s4, D1022.07, D1022.08]]</p></div>
+<div class="slide"><div class="sh">L14 · 슬라이드 5 <span class="st">이온화 기체</span></div><p>Coulomb 충돌은 \(mv^2\sim e^2/b\), \(\sigma\sim\pi b^2\)를 써서 추산한다(cgs).</p>\[\lambda_{\rm mfp}\sim\frac{m^2v^4}{\pi n e^4}\sim10^5\frac{T^2}{n}\ {\rm cm}.\]
+<p>강의안의 규모: 태양 내부 \(10^{-6}\) cm, HII 영역 \(10^{12}\) cm, ICM \(10^{24}\) cm. ICM은 은하단 크기와 비슷해 <b>충돌성이 경계적</b>이다. 입자 계산 등으로 유체 모형의 한계를 검토해야 한다. [[L14.s5, D1022.09, D1022.10, D1022.11]]</p></div>
+<div class="trap"><b>녹음 자동전사·요약의 지수.</b> 태양 내부 자유행로를 10⁶ cm로 읽은 자동 요약은 강의안의 10⁻⁶ cm와 다르다. 위 수치는 PPT를 기준으로 썼다. 이 식은 충돌단면적의 차수 추산이며 정밀한 Coulomb 로그 계산과 구분한다. [[L14.s5, D1022.10]]</div>
+<h4>Euler와 Lagrange 기술 · 물질미분</h4>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>고정 위치와 유체 궤적의 차이</div><ol><li>Euler 관점: 고정 위치 \(\mathbf x\)에서 \(\delta f\simeq\partial_t f\,\Delta t\).</li><li>Lagrange 관점: \(\Delta\mathbf x=\mathbf v\Delta t\)만큼 이동한 요소를 따라가므로 \(\Delta f\simeq\partial_t f\Delta t+\Delta\mathbf x\cdot\nabla f\).</li><li>따라서 \(Df/Dt=\partial_t f+\mathbf v\cdot\nabla f\). 위치장에 적용하면 \(D\mathbf x/Dt=\mathbf v\).</li></ol><p>다리 위 온도 측정과 배를 따라가는 측정은 같은 장소·시간의 데이터를 쓰더라도 변화율이 다를 수 있다. [[L14.s6, L14.s7, D1022.12, D1022.13, D1022.14]]</p></div>
+<div class="formula"><div class="ftitle">암기 — 물질미분과 이류</div>\[\frac D{Dt}=\frac\partial{\partial t}+\mathbf v\cdot\nabla.\]<p class="note">정상유동이어도 공간 구배를 따라 움직이는 요소는 변화를 경험한다. 이류는 벌크 운동에 의한 물리량 수송이다. [[D1022.16, D1022.17]]</p></div>
+<div class="apply"><b>수치 계산.</b> 고정 격자의 Euler 계산, 이동 입자의 Lagrange 계산을 비교했다. 입자가 모이면 높은 공간 분해능을 얻는 장점이 있고, AMR은 필요한 영역의 격자를 세분화해 적응한다. [[D1022.15, D1022.16]]</div>
+<h4>유체요소의 변형과 지정 Exercise</h4>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>선요소의 양 끝점 상대운동</div>\[\frac{D\delta\mathbf x}{Dt}=\mathbf v(\mathbf x+\delta\mathbf x)-\mathbf v(\mathbf x)\simeq(\delta\mathbf x\cdot\nabla)\mathbf v.\]
+<p>길이·방향을 바꾸는 것은 두 끝점의 <b>상대 속도</b>다. 선분과 평행한 상대 속도는 길이를, 수직 성분은 방향을 바꾼다. 균일한 병진 속도만으로 선분이 늘어나지는 않는다. [[L14.s8, D1022.18, D1022.19]]</p></div>
+<div class="slide"><div class="sh">L14 · 슬라이드 9 <span class="st">Exercise</span></div><p>\(A_{ij}=\partial v_i/\partial x_j\)라 정의하면 면·부피 요소는</p>\[\frac{D\delta\mathbf S}{Dt}=[(\nabla\cdot\mathbf v)\mathbf1-A^{\mathsf T}]\delta\mathbf S,\quad\frac{D\delta V}{Dt}=(\nabla\cdot\mathbf v)\delta V.\]
+<p>각 변벡터의 물질미분을 외적·삼중곱에 넣어 증명한다. 국소 유동의 변환행렬 \(F=\mathbf1+A\,dt\)에 대해 부피는 \(\det F\simeq1+\mathrm{tr}(A)dt\), 면벡터는 \(\det F\,F^{-\mathsf T}\)로 변하므로 위 결과를 얻는다. 예: \(\mathbf v=(ax,by,cz)\)이면 부피 변화율은 \((a+b+c)\delta V\), x법선 면적 변화율은 \((b+c)\delta S_x\). [[L14.s9, D1022.20]]</p></div>
+<h4>압력·속력분포·내부에너지</h4>
+<div class="slide"><div class="sh">L14 · 슬라이드 10 <span class="st">Maxwell–Boltzmann 분포</span></div>\[\frac{n_w\,dw}{n}=4\pi w^2\left(\frac m{2\pi kT}\right)^{3/2}e^{-mw^2/(2kT)}dw,\quad w_p=\sqrt{\frac{2kT}m},\quad\langle w\rangle=\sqrt{\frac{8kT}{\pi m}},\quad w_{\rm rms}=\sqrt{\frac{3kT}m}.\]
+<p>여기서 \(w\)는 벌크 속도를 뺀 열운동 속력이다. 등방성·국소 열평형에서 각 방향의 평균 운동에너지는 \(kT/2\). 최빈 &lt; 평균 &lt; rms 순서를 구별한다. [[L14.s10, D1022.21, D1022.22]]</p></div>
+<div class="derive"><div class="dtitle"><span class="tag">유도</span>벽 충돌에서 압력</div><ol><li>한 입자가 벽에 주는 운동량은 \(2mw_x\), 같은 벽 충돌 사이 시간은 \(2\Delta x/|w_x|\).</li><li>힘 \(mw_x^2/\Delta x\)를 모든 입자에 합하고 면적으로 나눈다.</li><li>등방성 \(\langle w_x^2\rangle=\langle w^2\rangle/3\)과 열평형을 쓰면</li></ol>\[P=\frac13\rho\langle w^2\rangle=nkT=\frac{\rho kT}{\mu m_H}.\]
+<p>입자 플럭스×벽에 전달한 운동량으로도 해석할 수 있다. PPT의 6방향 입자 모형은 이 미시적 그림을 보여 주는 차수 설명이다. [[L14.s11, D1022.23, D1022.25]]</p></div>
+<div class="intuit"><b>평균분자량.</b> 압력에 기여하는 자유 입자 하나당 평균 질량을 \(m_H\)로 나눈 값이다. 중성 H:1, 완전전리 H:1/2, 중성 He:4, 완전전리 He:4/3. 전자 질량을 무시해도 전자의 입자 수는 압력에 포함한다. [[D1022.24]]</div>
+<div class="formula"><div class="ftitle">암기 — 단원자 이상기체의 부피당 내부에너지</div>\[\mathcal E=\frac12\rho\langle w^2\rangle=\frac32P=\frac32nkT.\]<p class="note">벌크 운동에너지와 분리한다. 이원자 기체는 온도에 따라 여기되는 회전·진동 자유도도 고려하므로 3P/2를 무조건 적용하지 않는다. [[L14.s12, D1022.25, D1022.26]]</p></div>
+<h4>유선·유맥선·유적선</h4>
+<ul><li>유선: 한 시각의 속도장에 접하는 선. \(dx/v_x=dy/v_y=dz/v_z\).</li><li>유맥선: 고정점을 서로 다른 시각에 지난 입자들의 현재 위치를 이은 선. 연속 염료 주입·담배 연기가 예다.</li><li>유적선: 한 물질입자의 궤적 \(d\mathbf x/dt=\mathbf v(\mathbf x,t)\). 떠내려가는 나뭇잎을 따라간다.</li></ul><p>정상유동에서는 세 선이 일치한다. 천문학에서는 순간 속도장의 유선을 주로 쓴다고 설명했다. [[L14.s13, D1022.27, D1022.28]]</p>
 <h4>체크포인트</h4>
+
 
 <div class="qz" data-q="u22-1"><div class="qq">정상유동이면 가속도0인가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>아니다. v·∇v가 남는다. 좁아지는 관 속 유동처럼 속도가 공간적으로 변할 수 있다.</p></div></div>
 
@@ -19,4 +38,5 @@
 <div class="qz" data-q="u22-3"><div class="qq">단열과등온을동시에쓸수있는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>일반적으로다르다. 열교환시간과동역학시간을비교해서닫힘관계를선택해야한다.</p></div></div>
 
 
-<p class="note">출처: 교재 p.287–293 · 상태: 교재 선행 · 목차 대응 · 본문 전수 대조 전</p>
+
+<p class="note">10/22 강의·Lecture14 슬라이드 2–13 반영. 연속방정식·비압축성은 다음 단원에서 이어진다. 교재 선행의 음속·비엔탈피는 실제 강의 진도와 구분한다.</p>

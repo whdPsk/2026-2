@@ -1,0 +1,88 @@
+[
+  {
+    "id": "L14.s1",
+    "loc": "슬라이드 1 · 표지",
+    "raw": "Chapter 12 Basic Equations of Hydrodynamics",
+    "skip": "표지"
+  },
+  {
+    "id": "L14.s2",
+    "loc": "슬라이드 2 · Fluid",
+    "raw": "흐르는 물질: 액체·기체·플라즈마·플라스틱; 거시 밀도·압력·속도를 정의하는 연속체. L ≫ ℓ ≫ λmfp."
+  },
+  {
+    "id": "L14.s3",
+    "loc": "슬라이드 3 · Fluid Description",
+    "raw": "u=v+w, 평균 w=0. 많은 입자와 빈번한 충돌로 물질요소를 거의 같은 입자 집합으로 추적. ℓ≪λmfp면 실패."
+  },
+  {
+    "id": "L14.s4",
+    "loc": "슬라이드 4 · Mean Free Path & Collision Time",
+    "raw": "λmfp=1/(nσ), tcoll=1/(nσv). 중성 ISM: σ∼10^-15 cm², n=1 cm^-3, λ∼10^15 cm, T=100 K, v∼1 km/s, 충돌시간∼300 yr."
+  },
+  {
+    "id": "L14.s5",
+    "loc": "슬라이드 5 · For Fully Ionized Gas",
+    "raw": "mv²∼e²/b, σ∼πe⁴/(m²v⁴), λ∼10⁵T²/n cm. 태양 내부 10^-6 cm, HII 영역 10^12 cm, ICM 10^24 cm. ICM은 marginally collisional."
+  },
+  {
+    "id": "L14.s6",
+    "loc": "슬라이드 6 · Two Descriptions",
+    "raw": "Euler 고정 위치 변화 δq, Lagrange 유체요소 변화 Δq. Δx=vΔt; Δq=δq+Δx·∇q, D/Dt=∂t+v·∇, Dx/Dt=v."
+  },
+  {
+    "id": "L14.s7",
+    "loc": "슬라이드 7 · Time Derivatives",
+    "raw": "고정 위치의 ∂f/∂t와 궤적의 Df/Dt. 벌크 운동으로 물리량을 수송하는 이류 연산자 v·∇."
+  },
+  {
+    "id": "L14.s8",
+    "loc": "슬라이드 8 · Length Element",
+    "raw": "Dδx/Dt=(δx·∇)v. 양 끝점의 상대 속도 중 평행 성분은 길이, 수직 성분은 방향을 변화."
+  },
+  {
+    "id": "L14.s9",
+    "loc": "슬라이드 9 · Exercise",
+    "raw": "δS=δx×δy, δV=δS·δz. DδS/Dt=(∇·v)δS−(∇v)·δS, DδV/Dt=δV∇·v를 증명."
+  },
+  {
+    "id": "L14.s10",
+    "loc": "슬라이드 10 · Pressure Force",
+    "raw": "Maxwell–Boltzmann 속력분포. vp=√(2kT/m), 평균=√(8kT/πm), rms=√(3kT/m); 등방성과 자유도당 kT/2."
+  },
+  {
+    "id": "L14.s11",
+    "loc": "슬라이드 11 · Pressure Force 계속",
+    "raw": "한 입자의 벽 충돌 Δp=2mvx, Δt=2Δx/vx. 합산하면 P=ρ〈v²〉/3=nkT=ρkT/(μmH); 입자 플럭스×운동량 전달 해석."
+  },
+  {
+    "id": "L14.s12",
+    "loc": "슬라이드 12 · Internal Energy",
+    "raw": "단원자 이상기체 부피당 내부에너지 ε=ρ〈v²〉/2=3P/2=3nkT/2. 이원자 기체는 회전·진동 자유도 추가."
+  },
+  {
+    "id": "L14.s13",
+    "loc": "슬라이드 13 · Streamline, Streakline, Pathline",
+    "raw": "유선: 순간 속도장의 접선. 유맥선: 고정점을 거친 입자들의 현재 위치. 유적선: 한 입자의 궤적. 정상유동에서 일치."
+  },
+  {
+    "id": "L14.s14",
+    "loc": "슬라이드 14 · Continuity Equation",
+    "raw": "고정 부피의 질량 변화와 경계면 유입 플럭스 비교, 발산정리로 ∂tρ+∇·(ρv)=0; Dρ/Dt=−ρ∇·v."
+  },
+  {
+    "id": "L14.s15",
+    "loc": "슬라이드 15 · (In)Compressible Fluid",
+    "raw": "비압축성 ∇·v=0, Dρ/Dt=0. 밀도가 Lagrange 관점에서 불변. 액체·기체의 압축성 구별."
+  },
+  {
+    "id": "L14.s16",
+    "loc": "슬라이드 16 · Momentum Equation — 예습",
+    "raw": "고정 부피의 운동량 변화에 중력 체적력, 압력 표면력, 이류 플럭스. R=ρvv, 대각합 ρv²는 ram pressure."
+  },
+  {
+    "id": "L14.s17",
+    "loc": "슬라이드 17 · Momentum Equation — 예습",
+    "raw": "∂t(ρv)+∇·(ρvv)=−∇P−ρ∇Φ. 연속방정식으로 Dv/Dt=−∇P/ρ−∇Φ. 10/22 녹음에서는 여기까지 진행하지 않음."
+  }
+]

@@ -88,5 +88,25 @@
       "status": "반영; 강의 노트 템플릿 완료",
       "location": "content/astro1/lectures.json; content/astro1/ledger/D1019HW3.json"
     }
-  ]
+  ],
+  "last_attempt": {
+    "cutoff_at_kst": "2026-10-28T11:00:00+09:00",
+    "inventory_checked_at_kst": "2026-10-28T11:23:00+09:00",
+    "status": "validated_with_pending_sources",
+    "sources": {
+      "etl": "본강의 공지·모듈·과제 및 연습 공지·모듈 확인",
+      "drive": "등록 폴더·하위 폴더 목록 확인; 일부 원문 대조 보류",
+      "daglo": "10/26 고역·10/22 천물개 스크립트 및 강의 노트 완료; 전파광 10/26 파일 없음·고역 10/28 녹음중"
+    },
+    "audit": "docs/update-audit-2026-10-28.md",
+    "inventory": "docs/update-inventory-2026-10-28.json",
+    "pending": [
+      "daglo:sUN2uR9TyHg3fXTq — 원본 파일 없음",
+      "daglo:WT1hDJddvMembOsj — 녹음중",
+      "전파광 학생 관련 PDF 일부 — 자동 승인 검토 차단; 별도 승인 필요",
+      "모범답안 나머지 12개 및 HW3해설 새 txt 전체 대조"
+    ],
+    "publication": "GitHub Actions 배포 확인 대기",
+    "note": "checked_at_kst는 마지막 전체 성공 기록을 유지. 미확인 자료를 다음 실행에서 재점검한다."
+  }
 }

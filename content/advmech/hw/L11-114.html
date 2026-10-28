@@ -1,0 +1,13 @@
+<div class="stmt">자유 강체의 \(\mathcal L=T=\frac12\sum I_i\omega_i^2\)와 Euler 각을 사용해 식 (11.114)의 무토크 Euler 방정식을 증명하라. 10/26 지정에 따라 θ·φ 식도 직접 전개하라. [[HW2.L11-114]]</div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>\(L_i=I_i\omega_i\), \(E_1=\dot L_1+\omega_2L_3-\omega_3L_2\), 나머지는 순환으로 정의한다. 목표는 \(E_1=E_2=E_3=0\)이다.</p>
+<div class="derive"><div class="dtitle"><span class="tag">1</span>ψ 방정식</div>\[\frac{\partial\omega_1}{\partial\psi}=\omega_2,\quad\frac{\partial\omega_2}{\partial\psi}=-\omega_1,\quad\frac{\partial T}{\partial\dot\psi}=L_3.\]
+<p>따라서</p>\[\frac d{dt}\frac{\partial T}{\partial\dot\psi}-\frac{\partial T}{\partial\psi}=\dot L_3-(L_1\omega_2-L_2\omega_1)=E_3=0.\]</div>
+<div class="derive"><div class="dtitle"><span class="tag">2</span>θ 방정식</div>\[p_\theta=L_1\cos\psi-L_2\sin\psi,\quad\frac{\partial T}{\partial\theta}=\dot\phi[\cos\theta(L_1\sin\psi+L_2\cos\psi)-L_3\sin\theta].\]
+<p>pθ를 시간미분하면</p>\[\dot L_1\cos\psi-\dot L_2\sin\psi-\dot\psi(L_1\sin\psi+L_2\cos\psi)-\dot\phi[\cos\theta(L_1\sin\psi+L_2\cos\psi)-L_3\sin\theta]=0.\]
+<p>\(\omega_3=\dot\psi+\dot\phi\cos\theta\)를 쓰면 이는 \(\cos\psi E_1-\sin\psi E_2=0\)이다.</p></div>
+<div class="derive"><div class="dtitle"><span class="tag">3</span>φ 방정식</div><p>T는 φ 자체에 의존하지 않으므로</p>\[p_\phi=\sin\theta(L_1\sin\psi+L_2\cos\psi)+L_3\cos\theta,\quad\dot p_\phi=0.\]
+<p>시간미분을 모두 전개하면</p>\[\sin\theta(\dot L_1\sin\psi+\dot L_2\cos\psi)+\dot\theta\cos\theta(L_1\sin\psi+L_2\cos\psi)+\dot\psi\sin\theta(L_1\cos\psi-L_2\sin\psi)+\dot L_3\cos\theta-L_3\dot\theta\sin\theta=0.\]
+<p>각속도 성분을 대입하면 \(\sin\theta\sin\psi E_1+\sin\theta\cos\psi E_2+\cos\theta E_3=0\)로 정리된다. ψ 식 E3=0, θ 식과 결합하면 \(\sin\theta\ne0\)에서 E1=E2=0. 좌표 특이점에서는 다른 Euler 각 좌표나 벡터식을 사용한다.</p></div>
+\[\boxed{I_1\dot\omega_1=(I_2-I_3)\omega_2\omega_3,\quad I_2\dot\omega_2=(I_3-I_1)\omega_3\omega_1,\quad I_3\dot\omega_3=(I_1-I_2)\omega_1\omega_2.}\]
+<div class="trap"><b>교재 p.446 주의.</b> θ·φ의 Lagrange 방정식 <i>그 자체</i>가 각각 E1·E2인 것은 아니다. 위와 같은 선형결합이다. φ는 이 자유 회전 T에서 순환좌표지만 θ는 일반적으로 아니다. ψ도 I1=I2 등 추가 대칭이 있어야 순환좌표가 된다.</div><p><b>독립 검산.</b> \(\mathbf N=0\)을 \((d\mathbf L/dt)_{\rm body}+\boldsymbol\omega\times\mathbf L=\mathbf N\)에 넣어 같은 세 식을 얻는다. 각 식에 ωi를 곱해 합하면 T 보존, Iiωi를 곱해 합하면 L² 보존이다.</p></div><!--/sol-->

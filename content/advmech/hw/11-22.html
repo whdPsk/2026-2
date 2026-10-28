@@ -1,0 +1,5 @@
+<div class="stmt">유사변환으로 \(\operatorname{tr}I'=\operatorname{tr}I\)를 증명하고 정육면체의 관성텐서에 확인하라. [[HW2.11-22]]</div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+\[I'_{ii}=\sum_{k,l}\Lambda_{ik}I_{kl}\Lambda_{il},\qquad\sum_iI'_{ii}=\sum_{k,l}I_{kl}\underbrace{\sum_i\Lambda_{ik}\Lambda_{il}}_{\delta_{kl}}=\sum_k I_{kk}.\]
+<p>행렬로는 \(\mathrm{tr}(\Lambda I\Lambda^{-1})=\mathrm{tr}I\). 한 변 a, 질량 M인 균일 정육면체의 질량중심 텐서는 \(I_{\rm CM}=Ma^2\mathbf1/6\), 대각합은 \(Ma^2/2\)로 모든 축 방향에서 같다. 한 꼭짓점 원점에서는 대각성분 \(2Ma^2/3\), 비대각성분 \(-Ma^2/4\), 대각합 \(2Ma^2\). 그 원점을 유지한 채 축을 회전해도 합은 \(2Ma^2\)다.</p>
+<div class="trap"><b>원점 이동은 별개.</b> \(J=I_{\rm CM}+M(a^2\mathbf1-\mathbf a\mathbf a^{\mathsf T})\)의 대각합은 \(\mathrm{tr}I_{\rm CM}+2Ma^2\)이므로 평행이동에는 불변이 아니다.</div><div class="apply"><b>변형.</b> 직교 회전은 세 고유값도 보존하므로 행렬식 역시 변하지 않는다.</div></div><!--/sol-->

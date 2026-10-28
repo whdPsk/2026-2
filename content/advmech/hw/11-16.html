@@ -1,0 +1,5 @@
+<div class="stmt">\(I_{11}=I_{22}=(A+B)/2\), \(I_{12}=I_{21}=(A-B)/2\), \(I_{33}=C\), 나머지는 0이다. 좌표축을 x3 둘레 θ만큼 회전한 텐서를 구하고 θ=π/4에서 대각화됨을 보여라. [[HW2.11-16]]</div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>\(a=(A+B)/2,d=(A-B)/2\), 수동 좌표 회전 \(\Lambda=\begin{pmatrix}\cos\theta&\sin\theta&0\\-\sin\theta&\cos\theta&0\\0&0&1\end{pmatrix}\)를 택한다.</p>
+\[I'=\Lambda I\Lambda^{\mathsf T}=\begin{pmatrix}a+d\sin2\theta&d\cos2\theta&0\\d\cos2\theta&a-d\sin2\theta&0\\0&0&C\end{pmatrix}.\]
+<p>θ=π/4이면 \(\sin2\theta=1,\cos2\theta=0\)이므로 \(I'=\mathrm{diag}(A,B,C)\). 주축은 원래 좌표에서 \((1,1,0)/\sqrt2,(-1,1,0)/\sqrt2,(0,0,1)\)이다.</p><div class="trap"><b>부호.</b> 능동 회전과 수동 좌표 회전을 혼용하면 θ의 부호가 바뀐다. 좌표 변환 \(x'=\Lambda x\)를 먼저 명시한다.</div><div class="apply"><b>변형.</b> θ=−π/4이면 첫 두 대각성분의 A·B 순서가 바뀐다. A=B면 평면의 모든 직교축이 주축이다.</div></div><!--/sol-->

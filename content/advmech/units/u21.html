@@ -1,5 +1,7 @@
 <div class="predict"><b>◈ 먼저 예측하기.</b> 강체의 방향을 정하려면 각 세 개가 필요하다. 팽이를 떠올리자: 기울어진 축이 연직축 둘레를 도는 각(세차), 축이 연직에서 기운 각(장동), 팽이가 자기 축 둘레로 도는 각(자전). 이 세 각의 시간미분은 각각 어느 방향의 각속도 벡터일까? 그리고 그 세 방향은 서로 직교할까?</div>
 
+<div class="prof"><b>10/26 강의.</b> 회전행렬의 9성분에는 단위벡터 조건 3개와 직교 조건 3개가 있어 자세 자유도는 3개다. 방향만 정하는 두 각에 자체 비틀림 한 각이 더 필요하다. 납작한 화살표를 기울이고 비트는 예를 떠올린다. [[D1026.02, D1026.03, D1026.07, D1026.15, D1026.16]]</div>
+<p class="note">물체계의 주축·대각화는 지난 시간 내용의 복습이다. [[D1026.01, L1026.1]]</p>
 <h4>11.8 Euler 각 <span class="en">Eulerian angles</span></h4>
 
 <div class="derive"><div class="dtitle"><span class="tag">정의</span>세 번의 반시계 회전 \(\lambda=\lambda_\psi\lambda_\theta\lambda_\phi\)</div>
@@ -25,6 +27,8 @@
 \[ \lambda=\lambda_\psi\lambda_\theta\lambda_\phi,\quad \omega_1=\dot\phi s_\theta s_\psi+\dot\theta c_\psi,\ \omega_2=\dot\phi s_\theta c_\psi-\dot\theta s_\psi,\ \omega_3=\dot\phi c_\theta+\dot\psi \]
 <p class="note">\(\dot\phi\): 세차(고정 연직축), \(\dot\theta\): 장동(교선), \(\dot\psi\): 자전(물체축). \(\omega_1^2+\omega_2^2=\dot\phi^2\sin^2\theta+\dot\theta^2\).</p></div>
 
+<div class="explain"><b>회전 순서 → 각속도 사영.</b> 3-1-3 규약에서 첫 회전은 고정 \(x'_3\), 둘째는 교선, 셋째는 기울어진 물체 \(x_3\) 둘레다. 첫째와 셋째가 모두 3축이라는 이유로 같은 축이라고 해석하면 안 된다. 각각의 기본행렬을 만든 뒤 \(\lambda_\psi\lambda_\theta\lambda_\phi\)의 순서로 곱한다. [[D1026.04, D1026.05, D1026.06, D1026.08, D1026.09, D1026.10, D1026.11, D1026.12, D1026.13]]</div>
+<p>각속도는 서로 다른 축의 미소 회전 벡터를 <b>하나의 최종 물체 좌표계로 옮긴 뒤</b> 더한다. \(\dot\psi\)는 변환 없이, \(\dot\theta\)는 마지막 ψ 회전을 거쳐, \(\dot\phi\)는 θ·ψ 회전을 거쳐 사영한다. 아래 체크포인트와 과제 11-26으로 직접 계산한다. [[D1026.14, D1026.17, D1026.18, D1026.19, D1026.20, D1026.21, L1026.2]]</p>
 <h4>체크포인트</h4>
 
 <div class="qz" data-q="u21-1"><div class="qq">\(\boldsymbol\omega\)의 물체계 성분 공식을 세 각속도 벡터의 사영으로 유도하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 1. 가장 헷갈리는 것은 \(\dot{\boldsymbol\phi}\): 먼저 물체 \(x_3\)과 교선에 수직인 방향으로 \((\cos\theta,\sin\theta)\) 분해, 그 수평 성분을 다시 물체 \(x_1,x_2\)로 \((\sin\psi,\cos\psi)\) 분해.</p></div></div>

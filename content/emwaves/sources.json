@@ -19,5 +19,47 @@
   "kind": "notice",
   "date": "2026-06-15",
   "url": "https://myetl.snu.ac.kr/courses/305132/files/9511628/download?wrap=1"
+ },
+ "P2026": {
+  "title": "전자기파와 광학 연습 프로젝트 v1",
+  "short": "P2026",
+  "kind": "notice",
+  "date": "2026-10-20",
+  "url": "https://myetl.snu.ac.kr/courses/305128/discussion_topics/394454"
+ },
+ "N1026M": {
+  "title": "개별 면담 Doodle 일정 정정",
+  "short": "N1026M",
+  "kind": "notice",
+  "date": "2026-10-26",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/396547"
+ },
+ "N1024": {
+  "title": "10/28 중간고사 준비 안내",
+  "short": "N1024",
+  "kind": "notice",
+  "date": "2026-10-24",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/395879"
+ },
+ "N1026S": {
+  "title": "10월 복습과제 채점·모범답안 공지 모음",
+  "short": "N1026S",
+  "kind": "notice",
+  "date": "2026-10-26",
+  "url": "https://myetl.snu.ac.kr/courses/305132/announcements"
+ },
+ "S1021": {
+  "title": "10/21 공개 모범답안 · 지연 퍼텐셜",
+  "short": "S1021",
+  "kind": "notice",
+  "date": "2026-10-26",
+  "url": "https://drive.google.com/file/d/129i86QB4HiwD8Jdj0tnepUXzy_5tD4vE/view"
+ },
+ "S1014": {
+  "title": "10/14 공개 모범답안 · 지연 퍼텐셜·도선·동축 TEM",
+  "short": "S1014",
+  "kind": "hw",
+  "date": "2026-10-25",
+  "url": "https://drive.google.com/file/d/16f_nfJHdFez10g5vWmqtb2KnG0eptoeg/view"
  }
 }

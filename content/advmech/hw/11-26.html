@@ -1,0 +1,6 @@
+<div class="stmt">3-1-3 회전행렬 Λ(교재 11.99)를 이용해 각속도 벡터의 물체계 성분(11.102)을 구하라. [[HW2.11-26]]</div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>세 미소 회전의 각속도를 모두 <b>최종 물체계</b>로 표현한다.</p>
+\[\boldsymbol\omega_\phi=\dot\phi\Lambda\begin{pmatrix}0\\0\\1\end{pmatrix}=\dot\phi\begin{pmatrix}\sin\theta\sin\psi\\\sin\theta\cos\psi\\\cos\theta\end{pmatrix},\quad\boldsymbol\omega_\theta=\dot\theta\Lambda_\psi\begin{pmatrix}1\\0\\0\end{pmatrix}=\dot\theta\begin{pmatrix}\cos\psi\\-\sin\psi\\0\end{pmatrix},\quad\boldsymbol\omega_\psi=\begin{pmatrix}0\\0\\\dot\psi\end{pmatrix}.\]
+<p>이를 더하면</p>\[\omega_1=\dot\phi\sin\theta\sin\psi+\dot\theta\cos\psi,\quad\omega_2=\dot\phi\sin\theta\cos\psi-\dot\theta\sin\psi,\quad\omega_3=\dot\phi\cos\theta+\dot\psi.\]
+<p>또한 \(\omega_1^2+\omega_2^2=\dot\phi^2\sin^2\theta+\dot\theta^2\). θ=0에서는 \(\omega_3=\dot\phi+\dot\psi\)이고 두 회전축이 겹친다. 각도의 시간미분을 그대로 물체축 성분이라고 놓지 않는다.</p><div class="apply"><b>변형.</b> 순수 장동(φ-dot=ψ-dot=0)에서는 \(\boldsymbol\omega=\dot\theta(\cos\psi,-\sin\psi,0)\). 그 크기는 |θ-dot|이다.</div></div><!--/sol-->

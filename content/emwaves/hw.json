@@ -1,5 +1,5 @@
 [
-{
+ {
   "id": "past2026s",
   "kind": "lecture",
   "title": "문제 유형 참고 · 2026-1 전기와자기 기출",
@@ -34,7 +34,7 @@
     "unit": "u13",
     "tag": "opt",
     "title": "Griffiths 식 (9.175)을 처음부터 유도하라. eTL 첨부 이미지의 식은 아직 대조가 필요하다."
-  }
+   }
   ]
  },
  {
@@ -1919,8 +1919,20 @@
   "due": "2026-10-20",
   "meta": "eTL 과제 · 10/20(화) 23:59 마감 · <a href=\"https://myetl.snu.ac.kr/courses/305132/assignments/386279\" target=\"_blank\" rel=\"noopener\">과제 원문 ↗</a>. 강의 범위의 모든 Example을 답을 보지 않고 풀 수 있게 복습. Problem 10.14 필수, 10.13 선택.",
   "probs": [
-   {"num":"10.14","ch":10,"unit":"u17","tag":"req","title":"Griffiths Problem 10.14 — 시간에 선형인 전류의 Jefimenko 자기장"},
-   {"num":"10.13","ch":10,"unit":"u17","tag":"opt","title":"Griffiths Problem 10.13 — 시간에 선형인 전하밀도의 Jefimenko 전기장"}
+   {
+    "num": "10.14",
+    "ch": 10,
+    "unit": "u17",
+    "tag": "req",
+    "title": "Griffiths Problem 10.14 — 시간에 선형인 전류의 Jefimenko 자기장"
+   },
+   {
+    "num": "10.13",
+    "ch": 10,
+    "unit": "u17",
+    "tag": "opt",
+    "title": "Griffiths Problem 10.13 — 시간에 선형인 전하밀도의 Jefimenko 전기장"
+   }
   ]
  },
  {
@@ -1930,7 +1942,50 @@
   "due": "2026-10-25",
   "meta": "eTL 과제 · 10/25(일) 23:59 마감 · <a href=\"https://myetl.snu.ac.kr/courses/305132/assignments/386900\" target=\"_blank\" rel=\"noopener\">과제 원문 ↗</a>. 강의 범위 Example을 답 없이 다시 풀고 Liénard–Wiechert 식을 혼자 유도할 것. Problem 10.17 필수.",
   "probs": [
-   {"num":"10.17","ch":10,"unit":"u18","tag":"req","title":"Griffiths Problem 10.17 — 등속 점전하의 퍼텐셜을 현재 위치와 각도만으로 나타내기"}
+   {
+    "num": "10.17",
+    "ch": 10,
+    "unit": "u18",
+    "tag": "req",
+    "title": "Griffiths Problem 10.17 — 등속 점전하의 퍼텐셜을 현재 위치와 각도만으로 나타내기"
+   }
+  ]
+ },
+ {
+  "id": "project2026",
+  "kind": "hw",
+  "title": "연습 프로젝트 v1 · 전자기파 파동묶음 (초안)",
+  "due": "2026-11-13",
+  "meta": "<b>11/13(금) 23:59</b> · PDF 1개 + Python3 .py 1개 모두 제출 · NumPy·Matplotlib, SciPy 금지 · 하루 10% 지각 감점. <b>eTL 10/20 초안 v1, 추후 변경 가능</b>. 아래 풀이는 계산·검산 경로이며 실제 실행·그래프·오차는 직접 확인해 작성한다. [[P2026.status, P2026.submit]]",
+  "probs": [
+   {
+    "num": "P2026-1",
+    "ch": 9,
+    "unit": "u7",
+    "tag": "req",
+    "title": "토의·AI 사용 기록과 제출 형식"
+   },
+   {
+    "num": "P2026-2",
+    "ch": 9,
+    "unit": "u7",
+    "tag": "req",
+    "title": "진공 Gaussian E, B=0의 양방향 진행"
+   },
+   {
+    "num": "P2026-3",
+    "ch": 9,
+    "unit": "u7",
+    "tag": "req",
+    "title": "+z 방향만 진행하는 초기 자기장"
+   },
+   {
+    "num": "P2026-4",
+    "ch": 9,
+    "unit": "u7",
+    "tag": "req",
+    "title": "εr=4 경계의 반사·투과와 11시각 출력"
+   }
   ]
  }
 ]

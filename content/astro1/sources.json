@@ -410,5 +410,19 @@
   "kind": "transcript",
   "date": "2026-10-20",
   "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/qR6nDdRAQQnOV1jZ?fileMetaId=9ba7adcc-cfad-4496-870a-b61dcfb21ee7"
+ },
+ "L14": {
+  "title": "Lecture14 Basic Equations of Hydrodynamics",
+  "short": "L14",
+  "kind": "ppt",
+  "date": "2026-10-22",
+  "url": "https://drive.google.com/file/d/1plCbuHGKy4rN0tmtAQBmgdH4pfwYaGuZ/view"
+ },
+ "D1022": {
+  "title": "10/22 유체역학 입문 녹음",
+  "short": "D1022",
+  "kind": "transcript",
+  "date": "2026-10-22",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/RM-ckEll1VBXPuOn?fileMetaId=d29d54a2-b1d5-40e2-afae-a6ab3d211830"
  }
 }

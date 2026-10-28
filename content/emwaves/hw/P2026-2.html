@@ -1,0 +1,7 @@
+<div class="stmt">\(E_x(z,0)=e^{-z^2/\sigma^2}\) V/m, \(B_y(z,0)=0\), σ=1m. Yee 격자로 Maxwell 식을 직접 풀고 중심들이 2m 이동한 E·B를 그린다. 파동방정식을 진화식으로 쓰지 않는다. [[P2026.2]]</div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이·검산 경로</div>
+<p>1차원에서 풀어야 할 식은 \(\partial_t B_y=-\partial_z E_x\), \(\partial_t E_x=-(\mu\epsilon)^{-1}\partial_zB_y\). 나머지 두 발산 조건은 이 횡파 배치에서 자동 만족한다.</p>
+\[B_{i+1/2}^{n+1/2}=B_{i+1/2}^{n-1/2}-\frac{\Delta t}{\Delta z}(E_{i+1}^n-E_i^n),\quad E_i^{n+1}=E_i^n-\frac{\Delta t}{\mu\epsilon\Delta z}(B_{i+1/2}^{n+1/2}-B_{i-1/2}^{n+1/2}).\]
+<p>전기장은 정수 공간·시간, 자기장은 반 격자·반 시간에 둔다. \(c\Delta t/\Delta z\le1\)로 잡고 경계 반사가 관심 구간에 들어오지 않도록 충분히 큰 영역을 쓴다. B=0은 t=0의 조건이므로 반 시간 초기화는 \(B^{1/2}\simeq B^0-(\Delta t/2)\partial_zE^0\)로 하며, 이를 정수 시간 B=0과 혼동하지 않는다.</p>
+<p><b>검산용 연속해</b>(수치 진화에는 위 Maxwell 차분식 사용): \(f(z)=e^{-z^2/\sigma^2}\)라 두면</p>\[E=\frac12[f(z-ct)+f(z+ct)],\qquad B=\frac1{2c}[f(z-ct)-f(z+ct)].\]
+<p>목표 시각은 t=2/c. 처음 E는 ±z로 각각 진폭 약 1/2의 두 묶음으로 갈라지고 B의 부호는 두 방향에서 반대다. 그림을 비교할 때 B를 E와 같은 공간·시간으로 보간한다.</p></div><!--/sol-->
