@@ -92,7 +92,7 @@
   "last_attempt": {
     "cutoff_at_kst": "2026-10-28T11:00:00+09:00",
     "inventory_checked_at_kst": "2026-10-28T11:23:00+09:00",
-    "status": "validated_with_pending_sources",
+    "status": "deployed_with_pending_sources",
     "sources": {
       "etl": "본강의 공지·모듈·과제 및 연습 공지·모듈 확인",
       "drive": "등록 폴더·하위 폴더 목록 확인; 일부 원문 대조 보류",
@@ -106,7 +106,12 @@
       "전파광 학생 관련 PDF 일부 — 자동 승인 검토 차단; 별도 승인 필요",
       "모범답안 나머지 12개 및 HW3해설 새 txt 전체 대조"
     ],
-    "publication": "GitHub Actions 배포 확인 대기",
+    "publication": {
+      "status": "success",
+      "commit": "f59176b3f8b27dbe3ed29488234fdef45db5782e",
+      "run_url": "https://github.com/whdPsk/2026-2/actions/runs/40621208577",
+      "site_url": "https://whdpsk.github.io/2026-2/"
+    },
     "note": "checked_at_kst는 마지막 전체 성공 기록을 유지. 미확인 자료를 다음 실행에서 재점검한다."
   }
 }
