@@ -32,6 +32,7 @@ export function renderShell(D) {
 </header>
 <div class="shell">
 <aside class="rail" id="rail">
+  <div class="rail-label">NOTE INDEX <span aria-hidden="true">✧</span></div>
   <input id="q" class="tool" style="width:100%;padding:7px 10px;font-size:12.5px;margin-bottom:6px" type="search" placeholder="단원 검색  /" autocomplete="off">
   <div class="rangesel" id="rsel"><button data-r="all" aria-pressed="true">전체</button><button data-r="lec" title="강의에서 다룬 단원만">강의 진도</button><button data-r="1" title="${D.rangeLabel['1']}">중간</button><button data-r="2" title="${D.rangeLabel['2']}">기말</button></div>
   ${frontier}

@@ -24,8 +24,7 @@ export function initHelp() {
 
 export function initTheme(store, key) {
   const tD = $('t-dark');
-  const cur = () => document.documentElement.getAttribute('data-theme') ||
-    (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  const cur = () => document.documentElement.getAttribute('data-theme') || 'dark';
   const apply = (t) => { document.documentElement.setAttribute('data-theme', t); tD.textContent = t === 'dark' ? '☀' : '◐'; };
   tD.onclick = () => { const t = cur() === 'dark' ? 'light' : 'dark'; apply(t); store.lset(key + '.theme', t); };
   const th = store.lget(key + '.theme');

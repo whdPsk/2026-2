@@ -1,31 +1,24 @@
-
-/* layout: 좌측 단원 레일 + 한 번에 한 단원 읽는 콘솔, 모드 6개(학습·강의·Example·공식집·과제·현황) */
+/* Observatory palette. Dark by default; explicit light mode remains available. */
 :root{
- --bg:#f9faf8; --panel:#ffffff; --rail:#f1f3ef; --ink:#161d1b; --ink2:#56625e; --ink3:#86918d;
- --line:#dde2dc; --line2:#eaeee9;
- --brand:#1f5f55; --warm:#a8501f; --gold:#8a6b1b; --ok:#25774a; --bad:#a63535; --lec:#6a3f8f;
- --fx:#edf5f2; --fxline:#c3dcd4; --dv:#fcf8ef; --dvline:#e8dcbc;
- --qz:#f4f2f8; --qzline:#dcd3e6; --pb:#f1f6f2; --pbline:#cfe2d6; --lc:#f6f1fa; --lcline:#ddcdea;
- --sh:0 1px 2px rgba(22,29,27,.05),0 6px 18px rgba(22,29,27,.05);
+ --bg:#090f1c; --panel:#111c2e; --rail:#0d1625; --ink:#e8eef7; --ink2:#b2bfd1; --ink3:#8a9cb5;
+ --line:#29384e; --line2:#202e42;
+ --brand:#8bcce2; --warm:#e9ae83; --gold:#d9bd81; --ok:#8bcbb4; --bad:#ef929d; --lec:#b6aff0;
+ --fx:#112936; --fxline:#315361; --dv:#242335; --dvline:#47425f;
+ --qz:#1c253b; --qzline:#3b4665; --pb:#142b2d; --pbline:#315453; --lc:#211f36; --lcline:#484263;
+ --sh:0 4px 24px #00000020;
  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
- --serif:Georgia,'Nanum Myeongjo','Noto Serif KR',serif;
+ --serif:'Segoe UI','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
  --sans:'Segoe UI','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',system-ui,sans-serif;
- --onbrand:#ffffff;
+ --onbrand:#0a1826; color-scheme:dark;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
- --bg:#101614; --panel:#18201e; --rail:#131a18; --ink:#e7e9e3; --ink2:#9aa6a1; --ink3:#6d7a75;
- --line:#28332f; --line2:#1f2926;
- --brand:#6cc2ae; --warm:#dd8a5c; --gold:#c9a53c; --ok:#54bb86; --bad:#e07575; --lec:#b894dc;
- --fx:#132521; --fxline:#24463e; --dv:#221f2c; --dvline:#3a3349;
- --qz:#1d2724; --qzline:#2e443a; --pb:#18241f; --pbline:#294034; --lc:#211b29; --lcline:#3d3150;
- --sh:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.32); --onbrand:#0d1412; color-scheme:dark}}
-:root[data-theme="dark"]{
- --bg:#101614; --panel:#18201e; --rail:#131a18; --ink:#e7e9e3; --ink2:#9aa6a1; --ink3:#6d7a75;
- --line:#28332f; --line2:#1f2926;
- --brand:#6cc2ae; --warm:#dd8a5c; --gold:#c9a53c; --ok:#54bb86; --bad:#e07575; --lec:#b894dc;
- --fx:#132521; --fxline:#24463e; --dv:#221f2c; --dvline:#3a3349;
- --qz:#1d2724; --qzline:#2e443a; --pb:#18241f; --pbline:#294034; --lc:#211b29; --lcline:#3d3150;
- --sh:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.32); --onbrand:#0d1412; color-scheme:dark}
+:root[data-theme="light"]{
+ --bg:#edf1f5; --panel:#ffffff; --rail:#e6ecf2; --ink:#172b44; --ink2:#445b74; --ink3:#5f738a;
+ --line:#c8d4e0; --line2:#dce4ed;
+ --brand:#21617c; --warm:#9b522c; --gold:#80611f; --ok:#256a59; --bad:#aa374a; --lec:#695496;
+ --fx:#eaf4f8; --fxline:#b9d7e2; --dv:#f5f0fa; --dvline:#d9cde8;
+ --qz:#eef1f9; --qzline:#ccd5e9; --pb:#edf6f2; --pbline:#c5ddd3; --lc:#f2eef9; --lcline:#d8cdeb;
+ --sh:0 4px 24px #1c36590a; --onbrand:#ffffff; color-scheme:light;
+}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font:16px/1.72 var(--sans);-webkit-font-smoothing:antialiased}
 button{font-family:inherit;cursor:pointer}
