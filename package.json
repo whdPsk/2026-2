@@ -14,6 +14,7 @@
     "build": "node scripts/compile.mjs && vite build",
     "preview": "vite preview",
     "check": "node scripts/check-ledger.mjs",
+    "check:final-plan": "node scripts/check-final-plan.mjs",
     "lint:tex": "node scripts/texlint.mjs",
     "test": "node scripts/compile.mjs && node scripts/texlint.mjs"
   },

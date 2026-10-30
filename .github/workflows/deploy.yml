@@ -31,6 +31,8 @@ jobs:
           BASE_PATH: /${{ github.event.repository.name }}/
       - name: Check math
         run: npm run lint:tex
+      - name: Check final plan
+        run: npm run check:final-plan
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

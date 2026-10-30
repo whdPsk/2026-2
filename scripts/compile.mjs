@@ -171,6 +171,19 @@ export function compileAll({ only = null, strict = true, log = console.log } = {
       }),
     };
     writeJson(path.join(DATA, 'site.json'), hub);
+    // 기말 계획표는 본문 없이 일정·단원·예제·지정 과제 정보만 공유한다.
+    writeJson(path.join(DATA, 'final-plan.json'), {
+      built: today, defaults: readJson(path.join(CONTENT, 'final-plan.json')),
+      courses: results.map(({ slug, data: d }) => ({
+        slug, title: d.title, exam: d.exams.find((e) => e.name === '기말고사'),
+        scope: d.rangeLabel['2'],
+        units: d.units.filter((u) => d.chapters[String(u.ch)].range === 2).map((u) => ({
+          id: u.id, ch: u.ch, title: u.title, secs: u.secs, lec: u.lec,
+          examples: d.examples.filter((e) => e.unit === u.id).map((e) => ({ num: e.num, title: e.title })),
+          homework: d.hw.filter((h) => h.kind !== 'bank' && h.kind !== 'ref').flatMap((h) => h.probs.filter((p) => p.unit === u.id).map((p) => ({ num: p.num, title: p.title }))),
+        })),
+      })),
+    });
   }
   const errs = results.flatMap((r) => r.errors.map((e) => `[${r.slug}] ${e}`));
   if (errs.length) {
