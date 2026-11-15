@@ -4,9 +4,15 @@
 
 <p>선형 음파에서는 모든 작은 압축이 같은 속도로 가지만 유한 진폭에서는 국소 유속과 음속이 달라진다. 압축 부분이 앞부분을 따라잡으면 파형이 가팔라지고, 이상적인 비점성 해에서 기울기가 발산한다. 그 이후에는 다중값 유속이 아니라 얇은 소산층인 충격파가 물리적 해가 된다.</p><p>특성선은 정보가 전달되는 시공간 경로이다. 1차원 등엔트로피 기체의 음향 특성은 dx/dt=v±cₛ이다. 각 특성을 따라 일정한 조합이 리만 불변량이다. 한 불변량이 공간 전체에서 일정한 단순파에서는 다른 변수를 하나로 표현해 파형의 변형을 계산할 수 있다.</p><p>희박파는 특성선이 퍼지면서 매끄러운 부채꼴 해를 만들 수 있다. 압축 충격파는 엔트로피가 증가하지만 시간 반전한 희박 충격파는 엔트로피 조건을 위반한다. 보존식만 만족하는 불연속이 모두 물리적인 것은 아니다.</p>
 
-<div class="callout"><b class="head">강의·교재 강조점.</b> 교재 선행 학습노트. 후속 강의·HW 강조점 미반영.</div>
+<div class="callout"><b class="head">강의안 대조.</b> Lecture 19 · 파형 가팔라짐과 단열·경사 충격파 [[A19.1]]</div>
 
 <div class="formula"><div class="ftitle">암기 — 파형 가팔라짐·특성선·리만 불변량</div><p><b>리만 불변량</b></p>\[ J_\pm=v\pm{2c_s\over\gamma-1},\quad (\partial_t+(v\pm c_s)\partial_x)J_\pm=0 \]<p class="note">각 부호의 조합을 같은 부호의 특성선을 따라 운반한다. <i>조건: 1차원·비점성·등엔트로피 이상기체, 일정 γ>1</i></p><p><b>우향 단순파</b></p>\[ c_s=c_0+{\gamma-1\over2}v,\quad v+c_s=c_0+{\gamma+1\over2}v \]<p class="note">정지 배경에서 J−가 일정할 때 큰 v가 더 빠르다. <i>조건: 충격파 형성 전의 우향 단순파</i></p><p><b>충격 형성 시간</b></p>\[ t_{\rm sh}=-{1\over\min_x[(\gamma+1)v_0^{\prime}(x)/2]} \]<p class="note">최소 기울기가 음수일 때 양의 형성시간. <i>조건: 무한/적절한 경계의 단순파, 소산 무시</i></p></div>
+
+<div class="derive"><div class="dtitle">11/12 강의안 복습 · 사인파에서 충격이 처음 생기는 시각</div>
+<p>초기 위치 \(\xi\)의 유속이 \(v_{\rm init}(\xi)=v_0\sin k\xi\)인 우향 단순파를 생각한다. 충격이 생기기 전에는 \(x=\xi+[a_0+(\gamma+1)v_{\rm init}(\xi)/2]t\)로 각 교란이 이동한다. \(\partial x/\partial\xi=0\)이 처음 되는 곳에서 기울기가 발산한다. [[A19.1, A19.2]]</p>
+\[\displaystyle t_{\rm sh}=\frac{2}{(\gamma+1)kv_0}
+=\frac{\lambda}{\pi(\gamma+1)v_0}.\]
+<p>파장이 반으로 줄거나 진폭이 두 배면 이 시간이 절반이다. 물리적으로는 기울기가 커지면서 점성과 열전도가 중요해지고 얇은 충격층이 만들어진다. [[A19.2]]</p></div>
 
 <h4>체크포인트</h4>
 
@@ -16,4 +22,4 @@
 <div class="qz" data-q="u27-2"><div class="qq">보존식만으로 희박 충격파도 허용하면 되는가?</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>엔트로피 증가와 물리적 인과 조건까지 검사해야 한다.</p></div></div>
 
 
-<p class="note">출처: 교재 p.344–355 · 상태: 교재 선행 · 목차 대응 · 본문 전수 대조 전</p>
+<p class="note">출처: 교재 p.344–355 · 상태: 강의안 및 교재 복습 · 목차 대응 · 본문 전수 대조 전</p>

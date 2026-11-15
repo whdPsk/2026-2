@@ -1,0 +1,10 @@
+<div class="stmt"><p>거리 4 Mpc의 초신성이 폭발 230일 뒤 반경 0.01 pc인 균일한 복사 영역을 갖는다. 관측 플럭스는 \(F_\nu=25(\nu/23\,\mathrm{GHz})^{-1}\,\mathrm{mJy}\)이며 전자 분포는 \(n(\gamma)=n_0\gamma^{-p}\), \(\gamma_{\min}=100\)이다. 지수 \(p\), \(n_0\)와 \(B\)의 관계, 에너지 등분배 결과, 100 GHz를 내는 전자의 \(\gamma\)와 Thomson 역콤턴 광자의 에너지를 구한다. [[AHW4.2]]</p></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<ol>
+<li>광학적으로 얇은 싱크로트론의 기울기는 \(-(p-1)/2=-1\)이므로 \(p=3\).</li>
+<li>부피 \(V=4\pi R^3/3\)에서 \(L_\nu=4\pi d^2F_\nu=(4\pi j_\nu)V\). 문제지 계수 \(4\pi j_\nu=5.3\times10^{-25}n_0B^2(\nu/\mathrm{GHz})^{-1}\)를 23 GHz에서 쓰면 \(n_0 B^2\simeq1.69\times10^2\,\mathrm{cm^{-3}\,G^2}\).</li>
+<li>초상대론적 전자 에너지 밀도는 \(U_e\simeq m_ec^2 n_0\int_{\gamma_{\min}}^\infty\gamma^{-2}d\gamma=m_ec^2n_0/\gamma_{\min}\). \(U_e=B^2/(8\pi)\)와 앞의 관계를 동시에 풀면 \(B\simeq0.0768\,\mathrm G\), \(n_0\simeq2.86\times10^4\,\mathrm{cm^{-3}}\).</li>
+<li>피치각 90°에서 특성 주파수를 임계 주파수 \(\nu_c=3eB\gamma^2/(4\pi m_ec)\)로 잡으면 \(\gamma\simeq557\).</li>
+<li>등방 시드 광자에 대한 평균 Thomson 에너지 \(E_{\rm IC}\simeq(4/3)\gamma^2h\nu\)를 사용하면 약 \(171\,\mathrm{eV}\)이다. \(4\gamma h\nu/(m_ec^2)\simeq1.8\times10^{-6}\)이어서 Thomson 근사와 양립한다. 단일 전자 스펙트럼의 봉우리 \(0.29\nu_c\)를 주파수 기준으로 잡으면 수치 계수가 달라진다.</li>
+</ol>
+</div><!--/sol-->

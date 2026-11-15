@@ -35,6 +35,14 @@
 <div class="formula"><div class="ftitle">암기 — 정규 좌표</div>
 \[ \mathsf a^{\mathsf T}m\mathsf a=\mathbb 1,\quad \mathsf a^{\mathsf T}A\mathsf a=\mathrm{diag}(\omega_r^2),\quad \vb q=\mathsf a\boldsymbol\eta,\quad L=\tfrac12\sum(\dot\eta_r^2-\omega_r^2\eta_r^2) \]</div>
 
+<div class="derive"><div class="dtitle">11/11 강의안 복습 · 초기조건에서 각 모드 꺼내기</div>
+<p>질량행렬을 \(M\), 복원력행렬을 \(K\)라 하고 \(K\mathbf a_r=\omega_r^2 M\mathbf a_r\)에서 시작한다. 두 식을 서로 곱해 빼면 \((\omega_r^2-\omega_s^2)\mathbf a_s^{\mathsf T}M\mathbf a_r=0\)이다. 축퇴한 경우에는 같은 고유공간에서 \(M\)-내적으로 직교화한다. [[M1111.3]]</p>
+<p>정규화한 열벡터를 \(S=(\mathbf a_1,\ldots,\mathbf a_n)\)에 모으면 \(S^{\mathsf T}MS=I\), \(S^{\mathsf T}KS=\mathrm{diag}(\omega_r^2)\). 원래 변위와 속도에서 모드별 초기값을 구한다. [[M1111.4, M1111.5]]</p>
+\[\eta_r(0)=\mathbf a_r^{\mathsf T}M\mathbf q(0),\quad
+\dot\eta_r(0)=\mathbf a_r^{\mathsf T}M\dot{\mathbf q}(0),\quad
+\eta_r(t)=\eta_r(0)\cos\omega_rt+\frac{\dot\eta_r(0)}{\omega_r}\sin\omega_rt.\]
+<p>마지막 식은 \(\omega_r&gt;0\)에 적용한다. 영모드에서는 \(\ddot\eta_r=0\)이므로 \(\eta_r(t)=\eta_r(0)+\dot\eta_r(0)t\)다. Example 12.2의 분리 유도부터 보고, 12.3·12.4에서 행렬과 모드를 직접 구성해 확인한다. [[M1111.2, M1111.6]]</p></div>
+
 <h4>체크포인트</h4>
 
 <div class="qz" data-q="u29-1"><div class="qq">(시험형) 고유벡터가 \(\sum m_{jk}a_{jr}a_{ks}=0\) (\(r\ne s\))을 만족함을 증명하라.</div><div class="qbar"><button class="rv">답 확인</button><span class="vd"><span>스스로 채점:</span><button data-v="1">맞음</button><button data-v="0">더 볼 것</button></span></div><div class="qa"><div class="alabel">Answer</div><p>유도 1. U20(주축 직교성)과 같은 구조 — \(m\)이 끼어 있을 뿐.</p></div></div>

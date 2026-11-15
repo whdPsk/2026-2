@@ -1,0 +1,9 @@
+<div class="stmt"><p>거리 1 kpc, 각지름 10′, 온도 \(10^4\,\mathrm K\)인 균일한 구형 H II 영역을 생각하자. 완전히 이온화된 수소로 이루어졌고, 광학적으로 얇은 90 cm에서 플럭스 밀도는 1.44 Jy이다. 평균 방출측도, 평균 광학깊이가 1인 주파수, 전자 밀도와 이온화 수소 질량을 구한다. [[AHW4.1]]</p></div><!--/stmt-->
+<div class="sol"><div class="alabel">풀이</div>
+<p>구의 반경은 \(R=d\theta/2=1.454\,\mathrm{pc}\), 투영 입체각은 \(\Omega=\pi(\theta/2)^2\simeq6.65\times10^{-6}\,\mathrm{sr}\)이다. 평균 밝기는 \(\bar I_\nu=F_\nu/\Omega\). 문제지의 방출계수는 입체각당이므로 \(j_\nu=C_\nu n_e^2\), \(C_\nu=3.35\times10^{-40}(\nu/\mathrm{GHz})^{-0.118}\)를 그대로 시선 방향으로 적분한다.</p>
+\[\overline{\mathrm{EM}}=\frac{F_\nu}{\Omega C_\nu}\simeq1.84\times10^3\,\mathrm{pc\,cm^{-6}}.\]
+<p>열 제동복사의 원천함수는 \(B_\nu(T)\)이다. 90 cm에서 Rayleigh–Jeans 근사와 광학적으로 얇은 조건을 쓰면 \(\bar\tau_\nu\simeq \bar I_\nu/B_\nu\simeq6.36\times10^{-3}\). \(j_\nu/B_\nu\propto\nu^{-2.118}\)이므로, 같은 근사를 낮은 주파수까지 적용할 때</p>
+\[\nu_{\bar\tau=1}=(c/90\,\mathrm{cm})\,\bar\tau_{90\,\mathrm{cm}}^{1/2.118}
+\simeq30.6\,\mathrm{MHz}.\]
+<p>투영 원판 전체에서 평균한 시선 길이는 구의 부피를 원판 면적으로 나눈 \(4R/3\)이다. 따라서 \(n_e=[\overline{\mathrm{EM}}/(4R/3)]^{1/2}\simeq30.8\,\mathrm{cm^{-3}}\)이고, 수소 질량은 \(M=(4\pi/3)R^3m_pn_e\simeq9.8\,M_\odot\)이다. 중심 시선 길이 \(2R\)를 쓰면 원판 평균과 섞인다.</p>
+</div><!--/sol-->

@@ -424,5 +424,47 @@
   "kind": "transcript",
   "date": "2026-10-22",
   "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/RM-ckEll1VBXPuOn?fileMetaId=d29d54a2-b1d5-40e2-afae-a6ab3d211830"
+ },
+ "A15": {
+  "title": "Lecture 15 · 기체의 운동량·에너지와 정역학",
+  "short": "A15",
+  "kind": "ppt",
+  "date": "2026-10-29",
+  "url": "https://drive.google.com/file/d/1XS6XwlkUjAizNtRuSLf07Umr_ujHdmGw/view"
+ },
+ "A16": {
+  "title": "Lecture 16 · 정역학 평형과 폴리트로프",
+  "short": "A16",
+  "kind": "ppt",
+  "date": "2026-11-03",
+  "url": "https://drive.google.com/file/d/1vgNTqBj4x_wDdzcuba076YU0yxOrhNd4/view"
+ },
+ "A17": {
+  "title": "Lecture 17 · 등온 기체구·정상 유동·순환",
+  "short": "A17",
+  "kind": "ppt",
+  "date": "2026-11-05",
+  "url": "https://drive.google.com/file/d/1LPe5UnDjWxCPbXm1ZXOojh-i2J7ahGI2/view"
+ },
+ "A18": {
+  "title": "Lecture 18 · 음파·엔트로피/소용돌이 모드·부력파",
+  "short": "A18",
+  "kind": "ppt",
+  "date": "2026-11-10",
+  "url": "https://drive.google.com/file/d/1ixyfRki-EWR1mD8GVCyphKuxx8jNEFf6/view"
+ },
+ "A19": {
+  "title": "Lecture 19 · 파형 가팔라짐과 단열·경사 충격파",
+  "short": "A19",
+  "kind": "ppt",
+  "date": "2026-11-12",
+  "url": "https://drive.google.com/file/d/1KDSx8S8XXNcsBI-X1_gNIAjsNBilA-7F/view"
+ },
+ "AHW4": {
+  "title": "천체물리학개론 과제 4 문제지",
+  "short": "AHW4",
+  "kind": "hw",
+  "date": "2026-10-29",
+  "url": "https://drive.google.com/file/d/1wWM_99q41wGVTneej_Rp_ELnHI_DzWAM/view"
  }
 }

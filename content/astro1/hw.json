@@ -88,5 +88,28 @@
     "title": "교재 p.190 문제 17"
    }
   ]
+ },
+ {
+  "id": "HW4",
+  "kind": "hw",
+  "title": "HW4 · H II 영역과 초신성의 복사",
+  "meta": "문제지 기준 11/2(월) 14:00 마감. <a href=\"https://drive.google.com/file/d/1wWM_99q41wGVTneej_Rp_ELnHI_DzWAM/view\" target=\"_blank\" rel=\"noopener\">문제지 PDF ↗</a>",
+  "due": "2026-11-02",
+  "probs": [
+   {
+    "num": "HW4-1",
+    "ch": 5,
+    "unit": "u16",
+    "tag": "req",
+    "title": "균일한 H II 영역의 방출측도·광학깊이·질량"
+   },
+   {
+    "num": "HW4-2",
+    "ch": 6,
+    "unit": "u19",
+    "tag": "req",
+    "title": "초신성 싱크로트론·등분배·역콤턴 산란"
+   }
+  ]
  }
 ]

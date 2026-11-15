@@ -47,5 +47,40 @@
     "kind": "notice",
     "date": "2026-10-28",
     "url": "https://myetl.snu.ac.kr/courses/305140/discussion_topics/397293"
+  },
+  "M1102": {
+    "title": "Ch.11 대칭 팽이와 강체 회전 안정성",
+    "short": "M1102",
+    "kind": "ppt",
+    "date": "2026-11-02",
+    "url": "https://drive.google.com/file/d/1-IJ7gKS08GBOhYizx-Ap_YPkzfmslABE/view"
+  },
+  "M1103": {
+    "title": "Ch.12 결합 진동의 시작과 맥놀이",
+    "short": "M1103",
+    "kind": "ppt",
+    "date": "2026-11-03",
+    "url": "https://drive.google.com/file/d/1O10FkAH-zOyuUZVUqflzjifPu_Bn57Wc/view"
+  },
+  "M1109": {
+    "title": "Ch.12 일반화 고유값 문제",
+    "short": "M1109",
+    "kind": "ppt",
+    "date": "2026-11-09",
+    "url": "https://drive.google.com/file/d/18vSUJ0aN1CR66jGuU59gEmPXf1Ue1K0A/view"
+  },
+  "M1111": {
+    "title": "결합 진동 · 질량 가중 직교성과 정규좌표",
+    "short": "M1111",
+    "kind": "ppt",
+    "date": "2026-11-11",
+    "url": "https://drive.google.com/file/d/1mAyzvsgBIrcysmEtWmmHvU0IHZN9-1ze/view"
+  },
+  "M1116": {
+    "title": "다음 강의 예습 · 분자 진동과 축퇴",
+    "short": "M1116",
+    "kind": "ppt",
+    "date": "2026-11-15",
+    "url": "https://drive.google.com/file/d/1rJ8QUb3qrM1Jz_uRbYcg2l7aUCbJcRJf/view"
   }
 }

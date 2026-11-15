@@ -90,6 +90,132 @@
     }
   ],
   "last_attempt": {
+    "cutoff_at_kst": "2026-11-15T22:24:38+09:00",
+    "status": "validated_pending_publication",
+    "sources": {
+      "etl": "미확인. 브라우저 제어가 중단됨.",
+      "daglo": "미확인. 브라우저 제어가 중단됨.",
+      "drive": "등록 루트와 강의안, 문제지, 속기 및 전파광 연습 폴더 확인."
+    },
+    "manual_review": [
+      "제출본과 모범답안 PDF는 사용자 직접 확인."
+    ],
+    "items": [
+      {
+        "course": "advmech",
+        "id": "1-IJ7gKS08GBOhYizx-Ap_YPkzfmslABE",
+        "date": "2026-11-02",
+        "title": "Ch.11 대칭 팽이와 강체 회전 안정성",
+        "modified_at": "2026-11-02T19:02:21.022Z",
+        "status": "강의안 반영",
+        "ledger": 4
+      },
+      {
+        "course": "advmech",
+        "id": "1O10FkAH-zOyuUZVUqflzjifPu_Bn57Wc",
+        "date": "2026-11-03",
+        "title": "Ch.12 결합 진동의 시작과 맥놀이",
+        "modified_at": "2026-11-05T04:37:47.914Z",
+        "status": "강의안 반영",
+        "ledger": 3
+      },
+      {
+        "course": "advmech",
+        "id": "18vSUJ0aN1CR66jGuU59gEmPXf1Ue1K0A",
+        "date": "2026-11-09",
+        "title": "Ch.12 일반화 고유값 문제",
+        "modified_at": "2026-11-11T07:25:38.833Z",
+        "status": "강의안 반영",
+        "ledger": 3
+      },
+      {
+        "course": "advmech",
+        "id": "1mAyzvsgBIrcysmEtWmmHvU0IHZN9-1ze",
+        "date": "2026-11-11",
+        "title": "결합 진동 · 질량 가중 직교성과 정규좌표",
+        "modified_at": "2026-11-11T07:25:23.012Z",
+        "status": "강의안 반영",
+        "ledger": 6
+      },
+      {
+        "course": "advmech",
+        "id": "1rJ8QUb3qrM1Jz_uRbYcg2l7aUCbJcRJf",
+        "date": "2026-11-15",
+        "title": "다음 강의 예습 · 분자 진동과 축퇴",
+        "modified_at": "2026-11-15T13:23:39.362Z",
+        "status": "예습 반영",
+        "ledger": 3
+      },
+      {
+        "course": "astro1",
+        "id": "1XS6XwlkUjAizNtRuSLf07Umr_ujHdmGw",
+        "date": "2026-10-29",
+        "title": "Lecture 15 · 기체의 운동량·에너지와 정역학",
+        "modified_at": "2026-10-29T03:35:04.814Z",
+        "status": "강의안 반영",
+        "ledger": 4
+      },
+      {
+        "course": "astro1",
+        "id": "1vgNTqBj4x_wDdzcuba076YU0yxOrhNd4",
+        "date": "2026-11-03",
+        "title": "Lecture 16 · 정역학 평형과 폴리트로프",
+        "modified_at": "2026-11-05T04:37:05.056Z",
+        "status": "강의안 반영",
+        "ledger": 4
+      },
+      {
+        "course": "astro1",
+        "id": "1LPe5UnDjWxCPbXm1ZXOojh-i2J7ahGI2",
+        "date": "2026-11-05",
+        "title": "Lecture 17 · 등온 기체구·정상 유동·순환",
+        "modified_at": "2026-11-05T04:37:23.853Z",
+        "status": "강의안 반영",
+        "ledger": 4
+      },
+      {
+        "course": "astro1",
+        "id": "1ixyfRki-EWR1mD8GVCyphKuxx8jNEFf6",
+        "date": "2026-11-10",
+        "title": "Lecture 18 · 음파·엔트로피/소용돌이 모드·부력파",
+        "modified_at": "2026-11-10T04:57:54.246Z",
+        "status": "강의안 반영",
+        "ledger": 3
+      },
+      {
+        "course": "astro1",
+        "id": "1KDSx8S8XXNcsBI-X1_gNIAjsNBilA-7F",
+        "date": "2026-11-12",
+        "title": "Lecture 19 · 파형 가팔라짐과 단열·경사 충격파",
+        "modified_at": "2026-11-15T13:24:12.440Z",
+        "status": "강의안 반영",
+        "ledger": 6
+      },
+      {
+        "course": "astro1",
+        "id": "1wWM_99q41wGVTneej_Rp_ELnHI_DzWAM",
+        "date": "2026-10-29",
+        "title": "천체물리학개론 HW4",
+        "modified_at": "2026-11-01T18:34:52.390Z",
+        "status": "문제지와 자체 풀이 반영",
+        "ledger": 2
+      },
+      {
+        "course": "emwaves",
+        "date": "2026-11-11",
+        "status": "휴강",
+        "ledger": 1
+      }
+    ],
+    "pending": [
+      "전파광 10/28 이후 강의·과제·연습 공지 및 녹음 대조",
+      "고역·천물개 eTL 공지 및 강의안과 실제 강의 범위 대조",
+      "다글로 신규 스크립트와 템플릿 결과 확인",
+      "천물개 HW3 해설 TXT 전체 대조"
+    ],
+    "audit": "docs/update-audit-2026-11-15.md"
+  },
+  "previous_attempt": {
     "cutoff_at_kst": "2026-10-28T15:54:38+09:00",
     "inventory_checked_at_kst": "2026-10-28T16:02:00+09:00",
     "status": "deployed_with_pending_sources",
@@ -114,30 +240,5 @@
       "run_url": "https://github.com/whdPsk/2026-2/actions/runs/40647780722",
       "site_url": "https://whdpsk.github.io/2026-2/"
     }
-  },
-  "previous_attempt": {
-    "cutoff_at_kst": "2026-10-28T11:00:00+09:00",
-    "inventory_checked_at_kst": "2026-10-28T11:23:00+09:00",
-    "status": "deployed_with_pending_sources",
-    "sources": {
-      "etl": "본강의 공지·모듈·과제 및 연습 공지·모듈 확인",
-      "drive": "등록 폴더·하위 폴더 목록 확인; 일부 원문 대조 보류",
-      "daglo": "10/26 고역·10/22 천물개 스크립트 및 강의 노트 완료; 전파광 10/26 파일 없음·고역 10/28 녹음중"
-    },
-    "audit": "docs/update-audit-2026-10-28.md",
-    "inventory": "docs/update-inventory-2026-10-28.json",
-    "pending": [
-      "daglo:sUN2uR9TyHg3fXTq — 원본 파일 없음",
-      "daglo:WT1hDJddvMembOsj — 녹음중",
-      "전파광 학생 관련 PDF 일부 — 자동 승인 검토 차단; 별도 승인 필요",
-      "모범답안 나머지 12개 및 HW3해설 새 txt 전체 대조"
-    ],
-    "publication": {
-      "status": "success",
-      "commit": "f59176b3f8b27dbe3ed29488234fdef45db5782e",
-      "run_url": "https://github.com/whdPsk/2026-2/actions/runs/40621208577",
-      "site_url": "https://whdpsk.github.io/2026-2/"
-    },
-    "note": "checked_at_kst는 마지막 전체 성공 기록을 유지. 미확인 자료를 다음 실행에서 재점검한다."
   }
 }
