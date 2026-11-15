@@ -67,5 +67,61 @@
   "short": "C1111",
   "kind": "notice",
   "date": "2026-11-11"
+ },
+ "EN1110C": {
+  "title": "11/11 휴강과 11/9 복습 과제 마감",
+  "short": "EN1110C",
+  "kind": "notice",
+  "date": "2026-11-10",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/401020"
+ },
+ "EN1110": {
+  "title": "11/9 강의 보충 · 구대칭 복사와 도플러 설명",
+  "short": "EN1110",
+  "kind": "notice",
+  "date": "2026-11-10",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/401034"
+ },
+ "EN1109": {
+  "title": "전파광 개별 면담 안내",
+  "short": "EN1109",
+  "kind": "notice",
+  "date": "2026-11-09",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/400825"
+ },
+ "EN1103": {
+  "title": "중간고사 6번 Green 함수 풀이 채점 안내",
+  "short": "EN1103",
+  "kind": "notice",
+  "date": "2026-11-03",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/399183"
+ },
+ "EN1104P": {
+  "title": "연습 프로젝트 제출 안내",
+  "short": "EN1104P",
+  "kind": "notice",
+  "date": "2026-11-04",
+  "url": "https://myetl.snu.ac.kr/courses/305128/discussion_topics/399281"
+ },
+ "EH1102": {
+  "title": "전기 쌍극자 복사 유도",
+  "short": "EH1102",
+  "kind": "hw",
+  "date": "2026-11-02",
+  "url": "https://myetl.snu.ac.kr/courses/305132/assignments/389214"
+ },
+ "EH1104": {
+  "title": "자기 쌍극자 복사 유도",
+  "short": "EH1104",
+  "kind": "hw",
+  "date": "2026-11-04",
+  "url": "https://myetl.snu.ac.kr/courses/305132/assignments/389831"
+ },
+ "EH1109": {
+  "title": "회전 전하 고리와 전류 고리",
+  "short": "EH1109",
+  "kind": "hw",
+  "date": "2026-11-09",
+  "url": "https://myetl.snu.ac.kr/courses/305132/assignments/390652"
  }
 }

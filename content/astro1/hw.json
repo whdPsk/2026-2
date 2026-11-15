@@ -93,7 +93,7 @@
   "id": "HW4",
   "kind": "hw",
   "title": "HW4 · H II 영역과 초신성의 복사",
-  "meta": "문제지 기준 11/2(월) 14:00 마감. <a href=\"https://drive.google.com/file/d/1wWM_99q41wGVTneej_Rp_ELnHI_DzWAM/view\" target=\"_blank\" rel=\"noopener\">문제지 PDF ↗</a>",
+  "meta": "문제지 기준 11/2(월) 14:00 마감. <a href=\"https://drive.google.com/file/d/1wWM_99q41wGVTneej_Rp_ELnHI_DzWAM/view\" target=\"_blank\" rel=\"noopener\">문제지 PDF ↗</a> <a href=\"https://myetl.snu.ac.kr/courses/305248/discussion_topics/398897\" target=\"_blank\" rel=\"noopener\">11/3 채점 완료 공지 ↗</a> · <a href=\"https://myetl.snu.ac.kr/courses/305248/modules/items/1698552\" target=\"_blank\" rel=\"noopener\">공식 해설 ↗</a>",
   "due": "2026-11-02",
   "probs": [
    {
@@ -109,6 +109,43 @@
     "unit": "u19",
     "tag": "req",
     "title": "초신성 싱크로트론·등분배·역콤턴 산란"
+   }
+  ]
+ },
+ {
+  "id": "HW5",
+  "kind": "hw",
+  "title": "HW5 · 교재 연습문제 4개",
+  "due": "2026-11-17",
+  "meta": "<b>11/17(화) 14:00 마감.</b> 40점, PDF 파일 업로드. [[AHW5.1]] <a href=\"https://myetl.snu.ac.kr/courses/305248/assignments/390741\" target=\"_blank\" rel=\"noopener\">eTL 과제 원문 ↗</a>",
+  "probs": [
+   {
+    "num": "HW5-2",
+    "ch": 15,
+    "unit": "u28",
+    "tag": "req",
+    "title": "교재 p.371 문제 2"
+   },
+   {
+    "num": "HW5-5",
+    "ch": 15,
+    "unit": "u28",
+    "tag": "req",
+    "title": "교재 p.371 문제 5"
+   },
+   {
+    "num": "HW5-8",
+    "ch": 15,
+    "unit": "u28",
+    "tag": "req",
+    "title": "교재 p.372 문제 8"
+   },
+   {
+    "num": "HW5-13",
+    "ch": 15,
+    "unit": "u28",
+    "tag": "req",
+    "title": "교재 p.373 문제 13"
    }
   ]
  }

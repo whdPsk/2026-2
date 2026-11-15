@@ -40,6 +40,7 @@ export function compileCourse(slug, { today = todayKST(), log = console.log } = 
   const exLec = {};
   const covered = [];
   for (const L of lects) {
+    if (L.kind === 'materials') continue;
     for (const [uid, notes] of Object.entries(L.unitNotes || {})) {
       (unitLec[uid] ||= []).push({ id: L.id, date: L.date, md: md(L.date), notes: C.deep(notes, `lecture ${L.id}`) });
       if (!covered.includes(uid)) covered.push(uid);
@@ -114,7 +115,7 @@ export function compileCourse(slug, { today = todayKST(), log = console.log } = 
     course: meta.course || {}, exams: meta.exams || [], rangeLabel: meta.rangeLabel, rangeShort: meta.rangeShort,
     drive: meta.drive || {}, chapters: meta.chapters,
     units, examples, lectures, hw: hwSets, probmap, frontier, covered,
-    counts: { mid: nmid, fin: meta.units.length - nmid, units: meta.units.length, lectures: lects.filter((L) => L.kind !== 'cancel' && L.kind !== 'notice').length },
+    counts: { mid: nmid, fin: meta.units.length - nmid, units: meta.units.length, lectures: lects.filter((L) => !['cancel', 'notice', 'materials'].includes(L.kind)).length },
     ledger: { rows: ledger.rows, hasLedger: Object.keys(C.sources).length > 0 },
     lab,
     storageKey: slug + '.v1',

@@ -339,7 +339,7 @@
   "file": "eTL 프로젝트 v1 · Drive 10/22 PDF 사본",
   "url": "https://myetl.snu.ac.kr/courses/305128/discussion_topics/394454",
   "summary": [
-   "<b>초안 v1, 변경 가능.</b> 11/13(금) 23:59 마감. PDF 1개와 단독 실행 가능한 Python3 .py 1개를 모두 제출해야 한다. NumPy·Matplotlib 사용, SciPy 금지, 코드 주석 충분히 작성. 지각 하루 10% 감점. [[P2026.status, P2026.submit]]",
+   "10/20에 v1 초안이 올라왔고, 11/4에 검토 완료 및 제출 창 개설이 공지됐다. 문서 기준 11/13(금) 23:59 마감. PDF 1개와 단독 실행 가능한 Python3 .py 1개를 모두 제출해야 한다. NumPy·Matplotlib 사용, SciPy 금지, 코드 주석 충분히 작성. 지각 하루 10% 감점. [[P2026.status, P2026.submit, EN1104P.1]]",
    "1번: 토의한 사람과 AI 도구명·버전·입력한 모든 질문을 두 파일 앞부분에 기재. 2번: E만 초기화한 Gaussian 파동묶음을 Yee 격자의 Maxwell 식으로 진화(30점). 3번: +z 진행파 초기 B 조건과 수치 진화(20점). [[P2026.1, P2026.2, P2026.3]]",
    "4번: z≥5m, εr=4 경계에서 반사·투과. 반사파가 원점에 돌아올 때까지 총 11시각의 E·B 그래프, 반사율·투과율 이론 비교 및 오차 분석(50점). 과제 탭에 계산 경로와 검산식을 연결했다. [[P2026.4]]"
   ],
@@ -352,7 +352,64 @@
   "kind": "cancel",
   "title": "11/11 전자기파와 광학 휴강",
   "summary": [
-   "11/11 수업은 휴강이었다. [[C1111.1]]"
+   "11/11 수업은 휴강이었다. [[C1111.1]]",
+   "11/11(수) 휴강. 11/9 복습 과제 마감은 11/15(일) 23:59로 eTL 과제에서 확인했다. [[EN1110C.1]]"
+  ],
+  "unitNotes": {},
+  "file": "eTL 11/10 휴강 공지",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/401020"
+ },
+ {
+  "id": "en1110",
+  "date": "2026-11-10",
+  "dow": "화",
+  "kind": "notice",
+  "title": "11/9 강의 보충 · 구대칭 복사와 도플러 설명",
+  "file": "eTL 공지",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/401034",
+  "summary": [
+   "반경이 변해도 총전하가 일정한 균질한 구는 최대 반경 바깥에서 전기장이 시간에 따라 변하지 않는다. 구대칭 벡터퍼텐셜은 방사 방향이고 그 회전은 0이므로 자기장과 복사가 없다. [[EN1110.1]]",
+   "멀리 놓인 스크린에서는 연속 파면의 도달 간격으로 도플러 이동을 구한다. 수업에서 파면을 잡는 방식에 들어간 저속 근사 없이 같은 파면 간격 관계를 얻는다는 정정이 올라왔다. [[EN1110.2]]"
+  ],
+  "unitNotes": {}
+ },
+ {
+  "id": "en1109",
+  "date": "2026-11-09",
+  "dow": "월",
+  "kind": "notice",
+  "title": "전파광 개별 면담 안내",
+  "file": "eTL 공지",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/400825",
+  "summary": [
+   "과목 개별 면담은 선택이며 학업과 진로 관련 질문을 할 수 있다. [[EN1109.1]]",
+   "이미 면담한 학생은 제외한다는 안내와 신청 링크는 <a href=\"https://myetl.snu.ac.kr/courses/305132/discussion_topics/400349\" target=\"_blank\" rel=\"noopener\">11/7 일정 공지 ↗</a>에서 확인한다. 앞선 안내는 <a href=\"https://myetl.snu.ac.kr/courses/305132/discussion_topics/398067\" target=\"_blank\" rel=\"noopener\">10/30 일정 공지 ↗</a>에 있다."
+  ],
+  "unitNotes": {}
+ },
+ {
+  "id": "en1103",
+  "date": "2026-11-03",
+  "dow": "화",
+  "kind": "notice",
+  "title": "중간고사 6번 Green 함수 풀이 채점 안내",
+  "file": "eTL 공지",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/399183",
+  "summary": [
+   "중간고사 6번을 Green 함수로 푼 학생에게는 채점 확인을 위해 공지에 나오는 조교 이메일로 이름과 학번을 보내 달라는 안내가 있었다. [[EN1103.1]]"
+  ],
+  "unitNotes": {}
+ },
+ {
+  "id": "en1104p",
+  "date": "2026-11-04",
+  "dow": "수",
+  "kind": "notice",
+  "title": "연습 프로젝트 제출 안내",
+  "file": "eTL 공지",
+  "url": "https://myetl.snu.ac.kr/courses/305128/discussion_topics/399281",
+  "summary": [
+   "조교들이 프로젝트를 검토했고 제출 창을 열었다. 마감은 11/13(금)이며 프로젝트 문서에는 23:59로 표시된다. [[EN1104P.1]]"
   ],
   "unitNotes": {}
  }

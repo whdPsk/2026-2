@@ -82,5 +82,19 @@
     "kind": "ppt",
     "date": "2026-11-15",
     "url": "https://drive.google.com/file/d/1rJ8QUb3qrM1Jz_uRbYcg2l7aUCbJcRJf/view"
+  },
+  "ME1030": {
+    "title": "고급역학 수업 익명 설문",
+    "short": "ME1030",
+    "kind": "notice",
+    "date": "2026-10-30",
+    "url": "https://myetl.snu.ac.kr/courses/305140/discussion_topics/398046"
+  },
+  "ME1111": {
+    "title": "중간고사 채점 · 11/16 해설 · 11/17 이의 신청",
+    "short": "ME1111",
+    "kind": "notice",
+    "date": "2026-11-11",
+    "url": "https://myetl.snu.ac.kr/courses/305140/discussion_topics/401530"
   }
 }

@@ -466,5 +466,19 @@
   "kind": "hw",
   "date": "2026-10-29",
   "url": "https://drive.google.com/file/d/1wWM_99q41wGVTneej_Rp_ELnHI_DzWAM/view"
+ },
+ "AN1103": {
+  "title": "HW4 채점 완료",
+  "short": "AN1103",
+  "kind": "notice",
+  "date": "2026-11-03",
+  "url": "https://myetl.snu.ac.kr/courses/305248/discussion_topics/398897"
+ },
+ "AHW5": {
+  "title": "HW5 · 교재 p.371–373",
+  "short": "AHW5",
+  "kind": "hw",
+  "date": "2026-11-10",
+  "url": "https://myetl.snu.ac.kr/courses/305248/assignments/390741"
  }
 }

@@ -1954,9 +1954,9 @@
  {
   "id": "project2026",
   "kind": "hw",
-  "title": "연습 프로젝트 v1 · 전자기파 파동묶음 (초안)",
+  "title": "연습 프로젝트 v1 · 전자기파 파동묶음",
   "due": "2026-11-13",
-  "meta": "<b>11/13(금) 23:59</b> · PDF 1개 + Python3 .py 1개 모두 제출 · NumPy·Matplotlib, SciPy 금지 · 하루 10% 지각 감점. <b>eTL 10/20 초안 v1, 추후 변경 가능</b>. 아래 풀이는 계산·검산 경로이며 실제 실행·그래프·오차는 직접 확인해 작성한다. [[P2026.status, P2026.submit]]",
+  "meta": "<b>11/13(금) 23:59</b> · PDF 1개 + Python3 .py 1개 모두 제출 · NumPy·Matplotlib, SciPy 금지 · 하루 10% 지각 감점. 11/4 eTL 공지에서 조교 검토와 제출 창 개설을 확인했다. [[EN1104P.1]] 아래 풀이는 계산·검산 경로이며 실제 실행·그래프·오차는 직접 확인해 작성한다. [[P2026.status, P2026.submit]]",
   "probs": [
    {
     "num": "P2026-1",
@@ -1985,6 +1985,53 @@
     "unit": "u7",
     "tag": "req",
     "title": "εr=4 경계의 반사·투과와 11시각 출력"
+   }
+  ]
+ },
+ {
+  "id": "eh1102",
+  "kind": "hw",
+  "title": "11/02 수업 복습 과제 · 전기 쌍극자 복사 유도",
+  "due": "2026-11-03",
+  "meta": "전기 쌍극자 복사의 V, A, E, B, S, 주기 평균 S와 총출력을 직접 유도한다. [[EH1102.1]] 11/03 23:59 마감. 수업 범위의 Example은 답을 가리고 푼다. [[EH1102.2]] <a href=\"https://myetl.snu.ac.kr/courses/305132/assignments/389214\" target=\"_blank\" rel=\"noopener\">eTL 과제 ↗</a> · <a href=\"#/u20\">관련 단원</a>",
+  "probs": []
+ },
+ {
+  "id": "eh1104",
+  "kind": "hw",
+  "title": "11/04 수업 복습 과제 · 자기 쌍극자 복사 유도",
+  "due": "2026-11-08",
+  "meta": "자기 쌍극자 복사의 퍼텐셜·장·Poynting 벡터와 평균 총출력, 자기·전기 쌍극자 평균 출력비를 유도한다. [[EH1104.1]] 11/08 23:59 마감. 수업 범위의 Example은 답을 가리고 푼다. [[EH1104.2]] <a href=\"https://myetl.snu.ac.kr/courses/305132/assignments/389831\" target=\"_blank\" rel=\"noopener\">eTL 과제 ↗</a> · <a href=\"#/u21\">관련 단원</a>",
+  "probs": [
+   {
+    "num": "11.4",
+    "ch": 11,
+    "unit": "u20",
+    "tag": "opt",
+    "title": "\\(\\mathbf p=p_0[\\cos\\omega t\\,\\hat{\\mathbf x}+\\sin\\omega t\\,\\hat{\\mathbf y}]\\)인 회전 쌍극자: 중첩원리로 장, Poynting 벡터, 세기, \\(\\theta\\)에 따른 세기 분포, 총 복사출력을 구하라. 왜 출력이 중첩되는 것처럼 보이는가?"
+   }
+  ]
+ },
+ {
+  "id": "eh1109",
+  "kind": "hw",
+  "title": "11/09 수업 복습 과제 · 회전 전하 고리와 전류 고리",
+  "due": "2026-11-15",
+  "meta": "필수 Problem 11.10, 선택 Problem 11.11. [[EH1109.1]] 11/15 23:59 마감. 수업 범위의 Example은 답을 가리고 푼다. [[EH1109.2]] <a href=\"https://myetl.snu.ac.kr/courses/305132/assignments/390652\" target=\"_blank\" rel=\"noopener\">eTL 과제 ↗</a> · <a href=\"#/u22\">관련 단원</a>",
+  "probs": [
+   {
+    "num": "11.10",
+    "ch": 11,
+    "unit": "u22",
+    "tag": "req",
+    "title": "\\(xy\\) 평면의 절연 고리(반지름 \\(b\\))에 선전하밀도 \\(\\lambda=\\lambda_0\\sin\\varphi\\)가 분포한다. 이 고리를 \\(z\\)축 둘레로 각속도 \\(\\omega\\)로 돌릴 때 복사출력을 구하라."
+   },
+   {
+    "num": "11.11",
+    "ch": 11,
+    "unit": "u22",
+    "tag": "opt",
+    "title": "원형 고리에 임의의 전류 \\(I(t)\\)가 흐를 때 복사출력의 일반식을 자기 쌍극자모멘트 \\(\\mathbf m(t)\\)로 유도하라."
    }
   ]
  }

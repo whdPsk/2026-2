@@ -90,6 +90,22 @@
     }
   ],
   "last_attempt": {
+    "cutoff_at_kst": "2026-11-16T01:21:38+09:00",
+    "status": "validated_pending_publication",
+    "sources": {
+      "etl": "본강의 3과목과 두 연습 과목 공지, 고역·천물개 모듈, 천물개 HW5와 전파광 11월 과제 본문 확인.",
+      "daglo": "전체 보드, 두 과목 폴더, 미완료 녹음 및 휴지통 대조. 지정 날짜 보드 없음."
+    },
+    "pending": [
+      "11/11 고급역학과 11/12 천체물리학개론 실제 진도는 해당 날짜의 녹음·필기 근거가 필요하다.",
+      "이전 갱신에서 미확인으로 남은 다른 날짜 녹음·텍스트의 본문 대조."
+    ],
+    "manual_review": [
+      "제출본과 모범답안 PDF는 사용자 직접 확인."
+    ],
+    "audit": "docs/update-audit-2026-11-16.md"
+  },
+  "previous_attempt": {
     "cutoff_at_kst": "2026-11-15T22:24:38+09:00",
     "status": "deployed_with_pending_sources",
     "sources": {
@@ -218,32 +234,6 @@
       "status": "success",
       "commit": "99b5e723644ef680b9b7a161691fb0fe764125e1",
       "run_url": "https://github.com/whdPsk/2026-2/actions/runs/43719604220",
-      "site_url": "https://whdpsk.github.io/2026-2/"
-    }
-  },
-  "previous_attempt": {
-    "cutoff_at_kst": "2026-10-28T15:54:38+09:00",
-    "inventory_checked_at_kst": "2026-10-28T16:02:00+09:00",
-    "status": "deployed_with_pending_sources",
-    "sources": {
-      "etl": "3개 본강의·2개 연습 공지/모듈, 전파광·천물개 과제 재확인",
-      "drive": "등록 루트·강의자료 하위 폴더 재확인; 신규·수정 없음",
-      "daglo": "10/28 고역 전체 75:31 반영·학습 강의 노트 완료; 전파광 10/26 파일 없음 재확인"
-    },
-    "audit": "docs/update-audit-2026-10-28-1554.md",
-    "inventory": "docs/update-inventory-2026-10-28-1554.json",
-    "manual_review": [
-      "제출본 및 모범답안 PDF — 사용자 직접 확인; 자동 접근·재승인 요청 제외"
-    ],
-    "pending": [
-      "daglo:sUN2uR9TyHg3fXTq — 원본 파일 없음",
-      "천물개 HW3해설.txt 전체 줄 단위 대조"
-    ],
-    "note": "확인된 신규 자료 25개 구간 반영. checked_at_kst는 전체 성공 기록 유지.",
-    "publication": {
-      "status": "success",
-      "commit": "60e275ae157f8b1078dcacc1fd02fc17f7ddedf1",
-      "run_url": "https://github.com/whdPsk/2026-2/actions/runs/40647780722",
       "site_url": "https://whdpsk.github.io/2026-2/"
     }
   }
