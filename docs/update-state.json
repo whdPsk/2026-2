@@ -91,7 +91,7 @@
   ],
   "last_attempt": {
     "cutoff_at_kst": "2026-11-16T01:21:38+09:00",
-    "status": "validated_pending_publication",
+    "status": "deployed_with_pending_sources",
     "sources": {
       "etl": "본강의 3과목과 두 연습 과목 공지, 고역·천물개 모듈, 천물개 HW5와 전파광 11월 과제 본문 확인.",
       "daglo": "전체 보드, 두 과목 폴더, 미완료 녹음 및 휴지통 대조. 지정 날짜 보드 없음."
@@ -103,7 +103,13 @@
     "manual_review": [
       "제출본과 모범답안 PDF는 사용자 직접 확인."
     ],
-    "audit": "docs/update-audit-2026-11-16.md"
+    "audit": "docs/update-audit-2026-11-16.md",
+    "publication": {
+      "status": "success",
+      "commit": "0208058bebbb1362cd0050a279fc58d9fd3789d7",
+      "run_url": "https://github.com/whdPsk/2026-2/actions/runs/43735416412",
+      "site_url": "https://whdpsk.github.io/2026-2/"
+    }
   },
   "previous_attempt": {
     "cutoff_at_kst": "2026-11-15T22:24:38+09:00",
