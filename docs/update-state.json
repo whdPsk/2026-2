@@ -91,7 +91,7 @@
   ],
   "last_attempt": {
     "cutoff_at_kst": "2026-11-15T22:24:38+09:00",
-    "status": "validated_pending_publication",
+    "status": "deployed_with_pending_sources",
     "sources": {
       "etl": "미확인. 브라우저 제어가 중단됨.",
       "daglo": "미확인. 브라우저 제어가 중단됨.",
@@ -213,7 +213,13 @@
       "다글로 신규 스크립트와 템플릿 결과 확인",
       "천물개 HW3 해설 TXT 전체 대조"
     ],
-    "audit": "docs/update-audit-2026-11-15.md"
+    "audit": "docs/update-audit-2026-11-15.md",
+    "publication": {
+      "status": "success",
+      "commit": "99b5e723644ef680b9b7a161691fb0fe764125e1",
+      "run_url": "https://github.com/whdPsk/2026-2/actions/runs/43719604220",
+      "site_url": "https://whdpsk.github.io/2026-2/"
+    }
   },
   "previous_attempt": {
     "cutoff_at_kst": "2026-10-28T15:54:38+09:00",
