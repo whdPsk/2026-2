@@ -123,5 +123,11 @@
   "kind": "hw",
   "date": "2026-11-09",
   "url": "https://myetl.snu.ac.kr/courses/305132/assignments/390652"
+ },
+ "MID2026E": {
+  "title": "2026-2 전자기파와 광학 중간고사 복기",
+  "short": "MID2026E",
+  "kind": "notice",
+  "date": "2026-11-16"
  }
 }
