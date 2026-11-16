@@ -1,0 +1,7 @@
+<div class="exq"><h4>문제</h4><p>초기 T₀, \(P_1=120.0\,\mathrm{kPa}\)인 이상기체가 가역 단열 팽창해 \(P_2=100.0\,\mathrm{kPa}\)가 된다. 이어 정적 가열로 T₀에 돌아왔을 때 \(P_3=105.35\,\mathrm{kPa}\)이다. 모두 절대압력이며 비열은 일정하다.</p><ol><li>P–v 선도에서 세 상태·과정을 설명하고 γ를 유도·계산하라.</li><li>Rs=287 J/(kg·K)일 때 cp와 cv를 구하라.</li><li>실제 급격한 밸브 개방에서의 모형 한계와 게이지압 사용 시 주의점을 설명하라.</li></ol></div>
+<details class="derive"><summary>풀이와 검산 보기</summary><div class="quiz-solution"><p>1→2는 \(Pv^\gamma=\mathrm{const.}\)인 팽창 곡선, 2→3은 같은 v에서 압력이 오르는 수직선이다. 1과 3은 같은 온도의 등온선 위에 놓인다.</p>
+\[\frac{T_2}{T_0}=\left(\frac{P_2}{P_1}\right)^{(\gamma-1)/\gamma},\qquad\frac{T_2}{T_0}=\frac{P_2}{P_3}.\]
+<p>로그를 취하고 정리하면</p>
+\[\gamma=\frac{\ln(P_1/P_2)}{\ln(P_1/P_3)}\simeq1.400.\]
+<p>\(c_p-c_v=R_s,\ c_p/c_v=\gamma\)에서 \(c_v=R_s/(\gamma-1)\simeq717\,\mathrm{J/(kg\,K)}\), \(c_p=c_v+R_s\simeq1004\,\mathrm{J/(kg\,K)}\). 압력 반올림에 따른 작은 차이는 허용한다.</p>
+<p>밸브 개방에는 비가역성과 질량 유출이 있을 수 있다. 제어체적의 질량·에너지 수지와 실험 모형을 먼저 확인해야 하며, 단열만으로 등엔트로피를 결론 내릴 수 없다. 게이지압은 대기압을 더해 절대압력으로 바꾼 뒤 비율·로그에 넣는다.</p></div><h4>검산·감점 포인트</h4><p>1→2와 2→3에 쓴 가정을 따로 표시한다. 비열의 질량당 기준과 몰당 기준을 맞춘다.</p></details>

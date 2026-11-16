@@ -6,7 +6,7 @@ import { renderHwView } from './hw.js';
 import { renderStatusView } from './status.js';
 
 export function renderShell(D) {
-  const chBtns = Object.keys(D.chapters).map((c) => `<button data-ch="${c}" aria-pressed="false">Ch.${c}</button>`).join('');
+  const chBtns = Object.keys(D.chapters).map((c) => `<button data-ch="${c}" aria-pressed="false">${D.studyMode === 'quiz' ? D.chapters[c].ko : 'Ch.' + c}</button>`).join('');
   const fr = D.units.find((u) => u.id === D.frontier);
   const frontier = D.covered.length && fr
     ? `<div class="lecfrontier">강의 진도 ▸ <a href="#/${D.frontier}" style="display:inline;padding:0;color:var(--lec)">${D.frontier.toUpperCase()} ${fr.title}</a></div>` : '';
@@ -17,7 +17,7 @@ export function renderShell(D) {
   <nav class="modes" id="modes">
     <button data-view="study" aria-current="true">학습</button>
     <button data-view="lecture">${D.studyMode === 'quiz' ? '퀴즈 안내' : '강의'}</button>
-    <button data-view="examples" ${D.studyMode === 'quiz' ? 'hidden' : ''}>Example</button>
+    <button data-view="examples">${D.studyMode === 'quiz' ? D.exampleLabel : 'Example'}</button>
     <button data-view="formulas">공식집</button>
     <button data-view="hw" ${D.studyMode === 'quiz' ? 'hidden' : ''}>과제</button>
     <button data-view="status">현황</button>

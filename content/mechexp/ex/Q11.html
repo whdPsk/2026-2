@@ -1,0 +1,11 @@
+<div class="exq"><h4>문제</h4><p>주질량 m₁=1.0 kg은 k₁=100 N/m으로 지면에 연결되고, 보조질량 m₂=0.10 kg은 스프링 k₂로 주질량에 연결된다. 주질량에 \(F_0\cos\omega t\)를 가하며 감쇠를 무시한다.</p><ol><li>운동방정식·조화응답의 행렬식을 세우고 \(X_1/F_0\)를 유도하라.</li><li>ω=10 rad/s에서 X₁=0이 되도록 k₂를 정하라.</li><li>결합계의 두 고유진동수를 구하고 FRF의 두 peak와 반공진을 설명하라.</li><li>동조 오차와 감쇠의 영향을 설명하라.</li></ol></div>
+<details class="derive"><summary>풀이와 검산 보기</summary><div class="quiz-solution">\[m_1\ddot x_1+(k_1+k_2)x_1-k_2x_2=F_0\cos\omega t,\quad m_2\ddot x_2+k_2(x_2-x_1)=0.\]
+\[\begin{pmatrix}k_1+k_2-m_1\omega^2&-k_2\\-k_2&k_2-m_2\omega^2\end{pmatrix}\begin{pmatrix}X_1\\X_2\end{pmatrix}=\begin{pmatrix}F_0\\0\end{pmatrix}.\]
+<p>첫 성분을 소거해 풀면</p>
+\[\frac{X_1}{F_0}=\frac{k_2-m_2\omega^2}{(k_1+k_2-m_1\omega^2)(k_2-m_2\omega^2)-k_2^2}.\]
+<p>분자가 0인 \(k_2=m_2\omega^2=10\,\mathrm{N/m}\)로 동조한다. 이때 분모는 \(-k_2^2\ne0\), 첫 운동방정식에서 \(X_2=-F_0/k_2\)이다.</p>
+<p>분모=0에 \(\lambda=\omega^2\)를 넣으면 \((110-\lambda)(10-0.1\lambda)-100=0\), 즉 \(\lambda^2-210\lambda+10000=0\).</p>
+\[\lambda_{1,2}=72.9844,\ 137.0156\,\mathrm{s^{-2}},\quad \omega_{1,2}=8.543,\ 11.705\,\mathrm{rad/s},\quad f_{1,2}=1.360,\ 1.863\,\mathrm{Hz}.\]
+<p>FRF의 크기는 8.543과 11.705 rad/s에 두 공진 peak가 있고 그 사이 10 rad/s에서 0으로 내려간다. 이상적 무감쇠 공진에서는 유계 정상 조화응답이 없으므로 peak의 높이를 유한한 값으로 해석하지 않는다.</p>
+<svg viewBox="0 0 580 280" style="width:100%;max-width:580px" role="img" aria-label="두 공진 사이 동조주파수에서 주질량 FRF가 0이 되는 정성적 곡선. 공진 높이는 생략"><path d="M40 20V210H550" fill="none" stroke="currentColor"/><path d="M40 160Q240 160 292 25M300 25Q310 175 340 210Q370 170 383 25M391 25Q410 175 535 200" fill="none" stroke="currentColor" stroke-width="3"/><path d="M296 25V210M387 25V210" fill="none" stroke="currentColor" stroke-dasharray="4 4"/><g fill="currentColor" font-size="13"><text x="44" y="18">|X₁/F₀| 개략도 · 공진 높이 생략</text><text x="270" y="232">8.543</text><text x="332" y="250">10</text><text x="375" y="232">11.705</text><text x="472" y="250">ω (rad/s)</text><text x="300" y="273">반공진 X₁ = 0</text></g></svg>
+<p>동조점에서 벗어나면 억제 효과가 줄고 새 공진에서 진동이 커질 수 있다. 보조계 감쇠는 peak를 완화하지만 일반적으로 완전한 반공진 0도 사라진다. X₁=0은 강제 조화응답에 관한 결과이며, 무감쇠계의 초기조건에 따른 자유진동은 남을 수 있다.</p></div><h4>검산·감점 포인트</h4><p>원래 주질량의 고유진동수, 보조계의 동조주파수, 결합계의 두 고유진동수를 구별한다.</p></details>

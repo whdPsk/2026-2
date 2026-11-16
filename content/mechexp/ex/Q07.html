@@ -1,0 +1,5 @@
+<div class="exq"><h4>문제</h4><p>직경 D=10 mm인 원주 주위 유동의 Re=600, \(\nu=10^{-6}\,\mathrm{m^2/s}\)이다. 영상 보정값은 50 μm/px, window는 40×40 px, 원영상은 1600×1200 px이고 overlap은 없다.</p><ol><li>자유류 속도를 구하라.</li><li>프레임 사이 이동이 window 폭의 1/4 이내가 되는 최대 Δt와 연속 프레임 촬영의 최소 fps는?</li><li>Window마다 벡터 하나씩이면 벡터 수는?</li><li>Δt가 너무 크거나 작을 때의 문제와 PIV의 변위 추정 원리를 설명하라.</li></ol></div>
+<details class="derive"><summary>풀이와 검산 보기</summary><div class="quiz-solution"><p>\(U=Re\,\nu/D=0.060\,\mathrm{m/s}\). Window 폭은 \(40(50\,\mu\mathrm m)=2.0\,\mathrm{mm}\), 허용 변위는 0.50 mm이다.</p>
+\[\Delta t_{\max}=0.00050/0.060=0.008333\,\mathrm s,\qquad fps_{\min}=120\,\mathrm{s^{-1}}.\]
+<p>fps의 역수가 Δt라는 관계는 연속 프레임을 쓸 때 적용한다. 벡터 수는 \((1600/40)(1200/40)=1200\)개다.</p>
+<p>PIV는 각 window의 입자 영상 패턴 사이 상호상관으로 대표 변위를 찾는다. Δt가 너무 크면 입자가 window를 이탈하거나 패턴이 변형되어 상관 peak가 흐려진다. 너무 작으면 변위가 픽셀·subpixel 오차에 비해 작아 상대오차가 커진다. 실제 조건은 최대 국소 속도·입자 수·영상 품질을 함께 고려한다.</p></div><h4>검산·감점 포인트</h4><p>μm→m 변환을 확인한다. 가로·세로 window 수를 각각 구한 뒤 곱한다.</p></details>

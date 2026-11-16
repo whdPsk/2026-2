@@ -1,0 +1,5 @@
+<div class="exq"><h4>문제</h4><p>0°·45°·90° rosette의 값이 각각 \(100,400,-100\,\mu\epsilon\)이다. G=26 GPa인 등방성 선형 탄성체이며, 중선 면적 600 mm², 두께 1.0 mm, 중선 둘레 100 mm인 단일 폐단면 박벽 관의 Saint-Venant 비틀림을 가정한다.</p><ol><li>변형률 변환식에서 전단변형률을 구하라.</li><li>전단응력·전단흐름·토크·단위 길이당 비틀림각을 구하라.</li><li>같은 토크·중선 형상에서 두께가 2배가 되면 각 값은 어떻게 바뀌는가?</li><li>공통 벽을 가진 두 셀이면 어떤 조건을 더 써야 하는가?</li></ol></div>
+<details class="derive"><summary>풀이와 검산 보기</summary><div class="quiz-solution"><p>\(\epsilon_\theta=\epsilon_x\cos^2\theta+\epsilon_y\sin^2\theta+\gamma_{xy}\sin\theta\cos\theta\)에서 \(\gamma_{xy}=2\epsilon_{45}-\epsilon_0-\epsilon_{90}=800\,\mu\epsilon=0.0008\).</p>
+<p>\(\tau=G\gamma=20.8\,\mathrm{MPa}\), \(q=\tau t=20.8\,\mathrm{N/mm}\). 따라서 \(T=2A_mq=24960\,\mathrm{N\,mm}=24.96\,\mathrm{N\,m}\).</p>
+\[\theta'=\frac1{2A_m}\oint\frac{q}{Gt}\,\mathrm ds=\frac{Ts}{4A_m^2Gt}=0.06667\,\mathrm{rad/m}.\]
+<p>같은 T와 중선 형상이면 q는 일정, τ·γ·θ′는 절반이다. 두 셀에서는 순환 전단흐름 q₁,q₂에 대해 \(T=2A_1q_1+2A_2q_2\)와 공통 비틀림률 \(\theta'_1=\theta'_2\)를 함께 쓴다. 순환방향을 같게 잡으면 공통 벽의 실제 흐름은 두 값의 차이다.</p></div><h4>검산·감점 포인트</h4><p>Aₘ은 중선이 둘러싼 면적이다. 공학 전단변형률 γ와 텐서 성분 γ/2를 혼동하지 않는다.</p></details>

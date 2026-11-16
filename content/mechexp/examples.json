@@ -1,0 +1,86 @@
+[
+ {
+  "num": "Q01",
+  "ch": 2,
+  "unit": "u01",
+  "title": "인장 선도·영률·포아송비",
+  "summary": "직접 구성한 예상 문제 · [[Q22.u01]]"
+ },
+ {
+  "num": "Q02",
+  "ch": 2,
+  "unit": "u02",
+  "title": "Quarter bridge 유도와 half bridge 배치",
+  "summary": "직접 구성한 예상 문제 · [[BOOK.bridge, Q22.u02]]"
+ },
+ {
+  "num": "Q03",
+  "ch": 2,
+  "unit": "u03",
+  "title": "Rosette에서 전단흐름·토크까지",
+  "summary": "직접 구성한 예상 문제 · [[BOOK.torsion, Q22.u03]]"
+ },
+ {
+  "num": "Q04",
+  "ch": 4,
+  "unit": "u04",
+  "title": "Clément–Desormes의 상태도·비열비",
+  "summary": "직접 구성한 예상 문제 · [[BOOK.gas, Q22.u04]]"
+ },
+ {
+  "num": "Q05",
+  "ch": 4,
+  "unit": "u05",
+  "title": "Rankine cycle 상태·효율·물성표",
+  "summary": "직접 구성한 예상 문제 · [[BOOK.rankine, Q22.u05]]"
+ },
+ {
+  "num": "Q06",
+  "ch": 4,
+  "unit": "u06",
+  "title": "냉각핀의 절점 수지와 온도 계측",
+  "summary": "직접 구성한 예상 문제 · [[BOOK.fin, Q22.u06]]"
+ },
+ {
+  "num": "Q07",
+  "ch": 3,
+  "unit": "u07",
+  "title": "PIV 촬영 간격·fps·벡터 수",
+  "summary": "직접 구성한 예상 문제 · [[Q22.u07, QP.topics]]"
+ },
+ {
+  "num": "Q08",
+  "ch": 3,
+  "unit": "u07",
+  "title": "Wake survey의 항력과 가정",
+  "summary": "직접 구성한 예상 문제 · [[Q22.u07]]"
+ },
+ {
+  "num": "Q09",
+  "ch": 3,
+  "unit": "u07",
+  "title": "입자 추종성과 와류 방출",
+  "summary": "직접 구성한 예상 문제 · [[BOOK.piv, Q22.u07]]"
+ },
+ {
+  "num": "Q10",
+  "ch": 5,
+  "unit": "u08",
+  "title": "진동 장치·FRF·등가계",
+  "summary": "직접 구성한 예상 문제 · [[BOOK.vibration, Q22.u08]]"
+ },
+ {
+  "num": "Q11",
+  "ch": 5,
+  "unit": "u09",
+  "title": "동흡진기 설계와 두 공진점",
+  "summary": "직접 구성한 예상 문제 · [[BOOK.vibration, Q22.u09]]"
+ },
+ {
+  "num": "Q12",
+  "ch": 5,
+  "unit": "u08",
+  "title": "위상으로 모드 형상 읽기 · 교재 보완",
+  "summary": "직접 구성한 예상 문제 · [[BOOK.extensions, QP.topics]]"
+ }
+]

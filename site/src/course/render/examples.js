@@ -5,7 +5,7 @@ export function renderExample(D, e) {
   const en = e.en ? `<div class="exen"><b>EN</b> ${e.en}</div>` : '';
   const page = e.page && D.drive.textbook
     ? `<a class="srclink" href="${D.drive.textbook}" target="_blank" rel="noopener">${D.pageLabel}${e.page} ↗</a> · `
-    : e.page ? `${D.pageLabel}${e.page} · ` : '강의 문제 · ';
+    : e.page ? `${D.pageLabel}${e.page} · ` : D.studyMode === 'quiz' ? '직접 구성한 연습문제 · ' : '강의 문제 · ';
   return `<article class="ex" id="ex-${e.num.replace(/\./g, '-')}" data-num="${e.num}" data-ch="${e.ch}" data-unit="${e.unit}"${e.lec.length ? ' data-lec="1"' : ''}>
 <div class="exh"><span class="exn">${D.exampleLabel} ${e.num}</span>${lectag}
 <h3>${e.title}</h3>${en}
@@ -15,11 +15,11 @@ export function renderExample(D, e) {
 }
 
 export function renderExamplesView(D, chBtns) {
-  return `<h1 class="vh">교과서 Example</h1>
+  return `<h1 class="vh">${D.studyMode === 'quiz' ? D.exampleLabel : '교과서 Example'}</h1>
   <p class="vsub">${D.exampleIntro}</p>
   <div class="filters" id="ef">
     <button data-ch="all" aria-pressed="true">전체</button>
-    <button data-ch="lec" aria-pressed="false">★ 강의 지정</button>
+    <button data-ch="lec" aria-pressed="false" ${D.studyMode === 'quiz' ? 'hidden' : ''}>★ 강의 지정</button>
     ${chBtns}
     <input id="eq" type="search" placeholder="번호·키워드 (예: 9.6)" autocomplete="off">
     <span class="cnt" id="ecnt"></span>

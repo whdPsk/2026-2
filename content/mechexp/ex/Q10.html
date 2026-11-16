@@ -1,0 +1,5 @@
+<div class="exq"><h4>문제</h4><p>함수발생기, 가진기, 힘 센서, 가속도계, 신호분석기로 beam의 FRF를 측정한다. 선형 1자유도 등가계의 정적 시험에서 4.0 N에 2.0 mm 변위가 생기고 등가질량은 0.50 kg이다.</p><ol><li>가진·측정 신호 연결을 그리고 장치별 역할을 설명하라.</li><li>가속도/힘 FRF의 단위, 등가강성, 비감쇠 고유진동수를 구하라.</li><li>기준 프레임에 20 Hz peak, beam에 10 Hz와 20 Hz peak가 보이면 무엇을 추가 확인해야 하는가?</li></ol></div>
+<details class="derive"><summary>풀이와 검산 보기</summary><div class="quiz-solution"><p>가진 경로는 <b>함수발생기 → 필요 시 증폭기 → 가진기 → beam</b>이다. 힘 센서는 입력 힘, 가속도계는 beam의 응답을 측정한다. 두 신호를 동기화해 신호분석기로 주파수 분석한다. 센서 방향과 힘 전달 경로를 그림에 표시한다.</p>
+<p>\(H_{aF}=a/F\)의 단위는 \((\mathrm{m/s^2})/\mathrm N=\mathrm{kg^{-1}}\). 변위/힘 FRF와 구별한다.</p>
+\[k=F/\delta=2000\,\mathrm{N/m},\quad\omega_n=\sqrt{k/m}=63.25\,\mathrm{rad/s},\quad f_n=\omega_n/(2\pi)=10.07\,\mathrm{Hz}.\]
+<p>20 Hz peak는 프레임 공진이 전달되었을 가능성이 있다. 측정 위치별 크기·위상, 지지조건 변화, 입력·출력 상관성을 비교한다. 약 10.1 Hz의 계산 결과와 10 Hz peak의 대응도 확인한다. 센서의 부가질량과 부착 강성이 고유진동수에 영향을 줄 수 있다.</p></div><h4>검산·감점 포인트</h4><p>Hz와 rad/s 사이의 2π를 확인한다. FRF의 입력·출력 물리량과 단위를 먼저 쓴다.</p></details>
