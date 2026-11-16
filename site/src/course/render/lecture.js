@@ -2,7 +2,7 @@
 import { esc } from '../util.js';
 
 export function renderLectureView(D) {
-  const out = [`<h1 class="vh">강의 진도</h1><p class="vsub">${D.lectureIntro}</p>`];
+  const out = [`<h1 class="vh">${D.studyMode === 'quiz' ? '퀴즈 일정·출제 유형' : '강의 진도'}</h1><p class="vsub">${D.lectureIntro}</p>`];
   if (!D.lectures.length) out.push('<div class="soon">아직 반영된 강의자료가 없습니다. 강의노트·녹음이 들어오면 날짜순으로 여기에 쌓입니다.</div>');
   if (D.examStyle) out.push(`<div class="callout exam"><b class="head">출제 스타일 — 이 콘솔이 무게를 두는 곳</b>${D.examStyle}</div>`);
   if (D.course.info) out.push(`<div class="callout"><b class="head">과목 정보</b>${D.course.info}</div>`);

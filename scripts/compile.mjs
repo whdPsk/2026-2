@@ -109,6 +109,7 @@ export function compileCourse(slug, { today = todayKST(), log = console.log } = 
     slug, title: cfg.title, mark: cfg.mark, markSub: cfg.markSub,
     bookAbbrev: cfg.bookAbbrev || '교재', pageLabel: cfg.pageLabel || '교재 p.', exampleLabel: cfg.exampleLabel || 'Example',
     lectureIntro: cfg.lectureIntro || '', exampleIntro: cfg.exampleIntro || '', hwIntro: cfg.hwIntro || '', policy: cfg.policy || '', hwEmpty: cfg.hwEmpty || '',
+    studyMode: cfg.studyMode || '', unitIntro: cfg.unitIntro || '', planStart: cfg.planStart || '',
     helpNote: cfg.helpNote || '', macros: cfg.macros || {}, css: cfg.css || '',
     examStyle: C.sub(prof.examStyle || '', 'profile'),
     built: today,
@@ -176,7 +177,7 @@ export function compileAll({ only = null, strict = true, log = console.log } = {
     writeJson(path.join(DATA, 'final-plan.json'), {
       built: today, defaults: readJson(path.join(CONTENT, 'final-plan.json')),
       courses: results.map(({ slug, data: d }) => ({
-        slug, title: d.title, exam: d.exams.find((e) => e.name === '기말고사'),
+        slug, title: d.title, studyMode: d.studyMode, planStart: d.planStart, exam: d.exams.find((e) => e.name === '기말고사') || d.exams.find((e) => e.name === '퀴즈'),
         scope: d.rangeLabel['2'],
         units: d.units.filter((u) => d.chapters[String(u.ch)].range === 2).map((u) => ({
           id: u.id, ch: u.ch, title: u.title, secs: u.secs, lec: u.lec,

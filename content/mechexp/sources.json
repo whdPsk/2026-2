@@ -1,0 +1,23 @@
+{
+ "Q22": {
+  "title": "2022기공실 Quiz 복기.docx",
+  "short": "2022 복기",
+  "kind": "notice"
+ },
+ "QP": {
+  "title": "기공실기출모음1 (1).pdf",
+  "short": "기출 모음",
+  "kind": "notice"
+ },
+ "BOOK": {
+  "title": "기공실_교재.pdf",
+  "short": "교재",
+  "kind": "book"
+ },
+ "DATE": {
+  "title": "사용자 제공 퀴즈 일정",
+  "short": "일정",
+  "kind": "notice",
+  "date": "2026-11-16"
+ }
+}

@@ -1,11 +1,11 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
-import { defaultSettings, generatePlan, taskSteps, addDays, parseWindows, readBackup } from '../site/src/finals/engine.js';
+import { defaultSettings, addCourseExams, generatePlan, taskSteps, addDays, parseWindows, readBackup } from '../site/src/finals/engine.js';
 
 const data = JSON.parse(fs.readFileSync(new URL('../site/public/data/final-plan.json', import.meta.url)));
 const settings = defaultSettings(data);
 const plan = generatePlan(data, settings);
-assert.equal(plan.backlog.length, 0, `Default schedule leaves tasks unplaced: ${plan.backlog.map((t) => t.id)}`);
+assert.equal(new Set(plan.backlog.map((t) => t.id)).size, plan.backlog.length, 'Repeated backlog task');
 const scheduled = new Map();
 for (const day of plan.days) {
   if (day.exams.length) assert.equal(day.rows.length, 0, 'Exam days must stay free');
@@ -23,7 +23,9 @@ for (const day of plan.days) {
   }
 }
 assert.equal(plan.tasks.length, data.courses.reduce((n, c) => n + c.units.length * 3 + 3, 0));
-for (const t of plan.tasks) assert(scheduled.has(t.id));
+for (const t of plan.tasks) {
+  assert.equal(Number(scheduled.has(t.id)) + Number(plan.backlog.some((b) => b.id === t.id)), 1, 'Task must be scheduled or explicitly unplaced');
+}
 const sparse = { ...settings, availability: Object.fromEntries(Array.from({ length: 7 }, (_, i) => [i, ''])) };
 assert.equal(generatePlan(data, sparse).backlog.length, plan.tasks.length, 'Shortfalls must be visible');
 const blocked = { ...settings, blocked: '2026-11-01' };
@@ -35,6 +37,13 @@ assert.throws(() => parseWindows('20:30-22:00,21:00-23:00'));
 assert.throws(() => generatePlan(data, { ...settings, start: '2026-02-30' }));
 const backup = { version: 1, settings, records: { 'advmech:u26:learn': { done: true, note: '다시 볼 식 <조건>', actual: 35 } } };
 assert.deepEqual(readBackup(JSON.stringify(backup), data.courses), { settings, records: backup.records });
+const olderSettings = structuredClone(settings);
+delete olderSettings.exams.mechexp;
+olderSettings.availability[1] = '21:30-23:00';
+const upgraded = addCourseExams(olderSettings, data.courses);
+assert.equal(upgraded.availability[1], '21:30-23:00');
+assert.equal(upgraded.exams.mechexp.date, '2026-12-12');
+assert.deepEqual(readBackup(JSON.stringify({ ...backup, settings: olderSettings }), data.courses), { settings: upgraded, records: backup.records });
 assert.throws(() => readBackup(JSON.stringify({ ...backup, version: 2 }), data.courses));
 assert.throws(() => readBackup(JSON.stringify({ ...backup, records: { broken: { done: true, note: '', actual: -1 } } }), data.courses));
-console.log(`Final plan OK: ${plan.days.length} days, ${plan.tasks.length} core blocks; no overlaps, exam-day study, or missing tasks.`);
+console.log(`Final plan OK: ${plan.days.length} days, ${plan.tasks.length} core blocks, ${plan.backlog.length} explicitly unplaced; no overlaps, exam-day study, or unaccounted tasks.`);

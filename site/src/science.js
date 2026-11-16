@@ -14,6 +14,7 @@ export function orbitMap() {
 }
 
 export const disciplines = {
+  mechexp: { name: 'MECHANICAL ENGINEERING LAB', formula: '측정 · 모델 · 검산', icon: '<path d="M8 44H48M14 44V12H30V44M30 22H44V44M19 18H25M19 25H25M19 32H25M35 28H39M35 35H39"/>' },
   astro1: { name: 'ASTROPHYSICS', formula: 'Iν · Fν · Lν', icon: '<circle cx="28" cy="28" r="10"/><ellipse cx="28" cy="28" rx="24" ry="8" transform="rotate(-30 28 28)"/><circle cx="46" cy="15" r="2" fill="currentColor"/>' },
   emwaves: { name: 'ELECTRODYNAMICS', formula: '∇ × E = −∂B/∂t', icon: '<path d="M3 28C11 0 17 0 28 28S45 56 53 28M3 28C11 56 17 56 28 28S45 0 53 28"/><path d="M2 28H54" opacity=".3"/>' },
   advmech: { name: 'CLASSICAL MECHANICS', formula: 'dL/dt = τ', icon: '<path d="M28 5V28L44 45M12 5H44"/><path d="M10 43A26 26 0 0 0 47 43" stroke-dasharray="2 4"/><circle cx="44" cy="45" r="5" fill="currentColor"/><circle cx="28" cy="28" r="2"/>' },

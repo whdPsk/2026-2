@@ -24,7 +24,7 @@ function card(c) {
   <div class="hb-illustration">${disciplineIcon(c.slug)}<span>${subject.formula}</span></div>
   <div class="hb-top"><div><h2>${c.title}</h2><p class="hb-sub">${c.markSub}</p></div></div>
   <p class="hb-blurb">${esc(c.blurb || '')}</p>
-  <div class="hb-meta"><span>${esc(c.prof)} 교수</span><span>${esc(c.schedule || '')}</span></div>
+  <div class="hb-meta">${c.prof ? `<span>${esc(c.prof)} 교수</span>` : ''}<span>${esc(c.schedule || '')}</span></div>
   ${last}
   <div class="hb-nums"><span><b>${c.units}</b> 단원</span><span><b>${c.examples}</b> 예제</span><span><b>${c.lectures}</b> 강의</span></div>
   <div class="hb-card-foot">${dday(c.exams)}<span>노트 열기 <span aria-hidden="true">→</span></span></div>
@@ -37,7 +37,7 @@ async function boot() {
   document.getElementById('hub').innerHTML = `
 <div class="hb-head"><a class="hb-wordmark" href="./"><span aria-hidden="true">✳</span> PHYSICS / NOTES</a><div class="hb-head-tools"><span>SEOUL NATIONAL UNIVERSITY · 2026.2</span><button class="tool" id="t-dark" aria-label="테마 전환">◐</button></div></div>
 <section class="hb-hero" aria-labelledby="hub-title"><div class="hb-hero-copy"><p class="hb-eyebrow">COURSE NOTES / 2026–2</p><h1 id="hub-title">${esc(S.title)}</h1><p class="hb-hero-sub">${esc(S.subtitle)}</p><div class="hb-hero-stats"><span><b>0${S.courses.length}</b> 과목</span><span><b>${S.courses.reduce((n,c)=>n+c.units,0)}</b> 단원</span><span><b>${S.courses.reduce((n,c)=>n+c.examples,0)}</b> 예제</span></div></div><div class="hb-hero-art">${orbitMap()}<span class="hb-art-caption">FIG. 01 / ORBITS & INTERACTIONS</span></div></section>
-<div class="hb-section-head"><h2>과목별 학습 노트</h2><span>COURSE INDEX / 01—03</span></div>
+<div class="hb-section-head"><h2>과목별 학습 노트</h2><span>COURSE INDEX / 01—${String(S.courses.length).padStart(2, '0')}</span></div>
 <nav class="hb-shortcuts" aria-label="학습 도구"><a class="hb-plan hb-plan-active" href="${asset('finals/')}">기말고사 분단위 계획표 <span aria-hidden="true">→</span></a><span class="hb-exam-ended">중간고사 종료 · 10/30</span><a class="hb-plan" href="${asset('exam-plan.html')}">중간고사 계획·기록 <span aria-hidden="true">→</span></a></nav>
 <main class="hb-main">${S.courses.map(card).join('')}</main>
 <footer class="hb-foot"><span>2026–2 / PHYSICS NOTEBOOK</span><span>마지막 빌드 ${esc(S.built)} · 진도와 메모는 각자의 브라우저에만 저장됩니다.</span></footer>`;

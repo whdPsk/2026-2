@@ -16,7 +16,7 @@ export function renderShell(D) {
   <div class="mark"><a class="home" href="../" title="전체 과목으로"><i>${D.mark}</i><div><b>${D.title}</b><s>${D.markSub}</s></div></a></div>
   <nav class="modes" id="modes">
     <button data-view="study" aria-current="true">학습</button>
-    <button data-view="lecture">강의</button>
+    <button data-view="lecture">${D.studyMode === 'quiz' ? '퀴즈 안내' : '강의'}</button>
     <button data-view="examples">Example</button>
     <button data-view="formulas">공식집</button>
     <button data-view="hw">과제</button>
@@ -34,7 +34,7 @@ export function renderShell(D) {
 <aside class="rail" id="rail">
   <div class="rail-label">NOTE INDEX <span aria-hidden="true">✧</span></div>
   <input id="q" class="tool" style="width:100%;padding:7px 10px;font-size:12.5px;margin-bottom:6px" type="search" placeholder="단원 검색  /" autocomplete="off">
-  <div class="rangesel" id="rsel"><button data-r="all" aria-pressed="true">전체</button><button data-r="lec" title="강의에서 다룬 단원만">강의 진도</button><button data-r="1" title="${D.rangeLabel['1']}">중간</button><button data-r="2" title="${D.rangeLabel['2']}">기말</button></div>
+  <div class="rangesel" id="rsel"><button data-r="all" aria-pressed="true">전체</button><button data-r="lec" title="강의에서 다룬 단원만">강의 진도</button><button data-r="1" title="${D.rangeLabel['1']}">${D.studyMode === 'quiz' ? '참고' : '중간'}</button><button data-r="2" title="${D.rangeLabel['2']}">${D.studyMode === 'quiz' ? '퀴즈' : '기말'}</button></div>
   ${frontier}
 </aside>
 <main>

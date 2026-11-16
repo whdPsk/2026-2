@@ -10,7 +10,7 @@ export function renderUnit(D, u) {
     const items = u.lecNotes.flatMap((L) => L.notes).map((n) => `<li>${n}</li>`).join('');
     lecb = `<div class="lec"><div class="lh">강의노트 반영 ${dates}</div><ul>${items}</ul></div>`;
   } else {
-    lecb = '<div class="lec none"><div class="lh">아직 강의에서 다루지 않음 — 강의노트가 올라오면 교수님 전개와 강조점이 여기 붙습니다.</div></div>';
+    lecb = '<div class="lec none"><div class="lh">' + (D.unitIntro || '아직 강의에서 다루지 않음 — 강의노트가 올라오면 교수님 전개와 강조점이 여기 붙습니다.') + '</div></div>';
   }
   const star = u.star ? ' <span class="exam-tag">★ 최중요</span>' : '';
   const lecstar = u.lec ? ' <span class="lecstar">강의 진행</span>' : '';

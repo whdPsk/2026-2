@@ -26,6 +26,10 @@ export function defaultSettings(data) {
     exams: Object.fromEntries(data.courses.map((c) => [c.slug, { ...c.exam }])) };
 }
 
+export function addCourseExams(settings, courses) {
+  return { ...settings, exams: { ...Object.fromEntries(courses.map((c) => [c.slug, { ...c.exam }])), ...settings.exams } };
+}
+
 export function validateSettings(settings, courses) {
   const validDate = (s) => /^\d{4}-\d{2}-\d{2}$/.test(s) && Number.isFinite(dayNumber(s)) && isoDay(dayNumber(s)) === s;
   if (!validDate(settings.start)) throw new Error('시작일을 확인하세요.');
@@ -40,6 +44,7 @@ export function validateSettings(settings, courses) {
 export function readBackup(raw, courses) {
   const incoming = JSON.parse(raw);
   if (incoming.version !== 1 || !incoming.records || typeof incoming.records !== 'object' || Array.isArray(incoming.records)) throw new Error('기말 계획표 백업 파일을 선택하세요.');
+  incoming.settings = addCourseExams(incoming.settings, courses);
   validateSettings(incoming.settings, courses);
   const records = {};
   for (const [id, r] of Object.entries(incoming.records)) {
@@ -55,10 +60,11 @@ export function makeTasks(courses, settings) {
   const blocked = new Set(settings.blocked.split(',').map((s) => s.trim()));
   for (const c of courses) {
     const exam = settings.exams[c.slug].date;
-    const days = Math.max(1, dayNumber(exam) - dayNumber(settings.start) - 18);
+    const start = c.planStart > settings.start ? c.planStart : settings.start;
+    const days = Math.max(1, dayNumber(exam) - dayNumber(start) - 18);
     c.units.forEach((u, i) => {
-      const first = addDays(settings.start, Math.floor(i * days / c.units.length));
-      const base = { slug: c.slug, unit: u.id, title: u.title, deadline: addDays(exam, -1), lec: u.lec };
+      const first = addDays(start, Math.floor(i * days / c.units.length));
+      const base = { slug: c.slug, unit: u.id, title: u.title, deadline: addDays(exam, -1), lec: u.lec, studyMode: c.studyMode };
       const id = `${c.slug}:${u.id}`;
       tasks.push({ ...base, id: id + ':learn', phase: '개념·유도', minutes: 50, release: first, target: first,
         after: i ? `${c.slug}:${c.units[i - 1].id}:learn` : null, gap: 0 });
@@ -139,9 +145,10 @@ export function taskSteps(row) {
     const practice = {
       emwaves: 'Ch.11–12 예제·지정 과제의 원형을 처음부터 유도한 뒤 조건 하나를 바꾸고 달라지는 식 확인',
       advmech: '좌표와 가정을 먼저 적고 운동방정식을 세운 뒤, 앞 소문항 결과를 써서 다음 소문항 풀이',
+      mechexp: '해당 단원의 퀴즈 유형에서 장치·그래프를 그리고 가정을 적은 뒤 유도·계산과 단위 확인',
     }[row.slug] ?? '답을 가리고 끝까지 풀기 · 중간식과 검산 포함';
     return [
-      { minutes: 5, title: '지난 출발식 회상 · 예제 또는 지정 과제 1문제 선택' },
+      { minutes: 5, title: row.studyMode === 'quiz' ? '출발식 회상 · 단원의 퀴즈 유형이나 체크포인트 1문제 선택' : '지난 출발식 회상 · 예제 또는 지정 과제 1문제 선택' },
       { minutes: 30, title: practice },
       { minutes: 10, title: '해설 대조 · 첫 오류를 고친 뒤 다시 전개' },
       { minutes: 5, title: '재현 실패는 미완료로 남기고 재도전 기록' },
@@ -152,6 +159,7 @@ export function taskSteps(row) {
     const practice = {
       emwaves: 'Ch.11–12 영어 원문과 조건 변형 문제를 시간 제한을 두고 풀기 · 가정부터 최종식과 극한 검산까지',
       advmech: '기말 범위의 연속 소문항을 시간 제한을 두고 풀기 · 앞에서 구한 운동방정식으로 물리량이나 운동까지 계산',
+      mechexp: '고체·열·유체·진동의 퀴즈 유형을 섞어 시간 제한 풀이 · 그림·가정·유도·계산과 단위 확인',
     }[row.slug] ?? '조건 해석부터 최종 답까지 시간 제한 풀이';
     return [
       { minutes: 5, title: '실제 지정 과제·예제 중 범위 안 문제를 골라 답 가리기' },
