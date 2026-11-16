@@ -22,7 +22,7 @@ for (const day of plan.days) {
     scheduled.set(row.id, row.date);
   }
 }
-assert.equal(plan.tasks.length, data.courses.reduce((n, c) => n + c.units.length * 3 + 3 + (c.slug === 'emwaves' ? 5 : 0), 0));
+assert.equal(plan.tasks.length, data.courses.reduce((n, c) => n + c.units.length * 3 + 3, 0));
 for (const t of plan.tasks) assert(scheduled.has(t.id));
 const sparse = { ...settings, availability: Object.fromEntries(Array.from({ length: 7 }, (_, i) => [i, ''])) };
 assert.equal(generatePlan(data, sparse).backlog.length, plan.tasks.length, 'Shortfalls must be visible');

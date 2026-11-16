@@ -74,12 +74,6 @@ export function makeTasks(courses, settings) {
       tasks.push({ slug: c.slug, id: `${c.slug}:${code}`, title: phase === '모의 풀이' ? '기말 범위 혼합 문제 · 연습용 100분' : phase === '모의 오답' ? '모의 풀이 첫 오류부터 재현' : '조건·부호·단위와 핵심 유도 확인', phase, minutes, release: date < settings.start ? settings.start : date, target: date, deadline: addDays(exam, -1),
         after: phase === '모의 오답' ? `${c.slug}:mock` : null, gap: phase === '모의 오답' ? 1 : 0 });
     }
-    if (c.slug === 'emwaves') {
-      for (let i = 0; i < 5; i++) {
-        const target = addDays(settings.start, 5 + 7 * i);
-        tasks.push({ slug: c.slug, id: `emwaves:midterm:${i}`, title: ['중간고사 오답 수집 · Maxwell 방정식', 'Ch.8 보존법칙 · 조건을 바꿔 다시 풀기', 'Ch.9 파동 · 경계조건 변형', 'Ch.10 퍼텐셜·장 · 출발식 재현', '중간 문제 변형 · 영어 원문으로 혼합 풀이'][i], phase: '중간 변형', minutes: 50, release: target, target, deadline: addDays(exam, -1), gap: 0 });
-      }
-    }
   }
   return tasks;
 }
@@ -141,10 +135,31 @@ export function generatePlan(data, settings) {
 export function taskSteps(row) {
   if (row.phase === '휴식') return [{ minutes: row.minutes, title: row.title }];
   if (row.phase === '개념·유도') return [{ minutes: 5, title: '선수 개념·오늘의 출발식 확인' }, { minutes: 20, title: `${row.title} · 강의노트와 교재 읽기` }, { minutes: 20, title: '핵심 유도 하나를 종이에 전개' }, { minutes: 5, title: '가정·단위·막힌 지점 기록' }];
-  if (row.phase === '백지 풀이') return [{ minutes: 5, title: '지난 출발식 회상 · 예제 또는 지정 과제 1문제 선택' }, { minutes: 30, title: '답을 가리고 끝까지 풀기 · 중간식과 검산 포함' }, { minutes: 10, title: '해설 대조 · 첫 오류를 고친 뒤 다시 전개' }, { minutes: 5, title: '재현 실패는 미완료로 남기고 재도전 기록' }];
+  if (row.phase === '백지 풀이') {
+    const practice = {
+      emwaves: 'Ch.11–12 예제·지정 과제의 원형을 처음부터 유도한 뒤 조건 하나를 바꾸고 달라지는 식 확인',
+      advmech: '좌표와 가정을 먼저 적고 운동방정식을 세운 뒤, 앞 소문항 결과를 써서 다음 소문항 풀이',
+    }[row.slug] ?? '답을 가리고 끝까지 풀기 · 중간식과 검산 포함';
+    return [
+      { minutes: 5, title: '지난 출발식 회상 · 예제 또는 지정 과제 1문제 선택' },
+      { minutes: 30, title: practice },
+      { minutes: 10, title: '해설 대조 · 첫 오류를 고친 뒤 다시 전개' },
+      { minutes: 5, title: '재현 실패는 미완료로 남기고 재도전 기록' },
+    ];
+  }
   if (row.phase === '간격 복습') return [{ minutes: 5, title: `${row.title} · 조건과 핵심식 회상` }, { minutes: 15, title: '가장 막혔던 유도·문항을 백지 재현' }, { minutes: 5, title: '책과 대조하고 다음 복습 지점 기록' }];
-  if (row.phase === '모의 풀이') return [{ minutes: 5, title: '실제 지정 과제·예제 중 범위 안 문제를 골라 답 가리기' }, { minutes: 90, title: '조건 해석부터 최종 답까지 시간 제한 풀이' }, { minutes: 5, title: '미완성·불확실 문항 표시 · 채점은 다음 블록' }];
+  if (row.phase === '모의 풀이') {
+    const practice = {
+      emwaves: 'Ch.11–12 영어 원문과 조건 변형 문제를 시간 제한을 두고 풀기 · 가정부터 최종식과 극한 검산까지',
+      advmech: '기말 범위의 연속 소문항을 시간 제한을 두고 풀기 · 앞에서 구한 운동방정식으로 물리량이나 운동까지 계산',
+    }[row.slug] ?? '조건 해석부터 최종 답까지 시간 제한 풀이';
+    return [
+      { minutes: 5, title: '실제 지정 과제·예제 중 범위 안 문제를 골라 답 가리기' },
+      { minutes: 90, title: practice },
+      { minutes: 5, title: '미완성·불확실 문항 표시 · 채점은 다음 블록' },
+    ];
+  }
   if (row.phase === '모의 오답') return [{ minutes: 15, title: '해설 대조 · 첫 오류의 원인 분류' }, { minutes: 30, title: '실패 문항을 같은 원문으로 다시 풀기' }, { minutes: 5, title: '끝까지 재현한 문항만 완료 기록' }];
-  if (row.phase === '최종 회상' || row.phase === '중간 변형') return [{ minutes: 10, title: '조건·부호·단위와 출발식 백지 회상' }, { minutes: 30, title: row.phase === '중간 변형' ? '중간 오답 원문을 다시 풀고 조건 하나를 바꿔 비교' : '범위 안 대표 유도·오답 재현' }, { minutes: 10, title: '해설 대조 · 남은 오류·시험 공지 확인' }];
+  if (row.phase === '최종 회상') return [{ minutes: 10, title: '조건·부호·단위와 출발식 백지 회상' }, { minutes: 30, title: '범위 안 대표 유도·오답 재현' }, { minutes: 10, title: '해설 대조 · 남은 오류·시험 공지 확인' }];
   return [{ minutes: row.minutes, title: '이번 주 강의·범위·새 지정 과제 확인. 미완료 문항을 우선 재도전하고, 사용할 자료가 없으면 다음 단원 예습. 실제 수행 내용은 메모에 기록.' }];
 }
