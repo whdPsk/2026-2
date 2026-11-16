@@ -17,9 +17,9 @@ export function renderShell(D) {
   <nav class="modes" id="modes">
     <button data-view="study" aria-current="true">학습</button>
     <button data-view="lecture">${D.studyMode === 'quiz' ? '퀴즈 안내' : '강의'}</button>
-    <button data-view="examples">Example</button>
+    <button data-view="examples" ${D.studyMode === 'quiz' ? 'hidden' : ''}>Example</button>
     <button data-view="formulas">공식집</button>
-    <button data-view="hw">과제</button>
+    <button data-view="hw" ${D.studyMode === 'quiz' ? 'hidden' : ''}>과제</button>
     <button data-view="status">현황</button>
     ${D.lab ? `<button data-view="lab">${D.lab.label}</button>` : ''}
   </nav>
@@ -34,7 +34,7 @@ export function renderShell(D) {
 <aside class="rail" id="rail">
   <div class="rail-label">NOTE INDEX <span aria-hidden="true">✧</span></div>
   <input id="q" class="tool" style="width:100%;padding:7px 10px;font-size:12.5px;margin-bottom:6px" type="search" placeholder="단원 검색  /" autocomplete="off">
-  <div class="rangesel" id="rsel"><button data-r="all" aria-pressed="true">전체</button><button data-r="lec" title="강의에서 다룬 단원만">강의 진도</button><button data-r="1" title="${D.rangeLabel['1']}">${D.studyMode === 'quiz' ? '참고' : '중간'}</button><button data-r="2" title="${D.rangeLabel['2']}">${D.studyMode === 'quiz' ? '퀴즈' : '기말'}</button></div>
+  <div class="rangesel" id="rsel"><button data-r="all" aria-pressed="true">전체</button><button data-r="lec" ${D.studyMode === 'quiz' ? 'hidden' : ''} title="강의에서 다룬 단원만">강의 진도</button><button data-r="1" ${D.studyMode === 'quiz' ? 'hidden' : ''} title="${D.rangeLabel['1']}">${D.studyMode === 'quiz' ? '참고' : '중간'}</button><button data-r="2" title="${D.rangeLabel['2']}">${D.studyMode === 'quiz' ? '퀴즈' : '기말'}</button></div>
   ${frontier}
 </aside>
 <main>
@@ -67,7 +67,7 @@ ${D.lab ? `<div class="view" id="v-lab"><div class="page wide">${D.lab.html}</di
   <div class="tblwrap"><table class="simple">
     <tr><td><kbd>←</kbd> <kbd>→</kbd></td><td>이전 / 다음 단원</td></tr>
     <tr><td><kbd>/</kbd></td><td>단원 검색</td></tr>
-    <tr><td><kbd>1</kbd>–<kbd>${D.lab ? 7 : 6}</kbd></td><td>학습 · 강의 · ${D.exampleLabel} · 공식집 · 과제 · 현황${D.lab ? ' · ' + D.lab.label : ''}</td></tr>
+    <tr><td><kbd>1</kbd>–<kbd>${D.lab ? 7 : 6}</kbd></td><td>학습 · ${D.studyMode === 'quiz' ? '퀴즈 안내 · 공식집 · 현황' : `강의 · ${D.exampleLabel} · 공식집 · 과제 · 현황`}${D.lab ? ' · ' + D.lab.label : ''}</td></tr>
     <tr><td><kbd>Esc</kbd></td><td>검색 해제 / 창 닫기</td></tr>
   </table></div>
   <p class="note" style="margin:12px 0 0">${D.helpNote}${examStyle}</p>

@@ -12,7 +12,7 @@ export function initRail(ctx) {
     if (c !== cur) {
       cur = c;
       const rr = ctx.rangeOfCh(c);
-      html += `<h6 data-ch="${c}">Ch.${c} · ${CH[c].ko} <span class="rngbadge r${rr}">${RLAB[rr]}</span></h6>`;
+      html += `<h6 data-ch="${c}">Ch.${c} · ${CH[c].ko} <span class="rngbadge r${rr}">${D.studyMode === 'quiz' ? D.rangeShort[String(rr)] : RLAB[rr]}</span></h6>`;
     }
     html += `<a href="#/${id}" data-u="${id}"><span class="st">○</span><span class="ix">${id.slice(1)}</span><span class="tt">${m.title}${m.lec ? '<span class="lecdot" title="강의에서 다룸"></span>' : ''}</span></a>`;
   }

@@ -52,7 +52,7 @@ export function initProgress(ctx) {
     body.insertAdjacentHTML('beforeend',
       exHtml + relHtml +
       `<div class="unote"><label for="note-${u.id}">내 메모 — 수업에서 교수님이 강조하신 것, 헷갈린 점</label>` +
-      `<textarea id="note-${u.id}" data-note="${u.id}" placeholder="강의노트에 없는 판서·구두 강조를 적어두세요."></textarea>` +
+      `<textarea id="note-${u.id}" data-note="${u.id}" placeholder="${D.studyMode === 'quiz' ? '실험 원리·장치·오차와 퀴즈에서 막힌 지점을 적어두세요.' : '강의노트에 없는 판서·구두 강조를 적어두세요.'}"></textarea>` +
       '<div class="hint">자동 저장됩니다.</div></div>' +
       '<div class="mstbar"><strong>이 단원</strong>' +
       '<button data-s="1">봤음</button><button data-s="2">숙달</button>' +

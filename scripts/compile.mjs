@@ -165,7 +165,7 @@ export function compileAll({ only = null, strict = true, log = console.log } = {
         const d = results.find((r) => r.slug === c.slug).data;
         const last = d.lectures.find((L) => L.kind !== 'cancel');
         return {
-          ...c, title: d.title, mark: d.mark, markSub: d.markSub, exams: d.exams,
+          ...c, title: d.title, mark: d.mark, markSub: d.markSub, exams: d.exams, studyMode: d.studyMode,
           units: d.units.length, examples: d.examples.length, lectures: d.counts.lectures,
           lastLecture: last ? { date: last.date, title: last.title.replace(/<[^>]+>/g, '') } : null,
           frontier: d.units.find((u) => u.id === d.frontier)?.title || '',

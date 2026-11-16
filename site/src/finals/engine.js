@@ -77,7 +77,7 @@ export function makeTasks(courses, settings) {
         while (date > settings.start && (examDates.has(date) || blocked.has(date) || !parseWindows(settings.availability[weekday(date)]).some((w) => w.end - w.start >= minutes))) date = addDays(date, -1);
       }
       const code = { '모의 풀이': 'mock', '모의 오답': 'correction', '최종 회상': 'final' }[phase];
-      tasks.push({ slug: c.slug, id: `${c.slug}:${code}`, title: phase === '모의 풀이' ? '기말 범위 혼합 문제 · 연습용 100분' : phase === '모의 오답' ? '모의 풀이 첫 오류부터 재현' : '조건·부호·단위와 핵심 유도 확인', phase, minutes, release: date < settings.start ? settings.start : date, target: date, deadline: addDays(exam, -1),
+      tasks.push({ slug: c.slug, id: `${c.slug}:${code}`, studyMode: c.studyMode, title: phase === '모의 풀이' ? (c.studyMode === 'quiz' ? '실험 퀴즈 혼합 문제 · 연습용 100분' : '기말 범위 혼합 문제 · 연습용 100분') : phase === '모의 오답' ? '모의 풀이 첫 오류부터 재현' : '조건·부호·단위와 핵심 유도 확인', phase, minutes, release: date < settings.start ? settings.start : date, target: date, deadline: addDays(exam, -1),
         after: phase === '모의 오답' ? `${c.slug}:mock` : null, gap: phase === '모의 오답' ? 1 : 0 });
     }
   }
@@ -120,7 +120,7 @@ export function generatePlan(data, settings) {
         if (!task) {
           const c = [...available].sort((a, b) => settings.exams[a.slug].date.localeCompare(settings.exams[b.slug].date))[days.length % available.length];
           const minutes = Math.min(25, window.end - cursor);
-          task = { id: `buffer:${c.slug}:${date}:${cursor}`, slug: c.slug, title: '새 강의·지정 과제 확인 / 미완료·오답 보완', phase: '보완', minutes };
+          task = { id: `buffer:${c.slug}:${date}:${cursor}`, slug: c.slug, studyMode: c.studyMode, title: c.studyMode === 'quiz' ? '실험 원리·퀴즈 오답 보완' : '새 강의·지정 과제 확인 / 미완료·오답 보완', phase: '보완', minutes };
         }
         rows.push({ ...task, date, start: cursor, end: cursor + task.minutes });
         placed.set(task.id, date);
@@ -140,7 +140,7 @@ export function generatePlan(data, settings) {
 
 export function taskSteps(row) {
   if (row.phase === '휴식') return [{ minutes: row.minutes, title: row.title }];
-  if (row.phase === '개념·유도') return [{ minutes: 5, title: '선수 개념·오늘의 출발식 확인' }, { minutes: 20, title: `${row.title} · 강의노트와 교재 읽기` }, { minutes: 20, title: '핵심 유도 하나를 종이에 전개' }, { minutes: 5, title: '가정·단위·막힌 지점 기록' }];
+  if (row.phase === '개념·유도') return [{ minutes: 5, title: '선수 개념·오늘의 출발식 확인' }, { minutes: 20, title: `${row.title} · ${row.studyMode === 'quiz' ? '퀴즈 복기와 교재에서 실험 원리 확인' : '강의노트와 교재 읽기'}` }, { minutes: 20, title: '핵심 유도 하나를 종이에 전개' }, { minutes: 5, title: '가정·단위·막힌 지점 기록' }];
   if (row.phase === '백지 풀이') {
     const practice = {
       emwaves: 'Ch.11–12 예제·지정 과제의 원형을 처음부터 유도한 뒤 조건 하나를 바꾸고 달라지는 식 확인',
@@ -162,12 +162,13 @@ export function taskSteps(row) {
       mechexp: '고체·열·유체·진동의 퀴즈 유형을 섞어 시간 제한 풀이 · 그림·가정·유도·계산과 단위 확인',
     }[row.slug] ?? '조건 해석부터 최종 답까지 시간 제한 풀이';
     return [
-      { minutes: 5, title: '실제 지정 과제·예제 중 범위 안 문제를 골라 답 가리기' },
+      { minutes: 5, title: row.studyMode === 'quiz' ? '퀴즈 복기·기출과 체크포인트에서 문제를 골라 답 가리기' : '실제 지정 과제·예제 중 범위 안 문제를 골라 답 가리기' },
       { minutes: 90, title: practice },
       { minutes: 5, title: '미완성·불확실 문항 표시 · 채점은 다음 블록' },
     ];
   }
   if (row.phase === '모의 오답') return [{ minutes: 15, title: '해설 대조 · 첫 오류의 원인 분류' }, { minutes: 30, title: '실패 문항을 같은 원문으로 다시 풀기' }, { minutes: 5, title: '끝까지 재현한 문항만 완료 기록' }];
   if (row.phase === '최종 회상') return [{ minutes: 10, title: '조건·부호·단위와 출발식 백지 회상' }, { minutes: 30, title: '범위 안 대표 유도·오답 재현' }, { minutes: 10, title: '해설 대조 · 남은 오류·시험 공지 확인' }];
+  if (row.studyMode === 'quiz') return [{ minutes: row.minutes, title: '실험 원리·장치·측정 가정과 오차를 설명하고, 퀴즈 오답을 다시 풀기. 범위 공지와 실제 수행 내용은 메모에 기록.' }];
   return [{ minutes: row.minutes, title: '이번 주 강의·범위·새 지정 과제 확인. 미완료 문항을 우선 재도전하고, 사용할 자료가 없으면 다음 단원 예습. 실제 수행 내용은 메모에 기록.' }];
 }

@@ -26,7 +26,7 @@ function card(c) {
   <p class="hb-blurb">${esc(c.blurb || '')}</p>
   <div class="hb-meta">${c.prof ? `<span>${esc(c.prof)} 교수</span>` : ''}<span>${esc(c.schedule || '')}</span></div>
   ${last}
-  <div class="hb-nums"><span><b>${c.units}</b> 단원</span><span><b>${c.examples}</b> 예제</span><span><b>${c.lectures}</b> 강의</span></div>
+  <div class="hb-nums"><span><b>${c.units}</b> 단원</span>${c.studyMode === 'quiz' ? '<span>실험 · 퀴즈 평가</span>' : `<span><b>${c.examples}</b> 예제</span><span><b>${c.lectures}</b> 강의</span>`}</div>
   <div class="hb-card-foot">${dday(c.exams)}<span>노트 열기 <span aria-hidden="true">→</span></span></div>
 </a>`;
 }

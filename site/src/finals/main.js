@@ -39,7 +39,7 @@ function render() {
   <div class="fp-layout"><aside class="fp-sidebar" aria-label="기말 일정과 학습 현황">
   <section class="fp-panel"><div class="fp-section-title"><h2>기말·퀴즈 일정</h2><span>KST</span></div>${data.courses.map((c) => {
     const e = settings.exams[c.slug];
-    return `<div class="fp-exam" data-subject="${c.slug}"><div><b>${esc(c.title)}</b><span class="fp-badge">${e.tentative ? '가안 · 확인 필요' : '노트 기준'}</span></div><strong>${fmt(e.date)}</strong><p>${esc(c.scope)}</p><small>${esc(c.exam.note)}</small><a href="${courseLink(c.slug, 'lecture')}">강의·공지 확인 ↗</a></div>`;
+    return `<div class="fp-exam" data-subject="${c.slug}"><div><b>${esc(c.title)}</b><span class="fp-badge">${e.tentative ? '가안 · 확인 필요' : '노트 기준'}</span></div><strong>${fmt(e.date)}</strong><p>${esc(c.scope)}</p><small>${esc(c.exam.note)}</small><a href="${courseLink(c.slug, 'lecture')}">${c.studyMode === 'quiz' ? '퀴즈 안내 확인' : '강의·공지 확인'} ↗</a></div>`;
   }).join('')}</section>
   <section class="fp-panel fp-progress"><h2>학습 기록</h2><div class="fp-big">${Math.round(doneMinutes / Math.max(1, total) * 100)}<small>%</small></div><progress value="${doneMinutes}" max="${total || 1}" aria-label="현재 계획 완료 시간 비율"></progress><p>계획 ${hours(total)} · 완료 표시 ${hours(doneMinutes)}</p><p id="actual-total">실제 기록 ${hours(Object.values(records).reduce((n, r) => n + (Number(r.actual) || 0), 0))}</p><div class="fp-subject-totals">${data.courses.map((c) => `<div><span>${esc(c.title)}</span><b>${hours(rows.filter((r) => r.slug === c.slug).reduce((n, r) => n + r.minutes, 0))}</b></div>`).join('')}</div></section>
   <div class="fp-backup"><button class="tool" id="backup">JSON 백업</button><button class="tool" id="restore">백업 가져오기</button><input type="file" id="restore-file" accept="application/json,.json" hidden><p id="save-status" role="status">${esc(saveProblem || '기록은 이 브라우저에 저장됩니다')}</p></div>
@@ -61,7 +61,7 @@ function stepsHTML(row) {
 function refsHTML(row) {
   if (!row.slug) return '';
   const c = course(row.slug), u = c.units.find((u) => u.id === row.unit);
-  let links = u ? `<a href="${courseLink(row.slug, u.id)}">단원 ${u.id.toUpperCase()} · §${esc(u.secs)} ↗</a>` : `<a href="${courseLink(row.slug, 'lecture')}">강의·공지 ↗</a><a href="${courseLink(row.slug, 'hw')}">지정 과제 ↗</a>`;
+  let links = u ? `<a href="${courseLink(row.slug, u.id)}">단원 ${u.id.toUpperCase()} · §${esc(u.secs)} ↗</a>` : `<a href="${courseLink(row.slug, 'lecture')}">${c.studyMode === 'quiz' ? '퀴즈 안내' : '강의·공지'} ↗</a>${c.studyMode === 'quiz' ? `<a href="${courseLink(row.slug)}">실험별 퀴즈 복습 ↗</a>` : `<a href="${courseLink(row.slug, 'hw')}">지정 과제 ↗</a>`}`;
   if (u) links += u.examples.map((e) => `<a href="${courseLink(row.slug, `examples?e=${encodeURIComponent(e.num)}`)}">Ex ${esc(e.num)} ↗</a>`).join('') + u.homework.map((p) => `<a href="${courseLink(row.slug, `hw?p=${encodeURIComponent(p.num)}`)}">과제 ${esc(p.num)} ↗</a>`).join('');
   return `<div class="fp-refs">${links}</div>`;
 }
