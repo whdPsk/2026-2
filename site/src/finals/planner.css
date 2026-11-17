@@ -55,3 +55,19 @@
 @media print{#planner{padding:0}.fp-top,.fp-heading>.fp-primary,.fp-sidebar,.fp-schedule-top,.fp-backup,.fp-toast,dialog,.fp-record{display:none!important}.fp-layout{display:block}.fp-panel{box-shadow:none;break-inside:auto}.fp-task{break-inside:avoid}.fp-rest{break-inside:avoid}.fp-week{overflow:visible;grid-template-columns:repeat(7,minmax(0,1fr))}.fp-refs a{border:0}.fp-heading{padding:0 0 20px}}
 
 @media(max-width:520px){.fp-sidebar>section:first-child{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.fp-sidebar>section:first-child>.fp-section-title{grid-column:1/-1}.fp-exam{border:0;padding:8px 0 0}.fp-exam b{font-size:10px;overflow-wrap:anywhere}.fp-exam strong{font-size:16px;white-space:nowrap}.fp-exam p{font-size:9px}.fp-exam small,.fp-exam>a{display:none}.fp-badge{font-size:8px}.fp-progress{margin-bottom:12px}}
+
+@media(max-width:680px){
+ .fp-layout{display:flex;flex-direction:column}.fp-main,.fp-sidebar{width:100%}.fp-main{order:0}.fp-sidebar{order:1}
+ .fp-week{grid-template-columns:minmax(0,1fr);overflow:visible;gap:24px}
+ .fp-week>section{border-top:1px solid var(--line);padding-top:12px}.fp-week-date{font-size:16px;min-height:44px}
+ .fp-week-task{padding:12px}.fp-week-task time{font-size:12px}.fp-week-task span{font-size:12px}.fp-week-task b{font-size:15px;line-height:1.6}
+ .fp-week>section>p{font-size:12px}.dp-week-life summary{min-height:36px;padding:5px 8px}.dp-week-life time,.dp-week-life summary span,.dp-week-life p{font-size:12px}
+ .fp-tabs button,.fp-date-nav button,.fp-schedule-top>.tool,.fp-check,.fp-refs a{min-height:44px}
+ .fp-date-nav input{min-height:44px;font-size:16px}.dp-toggle{font-size:12px;min-height:44px}
+ .fp-check input,.dp-toggle input{width:20px;height:20px}.fp-check{display:flex;align-items:center}
+ .fp-task{grid-template-columns:1fr auto;gap:10px}.fp-task-time{grid-column:1/-1;display:flex;align-items:center;gap:12px}
+ .fp-task-time time{font-size:14px}.fp-task-time time>span{display:inline;font-size:14px;margin:0 0 0 6px}.fp-task-time>b{margin:0}
+ .fp-task-body{min-width:0}.fp-task h3{font-size:16px}.dp-goal{font-size:14px}.fp-task-meta{font-size:12px}
+ .fp-refs a{display:flex;align-items:center;font-size:12px}.dp-routine{font-size:13px}.dp-routine time{font-size:11px}
+ .fp-sidebar>section:first-child{display:block}.fp-sidebar .fp-exam{padding:12px 0}.fp-sidebar .fp-exam p{font-size:12px}
+}

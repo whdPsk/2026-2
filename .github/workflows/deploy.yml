@@ -33,6 +33,8 @@ jobs:
         run: npm run lint:tex
       - name: Check final plan
         run: npm run check:final-plan
+      - name: Check offline bundle
+        run: npm run check:offline
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

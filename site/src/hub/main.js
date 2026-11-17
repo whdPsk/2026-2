@@ -5,6 +5,7 @@ import '../styles/app.css';
 import './hub.css';
 import { esc, asset } from '../course/util.js';
 import { orbitMap, disciplines, disciplineIcon } from '../science.js';
+import { initOffline } from '../offline/client.js';
 
 function dday(exams) {
   const now = new Date();
@@ -51,6 +52,7 @@ async function boot() {
     paint();
   };
   paint();
+  initOffline();
 }
 
 boot().catch((e) => { document.getElementById('hub').innerHTML = `<p class="boot err">불러오지 못했습니다: ${esc(e.message)}</p>`; });

@@ -1,0 +1,11 @@
+body{padding-bottom:calc(68px + env(safe-area-inset-bottom,0px))}
+.offline-launch{position:fixed;right:16px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:90;border:1px solid var(--line);border-radius:24px;padding:10px 16px;min-height:44px;background:var(--panel);color:var(--brand);font:600 12px var(--sans);box-shadow:var(--sh)}
+#offline-tools dialog{max-height:85dvh;overflow:auto;font:14px/1.7 var(--sans)}
+#offline-tools h2{font-size:20px;margin:0 0 12px}.offline-state{color:var(--brand)}
+#offline-tools progress{width:100%;accent-color:var(--brand)}
+.offline-help,.offline-version{font-size:12px;color:var(--ink2)}
+.offline-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.offline-actions button{min-height:44px;padding:10px 14px;border:1px solid var(--line);border-radius:7px;background:var(--rail);color:var(--ink)}
+.offline-actions .offline-save{background:var(--brand);color:var(--onbrand)}
+.offline-actions button:disabled{opacity:.6}
+@media print{#offline-tools{display:none}body{padding-bottom:0}}

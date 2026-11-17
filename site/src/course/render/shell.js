@@ -31,6 +31,7 @@ export function renderShell(D) {
   <button class="tool" id="t-dark" aria-label="테마 전환">◐</button>
 </header>
 <div class="shell">
+<button type="button" id="mobile-index" aria-controls="rail" aria-expanded="false">단원 목록·검색</button>
 <aside class="rail" id="rail">
   <div class="rail-label">NOTE INDEX <span aria-hidden="true">✧</span></div>
   <input id="q" class="tool" style="width:100%;padding:7px 10px;font-size:12.5px;margin-bottom:6px" type="search" placeholder="단원 검색  /" autocomplete="off">

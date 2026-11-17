@@ -13,6 +13,7 @@ export function initRouter(ctx, lab) {
     document.querySelectorAll('.view').forEach((e) => e.classList.toggle('active', e.id === 'v-' + v));
     document.querySelectorAll('#modes button').forEach((b) => b.setAttribute('aria-current', String(b.dataset.view === v)));
     rail.hidden = v !== 'study';
+    $('mobile-index').hidden = v !== 'study';
     document.querySelector('.shell').style.gridTemplateColumns = v === 'study' ? '' : '1fr';
     if (v !== 'study') ctx.texNow(document.querySelector('#v-' + v + ' .page'));
     if (v === 'examples') ctx.filterEx();

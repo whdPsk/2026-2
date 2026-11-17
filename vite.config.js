@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { compileAll } from './scripts/compile.mjs';
+import { offlineBuild } from './scripts/offline-build.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const SITE = path.join(ROOT, 'site');
@@ -47,7 +48,7 @@ export default defineConfig(({ command }) => {
     root: SITE,
     base: BASE,
     publicDir: path.join(SITE, 'public'),
-    plugins: [contentWatch()],
+    plugins: [contentWatch(), offlineBuild(ROOT, BASE)],
     build: {
       outDir: path.join(ROOT, 'dist'),
       emptyOutDir: true,

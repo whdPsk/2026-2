@@ -18,6 +18,8 @@ import { initDday, initHelp, initTheme } from './features/chrome.js';
 import { initCitePop } from './features/citepop.js';
 import { createLab } from './features/lab.js';
 import { initRouter } from './features/router.js';
+import { initMobileNavigation } from './features/mobile.js';
+import { initOffline } from '../offline/client.js';
 
 const slug = document.querySelector('meta[name="course"]').content;
 
@@ -31,6 +33,8 @@ async function boot() {
 
   const app = $('app');
   app.outerHTML = renderShell(D);
+  initMobileNavigation();
+  initOffline();
 
   const store = createStore(D.storageKey);
   store.connect();

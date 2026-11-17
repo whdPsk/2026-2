@@ -1,7 +1,7 @@
 // MathJax: 보이는 것 먼저 조판, 나머지는 백그라운드로
-import { $ } from '../util.js';
+import { $, asset } from '../util.js';
 
-const MJ_SRC = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg-full.js';
+const MJ_SRC = import.meta.env.DEV ? 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg-full.js' : asset('vendor/mathjax/tex-svg-full.js');
 const BASE_MACROS = {
   dd: '\\mathrm{d}', ee: '\\mathrm{e}', ii: '\\mathrm{i}', vb: ['\\mathbf{#1}', 1], uv: ['\\hat{\\mathbf{#1}}', 1],
   curl: '\\nabla\\times', divg: '\\nabla\\cdot', grad: '\\nabla', pd: ['\\frac{\\partial #1}{\\partial #2}', 2],

@@ -2,6 +2,9 @@ import '../styles/base.css';
 import '../styles/app.css';
 import './planner.css';
 import { mountDatedPlan } from './dated.js';
+import { initOffline } from '../offline/client.js';
+
+initOffline();
 import { asset, esc } from '../course/util.js';
 import { WEEK, addDays, weekday, clock, kstToday, defaultSettings, addCourseExams, validateSettings, generatePlan, taskSteps, readBackup } from './engine.js';
 
