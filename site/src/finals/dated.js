@@ -5,6 +5,7 @@ import { DATED_RECORD_KEY, isTask, studyMinutes, validateSchedule, readDatedReco
 const labels = { study: '시험 공부', assignment: '과제·보고서', project: '발표·프로젝트', experiment: '실험 예약', meeting: '회의 예약', class: '수업', lab: '랩인턴', sleep: '수면', meal: '식사', travel: '이동', break: '휴식', recovery: '회복·준비', exam: '시험·예약' };
 const hours = (minutes) => `${Math.floor(minutes / 60)}시간${minutes % 60 ? ` ${minutes % 60}분` : ''}`;
 const dateLabel = (date) => `${Number(date.slice(5, 7))}/${Number(date.slice(8))} (${WEEK[weekday(date)]})`;
+const lifeKinds = new Set(['sleep', 'meal', 'travel', 'break', 'recovery']);
 
 export function mountDatedPlan(root, data) {
   const schedule = data.schedule;
@@ -49,7 +50,18 @@ export function mountDatedPlan(root, data) {
   function weekHTML() {
     const days = schedule.days.slice(selected, selected + 7).map((day) => {
       const visible = day.rows.filter((row) => showRoutine || isTask(row) || row.kind === 'exam');
-      const cards = visible.map((row) => {
+      const groups = [];
+      for (const row of visible) {
+        const last = groups.at(-1);
+        if (lifeKinds.has(row.kind) && last?.life && last.rows.at(-1).end === row.start) last.rows.push(row);
+        else groups.push({ life: lifeKinds.has(row.kind), rows: [row] });
+      }
+      const cards = groups.map((group) => {
+        const row = group.rows[0];
+        if (group.life) {
+          const names = [...new Set(group.rows.map((r) => labels[r.kind]))].join('·');
+          return `<details class="dp-week-life"><summary><time>${clock(row.start)}–${clock(group.rows.at(-1).end)}</time><span>${names}</span></summary><div>${group.rows.map((r) => `<p><time>${clock(r.start)}–${clock(r.end)}</time> ${esc(r.title)}</p>`).join('')}</div></details>`;
+        }
         const routine = !isTask(row) && row.kind !== 'exam';
         return `<button class="fp-week-task ${routine ? 'dp-week-routine' : ''} ${records[row.id]?.done ? 'is-done' : ''}" data-date="${day.date}" data-subject="${row.slug || 'project'}" data-kind="${row.kind}"><time>${clock(row.start)}–${clock(row.end)}</time><span>${esc(subjectName(row))}</span><b>${esc(row.title)}</b></button>`;
       }).join('');
