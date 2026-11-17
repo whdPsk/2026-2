@@ -1,6 +1,7 @@
 import '../styles/base.css';
 import '../styles/app.css';
 import './planner.css';
+import { mountDatedPlan } from './dated.js';
 import { asset, esc } from '../course/util.js';
 import { WEEK, addDays, weekday, clock, kstToday, defaultSettings, addCourseExams, validateSettings, generatePlan, taskSteps, readBackup } from './engine.js';
 
@@ -143,6 +144,10 @@ async function boot() {
   const res = await fetch(asset('data/final-plan.json'), { cache: 'no-cache' });
   if (!res.ok) throw new Error(`계획 자료를 읽지 못했습니다 (${res.status}).`);
   data = await res.json();
+  if (data.schedule && new URLSearchParams(location.search).get('mode') !== 'auto') {
+    mountDatedPlan(root, data);
+    return;
+  }
   if (settings) settings = addCourseExams(settings, data.courses);
   try { validateSettings(settings, data.courses); } catch { if (settings) storageWarning = '저장된 시간 설정이 유효하지 않아 기본 시간으로 열었습니다. 기존 완료·메모 기록은 유지합니다.'; settings = defaultSettings(data); }
   plan = generatePlan(data, settings);

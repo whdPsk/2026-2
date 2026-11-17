@@ -176,6 +176,7 @@ export function compileAll({ only = null, strict = true, log = console.log } = {
     // 기말 계획표는 본문 없이 일정·단원·예제·지정 과제 정보만 공유한다.
     writeJson(path.join(DATA, 'final-plan.json'), {
       built: today, defaults: readJson(path.join(CONTENT, 'final-plan.json')),
+      schedule: readJson(path.join(CONTENT, 'final-schedule.json')),
       courses: results.map(({ slug, data: d }) => ({
         slug, title: d.title, studyMode: d.studyMode, planStart: d.planStart, exam: d.exams.find((e) => e.name === '기말고사') || d.exams.find((e) => e.name === '퀴즈'),
         scope: d.rangeLabel['2'],
