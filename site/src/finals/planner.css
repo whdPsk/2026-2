@@ -1,6 +1,8 @@
 #planner{max-width:1480px;padding:0 34px 50px;margin:auto}
 .dp-goal{font-size:12px;line-height:1.85;color:var(--ink2)}
 .dp-toggle{font-size:11px;color:var(--ink2);display:flex;align-items:center;gap:6px}
+.fp-week-task.dp-week-routine{--accent:var(--ink3);border-top:1px dashed var(--line);background:var(--panel);padding:8px;color:var(--ink2)}
+.fp-week-task.dp-week-routine[data-kind=class],.fp-week-task.dp-week-routine[data-kind=lab]{border-left:2px solid var(--ink3)}
 .dp-routine{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:14px;padding:13px 0;border-top:1px solid var(--line2);color:var(--ink2);font-size:12px}
 .dp-routine time{font:11px/1.8 var(--mono)}.dp-routine b{font-weight:500}.dp-routine small{display:block;font-size:10px;line-height:1.8;color:var(--ink3);margin-top:4px}.dp-routine>span{font-size:10px;color:var(--ink3)}
 .dp-routine[data-kind=exam]{border-left:3px solid var(--warm);padding-left:12px;background:var(--rail)}

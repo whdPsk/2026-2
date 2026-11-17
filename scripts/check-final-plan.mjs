@@ -10,12 +10,14 @@ assert.equal(dated.start, '2026-11-23');
 assert.equal(dated.end, '2026-12-14');
 const datedRows = dated.days.flatMap((day) => day.rows.map((r) => ({ ...r, date: day.date })));
 const duration = (rows) => rows.reduce((n, r) => n + r.end - r.start, 0);
+assert(!datedRows.some((r) => r.slug === 'mechexp' && r.kind === 'study' && r.date < '2026-12-10'), 'Lab quiz study must stay in the final intensive period');
+assert.equal(datedRows.filter((r) => r.kind === 'exam' && r.title.includes('기계공학실험')).length, 1);
 assert.equal(duration(datedRows.filter((r) => r.kind === 'experiment')), 870, 'Experiment reservation must be separate from lab hours');
 assert.equal(duration(datedRows.filter((r) => r.title.startsWith('논문리뷰 준비'))), 360);
 for (const day of dated.days) {
   assert(duration(day.rows.filter((r) => r.kind === 'sleep')) >= 300, 'Sleep allocation shortened');
   const dow = new Date(day.date + 'T12:00:00Z').getUTCDay();
-  if (dow === 4) assert.equal(duration(day.rows.filter((r) => r.title.startsWith('기공실 보고서'))), 300);
+  if (dow === 4) assert.equal(duration(day.rows.filter((r) => r.title.startsWith('기공실 보고서'))), day.date === '2026-11-26' ? 0 : 300);
   if (day.date >= '2026-12-10') assert(!day.rows.some((r) => r.slug === 'astro1' && r.kind === 'study'), 'Astro study after exam');
 }
 for (const c of data.courses) {

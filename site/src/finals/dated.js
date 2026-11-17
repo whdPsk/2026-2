@@ -47,7 +47,15 @@ export function mountDatedPlan(root, data) {
     return `<div class="fp-day-head"><h2>${dateLabel(day.date)}</h2><span>시험 공부 ${hours(total)}</span></div>${visible.map(rowHTML).join('')}`;
   }
   function weekHTML() {
-    return `<div class="fp-week">${schedule.days.slice(selected, selected + 7).map((day) => `<section><button class="fp-week-date" data-date="${day.date}">${dateLabel(day.date)}</button><p>공부 ${hours(day.rows.reduce((n, r) => n + studyMinutes(r), 0))}</p>${day.rows.filter((r) => isTask(r) || r.kind === 'exam').map((row) => `<button class="fp-week-task ${records[row.id]?.done ? 'is-done' : ''}" data-date="${day.date}" data-subject="${row.slug || 'project'}"><time>${clock(row.start)}–${clock(row.end)}</time><span>${esc(subjectName(row))}</span><b>${esc(row.title)}</b></button>`).join('')}</section>`).join('')}</div>`;
+    const days = schedule.days.slice(selected, selected + 7).map((day) => {
+      const visible = day.rows.filter((row) => showRoutine || isTask(row) || row.kind === 'exam');
+      const cards = visible.map((row) => {
+        const routine = !isTask(row) && row.kind !== 'exam';
+        return `<button class="fp-week-task ${routine ? 'dp-week-routine' : ''} ${records[row.id]?.done ? 'is-done' : ''}" data-date="${day.date}" data-subject="${row.slug || 'project'}" data-kind="${row.kind}"><time>${clock(row.start)}–${clock(row.end)}</time><span>${esc(subjectName(row))}</span><b>${esc(row.title)}</b></button>`;
+      }).join('');
+      return `<section><button class="fp-week-date" data-date="${day.date}">${dateLabel(day.date)}</button><p>공부 ${hours(day.rows.reduce((n, row) => n + studyMinutes(row), 0))}</p>${cards}</section>`;
+    });
+    return `<div class="fp-week">${days.join('')}</div>`;
   }
   function renderTotals() {
     const total = allRows.reduce((n, row) => n + studyMinutes(row), 0);
