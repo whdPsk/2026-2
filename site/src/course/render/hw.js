@@ -20,7 +20,7 @@ export function renderHwView(D, chBtns) {
     out.push(`<section class="hwset" id="hw-${S.id}"><h3>${S.title}</h3><div class="hm">${hm}</div>`);
     for (const P of S.probs) {
       const ans = P.sol ? `<div class="ans">${P.sol}</div>` : '<div class="lock">풀이가 아직 작성되지 않았습니다.</div>';
-      out.push(`<details class="prob" data-num="${P.num}" data-ch="${P.ch}"><summary>${TAGS[P.tag] || ''}<span class="ub">${P.unit.toUpperCase()}</span><b>${P.num}</b>${P.title}</summary><div class="stmt">${P.stmt}</div>${ans}</details>`);
+      out.push(`<details class="prob" data-num="${P.num}" data-ch="${P.ch ?? ''}"><summary>${TAGS[P.tag] || ''}<span class="ub">${P.unit ? P.unit.toUpperCase() : '단원 확인 중'}</span><b>${P.num}</b>${P.title}</summary><div class="stmt">${P.stmt || ''}</div>${ans}</details>`);
     }
     out.push('</section>');
   }

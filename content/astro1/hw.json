@@ -1,152 +1,185 @@
 [
- {
-  "id": "HW1",
-  "kind": "hw",
-  "title": "HW1 · 교재 연습문제 4개",
-  "meta": "eTL 과제(9/15 14:00 마감): 교재 p.54 문제3, p.55 문제6, p.56 문제7, p.57 문제8. 아래 복습 노트는 제출본 기반이며 모범답안은 아님.",
-  "probs": [
-   {
-    "num": "HW1",
-    "ch": 1,
-    "unit": "u02",
-    "tag": "",
-    "title": "제출본 기반 복습"
-   }
-  ],
-  "due": "2026-09-15"
- },
- {
-  "id": "HW2",
-  "kind": "hw",
-  "title": "HW2 · 문제지",
-  "meta": "eTL 과제(9/29 14:00 마감) · 문제지 hw2.pdf 기준 · 9/28 조교 공지: 문제 3(1) 원운동 성분 주파수 ω₀±ω_B/2로 수정(ω_B=eB/m_ec 정의 그대로) · 제출본 Drive 확인(모범답안 아님) · <a href=\"https://daglo.ai/workspace/ws-edac7bd799b3e351/board/H3DTMfq1eR87sZC0?fileMetaId=9f7935fe-7981-4532-96c4-f4709c22f773\" target=\"_blank\" rel=\"noopener\">10/12 조교 해설 녹음 ↗</a>",
-  "probs": [
-   {
-    "num": "HW2-1",
-    "ch": 2,
-    "unit": "u07",
-    "tag": "req",
-    "title": "21cm 선에서 HI 질량"
-   },
-   {
-    "num": "HW2-2",
-    "ch": 4,
-    "unit": "u12",
-    "tag": "req",
-    "title": "원운동 전자의 복사와 편광"
-   },
-   {
-    "num": "HW2-3",
-    "ch": 4,
-    "unit": "u13",
-    "tag": "req",
-    "title": "자기장 속 로렌츠 진동자"
-   },
-   {
-    "num": "HW2-4",
-    "ch": 4,
-    "unit": "u11",
-    "tag": "req",
-    "title": "kink의 기하와 1/r"
-   }
-  ],
-  "due": "2026-09-29"
- },
- {
-  "id": "HW3",
-  "kind": "hw",
-  "title": "HW3 · 교재 p.187–190 연습문제",
-  "meta": "eTL 과제 · 10/15(목) 14:00 마감 · p.187 문제 8, 9(4번 제외), p.188 문제 10, p.190 문제 17. 10/17 채점 완료. 10/12 작성한 자체 풀이 PDF와 대조한 핵심 유도·가정·검산을 각 문제에 공개. <a href=\"https://drive.google.com/file/d/1CWMT97X8u_IXgf-atTkdelruoGiIoIf_/view\" target=\"_blank\" rel=\"noopener\">자체 풀이 PDF ↗</a> · <a href=\"https://daglo.ai/workspace/ws-edac7bd799b3e351/board/7NisNu84yOmPrAfG?fileMetaId=3b03ab1f-a9e5-4788-bde4-eed4ff32ec81\" target=\"_blank\" rel=\"noopener\">10/19 조교 해설 녹음 ↗</a> (Drive·다글로 권한 필요할 수 있음).",
-  "due": "2026-10-15",
-  "probs": [
-   {
-    "num": "HW3-8",
-    "ch": 8,
-    "unit": "u16",
-    "tag": "req",
-    "title": "교재 p.187 문제 8"
-   },
-   {
-    "num": "HW3-9",
-    "ch": 8,
-    "unit": "u16",
-    "tag": "req",
-    "title": "교재 p.187 문제 9 — (4) 제외"
-   },
-   {
-    "num": "HW3-10",
-    "ch": 8,
-    "unit": "u19",
-    "tag": "req",
-    "title": "교재 p.188 문제 10"
-   },
-   {
-    "num": "HW3-17",
-    "ch": 8,
-    "unit": "u20",
-    "tag": "req",
-    "title": "교재 p.190 문제 17"
-   }
-  ]
- },
- {
-  "id": "HW4",
-  "kind": "hw",
-  "title": "HW4 · H II 영역과 초신성의 복사",
-  "meta": "문제지 기준 11/2(월) 14:00 마감. <a href=\"https://drive.google.com/file/d/1wWM_99q41wGVTneej_Rp_ELnHI_DzWAM/view\" target=\"_blank\" rel=\"noopener\">문제지 PDF ↗</a> <a href=\"https://myetl.snu.ac.kr/courses/305248/discussion_topics/398897\" target=\"_blank\" rel=\"noopener\">11/3 채점 완료 공지 ↗</a> · <a href=\"https://myetl.snu.ac.kr/courses/305248/modules/items/1698552\" target=\"_blank\" rel=\"noopener\">공식 해설 ↗</a>",
-  "due": "2026-11-02",
-  "probs": [
-   {
-    "num": "HW4-1",
-    "ch": 5,
-    "unit": "u16",
-    "tag": "req",
-    "title": "균일한 H II 영역의 방출측도·광학깊이·질량"
-   },
-   {
-    "num": "HW4-2",
-    "ch": 6,
-    "unit": "u19",
-    "tag": "req",
-    "title": "초신성 싱크로트론·등분배·역콤턴 산란"
-   }
-  ]
- },
- {
-  "id": "HW5",
-  "kind": "hw",
-  "title": "HW5 · 교재 연습문제 4개",
-  "due": "2026-11-17",
-  "meta": "<b>11/17(화) 14:00 마감.</b> 40점, PDF 파일 업로드. [[AHW5.1]] <a href=\"https://myetl.snu.ac.kr/courses/305248/assignments/390741\" target=\"_blank\" rel=\"noopener\">eTL 과제 원문 ↗</a>",
-  "probs": [
-   {
-    "num": "HW5-2",
-    "ch": 15,
-    "unit": "u28",
-    "tag": "req",
-    "title": "교재 p.371 문제 2"
-   },
-   {
-    "num": "HW5-5",
-    "ch": 15,
-    "unit": "u28",
-    "tag": "req",
-    "title": "교재 p.371 문제 5"
-   },
-   {
-    "num": "HW5-8",
-    "ch": 15,
-    "unit": "u28",
-    "tag": "req",
-    "title": "교재 p.372 문제 8"
-   },
-   {
-    "num": "HW5-13",
-    "ch": 15,
-    "unit": "u28",
-    "tag": "req",
-    "title": "교재 p.373 문제 13"
-   }
-  ]
- }
+  {
+    "id": "HW1",
+    "kind": "hw",
+    "title": "HW1 · 교재 연습문제 4개",
+    "meta": "eTL 과제(9/15 14:00 마감): 교재 p.54 문제3, p.55 문제6, p.56 문제7, p.57 문제8. 아래 복습 노트는 제출본 기반이며 모범답안은 아님.",
+    "probs": [
+      {
+        "num": "HW1",
+        "ch": 1,
+        "unit": "u02",
+        "tag": "",
+        "title": "제출본 기반 복습"
+      }
+    ],
+    "due": "2026-09-15"
+  },
+  {
+    "id": "HW2",
+    "kind": "hw",
+    "title": "HW2 · 문제지",
+    "meta": "eTL 과제(9/29 14:00 마감) · 문제지 hw2.pdf 기준 · 9/28 조교 공지: 문제 3(1) 원운동 성분 주파수 ω₀±ω_B/2로 수정(ω_B=eB/m_ec 정의 그대로) · 제출본 Drive 확인(모범답안 아님) · <a href=\"https://daglo.ai/workspace/ws-edac7bd799b3e351/board/H3DTMfq1eR87sZC0?fileMetaId=9f7935fe-7981-4532-96c4-f4709c22f773\" target=\"_blank\" rel=\"noopener\">10/12 조교 해설 녹음 ↗</a>",
+    "probs": [
+      {
+        "num": "HW2-1",
+        "ch": 2,
+        "unit": "u07",
+        "tag": "req",
+        "title": "21cm 선에서 HI 질량"
+      },
+      {
+        "num": "HW2-2",
+        "ch": 4,
+        "unit": "u12",
+        "tag": "req",
+        "title": "원운동 전자의 복사와 편광"
+      },
+      {
+        "num": "HW2-3",
+        "ch": 4,
+        "unit": "u13",
+        "tag": "req",
+        "title": "자기장 속 로렌츠 진동자"
+      },
+      {
+        "num": "HW2-4",
+        "ch": 4,
+        "unit": "u11",
+        "tag": "req",
+        "title": "kink의 기하와 1/r"
+      }
+    ],
+    "due": "2026-09-29"
+  },
+  {
+    "id": "HW3",
+    "kind": "hw",
+    "title": "HW3 · 교재 p.187–190 연습문제",
+    "meta": "eTL 과제 · 10/15(목) 14:00 마감 · p.187 문제 8, 9(4번 제외), p.188 문제 10, p.190 문제 17. 10/17 채점 완료. 10/12 작성한 자체 풀이 PDF와 대조한 핵심 유도·가정·검산을 각 문제에 공개. <a href=\"https://drive.google.com/file/d/1CWMT97X8u_IXgf-atTkdelruoGiIoIf_/view\" target=\"_blank\" rel=\"noopener\">자체 풀이 PDF ↗</a> · <a href=\"https://daglo.ai/workspace/ws-edac7bd799b3e351/board/7NisNu84yOmPrAfG?fileMetaId=3b03ab1f-a9e5-4788-bde4-eed4ff32ec81\" target=\"_blank\" rel=\"noopener\">10/19 조교 해설 녹음 ↗</a> (Drive·다글로 권한 필요할 수 있음).",
+    "due": "2026-10-15",
+    "probs": [
+      {
+        "num": "HW3-8",
+        "ch": 8,
+        "unit": "u16",
+        "tag": "req",
+        "title": "교재 p.187 문제 8"
+      },
+      {
+        "num": "HW3-9",
+        "ch": 8,
+        "unit": "u16",
+        "tag": "req",
+        "title": "교재 p.187 문제 9 — (4) 제외"
+      },
+      {
+        "num": "HW3-10",
+        "ch": 8,
+        "unit": "u19",
+        "tag": "req",
+        "title": "교재 p.188 문제 10"
+      },
+      {
+        "num": "HW3-17",
+        "ch": 8,
+        "unit": "u20",
+        "tag": "req",
+        "title": "교재 p.190 문제 17"
+      }
+    ]
+  },
+  {
+    "id": "HW4",
+    "kind": "hw",
+    "title": "HW4 · H II 영역과 초신성의 복사",
+    "meta": "문제지 기준 11/2(월) 14:00 마감. <a href=\"https://drive.google.com/file/d/1wWM_99q41wGVTneej_Rp_ELnHI_DzWAM/view\" target=\"_blank\" rel=\"noopener\">문제지 PDF ↗</a> <a href=\"https://myetl.snu.ac.kr/courses/305248/discussion_topics/398897\" target=\"_blank\" rel=\"noopener\">11/3 채점 완료 공지 ↗</a> · <a href=\"https://myetl.snu.ac.kr/courses/305248/modules/items/1698552\" target=\"_blank\" rel=\"noopener\">공식 해설 ↗</a>",
+    "due": "2026-11-02",
+    "probs": [
+      {
+        "num": "HW4-1",
+        "ch": 5,
+        "unit": "u16",
+        "tag": "req",
+        "title": "균일한 H II 영역의 방출측도·광학깊이·질량"
+      },
+      {
+        "num": "HW4-2",
+        "ch": 6,
+        "unit": "u19",
+        "tag": "req",
+        "title": "초신성 싱크로트론·등분배·역콤턴 산란"
+      }
+    ]
+  },
+  {
+    "id": "HW5",
+    "kind": "hw",
+    "title": "HW5 · 교재 연습문제 4개",
+    "due": "2026-11-17",
+    "meta": "<b>11/17(화) 14:00 마감.</b> 40점, PDF 파일 업로드. [[AHW5.1]] <a href=\"https://myetl.snu.ac.kr/courses/305248/assignments/390741\" target=\"_blank\" rel=\"noopener\">eTL 과제 원문 ↗</a>",
+    "probs": [
+      {
+        "num": "HW5-2",
+        "ch": 15,
+        "unit": "u28",
+        "tag": "req",
+        "title": "교재 p.371 문제 2"
+      },
+      {
+        "num": "HW5-5",
+        "ch": 15,
+        "unit": "u28",
+        "tag": "req",
+        "title": "교재 p.371 문제 5"
+      },
+      {
+        "num": "HW5-8",
+        "ch": 15,
+        "unit": "u28",
+        "tag": "req",
+        "title": "교재 p.372 문제 8"
+      },
+      {
+        "num": "HW5-13",
+        "ch": 15,
+        "unit": "u28",
+        "tag": "req",
+        "title": "교재 p.373 문제 13"
+      }
+    ]
+  },
+  {
+    "id": "HW6",
+    "kind": "hw",
+    "title": "HW6 · 교재 연습문제 4개",
+    "due": "2026-11-26",
+    "meta": "<b>11/26(목) 14:00 마감·접수 종료</b>, 40점, PDF 제출. [[AHW6.1]] <a href=\"https://myetl.snu.ac.kr/courses/305248/assignments/392578\" target=\"_blank\" rel=\"noopener\">eTL 과제 ↗</a> · 문항 원문과 풀이 대조는 대기.",
+    "probs": [
+      {
+        "num": "HW6-1",
+        "ch": 15,
+        "unit": "u28",
+        "tag": "req",
+        "title": "p.375 문제 19 [[AHW6.2]]"
+      },
+      {
+        "num": "HW6-2",
+        "ch": 15,
+        "unit": "u28",
+        "tag": "req",
+        "title": "p.379 문제 28 [[AHW6.3]]"
+      },
+      {
+        "num": "HW6-3",
+        "tag": "req",
+        "title": "p.448 문제 4 · 단원 배정은 원문 확인 후 [[AHW6.4]]"
+      },
+      {
+        "num": "HW6-4",
+        "tag": "req",
+        "title": "p.448 문제 5 · 단원 배정은 원문 확인 후 [[AHW6.5]]"
+      }
+    ]
+  }
 ]

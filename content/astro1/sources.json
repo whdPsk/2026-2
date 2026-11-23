@@ -480,5 +480,47 @@
   "kind": "hw",
   "date": "2026-11-10",
   "url": "https://myetl.snu.ac.kr/courses/305248/assignments/390741"
+ },
+ "A20": {
+  "title": "Lecture20 · 등온 충격파와 RT/KH 불안정성",
+  "short": "A20",
+  "kind": "ppt",
+  "date": "2026-11-17",
+  "url": "https://drive.google.com/file/d/14jqbluBhUKgR8_Mxy8CUgpyku73n5kVM/view"
+ },
+ "A21": {
+  "title": "11/19 결석 보충 · 대류·열불안정·Jeans",
+  "short": "A21",
+  "kind": "ppt",
+  "date": "2026-11-19",
+  "url": "https://drive.google.com/file/d/1XXhoYkSGxANG4ynuTRj8y9SJhqCidgtM/view"
+ },
+ "AHW6": {
+  "title": "HW6 · 11/26(목) 14:00 마감",
+  "short": "AHW6",
+  "kind": "notice",
+  "date": "2026-11-19",
+  "url": "https://myetl.snu.ac.kr/courses/305248/assignments/392578"
+ },
+ "AN1117": {
+  "title": "HW5 채점 완료",
+  "short": "AN1117",
+  "kind": "notice",
+  "date": "2026-11-17",
+  "url": "https://myetl.snu.ac.kr/courses/305248/discussion_topics/403355"
+ },
+ "FINAL1123": {
+  "title": "기말 시험 시간 · 12/10 수업시간",
+  "short": "FINAL1123",
+  "kind": "notice",
+  "date": "2026-11-23",
+  "url": ""
+ },
+ "DA1117": {
+  "title": "11/17 천물개 실제 강의",
+  "short": "DA1117",
+  "kind": "transcript",
+  "date": "2026-11-17",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/XnlrXkBbWm5uPnaj?fileMetaId=ed7b6087-eeee-4aae-a058-9ad6b663a37b"
  }
 }

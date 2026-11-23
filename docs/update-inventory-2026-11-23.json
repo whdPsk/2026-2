@@ -1,0 +1,220 @@
+{
+  "checkedAt": "2026-11-23T11:45:00+09:00",
+  "scope": "11/16 이후 신규 자료와 기존 결석일 재대조",
+  "items": [
+    {
+      "course": "advmech",
+      "source": "FINAL1123",
+      "date": "2026-11-23",
+      "url": "https://myetl.snu.ac.kr/courses/305140/discussion_topics/404975",
+      "items": 1,
+      "status": "반영",
+      "location": "content/advmech/lectures.json; ledger/FINAL1123.json"
+    },
+    {
+      "course": "advmech",
+      "source": "DM1116",
+      "date": "2026-11-16",
+      "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/4699i5wqUmOxOy6n?fileMetaId=b80ed726-3657-420c-91c8-70f13b3ae21c",
+      "items": 4,
+      "status": "반영",
+      "location": "content/advmech/lectures.json; ledger/DM1116.json"
+    },
+    {
+      "course": "advmech",
+      "source": "ABS1118",
+      "date": "2026-11-18",
+      "url": "",
+      "items": 1,
+      "status": "반영",
+      "location": "content/advmech/lectures.json; ledger/ABS1118.json"
+    },
+    {
+      "course": "advmech",
+      "source": "M1123",
+      "date": "2026-11-23",
+      "url": "https://drive.google.com/file/d/1SUcdES5ldAbcWrD8g8_GLRdByNuFyrKU/view",
+      "items": 4,
+      "status": "반영",
+      "location": "content/advmech/lectures.json; ledger/M1123.json"
+    },
+    {
+      "course": "astro1",
+      "source": "A20",
+      "date": "2026-11-17",
+      "url": "https://drive.google.com/file/d/14jqbluBhUKgR8_Mxy8CUgpyku73n5kVM/view",
+      "items": 5,
+      "status": "반영",
+      "location": "content/astro1/lectures.json; ledger/A20.json"
+    },
+    {
+      "course": "astro1",
+      "source": "A21",
+      "date": "2026-11-19",
+      "url": "https://drive.google.com/file/d/1XXhoYkSGxANG4ynuTRj8y9SJhqCidgtM/view",
+      "items": 5,
+      "status": "반영",
+      "location": "content/astro1/lectures.json; ledger/A21.json"
+    },
+    {
+      "course": "astro1",
+      "source": "DA1117",
+      "date": "2026-11-17",
+      "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/XnlrXkBbWm5uPnaj?fileMetaId=ed7b6087-eeee-4aae-a058-9ad6b663a37b",
+      "items": 7,
+      "status": "반영",
+      "location": "content/astro1/lectures.json; ledger/DA1117.json"
+    },
+    {
+      "course": "astro1",
+      "source": "AHW6",
+      "date": "2026-11-19",
+      "url": "https://myetl.snu.ac.kr/courses/305248/assignments/392578",
+      "items": 5,
+      "status": "반영",
+      "location": "content/astro1/lectures.json; ledger/AHW6.json"
+    },
+    {
+      "course": "astro1",
+      "source": "AN1117",
+      "date": "2026-11-17",
+      "url": "https://myetl.snu.ac.kr/courses/305248/discussion_topics/403355",
+      "items": 1,
+      "status": "반영",
+      "location": "content/astro1/lectures.json; ledger/AN1117.json"
+    },
+    {
+      "course": "astro1",
+      "source": "FINAL1123",
+      "date": "2026-11-23",
+      "url": "",
+      "items": 1,
+      "status": "반영",
+      "location": "content/astro1/lectures.json; ledger/FINAL1123.json"
+    },
+    {
+      "course": "emwaves",
+      "source": "DE1116",
+      "date": "2026-11-16",
+      "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/KJmXeTCuf-RcrqR_?fileMetaId=84748a8d-d7f9-4540-bd22-97134f411fa8",
+      "items": 5,
+      "status": "반영",
+      "location": "content/emwaves/lectures.json; ledger/DE1116.json"
+    },
+    {
+      "course": "emwaves",
+      "source": "DE1123A",
+      "date": "2026-11-23",
+      "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/vNImdfCcqh_TDz06?fileMetaId=6051ff7e-80f3-4b03-9b67-d38b735440f9",
+      "items": 4,
+      "status": "반영",
+      "location": "content/emwaves/lectures.json; ledger/DE1123A.json"
+    },
+    {
+      "course": "emwaves",
+      "source": "DE1123B",
+      "date": "2026-11-23",
+      "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/M8vxwkG72ujETIDz?fileMetaId=d05ff153-6a28-4f4a-80ab-0a8167d86e28",
+      "items": 3,
+      "status": "반영",
+      "location": "content/emwaves/lectures.json; ledger/DE1123B.json"
+    },
+    {
+      "course": "emwaves",
+      "source": "EH1116",
+      "date": "2026-11-16",
+      "url": "https://myetl.snu.ac.kr/courses/305132/assignments/391849",
+      "items": 3,
+      "status": "반영",
+      "location": "content/emwaves/lectures.json; ledger/EH1116.json"
+    },
+    {
+      "course": "emwaves",
+      "source": "EH1118",
+      "date": "2026-11-18",
+      "url": "https://myetl.snu.ac.kr/courses/305132/assignments/392393",
+      "items": 3,
+      "status": "반영",
+      "location": "content/emwaves/lectures.json; ledger/EH1118.json"
+    },
+    {
+      "course": "emwaves",
+      "source": "EN1117",
+      "date": "2026-11-17",
+      "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403400",
+      "items": 3,
+      "status": "반영",
+      "location": "content/emwaves/lectures.json; ledger/EN1117.json"
+    },
+    {
+      "course": "emwaves",
+      "source": "EN1118Q",
+      "date": "2026-11-18",
+      "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403634",
+      "items": 1,
+      "status": "반영",
+      "location": "content/emwaves/lectures.json; ledger/EN1118Q.json"
+    },
+    {
+      "course": "emwaves",
+      "source": "EN1118C",
+      "date": "2026-11-18",
+      "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403736",
+      "items": 1,
+      "status": "반영",
+      "location": "content/emwaves/lectures.json; ledger/EN1118C.json"
+    },
+    {
+      "course": "emwaves",
+      "source": "EN1118H",
+      "date": "2026-11-18",
+      "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403587",
+      "items": 1,
+      "status": "반영",
+      "location": "content/emwaves/lectures.json; ledger/EN1118H.json"
+    },
+    {
+      "course": "emwaves",
+      "source": "EN1120",
+      "date": "2026-11-20",
+      "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/404531",
+      "items": 1,
+      "status": "반영",
+      "location": "content/emwaves/lectures.json; ledger/EN1120.json"
+    }
+  ],
+  "pending": [
+    {
+      "course": "advmech",
+      "id": "23BYxuMwyzJgmJja",
+      "status": "11/23 녹음 진행 중; 강의안만 반영"
+    },
+    {
+      "course": "astro1",
+      "id": "AHW6",
+      "status": "문항 번호·마감 확인; 교재 문제 원문과 풀이 대조 대기"
+    },
+    {
+      "course": "all",
+      "status": "기공실 새 eTL 공지는 이번 강의노트 업데이트에서 별도 재점검하지 않음; 퀴즈 일정은 사용자 확정 정보 유지"
+    },
+    {
+      "course": "all",
+      "status": "제출본·모범답안 PDF는 사용자 직접 확인 대상으로 내용 열람 제외"
+    }
+  ],
+  "coverage": {
+    "advmech": {
+      "minutes": 2695
+    },
+    "astro1": {
+      "minutes": 2380
+    },
+    "emwaves": {
+      "minutes": 1815
+    },
+    "mechexp": {
+      "minutes": 695
+    }
+  }
+}

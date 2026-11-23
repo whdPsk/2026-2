@@ -18,7 +18,7 @@ for (const day of dated.days) {
   assert(duration(day.rows.filter((r) => r.kind === 'sleep')) >= 300, 'Sleep allocation shortened');
   const dow = new Date(day.date + 'T12:00:00Z').getUTCDay();
   if (dow === 4 && day.date <= '2026-12-10') assert.equal(duration(day.rows.filter((r) => r.title.startsWith('기공실 보고서'))), day.date === '2026-11-26' ? 0 : 300);
-  if (day.date >= '2026-12-10') assert(!day.rows.some((r) => r.slug === 'astro1' && r.kind === 'study'), 'Astro study after exam');
+  assert(!day.rows.some((r) => r.slug === 'astro1' && r.kind === 'study' && (day.date > '2026-12-10' || day.date === '2026-12-10' && r.end > 840)), 'Astro study after exam');
 }
 for (const c of data.courses) {
   for (const unit of c.units) assert(datedRows.some((r) => r.slug === c.slug && r.units?.includes(unit.id)), `Dated plan omitted ${c.slug}/${unit.id}`);
@@ -27,7 +27,7 @@ for (const c of data.courses) {
     for (const id of row.units || []) assert(meta.units.some((u) => u.id === id), `Broken unit link ${c.slug}/${id}`);
   }
 }
-for (const date of ['2026-11-23', '2026-11-30', '2026-12-02', '2026-12-07', '2026-12-09']) {
+for (const date of ['2026-11-23', '2026-11-30', '2026-12-02', '2026-12-07']) {
   for (const slug of ['emwaves', 'advmech']) assert(datedRows.some((r) => r.date === date && r.slug === slug && r.phase === '새 강의 복습'));
 }
 assert(datedRows.some((r) => r.date === '2026-11-26' && r.title === '11/25 전파광 복습 보충'));
@@ -38,6 +38,17 @@ assert.equal(mechanicsExam[0].date, '2026-12-17');
 assert.equal(mechanicsExam[0].start, 19 * 60);
 assert.equal(mechanicsExam[0].end, 22 * 60);
 assert.equal(data.courses.find((c) => c.slug === 'advmech').exam.tentative, false);
+const focus = [['astro1','2026-12-09','2026-12-10',840],['mechexp','2026-12-11','2026-12-12',1110],['emwaves','2026-12-13','2026-12-14',570],['advmech','2026-12-16','2026-12-17',1140]];
+for (const [slug,prev,date,start] of focus) {
+  const tasks = datedRows.filter(r => (r.date === prev || r.date === date && r.start < start) && r.slug && ['study','assignment'].includes(r.kind));
+  assert(tasks.every(r => r.slug === slug), 'Another subject in exam focus window: '+slug);
+}
+const astroExam = datedRows.find(r => r.kind === 'exam' && r.title === '천체물리학개론1 기말고사');
+assert.equal(astroExam.date,'2026-12-10'); assert.equal(astroExam.start,840); assert.equal(astroExam.end,915);
+const hw6 = datedRows.filter(r=>r.title.includes('HW6'));
+assert.equal(duration(hw6),300); assert(hw6.every(r=>r.date<'2026-11-26'||r.date==='2026-11-26'&&r.end<=840));
+for (const title of ['12/9 전파광 복습 보충','12/9 고급역학 복습 보충','12/9 전파광 과제 풀이·최종 제출']) assert(datedRows.some(r=>r.title===title));
+assert.equal(duration(datedRows.filter(r=>r.title==='기공실 150분 통합 모의 퀴즈')),150);
 const datedBackup = { type: 'dated-final-plan', version: 1, records: { [datedRows[0].id]: { done: true, actual: 35, note: '다시 풀기' } } };
 assert.deepEqual(readDatedRecords(JSON.stringify(datedBackup)), datedBackup.records);
 assert.throws(() => readDatedRecords(JSON.stringify({ ...datedBackup, type: 'legacy' })));

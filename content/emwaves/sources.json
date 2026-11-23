@@ -129,5 +129,75 @@
   "short": "MID2026E",
   "kind": "notice",
   "date": "2026-11-16"
+ },
+ "DE1116": {
+  "title": "11/16 실제 강의 · 복사 일률·반작용·자기력",
+  "short": "DE1116",
+  "kind": "transcript",
+  "date": "2026-11-16",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/KJmXeTCuf-RcrqR_?fileMetaId=84748a8d-d7f9-4540-bd22-97134f411fa8"
+ },
+ "DE1123A": {
+  "title": "11/23 전반 · 시간 지연·길이 수축·동시성과 Lorentz 변환",
+  "short": "DE1123A",
+  "kind": "transcript",
+  "date": "2026-11-23",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/vNImdfCcqh_TDz06?fileMetaId=6051ff7e-80f3-4b03-9b67-d38b735440f9"
+ },
+ "DE1123B": {
+  "title": "11/23 후반 · 속도 변환과 4벡터 도입",
+  "short": "DE1123B",
+  "kind": "transcript",
+  "date": "2026-11-23",
+  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/M8vxwkG72ujETIDz?fileMetaId=d05ff153-6a28-4f4a-80ab-0a8167d86e28"
+ },
+ "EH1116": {
+  "title": "11/16 과제 · Problem 11.15와 선택 유도",
+  "short": "EH1116",
+  "kind": "notice",
+  "date": "2026-11-16",
+  "url": "https://myetl.snu.ac.kr/courses/305132/assignments/391849"
+ },
+ "EH1118": {
+  "title": "11/18 결석 보충 · dumbbell 유도·시간 지연 예습",
+  "short": "EH1118",
+  "kind": "notice",
+  "date": "2026-11-18",
+  "url": "https://myetl.snu.ac.kr/courses/305132/assignments/392393"
+ },
+ "EN1117": {
+  "title": "중간 채점·시험지/해설 공개 · 출제 형식 참고",
+  "short": "EN1117",
+  "kind": "notice",
+  "date": "2026-11-17",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403400"
+ },
+ "EN1118Q": {
+  "title": "중간 4번 채점 보충 · 주어지지 않은 조건 주의",
+  "short": "EN1118Q",
+  "kind": "notice",
+  "date": "2026-11-18",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403634"
+ },
+ "EN1118C": {
+  "title": "채점 이의 신청 변경 · 11/20 일정",
+  "short": "EN1118C",
+  "kind": "notice",
+  "date": "2026-11-18",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403736"
+ },
+ "EN1118H": {
+  "title": "11/9 과제 채점·모범답안 공개",
+  "short": "EN1118H",
+  "kind": "notice",
+  "date": "2026-11-18",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403587"
+ },
+ "EN1120": {
+  "title": "미면담 학생 대상 다음 주 개별 면담 안내",
+  "short": "EN1120",
+  "kind": "notice",
+  "date": "2026-11-20",
+  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/404531"
  }
 }

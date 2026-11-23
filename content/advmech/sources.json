@@ -105,9 +105,31 @@
     "url": "https://myetl.snu.ac.kr/courses/305140/modules/items/1710603"
   },
   "FINAL1123": {
-    "title": "고급역학 기말 일정 확정 · 사용자 전달",
+    "title": "고급역학 기말 일정 확정 · eTL 11/23",
     "short": "FINAL1123",
     "kind": "notice",
-    "date": "2026-11-23"
+    "date": "2026-11-23",
+    "url": "https://myetl.snu.ac.kr/courses/305140/discussion_topics/404975"
+  },
+  "DM1116": {
+    "title": "11/16 실제 강의 · 정규좌표·결합 진자·분자 진동",
+    "short": "DM1116",
+    "kind": "transcript",
+    "date": "2026-11-16",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/4699i5wqUmOxOy6n?fileMetaId=b80ed726-3657-420c-91c8-70f13b3ae21c"
+  },
+  "ABS1118": {
+    "title": "11/18 결석 · 녹음 없음",
+    "short": "ABS1118",
+    "kind": "notice",
+    "date": "2026-11-18",
+    "url": ""
+  },
+  "M1123": {
+    "title": "11/23 강의안 · Loaded string과 연속 극한",
+    "short": "M1123",
+    "kind": "ppt",
+    "date": "2026-11-23",
+    "url": "https://drive.google.com/file/d/1SUcdES5ldAbcWrD8g8_GLRdByNuFyrKU/view"
   }
 }
