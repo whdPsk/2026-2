@@ -1,7 +1,7 @@
 {
   "version": 1,
   "start": "2026-11-23",
-  "end": "2026-12-14",
+  "end": "2026-12-17",
   "title": "11/23부터 기말까지",
   "notes": [
     "11/23부터 시작. 중간 이후 내용은 미복습 상태로 가정했으며, 기존 노트의 강의 반영 여부를 개인 숙달로 간주하지 않습니다.",
@@ -12,11 +12,12 @@
     "11/25 미팅은 출근시간 내 진행. 11/24 저녁부터 집중 준비하고, 11/25 저녁 회복 후 강의 복습·과제는 11/26 오전에 보충합니다.",
     "논문리뷰 준비 11/28·29·30 각 2시간. 12/1 발표. 중물실 PCB는 12/1 전후 도착을 가정하고 실험 14.5시간을 별도 예약했습니다. 실제 소요시간은 첫 가동 후 재추정합니다.",
     "중물실 실험·12/11 조원 회의는 조율 전 예약입니다. 12/8 결과 초안, 12/13 포스터 제출 목표, 공식 마감 12/14.",
-    "천물개 12/10 시험 시각 미확인, 고급역학 12/14 저녁 예상. 넓게 표시한 시험 예약 구간은 실제 시험 시간이 아닙니다. 확인 후 일정 조정이 필요합니다.",
+    "천물개 12/10 시험 시각은 미확인입니다. 고급역학은 12/17(목) 19:00–22:00 확정(11/23 사용자 전달)이며 시험 장소는 별도 확인합니다.",
     "예습으로 남은 단원은 실제 강의·과제에 맞춰 조정합니다. 고급역학 강체 잔여·전파광 지연 퍼텐셜은 중간 이후 진도 연결을 위해 포함했습니다.",
     "완료·실제 시간·메모는 이 브라우저에 저장됩니다. 날짜가 지나도 자동 완료하거나 미완료를 다른 날로 옮기지 않습니다.",
     "기공실은 12/12(토) 18:30–21:00에 고체·열·유체·진동 통합 퀴즈 1회. 공부는 12/10 천물개 시험 이후부터 12/12 직전까지 집중하고, 앞선 날짜의 기공실 공부 시간은 다른 세 과목에 배정했습니다.",
-    "공부 바로 뒤의 5~15분 휴식은 앞 공부 블록에 합쳤습니다. 추가 문제를 배정하지 않고 기존 분량 마무리·검산 여유로 사용하며, 일찍 끝나면 남은 시간은 자유롭게 쉽니다. 표시된 공부 시간은 이 여유를 포함한 예약 시간입니다. 식사·이동·수면과 그 밖의 고정 일정은 유지합니다."
+    "공부 바로 뒤의 5~15분 휴식은 앞 공부 블록에 합쳤습니다. 추가 문제를 배정하지 않고 기존 분량 마무리·검산 여유로 사용하며, 일찍 끝나면 남은 시간은 자유롭게 쉽니다. 표시된 공부 시간은 이 여유를 포함한 예약 시간입니다. 식사·이동·수면과 그 밖의 고정 일정은 유지합니다.",
+    "고급역학 확정 일정에 맞춰 계획을 12/17까지 연장했습니다. 12/14 오후·저녁은 연구실 출근으로 복구하고 마지막 점검은 12/17로 옮겼습니다. 12/15~17은 보강기간이므로 기존 수업 시간대는 보강 확인용 예비 시간으로 남깁니다. 실제 보강이 없으면 랩인턴 업무에 사용하며, 추가 보고서 등 새 마감은 공지 확인 후 반영합니다."
   ],
   "deadlines": [
     {
@@ -37,7 +38,11 @@
     },
     {
       "date": "2026-12-14",
-      "title": "전파광 09:30 / 고급역학 저녁 예상 / 포스터 마감"
+      "title": "전파광 09:30–10:50 / 중물실 포스터 마감"
+    },
+    {
+      "date": "2026-12-17",
+      "title": "고급역학 기말 19:00–22:00 확정 · 장소 확인"
     }
   ],
   "days": [
@@ -3831,9 +3836,446 @@
           "details": ""
         },
         {
-          "id": "dated:2026-12-14:1300",
+          "id": "dated:2026-12-14:confirmed-780",
           "start": 780,
-          "end": 875,
+          "end": 795,
+          "kind": "travel",
+          "title": "연구실 이동",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-14:confirmed-795",
+          "start": 795,
+          "end": 1200,
+          "kind": "lab",
+          "title": "랩인턴 업무",
+          "details": "문헌·데이터 분석·코드·연구 노트."
+        },
+        {
+          "id": "dated:2026-12-14:confirmed-1200",
+          "start": 1200,
+          "end": 1230,
+          "kind": "travel",
+          "title": "귀가·공부 장소 이동",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-14:confirmed-1230",
+          "start": 1230,
+          "end": 1260,
+          "kind": "meal",
+          "title": "저녁",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-14:confirmed-1260",
+          "start": 1260,
+          "end": 1350,
+          "kind": "study",
+          "title": "고급역학 취약점 정리",
+          "details": "기존 모의 오답을 분류하고 12/15~16 보강할 유도·계산을 고른다. 포스터 제출 완료 여부도 확인.",
+          "slug": "advmech",
+          "units": [
+            "u28",
+            "u36",
+            "u43"
+          ],
+          "phase": "개념·문제"
+        },
+        {
+          "id": "dated:2026-12-14:confirmed-1350",
+          "start": 1350,
+          "end": 1440,
+          "kind": "lab",
+          "title": "랩인턴 업무",
+          "details": "문헌·데이터 분석·코드·연구 노트."
+        }
+      ]
+    },
+    {
+      "date": "2026-12-15",
+      "rows": [
+        {
+          "id": "dated:2026-12-15:confirmed-0",
+          "start": 0,
+          "end": 30,
+          "kind": "recovery",
+          "title": "전날 작업 마무리·취침 준비",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-30",
+          "start": 30,
+          "end": 150,
+          "kind": "lab",
+          "title": "랩인턴 업무",
+          "details": "문헌·데이터 분석·코드·연구 노트."
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-150",
+          "start": 150,
+          "end": 450,
+          "kind": "sleep",
+          "title": "수면 5시간",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-450",
+          "start": 450,
+          "end": 480,
+          "kind": "meal",
+          "title": "아침·준비",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-480",
+          "start": 480,
+          "end": 570,
+          "kind": "study",
+          "title": "결합진동·정규모드 보강",
+          "details": "질량·복원력 행렬 → 직교성 → 정규좌표 → 초기조건을 한 문제에서 끝까지 재현.",
+          "slug": "advmech",
+          "units": [
+            "u26",
+            "u28",
+            "u29",
+            "u30",
+            "u31"
+          ],
+          "phase": "개념·문제"
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-570",
+          "start": 570,
+          "end": 600,
+          "kind": "travel",
+          "title": "연구실 이동",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-600",
+          "start": 600,
+          "end": 720,
+          "kind": "lab",
+          "title": "랩인턴 업무",
+          "details": "문헌·데이터 분석·코드·연구 노트."
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-720",
+          "start": 720,
+          "end": 735,
+          "kind": "meal",
+          "title": "점심",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-735",
+          "start": 735,
+          "end": 750,
+          "kind": "travel",
+          "title": "보강 장소 이동·예비",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-750",
+          "start": 750,
+          "end": 825,
+          "kind": "recovery",
+          "title": "보강 일정 확인·예비",
+          "details": "보강 여부·시각 미확인. 기존 수업 시간대를 확보하며, 보강이 없으면 랩인턴 업무로 사용."
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-825",
+          "start": 825,
+          "end": 840,
+          "kind": "travel",
+          "title": "이동·예비",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-840",
+          "start": 840,
+          "end": 915,
+          "kind": "recovery",
+          "title": "보강 일정 확인·예비",
+          "details": "보강 여부·시각 미확인. 기존 수업 시간대를 확보하며, 보강이 없으면 랩인턴 업무로 사용."
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-915",
+          "start": 915,
+          "end": 945,
+          "kind": "travel",
+          "title": "공부 장소 이동",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-945",
+          "start": 945,
+          "end": 1050,
+          "kind": "study",
+          "title": "연속계·파동 취약 유도",
+          "details": "이산 줄의 연속 극한, 경계조건·초기조건, 분산과 군속도를 연결한다.",
+          "slug": "advmech",
+          "units": [
+            "u32",
+            "u33",
+            "u34",
+            "u35",
+            "u36",
+            "u37",
+            "u38"
+          ],
+          "phase": "개념·문제"
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-1050",
+          "start": 1050,
+          "end": 1095,
+          "kind": "meal",
+          "title": "저녁",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-1095",
+          "start": 1095,
+          "end": 1140,
+          "kind": "lab",
+          "title": "랩인턴 업무",
+          "details": "문헌·데이터 분석·코드·연구 노트."
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-1140",
+          "start": 1140,
+          "end": 1320,
+          "kind": "study",
+          "title": "고급역학 180분 실전 연습",
+          "details": "확정 시험 시간과 같은 180분. 지정 과제·강의 예제를 골라 좌표·운동방정식·후속 소문항을 제한 시간 안에 연결한다.",
+          "slug": "advmech",
+          "units": [
+            "u28",
+            "u36",
+            "u43",
+            "u46"
+          ],
+          "phase": "시간 제한 풀이"
+        },
+        {
+          "id": "dated:2026-12-15:confirmed-1320",
+          "start": 1320,
+          "end": 1440,
+          "kind": "study",
+          "title": "실전 연습 채점·오답 분류",
+          "details": "첫 오류와 막힌 유도를 표시하고 12/16에 다시 풀 문제를 고른다.",
+          "slug": "advmech",
+          "units": [
+            "u28",
+            "u36",
+            "u43",
+            "u46"
+          ],
+          "phase": "개념·문제"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-16",
+      "rows": [
+        {
+          "id": "dated:2026-12-16:confirmed-0",
+          "start": 0,
+          "end": 30,
+          "kind": "recovery",
+          "title": "전날 작업 마무리·취침 준비",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-16:confirmed-30",
+          "start": 30,
+          "end": 150,
+          "kind": "lab",
+          "title": "랩인턴 업무",
+          "details": "문헌·데이터 분석·코드·연구 노트."
+        },
+        {
+          "id": "dated:2026-12-16:confirmed-150",
+          "start": 150,
+          "end": 450,
+          "kind": "sleep",
+          "title": "수면 5시간",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-16:confirmed-450",
+          "start": 450,
+          "end": 480,
+          "kind": "meal",
+          "title": "아침·준비",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-16:confirmed-480",
+          "start": 480,
+          "end": 540,
+          "kind": "study",
+          "title": "상대론 핵심 유도 재현",
+          "details": "Lorentz 변환·4운동량·불변량·Lagrangian을 연결하고 기준계와 부호를 검산.",
+          "slug": "advmech",
+          "units": [
+            "u40",
+            "u43",
+            "u44",
+            "u45",
+            "u46"
+          ],
+          "phase": "개념·문제"
+        },
+        {
+          "id": "dated:2026-12-16:confirmed-540",
+          "start": 540,
+          "end": 570,
+          "kind": "travel",
+          "title": "보강 장소 이동·예비",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-16:confirmed-570",
+          "start": 570,
+          "end": 645,
+          "kind": "recovery",
+          "title": "보강 일정 확인·예비",
+          "details": "보강 여부·시각 미확인. 기존 수업 시간대를 확보하며, 보강이 없으면 랩인턴 업무로 사용."
+        },
+        {
+          "id": "dated:2026-12-16:confirmed-645",
+          "start": 645,
+          "end": 660,
+          "kind": "travel",
+          "title": "이동·예비",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-16:confirmed-660",
+          "start": 660,
+          "end": 735,
+          "kind": "recovery",
+          "title": "보강 일정 확인·예비",
+          "details": "보강 여부·시각 미확인. 기존 수업 시간대를 확보하며, 보강이 없으면 랩인턴 업무로 사용."
+        },
+        {
+          "id": "dated:2026-12-16:confirmed-735",
+          "start": 735,
+          "end": 765,
+          "kind": "meal",
+          "title": "점심",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-16:confirmed-765",
+          "start": 765,
+          "end": 795,
+          "kind": "travel",
+          "title": "연구실 이동",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-16:confirmed-795",
+          "start": 795,
+          "end": 1200,
+          "kind": "lab",
+          "title": "랩인턴 업무",
+          "details": "문헌·데이터 분석·코드·연구 노트."
+        },
+        {
+          "id": "dated:2026-12-16:confirmed-1200",
+          "start": 1200,
+          "end": 1230,
+          "kind": "travel",
+          "title": "귀가·공부 장소 이동",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-16:confirmed-1230",
+          "start": 1230,
+          "end": 1260,
+          "kind": "meal",
+          "title": "저녁",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-16:confirmed-1260",
+          "start": 1260,
+          "end": 1350,
+          "kind": "study",
+          "title": "실전 오답 백지 재시험",
+          "details": "12/15 실전에서 틀린 문제를 해설 없이 다시 풀고 첫 오류가 사라졌는지 확인.",
+          "slug": "advmech",
+          "units": [
+            "u28",
+            "u36",
+            "u43",
+            "u46"
+          ],
+          "phase": "개념·문제"
+        },
+        {
+          "id": "dated:2026-12-16:confirmed-1350",
+          "start": 1350,
+          "end": 1440,
+          "kind": "study",
+          "title": "지정 과제·강의 예제 최종 점검",
+          "details": "미해결 문제와 교수 강조 유도부터 확인. 새 단원을 늘리지 않고 취약 풀이를 마무리.",
+          "slug": "advmech",
+          "units": [
+            "u23",
+            "u24",
+            "u25",
+            "u29",
+            "u38",
+            "u45"
+          ],
+          "phase": "개념·문제"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-17",
+      "rows": [
+        {
+          "id": "dated:2026-12-17:confirmed-0",
+          "start": 0,
+          "end": 30,
+          "kind": "recovery",
+          "title": "전날 작업 마무리·취침 준비",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-17:confirmed-30",
+          "start": 30,
+          "end": 150,
+          "kind": "sleep",
+          "title": "시험 전 추가 수면",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-17:confirmed-150",
+          "start": 150,
+          "end": 450,
+          "kind": "sleep",
+          "title": "수면 5시간",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-17:confirmed-450",
+          "start": 450,
+          "end": 480,
+          "kind": "meal",
+          "title": "아침·준비",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-17:final-check-0",
+          "start": 480,
+          "end": 575,
           "kind": "study",
           "title": "고급역학 시험 전 대표 풀이",
           "details": "결합진동·파동·상대론 중 취약한 두 풀이를 재현. 정확한 시험 시각에 맞춰 조정. 흡수한 휴식 15분은 기존 분량 마무리·검산 여유로 사용. 일찍 끝나면 블록 안에서 자유롭게 휴식.",
@@ -3846,9 +4288,9 @@
           "phase": "개념·문제"
         },
         {
-          "id": "dated:2026-12-14:1435",
-          "start": 875,
-          "end": 935,
+          "id": "dated:2026-12-17:final-check-1",
+          "start": 575,
+          "end": 635,
           "kind": "study",
           "title": "고급역학 마지막 과제 오답",
           "details": "지정 과제와 강의 예제에서 이미 틀린 문제를 재현하고 계산 중간식·검산 확인.",
@@ -3857,43 +4299,131 @@
           "phase": "개념·문제"
         },
         {
-          "id": "dated:2026-12-14:1535",
-          "start": 935,
-          "end": 990,
-          "kind": "recovery",
-          "title": "고급역학 전 휴식·포스터 제출 여부 확인",
+          "id": "dated:2026-12-17:confirmed-635",
+          "start": 635,
+          "end": 690,
+          "kind": "lab",
+          "title": "랩인턴 업무",
+          "details": "문헌·데이터 분석·코드·연구 노트."
+        },
+        {
+          "id": "dated:2026-12-17:confirmed-690",
+          "start": 690,
+          "end": 720,
+          "kind": "meal",
+          "title": "점심",
           "details": ""
         },
         {
-          "id": "dated:2026-12-14:1630",
-          "start": 990,
-          "end": 1020,
+          "id": "dated:2026-12-17:confirmed-720",
+          "start": 720,
+          "end": 750,
           "kind": "travel",
-          "title": "시험 장소 이동 예약",
+          "title": "보강 장소 이동·예비",
           "details": ""
         },
         {
-          "id": "dated:2026-12-14:1700",
-          "start": 1020,
-          "end": 1380,
-          "kind": "exam",
-          "title": "고급역학 저녁 시험 예약 · 시각 미정",
-          "details": "12/14 저녁은 사용자 예상일. 이 6시간은 식사·대기·시험을 위한 예약이며 실제 시험 시간이 아님. 공지 후 조정."
+          "id": "dated:2026-12-17:confirmed-750",
+          "start": 750,
+          "end": 825,
+          "kind": "recovery",
+          "title": "보강 일정 확인·예비",
+          "details": "보강 여부·시각 미확인. 기존 수업 시간대를 확보하며, 보강이 없으면 랩인턴 업무로 사용."
         },
         {
-          "id": "dated:2026-12-14:2300",
-          "start": 1380,
-          "end": 1410,
+          "id": "dated:2026-12-17:confirmed-825",
+          "start": 825,
+          "end": 840,
+          "kind": "travel",
+          "title": "이동·예비",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-17:confirmed-840",
+          "start": 840,
+          "end": 915,
+          "kind": "recovery",
+          "title": "보강 일정 확인·예비",
+          "details": "보강 여부·시각 미확인. 기존 수업 시간대를 확보하며, 보강이 없으면 랩인턴 업무로 사용."
+        },
+        {
+          "id": "dated:2026-12-17:confirmed-915",
+          "start": 915,
+          "end": 945,
+          "kind": "travel",
+          "title": "공부 장소 이동",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-17:confirmed-945",
+          "start": 945,
+          "end": 1005,
+          "kind": "study",
+          "title": "시험 직전 가정·단위·경계조건",
+          "details": "암기한 유도의 출발식과 적용 조건을 확인하고 이미 푼 대표 문제만 가볍게 회상.",
+          "slug": "advmech",
+          "units": [
+            "u28",
+            "u36",
+            "u43"
+          ],
+          "phase": "개념·문제"
+        },
+        {
+          "id": "dated:2026-12-17:confirmed-1005",
+          "start": 1005,
+          "end": 1035,
+          "kind": "recovery",
+          "title": "시험 전 휴식·준비물 확인",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-17:confirmed-1035",
+          "start": 1035,
+          "end": 1080,
+          "kind": "meal",
+          "title": "저녁",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-17:confirmed-1080",
+          "start": 1080,
+          "end": 1110,
+          "kind": "travel",
+          "title": "시험장 이동 · 장소 확인 필요",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-17:confirmed-1110",
+          "start": 1110,
+          "end": 1140,
+          "kind": "recovery",
+          "title": "입실·준비",
+          "details": ""
+        },
+        {
+          "id": "dated:2026-12-17:confirmed-1140",
+          "start": 1140,
+          "end": 1320,
+          "kind": "exam",
+          "title": "고급역학 기말고사 · 확정",
+          "details": "12/17(목) 19:00–22:00, 180분. 11/23 사용자 전달. 시험 장소는 별도 확인.",
+          "slug": "advmech"
+        },
+        {
+          "id": "dated:2026-12-17:confirmed-1320",
+          "start": 1320,
+          "end": 1350,
           "kind": "travel",
           "title": "귀가",
           "details": ""
         },
         {
-          "id": "dated:2026-12-14:2330",
-          "start": 1410,
+          "id": "dated:2026-12-17:confirmed-1350",
+          "start": 1350,
           "end": 1440,
           "kind": "recovery",
-          "title": "시험 마무리·휴식",
+          "title": "시험 후 휴식",
           "details": ""
         }
       ]

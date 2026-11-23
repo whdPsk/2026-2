@@ -27,7 +27,13 @@ export function defaultSettings(data) {
 }
 
 export function addCourseExams(settings, courses) {
-  return { ...settings, exams: { ...Object.fromEntries(courses.map((c) => [c.slug, { ...c.exam }])), ...settings.exams } };
+  const exams = { ...Object.fromEntries(courses.map((c) => [c.slug, { ...c.exam }])), ...settings.exams };
+  const confirmed = courses.find((c) => c.slug === 'advmech')?.exam;
+  const previous = settings.exams?.advmech;
+  if (confirmed?.confirmedAt === '2026-11-23' && !previous?.confirmedAt && ['2026-12-09', '2026-12-14'].includes(previous?.date)) {
+    exams.advmech = { ...previous, ...confirmed };
+  }
+  return { ...settings, exams };
 }
 
 export function validateSettings(settings, courses) {

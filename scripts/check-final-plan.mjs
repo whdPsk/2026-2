@@ -7,7 +7,7 @@ const data = JSON.parse(fs.readFileSync(new URL('../site/public/data/final-plan.
 const dated = data.schedule;
 validateSchedule(dated);
 assert.equal(dated.start, '2026-11-23');
-assert.equal(dated.end, '2026-12-14');
+assert.equal(dated.end, '2026-12-17');
 const datedRows = dated.days.flatMap((day) => day.rows.map((r) => ({ ...r, date: day.date })));
 const duration = (rows) => rows.reduce((n, r) => n + r.end - r.start, 0);
 assert(!datedRows.some((r) => r.slug === 'mechexp' && r.kind === 'study' && r.date < '2026-12-10'), 'Lab quiz study must stay in the final intensive period');
@@ -17,7 +17,7 @@ assert.equal(duration(datedRows.filter((r) => r.title.startsWith('논문리뷰 �
 for (const day of dated.days) {
   assert(duration(day.rows.filter((r) => r.kind === 'sleep')) >= 300, 'Sleep allocation shortened');
   const dow = new Date(day.date + 'T12:00:00Z').getUTCDay();
-  if (dow === 4) assert.equal(duration(day.rows.filter((r) => r.title.startsWith('기공실 보고서'))), day.date === '2026-11-26' ? 0 : 300);
+  if (dow === 4 && day.date <= '2026-12-10') assert.equal(duration(day.rows.filter((r) => r.title.startsWith('기공실 보고서'))), day.date === '2026-11-26' ? 0 : 300);
   if (day.date >= '2026-12-10') assert(!day.rows.some((r) => r.slug === 'astro1' && r.kind === 'study'), 'Astro study after exam');
 }
 for (const c of data.courses) {
@@ -32,6 +32,12 @@ for (const date of ['2026-11-23', '2026-11-30', '2026-12-02', '2026-12-07', '202
 }
 assert(datedRows.some((r) => r.date === '2026-11-26' && r.title === '11/25 전파광 복습 보충'));
 assert(datedRows.some((r) => r.date === '2026-12-13' && r.title === '포스터 최종 수정·검수·제출'));
+const mechanicsExam = datedRows.filter((r) => r.kind === 'exam' && r.title.includes('고급역학'));
+assert.equal(mechanicsExam.length, 1);
+assert.equal(mechanicsExam[0].date, '2026-12-17');
+assert.equal(mechanicsExam[0].start, 19 * 60);
+assert.equal(mechanicsExam[0].end, 22 * 60);
+assert.equal(data.courses.find((c) => c.slug === 'advmech').exam.tentative, false);
 const datedBackup = { type: 'dated-final-plan', version: 1, records: { [datedRows[0].id]: { done: true, actual: 35, note: '다시 풀기' } } };
 assert.deepEqual(readDatedRecords(JSON.stringify(datedBackup)), datedBackup.records);
 assert.throws(() => readDatedRecords(JSON.stringify({ ...datedBackup, type: 'legacy' })));
@@ -41,6 +47,14 @@ overlapping.days[0].rows[1].start -= 1;
 assert.throws(() => validateSchedule(overlapping));
 console.log(`Dated schedule OK: ${dated.days.length} complete days, ${datedRows.reduce((n, r) => n + studyMinutes(r), 0)} study minutes; all course units covered.`);
 const settings = defaultSettings(data);
+for (const oldDate of ['2026-12-09', '2026-12-14']) {
+  const old = structuredClone(settings);
+  old.exams.advmech = { date: oldDate, tentative: true };
+  const migrated = addCourseExams(old, data.courses);
+  assert.equal(migrated.exams.advmech.date, '2026-12-17');
+  assert.equal(migrated.exams.advmech.tentative, false);
+  assert.deepEqual(migrated.availability, old.availability);
+}
 const plan = generatePlan(data, settings);
 assert.equal(new Set(plan.backlog.map((t) => t.id)).size, plan.backlog.length, 'Repeated backlog task');
 const scheduled = new Map();
