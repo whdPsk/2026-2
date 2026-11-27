@@ -1,8 +1,8 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { defaultSettings, addCourseExams, generatePlan, taskSteps, addDays, parseWindows, readBackup } from '../site/src/finals/engine.js';
-import { validateSchedule, readDatedRecords, studyMinutes } from '../site/src/finals/dated-model.js';
-import { subjectTodos } from '../site/src/finals/todo-model.js';
+import { validateSchedule, readDatedRecords, readDatedBackup, validateTodoFields, studyMinutes } from '../site/src/finals/dated-model.js';
+import { subjectTodos, editableTodos } from '../site/src/finals/todo-model.js';
 
 const data = JSON.parse(fs.readFileSync(new URL('../site/public/data/final-plan.json', import.meta.url)));
 const dated = data.schedule;
@@ -27,6 +27,25 @@ assert.deepEqual(subjectTodos(dated, data.courses, {}, { period: 'today', today:
 assert(subjectTodos(dated, data.courses, {}, { period: 'upcoming', today: '2026-11-27' }).flatMap((g) => g.rows).every((r) => r.date >= '2026-11-27'));
 assert.equal(subjectTodos(dated, data.courses, {}, { subject: 'astro1' }).length, 1);
 assert.equal(subjectTodos(dated, data.courses, {}, { period: 'today', today: '2026-12-18' }).flatMap((g) => g.rows).length, 0);
+const customTask = { id: 'dated:custom:test-task', title: '추가 공부 <메모>', slug: 'advmech', date: '2026-12-18', details: '추가 내용' };
+const editedTask = { title: '옮긴 할 일', slug: 'emwaves', date: '2026-12-01', details: '새 내용' };
+const personalState = readDatedBackup(JSON.stringify({ type: 'dated-final-plan', version: 2, records: todoRecords, customTodos: [customTask], todoEdits: { [sampleTodo.id]: editedTask } }));
+const personalRows = editableTodos(dated, personalState);
+assert.equal(personalRows.length, todoRows.length + 1);
+assert.equal(personalRows.find((r) => r.id === sampleTodo.id).title, editedTask.title);
+assert.equal(personalRows.find((r) => r.id === sampleTodo.id).date, '2026-12-01');
+assert.equal(personalRows.find((r) => r.id === sampleTodo.id).original.date, sampleTodo.date);
+assert(personalRows.find((r) => r.id === sampleTodo.id).floating);
+assert.deepEqual(personalRows.find((r) => r.id === sampleTodo.id).units, [], 'Changing a subject must not retain links to old subject units');
+assert.equal(subjectTodos(dated, data.courses, personalState.records, { ...personalState, period: 'today', today: '2026-12-18' }).flatMap((g) => g.rows)[0].id, customTask.id);
+assert.equal(subjectTodos(dated, data.courses, personalState.records, { ...personalState, hideDone: true }).flatMap((g) => g.rows).some((r) => r.id === sampleTodo.id), false, 'Edits must preserve completion');
+assert.deepEqual(readDatedBackup(JSON.stringify({ type: 'dated-final-plan', version: 1, records: todoRecords })).customTodos, [], 'Old record backups still load');
+assert.equal(validateTodoFields({ ...customTask, date: '' }).date, '');
+assert.throws(() => validateTodoFields({ ...customTask, date: '2026-02-30' }));
+assert.throws(() => validateTodoFields({ ...customTask, title: '  ' }));
+assert.throws(() => validateTodoFields({ ...customTask, slug: '<script>' }));
+assert.throws(() => readDatedBackup(JSON.stringify({ type: 'dated-final-plan', version: 2, records: {}, customTodos: [customTask, customTask], todoEdits: {} })));
+assert.equal(editableTodos(dated).find((r) => r.id === sampleTodo.id).title, sampleTodo.title, 'Editing does not mutate the source schedule');
 const duration = (rows) => rows.reduce((n, r) => n + r.end - r.start, 0);
 assert(!datedRows.some((r) => r.slug === 'mechexp' && r.kind === 'study' && r.date < '2026-12-10'), 'Lab quiz study must stay in the final intensive period');
 assert.equal(datedRows.filter((r) => r.kind === 'exam' && r.title.includes('기계공학실험')).length, 1);
