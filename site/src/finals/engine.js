@@ -33,6 +33,11 @@ export function addCourseExams(settings, courses) {
   if (confirmed?.confirmedAt === '2026-11-23' && !previous?.confirmedAt && ['2026-12-09', '2026-12-14'].includes(previous?.date)) {
     exams.advmech = { ...previous, ...confirmed };
   }
+  const astro = courses.find((c) => c.slug === 'astro1')?.exam;
+  const oldAstro = settings.exams?.astro1;
+  if (astro?.confirmedAt === '2026-11-27' && oldAstro?.date === '2026-12-10' && (!oldAstro.confirmedAt || oldAstro.confirmedAt < astro.confirmedAt)) {
+    exams.astro1 = { ...oldAstro, ...astro };
+  }
   return { ...settings, exams };
 }
 

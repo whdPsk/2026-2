@@ -1,0 +1,148 @@
+{
+  "checked_at_kst": "2026-11-27T11:35:00+09:00",
+  "scope": "11/23 점검 이후 신규·수정 자료, 기존 목록과 겹침 대조",
+  "drive": [
+    {
+      "id": "1hlvtDC0ZzE9qSCh1sl8dpKHLxjdD35EN",
+      "title": "HW3-1.pdf",
+      "modified_at": "2026-11-25T02:00:52.361Z",
+      "course": "advmech"
+    },
+    {
+      "id": "1QW-ISiKPOaSCmU6UszAAIwEtatP18MCK",
+      "title": "Lecture_Note_Chapter_13_20261125.pdf",
+      "modified_at": "2026-11-25T01:59:57.136Z",
+      "course": "advmech"
+    },
+    {
+      "id": "1SUcdES5ldAbcWrD8g8_GLRdByNuFyrKU",
+      "title": "Lecture_Note_Chapter_12_20261123.pdf",
+      "modified_at": "2026-11-25T01:59:55.872Z",
+      "course": "advmech"
+    },
+    {
+      "id": "11wj3ryg8sRLIlAIG0zuzR1FjRhi65J_P",
+      "title": "Lecture23_SNR.pdf",
+      "modified_at": "2026-11-27T02:12:19.527Z",
+      "course": "astro1"
+    },
+    {
+      "id": "1ZAKrsoOR5VuVYjx3tvPJV_9qD66i7acx",
+      "title": "Lecture22_GravInstability.pdf",
+      "modified_at": "2026-11-24T05:03:54.992Z",
+      "course": "astro1"
+    }
+  ],
+  "daglo": [
+    {
+      "course": "advmech",
+      "date": "2026-11-23",
+      "id": "23BYxuMwyzJgmJja",
+      "duration": "1:14:06",
+      "ledger": "DM1123",
+      "template": "완료",
+      "status": "전체 스크립트 2페이지 대조"
+    },
+    {
+      "course": "advmech",
+      "date": "2026-11-25",
+      "id": "M4ABO0zKxZ5P6ZMe",
+      "duration": "1:03:53",
+      "ledger": "DM1125",
+      "template": "완료",
+      "status": "전체 스크립트 2페이지 대조; 마지막 39초 발언 불명확"
+    },
+    {
+      "course": "emwaves",
+      "date": "2026-11-25",
+      "id": "2p7JDIdmrVItEFwJ",
+      "duration": "1:16:20",
+      "ledger": "DE1125",
+      "template": "완료",
+      "status": "전체 스크립트 2페이지 대조; 인식 누락 많고 마지막 timestamp 1:07:36 이후 텍스트 없음"
+    },
+    {
+      "course": "astro1",
+      "date": "2026-11-24",
+      "id": "PPNiddiZZiXkgRu6",
+      "duration": "1:12:24",
+      "ledger": "DA1124",
+      "template": "완료",
+      "status": "전체 스크립트 2페이지 대조"
+    },
+    {
+      "course": "astro1",
+      "date": "2026-11-26",
+      "id": "n18iZFS7jfy9AS-8",
+      "duration": "1:13:52",
+      "ledger": "DA1126",
+      "template": "완료",
+      "status": "전체 스크립트 2페이지 대조"
+    }
+  ],
+  "etl": {
+    "advmech": {
+      "announcements": [
+        "405803"
+      ],
+      "assignments": [
+        "393508"
+      ],
+      "modules": [
+        "1720843",
+        "1722140"
+      ]
+    },
+    "emwaves": {
+      "announcements": [
+        "405085",
+        "405396",
+        "405087"
+      ],
+      "assignments": [
+        "393294",
+        "393935"
+      ]
+    },
+    "astro1": {
+      "announcements": [
+        "406802"
+      ],
+      "modules": [
+        "1720793",
+        "1723448"
+      ]
+    },
+    "mechexp": {
+      "course": "302449",
+      "announcements": [
+        "380583",
+        "402277",
+        "394774"
+      ],
+      "other_course": "306595"
+    }
+  },
+  "ledger": {
+    "new_sources": 15,
+    "new_units": 71,
+    "revised_sources": [
+      "M1123"
+    ],
+    "mapped_new_units": 71,
+    "meaning": "장부 항목의 표시 연결 검증이며 전체 원본 완전 복원이나 모든 과거 누락 해소를 뜻하지 않음"
+  },
+  "pending": [
+    "전파광 11/25 STT 불명확한 충돌 상세·마지막 구간",
+    "고급역학 11/25 마지막 짧은 발언",
+    "기존 결석일 실제 수업의 상세 끝 지점",
+    "고급역학 13.4 이후·천물개 정밀 상사해와 후기 진화·비리얼의 후속 실제 강의",
+    "전자책 전수 대조, 이전 갱신의 미확인 목록 유지",
+    "기공실 Drive 족보·교재의 신규 파일 전수 재탐색은 이번 범위에 포함하지 않음"
+  ],
+  "excluded": [
+    "제출본·모범답안 PDF 원문",
+    "개인 성적·개인 연락처",
+    "기공실 보고서 내용"
+  ]
+}

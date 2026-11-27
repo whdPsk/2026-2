@@ -1,526 +1,561 @@
 {
- "L07": {
-  "title": "Lecture07 MovingCharges·Bremsstrahlung (PPT)",
-  "short": "PPT07",
-  "kind": "ppt",
-  "url": "https://drive.google.com/file/d/1dkTArTElJftYuWGHJdTUN8_EekVby0IC/view",
-  "date": "2026-09-22"
- },
- "S0922": {
-  "title": "9/22 강의 속기 (0922_천물개1.txt)",
-  "short": "속기9/22",
-  "kind": "transcript",
-  "url": "https://drive.google.com/file/d/1oQi7sm8baixTwvRatHisL0ujZv6qBum4/view",
-  "date": "2026-09-22"
- },
- "L01": {
-  "title": "Lecture01 Radiation Basics (PPT)",
-  "short": "L01",
-  "kind": "ppt",
-  "date": "2026-09-01",
-  "url": "https://drive.google.com/file/d/1LAAzQHDUNC5YArQZmeAELe2TPmzbyvup/view"
- },
- "S0901": {
-  "title": "9/1 강의 속기 (0901_천물개1.txt)",
-  "short": "속기9/1",
-  "kind": "transcript",
-  "date": "2026-09-01",
-  "url": "https://drive.google.com/file/d/1DITEFSqjGP68P9Lcc9zYv8XIWWvA9orm/view"
- },
- "L02": {
-  "title": "Lecture02 FlippedLearning (PPT)",
-  "short": "L02",
-  "kind": "ppt",
-  "date": "2026-09-03",
-  "url": "https://drive.google.com/file/d/1gPGLOHRbmOkz3DM_AEOMZW4xXfqxUepY/view"
- },
- "S0903": {
-  "title": "9/3 강의 속기 (0903_천물개1.txt)",
-  "short": "속기9/3",
-  "kind": "transcript",
-  "date": "2026-09-03",
-  "url": "https://drive.google.com/file/d/1Kdk5ivLTpPT15N5zVThsneIQb87Tdf1d/view"
- },
- "L03": {
-  "title": "Lecture03 Radiation (PPT)",
-  "short": "L03",
-  "kind": "ppt",
-  "date": "2026-09-08",
-  "url": "https://drive.google.com/file/d/1E3-KLxdHuL9rfDaSWLjhW7wQU8KwmeTJ/view"
- },
- "S0908": {
-  "title": "9/8 강의 속기 (0908_천물개1.txt)",
-  "short": "속기9/8",
-  "kind": "transcript",
-  "date": "2026-09-08",
-  "url": "https://drive.google.com/file/d/1dfjnZGiNFWL5CxWjgqlWurCKeJu6K2z2/view"
- },
- "L04": {
-  "title": "Lecture04 LineRadiation (PPT)",
-  "short": "L04",
-  "kind": "ppt",
-  "date": "2026-09-10",
-  "url": "https://drive.google.com/file/d/1O3OXvDeu-FHZliMc9HTbHUA3KMmeReSD/view"
- },
- "S0910": {
-  "title": "9/10 강의 속기 (0910_천물개1.txt)",
-  "short": "속기9/10",
-  "kind": "transcript",
-  "date": "2026-09-10",
-  "url": "https://drive.google.com/file/d/1dYRCjed0wJeDZjTxUAhPn840gY7UpD8Z/view"
- },
- "L05": {
-  "title": "Lecture05 EMWaves (PPT)",
-  "short": "L05",
-  "kind": "ppt",
-  "date": "2026-09-15",
-  "url": "https://drive.google.com/file/d/1fubk_xzIoxQ4TwtXZccMriK1-Uo8E_77/view"
- },
- "S0915": {
-  "title": "9/15 강의 속기 (0915_천물개1.txt)",
-  "short": "속기9/15",
-  "kind": "transcript",
-  "date": "2026-09-15",
-  "url": "https://drive.google.com/file/d/1HF7gfyUdjYxqa2cj-sgletGeDvPdNtdX/view"
- },
- "L06": {
-  "title": "Lecture06 MovingCharges (PPT)",
-  "short": "L06",
-  "kind": "ppt",
-  "date": "2026-09-17",
-  "url": "https://drive.google.com/file/d/193_66wKxjQe2Sk7uzRM0aZJLqXwkji3E/view"
- },
- "S0917": {
-  "title": "9/17 강의 속기 (0917_천물개1.txt)",
-  "short": "속기9/17",
-  "kind": "transcript",
-  "date": "2026-09-17",
-  "url": "https://drive.google.com/file/d/1RAuvHqD5vRnKA-j-OPnwy59n4iVuE_36/view"
- },
- "L08": {
-  "title": "Lecture08 Bremsstrahlung (PPT)",
-  "short": "L08",
-  "kind": "ppt",
-  "date": "2026-09-29",
-  "url": "https://drive.google.com/file/d/11CnmhTaodYbqr1xqbrLneBvcsfl9c1MX/view"
- },
- "D0929": {
-  "title": "9/29 강의 녹음 (다글로 「플라즈마 입자 충돌과 쿨롱 로그」)",
-  "short": "녹음9/29",
-  "kind": "transcript",
-  "date": "2026-09-29"
- },
- "F01": {
-  "title": "플립 01 · 복사 기초 (다글로 스크립트)",
-  "short": "플립01",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F02": {
-  "title": "플립 02 · 복사세기 (다글로 스크립트)",
-  "short": "플립02",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F03": {
-  "title": "플립 03 · 플럭스밀도와 복사압 (다글로 스크립트)",
-  "short": "플립03",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F04": {
-  "title": "플립 04 · 방출 또는 흡수 대기 (다글로 스크립트)",
-  "short": "플립04",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F05": {
-  "title": "플립 05 · 일반적인 대기 (다글로 스크립트)",
-  "short": "플립05",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F06": {
-  "title": "플립 06 · 키르히호프의 복사 법칙 (다글로 스크립트)",
-  "short": "플립06",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F07": {
-  "title": "플립 07 · 아인슈타인 계수 (다글로 스크립트)",
-  "short": "플립07",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F08": {
-  "title": "플립 08 · 방출계수 (다글로 스크립트)",
-  "short": "플립08",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F09": {
-  "title": "플립 09 · 키르히호프의 분광 법칙 (다글로 스크립트)",
-  "short": "플립09",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F10": {
-  "title": "플립 10 · 평면 전자기파 (다글로 스크립트)",
-  "short": "플립10",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F11": {
-  "title": "플립 11 · 편광 (다글로 스크립트)",
-  "short": "플립11",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F12": {
-  "title": "플립 12 · 스톡스 변수 (다글로 스크립트)",
-  "short": "플립12",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F13": {
-  "title": "플립 13 · 뒤처진퍼텐셜 (다글로 스크립트)",
-  "short": "플립13",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F14": {
-  "title": "플립 14 · 속도장과 복사장 (다글로 스크립트)",
-  "short": "플립14",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F15": {
-  "title": "플립 15 · 라모 공식 (다글로 스크립트)",
-  "short": "플립15",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F16": {
-  "title": "플립 16 · 전자-이온 충돌 (다글로 스크립트)",
-  "short": "플립16",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "L00": {
-  "title": "Lecture00 Introduction (PPT)",
-  "short": "PPT00",
-  "kind": "ppt",
-  "date": "2026-09-01",
-  "url": "https://drive.google.com/file/d/1m5qAFtVqV_GCGjzBEfkVdo6zGqw3Oqlg/view"
- },
- "F17": {
-  "title": "플립 17 · 단일 전자에 의한 복사 (다글로 스크립트)",
-  "short": "플립17",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F18": {
-  "title": "플립 18 · 제동복사 파워 (다글로 스크립트)",
-  "short": "플립18",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F19": {
-  "title": "플립 19 · 나선운동 (다글로 스크립트)",
-  "short": "플립19",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "F20": {
-  "title": "플립 20 · 단일 전자의 파워 (다글로 스크립트)",
-  "short": "플립20",
-  "kind": "video",
-  "date": "",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "L09": {
-  "title": "Lecture09 Synchrotron (PPT)",
-  "short": "L09",
-  "kind": "ppt",
-  "date": "2026-10-01",
-  "url": "https://drive.google.com/file/d/1iogritDv2V9LoBdCVZWgTsfhFopBWL3t/view"
- },
- "D1001": {
-  "title": "10/1 강의 녹음 (다글로 「은하단 쿨링 플로우와 AGN 피드백 및 싱크로트론 방사」)",
-  "short": "녹음10/1",
-  "kind": "transcript",
-  "date": "2026-10-01",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
- },
- "L10": {
-  "title": "Lecture10 Synchrotron·Compton (PPT)",
-  "short": "L10",
-  "kind": "ppt",
-  "date": "2026-10-06",
-  "url": "https://drive.google.com/file/d/1xajWzGRMQHr1rCxkeHCDtijc_Wc3UEMj/view"
- },
- "D1006": {
-  "title": "10/6 강의 녹음 (다글로 「싱크로트론 방사와 역컴턴 산란의 에너지 스펙트럼」)",
-  "short": "녹음10/6",
-  "kind": "transcript",
-  "date": "2026-10-06",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/mFO3CvaULCh5YrFf?fileMetaId=943286ed-0546-4e7c-9534-3f9e72958769"
- },
- "D1008": {
-  "title": "10/8 강의 녹음 (다글로 「상대론적 도플러 효과와 역컴턴 산란」)",
-  "short": "녹음10/8",
-  "kind": "transcript",
-  "date": "2026-10-08",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/rs2lafk8oV42Dpll?fileMetaId=c36cedc0-c0cd-47bc-9112-ab980e2a3821"
- },
- "F21": {
-  "title": "플립 21 · 복사스펙트럼",
-  "short": "플립21",
-  "kind": "video",
-  "date": "2026-10-07",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/WpZbVTE_mftAkjuZ?fileMetaId=e1919f45-16ab-4b80-a436-370418d3c1db"
- },
- "F22": {
-  "title": "플립 22 · 컴프턴 산란",
-  "short": "플립22",
-  "kind": "video",
-  "date": "2026-10-07",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/LYN8_6NcK6aX0Geb?fileMetaId=a22ab811-76d2-4328-b524-1f75b7d66935"
- },
- "F23": {
-  "title": "플립 23 · 역컴프턴 진동수 변화",
-  "short": "플립23",
-  "kind": "video",
-  "date": "2026-10-07",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/139vMQRYHbnEQHfE?fileMetaId=76fe4e4a-1c72-4c4b-83a1-08a32d83f8dd"
- },
- "F24": {
-  "title": "플립 24 · 역컴프턴 파워",
-  "short": "플립24",
-  "kind": "video",
-  "date": "2026-10-07",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/DXtooMfLInqGW3Gc?fileMetaId=5dd6a5ed-e7e1-4aa6-bdbc-0f2e4ec02128"
- },
- "L11": {
-  "title": "Lecture11 Compton (PPT)",
-  "short": "L11",
-  "kind": "ppt",
-  "date": "2026-10-08",
-  "url": "https://drive.google.com/file/d/1lD7r2zX1ay7x3be01qbRovyDT9jmk0GW/view"
- },
- "HW3": {
-  "title": "HW3 eTL assignment",
-  "short": "HW3",
-  "kind": "hw",
-  "date": "2026-10-08",
-  "url": "https://myetl.snu.ac.kr/courses/305248/assignments/383621"
- },
- "L12": {
-  "title": "Lecture12 Plasma Effects (PPT)",
-  "short": "PPT12",
-  "kind": "ppt",
-  "date": "2026-10-13",
-  "url": "https://drive.google.com/file/d/1rxGGD_o5EY5ttcA7ygn0KPyTfFojSWA8/view"
- },
- "D1013": {
-  "title": "10/13 플라즈마 강의 녹음",
-  "short": "녹음10/13",
-  "kind": "transcript",
-  "date": "2026-10-13",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/z2M_SXM3ehAcdJc3?fileMetaId=527f616d-23f8-4320-99aa-28d2ff8dbfc9"
- },
- "F25": {
-  "title": "플립 25 · 플라즈마 진동",
-  "short": "플립25",
-  "kind": "video",
-  "date": "2026-10-13",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/6eptjUDjhLqTHMoc?fileMetaId=9ab3888f-e786-4e0e-94cb-72c9196405c0"
- },
- "F26": {
-  "title": "플립 26 · 플라즈마 분산관계",
-  "short": "플립26",
-  "kind": "video",
-  "date": "2026-10-13",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/LgFqeMNPllbugZen?fileMetaId=14122b93-4477-40e4-955c-98afba5b3135"
- },
- "F27": {
-  "title": "플립 27 · 분산측도",
-  "short": "플립27",
-  "kind": "video",
-  "date": "2026-10-13",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/PiBYXXcJdE7fRGdz?fileMetaId=555424bc-01f8-460c-a9eb-770a58e2bef1"
- },
- "D1019HW3": {
-  "title": "10/19 HW3 조교 해설 녹음",
-  "short": "HW3해설",
-  "kind": "transcript",
-  "date": "2026-10-19",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/7NisNu84yOmPrAfG?fileMetaId=3b03ab1f-a9e5-4788-bde4-eed4ff32ec81"
- },
- "N1017": {
-  "title": "10/17 HW3 채점·해설 일정 공지",
-  "short": "HW3공지",
-  "kind": "notice",
-  "date": "2026-10-17",
-  "url": "https://myetl.snu.ac.kr/courses/305248/discussion_topics/393175"
- },
- "N1019": {
-  "title": "10/19 중간고사 안내 공지",
-  "short": "중간공지",
-  "kind": "notice",
-  "date": "2026-10-19",
-  "url": "https://myetl.snu.ac.kr/courses/305248/discussion_topics/393762"
- },
- "D1012HW2": {
-  "title": "10/12 HW2 조교 해설 녹음",
-  "short": "HW2해설",
-  "kind": "transcript",
-  "date": "2026-10-12",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/H3DTMfq1eR87sZC0?fileMetaId=9f7935fe-7981-4532-96c4-f4709c22f773"
- },
- "L13": {
-  "title": "Lecture13 Faraday Rotation (PPT)",
-  "short": "PPT13",
-  "kind": "ppt",
-  "date": "2026-10-20",
-  "url": "https://drive.google.com/file/d/1PipkYSt2rB6WH4oFybzgcRn_FrqBvrH3/view"
- },
- "D1020": {
-  "title": "10/20 자화 플라즈마·패러데이 회전 강의 녹음",
-  "short": "녹음10/20",
-  "kind": "transcript",
-  "date": "2026-10-20",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/qR6nDdRAQQnOV1jZ?fileMetaId=9ba7adcc-cfad-4496-870a-b61dcfb21ee7"
- },
- "L14": {
-  "title": "Lecture14 Basic Equations of Hydrodynamics",
-  "short": "L14",
-  "kind": "ppt",
-  "date": "2026-10-22",
-  "url": "https://drive.google.com/file/d/1plCbuHGKy4rN0tmtAQBmgdH4pfwYaGuZ/view"
- },
- "D1022": {
-  "title": "10/22 유체역학 입문 녹음",
-  "short": "D1022",
-  "kind": "transcript",
-  "date": "2026-10-22",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/RM-ckEll1VBXPuOn?fileMetaId=d29d54a2-b1d5-40e2-afae-a6ab3d211830"
- },
- "A15": {
-  "title": "Lecture 15 · 기체의 운동량·에너지와 정역학",
-  "short": "A15",
-  "kind": "ppt",
-  "date": "2026-10-29",
-  "url": "https://drive.google.com/file/d/1XS6XwlkUjAizNtRuSLf07Umr_ujHdmGw/view"
- },
- "A16": {
-  "title": "Lecture 16 · 정역학 평형과 폴리트로프",
-  "short": "A16",
-  "kind": "ppt",
-  "date": "2026-11-03",
-  "url": "https://drive.google.com/file/d/1vgNTqBj4x_wDdzcuba076YU0yxOrhNd4/view"
- },
- "A17": {
-  "title": "Lecture 17 · 등온 기체구·정상 유동·순환",
-  "short": "A17",
-  "kind": "ppt",
-  "date": "2026-11-05",
-  "url": "https://drive.google.com/file/d/1LPe5UnDjWxCPbXm1ZXOojh-i2J7ahGI2/view"
- },
- "A18": {
-  "title": "Lecture 18 · 음파·엔트로피/소용돌이 모드·부력파",
-  "short": "A18",
-  "kind": "ppt",
-  "date": "2026-11-10",
-  "url": "https://drive.google.com/file/d/1ixyfRki-EWR1mD8GVCyphKuxx8jNEFf6/view"
- },
- "A19": {
-  "title": "Lecture 19 · 파형 가팔라짐과 단열·경사 충격파",
-  "short": "A19",
-  "kind": "ppt",
-  "date": "2026-11-12",
-  "url": "https://drive.google.com/file/d/1KDSx8S8XXNcsBI-X1_gNIAjsNBilA-7F/view"
- },
- "AHW4": {
-  "title": "천체물리학개론 과제 4 문제지",
-  "short": "AHW4",
-  "kind": "hw",
-  "date": "2026-10-29",
-  "url": "https://drive.google.com/file/d/1wWM_99q41wGVTneej_Rp_ELnHI_DzWAM/view"
- },
- "AN1103": {
-  "title": "HW4 채점 완료",
-  "short": "AN1103",
-  "kind": "notice",
-  "date": "2026-11-03",
-  "url": "https://myetl.snu.ac.kr/courses/305248/discussion_topics/398897"
- },
- "AHW5": {
-  "title": "HW5 · 교재 p.371–373",
-  "short": "AHW5",
-  "kind": "hw",
-  "date": "2026-11-10",
-  "url": "https://myetl.snu.ac.kr/courses/305248/assignments/390741"
- },
- "A20": {
-  "title": "Lecture20 · 등온 충격파와 RT/KH 불안정성",
-  "short": "A20",
-  "kind": "ppt",
-  "date": "2026-11-17",
-  "url": "https://drive.google.com/file/d/14jqbluBhUKgR8_Mxy8CUgpyku73n5kVM/view"
- },
- "A21": {
-  "title": "11/19 결석 보충 · 대류·열불안정·Jeans",
-  "short": "A21",
-  "kind": "ppt",
-  "date": "2026-11-19",
-  "url": "https://drive.google.com/file/d/1XXhoYkSGxANG4ynuTRj8y9SJhqCidgtM/view"
- },
- "AHW6": {
-  "title": "HW6 · 11/26(목) 14:00 마감",
-  "short": "AHW6",
-  "kind": "notice",
-  "date": "2026-11-19",
-  "url": "https://myetl.snu.ac.kr/courses/305248/assignments/392578"
- },
- "AN1117": {
-  "title": "HW5 채점 완료",
-  "short": "AN1117",
-  "kind": "notice",
-  "date": "2026-11-17",
-  "url": "https://myetl.snu.ac.kr/courses/305248/discussion_topics/403355"
- },
- "FINAL1123": {
-  "title": "기말 시험 시간 · 12/10 수업시간",
-  "short": "FINAL1123",
-  "kind": "notice",
-  "date": "2026-11-23",
-  "url": ""
- },
- "DA1117": {
-  "title": "11/17 천물개 실제 강의",
-  "short": "DA1117",
-  "kind": "transcript",
-  "date": "2026-11-17",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/XnlrXkBbWm5uPnaj?fileMetaId=ed7b6087-eeee-4aae-a058-9ad6b663a37b"
- }
+  "L07": {
+    "title": "Lecture07 MovingCharges·Bremsstrahlung (PPT)",
+    "short": "PPT07",
+    "kind": "ppt",
+    "url": "https://drive.google.com/file/d/1dkTArTElJftYuWGHJdTUN8_EekVby0IC/view",
+    "date": "2026-09-22"
+  },
+  "S0922": {
+    "title": "9/22 강의 속기 (0922_천물개1.txt)",
+    "short": "속기9/22",
+    "kind": "transcript",
+    "url": "https://drive.google.com/file/d/1oQi7sm8baixTwvRatHisL0ujZv6qBum4/view",
+    "date": "2026-09-22"
+  },
+  "L01": {
+    "title": "Lecture01 Radiation Basics (PPT)",
+    "short": "L01",
+    "kind": "ppt",
+    "date": "2026-09-01",
+    "url": "https://drive.google.com/file/d/1LAAzQHDUNC5YArQZmeAELe2TPmzbyvup/view"
+  },
+  "S0901": {
+    "title": "9/1 강의 속기 (0901_천물개1.txt)",
+    "short": "속기9/1",
+    "kind": "transcript",
+    "date": "2026-09-01",
+    "url": "https://drive.google.com/file/d/1DITEFSqjGP68P9Lcc9zYv8XIWWvA9orm/view"
+  },
+  "L02": {
+    "title": "Lecture02 FlippedLearning (PPT)",
+    "short": "L02",
+    "kind": "ppt",
+    "date": "2026-09-03",
+    "url": "https://drive.google.com/file/d/1gPGLOHRbmOkz3DM_AEOMZW4xXfqxUepY/view"
+  },
+  "S0903": {
+    "title": "9/3 강의 속기 (0903_천물개1.txt)",
+    "short": "속기9/3",
+    "kind": "transcript",
+    "date": "2026-09-03",
+    "url": "https://drive.google.com/file/d/1Kdk5ivLTpPT15N5zVThsneIQb87Tdf1d/view"
+  },
+  "L03": {
+    "title": "Lecture03 Radiation (PPT)",
+    "short": "L03",
+    "kind": "ppt",
+    "date": "2026-09-08",
+    "url": "https://drive.google.com/file/d/1E3-KLxdHuL9rfDaSWLjhW7wQU8KwmeTJ/view"
+  },
+  "S0908": {
+    "title": "9/8 강의 속기 (0908_천물개1.txt)",
+    "short": "속기9/8",
+    "kind": "transcript",
+    "date": "2026-09-08",
+    "url": "https://drive.google.com/file/d/1dfjnZGiNFWL5CxWjgqlWurCKeJu6K2z2/view"
+  },
+  "L04": {
+    "title": "Lecture04 LineRadiation (PPT)",
+    "short": "L04",
+    "kind": "ppt",
+    "date": "2026-09-10",
+    "url": "https://drive.google.com/file/d/1O3OXvDeu-FHZliMc9HTbHUA3KMmeReSD/view"
+  },
+  "S0910": {
+    "title": "9/10 강의 속기 (0910_천물개1.txt)",
+    "short": "속기9/10",
+    "kind": "transcript",
+    "date": "2026-09-10",
+    "url": "https://drive.google.com/file/d/1dYRCjed0wJeDZjTxUAhPn840gY7UpD8Z/view"
+  },
+  "L05": {
+    "title": "Lecture05 EMWaves (PPT)",
+    "short": "L05",
+    "kind": "ppt",
+    "date": "2026-09-15",
+    "url": "https://drive.google.com/file/d/1fubk_xzIoxQ4TwtXZccMriK1-Uo8E_77/view"
+  },
+  "S0915": {
+    "title": "9/15 강의 속기 (0915_천물개1.txt)",
+    "short": "속기9/15",
+    "kind": "transcript",
+    "date": "2026-09-15",
+    "url": "https://drive.google.com/file/d/1HF7gfyUdjYxqa2cj-sgletGeDvPdNtdX/view"
+  },
+  "L06": {
+    "title": "Lecture06 MovingCharges (PPT)",
+    "short": "L06",
+    "kind": "ppt",
+    "date": "2026-09-17",
+    "url": "https://drive.google.com/file/d/193_66wKxjQe2Sk7uzRM0aZJLqXwkji3E/view"
+  },
+  "S0917": {
+    "title": "9/17 강의 속기 (0917_천물개1.txt)",
+    "short": "속기9/17",
+    "kind": "transcript",
+    "date": "2026-09-17",
+    "url": "https://drive.google.com/file/d/1RAuvHqD5vRnKA-j-OPnwy59n4iVuE_36/view"
+  },
+  "L08": {
+    "title": "Lecture08 Bremsstrahlung (PPT)",
+    "short": "L08",
+    "kind": "ppt",
+    "date": "2026-09-29",
+    "url": "https://drive.google.com/file/d/11CnmhTaodYbqr1xqbrLneBvcsfl9c1MX/view"
+  },
+  "D0929": {
+    "title": "9/29 강의 녹음 (다글로 「플라즈마 입자 충돌과 쿨롱 로그」)",
+    "short": "녹음9/29",
+    "kind": "transcript",
+    "date": "2026-09-29"
+  },
+  "F01": {
+    "title": "플립 01 · 복사 기초 (다글로 스크립트)",
+    "short": "플립01",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F02": {
+    "title": "플립 02 · 복사세기 (다글로 스크립트)",
+    "short": "플립02",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F03": {
+    "title": "플립 03 · 플럭스밀도와 복사압 (다글로 스크립트)",
+    "short": "플립03",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F04": {
+    "title": "플립 04 · 방출 또는 흡수 대기 (다글로 스크립트)",
+    "short": "플립04",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F05": {
+    "title": "플립 05 · 일반적인 대기 (다글로 스크립트)",
+    "short": "플립05",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F06": {
+    "title": "플립 06 · 키르히호프의 복사 법칙 (다글로 스크립트)",
+    "short": "플립06",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F07": {
+    "title": "플립 07 · 아인슈타인 계수 (다글로 스크립트)",
+    "short": "플립07",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F08": {
+    "title": "플립 08 · 방출계수 (다글로 스크립트)",
+    "short": "플립08",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F09": {
+    "title": "플립 09 · 키르히호프의 분광 법칙 (다글로 스크립트)",
+    "short": "플립09",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F10": {
+    "title": "플립 10 · 평면 전자기파 (다글로 스크립트)",
+    "short": "플립10",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F11": {
+    "title": "플립 11 · 편광 (다글로 스크립트)",
+    "short": "플립11",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F12": {
+    "title": "플립 12 · 스톡스 변수 (다글로 스크립트)",
+    "short": "플립12",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F13": {
+    "title": "플립 13 · 뒤처진퍼텐셜 (다글로 스크립트)",
+    "short": "플립13",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F14": {
+    "title": "플립 14 · 속도장과 복사장 (다글로 스크립트)",
+    "short": "플립14",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F15": {
+    "title": "플립 15 · 라모 공식 (다글로 스크립트)",
+    "short": "플립15",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F16": {
+    "title": "플립 16 · 전자-이온 충돌 (다글로 스크립트)",
+    "short": "플립16",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "L00": {
+    "title": "Lecture00 Introduction (PPT)",
+    "short": "PPT00",
+    "kind": "ppt",
+    "date": "2026-09-01",
+    "url": "https://drive.google.com/file/d/1m5qAFtVqV_GCGjzBEfkVdo6zGqw3Oqlg/view"
+  },
+  "F17": {
+    "title": "플립 17 · 단일 전자에 의한 복사 (다글로 스크립트)",
+    "short": "플립17",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F18": {
+    "title": "플립 18 · 제동복사 파워 (다글로 스크립트)",
+    "short": "플립18",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F19": {
+    "title": "플립 19 · 나선운동 (다글로 스크립트)",
+    "short": "플립19",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "F20": {
+    "title": "플립 20 · 단일 전자의 파워 (다글로 스크립트)",
+    "short": "플립20",
+    "kind": "video",
+    "date": "",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "L09": {
+    "title": "Lecture09 Synchrotron (PPT)",
+    "short": "L09",
+    "kind": "ppt",
+    "date": "2026-10-01",
+    "url": "https://drive.google.com/file/d/1iogritDv2V9LoBdCVZWgTsfhFopBWL3t/view"
+  },
+  "D1001": {
+    "title": "10/1 강의 녹음 (다글로 「은하단 쿨링 플로우와 AGN 피드백 및 싱크로트론 방사」)",
+    "short": "녹음10/1",
+    "kind": "transcript",
+    "date": "2026-10-01",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board?page=1&folderIds=JaEpjanIfEfnZ2En"
+  },
+  "L10": {
+    "title": "Lecture10 Synchrotron·Compton (PPT)",
+    "short": "L10",
+    "kind": "ppt",
+    "date": "2026-10-06",
+    "url": "https://drive.google.com/file/d/1xajWzGRMQHr1rCxkeHCDtijc_Wc3UEMj/view"
+  },
+  "D1006": {
+    "title": "10/6 강의 녹음 (다글로 「싱크로트론 방사와 역컴턴 산란의 에너지 스펙트럼」)",
+    "short": "녹음10/6",
+    "kind": "transcript",
+    "date": "2026-10-06",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/mFO3CvaULCh5YrFf?fileMetaId=943286ed-0546-4e7c-9534-3f9e72958769"
+  },
+  "D1008": {
+    "title": "10/8 강의 녹음 (다글로 「상대론적 도플러 효과와 역컴턴 산란」)",
+    "short": "녹음10/8",
+    "kind": "transcript",
+    "date": "2026-10-08",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/rs2lafk8oV42Dpll?fileMetaId=c36cedc0-c0cd-47bc-9112-ab980e2a3821"
+  },
+  "F21": {
+    "title": "플립 21 · 복사스펙트럼",
+    "short": "플립21",
+    "kind": "video",
+    "date": "2026-10-07",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/WpZbVTE_mftAkjuZ?fileMetaId=e1919f45-16ab-4b80-a436-370418d3c1db"
+  },
+  "F22": {
+    "title": "플립 22 · 컴프턴 산란",
+    "short": "플립22",
+    "kind": "video",
+    "date": "2026-10-07",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/LYN8_6NcK6aX0Geb?fileMetaId=a22ab811-76d2-4328-b524-1f75b7d66935"
+  },
+  "F23": {
+    "title": "플립 23 · 역컴프턴 진동수 변화",
+    "short": "플립23",
+    "kind": "video",
+    "date": "2026-10-07",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/139vMQRYHbnEQHfE?fileMetaId=76fe4e4a-1c72-4c4b-83a1-08a32d83f8dd"
+  },
+  "F24": {
+    "title": "플립 24 · 역컴프턴 파워",
+    "short": "플립24",
+    "kind": "video",
+    "date": "2026-10-07",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/DXtooMfLInqGW3Gc?fileMetaId=5dd6a5ed-e7e1-4aa6-bdbc-0f2e4ec02128"
+  },
+  "L11": {
+    "title": "Lecture11 Compton (PPT)",
+    "short": "L11",
+    "kind": "ppt",
+    "date": "2026-10-08",
+    "url": "https://drive.google.com/file/d/1lD7r2zX1ay7x3be01qbRovyDT9jmk0GW/view"
+  },
+  "HW3": {
+    "title": "HW3 eTL assignment",
+    "short": "HW3",
+    "kind": "hw",
+    "date": "2026-10-08",
+    "url": "https://myetl.snu.ac.kr/courses/305248/assignments/383621"
+  },
+  "L12": {
+    "title": "Lecture12 Plasma Effects (PPT)",
+    "short": "PPT12",
+    "kind": "ppt",
+    "date": "2026-10-13",
+    "url": "https://drive.google.com/file/d/1rxGGD_o5EY5ttcA7ygn0KPyTfFojSWA8/view"
+  },
+  "D1013": {
+    "title": "10/13 플라즈마 강의 녹음",
+    "short": "녹음10/13",
+    "kind": "transcript",
+    "date": "2026-10-13",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/z2M_SXM3ehAcdJc3?fileMetaId=527f616d-23f8-4320-99aa-28d2ff8dbfc9"
+  },
+  "F25": {
+    "title": "플립 25 · 플라즈마 진동",
+    "short": "플립25",
+    "kind": "video",
+    "date": "2026-10-13",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/6eptjUDjhLqTHMoc?fileMetaId=9ab3888f-e786-4e0e-94cb-72c9196405c0"
+  },
+  "F26": {
+    "title": "플립 26 · 플라즈마 분산관계",
+    "short": "플립26",
+    "kind": "video",
+    "date": "2026-10-13",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/LgFqeMNPllbugZen?fileMetaId=14122b93-4477-40e4-955c-98afba5b3135"
+  },
+  "F27": {
+    "title": "플립 27 · 분산측도",
+    "short": "플립27",
+    "kind": "video",
+    "date": "2026-10-13",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/PiBYXXcJdE7fRGdz?fileMetaId=555424bc-01f8-460c-a9eb-770a58e2bef1"
+  },
+  "D1019HW3": {
+    "title": "10/19 HW3 조교 해설 녹음",
+    "short": "HW3해설",
+    "kind": "transcript",
+    "date": "2026-10-19",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/7NisNu84yOmPrAfG?fileMetaId=3b03ab1f-a9e5-4788-bde4-eed4ff32ec81"
+  },
+  "N1017": {
+    "title": "10/17 HW3 채점·해설 일정 공지",
+    "short": "HW3공지",
+    "kind": "notice",
+    "date": "2026-10-17",
+    "url": "https://myetl.snu.ac.kr/courses/305248/discussion_topics/393175"
+  },
+  "N1019": {
+    "title": "10/19 중간고사 안내 공지",
+    "short": "중간공지",
+    "kind": "notice",
+    "date": "2026-10-19",
+    "url": "https://myetl.snu.ac.kr/courses/305248/discussion_topics/393762"
+  },
+  "D1012HW2": {
+    "title": "10/12 HW2 조교 해설 녹음",
+    "short": "HW2해설",
+    "kind": "transcript",
+    "date": "2026-10-12",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/H3DTMfq1eR87sZC0?fileMetaId=9f7935fe-7981-4532-96c4-f4709c22f773"
+  },
+  "L13": {
+    "title": "Lecture13 Faraday Rotation (PPT)",
+    "short": "PPT13",
+    "kind": "ppt",
+    "date": "2026-10-20",
+    "url": "https://drive.google.com/file/d/1PipkYSt2rB6WH4oFybzgcRn_FrqBvrH3/view"
+  },
+  "D1020": {
+    "title": "10/20 자화 플라즈마·패러데이 회전 강의 녹음",
+    "short": "녹음10/20",
+    "kind": "transcript",
+    "date": "2026-10-20",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/qR6nDdRAQQnOV1jZ?fileMetaId=9ba7adcc-cfad-4496-870a-b61dcfb21ee7"
+  },
+  "L14": {
+    "title": "Lecture14 Basic Equations of Hydrodynamics",
+    "short": "L14",
+    "kind": "ppt",
+    "date": "2026-10-22",
+    "url": "https://drive.google.com/file/d/1plCbuHGKy4rN0tmtAQBmgdH4pfwYaGuZ/view"
+  },
+  "D1022": {
+    "title": "10/22 유체역학 입문 녹음",
+    "short": "D1022",
+    "kind": "transcript",
+    "date": "2026-10-22",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/RM-ckEll1VBXPuOn?fileMetaId=d29d54a2-b1d5-40e2-afae-a6ab3d211830"
+  },
+  "A15": {
+    "title": "Lecture 15 · 기체의 운동량·에너지와 정역학",
+    "short": "A15",
+    "kind": "ppt",
+    "date": "2026-10-29",
+    "url": "https://drive.google.com/file/d/1XS6XwlkUjAizNtRuSLf07Umr_ujHdmGw/view"
+  },
+  "A16": {
+    "title": "Lecture 16 · 정역학 평형과 폴리트로프",
+    "short": "A16",
+    "kind": "ppt",
+    "date": "2026-11-03",
+    "url": "https://drive.google.com/file/d/1vgNTqBj4x_wDdzcuba076YU0yxOrhNd4/view"
+  },
+  "A17": {
+    "title": "Lecture 17 · 등온 기체구·정상 유동·순환",
+    "short": "A17",
+    "kind": "ppt",
+    "date": "2026-11-05",
+    "url": "https://drive.google.com/file/d/1LPe5UnDjWxCPbXm1ZXOojh-i2J7ahGI2/view"
+  },
+  "A18": {
+    "title": "Lecture 18 · 음파·엔트로피/소용돌이 모드·부력파",
+    "short": "A18",
+    "kind": "ppt",
+    "date": "2026-11-10",
+    "url": "https://drive.google.com/file/d/1ixyfRki-EWR1mD8GVCyphKuxx8jNEFf6/view"
+  },
+  "A19": {
+    "title": "Lecture 19 · 파형 가팔라짐과 단열·경사 충격파",
+    "short": "A19",
+    "kind": "ppt",
+    "date": "2026-11-12",
+    "url": "https://drive.google.com/file/d/1KDSx8S8XXNcsBI-X1_gNIAjsNBilA-7F/view"
+  },
+  "AHW4": {
+    "title": "천체물리학개론 과제 4 문제지",
+    "short": "AHW4",
+    "kind": "hw",
+    "date": "2026-10-29",
+    "url": "https://drive.google.com/file/d/1wWM_99q41wGVTneej_Rp_ELnHI_DzWAM/view"
+  },
+  "AN1103": {
+    "title": "HW4 채점 완료",
+    "short": "AN1103",
+    "kind": "notice",
+    "date": "2026-11-03",
+    "url": "https://myetl.snu.ac.kr/courses/305248/discussion_topics/398897"
+  },
+  "AHW5": {
+    "title": "HW5 · 교재 p.371–373",
+    "short": "AHW5",
+    "kind": "hw",
+    "date": "2026-11-10",
+    "url": "https://myetl.snu.ac.kr/courses/305248/assignments/390741"
+  },
+  "A20": {
+    "title": "Lecture20 · 등온 충격파와 RT/KH 불안정성",
+    "short": "A20",
+    "kind": "ppt",
+    "date": "2026-11-17",
+    "url": "https://drive.google.com/file/d/14jqbluBhUKgR8_Mxy8CUgpyku73n5kVM/view"
+  },
+  "A21": {
+    "title": "11/19 결석 보충 · 대류·열불안정·Jeans",
+    "short": "A21",
+    "kind": "ppt",
+    "date": "2026-11-19",
+    "url": "https://drive.google.com/file/d/1XXhoYkSGxANG4ynuTRj8y9SJhqCidgtM/view"
+  },
+  "AHW6": {
+    "title": "HW6 · 11/26(목) 14:00 마감",
+    "short": "AHW6",
+    "kind": "notice",
+    "date": "2026-11-19",
+    "url": "https://myetl.snu.ac.kr/courses/305248/assignments/392578"
+  },
+  "AN1117": {
+    "title": "HW5 채점 완료",
+    "short": "AN1117",
+    "kind": "notice",
+    "date": "2026-11-17",
+    "url": "https://myetl.snu.ac.kr/courses/305248/discussion_topics/403355"
+  },
+  "FINAL1123": {
+    "title": "이전 일정 12/10 · 12/15로 변경됨",
+    "short": "FINAL1123",
+    "kind": "notice",
+    "date": "2026-11-23",
+    "url": ""
+  },
+  "DA1117": {
+    "title": "11/17 천물개 실제 강의",
+    "short": "DA1117",
+    "kind": "transcript",
+    "date": "2026-11-17",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/XnlrXkBbWm5uPnaj?fileMetaId=ed7b6087-eeee-4aae-a058-9ad6b663a37b"
+  },
+  "A22": {
+    "title": "Lecture22 · 얇은 회전 원반·Toomre·스윙 증폭",
+    "short": "A22",
+    "kind": "ppt",
+    "date": "2026-11-24",
+    "url": "https://drive.google.com/file/d/1ZAKrsoOR5VuVYjx3tvPJV_9qD66i7acx/view"
+  },
+  "DA1124": {
+    "title": "11/24 실제 강의 · 회전 원반의 안정성과 국소 좌표계",
+    "short": "DA1124",
+    "kind": "transcript",
+    "date": "2026-11-24",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/PPNiddiZZiXkgRu6?fileMetaId=f54f4a65-2b35-4f37-8d59-ba4159ad2db4"
+  },
+  "A23": {
+    "title": "Lecture23 · 초신성 잔해와 Sedov–Taylor",
+    "short": "A23",
+    "kind": "ppt",
+    "date": "2026-11-26",
+    "url": "https://drive.google.com/file/d/11wj3ryg8sRLIlAIG0zuzR1FjRhi65J_P/view"
+  },
+  "DA1126": {
+    "title": "11/26 실제 강의 · 스윙 증폭·초신성 잔해·시험 변경",
+    "short": "DA1126",
+    "kind": "transcript",
+    "date": "2026-11-26",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/n18iZFS7jfy9AS-8?fileMetaId=62755ffb-1627-4cc1-8219-30598fdf688c"
+  },
+  "AN1126": {
+    "title": "HW6 채점 완료",
+    "short": "AN1126",
+    "kind": "notice",
+    "date": "2026-11-26",
+    "url": "https://myetl.snu.ac.kr/courses/305248/discussion_topics/406802"
+  }
 }

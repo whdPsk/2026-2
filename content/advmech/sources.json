@@ -126,10 +126,45 @@
     "url": ""
   },
   "M1123": {
-    "title": "11/23 강의안 · Loaded string과 연속 극한",
+    "title": "Ch.12 11/23 강의안 · 11/25 수정본 (19쪽)",
     "short": "M1123",
     "kind": "ppt",
     "date": "2026-11-23",
     "url": "https://drive.google.com/file/d/1SUcdES5ldAbcWrD8g8_GLRdByNuFyrKU/view"
+  },
+  "DM1123": {
+    "title": "11/23 실제 강의 · 이산 줄·정규모드·초기조건",
+    "short": "DM1123",
+    "kind": "transcript",
+    "date": "2026-11-23",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/23BYxuMwyzJgmJja?fileMetaId=5839de13-d42f-4643-b450-4f4e6a6762c3"
+  },
+  "DM1125": {
+    "title": "11/25 실제 강의 · 연속 줄과 에너지 (13.3까지)",
+    "short": "DM1125",
+    "kind": "transcript",
+    "date": "2026-11-25",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/M4ABO0zKxZ5P6ZMe?fileMetaId=c9343a0f-40e0-4380-868a-46f41fa32a02"
+  },
+  "M1125": {
+    "title": "Ch.13 강의안 · 연속 줄·에너지·파동방정식",
+    "short": "M1125",
+    "kind": "ppt",
+    "date": "2026-11-25",
+    "url": "https://drive.google.com/file/d/1QW-ISiKPOaSCmU6UszAAIwEtatP18MCK/view"
+  },
+  "MHW3": {
+    "title": "HW3 · 결합 진동 7문항 · 12/7 제출",
+    "short": "MHW3",
+    "kind": "hw",
+    "date": "2026-11-24",
+    "url": "https://drive.google.com/file/d/1hlvtDC0ZzE9qSCh1sl8dpKHLxjdD35EN/view"
+  },
+  "MN1124": {
+    "title": "HW3 마감 표기 차이 · 계획은 12/7 수업 전 완료",
+    "short": "MN1124",
+    "kind": "notice",
+    "date": "2026-11-24",
+    "url": "https://myetl.snu.ac.kr/courses/305140/discussion_topics/405803"
   }
 }

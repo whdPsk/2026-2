@@ -18,7 +18,7 @@ for (const day of dated.days) {
   assert(duration(day.rows.filter((r) => r.kind === 'sleep')) >= 300, 'Sleep allocation shortened');
   const dow = new Date(day.date + 'T12:00:00Z').getUTCDay();
   if (dow === 4 && day.date <= '2026-12-10') assert.equal(duration(day.rows.filter((r) => r.title.startsWith('기공실 보고서'))), day.date === '2026-11-26' ? 0 : 300);
-  assert(!day.rows.some((r) => r.slug === 'astro1' && r.kind === 'study' && (day.date > '2026-12-10' || day.date === '2026-12-10' && r.end > 840)), 'Astro study after exam');
+  assert(!day.rows.some((r) => r.slug === 'astro1' && r.kind === 'study' && (day.date > '2026-12-15' || day.date === '2026-12-15' && r.end > 840)), 'Astro study after exam');
 }
 for (const c of data.courses) {
   for (const unit of c.units) assert(datedRows.some((r) => r.slug === c.slug && r.units?.includes(unit.id)), `Dated plan omitted ${c.slug}/${unit.id}`);
@@ -38,13 +38,13 @@ assert.equal(mechanicsExam[0].date, '2026-12-17');
 assert.equal(mechanicsExam[0].start, 19 * 60);
 assert.equal(mechanicsExam[0].end, 22 * 60);
 assert.equal(data.courses.find((c) => c.slug === 'advmech').exam.tentative, false);
-const focus = [['astro1','2026-12-09','2026-12-10',840],['mechexp','2026-12-11','2026-12-12',1110],['emwaves','2026-12-13','2026-12-14',570],['advmech','2026-12-16','2026-12-17',1140]];
+const focus = [['astro1','2026-12-14','2026-12-15',840],['mechexp','2026-12-11','2026-12-12',1110],['emwaves','2026-12-13','2026-12-14',570],['advmech','2026-12-16','2026-12-17',1140]];
 for (const [slug,prev,date,start] of focus) {
-  const tasks = datedRows.filter(r => (r.date === prev || r.date === date && r.start < start) && r.slug && ['study','assignment'].includes(r.kind));
+  const tasks = datedRows.filter(r => (r.date === prev && (slug !== 'astro1' || r.start >= 650) || r.date === date && r.start < start) && r.slug && ['study','assignment'].includes(r.kind));
   assert(tasks.every(r => r.slug === slug), 'Another subject in exam focus window: '+slug);
 }
 const astroExam = datedRows.find(r => r.kind === 'exam' && r.title === '천체물리학개론1 기말고사');
-assert.equal(astroExam.date,'2026-12-10'); assert.equal(astroExam.start,840); assert.equal(astroExam.end,915);
+assert.equal(astroExam.date,'2026-12-15'); assert.equal(astroExam.start,840); assert.equal(astroExam.end,915);
 const hw6 = datedRows.filter(r=>r.title.includes('HW6'));
 assert.equal(duration(hw6),300); assert(hw6.every(r=>r.date<'2026-11-26'||r.date==='2026-11-26'&&r.end<=840));
 for (const title of ['12/9 전파광 복습 보충','12/9 고급역학 복습 보충','12/9 전파광 과제 풀이·최종 제출']) assert(datedRows.some(r=>r.title===title));
@@ -66,6 +66,16 @@ for (const oldDate of ['2026-12-09', '2026-12-14']) {
   assert.equal(migrated.exams.advmech.tentative, false);
   assert.deepEqual(migrated.availability, old.availability);
 }
+const priorAstro = structuredClone(settings);
+priorAstro.exams.astro1 = { ...priorAstro.exams.astro1, date: '2026-12-10', confirmedAt: '2026-11-23' };
+assert.equal(addCourseExams(priorAstro, data.courses).exams.astro1.date, '2026-12-15');
+assert.deepEqual(addCourseExams(priorAstro, data.courses).availability, priorAstro.availability);
+const customAstro = structuredClone(priorAstro); customAstro.exams.astro1.date = '2026-12-18';
+assert.equal(addCourseExams(customAstro, data.courses).exams.astro1.date, '2026-12-18');
+const hw3 = datedRows.filter(r=>r.title.startsWith('HW3'));
+assert.equal(duration(hw3),420); assert(hw3.every(r=>r.date<'2026-12-07'));
+assert(datedRows.some(r=>r.kind==='class'&&r.date==='2026-11-27'&&r.title.includes('영상')));
+assert(!datedRows.some(r=>r.kind==='class'&&r.date==='2026-12-11'&&r.title==='기계공학실험'));
 const plan = generatePlan(data, settings);
 assert.equal(new Set(plan.backlog.map((t) => t.id)).size, plan.backlog.length, 'Repeated backlog task');
 const scheduled = new Map();

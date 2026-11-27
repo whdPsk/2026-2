@@ -1,132 +1,190 @@
 [
- {
-  "id": "lec9",
-  "kind": "lecture",
-  "title": "강의노트 지정 연습 — Ch.9",
-  "meta": "9/9 강의노트 (강의 식 9.44): \"Derive the further relationships (Exercises 9.90 and 9.91)\" — 교재 식 (9.90), (9.91)을 직접 유도. 채점 과제는 아니지만 강의 내용 = 시험 범위.",
-  "probs": [
-   {
-    "num": "L9-1",
-    "ch": 9,
-    "unit": "u06",
-    "tag": "ex",
-    "title": "\\(\\sin\\zeta=\\sqrt{m_1T_1/(m_2T_2)}\\,\\sin\\psi\\) 유도 (교재 식 9.90)"
-   },
-   {
-    "num": "L9-2",
-    "ch": 9,
-    "unit": "u06",
-    "tag": "ex",
-    "title": "\\(\\tan\\psi=\\sin2\\zeta/[(m_1/m_2)-\\cos2\\zeta]\\) 유도 (교재 식 9.91–9.92)"
-   }
-  ]
- },
- {
-  "id": "HW1",
-  "kind": "hw",
-  "title": "공식 과제 1 · T&M 5판 Ch.9–10",
-  "due": "2026-10-26",
-  "meta": "eTL 10/14 공지 · 10/26(월) 수업 전, 종이 손글씨로 조교에게 오프라인 제출 · <a href=\"https://myetl.snu.ac.kr/courses/305140/discussion_topics/392283\" target=\"_blank\" rel=\"noopener\">공지 ↗</a> · <a href=\"https://drive.google.com/file/d/1zeZCrPsco4Val3PcmsO-ucqd-vVtg0kR/view\" target=\"_blank\" rel=\"noopener\">HW1.pdf ↗</a>. 문항 7개를 원문과 대조해 풀이·관련 단원에 연결함.",
-  "probs": [
-   {
-    "num": "9-19",
-    "ch": 9,
-    "unit": "u02",
-    "tag": "req",
-    "title": "균일한 사슬의 끝을 높이 b에서 놓을 때, 낙하 거리 x에 따른 탁자 반작용력 (Example 9.2)"
-   },
-   {
-    "num": "9-35",
-    "ch": 9,
-    "unit": "u05",
-    "tag": "req",
-    "title": "탄성 충돌 뒤 산란 입자의 검출면 도달 시간이 각도와 무관해지는 곡면: 질량비 1, 2, 무한대"
-   },
-   {
-    "num": "9-46",
-    "ch": 9,
-    "unit": "u08",
-    "tag": "req",
-    "title": "반지름 a인 불투과 구의 탄성 산란: 미분·전체 단면적"
-   },
-   {
-    "num": "9-50",
-    "ch": 9,
-    "unit": "u09",
-    "tag": "req",
-    "title": "중심력 F(r)=k/r³에서 산란각과 미분 단면적 유도"
-   },
-   {
-    "num": "10-9",
-    "ch": 10,
-    "unit": "u13",
-    "tag": "req",
-    "title": "위도 λ에서 동쪽으로 발사한 포물체의 횡방향 편향: 지구 자전 1차 효과"
-   },
-   {
-    "num": "10-12",
-    "ch": 10,
-    "unit": "u13",
-    "tag": "req",
-    "title": "지구 자전으로 인한 연직선과 지구 중심 방향의 각도 차이 및 최대값"
-   },
-   {
-    "num": "10-13",
-    "ch": 10,
-    "unit": "u13",
-    "tag": "req",
-    "title": "낙하 물체의 남쪽 편향을 자전 각속도 2차까지: Coriolis·원심력·중력의 높이 의존성 분리"
-   }
-  ]
- },
- {
-  "id": "HW2",
-  "kind": "hw",
-  "title": "공식 과제 2 · Ch.11 5문항 + 식 11.114 증명",
-  "meta": "10/26 eTL 공지 · <b>제출 없음, 전원 만점 처리, 별도 마감 미지정</b>. 중간고사 대비 연습. T&M 5판 p.464–466과 식 11.114(p.446)를 직접 대조. [[N1026.1, N1026.2]] 10/28 강의에서 계산·증명을 해설. <a href=\"https://myetl.snu.ac.kr/courses/305140/modules/items/1694271\" target=\"_blank\" rel=\"noopener\">공식 HW02_Solution.pdf</a>는 직접 확인용 링크.",
-  "probs": [
-   {
-    "num": "11-13",
-    "ch": 11,
-    "unit": "u18",
-    "tag": "req",
-    "title": "세 질점의 관성텐서·주축·주관성모멘트"
-   },
-   {
-    "num": "11-14",
-    "ch": 11,
-    "unit": "u19",
-    "tag": "req",
-    "title": "균일한 실체 반구의 질량중심 주축"
-   },
-   {
-    "num": "11-16",
-    "ch": 11,
-    "unit": "u20",
-    "tag": "req",
-    "title": "x3축 회전으로 관성텐서 대각화"
-   },
-   {
-    "num": "11-22",
-    "ch": 11,
-    "unit": "u20",
-    "tag": "req",
-    "title": "좌표축 회전에서 관성텐서 대각합 불변"
-   },
-   {
-    "num": "11-26",
-    "ch": 11,
-    "unit": "u21",
-    "tag": "req",
-    "title": "회전행렬에서 Euler 각속도 성분 직접 유도"
-   },
-   {
-    "num": "L11-114",
-    "ch": 11,
-    "unit": "u22",
-    "tag": "req",
-    "title": "식 11.114 증명 · 세 Euler 각의 Lagrange 식 직접 계산"
-   }
-  ]
- }
+  {
+    "id": "lec9",
+    "kind": "lecture",
+    "title": "강의노트 지정 연습 — Ch.9",
+    "meta": "9/9 강의노트 (강의 식 9.44): \"Derive the further relationships (Exercises 9.90 and 9.91)\" — 교재 식 (9.90), (9.91)을 직접 유도. 채점 과제는 아니지만 강의 내용 = 시험 범위.",
+    "probs": [
+      {
+        "num": "L9-1",
+        "ch": 9,
+        "unit": "u06",
+        "tag": "ex",
+        "title": "\\(\\sin\\zeta=\\sqrt{m_1T_1/(m_2T_2)}\\,\\sin\\psi\\) 유도 (교재 식 9.90)"
+      },
+      {
+        "num": "L9-2",
+        "ch": 9,
+        "unit": "u06",
+        "tag": "ex",
+        "title": "\\(\\tan\\psi=\\sin2\\zeta/[(m_1/m_2)-\\cos2\\zeta]\\) 유도 (교재 식 9.91–9.92)"
+      }
+    ]
+  },
+  {
+    "id": "HW1",
+    "kind": "hw",
+    "title": "공식 과제 1 · T&M 5판 Ch.9–10",
+    "due": "2026-10-26",
+    "meta": "eTL 10/14 공지 · 10/26(월) 수업 전, 종이 손글씨로 조교에게 오프라인 제출 · <a href=\"https://myetl.snu.ac.kr/courses/305140/discussion_topics/392283\" target=\"_blank\" rel=\"noopener\">공지 ↗</a> · <a href=\"https://drive.google.com/file/d/1zeZCrPsco4Val3PcmsO-ucqd-vVtg0kR/view\" target=\"_blank\" rel=\"noopener\">HW1.pdf ↗</a>. 문항 7개를 원문과 대조해 풀이·관련 단원에 연결함.",
+    "probs": [
+      {
+        "num": "9-19",
+        "ch": 9,
+        "unit": "u02",
+        "tag": "req",
+        "title": "균일한 사슬의 끝을 높이 b에서 놓을 때, 낙하 거리 x에 따른 탁자 반작용력 (Example 9.2)"
+      },
+      {
+        "num": "9-35",
+        "ch": 9,
+        "unit": "u05",
+        "tag": "req",
+        "title": "탄성 충돌 뒤 산란 입자의 검출면 도달 시간이 각도와 무관해지는 곡면: 질량비 1, 2, 무한대"
+      },
+      {
+        "num": "9-46",
+        "ch": 9,
+        "unit": "u08",
+        "tag": "req",
+        "title": "반지름 a인 불투과 구의 탄성 산란: 미분·전체 단면적"
+      },
+      {
+        "num": "9-50",
+        "ch": 9,
+        "unit": "u09",
+        "tag": "req",
+        "title": "중심력 F(r)=k/r³에서 산란각과 미분 단면적 유도"
+      },
+      {
+        "num": "10-9",
+        "ch": 10,
+        "unit": "u13",
+        "tag": "req",
+        "title": "위도 λ에서 동쪽으로 발사한 포물체의 횡방향 편향: 지구 자전 1차 효과"
+      },
+      {
+        "num": "10-12",
+        "ch": 10,
+        "unit": "u13",
+        "tag": "req",
+        "title": "지구 자전으로 인한 연직선과 지구 중심 방향의 각도 차이 및 최대값"
+      },
+      {
+        "num": "10-13",
+        "ch": 10,
+        "unit": "u13",
+        "tag": "req",
+        "title": "낙하 물체의 남쪽 편향을 자전 각속도 2차까지: Coriolis·원심력·중력의 높이 의존성 분리"
+      }
+    ]
+  },
+  {
+    "id": "HW2",
+    "kind": "hw",
+    "title": "공식 과제 2 · Ch.11 5문항 + 식 11.114 증명",
+    "meta": "10/26 eTL 공지 · <b>제출 없음, 전원 만점 처리, 별도 마감 미지정</b>. 중간고사 대비 연습. T&M 5판 p.464–466과 식 11.114(p.446)를 직접 대조. [[N1026.1, N1026.2]] 10/28 강의에서 계산·증명을 해설. <a href=\"https://myetl.snu.ac.kr/courses/305140/modules/items/1694271\" target=\"_blank\" rel=\"noopener\">공식 HW02_Solution.pdf</a>는 직접 확인용 링크.",
+    "probs": [
+      {
+        "num": "11-13",
+        "ch": 11,
+        "unit": "u18",
+        "tag": "req",
+        "title": "세 질점의 관성텐서·주축·주관성모멘트"
+      },
+      {
+        "num": "11-14",
+        "ch": 11,
+        "unit": "u19",
+        "tag": "req",
+        "title": "균일한 실체 반구의 질량중심 주축"
+      },
+      {
+        "num": "11-16",
+        "ch": 11,
+        "unit": "u20",
+        "tag": "req",
+        "title": "x3축 회전으로 관성텐서 대각화"
+      },
+      {
+        "num": "11-22",
+        "ch": 11,
+        "unit": "u20",
+        "tag": "req",
+        "title": "좌표축 회전에서 관성텐서 대각합 불변"
+      },
+      {
+        "num": "11-26",
+        "ch": 11,
+        "unit": "u21",
+        "tag": "req",
+        "title": "회전행렬에서 Euler 각속도 성분 직접 유도"
+      },
+      {
+        "num": "L11-114",
+        "ch": 11,
+        "unit": "u22",
+        "tag": "req",
+        "title": "식 11.114 증명 · 세 Euler 각의 Lagrange 식 직접 계산"
+      }
+    ]
+  },
+  {
+    "id": "HW3",
+    "kind": "hw",
+    "title": "HW3 · 결합 진동 7문항",
+    "due": "2026-12-07",
+    "meta": "eTL 제출창·PDF는 12/7 12:15, 공지는 수업 전. 계획은 11:00 전 완료. [[MN1124.2]] 손글씨 원본 또는 스캔 제출. [[MN1124.1]] <a href=\"https://myetl.snu.ac.kr/courses/305140/assignments/393508\">제출창</a> · <a href=\"https://drive.google.com/file/d/1hlvtDC0ZzE9qSCh1sl8dpKHLxjdD35EN/view\">문제지</a>",
+    "probs": [
+      {
+        "num": "12.1",
+        "ch": 12,
+        "unit": "u26",
+        "tag": "req",
+        "title": "서로 다른 세 스프링으로 연결된 같은 질량 두 진동자의 고유진동수와 모드를 구하고 독립 진동자와 비교한다. [[MHW3.1]]"
+      },
+      {
+        "num": "12.3",
+        "ch": 12,
+        "unit": "u28",
+        "tag": "req",
+        "title": "운동에너지 결합이 있는 두 좌표의 연립 운동방정식에서 정상모드를 찾는다. 복원력만 대각화하지 말고 질량 행렬을 함께 다룬다. [[MHW3.2]]"
+      },
+      {
+        "num": "12.9",
+        "ch": 12,
+        "unit": "u29",
+        "tag": "req",
+        "title": "좌표축 회전으로 정규좌표를 구하고 각 축의 단순 조화운동을 확인한다. [[MHW3.3]]"
+      },
+      {
+        "num": "12.17",
+        "ch": 12,
+        "unit": "u32",
+        "tag": "req",
+        "title": "같은 세 질량과 네 스프링의 고정 끝 계에서 고유진동수·상대 진폭을 구한다. [[MHW3.4]]"
+      },
+      {
+        "num": "12.19",
+        "ch": 12,
+        "unit": "u31",
+        "tag": "req",
+        "title": "세 결합 진자의 결합상수가 다를 때 고유값을 분석하고 같은 결합에서의 축퇴 조건을 확인한다. 문제의 결합상수 가정을 먼저 적는다. [[MHW3.5]]"
+      },
+      {
+        "num": "12.25",
+        "ch": 12,
+        "unit": "u32",
+        "tag": "req",
+        "title": "세 질점 줄을 모두 같은 초기 변위 a에서 정지 상태로 놓았을 때, 초기조건을 모드에 투영해 시간에 따른 운동을 구한다. [[MHW3.6]]"
+      },
+      {
+        "num": "12.160-proof",
+        "ch": 12,
+        "unit": "u32",
+        "tag": "req",
+        "title": "고정 끝 이산 사인 모드의 직교성 합을 증명한다. r=s와 r≠s를 나누어 계수를 확인한다. [[MHW3.7]]"
+      }
+    ]
+  }
 ]

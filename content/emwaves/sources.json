@@ -1,203 +1,231 @@
 {
- "N1027": {
-  "title": "시험 관련 안내 및 전기와 자기 기출 문제 (10/27 확인)",
-  "short": "시험안내",
-  "kind": "notice",
-  "date": "2026-10-27",
-  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/396231"
- },
- "EM26M": {
-  "title": "2026-1 전기와 자기 중간고사 · EandM1_2026S_midterm_v2.pdf",
-  "short": "26-1중간",
-  "kind": "notice",
-  "date": "2026-04-29",
-  "url": "https://myetl.snu.ac.kr/courses/305132/files/9511667/download"
- },
- "EM26F": {
-  "title": "2026-1 전기와 자기 기말고사 · EandM1_2026S_final_v3.pdf",
-  "short": "26-1기말",
-  "kind": "notice",
-  "date": "2026-06-15",
-  "url": "https://myetl.snu.ac.kr/courses/305132/files/9511628/download?wrap=1"
- },
- "P2026": {
-  "title": "전자기파와 광학 연습 프로젝트 v1",
-  "short": "P2026",
-  "kind": "notice",
-  "date": "2026-10-20",
-  "url": "https://myetl.snu.ac.kr/courses/305128/discussion_topics/394454"
- },
- "N1026M": {
-  "title": "개별 면담 Doodle 일정 정정",
-  "short": "N1026M",
-  "kind": "notice",
-  "date": "2026-10-26",
-  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/396547"
- },
- "N1024": {
-  "title": "10/28 중간고사 준비 안내",
-  "short": "N1024",
-  "kind": "notice",
-  "date": "2026-10-24",
-  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/395879"
- },
- "N1026S": {
-  "title": "10월 복습과제 채점·모범답안 공지 모음",
-  "short": "N1026S",
-  "kind": "notice",
-  "date": "2026-10-26",
-  "url": "https://myetl.snu.ac.kr/courses/305132/announcements"
- },
- "S1021": {
-  "title": "10/21 공개 모범답안 · 지연 퍼텐셜",
-  "short": "S1021",
-  "kind": "notice",
-  "date": "2026-10-26",
-  "url": "https://drive.google.com/file/d/129i86QB4HiwD8Jdj0tnepUXzy_5tD4vE/view"
- },
- "S1014": {
-  "title": "10/14 공개 모범답안 · 지연 퍼텐셜·도선·동축 TEM",
-  "short": "S1014",
-  "kind": "hw",
-  "date": "2026-10-25",
-  "url": "https://drive.google.com/file/d/16f_nfJHdFez10g5vWmqtb2KnG0eptoeg/view"
- },
- "C1111": {
-  "title": "11/11 전자기파와 광학 휴강 확인",
-  "short": "C1111",
-  "kind": "notice",
-  "date": "2026-11-11"
- },
- "EN1110C": {
-  "title": "11/11 휴강과 11/9 복습 과제 마감",
-  "short": "EN1110C",
-  "kind": "notice",
-  "date": "2026-11-10",
-  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/401020"
- },
- "EN1110": {
-  "title": "11/9 강의 보충 · 구대칭 복사와 도플러 설명",
-  "short": "EN1110",
-  "kind": "notice",
-  "date": "2026-11-10",
-  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/401034"
- },
- "EN1109": {
-  "title": "전파광 개별 면담 안내",
-  "short": "EN1109",
-  "kind": "notice",
-  "date": "2026-11-09",
-  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/400825"
- },
- "EN1103": {
-  "title": "중간고사 6번 Green 함수 풀이 채점 안내",
-  "short": "EN1103",
-  "kind": "notice",
-  "date": "2026-11-03",
-  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/399183"
- },
- "EN1104P": {
-  "title": "연습 프로젝트 제출 안내",
-  "short": "EN1104P",
-  "kind": "notice",
-  "date": "2026-11-04",
-  "url": "https://myetl.snu.ac.kr/courses/305128/discussion_topics/399281"
- },
- "EH1102": {
-  "title": "전기 쌍극자 복사 유도",
-  "short": "EH1102",
-  "kind": "hw",
-  "date": "2026-11-02",
-  "url": "https://myetl.snu.ac.kr/courses/305132/assignments/389214"
- },
- "EH1104": {
-  "title": "자기 쌍극자 복사 유도",
-  "short": "EH1104",
-  "kind": "hw",
-  "date": "2026-11-04",
-  "url": "https://myetl.snu.ac.kr/courses/305132/assignments/389831"
- },
- "EH1109": {
-  "title": "회전 전하 고리와 전류 고리",
-  "short": "EH1109",
-  "kind": "hw",
-  "date": "2026-11-09",
-  "url": "https://myetl.snu.ac.kr/courses/305132/assignments/390652"
- },
- "MID2026E": {
-  "title": "2026-2 전자기파와 광학 중간고사 복기",
-  "short": "MID2026E",
-  "kind": "notice",
-  "date": "2026-11-16"
- },
- "DE1116": {
-  "title": "11/16 실제 강의 · 복사 일률·반작용·자기력",
-  "short": "DE1116",
-  "kind": "transcript",
-  "date": "2026-11-16",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/KJmXeTCuf-RcrqR_?fileMetaId=84748a8d-d7f9-4540-bd22-97134f411fa8"
- },
- "DE1123A": {
-  "title": "11/23 전반 · 시간 지연·길이 수축·동시성과 Lorentz 변환",
-  "short": "DE1123A",
-  "kind": "transcript",
-  "date": "2026-11-23",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/vNImdfCcqh_TDz06?fileMetaId=6051ff7e-80f3-4b03-9b67-d38b735440f9"
- },
- "DE1123B": {
-  "title": "11/23 후반 · 속도 변환과 4벡터 도입",
-  "short": "DE1123B",
-  "kind": "transcript",
-  "date": "2026-11-23",
-  "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/M8vxwkG72ujETIDz?fileMetaId=d05ff153-6a28-4f4a-80ab-0a8167d86e28"
- },
- "EH1116": {
-  "title": "11/16 과제 · Problem 11.15와 선택 유도",
-  "short": "EH1116",
-  "kind": "notice",
-  "date": "2026-11-16",
-  "url": "https://myetl.snu.ac.kr/courses/305132/assignments/391849"
- },
- "EH1118": {
-  "title": "11/18 결석 보충 · dumbbell 유도·시간 지연 예습",
-  "short": "EH1118",
-  "kind": "notice",
-  "date": "2026-11-18",
-  "url": "https://myetl.snu.ac.kr/courses/305132/assignments/392393"
- },
- "EN1117": {
-  "title": "중간 채점·시험지/해설 공개 · 출제 형식 참고",
-  "short": "EN1117",
-  "kind": "notice",
-  "date": "2026-11-17",
-  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403400"
- },
- "EN1118Q": {
-  "title": "중간 4번 채점 보충 · 주어지지 않은 조건 주의",
-  "short": "EN1118Q",
-  "kind": "notice",
-  "date": "2026-11-18",
-  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403634"
- },
- "EN1118C": {
-  "title": "채점 이의 신청 변경 · 11/20 일정",
-  "short": "EN1118C",
-  "kind": "notice",
-  "date": "2026-11-18",
-  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403736"
- },
- "EN1118H": {
-  "title": "11/9 과제 채점·모범답안 공개",
-  "short": "EN1118H",
-  "kind": "notice",
-  "date": "2026-11-18",
-  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403587"
- },
- "EN1120": {
-  "title": "미면담 학생 대상 다음 주 개별 면담 안내",
-  "short": "EN1120",
-  "kind": "notice",
-  "date": "2026-11-20",
-  "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/404531"
- }
+  "N1027": {
+    "title": "시험 관련 안내 및 전기와 자기 기출 문제 (10/27 확인)",
+    "short": "시험안내",
+    "kind": "notice",
+    "date": "2026-10-27",
+    "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/396231"
+  },
+  "EM26M": {
+    "title": "2026-1 전기와 자기 중간고사 · EandM1_2026S_midterm_v2.pdf",
+    "short": "26-1중간",
+    "kind": "notice",
+    "date": "2026-04-29",
+    "url": "https://myetl.snu.ac.kr/courses/305132/files/9511667/download"
+  },
+  "EM26F": {
+    "title": "2026-1 전기와 자기 기말고사 · EandM1_2026S_final_v3.pdf",
+    "short": "26-1기말",
+    "kind": "notice",
+    "date": "2026-06-15",
+    "url": "https://myetl.snu.ac.kr/courses/305132/files/9511628/download?wrap=1"
+  },
+  "P2026": {
+    "title": "전자기파와 광학 연습 프로젝트 v1",
+    "short": "P2026",
+    "kind": "notice",
+    "date": "2026-10-20",
+    "url": "https://myetl.snu.ac.kr/courses/305128/discussion_topics/394454"
+  },
+  "N1026M": {
+    "title": "개별 면담 Doodle 일정 정정",
+    "short": "N1026M",
+    "kind": "notice",
+    "date": "2026-10-26",
+    "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/396547"
+  },
+  "N1024": {
+    "title": "10/28 중간고사 준비 안내",
+    "short": "N1024",
+    "kind": "notice",
+    "date": "2026-10-24",
+    "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/395879"
+  },
+  "N1026S": {
+    "title": "10월 복습과제 채점·모범답안 공지 모음",
+    "short": "N1026S",
+    "kind": "notice",
+    "date": "2026-10-26",
+    "url": "https://myetl.snu.ac.kr/courses/305132/announcements"
+  },
+  "S1021": {
+    "title": "10/21 공개 모범답안 · 지연 퍼텐셜",
+    "short": "S1021",
+    "kind": "notice",
+    "date": "2026-10-26",
+    "url": "https://drive.google.com/file/d/129i86QB4HiwD8Jdj0tnepUXzy_5tD4vE/view"
+  },
+  "S1014": {
+    "title": "10/14 공개 모범답안 · 지연 퍼텐셜·도선·동축 TEM",
+    "short": "S1014",
+    "kind": "hw",
+    "date": "2026-10-25",
+    "url": "https://drive.google.com/file/d/16f_nfJHdFez10g5vWmqtb2KnG0eptoeg/view"
+  },
+  "C1111": {
+    "title": "11/11 전자기파와 광학 휴강 확인",
+    "short": "C1111",
+    "kind": "notice",
+    "date": "2026-11-11"
+  },
+  "EN1110C": {
+    "title": "11/11 휴강과 11/9 복습 과제 마감",
+    "short": "EN1110C",
+    "kind": "notice",
+    "date": "2026-11-10",
+    "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/401020"
+  },
+  "EN1110": {
+    "title": "11/9 강의 보충 · 구대칭 복사와 도플러 설명",
+    "short": "EN1110",
+    "kind": "notice",
+    "date": "2026-11-10",
+    "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/401034"
+  },
+  "EN1109": {
+    "title": "전파광 개별 면담 안내",
+    "short": "EN1109",
+    "kind": "notice",
+    "date": "2026-11-09",
+    "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/400825"
+  },
+  "EN1103": {
+    "title": "중간고사 6번 Green 함수 풀이 채점 안내",
+    "short": "EN1103",
+    "kind": "notice",
+    "date": "2026-11-03",
+    "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/399183"
+  },
+  "EN1104P": {
+    "title": "연습 프로젝트 제출 안내",
+    "short": "EN1104P",
+    "kind": "notice",
+    "date": "2026-11-04",
+    "url": "https://myetl.snu.ac.kr/courses/305128/discussion_topics/399281"
+  },
+  "EH1102": {
+    "title": "전기 쌍극자 복사 유도",
+    "short": "EH1102",
+    "kind": "hw",
+    "date": "2026-11-02",
+    "url": "https://myetl.snu.ac.kr/courses/305132/assignments/389214"
+  },
+  "EH1104": {
+    "title": "자기 쌍극자 복사 유도",
+    "short": "EH1104",
+    "kind": "hw",
+    "date": "2026-11-04",
+    "url": "https://myetl.snu.ac.kr/courses/305132/assignments/389831"
+  },
+  "EH1109": {
+    "title": "회전 전하 고리와 전류 고리",
+    "short": "EH1109",
+    "kind": "hw",
+    "date": "2026-11-09",
+    "url": "https://myetl.snu.ac.kr/courses/305132/assignments/390652"
+  },
+  "MID2026E": {
+    "title": "2026-2 전자기파와 광학 중간고사 복기",
+    "short": "MID2026E",
+    "kind": "notice",
+    "date": "2026-11-16"
+  },
+  "DE1116": {
+    "title": "11/16 실제 강의 · 복사 일률·반작용·자기력",
+    "short": "DE1116",
+    "kind": "transcript",
+    "date": "2026-11-16",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/KJmXeTCuf-RcrqR_?fileMetaId=84748a8d-d7f9-4540-bd22-97134f411fa8"
+  },
+  "DE1123A": {
+    "title": "11/23 전반 · 시간 지연·길이 수축·동시성과 Lorentz 변환",
+    "short": "DE1123A",
+    "kind": "transcript",
+    "date": "2026-11-23",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/vNImdfCcqh_TDz06?fileMetaId=6051ff7e-80f3-4b03-9b67-d38b735440f9"
+  },
+  "DE1123B": {
+    "title": "11/23 후반 · 속도 변환과 4벡터 도입",
+    "short": "DE1123B",
+    "kind": "transcript",
+    "date": "2026-11-23",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/M8vxwkG72ujETIDz?fileMetaId=d05ff153-6a28-4f4a-80ab-0a8167d86e28"
+  },
+  "EH1116": {
+    "title": "11/16 과제 · Problem 11.15와 선택 유도",
+    "short": "EH1116",
+    "kind": "notice",
+    "date": "2026-11-16",
+    "url": "https://myetl.snu.ac.kr/courses/305132/assignments/391849"
+  },
+  "EH1118": {
+    "title": "11/18 결석 보충 · dumbbell 유도·시간 지연 예습",
+    "short": "EH1118",
+    "kind": "notice",
+    "date": "2026-11-18",
+    "url": "https://myetl.snu.ac.kr/courses/305132/assignments/392393"
+  },
+  "EN1117": {
+    "title": "중간 채점·시험지/해설 공개 · 출제 형식 참고",
+    "short": "EN1117",
+    "kind": "notice",
+    "date": "2026-11-17",
+    "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403400"
+  },
+  "EN1118Q": {
+    "title": "중간 4번 채점 보충 · 주어지지 않은 조건 주의",
+    "short": "EN1118Q",
+    "kind": "notice",
+    "date": "2026-11-18",
+    "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403634"
+  },
+  "EN1118C": {
+    "title": "채점 이의 신청 변경 · 11/20 일정",
+    "short": "EN1118C",
+    "kind": "notice",
+    "date": "2026-11-18",
+    "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403736"
+  },
+  "EN1118H": {
+    "title": "11/9 과제 채점·모범답안 공개",
+    "short": "EN1118H",
+    "kind": "notice",
+    "date": "2026-11-18",
+    "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/403587"
+  },
+  "EN1120": {
+    "title": "미면담 학생 대상 다음 주 개별 면담 안내",
+    "short": "EN1120",
+    "kind": "notice",
+    "date": "2026-11-20",
+    "url": "https://myetl.snu.ac.kr/courses/305132/discussion_topics/404531"
+  },
+  "DE1125": {
+    "title": "11/25 실제 강의 · 시공간 간격과 고유시간 (STT 일부 불명확)",
+    "short": "DE1125",
+    "kind": "transcript",
+    "date": "2026-11-25",
+    "url": "https://daglo.ai/workspace/ws-edac7bd799b3e351/board/2p7JDIdmrVItEFwJ?fileMetaId=a204e775-8170-40e4-8da2-08dedb305e5a"
+  },
+  "EH1123": {
+    "title": "11/23 복습 과제 · P12.16",
+    "short": "EH1123",
+    "kind": "notice",
+    "date": "2026-11-23",
+    "url": "https://myetl.snu.ac.kr/courses/305132/assignments/393294"
+  },
+  "EH1125": {
+    "title": "11/25 복습 과제 · P12.20",
+    "short": "EH1125",
+    "kind": "notice",
+    "date": "2026-11-25",
+    "url": "https://myetl.snu.ac.kr/courses/305132/assignments/393935"
+  },
+  "EN1123": {
+    "title": "11/2·11/4·11/16 과제 채점·모범답안 공개",
+    "short": "EN1123",
+    "kind": "notice",
+    "date": "2026-11-23",
+    "url": "https://myetl.snu.ac.kr/courses/305132/announcements"
+  }
 }
