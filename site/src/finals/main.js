@@ -1,6 +1,7 @@
 import '../styles/base.css';
 import '../styles/app.css';
 import './planner.css';
+import './todo.css';
 import { mountDatedPlan } from './dated.js';
 import { initOffline } from '../offline/client.js';
 
