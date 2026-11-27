@@ -2,10 +2,42 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { defaultSettings, addCourseExams, generatePlan, taskSteps, addDays, parseWindows, readBackup } from '../site/src/finals/engine.js';
 import { validateSchedule, readDatedRecords, readDatedBackup, validateTodoFields, studyMinutes } from '../site/src/finals/dated-model.js';
-import { subjectTodos, editableTodos, todoReading } from '../site/src/finals/todo-model.js';
+import { subjectTodos, editableTodos, examTodos, todoReading } from '../site/src/finals/todo-model.js';
 
 const data = JSON.parse(fs.readFileSync(new URL('../site/public/data/final-plan.json', import.meta.url)));
 const dated = data.schedule;
+// Source checklists must remain independent of old schedule completion/edit state.
+const examRows = examTodos(data.examTodos);
+assert.equal(new Set(examRows.map((r) => r.id)).size, examRows.length);
+for (const row of examRows) {
+  validateTodoFields(row);
+  assert(row.date === '' && row.floating, 'Source dates must not become planned study dates');
+  assert(!/오늘.*복습|당일.*복습|기공실 보고서/.test(row.title));
+  const course = data.courses.find((c) => c.slug === row.slug);
+  assert(row.units.every((id) => course.referenceUnits.some((u) => u.id === id)), `Unknown unit: ${row.id}`);
+  assert(row.units.length || row.reading, `Missing source: ${row.id}`);
+  const full = JSON.parse(fs.readFileSync(new URL(`../site/public/data/${row.slug}/course.json`, import.meta.url)));
+  for (const source of row.sources) {
+    assert(['lecture', 'hw', 'examples'].includes(source.route));
+    if (!source.key) continue;
+    assert(source.route === 'lecture' ? full.lectures.some((l) => l.id === source.key) : source.route === 'hw' ? full.hw.some((h) => h.kind !== 'bank' && h.kind !== 'ref' && h.probs.some((p) => p.num === source.key)) : full.examples.some((e) => e.num === source.key), `Broken source link: ${row.id}/${source.key}`);
+  }
+}
+assert(examRows.some((r) => r.id === 'dated:exam:emwaves:hw:eh1102:derive'), 'Unnumbered assigned derivations must be included');
+assert.equal(examRows.filter((r) => r.id.startsWith('dated:exam:advmech:hw:HW3:')).length, 7);
+assert.equal(examRows.filter((r) => r.id.startsWith('dated:exam:astro1:hw:HW6:')).length, 4);
+assert.equal(examRows.filter((r) => r.id.startsWith('dated:exam:mechexp:quiz:')).length, 12);
+assert(!examRows.some((r) => /bank|TE\/TM|Snell|Brewster/.test(r.id + r.title)), 'Do not add midterm or unassigned banks as core final tasks');
+const examSample = examRows[0], examEdit = { title: '시험 자료 재풀이', slug: 'advmech', date: '2026-12-01', details: '조건 변경', units: ['u28'], reading: 'T&M 12장' };
+const examState = readDatedBackup(JSON.stringify({ type: 'dated-final-plan', version: 3, records: { [examSample.id]: { done: true, actual: 30, note: '오답' } }, todoEdits: { [examSample.id]: examEdit }, customTodos: [], deletedTodos: [examSample.id] }));
+assert(!examTodos(data.examTodos, examState).some((r) => r.id === examSample.id));
+const restoredExam = examTodos(data.examTodos, { ...examState, deletedTodos: [] });
+assert.deepEqual(restoredExam.find((r) => r.id === examSample.id).units, ['u28']);
+assert.equal(restoredExam.find((r) => r.id === examSample.id).date, '2026-12-01');
+assert.equal(examRows[0].date, '', 'Editing must not mutate the source catalog');
+assert.equal(subjectTodos(dated, data.courses, examState.records, { rows: restoredExam, sourceOrder: true }).reduce((n, g) => n + g.done, 0), 1);
+assert.equal(subjectTodos(dated, data.courses, examState.records).reduce((n, g) => n + g.done, 0), 0, 'Exam checks must not mark old schedule slots complete');
+console.log(`Exam checklist OK: ${examRows.length} source tasks; valid links, independent records, recoverable edits/deletes.`);
 validateSchedule(dated);
 assert.equal(dated.start, '2026-11-23');
 assert.equal(dated.end, '2026-12-17');

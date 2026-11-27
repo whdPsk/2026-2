@@ -15,17 +15,28 @@ export function editableTodos(schedule, { customTodos = [], todoEdits = {}, dele
   return [...rows, ...customTodos.map((r) => ({ ...r, custom: true, floating: true, kind: 'project', units: r.units || [] }))].filter((r) => includeDeleted || !deletedTodos.includes(r.id));
 }
 
-export function subjectTodos(schedule, courses, records, { period = 'all', today, subject = 'all', hideDone = false, customTodos = [], todoEdits = {}, deletedTodos = [] } = {}) {
+export function examTodos(catalog, { customTodos = [], todoEdits = {}, deletedTodos = [], includeDeleted = false } = {}) {
+  const rows = catalog.map((original) => {
+    const edit = todoEdits[original.id];
+    const changedSubject = edit && edit.slug !== original.slug;
+    return { ...original, ...edit, original, edited: !!edit, floating: true,
+      units: edit?.units ?? (changedSubject ? [] : original.units), sources: changedSubject ? [] : original.sources };
+  });
+  return [...rows, ...customTodos.map((r) => ({ ...r, custom: true, floating: true, kind: 'study', category: '직접 추가', units: r.units || [] }))]
+    .filter((r) => includeDeleted || !deletedTodos.includes(r.id));
+}
+
+export function subjectTodos(schedule, courses, records, { period = 'all', today, subject = 'all', hideDone = false, customTodos = [], todoEdits = {}, deletedTodos = [], rows = null, sourceOrder = false } = {}) {
   const groups = [...courses.map(({ slug, title }) => ({ slug, title, rows: [] })), { slug: 'project', title: '발표·프로젝트·기타', rows: [] }];
   const bySlug = new Map(groups.map((g) => [g.slug, g]));
-  for (const row of editableTodos(schedule, { customTodos, todoEdits, deletedTodos })) {
+  for (const row of rows || editableTodos(schedule, { customTodos, todoEdits, deletedTodos })) {
     if (period === 'today' && row.date !== today || period === 'upcoming' && (!row.date || row.date < today)) continue;
     const group = bySlug.get(row.slug) || bySlug.get('project');
     group.rows.push({ ...row, done: !!records[row.id]?.done });
   }
   return groups.filter((g) => subject === 'all' || g.slug === subject).map((g) => ({
     ...g, total: g.rows.length, done: g.rows.filter((r) => r.done).length,
-    rows: g.rows.filter((r) => !hideDone || !r.done).sort((a, b) => (a.date || '9999').localeCompare(b.date || '9999') || (a.floating ? 1440 : a.start) - (b.floating ? 1440 : b.start)),
+    rows: g.rows.filter((r) => !hideDone || !r.done).sort((a, b) => sourceOrder ? 0 : (a.date || '9999').localeCompare(b.date || '9999') || (a.floating ? 1440 : a.start) - (b.floating ? 1440 : b.start)),
   }));
 }
 

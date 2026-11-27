@@ -8,6 +8,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Citer } from './lib/cite.mjs';
 import { expandQz } from './lib/qz.mjs';
+import { buildExamTodos } from './lib/exam-todos.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = path.join(ROOT, 'content');
@@ -177,6 +178,10 @@ export function compileAll({ only = null, strict = true, log = console.log } = {
     writeJson(path.join(DATA, 'final-plan.json'), {
       built: today, defaults: readJson(path.join(CONTENT, 'final-plan.json')),
       schedule: readJson(path.join(CONTENT, 'final-schedule.json')),
+      examTodos: buildExamTodos(results.map(({ slug, data }) => ({ slug, data,
+        lectures: readJson(path.join(CONTENT, slug, 'lectures.json'), []),
+        homework: readJson(path.join(CONTENT, slug, 'hw.json'), []),
+      }))),
       courses: results.map(({ slug, data: d }) => ({
         slug, title: d.title, studyMode: d.studyMode, planStart: d.planStart, exam: d.exams.find((e) => e.name === '기말고사') || d.exams.find((e) => e.name === '퀴즈'),
         scope: d.rangeLabel['2'],

@@ -64,3 +64,7 @@
 #todo-units label{display:flex;align-items:flex-start;gap:8px;margin:0;padding:7px 0;cursor:pointer}#todo-units input{width:18px;height:18px;min-height:18px;margin:4px 0 0;flex:none}#todo-units small{display:block;color:var(--ink3);font-size:12px}#todo-units span{min-width:0;overflow-wrap:anywhere}
 .td-editor .td-detail p{overflow-wrap:anywhere}
 @media print{.td-trash{display:none}.td-reading{white-space:normal;overflow:visible}}
+.td-source-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 8px}.td-source-tabs button{min-height:40px}.td-source-tabs button[aria-pressed=true]{border-color:var(--brand);color:var(--brand);font-weight:700}
+.td-source-note{font-size:13px;line-height:1.65;color:var(--ink2);margin:8px 0 14px}.td-category{font-size:13px;color:var(--ink2);margin:16px 0 4px;display:flex;gap:8px;align-items:center}.td-category span{font:11px var(--mono);color:var(--ink3)}
+.is-todo-view .td-check span{overflow-wrap:anywhere}.td-detail .fp-refs{overflow-wrap:anywhere}
+@media print{.td-source-tabs{display:none}}
