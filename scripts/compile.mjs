@@ -180,6 +180,8 @@ export function compileAll({ only = null, strict = true, log = console.log } = {
       courses: results.map(({ slug, data: d }) => ({
         slug, title: d.title, studyMode: d.studyMode, planStart: d.planStart, exam: d.exams.find((e) => e.name === '기말고사') || d.exams.find((e) => e.name === '퀴즈'),
         scope: d.rangeLabel['2'],
+        bookAbbrev: slug === 'astro1' ? '천체물리학 교재' : d.bookAbbrev.replace(/&amp;/g, '&'),
+        referenceUnits: d.units.map((u) => ({ id: u.id, ch: u.ch, title: u.title, secs: u.secs })),
         units: d.units.filter((u) => d.chapters[String(u.ch)].range === 2).map((u) => ({
           id: u.id, ch: u.ch, title: u.title, secs: u.secs, lec: u.lec,
           examples: d.examples.filter((e) => e.unit === u.id).map((e) => ({ num: e.num, title: e.title })),

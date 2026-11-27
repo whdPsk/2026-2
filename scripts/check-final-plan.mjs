@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { defaultSettings, addCourseExams, generatePlan, taskSteps, addDays, parseWindows, readBackup } from '../site/src/finals/engine.js';
 import { validateSchedule, readDatedRecords, readDatedBackup, validateTodoFields, studyMinutes } from '../site/src/finals/dated-model.js';
-import { subjectTodos, editableTodos } from '../site/src/finals/todo-model.js';
+import { subjectTodos, editableTodos, todoReading } from '../site/src/finals/todo-model.js';
 
 const data = JSON.parse(fs.readFileSync(new URL('../site/public/data/final-plan.json', import.meta.url)));
 const dated = data.schedule;
@@ -46,6 +46,27 @@ assert.throws(() => validateTodoFields({ ...customTask, title: '  ' }));
 assert.throws(() => validateTodoFields({ ...customTask, slug: '<script>' }));
 assert.throws(() => readDatedBackup(JSON.stringify({ type: 'dated-final-plan', version: 2, records: {}, customTodos: [customTask, customTask], todoEdits: {} })));
 assert.equal(editableTodos(dated).find((r) => r.id === sampleTodo.id).title, sampleTodo.title, 'Editing does not mutate the source schedule');
+const deletedState = readDatedBackup(JSON.stringify({ type: 'dated-final-plan', version: 3, ...personalState, deletedTodos: [sampleTodo.id, customTask.id] }));
+assert.equal(editableTodos(dated, deletedState).length, todoRows.length - 1, 'Both original and personal tasks can be deleted');
+assert.equal(editableTodos(dated, { ...deletedState, includeDeleted: true }).length, todoRows.length + 1, 'Deleted tasks remain recoverable');
+assert.equal(subjectTodos(dated, data.courses, deletedState.records, deletedState).reduce((n, g) => n + g.total, 0), todoRows.length - 1);
+assert.equal(editableTodos(dated, { ...deletedState, deletedTodos: [] }).find((r) => r.id === sampleTodo.id).title, editedTask.title, 'Restoring preserves edits');
+assert.equal(deletedState.records[sampleTodo.id].done, true, 'Deleting preserves completion for recovery');
+assert.throws(() => readDatedBackup(JSON.stringify({ type: 'dated-final-plan', version: 3, records: {}, customTodos: [], todoEdits: {}, deletedTodos: ['<script>'] })));
+const explicitFields = validateTodoFields({ ...customTask, units: ['u28', 'u29'], reading: 'T&M §12.4–12.6' });
+assert.deepEqual(explicitFields.units, ['u28', 'u29']);
+assert.throws(() => validateTodoFields({ ...customTask, units: ['../bad'] }));
+const mechCourse = data.courses.find((c) => c.slug === 'advmech');
+const mechReading = todoReading({ slug: 'advmech', units: ['u28', 'u29'] }, mechCourse);
+assert(mechReading.summary.includes('U28·U29') && mechReading.summary.includes('12.4') && mechReading.summary.includes('12.5–12.6') && mechReading.summary.includes('T&M'));
+assert.equal(todoReading({ units: ['u23'] }, mechCourse).units.length, 1, 'Prerequisite units outside the final-only list must resolve');
+assert.equal(todoReading({ units: ['u999'], reading: '교재 p.448 문제 4·5' }, mechCourse).units.length, 0, 'Unknown units cannot create invented references');
+for (const row of editableTodos(dated)) {
+  const course = data.courses.find((c) => c.slug === row.slug);
+  const reading = todoReading(row, course);
+  assert.equal(reading.units.length, (row.units || []).length, `Missing reference unit: ${row.id}`);
+  if (['study', 'assignment'].includes(row.kind)) assert((row.units || []).length || row.reading, `Missing explicit reading target or uncertainty: ${row.id}`);
+}
 const duration = (rows) => rows.reduce((n, r) => n + r.end - r.start, 0);
 assert(!datedRows.some((r) => r.slug === 'mechexp' && r.kind === 'study' && r.date < '2026-12-10'), 'Lab quiz study must stay in the final intensive period');
 assert.equal(datedRows.filter((r) => r.kind === 'exam' && r.title.includes('기계공학실험')).length, 1);

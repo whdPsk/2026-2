@@ -1,4 +1,5 @@
-export const DATED_RECORD_KEY = 'final-plan.2026-2.dated.v2';
+export const DATED_RECORD_KEY = 'final-plan.2026-2.dated.v3';
+export const PREVIOUS_DATED_RECORD_KEY = 'final-plan.2026-2.dated.v2';
 export const LEGACY_DATED_RECORD_KEY = 'final-plan.2026-2.dated.v1';
 export const isTask = (row) => ['study', 'assignment', 'project', 'experiment', 'meeting'].includes(row.kind);
 export const studyMinutes = (row) => row.kind === 'study' && row.phase !== '과제' ? row.end - row.start : 0;
@@ -23,7 +24,7 @@ export function validateSchedule(schedule) {
 
 export function readDatedRecords(raw) {
   const saved = JSON.parse(raw);
-  if (![1, 2].includes(saved.version) || saved.type !== 'dated-final-plan' || !saved.records || Array.isArray(saved.records) || typeof saved.records !== 'object') throw new Error('날짜별 계획표의 기록 파일을 선택하세요.');
+  if (![1, 2, 3].includes(saved.version) || saved.type !== 'dated-final-plan' || !saved.records || Array.isArray(saved.records) || typeof saved.records !== 'object') throw new Error('날짜별 계획표의 기록 파일을 선택하세요.');
   const records = {};
   for (const [id, record] of Object.entries(saved.records)) {
     if (!/^dated:[\w:.-]+$/.test(id) || !record || typeof record.done !== 'boolean' || !Number.isInteger(record.actual) || record.actual < 0 || record.actual > 1440 || typeof record.note !== 'string' || record.note.length > 5000) throw new Error('기록 형식이 올바르지 않습니다.');
@@ -36,13 +37,16 @@ export function validateTodoFields(value) {
   if (!value || typeof value.title !== 'string' || !value.title.trim() || value.title.length > 300 || typeof value.details !== 'string' || value.details.length > 5000 || !['astro1', 'emwaves', 'advmech', 'mechexp', 'project'].includes(value.slug)) throw new Error('제목·과목·상세 내용 형식을 확인하세요.');
   const date = value.date;
   if (typeof date !== 'string' || date && (!/^20\d{2}-\d{2}-\d{2}$/.test(date) || Number.isNaN(Date.parse(date)) || new Date(date).toISOString().slice(0, 10) !== date)) throw new Error('올바른 날짜를 입력하거나 비워 두세요.');
-  return { title: value.title.trim(), slug: value.slug, date, details: value.details };
+  const reading = value.reading ?? '';
+  if (typeof reading !== 'string' || reading.length > 1000) throw new Error('읽을 범위는 1,000자 이내로 입력하세요.');
+  if (value.units !== undefined && (!Array.isArray(value.units) || value.units.length > 100 || value.units.some((id) => typeof id !== 'string' || !/^u\d{1,3}$/.test(id)))) throw new Error('학습노트 단원 형식이 올바르지 않습니다.');
+  return { title: value.title.trim(), slug: value.slug, date, details: value.details, ...(value.reading !== undefined ? { reading } : {}), ...(value.units !== undefined ? { units: [...new Set(value.units)] } : {}) };
 }
 
 export function readDatedBackup(raw) {
   const records = readDatedRecords(raw), saved = JSON.parse(raw);
   const customTodos = [], todoEdits = {};
-  if (saved.version === 2) {
+  if (saved.version >= 2) {
     if (!Array.isArray(saved.customTodos) || saved.customTodos.length > 1000 || !saved.todoEdits || typeof saved.todoEdits !== 'object' || Array.isArray(saved.todoEdits)) throw new Error('할 일 백업 형식이 올바르지 않습니다.');
     const ids = new Set();
     for (const task of saved.customTodos) {
@@ -55,5 +59,7 @@ export function readDatedBackup(raw) {
       todoEdits[id] = validateTodoFields(edit);
     }
   }
-  return { records, customTodos, todoEdits };
+  const deletedTodos = saved.deletedTodos ?? [];
+  if (!Array.isArray(deletedTodos) || deletedTodos.length > 5000 || deletedTodos.some((id) => typeof id !== 'string' || !/^dated:[\w:.-]+$/.test(id))) throw new Error('삭제한 할 일 목록이 올바르지 않습니다.');
+  return { records, customTodos, todoEdits, deletedTodos: [...new Set(deletedTodos)] };
 }
