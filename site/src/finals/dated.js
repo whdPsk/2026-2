@@ -102,7 +102,7 @@ export function mountDatedPlan(root, data) {
     for (const [id, direction] of [['dated-prev', -1], ['dated-next', 1]]) root.querySelector('#' + id).onclick = () => { selected = Math.max(0, Math.min(schedule.days.length - 1, selected + direction * (view === 'day' ? 1 : 7))); render(); };
     root.querySelector('#dated-date').onchange = (e) => { const index = schedule.days.findIndex((day) => day.date === e.target.value); if (index >= 0) selected = index; render(); };
     root.querySelectorAll('[data-plan-view]').forEach((button) => button.onclick = () => { view = button.dataset.planView; const url = new URL(location.href); if (view === 'todo') url.searchParams.set('view', 'todo'); else url.searchParams.delete('view'); history.replaceState(null, '', url); render(); });
-    root.querySelectorAll('[data-date]').forEach((button) => button.onclick = () => { selected = schedule.days.findIndex((day) => day.date === button.dataset.date); view = 'day'; render(); });
+    root.querySelectorAll('[data-date]').forEach((button) => button.onclick = () => { selected = schedule.days.findIndex((day) => day.date === button.dataset.date); view = 'day'; const url = new URL(location.href); url.searchParams.delete('view'); history.replaceState(null, '', url); render(); });
     const period = root.querySelector('#todo-period'), subject = root.querySelector('#todo-subject'), hide = root.querySelector('#todo-hide');
     if (period) period.onchange = (e) => { todoPeriod = e.target.value; render(); root.querySelector('#todo-period').focus(); };
     if (subject) subject.onchange = (e) => { todoSubject = e.target.value; render(); root.querySelector('#todo-subject').focus(); };

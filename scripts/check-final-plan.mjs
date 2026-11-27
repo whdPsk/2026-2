@@ -14,6 +14,8 @@ const todos = subjectTodos(dated, data.courses, {}, { today: '2026-11-27' });
 const todoRows = todos.flatMap((g) => g.rows);
 assert.equal(todoRows.length, datedRows.filter((r) => ['study', 'assignment', 'project', 'experiment', 'meeting'].includes(r.kind)).length);
 assert.equal(new Set(todoRows.map((r) => r.id)).size, todoRows.length, 'Every actionable schedule row must appear once');
+assert(todos.find((g) => g.slug === 'mechexp').rows.some((r) => r.title.startsWith('기공실 보고서')), 'Lab reports must be grouped under their course');
+assert(!todos.find((g) => g.slug === 'project').rows.some((r) => r.kind === 'assignment' && /전파광|기공실/.test(r.title)), 'Named course assignments must not fall into Other');
 assert(todoRows.every((r) => datedRows.some((d) => d.id === r.id && d.start === r.start && d.date === r.date)), 'Todo view must preserve task IDs and times');
 const sampleTodo = todoRows[0];
 const todoRecords = readDatedRecords(JSON.stringify({ type: 'dated-final-plan', version: 1, records: { [sampleTodo.id]: { done: true, actual: 25, note: '공유 기록' } } }));

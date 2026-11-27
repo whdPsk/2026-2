@@ -7,8 +7,10 @@ export function subjectTodos(schedule, courses, records, { period = 'all', today
   for (const day of schedule.days) {
     if (period === 'today' && day.date !== today || period === 'upcoming' && day.date < today) continue;
     for (const row of day.rows.filter(isTask)) {
-      const group = bySlug.get(row.slug) || bySlug.get('project');
-      group.rows.push({ ...row, date: day.date, done: !!records[row.id]?.done });
+      // Older assignment rows have no slug; classify only their explicit course names.
+      const slug = row.slug || (row.kind === 'assignment' && row.title.includes('전파광') ? 'emwaves' : row.kind === 'assignment' && row.title.includes('기공실') ? 'mechexp' : 'project');
+      const group = bySlug.get(slug) || bySlug.get('project');
+      group.rows.push({ ...row, slug: group.slug === 'project' ? row.slug : group.slug, date: day.date, done: !!records[row.id]?.done });
     }
   }
   return groups.filter((g) => subject === 'all' || g.slug === subject).map((g) => ({

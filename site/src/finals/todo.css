@@ -3,6 +3,7 @@
 .is-todo-view .fp-sidebar{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .is-todo-view .fp-backup{grid-column:1/-1}
 .is-todo-view .fp-date-nav,.is-todo-view .dp-toggle{display:none}
+.is-todo-view .fp-notice{display:none}
 .is-todo-view .fp-heading h1{font-size:36px}
 .is-todo-view .fp-tabs button{font-size:14px;min-height:44px}
 .td-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:24px}
@@ -36,3 +37,4 @@
 @media(min-width:1380px){.td-board{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:800px){.td-board{grid-template-columns:1fr}.td-subject{padding:16px}.td-heading{align-items:flex-start}.td-heading h2{font-size:22px}.td-heading>strong{font-size:22px}.td-filters{align-items:stretch;gap:10px}.td-filters label:not(.td-hide){flex:1 1 100%;justify-content:space-between}.td-filters select{flex:1;min-width:0;font-size:16px}.td-meta button,.td-item summary{min-height:44px}.is-todo-view .fp-sidebar{display:block}.is-todo-view .fp-heading h1{font-size:28px}}
 @media print{.td-filters,.td-storage{display:none}.td-board{grid-template-columns:1fr 1fr}.td-subject{background:none}.td-meta button{color:inherit;text-decoration:none}}
+@media(max-width:800px){.is-todo-view .fp-heading{display:flex;align-items:center;padding:20px 0}.is-todo-view .fp-heading .fp-primary{margin:0}.is-todo-view .fp-heading p:not(.fp-eyebrow){display:none}.td-heading p:not(.fp-eyebrow){display:none}.td-heading{margin-bottom:18px}.td-storage{margin-bottom:16px}.is-todo-view .fp-heading h1{font-size:26px}}
