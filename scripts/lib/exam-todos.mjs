@@ -8,7 +8,7 @@ const config = {
   },
   emwaves: {
     first: 20, preview: 27,
-    lectures: [['de1116'], ['de1123a', 'de1123b'], ['de1125']],
+    lectures: [['hn1102'], ['hn1104'], ['hn1109'], ['de1116', 'hn1116'], ['de1123a', 'de1123b', 'hn1123'], ['de1125', 'hn1125']],
     homework: [['eh1102', '2026-11-02'], ['eh1104', '2026-11-04'], ['eh1109', '2026-11-09'], ['eh1116', '2026-11-16'], ['eh1118', '2026-11-18'], ['eh1123', '2026-11-23'], ['eh1125', '2026-11-25']],
     goal: '가정·근사·좌표계를 먼저 쓰고 시작 식부터 마지막 식까지 유도한다. 해당 단원 예제를 답 없이 풀고 차원·극한·물리적 의미를 확인한다. 중간고사 복기는 출제 방식만 참고한다.',
   },
@@ -53,13 +53,14 @@ export function buildExamTodos(courses) {
       const ls = ids.map(findLecture), first = ls[0];
       const title = clean(first.title).replace(/^\d{1,2}\/\d{1,2}\s*/, '');
       const recorded = /다글로/.test(first.file || '');
-      const label = /결석/.test(title) ? '결석 보충 자료' : recorded ? '수업 필기' : '강의자료';
+      const handwritten = /손필기/.test(first.file || '');
+      const label = /결석/.test(title) ? '결석 보충 자료' : recorded || handwritten ? '수업 필기' : '강의자료';
       add(`lecture:${first.id}`, {
         category: '수업 필기·강의자료', sourceDate: first.date,
         title: `${md(first.date)} ${label} · ${first.id === 'de1123a' ? '전·후반 · Lorentz 변환·속도 합성·4-벡터' : title.replace(/^(실제 강의|결석 보충)\s*·\s*/, '')}`,
         units: [...new Set(ls.flatMap((l) => Object.keys(l.unitNotes || {})))],
         reading: ls.map((l) => `${md(l.date)} ${clean(l.file || '강의자료')}`).filter((v, i, a) => a.indexOf(v) === i).join(' + '),
-        details: `${recorded ? '수업에서 다룬 유도와 예제를 필기를 가리고 재현한다.' : '해당 날짜의 자료를 읽고 핵심 유도·예제를 재현한다. 자료 날짜가 실제 수업일·완료 진도를 보장하지 않는다.'} ${ls.flatMap((l) => l.summary || []).map(clean).join(' ')}`,
+        details: `${recorded || handwritten ? '수업에서 다룬 유도와 예제를 필기를 가리고 재현한다.' : '해당 날짜의 자료를 읽고 핵심 유도·예제를 재현한다. 자료 날짜가 실제 수업일·완료 진도를 보장하지 않는다.'} ${ls.flatMap((l) => l.summary || []).map(clean).join(' ')}`,
         sources: ls.map((l) => link('lecture', l.id, `${md(l.date)} · ${clean(l.title)}`)),
       });
     }

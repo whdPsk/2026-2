@@ -1,3 +1,10 @@
+<section class="callout handwritten-update"><h4>11/16 손필기 대조 · 부분적분과 반작용의 한계</h4>
+<p>p.3 우하–p.4 좌상은 주기적 경계조건 아래 복사 손실을 시간 적분한 뒤 부분적분하는 흐름이다. \(k=\mu_0q^2/(6\pi c)\)라 하면
+\[\int\mathbf F_{\rm rad}\cdot\mathbf v\,dt=-k\int a^2dt,\quad \int\dot{\mathbf a}\cdot\mathbf v\,dt=[\mathbf a\cdot\mathbf v]-\int a^2dt.\]
+경계항이 같을 때 \(\mathbf F_{\rm rad}=k\dot{\mathbf a}\)와 양립한다. <b>보충:</b> 적분 일의 일치만으로 속도에 수직인 힘 성분까지 정해지는 것은 아니며, 순간적으로는 \(k\dot{\mathbf a}\cdot\mathbf v=k\,d(\mathbf a\cdot\mathbf v)/dt-ka^2\)의 전미분 항이 남는다. [[HN1125.p3f, DE1116.3]]</p>
+<p>\(\tau=k/m\)일 때 외력 없는 식 \(m\mathbf a=m\tau\dot{\mathbf a}\)는 \(\mathbf a=\mathbf a_0e^{t/\tau}\)라는 runaway 해를 갖는다. <a href="#/examples?e=11.4">Example 11.4</a>는 정현 진동의 \(\dddot x=-\omega^2\dot x\)로 감쇠항을 읽고, <a href="#/examples?e=11.5">Example 11.5</a>는 Coulomb 가속도를 시간미분하는 예다. [[HN1125.p4a]]</p>
+<p>이 필기의 self-force 부분은 크기 \(h\to0\) 도입 메모까지다. 아래 dumbbell의 상세 유도는 기존 정리와 11/18 과제로 공부하되, 이번 필기에 완결된 유도가 있다고 표시하지 않는다. 11/18은 날짜 표제만 있으며 당일 수업 필기가 추가된 것은 아니다. [[HN1125.p4b]]</section>
+
 <div class="predict"><b>◈ 먼저 예측하기.</b> 가속하는 전하가 에너지를 복사한다면 그 에너지는 어디선가 와야 한다. 그렇다면 장은 전하에 되돌이힘을 가해야 한다. 그 힘이 단순히 \(-(\text{상수})\vb{v}\) 꼴일 것 같은가, 아니면 \(\vb{a}\)에 비례할 것 같은가? 만약 \(\vb{a}\)에 비례한다면 그것은 질량 재정의에 흡수되어 <i>힘으로 보이지 않을</i> 것이다 — 그렇다면 남는 후보는 무엇인가? 그리고 그 답이 옳다면, 외력이 없을 때 Newton 제2법칙은 어떤 미분방정식이 되는가?</div>
 
 <h4>11.3.1 Abraham–Lorentz 공식 <span class="en">the Abraham–Lorentz formula</span></h4>
@@ -81,7 +88,7 @@ Abraham–Lorentz 공식이 <b>완전히 독립적인 경로로 재현된다.</b
 <p class="note">Larmor 공식 \(\muz q^2a^2/6\pi c\)와 계수 \(\muz q^2/6\pi c\)가 <b>완전히 같다</b> — 부분적분이 \(a^2\to-\dot a\cdot v\)로 바꿨을 뿐이기 때문이다. 이 한 가지만 기억하면 두 공식을 서로에게서 복원할 수 있다. \(c\tau\sim r_e\)(고전 전자 반지름)라는 점도 함께.</p></div>
 
 <div class="formula"><div class="ftitle">암기 — 복사 반작용을 포함한 운동방정식과 그 병리</div>
-\[ \vb{a}=\tau\dot{\vb{a}}+\frac{\vb{F}}{m}\quad\Longrightarrow\quad \begin{cases}\vb{F}=0:\ \vb{a}=\vb{a}_0\ee^{\,t/\tau}&\text{(폭주해)}\\[2pt] \vb{a}_0=0\ \text{강제}:\ a(t&lt;0)\ne0&\text{(선가속)}\end{cases} \]
+\[ \vb{a}=\tau\dot{\vb{a}}+\frac{\vb{F}}{m}\quad\Longrightarrow\quad \begin{cases}\vb{F}=0:\ \vb{a}=\vb{a}_0\ee^{\,t/\tau}&\text{(폭주해)}\\ \vb{a}_0=0\ \text{강제}:\ a(t&lt;0)\ne0&\text{(선가속)}\end{cases} \]
 <p class="note">둘 중 하나만 제거할 수 있고 둘 다는 불가능하다는 것이 이 절의 최종 메시지. 그리고 진동계에서는 이 방정식이 감쇠상수 \(\gamma=\omega^2\tau\)를 낳는다.</p></div>
 
 <div class="callout"><b class="head">정직한 결론: 여기서 고전 이론이 끝난다.</b> \(\tau\approx6\times10^{-24}\,\)s는 빛이 고전 전자 반지름을 가로지르는 시간이고, 질량 항은 \(d\to0\)에서 발산한다. 두 사실이 같은 곳을 가리킨다 — <b>고전 전자기학 안에는 점전하라는 것이 일관되게 존재할 수 없다</b>. 병리는 상대론적 확장판(Liénard에서 출발해 얻는 방정식)에서도 사라지지 않는다. Lorentz(1892, 자기력 방법), Planck(에너지 보존 방법), Abraham(정리·확장), Dirac(1938, 완전 상대론적 처리)을 거쳐 한 세기가 넘도록 완전히 해결되지 않았다. 오늘날의 태도는 두 갈래다: (i) 이것은 점전하 모형의 한계를 알리는 신호다, (ii) 이것은 양자역학의 필요성을 예고한다. U22의 "고전 원자는 \(10^{-11}\)초 만에 붕괴한다"와 나란히 놓고 보면, 11장의 마지막 두 절은 고전 전자기학이 스스로 자신의 유효 범위를 선언하는 장면이다.</div>

@@ -1,3 +1,10 @@
+<section class="callout handwritten-update"><h4>11/2 손필기 대조 · 전기 쌍극자 복사 유도 순서</h4>
+<p>손필기 p.1의 순서를 따라 <b>복사 판정 → 지연 퍼텐셜 → 장 → 에너지 흐름 → 총출력</b>을 한 번에 연결한다. 국소 소스의 복사장은 \(1/r\), 복사 에너지 흐름은 \(1/r^2\)이므로 구면 적분한 출력이 먼 거리에서도 남는다. [[HN1125.p1a]]</p>
+<p>\(\mathbf p(t)=p_0\cos\omega t\,\hat{\mathbf z}\), \(t_r=t-r/c\). 소스 크기와 파장·관측 거리의 조건 \(d\ll c/\omega=\lambda/(2\pi)\ll r\)을 먼저 적는다. \(1/R_\pm\)의 전개와 지연 위상 전개를 따로 하고, 정전기 극한을 확인한 뒤 원거리 항을 고른다. [[HN1125.p1b]]</p>
+\[V_{\rm rad}=-\frac{p_0\omega\cos\theta}{4\pi\epsilon_0cr}\sin\omega t_r,\qquad \mathbf A_{\rm rad}=-\frac{\mu_0p_0\omega}{4\pi r}\sin\omega t_r\,\hat{\mathbf z}.\]
+\[\mathbf E_{\rm rad}=-\frac{\mu_0p_0\omega^2}{4\pi r}\sin\theta\cos\omega t_r\,\hat{\boldsymbol\theta},\quad \mathbf B_{\rm rad}=\frac1c\hat{\mathbf r}\times\mathbf E_{\rm rad}.\]
+<p>\(-\nabla V\)와 \(-\partial_t\mathbf A\)의 방사 방향 성분이 상쇄되는 것을 직접 확인한다. 시간평균 \(\langle\cos^2\omega t_r\rangle=1/2\)와 각도 적분 \(\int\sin^2\theta\,d\Omega=8\pi/3\)을 구별하면 \(\langle P\rangle=\mu_0p_0^2\omega^4/(12\pi c)\). 아래 기존 유도와 11/2 유도 과제를 이 순서로 재현한다. [[HN1125.p1c]]</section>
+
 <div class="predict"><b>◈ 먼저 예측하기.</b> 정지한 점전하도, 등속으로 흐르는 정상 전류도 에너지를 가진 장을 만든다. 그런데 왜 이들은 "복사하지 않는다"고 말할까? 반지름 \(r\)의 거대한 구를 상상하고, 그 표면을 빠져나가는 알짜 일률이 \(r\to\infty\)에서 0이 아니려면 장의 세기가 \(r\)에 어떻게 의존해야 하는지 먼저 손으로 써 보라. 그리고 진동하는 쌍극자가 내는 복사 일률이 \(\omega\)의 몇 제곱에 비례할지 짐작해 보라 — 하늘이 파랗다는 사실이 힌트다.</div>
 
 <h4>11.1.1 복사의 정의: \(1/r\) 생존 기준 <span class="en">the 1/r survival criterion</span></h4>
